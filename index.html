@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08090C" />
+    <meta
+      name="description"
+      content="Nexus PC Builder — design, optimize and compare custom PC builds with a compatibility engine and Google Gemini AI."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Nexus — AI-Powered PC Builder</title>
+    <script>
+      // Apply the persisted theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var raw = localStorage.getItem('nexus-ui');
+          var theme = raw ? (JSON.parse(raw).state || {}).theme : null;
+          if (theme === 'light') document.documentElement.classList.remove('dark');
+        } catch (e) {
+          /* first visit — dark is the default */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

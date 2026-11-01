@@ -1,0 +1,67 @@
+{
+  "app": {
+    "name": "Nexus",
+    "tagline": "AI-Powered PC Builder"
+  },
+  "nav": {
+    "workspace": "Workspace",
+    "builder": "Builder",
+    "smartBuilder": "Smart Builder",
+    "advisor": "AI Advisor",
+    "prebuilt": "Prebuilt",
+    "community": "Community",
+    "dashboard": "Dashboard",
+    "overview": "Overview"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "retry": "Retry",
+    "reset": "Reset",
+    "clear": "Clear",
+    "apply": "Apply",
+    "loading": "Loading…",
+    "search": "Search components, builds, people…",
+    "noResults": "Nothing found",
+    "optional": "optional",
+    "yes": "Yes",
+    "no": "No",
+    "parts": "{{count}} parts",
+    "partsOne": "{{count}} part",
+    "copy": "Copy"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "toggle": "Switch to {{mode}} mode"
+  },
+  "language": {
+    "label": "Language",
+    "english": "English",
+    "arabic": "العربية",
+    "switchTo": "Switch language"
+  },
+  "account": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signedIn": "Signed in",
+    "localWorkspace": "Local workspace",
+    "localHint": "Your builds are saved in this browser"
+  },
+  "footer": {
+    "copyright": "© {{year}} Nexus PC Builder. Build data is illustrative.",
+    "engine": "Deterministic engines · Gemini agent"
+  },
+  "errors": {
+    "generic": "Something went wrong.",
+    "network": "Could not reach the server. Check your connection.",
+    "notFound": "That page does not exist.",
+    "boundaryTitle": "Something shorted out",
+    "boundaryBody": "An unexpected error interrupted rendering. Your saved build is safe in local storage.",
+    "reload": "Reload Nexus"
+  }
+}

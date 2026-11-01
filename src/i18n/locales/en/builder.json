@@ -1,0 +1,101 @@
+{
+  "categories": {
+    "cpu": "CPU",
+    "gpu": "Graphics Card",
+    "motherboard": "Motherboard",
+    "ram": "Memory",
+    "storage": "Storage",
+    "psu": "Power Supply",
+    "case": "Case",
+    "cooling": "Cooling"
+  },
+  "categoryDescriptions": {
+    "cpu": "Headroom for gaming, compiling and AI workloads",
+    "motherboard": "Socket, chipset and expansion for your platform",
+    "gpu": "Frames per second and AI inference throughput",
+    "ram": "Capacity and speed for heavy multi-tasking",
+    "storage": "Fast NVMe for games, projects and model weights",
+    "psu": "Clean, quiet headroom above your peak draw",
+    "case": "Airflow, clearance and the look of the build",
+    "cooling": "Keep boost clocks high and the build quiet"
+  },
+  "untitled": "Untitled Build",
+  "useCases": {
+    "gaming": "Gaming",
+    "ai": "AI & ML",
+    "editing": "Video Editing",
+    "programming": "Programming",
+    "workstation": "Workstation",
+    "streaming": "Streaming"
+  },
+  "title": "Assemble your machine",
+  "description": "Pick one part per category. Budget, power draw and completeness update as you go.",
+  "budget": "Budget",
+  "useCaseLabel": "Use case",
+  "filter": "Filter models…",
+  "sort": {
+    "label": "Sort components",
+    "score": "Best score",
+    "priceAsc": "Price low → high",
+    "priceDesc": "Price high → low"
+  },
+  "available": "{{count}} available",
+  "notSelected": "Not selected",
+  "selected": "Selected",
+  "add": "Add",
+  "added": "{{name}} added",
+  "addedHint": "{{category}} slot updated · totals recalculated live.",
+  "removed": "Removed {{name}}",
+  "removedHint": "Slot cleared.",
+  "noMatch": "No parts match that filter",
+  "noMatchHint": "Nothing in {{category}} matches “{{query}}”. Try a broader search.",
+  "resetFilter": "Reset filter",
+  "summary": {
+    "title": "Your build",
+    "compatible": "Compatible",
+    "errors": "{{count}} error",
+    "errors_plural": "{{count}} errors",
+    "warnings": "{{count}} warning",
+    "warnings_plural": "{{count}} warnings",
+    "overBudget": "Over by {{amount}}",
+    "total": "Total",
+    "draw": "Estimated draw",
+    "psuHeadroom": "PSU headroom",
+    "psuFree": "{{watts}} W free",
+    "psuShort": "{{watts}} W short",
+    "budgetLeft": "Budget left",
+    "saveShare": "Save & share build",
+    "askAdvisor": "Ask the advisor",
+    "scoreNote": "Score and compatibility are computed locally from catalogue data and written to the database when you save.",
+    "choose": "Choose a {{category}}"
+  },
+  "banner": {
+    "allCompatible": "All compatible",
+    "allCompatibleMissing": "All selected parts compatible · {{count}} part(s) missing",
+    "warnings": "{{count}} warning — review before buying",
+    "warnings_plural": "{{count}} warnings — review before buying",
+    "errors": "{{count}} compatibility error — this build won't boot as-is",
+    "errors_plural": "{{count}} compatibility errors — this build won't boot as-is"
+  },
+  "aiCta": {
+    "title": "Let the advisor do the first pass",
+    "body": "Describe a budget and workload — the AI drafts the parts list.",
+    "action": "Open AI advisor"
+  },
+  "specs": {
+    "score": "score {{value}}",
+    "inStock": "In stock",
+    "limited": "Limited",
+    "outOfStock": "Out of stock"
+  },
+  "alerts": {
+    "save": "Save alert",
+    "title": "Price alert",
+    "body": "We'll notify you when the price drops.",
+    "targetPrice": "Target price",
+    "priceDrop": "Price drop",
+    "backInStock": "Back in stock",
+    "created": "Alert created",
+    "signInRequired": "Sign in to create alerts"
+  }
+}

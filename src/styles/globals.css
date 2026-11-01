@@ -1,0 +1,282 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+@import '@fontsource/jetbrains-mono/600.css';
+/* Arabic UI face. Latin specs keep JetBrains Mono in both languages. */
+@import '@fontsource/ibm-plex-sans-arabic/400.css';
+@import '@fontsource/ibm-plex-sans-arabic/500.css';
+@import '@fontsource/ibm-plex-sans-arabic/600.css';
+@import '@fontsource/ibm-plex-sans-arabic/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   NEXUS DESIGN TOKENS
+   RGB triplets so Tailwind can compose alpha (`rgb(var(--primary) / 0.2)`).
+   ========================================================================== */
+@layer base {
+  :root,
+  .dark {
+    --background: 8 9 12; /* #08090C deep space black */
+    --surface: 15 17 23; /* #0F1117 elevated card */
+    --surface-elevated: 22 24 34; /* #161822 hover / active card */
+    --surface-inset: 10 11 16;
+    --border: rgba(255, 255, 255, 0.06);
+    --border-strong: rgba(255, 255, 255, 0.12);
+    --foreground: 245 247 250; /* #F5F7FA */
+    --muted-foreground: 139 146 168; /* #8B92A8 */
+    --primary: 99 102 241; /* #6366F1 indigo */
+    --primary-glow: 129 140 248; /* #818CF8 */
+    --primary-foreground: 255 255 255;
+    --secondary: 139 92 246; /* #8B5CF6 violet */
+    --secondary-foreground: 255 255 255;
+    --accent: 34 211 238; /* #22D3EE cyan */
+    --accent-foreground: 8 9 12;
+    --success: 16 185 129; /* #10B981 */
+    --warning: 245 158 11; /* #F59E0B */
+    --danger: 244 63 94; /* #F43F5E */
+
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --grid-line: rgba(255, 255, 255, 0.045);
+    --selection: rgba(99, 102, 241, 0.35);
+    color-scheme: dark;
+  }
+
+  .light {
+    --background: 248 249 252; /* #F8F9FC */
+    --surface: 255 255 255;
+    --surface-elevated: 244 245 250;
+    --surface-inset: 240 241 247;
+    --border: rgba(9, 12, 22, 0.08);
+    --border-strong: rgba(9, 12, 22, 0.16);
+    --foreground: 12 14 22; /* #0C0E16 */
+    --muted-foreground: 92 99 120;
+    --primary: 79 82 221;
+    --primary-glow: 99 102 241;
+    --primary-foreground: 255 255 255;
+    --secondary: 124 58 237;
+    --secondary-foreground: 255 255 255;
+    --accent: 8 145 178;
+    --accent-foreground: 255 255 255;
+    --success: 5 150 105;
+    --warning: 217 119 6;
+    --danger: 225 29 72;
+
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(9, 12, 22, 0.07);
+    --grid-line: rgba(9, 12, 22, 0.05);
+    --selection: rgba(79, 82, 221, 0.2);
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-feature-settings:
+      'cv02' 1,
+      'cv03' 1,
+      'cv04' 1,
+      'ss01' 1;
+    text-rendering: optimizeLegibility;
+    min-height: 100dvh;
+  }
+
+  /* ---------------------------------------------------------------------
+     RTL / Arabic
+     Arabic gets its own family: the Latin UI face renders Arabic with poor
+     proportions. Mono stays for specs and prices in both languages.
+     --------------------------------------------------------------------- */
+  html[lang='ar'] body {
+    font-family: 'IBM Plex Sans Arabic', 'Inter Variable', system-ui, sans-serif;
+    letter-spacing: 0;
+  }
+
+  /* Arabic has no case, so tracking-based uppercase labels look broken. */
+  html[lang='ar'] .uppercase {
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+
+  /* Bidi-safe: never let a model name or price split awkwardly. */
+  html[dir='rtl'] .tabular,
+  html[dir='rtl'] .font-mono {
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+  }
+
+  ::selection {
+    background: var(--selection);
+  }
+
+  /* Slim, theme-aware scrollbars */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--foreground) / 0.14) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--foreground) / 0.14);
+    border-radius: 9999px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--foreground) / 0.24);
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary/60 ring-offset-2 ring-offset-background;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* ==========================================================================
+   COMPONENT UTILITIES
+   ========================================================================== */
+@layer components {
+  /* Glassmorphism surface used by nav, modals, floating panels */
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+  }
+
+  .glass-strong {
+    background: rgb(var(--surface) / 0.72);
+    border: 1px solid var(--border-strong);
+    backdrop-filter: blur(28px) saturate(150%);
+    -webkit-backdrop-filter: blur(28px) saturate(150%);
+  }
+
+  /* Ambient grid overlay for hero sections */
+  .grid-overlay {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  }
+
+  .text-gradient {
+    @apply bg-text-gradient bg-clip-text text-transparent;
+    background-size: 160% 160%;
+  }
+
+  /* Gradient hairline border that survives rounded corners */
+  .border-gradient {
+    position: relative;
+  }
+  .border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      140deg,
+      rgb(var(--primary) / 0.55),
+      rgb(var(--accent) / 0.25),
+      transparent 60%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Shimmer skeleton sweep — used instead of spinners */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.06), transparent);
+    animation: shimmer 1.8s ease-in-out infinite;
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    @apply font-mono;
+  }
+}
+
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY — graceful degradation for reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .shimmer::after {
+    animation: none;
+    opacity: 0.35;
+  }
+}
+
+/* Sonner toast theming for the Nexus dark surface */
+[data-sonner-toaster] [data-sonner-toast] {
+  font-family: 'Inter Variable', Inter, sans-serif;
+}

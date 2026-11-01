@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.47.10"
+  },
+  "compilerOptions": {
+    "lib": ["deno.window", "esnext"],
+    "strict": true
+  }
+}

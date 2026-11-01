@@ -35,7 +35,13 @@ export function toNeutralMessages(contents: GeminiContent[], systemInstruction?:
         const call = p.functionCall!;
         const id = `call_${messages.length}_${index}`;
         pendingCalls.set(call.name, id);
-        return { id, name: call.name, args: call.args ?? {} };
+        return {
+          id,
+          name: call.name,
+          args: call.args ?? {},
+          // Survives the round-trip: Gemini rejects a resumed loop without it.
+          ...(p.thoughtSignature ? { thoughtSignature: p.thoughtSignature } : {}),
+        };
       });
       messages.push({
         role: 'assistant',
@@ -44,6 +50,7 @@ export function toNeutralMessages(contents: GeminiContent[], systemInstruction?:
           .join('')
           .trim(),
         toolCalls,
+        parts: content.parts,
       });
       continue;
     }
@@ -55,7 +62,7 @@ export function toNeutralMessages(contents: GeminiContent[], systemInstruction?:
         messages.push({
           role: 'tool',
           content: JSON.stringify(response.response ?? {}),
-          toolCallId: pendingCalls.get(response.name) ?? 'call_0',
+          toolCallId: pendingCalls.get(response.name) ?? response.id ?? 'call_0',
           toolName: response.name,
         });
       }

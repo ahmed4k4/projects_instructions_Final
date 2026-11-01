@@ -62,7 +62,7 @@ export function AppShell() {
       <Sidebar collapsed={sidebarCollapsed} />
 
       <div
-        className="flex min-h-[100dvh] flex-col transition-[padding] duration-300 ease-nexus lg:ps-[var(--sidebar-w)]"
+        className="flex min-h-[100dvh] flex-col transition-[padding] duration-300 ease-nexus lg:ps-sidebar"
         style={{ ['--sidebar-w' as string]: `${sidebarCollapsed ? 76 : 248}px` }}
       >
         <Topbar />

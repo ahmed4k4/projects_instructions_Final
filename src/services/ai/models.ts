@@ -2,20 +2,21 @@
  * Free-tier model resolution.
  *
  * ── Measured, not assumed ─────────────────────────────────────────────────
- * Verified live against this project's key on 2026-11-01:
+ * Probed live against this project's key (scripts/probe-models.mjs):
  *
- *   gemini-3.5-flash-lite  ✓ 200 in ~690 ms  — fast, streams, answers Arabic
- *   gemini-3.8-flash       ✗ no response within 40 s (deep reasoning model)
- *   gemini-3.6-flash       ✗ 429 quota exhausted
- *   gemini-2.5-flash       ✗ 404 retired for new keys
+ *   gemini-3.5-flash-lite  ✓ 200 in ~750-900 ms — streams, tools, Arabic
+ *   gemini-flash-lite-latest ✓ 200 in ~890 ms   — rolling alias of the above
+ *   gemini-3.6-flash       ✓ 200 in ~975 ms     — answers, more quota-hungry
+ *   gemini-3.5-flash       ✗ 429 quota exhausted for this key
+ *   gemini-3.8-flash       ✗ 503 high demand    — never usable interactively
+ *   gemini-1.5-flash       ✗ 404 retired for API v1beta
  *
- * The brief lists `gemini-3.8-flash` first. It is real and free, but it does not
- * answer in interactive time — putting it first would hang the chat UI for 40 s
- * before falling back. So the order below is *latency first*: the first model
- * that reliably answers within a second, with the bigger models behind it.
+ * Phase 6 asked for `gemini-1.5-flash` as the pin. It returns 404 on the current
+ * API, so pinning it would break every request. `gemini-3.5-flash-lite` is the
+ * working equivalent: it is the model that actually answers with function
+ * calling, which is what the pin was for.
+ *
  * Change `MODEL_CANDIDATES` in one place if Google's availability shifts.
- *
- * Anything not in this list must not be hardcoded anywhere else.
  */
 import type { GeminiModelKey } from '@/types/ai';
 
@@ -24,9 +25,12 @@ import type { GeminiModelKey } from '@/types/ai';
  * extra seconds are acceptable (Build Doctor).
  */
 export const MODEL_CANDIDATES: Record<GeminiModelKey, readonly string[]> = {
-  chat: ['gemini-3.5-flash-lite', 'gemini-3.8-flash', 'gemini-3.6-flash'],
-  quality: ['gemini-3.8-flash', 'gemini-3.5-flash-lite', 'gemini-3.6-flash'],
+  chat: ['gemini-3.5-flash-lite', 'gemini-flash-lite-latest', 'gemini-3.6-flash'],
+  quality: ['gemini-3.6-flash', 'gemini-3.5-flash-lite', 'gemini-flash-lite-latest'],
 };
+
+/** The model every fresh workspace starts on. */
+export const DEFAULT_CHAT_MODEL = 'gemini-3.5-flash-lite';
 
 const CACHE_KEY = 'nexus:ai:model';
 const PROBE_TIMEOUT_MS = 20_000;
@@ -67,7 +71,7 @@ export function rememberModel(key: GeminiModelKey, modelId: string): void {
  * Deliberately synchronous: probing on the hot path burns quota and adds latency.
  */
 export function resolveModelSync(key: GeminiModelKey): string {
-  return readCache()[key] ?? MODEL_CANDIDATES[key][0] ?? 'gemini-3.5-flash-lite';
+  return readCache()[key] ?? MODEL_CANDIDATES[key][0] ?? DEFAULT_CHAT_MODEL;
 }
 
 export interface ProbeAttempt {

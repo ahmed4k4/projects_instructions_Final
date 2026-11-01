@@ -8,7 +8,7 @@
  * Everything above this layer (agents, prompts, UI) speaks `AIProvider` and
  * never sees a Gemini payload.
  */
-import type { ToolCall, ToolDeclaration } from '@/types/ai';
+import type { GeminiContentPart, ToolCall, ToolDeclaration } from '@/types/ai';
 
 export type ProviderId = 'gemini';
 
@@ -21,6 +21,11 @@ export interface ChatMessage {
   /** Result of a tool call (tool turns only). */
   toolCallId?: string;
   toolName?: string;
+  /**
+   * Raw provider parts for this turn. When present it wins over
+   * `toolCalls`/`content` — this is how `thoughtSignature`s survive a replay.
+   */
+  parts?: GeminiContentPart[];
 }
 
 export interface ChatRequest {
@@ -42,6 +47,8 @@ export interface ChatRequest {
 export interface StreamResult {
   text: string;
   toolCalls: ToolCall[];
+  /** Raw model turn exactly as returned — replay verbatim on the next round. */
+  modelParts?: GeminiContentPart[];
   /** Sources returned by grounding, when it was used. */
   sources?: GroundingSource[];
 }

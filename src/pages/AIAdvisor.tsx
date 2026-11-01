@@ -25,6 +25,8 @@ export default function AIAdvisor() {
   const { t } = useTranslation();
   const language = useUIStore((state) => state.language);
 
+  // Re-localises on language switch: `t` is not referentially stable across
+  // `changeLanguage`, so the language is an explicit dependency.
   const welcome = useMemo<ChatMessage>(
     () => ({
       id: 'welcome',
@@ -32,6 +34,7 @@ export default function AIAdvisor() {
       createdAt: new Date().toISOString(),
       content: t('advisor.welcome'),
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [t, language],
   );
 

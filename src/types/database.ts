@@ -31,6 +31,9 @@ export interface Database {
           is_active: boolean;
           created_at: string;
           updated_at: string;
+          /** Added by migration 007_i18n_content.sql (nullable). */
+          name_ar: string | null;
+          description_ar: string | null;
         };
         Insert: {
           id?: string;
@@ -49,6 +52,8 @@ export interface Database {
           is_active?: boolean;
           created_at?: string;
           updated_at?: string;
+          name_ar?: string | null;
+          description_ar?: string | null;
         };
         Update: Partial<Database['public']['Tables']['components']['Insert']>;
         Relationships: [];

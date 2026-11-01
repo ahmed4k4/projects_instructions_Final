@@ -98,7 +98,8 @@
     "emptyBody": "ابدأ بقائمة فارغة أو اطلب من المستشار اقتراح واحدة من ميزانيتك.",
     "openBuilder": "افتح الباني",
     "alertsTab": "التنبيهات",
-    "noAlerts": "لا توجد تنبيهات بعد"
+    "noAlerts": "لا توجد تنبيهات بعد",
+    "partsSelected": "{{count}} قطع مختارة · {{price}} من {{budget}}"
   },
   "buildDetail": {
     "copyLink": "انسخ رابط المشاركة",
@@ -133,7 +134,10 @@
     "noSupabase": "الحسابات تحتاج Supabase",
     "noSupabaseBody": "أضف VITE_SUPABASE_URL وVITE_SUPABASE_ANON_KEY إلى ملف .env لتفعيل تسجيل الدخول والحفظ السحابي. كل شيء آخر يعمل دون ذلك.",
     "backToBuilder": "رجوع إلى الباني",
-    "optionalNote": "تسجيل الدخول اختياري — يمكنك متابعة البناء محليًا."
+    "optionalNote": "تسجيل الدخول اختياري — يمكنك متابعة البناء محليًا.",
+    "sendError": "تعذّر إرسال الرابط",
+    "sentToast": "تحقّق من بريدك",
+    "sentToastBody": "أرسلنا رابط دخول إلى {{email}}."
   },
   "notFound": {
     "title": "هذه الخانة فارغة",

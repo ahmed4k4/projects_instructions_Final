@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Eye, Heart, MessageCircle, Plus, Star, TrendingUp } from 'lucide-react';
 import { toast } from 'sonner';
 import { PageHeader } from '@/components/layout/PageHeader';
@@ -91,7 +92,7 @@ const META: Record<string, PostMeta> = {
 
 function StarRow({ rating }: { rating: number }) {
   return (
-    <span className="flex items-center gap-0.5" aria-label={`Rated ${rating} out of 5`}>
+    <span className="flex items-center gap-0.5" aria-label={`${rating} / 5`}>
       {Array.from({ length: 5 }, (_, index) => (
         <Star
           key={index}
@@ -105,23 +106,20 @@ function StarRow({ rating }: { rating: number }) {
 }
 
 export default function Community() {
+  const { t } = useTranslation();
+
   return (
     <div className="container py-8 lg:py-10">
       <PageHeader
-        eyebrow="Community"
-        title="What everyone else is running"
-        description="Real builds with real spec sheets. Rates, tags and views are sample data in Phase 1."
-        breadcrumbs={[{ label: 'Workspace', to: '/' }, { label: 'Community' }]}
+        eyebrow={t('nav.community')}
+        title={t('community.title')}
+        description={t('community.description')}
+        breadcrumbs={[{ label: t('nav.workspace'), to: '/' }, { label: t('nav.community') }]}
         actions={
-          <Button
-            size="sm"
-            onClick={() =>
-              toast.info('Publishing opens in Phase 2', {
-                description: 'Builds will be shareable publicly then.',
-              })
-            }
-          >
-            <Plus /> Publish your build
+          <Button size="sm" asChild>
+            <Link to="/dashboard">
+              <Plus /> {t('community.publish')}
+            </Link>
           </Button>
         }
       />
@@ -155,7 +153,8 @@ export default function Community() {
                         <Badge variant="primary">{useCase?.label}</Badge>
                       </div>
                       <p className="mt-0.5 text-[11.5px] text-muted-foreground">
-                        by <span className="text-foreground/80">@{meta.author}</span> · {meta.timeAgo}
+                        {t('community.by')}{' '}
+                        <span className="text-foreground/80">@{meta.author}</span> · {meta.timeAgo}
                       </p>
                       <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
                         {build.description}
@@ -201,12 +200,12 @@ export default function Community() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={() => toast.success('Saved to your collection', { description: build.name })}
+                      onClick={() => toast.success(t('community.save'), { description: build.name })}
                     >
-                      <Heart /> Save
+                      <Heart /> {t('community.save')}
                     </Button>
                     <Button asChild variant="ghost" size="sm">
-                      <Link to={`/b/${build.slug}`}>Open build</Link>
+                      <Link to={`/b/${build.slug}`}>{t('community.open')}</Link>
                     </Button>
                   </div>
                 </footer>
@@ -219,7 +218,7 @@ export default function Community() {
         <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-xl border border-border bg-surface p-5">
             <h2 className="flex items-center gap-2 text-sm font-semibold">
-              <TrendingUp className="size-4 text-accent" /> Trending tags
+              <TrendingUp className="size-4 text-accent" /> {t('community.trending')}
             </h2>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {['#sff', '#4k', '#llm', '#quiet', '#av1', '#budget', '#watercooling', '#ddr5'].map(
@@ -240,11 +239,11 @@ export default function Community() {
           </div>
 
           <div className="rounded-xl border border-border bg-surface p-5">
-            <h2 className="text-sm font-semibold">Publishing guidelines</h2>
+            <h2 className="text-sm font-semibold">{t('community.guidelines')}</h2>
             <ul className="mt-3 space-y-2 text-[11.5px] leading-relaxed text-muted-foreground">
-              <li>Include the full parts list — no mystery components.</li>
-              <li>Note the resolution and settings you actually play at.</li>
-              <li>Photos are optional; the spec sheet is what people compare.</li>
+              <li>{t('community.guide1')}</li>
+              <li>{t('community.guide2')}</li>
+              <li>{t('community.guide3')}</li>
             </ul>
           </div>
         </aside>

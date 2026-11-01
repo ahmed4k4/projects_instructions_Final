@@ -8,16 +8,41 @@ export function cn(...inputs: ClassValue[]): string {
 
 const currencyFormatters = new Map<string, Intl.NumberFormat>();
 
-/** $1,899.00 style money formatting, cached per currency. */
+/**
+ * Current UI locale, kept in sync by `setFormatLocale`.
+ *
+ * Prices used to be hardcoded to `en-US`, which rendered `US$1,800` inside an
+ * otherwise Arabic page. The active language is injected once on
+ * `languageChanged` so every formatter (including cached ones) agrees.
+ */
+let formatLocale = 'en-US';
+
+const LOCALE_TAGS: Record<string, string> = {
+  en: 'en-US',
+  ar: 'ar-EG',
+};
+
+export function setFormatLocale(language: string): void {
+  const next = LOCALE_TAGS[language.split('-')[0] ?? 'en'] ?? 'en-US';
+  if (next === formatLocale) return;
+  formatLocale = next;
+  // Cached formatters were built for the previous locale.
+  currencyFormatters.clear();
+}
+
+/** `$1,899.00` in English, `US$1,800` in Arabic — same currency, locale digits. */
 export function formatCurrency(value: number, currency = 'USD', compact = false): string {
-  const key = `${currency}:${compact ? 1 : 0}`;
+  const key = `${formatLocale}:${currency}:${compact ? 1 : 0}`;
   let formatter = currencyFormatters.get(key);
   if (!formatter) {
-    formatter = new Intl.NumberFormat('en-US', {
+    formatter = new Intl.NumberFormat(formatLocale, {
       style: 'currency',
       currency,
       maximumFractionDigits: compact ? 0 : value % 1 === 0 ? 0 : 2,
       notation: compact ? 'compact' : 'standard',
+      // Keep Western digits: Arabic-Indic numerals next to "RTX 4090" read oddly
+      // on a technical spec sheet.
+      numberingSystem: 'latn',
     });
     currencyFormatters.set(key, formatter);
   }
@@ -37,7 +62,11 @@ export function formatScore(score: number | null | undefined): string {
 
 /** 2.4k / 18.3k views */
 export function formatCompact(value: number): string {
-  return new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(value);
+  return new Intl.NumberFormat(formatLocale, {
+    notation: 'compact',
+    maximumFractionDigits: 1,
+    numberingSystem: 'latn',
+  }).format(value);
 }
 
 export function slugify(input: string): string {

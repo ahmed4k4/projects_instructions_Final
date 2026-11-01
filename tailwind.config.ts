@@ -21,8 +21,22 @@ const logicalProperties = plugin(({ addUtilities, matchUtilities, theme }) => {
       'border-s': (value: string) => ({ borderInlineStartWidth: value }),
       'border-e': (value: string) => ({ borderInlineEndWidth: value }),
     },
-    { values: theme('spacing'), supportsNegativeValues: true },
+    {
+      values: theme('spacing'),
+      supportsNegativeValues: true,
+      // Without this, arbitrary values such as `lg:ps-[var(--sidebar-w)]`
+      // resolve against an EMPTY scale and Tailwind silently emits no rule,
+      // which is what left the main column sitting under the sidebar.
+      modifiers: 'any',
+    },
   );
+
+  // Explicit arbitrary-value forms, so app-shell offsets never depend on
+  // whether a token happens to exist in the spacing scale.
+  addUtilities({
+    '.ps-sidebar': { paddingInlineStart: 'var(--sidebar-w)' },
+    '.pe-sidebar': { paddingInlineEnd: 'var(--sidebar-w)' },
+  });
 
   addUtilities({
     '.text-start': { textAlign: 'start' },

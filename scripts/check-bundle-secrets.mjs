@@ -15,7 +15,14 @@ const FORBIDDEN = [
   { name: 'Google API key (AIza…)', re: /AIza[0-9A-Za-z_-]{20,}/ },
   { name: 'AI Studio key (AQ.…)', re: /AQ\.[A-Za-z0-9_-]{20,}/ },
   { name: 'VITE_GEMINI_API_KEY reference', re: /VITE_GEMINI_API_KEY/ },
-  { name: 'Gemini key env read', re: /GEMINI_API_KEY\s*[:=]/ },
+  // A real assignment, not the help text. The UI legitimately ships the string
+  // `GEMINI_API_KEY=your-key` inside its "configure the server" instructions, so
+  // the value must look like key material rather than a placeholder.
+  {
+    name: 'Gemini key env assignment',
+    // Matches `GEMINI_API_KEY` followed by a non-placeholder value (24+ chars).
+    re: /GEMINI_API_KEY\s*[:=]\s*["'](?!(?:your-key|YOUR_KEY|<|\$\{|process\.env))[A-Za-z0-9_-]{24,}["']/,
+  },
   { name: 'Supabase service role key', re: /service_role[\s"':=]+eyJ/ },
 ];
 

@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, Home, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { GradientMesh } from '@/components/shared/GradientMesh';
 
 export default function NotFound() {
+  const { t } = useTranslation();
   const reduce = useReducedMotion();
 
   return (
@@ -35,21 +37,20 @@ export default function NotFound() {
           </motion.p>
         </div>
 
-        <h1 className="mt-6 text-2xl font-semibold tracking-tight">This slot is empty</h1>
+        <h1 className="mt-6 text-2xl font-semibold tracking-tight">{t('notFound.title')}</h1>
         <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-          The page you tried to load isn't in the parts catalogue. It may have moved, or the link was copied
-          incompletely.
+          {t('notFound.body')}
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button asChild size="lg">
             <Link to="/">
-              <Home /> Back to home
+              <Home /> {t('notFound.home')}
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link to="/builder">
-              <Wrench /> Open the builder
+              <Wrench /> {t('notFound.builder')}
             </Link>
           </Button>
         </div>
@@ -58,7 +59,7 @@ export default function NotFound() {
           to="/dashboard"
           className="mt-6 inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
         >
-          <ArrowLeft className="size-3.5" /> Or check your dashboard
+          <ArrowLeft className="size-3.5 rtl:rotate-180" /> {t('notFound.dashboard')}
         </Link>
       </motion.div>
     </div>

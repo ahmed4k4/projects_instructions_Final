@@ -32,7 +32,9 @@
     "no": "No",
     "parts": "{{count}} parts",
     "partsOne": "{{count}} part",
-    "copy": "Copy"
+    "copy": "Copy",
+    "live": "Live",
+    "error": "Unknown error"
   },
   "theme": {
     "dark": "Dark",
@@ -50,7 +52,7 @@
     "signOut": "Sign out",
     "signedIn": "Signed in",
     "localWorkspace": "Local workspace",
-    "localHint": "Your builds are saved in this browser"
+    "localHint": "Saved in this browser"
   },
   "footer": {
     "copyright": "© {{year}} Nexus PC Builder. Build data is illustrative.",

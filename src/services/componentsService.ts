@@ -16,6 +16,8 @@ export function mapComponentRow(row: ComponentRow): PCComponent {
     brand: row.brand,
     model: row.model,
     name: row.name,
+    nameAr: row.name_ar,
+    descriptionAr: row.description_ar,
     specs: (row.specs ?? {}) as Record<string, unknown>,
     price: Number(row.price),
     currency: row.currency,

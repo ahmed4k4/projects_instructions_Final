@@ -6,6 +6,7 @@ import { cn, formatCurrency, formatSpecValue, formatWatts } from '@/lib/utils';
 import { staggerItem } from '@/lib/motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { ComponentName } from '@/components/shared/ComponentName';
 import { CategoryIcon } from './CategoryIcon';
 
 /** Short, category-aware spec highlights (3 per card). */
@@ -106,7 +107,7 @@ export function ComponentCard({ component, selected, onSelect, onRemove }: Compo
           {component.brand}
         </p>
         <h3 className="mt-0.5 line-clamp-2 text-sm font-semibold leading-snug text-foreground">
-          {component.name}
+          <ComponentName component={component} />
         </h3>
 
         <ul className="mt-3 flex flex-wrap gap-1.5">

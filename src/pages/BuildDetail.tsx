@@ -8,6 +8,7 @@ import { BuildScoreRing } from '@/components/domain/BuildScoreRing';
 import { CategoryIcon } from '@/components/domain/CategoryIcon';
 import { CompatibilityBadge } from '@/components/domain/CompatibilityBadge';
 import { PriceTag } from '@/components/shared/PriceTag';
+import { ComponentName } from '@/components/shared/ComponentName';
 import { EmptyState } from '@/components/shared/EmptyState';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -111,7 +112,9 @@ export default function BuildDetail() {
                       </span>
                       <CompatibilityBadge status="ok" label="Verified fit" />
                     </div>
-                    <p className="mt-1 truncate text-sm font-semibold">{component.name}</p>
+                    <p className="mt-1 truncate text-sm font-semibold">
+                      <ComponentName component={component} />
+                    </p>
                     <div className="mt-2 flex flex-wrap gap-1.5">
                       {specs.map(([key, value]) => (
                         <span

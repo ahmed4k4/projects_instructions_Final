@@ -97,6 +97,13 @@ export interface PCComponent {
   brand: string;
   model: string;
   name: string;
+  /**
+   * Arabic display fields (migration 007). Nullable: the UI falls back to
+   * `name` / `description` — read them through src/lib/i18nContent.ts.
+   */
+  nameAr?: string | null;
+  description?: string | null;
+  descriptionAr?: string | null;
   specs: Record<string, unknown>;
   price: number;
   currency: string;

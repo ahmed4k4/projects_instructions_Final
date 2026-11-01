@@ -97,5 +97,19 @@
     "backInStock": "Back in stock",
     "created": "Alert created",
     "signInRequired": "Sign in to create alerts"
+  },
+  "share": {
+    "build": "Share this build",
+    "copied": "Link copied",
+    "copiedHint": "Anyone you send it to opens the exact same parts — no account needed.",
+    "copyFailed": "Copy the link manually",
+    "empty": "Add at least one part first",
+    "cloudCta": "Sign in to sync to the cloud (optional)"
+  },
+  "local": {
+    "banner": "Local workspace",
+    "body": "Your build is saved in this browser only. Sign in to sync across devices.",
+    "restored": "Shared build loaded",
+    "missing": "{{count}} part(s) in that link are no longer in the catalogue."
   }
 }

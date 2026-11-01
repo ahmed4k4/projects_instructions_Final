@@ -98,7 +98,8 @@
     "emptyBody": "Start from an empty list or ask the advisor to draft one from your budget.",
     "openBuilder": "Open the builder",
     "alertsTab": "Alerts",
-    "noAlerts": "No alerts yet"
+    "noAlerts": "No alerts yet",
+    "partsSelected": "{{count}} parts selected · {{price}} of {{budget}}"
   },
   "buildDetail": {
     "copyLink": "Copy share link",
@@ -133,7 +134,10 @@
     "noSupabase": "Accounts need Supabase",
     "noSupabaseBody": "Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to .env to enable sign-in and cloud saving. Everything else already works without it.",
     "backToBuilder": "Back to the builder",
-    "optionalNote": "Signing in is optional — you can keep building locally."
+    "optionalNote": "Signing in is optional — you can keep building locally.",
+    "sendError": "Could not send the link",
+    "sentToast": "Check your inbox",
+    "sentToastBody": "We sent a sign-in link to {{email}}."
   },
   "notFound": {
     "title": "This slot is empty",

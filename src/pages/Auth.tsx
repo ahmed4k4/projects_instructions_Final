@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, Loader2, Mail, ShieldCheck } from 'lucide-react';
 import { toast } from 'sonner';
@@ -19,6 +20,7 @@ import { EASE_OUT } from '@/lib/motion';
  * the email and (when already signed in) honour the `returnTo` intent.
  */
 export default function Auth() {
+  const { t } = useTranslation();
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const reduce = useReducedMotion();
@@ -44,11 +46,13 @@ export default function Auth() {
     setSending(false);
 
     if (error) {
-      toast.error('Could not send the link', { description: error });
+      toast.error(t('auth.sendError'), { description: error });
       return;
     }
     setSent(true);
-    toast.success('Check your inbox', { description: `We sent a sign-in link to ${email.trim()}.` });
+    toast.success(t('auth.sentToast'), {
+      description: t('auth.sentToastBody', { email: email.trim() }),
+    });
   };
 
   return (
@@ -66,21 +70,10 @@ export default function Auth() {
 
           {!available ? (
             <div className="space-y-3">
-              <h1 className="text-xl font-semibold tracking-tight">Accounts need Supabase</h1>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Add{' '}
-                <code className="rounded bg-surface-inset px-1 py-0.5 font-mono text-xs">
-                  VITE_SUPABASE_URL
-                </code>{' '}
-                and{' '}
-                <code className="rounded bg-surface-inset px-1 py-0.5 font-mono text-xs">
-                  VITE_SUPABASE_ANON_KEY
-                </code>{' '}
-                to <code className="rounded bg-surface-inset px-1 py-0.5 font-mono text-xs">.env.local</code>{' '}
-                to enable sign-in and saving.
-              </p>
+              <h1 className="text-xl font-semibold tracking-tight">{t('auth.noSupabase')}</h1>
+              <p className="text-sm leading-relaxed text-muted-foreground">{t('auth.noSupabaseBody')}</p>
               <Button variant="outline" size="sm" onClick={() => navigate('/builder')}>
-                <ArrowLeft /> Back to the builder
+                <ArrowLeft className="rtl:rotate-180" /> {t('auth.backToBuilder')}
               </Button>
             </div>
           ) : sent ? (
@@ -88,26 +81,23 @@ export default function Auth() {
               <span className="grid size-11 place-items-center rounded-xl border border-success/25 bg-success/10 text-success">
                 <Mail className="size-5" />
               </span>
-              <h1 className="text-xl font-semibold tracking-tight">Please check your inbox</h1>
+              <h1 className="text-xl font-semibold tracking-tight">{t('auth.sentTitle')}</h1>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                We sent a sign-in link to <span className="text-foreground">{email}</span>. Open it on this
-                device — it expires after an hour.
+                {t('auth.sentBody', { email })}
               </p>
               <Button variant="ghost" size="sm" onClick={() => setSent(false)}>
-                Use a different email
+                {t('auth.differentEmail')}
               </Button>
             </div>
           ) : (
             <form onSubmit={submit} className="space-y-4">
               <div>
-                <h1 className="text-xl font-semibold tracking-tight">Sign in to Nexus</h1>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                  Save builds, publish to the community and chat with the advisor.
-                </p>
+                <h1 className="text-xl font-semibold tracking-tight">{t('auth.title')}</h1>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{t('auth.body')}</p>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">{t('auth.email')}</Label>
                 <Input
                   id="email"
                   type="email"
@@ -116,18 +106,20 @@ export default function Auth() {
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   placeholder="you@example.com"
+                  dir="ltr"
                 />
               </div>
 
               <Button type="submit" className="w-full" disabled={sending || !email.trim()}>
                 {sending ? <Loader2 className="animate-spin" /> : <Mail />}
-                {sending ? 'Sending link…' : 'Email me a sign-in link'}
+                {sending ? t('auth.sending') : t('auth.sendLink')}
               </Button>
 
               <p className="flex items-start gap-2 text-[11px] leading-relaxed text-muted-foreground">
                 <ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-success" />
-                Passwordless. The link signs you in once and is valid for one hour.
+                {t('auth.passwordless')}
               </p>
+              <p className="text-[11px] leading-relaxed text-muted-foreground">{t('auth.optionalNote')}</p>
             </form>
           )}
         </div>

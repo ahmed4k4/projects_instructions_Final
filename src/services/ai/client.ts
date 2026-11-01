@@ -10,7 +10,14 @@
  * There is exactly one provider in Phase 5; the failover scaffolding from
  * Phase 4 was removed rather than left as dead code.
  */
-import type { GenerateOptions, GenerateResult, GeminiContent, StreamEvent, ToolCall } from '@/types/ai';
+import type {
+  GenerateOptions,
+  GenerateResult,
+  GeminiContent,
+  GeminiContentPart,
+  StreamEvent,
+  ToolCall,
+} from '@/types/ai';
 import { AIError } from '@/types/ai';
 import { geminiProvider, handleModelRetired, setGeminiConfigured } from './providers/geminiProvider';
 import type { ChatMessage, ChatRequest, GroundingSource, ProviderId } from './providers/types';
@@ -104,6 +111,8 @@ async function execute<T>(operation: () => Promise<T>, signal?: AbortSignal): Pr
 export interface ChatOutcome {
   text: string;
   toolCalls: ToolCall[];
+  /** Raw model turn (signatures included) — replay it on the next round. */
+  modelParts: GeminiContentPart[];
   sources: GroundingSource[];
   grounded: boolean;
   provider: ProviderId;
@@ -120,7 +129,13 @@ export async function streamChat(
   if (!request.grounded) {
     return execute(async () => {
       const result = await geminiProvider.streamChat({ ...request, messages }, onToken, signal, onGrounding);
-      return { ...result, sources: result.sources ?? [], grounded: false, provider: 'gemini' as const };
+      return {
+        ...result,
+        modelParts: result.modelParts ?? [],
+        sources: result.sources ?? [],
+        grounded: false,
+        provider: 'gemini' as const,
+      };
     }, signal);
   }
 
@@ -136,7 +151,13 @@ export async function streamChat(
   return execute(async () => {
     const result = await geminiProvider.streamChat({ ...request, messages }, onToken, signal, onGrounding);
     recordGroundedSearch();
-    return { ...result, sources: result.sources ?? [], grounded: true, provider: 'gemini' as const };
+    return {
+      ...result,
+      modelParts: result.modelParts ?? [],
+      sources: result.sources ?? [],
+      grounded: true,
+      provider: 'gemini' as const,
+    };
   }, signal);
 }
 
@@ -150,6 +171,7 @@ export async function generateChat(
     const result = await geminiProvider.generate({ ...request, messages }, signal);
     return {
       ...result,
+      modelParts: result.modelParts ?? [],
       sources: result.sources ?? [],
       grounded: Boolean(request.grounded),
       provider: 'gemini' as const,
@@ -203,6 +225,11 @@ export function stripCodeFence(text: string): string {
  *
  * `grounded` is inferred from the last user turn (see grounding.ts) unless the
  * caller sets it explicitly.
+ *
+ * `modelParts` in the result is the model's turn exactly as Gemini produced it.
+ * Agent loops MUST append it to the conversation as-is: rebuilding a model turn
+ * from `toolCalls` drops `thoughtSignature` and the next request fails with
+ * `400 Function call is missing a thought_signature in functionCall parts`.
  */
 export async function generateFromContents(
   contents: GeminiContent[],
@@ -227,11 +254,23 @@ export async function generateFromContents(
       text: outcome.text,
       toolCalls: outcome.toolCalls,
     } satisfies StreamEvent);
-    return { text: outcome.text, toolCalls: outcome.toolCalls, remaining: null, sources: outcome.sources };
+    return {
+      text: outcome.text,
+      toolCalls: outcome.toolCalls,
+      modelParts: outcome.modelParts,
+      remaining: null,
+      sources: outcome.sources,
+    };
   }
 
   const outcome = await generateChat(messages, { ...request, grounded }, options.signal);
-  return { text: outcome.text, toolCalls: outcome.toolCalls, remaining: null, sources: outcome.sources };
+  return {
+    text: outcome.text,
+    toolCalls: outcome.toolCalls,
+    modelParts: outcome.modelParts,
+    remaining: null,
+    sources: outcome.sources,
+  };
 }
 
 /** Probe models and refresh status ("Test connection"). */

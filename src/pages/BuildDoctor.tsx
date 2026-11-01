@@ -20,6 +20,7 @@ import { CompatibilityBadge } from '@/components/domain/CompatibilityBadge';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { LoadingSkeleton } from '@/components/shared/LoadingSkeleton';
+import { ComponentName } from '@/components/shared/ComponentName';
 import type { BuildDoctorReport } from '@/types/ai';
 import type { PCComponent } from '@/types/components';
 import type { UseCase } from '@/types/build';
@@ -336,7 +337,9 @@ export default function BuildDoctor() {
               <ul className="mt-2 space-y-1.5">
                 {(components ?? []).map((component) => (
                   <li key={component.id} className="flex items-center justify-between gap-2 text-[11px]">
-                    <span className="truncate text-muted-foreground">{component.name}</span>
+                    <span className="truncate text-muted-foreground">
+                      <ComponentName component={component} />
+                    </span>
                     <span className="shrink-0 font-mono">{formatCurrency(component.price)}</span>
                   </li>
                 ))}

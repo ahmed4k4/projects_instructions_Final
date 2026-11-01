@@ -78,16 +78,20 @@ export default function Builder() {
               <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
                 {t('builder.budget')}
               </span>
-              <span className="font-mono text-sm">$</span>
+              {/* `dir="ltr"` keeps "$1,800" as one unit; in RTL the symbol
+                  otherwise detaches and renders on the far side of the field. */}
+              <span className="font-mono text-sm" dir="ltr">$</span>
               <input
                 type="number"
                 min={0}
                 step={50}
-                size={5}
+                size={7}
                 value={budget}
                 onChange={(event) => setBudget(Number(event.target.value))}
-                aria-label="Build budget in USD"
-                className="w-[4.5rem] min-w-0 bg-transparent text-end font-mono text-sm tabular-nums outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                aria-label={t('builder.budget')}
+                /* Wide enough for "12,500" plus the $ prefix and the spinner gutter;
+                   4.5rem clipped anything above four digits. */
+                className="w-[6.5rem] min-w-0 bg-transparent text-end font-mono text-sm tabular-nums outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               />
             </div>
             <Select value={useCase} onValueChange={(value) => setUseCase(value as UseCase)}>

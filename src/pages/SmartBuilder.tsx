@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { SmartBuildWizard } from '@/components/domain/SmartBuildWizard';
 import { AIThinkingPanel, type ToolStep } from '@/components/shared/AIThinkingPanel';
+import { ComponentName } from '@/components/shared/ComponentName';
 import { BuildScoreRing } from '@/components/domain/BuildScoreRing';
 import { CategoryIcon } from '@/components/domain/CategoryIcon';
 import { CompatibilityBadge } from '@/components/domain/CompatibilityBadge';
@@ -26,7 +27,9 @@ import { useBuildStore } from '@/store/useBuildStore';
 import { useAuth } from '@/hooks/useAuth';
 import { CATEGORY_MAP } from '@/lib/constants';
 import { formatCurrency, formatWatts } from '@/lib/utils';
+import { buildShareUrl } from '@/lib/share';
 import { EASE_OUT, makeStagger, staggerItem } from '@/lib/motion';
+import { useTranslation } from 'react-i18next';
 
 const stagger = makeStagger(0.06, 0.05);
 
@@ -38,6 +41,7 @@ interface GeneratedBuild {
 }
 
 export default function SmartBuilder() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const reduce = useReducedMotion();
   const { user } = useAuth();
@@ -131,19 +135,27 @@ export default function SmartBuilder() {
     hydrate(selection as never, result.response.buildName);
     setBudget(request.budget);
     setUseCase(request.useCase);
-    toast.success('Loaded into the builder', {
-      description: 'Swap any part — totals and scores update live.',
-    });
+    toast.success(t('smartBuilder.loaded'), { description: t('smartBuilder.loadedHint') });
     navigate('/builder');
   };
 
   const save = async () => {
     if (!result || !request) return;
+
+    /**
+     * Anonymous path: no account, no server. The build is already in the local
+     * store, so we just hand back a self-contained share link instead of
+     * bouncing the user to /auth.
+     */
     if (!user) {
-      toast.error('Sign in to save this build', {
-        description: 'Your build is kept in the builder meanwhile.',
-      });
-      navigate(`/auth?returnTo=${encodeURIComponent('/builder/ai')}`);
+      const selection = Object.fromEntries(result.components.map((c) => [c.category, c]));
+      const url = buildShareUrl(selection as never, result.response.buildName);
+      if (!url) {
+        toast.error(t('builder.share.empty'));
+        return;
+      }
+      await navigator.clipboard.writeText(url).catch(() => undefined);
+      toast.success(t('builder.share.copied'), { description: t('builder.share.copiedHint') });
       return;
     }
 
@@ -161,11 +173,11 @@ export default function SmartBuilder() {
       });
 
       await navigator.clipboard.writeText(`${window.location.origin}/b/${saved.slug}`).catch(() => undefined);
-      toast.success('Build saved', { description: 'Share link copied to your clipboard.' });
+      toast.success(t('smartBuilder.saved'), { description: t('builder.share.copiedHint') });
       navigate(`/b/${saved.slug}`);
     } catch (err) {
-      toast.error('Could not save the build', {
-        description: err instanceof Error ? err.message : 'Unknown error',
+      toast.error(t('smartBuilder.saveFailed'), {
+        description: err instanceof Error ? err.message : t('common.error'),
       });
     } finally {
       setSaving(false);
@@ -307,7 +319,9 @@ export default function SmartBuilder() {
                         <p className="text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
                           {CATEGORY_MAP[component.category].label}
                         </p>
-                        <p className="truncate text-sm font-medium">{component.name}</p>
+                        <p className="truncate text-sm font-medium">
+                          <ComponentName component={component} />
+                        </p>
                         {reason && (
                           <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{reason}</p>
                         )}

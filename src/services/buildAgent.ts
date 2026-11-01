@@ -15,14 +15,7 @@
  *     degrades to `fallbackBuild`, so the user always gets a usable build.
  *   · Streaming tokens are forwarded as narration for the thinking panel.
  */
-import type {
-  AIBuildRequest,
-  AIBuildResponse,
-  GenerateResult,
-  GeminiContent,
-  GeminiContentPart,
-  ToolCall,
-} from '@/types/ai';
+import type { AIBuildRequest, AIBuildResponse, GenerateResult, GeminiContent, ToolCall } from '@/types/ai';
 import { AIError } from '@/types/ai';
 import type { PCComponent } from '@/types/components';
 import type { PCComponent as Component } from '@/types/components';
@@ -82,8 +75,30 @@ async function catalogue(): Promise<PCComponent[]> {
   }
 }
 
-function functionResponsePart(name: string, response: Record<string, unknown>): GeminiContentPart {
-  return { functionResponse: { name, response } };
+function toolResultPart(name: string, response: Record<string, unknown>, id?: string): GeminiContent {
+  return {
+    role: 'user',
+    parts: [{ functionResponse: { name, response, ...(id ? { id } : {}) } }],
+  };
+}
+
+/**
+ * The model's turn to append to the conversation.
+ *
+ * Prefers the provider's raw parts: they carry the `thoughtSignature` that
+ * Gemini requires when a tool loop continues. Rebuilding a model turn from
+ * `toolCalls` alone is what produced the Phase 5 `400 … missing a
+ * thought_signature` failure, so the hand-built path only remains as a
+ * last-resort guard.
+ */
+function modelTurn(result: GenerateResult): GeminiContent {
+  if (result.modelParts?.length) return { role: 'model', parts: result.modelParts };
+  return {
+    role: 'model',
+    parts: result.toolCalls.map((c) => ({
+      functionCall: { name: c.name, args: c.args, ...(c.id ? { id: c.id } : {}) },
+    })),
+  };
 }
 
 /**
@@ -121,10 +136,7 @@ export async function generateBuild(
         }
 
         // One corrective attempt, then deterministic fallback.
-        contents.push({
-          role: 'model',
-          parts: result.toolCalls.map((c) => ({ functionCall: { name: c.name, args: c.args } })),
-        });
+        contents.push(modelTurn(result));
         contents.push({ role: 'user', parts: [{ text: buildCorrectionInstruction(unknown) }] });
 
         if (round + 1 >= MAX_TOOL_ROUNDS) break;
@@ -142,26 +154,25 @@ export async function generateBuild(
       }
 
       // Execute the tool calls and feed the results back.
-      contents.push({
-        role: 'model',
-        parts: result.toolCalls.map((c) => ({ functionCall: { name: c.name, args: c.args } })),
-      });
+      contents.push(modelTurn(result));
 
-      const responseParts: GeminiContentPart[] = [];
+      const responseParts: GeminiContent[] = [];
       for (const call of result.toolCalls) {
         try {
           const { result: toolResult, summary } = await executor.run(call);
           options.onTool?.({ name: call.name, summary });
-          responseParts.push(functionResponsePart(call.name, toolResult));
+          responseParts.push(toolResultPart(call.name, toolResult, call.id));
         } catch (error) {
           responseParts.push(
-            functionResponsePart(call.name, {
-              error: error instanceof Error ? error.message : 'Tool failed',
-            }),
+            toolResultPart(
+              call.name,
+              { error: error instanceof Error ? error.message : 'Tool failed' },
+              call.id,
+            ),
           );
         }
       }
-      contents.push({ role: 'user', parts: responseParts });
+      contents.push(...responseParts);
     }
 
     return await degraded(req, 'the assistant did not finalise a valid build', executor);

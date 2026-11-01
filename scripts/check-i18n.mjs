@@ -25,14 +25,26 @@ const flatten = (obj, prefix = '') =>
 
 const load = (lang, ns) => JSON.parse(readFileSync(join(LOCALES, lang, `${ns}.json`), 'utf8'));
 
-/** Every key per language, as `ns:key`. */
-const keys = {};
-for (const lang of LANGUAGES) {
-  keys[lang] = new Set();
+/**
+ * Every key per language, mirroring the runtime scoping in src/i18n/index.ts:
+ * `builder.json` is nested under `builder.`, the others merge flat.
+ */
+const SCOPED = new Set(['builder']);
+
+const buildKeySet = (lang) => {
+  const set = new Set();
   for (const ns of NAMESPACES) {
-    for (const path of flatten(load(lang, ns))) keys[lang].add(`${ns}:${path}`);
+    const prefix = SCOPED.has(ns) ? `${ns}.` : '';
+    for (const path of flatten(load(lang, ns))) {
+      set.add(prefix + path);
+      set.add(`${ns}:${path}`);
+    }
   }
-}
+  return set;
+};
+
+const keys = {};
+for (const lang of LANGUAGES) keys[lang] = buildKeySet(lang);
 
 let failures = 0;
 
@@ -72,16 +84,16 @@ for (const file of walk(SRC)) {
   const content = readFileSync(file, 'utf8');
   for (const match of content.matchAll(T_CALL)) {
     const raw = match[1];
-    // `t('thing', { ns })` where ns is not common.
-    const nsMatch = new RegExp(`t\\(\\s*['"]${raw}['"]\\s*,\\s*\\{[^}]*ns:\\s*['"](\\w+)['"]`).exec(content);
-    const ns = nsMatch ? nsMatch[1] : 'common';
-    const qualified = `${ns}:${raw}`;
-    used.add(qualified);
+    used.add(raw);
 
-    const base = qualified.replace(/(_plural|_one|_other)$/, '');
-    if (!keys.en.has(base) && !keys.en.has(qualified)) {
+    // The runtime merges every file into one `translation` namespace, so a key
+    // resolves if it exists in ANY of them (see src/i18n/index.ts). A call may
+    // also carry an explicit `ns:key` prefix, which is checked as written.
+    const base = raw.replace(/(_plural|_one|_other)$/, '');
+    const bare = base.includes(':') ? base.split(':').slice(1).join(':') : base;
+    if (!keys.en.has(base) && !keys.en.has(bare)) {
       failures += 1;
-      console.error(`✖ ${file}: t('${raw}') has no key (tried ${base})`);
+      console.error(`✖ ${file}: t('${raw}') has no key`);
     }
   }
 }

@@ -106,8 +106,17 @@ export interface ToolDeclaration {
 
 export interface GeminiContentPart {
   text?: string;
-  functionCall?: { name: string; args: Record<string, unknown> };
-  functionResponse?: { name: string; response: Record<string, unknown> };
+  functionCall?: { name: string; args: Record<string, unknown>; id?: string };
+  functionResponse?: { name: string; response: Record<string, unknown>; id?: string };
+  /**
+   * Opaque signature Gemini attaches to reasoning + `functionCall` parts.
+   *
+   * It MUST be echoed back verbatim on every subsequent turn of a tool loop.
+   * Dropping it makes the next request fail with
+   *   `400 Function call is missing a thought_signature in functionCall parts.`
+   * Treat it as read-only: copy it, never build it.
+   */
+  thoughtSignature?: string;
 }
 
 export interface GeminiContent {
@@ -148,6 +157,12 @@ export interface GenerateOptions {
 export interface GenerateResult {
   text: string;
   toolCalls: ToolCall[];
+  /**
+   * The model turn exactly as Gemini returned it, `thoughtSignature`s included.
+   * Agent loops must append THIS to the conversation instead of rebuilding parts
+   * from `toolCalls` — see geminiProvider.ts.
+   */
+  modelParts?: GeminiContentPart[];
   /** Approximate requests left in the current rate-limit window. */
   remaining: number | null;
   /** Live sources when the answer was grounded in Google Search. */
@@ -162,6 +177,11 @@ export interface ToolCall {
    */
   id?: string;
   args: Record<string, unknown>;
+  /**
+   * Gemini's opaque signature for this call. Must be echoed back with the
+   * `functionCall` part or the next turn fails with a 400. Copy, never invent.
+   */
+  thoughtSignature?: string;
 }
 
 export interface ToolTraceEntry {

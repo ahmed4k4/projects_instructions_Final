@@ -69,6 +69,9 @@ export default defineConfig(({ mode }) => {
         'clsx',
         'tailwind-merge',
         'class-variance-authority',
+        'three',
+        '@react-three/fiber',
+        '@react-three/drei',
       ],
     },
     resolve: {
@@ -120,6 +123,9 @@ export default defineConfig(({ mode }) => {
             motion: ['framer-motion'],
             data: ['@tanstack/react-query', 'zustand', 'immer'],
             icons: ['lucide-react'],
+            // Three.js is only needed by the landing hero; keeping it in its own
+            // chunk lets every other route load without pulling ~150 kB gzip.
+            three: ['three', '@react-three/fiber', '@react-three/drei'],
           },
         },
       },

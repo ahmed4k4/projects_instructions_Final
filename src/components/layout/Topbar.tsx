@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Bell, LogOut, Menu, Moon, Search, Sun, User } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import { useUIStore } from '@/store/useUIStore';
 import { useBuildTotals } from '@/store/useBuildStore';
 import { useAuth } from '@/hooks/useAuth';
@@ -86,7 +86,8 @@ export function Topbar() {
             <div className="me-2 hidden items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1.5 md:flex">
               <span className="size-1.5 rounded-full bg-success" />
               <span className="font-mono text-[11px] text-muted-foreground">
-                {t('common.parts', { count: totals.itemCount })} · ${totals.totalPrice.toLocaleString('en-US')}
+                {t('common.parts', { count: totals.itemCount })} ·{' '}
+                <span dir="ltr">{formatCurrency(totals.totalPrice)}</span>
               </span>
             </div>
 

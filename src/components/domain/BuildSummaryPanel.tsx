@@ -2,12 +2,15 @@ import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Save, ShoppingCart, Trash2, Zap } from 'lucide-react';
+import { ArrowRight, Save, Share2, Sparkles, Trash2, Zap } from 'lucide-react';
 import { toast } from 'sonner';
 import { useNavigate } from 'react-router-dom';
 import { BUILD_ORDER } from '@/lib/navigation';
 import type { ComponentCategory } from '@/types/components';
 import { cn, formatCurrency, formatWatts } from '@/lib/utils';
+import { buildShareUrl } from '@/lib/share';
+import { localisedName } from '@/lib/i18nContent';
+import { ComponentName } from '@/components/shared/ComponentName';
 import { spring } from '@/lib/motion';
 import { useBuildStore, useBuildTotals } from '@/store/useBuildStore';
 import { useAuth } from '@/hooks/useAuth';
@@ -29,7 +32,7 @@ import { BudgetMeter } from './BudgetMeter';
  * and the same numbers the save path writes to the database.
  */
 export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const totals = useBuildTotals();
   const items = useBuildStore((state) => state.items);
@@ -41,7 +44,24 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
   // The store seeds a human default; translate it without changing stored data.
   const displayName = buildName === 'Untitled Build' ? t('builder.untitled') : buildName;
   const { data: rules = [] } = useCompatibilityRules();
-  const { user } = useAuth();
+  const { user, available } = useAuth();
+  const quantities = useBuildStore((state) => state.quantities);
+
+  const shareBuild = async () => {
+    const url = buildShareUrl(items, buildName, quantities);
+    if (!url) {
+      toast.error(t('builder.share.empty'));
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(url);
+      toast.success(t('builder.share.copied'), { description: t('builder.share.copiedHint') });
+    } catch {
+      // Clipboard permission can be denied; the URL still works if shown.
+      toast.info(t('builder.share.copyFailed'), { description: url });
+    }
+  };
 
   const health = useMemo(() => {
     const compatibility = evaluateCompatibility(items, rules);
@@ -137,9 +157,11 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
                     {t(`builder.categories.${category}`)}
                   </p>
                   <p className="truncate text-xs font-medium">
-                    {component
-                      ? component.name
-                      : t('builder.summary.choose', { category: t(`builder.categories.${category}`) })}
+                    {component ? (
+                      <ComponentName component={component} />
+                    ) : (
+                      t('builder.summary.choose', { category: t(`builder.categories.${category}`) })
+                    )}
                   </p>
                 </div>
                 {component && (
@@ -150,7 +172,7 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
                     <button
                       type="button"
                       onClick={() => removeComponent(category as ComponentCategory)}
-                      aria-label={t('builder.removed', { name: component.name })}
+                      aria-label={t('builder.removed', { name: localisedName(component, i18n.language) })}
                       className="rounded p-1 text-muted-foreground opacity-0 transition hover:bg-danger/10 hover:text-danger group-hover:opacity-100 focus-visible:opacity-100"
                     >
                       <Trash2 className="size-3.5" />
@@ -196,22 +218,22 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
       </div>
 
       <div className="flex flex-col gap-2">
+        {/*
+         * Sharing is anonymous: the build is encoded into the URL fragment, so
+         * this works with no account and no network. Signing in is only needed
+         * for cloud sync.
+         */}
+        <Button disabled={totals.itemCount === 0} className="w-full" onClick={shareBuild}>
+          <Share2 /> {t('builder.share.build')}
+        </Button>
         <Button
           disabled={totals.itemCount === 0}
+          variant="outline"
+          size="sm"
           className="w-full"
-          onClick={() => {
-            if (!user) {
-              toast.error('Sign in to save', { description: 'Your parts are kept locally in the meantime.' });
-              navigate('/auth?returnTo=%2Fbuilder');
-              return;
-            }
-            toast.info(t('builder.summary.saveShare'), {
-              description: t('builder.summary.scoreNote'),
-            });
-            navigate('/builder/ai');
-          }}
+          onClick={() => navigate('/builder/ai')}
         >
-          <ShoppingCart /> {t('builder.summary.saveShare')}
+          <Sparkles /> {t('builder.summary.saveShare')}
         </Button>
         <div className="flex gap-2">
           <Button asChild variant="outline" size="sm" className="flex-1">
@@ -223,6 +245,11 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
             <Trash2 /> {t('common.clear')}
           </Button>
         </div>
+        {!user && available ? (
+          <Button asChild variant="ghost" size="sm" className="w-full text-muted-foreground">
+            <Link to="/auth?returnTo=%2Fbuilder">{t('builder.share.cloudCta')}</Link>
+          </Button>
+        ) : null}
       </div>
 
       <p className="text-[10.5px] leading-relaxed text-muted-foreground/80">

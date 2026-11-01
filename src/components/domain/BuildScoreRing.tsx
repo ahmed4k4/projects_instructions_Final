@@ -63,7 +63,9 @@ export function BuildScoreRing({
           style={{ filter: `drop-shadow(0 0 ${strokeWidth}px ${toneStroke[tone].replace(')', ' / 0.35)')})` }}
         />
       </svg>
-      <div className="absolute inset-0 grid place-items-center">
+      {/* `dir="ltr"` isolates the numeric readout: inside an RTL page the
+          "/ 100" caption otherwise reorders to "100 /". */}
+      <div className="absolute inset-0 grid place-items-center" dir="ltr">
         <div className="text-center">
           <div className="font-mono text-2xl font-semibold leading-none tabular-nums">
             {score === null ? '—' : <AnimatedNumber value={safeScore} duration={1.1} />}

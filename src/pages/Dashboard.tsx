@@ -1,6 +1,7 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { BellRing, Gauge, Layers, Plus, Wrench } from 'lucide-react';
+import { BellRing, Cloud, Gauge, Layers, Plus, Wrench } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { BuildCard } from '@/components/domain/BuildCard';
 import { EmptyState } from '@/components/shared/EmptyState';
@@ -11,16 +12,22 @@ import { sampleBuilds } from '@/lib/sampleData';
 import { useBuildStore, useBuildTotals } from '@/store/useBuildStore';
 import { formatCurrency } from '@/lib/utils';
 import { makeStagger, staggerItem } from '@/lib/motion';
+import { useAuth } from '@/hooks/useAuth';
 
 const stagger = makeStagger(0.07, 0.05);
 
 const myBuilds = sampleBuilds.slice(0, 3);
 
 export default function Dashboard() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const totals = useBuildTotals();
   const activeName = useBuildStore((state) => state.buildName);
   const budget = useBuildStore((state) => state.budget);
+  // Anonymous users get the same workspace, labelled honestly as local-only.
+  const { user, available } = useAuth();
+  const isLocal = !user;
+  const displayName = activeName === 'Untitled Build' ? t('builder.untitled') : activeName;
 
   const averageScore = Math.round(
     myBuilds.reduce((sum, build) => sum + build.buildScore, 0) / Math.max(1, myBuilds.length),
@@ -28,32 +35,32 @@ export default function Dashboard() {
 
   const stats = [
     {
-      label: 'Saved builds',
+      label: t('dashboard.stats.saved'),
       value: myBuilds.length,
       suffix: '',
       icon: Layers,
-      hint: '+1 draft in progress',
+      hint: `+1 ${t('dashboard.inProgress').toLowerCase()}`,
     },
     {
-      label: 'Average score',
+      label: t('dashboard.stats.avgScore'),
       value: averageScore,
       suffix: '/100',
       icon: Gauge,
-      hint: 'Across saved builds',
+      hint: t('dashboard.stats.saved'),
     },
     {
-      label: 'Active alerts',
+      label: t('dashboard.stats.alerts'),
       value: 4,
       suffix: '',
       icon: BellRing,
-      hint: '2 price drops watched',
+      hint: t('dashboard.alertsTab'),
     },
     {
-      label: 'Workspace spend',
+      label: t('dashboard.stats.spend'),
       value: totals.totalPrice,
       suffix: '',
       icon: Wrench,
-      hint: `of ${formatCurrency(budget)} budget`,
+      hint: `/ ${formatCurrency(budget)}`,
       format: (value: number) => formatCurrency(value),
     },
   ];
@@ -61,16 +68,38 @@ export default function Dashboard() {
   return (
     <div className="container py-8 lg:py-10">
       <PageHeader
-        eyebrow="Dashboard"
-        title="Your build workspace"
-        description="Saved builds, live scores and price alerts in one place. Everything here is local until you sign in."
-        breadcrumbs={[{ label: 'Workspace', to: '/' }, { label: 'Dashboard' }]}
+        eyebrow={t('nav.dashboard')}
+        title={t('dashboard.title')}
+        description={t('dashboard.description')}
+        breadcrumbs={[{ label: t('nav.workspace'), to: '/' }, { label: t('nav.dashboard') }]}
         actions={
           <Button size="sm" onClick={() => navigate('/builder')}>
-            <Plus /> New build
+            <Plus /> {t('dashboard.newBuild')}
           </Button>
         }
       />
+
+      {/* Local Workspace banner — anonymous users are first-class here. */}
+      {isLocal ? (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-primary/20 bg-primary/5 px-4 py-3"
+        >
+          <p className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Cloud className="size-4 shrink-0 text-primary-glow" />
+            <span>
+              <span className="font-medium text-foreground">{t('builder.local.banner')}</span> ·{' '}
+              {t('builder.local.body')}
+            </span>
+          </p>
+          {available ? (
+            <Button asChild size="sm" variant="outline">
+              <Link to="/auth?returnTo=%2Fdashboard">{t('dashboard.localBannerCta')}</Link>
+            </Button>
+          ) : null}
+        </motion.div>
+      ) : null}
 
       <motion.div
         variants={stagger}
@@ -85,7 +114,9 @@ export default function Dashboard() {
                 <span className="grid size-9 place-items-center rounded-lg border border-border bg-surface-elevated text-primary-glow">
                   <stat.icon className="size-4" />
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Live</span>
+                <span className="text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                  {t('common.live')}
+                </span>
               </div>
               <div className="mt-5 flex items-baseline gap-1">
                 <AnimatedNumber
@@ -111,12 +142,18 @@ export default function Dashboard() {
       >
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0">
-            <p className="text-[10px] uppercase tracking-[0.16em] text-primary-glow">In progress</p>
-            <p className="mt-1 truncate text-sm font-semibold">{activeName}</p>
+            <p className="text-[10px] uppercase tracking-[0.16em] text-primary-glow">
+              {t('dashboard.inProgress')}
+            </p>
+            <p className="mt-1 truncate text-sm font-semibold">{displayName}</p>
             <p className="mt-0.5 text-xs text-muted-foreground">
               {totals.itemCount === 0
-                ? `Empty draft · ${formatCurrency(budget)} budget`
-                : `${totals.itemCount} parts selected · ${formatCurrency(totals.totalPrice)} of ${formatCurrency(budget)}`}
+                ? t('dashboard.emptyDraft', { budget: formatCurrency(budget) })
+                : t('dashboard.partsSelected', {
+                    count: totals.itemCount,
+                    price: formatCurrency(totals.totalPrice),
+                    budget: formatCurrency(budget),
+                  })}
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -132,7 +169,7 @@ export default function Dashboard() {
               <span className="font-mono text-[11px] text-muted-foreground">{totals.itemCount}/8</span>
             </div>
             <Button size="sm" variant="secondary" onClick={() => navigate('/builder')}>
-              Resume <Wrench />
+              {t('dashboard.resume')} <Wrench />
             </Button>
           </div>
         </div>
@@ -140,17 +177,19 @@ export default function Dashboard() {
 
       <div className="mt-10">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold tracking-tight">My builds</h2>
-          <span className="font-mono text-[11px] text-muted-foreground">{myBuilds.length} saved</span>
+          <h2 className="text-lg font-semibold tracking-tight">{t('dashboard.myBuilds')}</h2>
+          <span className="font-mono text-[11px] text-muted-foreground">
+            {t('dashboard.saved', { count: myBuilds.length })}
+          </span>
         </div>
 
         {myBuilds.length === 0 ? (
           <EmptyState
             className="mt-4"
             icon={Wrench}
-            title="No builds yet"
-            description="Start from an empty list or ask the advisor to draft one from your budget."
-            actionLabel="Open the builder"
+            title={t('dashboard.emptyTitle')}
+            description={t('dashboard.emptyBody')}
+            actionLabel={t('dashboard.openBuilder')}
             onAction={() => navigate('/builder')}
           />
         ) : (

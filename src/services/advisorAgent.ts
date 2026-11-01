@@ -6,7 +6,7 @@
  * answer. Citations are extracted from `[[component:<id>|Name]]` markers and
  * validated against IDs the tools actually returned.
  */
-import type { ChatMessage, GeminiContent, GeminiContentPart, ToolCall } from '@/types/ai';
+import type { ChatMessage, GeminiContent, GeminiContentPart, GenerateResult, ToolCall } from '@/types/ai';
 import { AIError } from '@/types/ai';
 import type { PCComponent } from '@/types/components';
 import { ToolExecutor } from './aiTools';
@@ -54,6 +54,16 @@ function toContents(history: AdvisorOptions['history'], question: string): Gemin
     .map((m) => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] }));
   contents.push({ role: 'user', parts: [{ text: question }] });
   return contents;
+}
+
+function modelTurn(result: GenerateResult): GeminiContent {
+  if (result.modelParts?.length) return { role: 'model', parts: result.modelParts };
+  return {
+    role: 'model',
+    parts: result.toolCalls.map((c) => ({
+      functionCall: { name: c.name, args: c.args, ...(c.id ? { id: c.id } : {}) },
+    })),
+  };
 }
 
 function buildSnapshot(context?: AdvisorContext): Record<string, unknown> {
@@ -118,16 +128,20 @@ export async function askAdvisor(options: AdvisorOptions): Promise<AdvisorAnswer
       break;
     }
 
-    contents.push({
-      role: 'model',
-      parts: result.toolCalls.map((c) => ({ functionCall: { name: c.name, args: c.args } })),
-    });
+    // Replay the model turn exactly as Gemini returned it — the functionCall
+    // parts carry the `thoughtSignature` the next request must echo back.
+    contents.push(modelTurn(result));
 
+    // One `functionResponse` part per call, in the same order as the calls.
     const parts: GeminiContentPart[] = [];
     for (const call of result.toolCalls) {
       if (call.name === 'get_build') {
         parts.push({
-          functionResponse: { name: 'get_build', response: buildSnapshot(context) },
+          functionResponse: {
+            name: 'get_build',
+            response: buildSnapshot(context),
+            ...(call.id ? { id: call.id } : {}),
+          },
         });
         continue;
       }
@@ -135,12 +149,15 @@ export async function askAdvisor(options: AdvisorOptions): Promise<AdvisorAnswer
       try {
         const { result: toolResult, summary } = await executor.run(call as ToolCall);
         options.onTool?.({ name: call.name, summary });
-        parts.push({ functionResponse: { name: call.name, response: toolResult } });
+        parts.push({
+          functionResponse: { name: call.name, response: toolResult, ...(call.id ? { id: call.id } : {}) },
+        });
       } catch (error) {
         parts.push({
           functionResponse: {
             name: call.name,
             response: { error: error instanceof Error ? error.message : 'Tool failed' },
+            ...(call.id ? { id: call.id } : {}),
           },
         });
       }

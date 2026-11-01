@@ -13,7 +13,7 @@
  *   · grounding:    `tools: [{ google_search: {} }]` → sources in
  *                   `candidates[0].groundingMetadata.groundingChunks[].web`
  */
-import type { ToolCall, ToolDeclaration } from '@/types/ai';
+import type { GeminiContentPart, ToolCall, ToolDeclaration } from '@/types/ai';
 import {
   ProviderError,
   classifyHttpError,
@@ -34,11 +34,35 @@ const BASE = '/api/gemini/v1beta';
 
 interface GeminiPart {
   text?: string;
-  functionCall?: { name: string; args?: Record<string, unknown> };
-  functionResponse?: { name: string; response: Record<string, unknown> };
+  functionCall?: { name: string; args?: Record<string, unknown>; id?: string };
+  functionResponse?: { name: string; response: Record<string, unknown>; id?: string };
+  /** Required echo of the model's reasoning signature — see types/ai.ts. */
+  thoughtSignature?: string;
 }
 
-/** Convert neutral messages into Gemini `contents` + a system instruction. */
+/** Strip undefined keys so we never send `"thoughtSignature": undefined`. */
+function compactPart(part: GeminiPart): GeminiContentPart {
+  const next: GeminiContentPart = {};
+  if (part.text !== undefined) next.text = part.text;
+  if (part.functionCall) {
+    next.functionCall = {
+      name: part.functionCall.name,
+      args: part.functionCall.args ?? {},
+      ...(part.functionCall.id ? { id: part.functionCall.id } : {}),
+    };
+  }
+  if (part.functionResponse) next.functionResponse = part.functionResponse;
+  if (part.thoughtSignature) next.thoughtSignature = part.thoughtSignature;
+  return next;
+}
+
+/**
+ * Convert neutral messages into Gemini `contents` + a system instruction.
+ *
+ * `thoughtSignature` is carried through untouched: Gemini rejects a resumed
+ * tool loop whose `functionCall` parts no longer match the signature it issued
+ * (`400 Function call is missing a thought_signature in functionCall parts`).
+ */
 export function toGeminiContents(messages: ChatMessage[]): {
   contents: Array<{ role: 'user' | 'model'; parts: GeminiPart[] }>;
   systemInstruction?: string;
@@ -54,13 +78,26 @@ export function toGeminiContents(messages: ChatMessage[]): {
   for (const message of messages) {
     if (message.role === 'system') continue;
 
+    // A turn captured straight from the provider is replayed as-is so the
+    // `thoughtSignature`s stay attached to their `functionCall` parts.
+    if (message.parts?.length) {
+      contents.push({ role: message.role === 'assistant' ? 'model' : 'user', parts: message.parts });
+      continue;
+    }
+
     if (message.role === 'assistant' && message.toolCalls?.length) {
+      const { toolCalls } = message;
       contents.push({
         role: 'model',
         parts: [
           ...(message.content ? [{ text: message.content }] : []),
-          ...message.toolCalls.map((call) => ({
-            functionCall: { name: call.name, args: call.args },
+          ...toolCalls.map((call): GeminiPart => ({
+            functionCall: {
+              name: call.name,
+              args: call.args,
+              ...(call.id ? { id: call.id } : {}),
+            },
+            ...(call.thoughtSignature ? { thoughtSignature: call.thoughtSignature } : {}),
           })),
         ],
       });
@@ -75,6 +112,7 @@ export function toGeminiContents(messages: ChatMessage[]): {
             functionResponse: {
               name: message.toolName ?? 'tool',
               response: safeJson(message.content),
+              ...(message.toolCallId ? { id: message.toolCallId } : {}),
             },
           },
         ],
@@ -138,10 +176,12 @@ export function buildRequestBody(req: ChatRequest): Record<string, unknown> {
   return body;
 }
 
-/** Pull `text`, `functionCall` and grounding sources out of one response. */
+/** Pull `text`, `functionCall`, signatures and grounding sources out of one response. */
 function parseCandidate(json: unknown): {
   text: string;
   toolCalls: ToolCall[];
+  /** Raw model parts, signatures intact — must be replayed verbatim. */
+  modelParts: GeminiContentPart[];
   sources: GroundingSource[];
 } {
   const candidate = (
@@ -156,20 +196,29 @@ function parseCandidate(json: unknown): {
     }
   )?.candidates?.[0];
 
-  const parts = candidate?.content?.parts ?? [];
-  const text = parts
+  const rawParts = candidate?.content?.parts ?? [];
+  const text = rawParts
     .map((p) => p.text ?? '')
     .join('')
     .trim();
-  const toolCalls = parts
+
+  const toolCalls: ToolCall[] = rawParts
     .filter((p) => p.functionCall)
-    .map((p) => ({ name: p.functionCall!.name, args: p.functionCall!.args ?? {} }));
+    .map((p) => ({
+      name: p.functionCall!.name,
+      args: p.functionCall!.args ?? {},
+      ...(p.functionCall!.id ? { id: p.functionCall!.id } : {}),
+      ...(p.thoughtSignature ? { thoughtSignature: p.thoughtSignature } : {}),
+    }));
+
+  // Skipping empty parts matters: an empty `{}` part would be rejected on replay.
+  const modelParts: GeminiContentPart[] = rawParts.map(compactPart).filter((p) => Object.keys(p).length > 0);
 
   const sources: GroundingSource[] = (candidate?.groundingMetadata?.groundingChunks ?? [])
     .map((chunk) => ({ title: chunk.web?.title ?? '', uri: chunk.web?.uri ?? '' }))
     .filter((s) => s.uri);
 
-  return { text, toolCalls, sources };
+  return { text, toolCalls, modelParts, sources };
 }
 
 /* -------------------------------------------------------------------------- */
@@ -261,6 +310,7 @@ export const geminiProvider: AIProvider = {
     let buffer = '';
     let text = '';
     const toolCalls: ToolCall[] = [];
+    const modelParts: GeminiContentPart[] = [];
     let sources: GroundingSource[] = [];
 
     for (;;) {
@@ -284,6 +334,9 @@ export const geminiProvider: AIProvider = {
             onToken(parsed.text);
           }
           if (parsed.toolCalls.length) toolCalls.push(...parsed.toolCalls);
+          // Streamed frames split a single model turn across chunks; the last
+          // frame carries the agency signature, so replace rather than append.
+          if (parsed.modelParts.length) modelParts.splice(0, modelParts.length, ...parsed.modelParts);
           if (parsed.sources.length) {
             sources = parsed.sources;
             onGrounding?.(sources);
@@ -294,7 +347,7 @@ export const geminiProvider: AIProvider = {
       }
     }
 
-    return { text: text.trim(), toolCalls, sources };
+    return { text: text.trim(), toolCalls, modelParts, sources };
   },
 };
 

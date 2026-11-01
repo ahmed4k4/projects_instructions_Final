@@ -18,6 +18,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { setFormatLocale } from '@/lib/utils';
 
 import enCommon from './locales/en/common.json';
 import enBuilder from './locales/en/builder.json';
@@ -132,6 +133,9 @@ export function applyDocumentLanguage(language: string): void {
   document.documentElement.lang = language;
   document.documentElement.dir = dir;
   document.documentElement.dataset.dir = dir;
+  // Number/currency formatting must follow the UI language, otherwise Arabic
+  // pages show prices as "US$1,800".
+  setFormatLocale(language);
 }
 
 applyDocumentLanguage(i18n.language || 'en');

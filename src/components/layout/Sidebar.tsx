@@ -148,15 +148,17 @@ export function Sidebar({ collapsed }: SidebarProps) {
         <div className="border-t border-border p-3">
           <div
             className={cn(
-              'mb-3 flex items-center gap-2.5 rounded-lg border border-border bg-surface/70 p-2.5',
+              'mb-3 flex min-w-0 items-center gap-2.5 rounded-lg border border-border bg-surface/70 p-2.5',
               sidebarCollapsed && 'justify-center',
             )}
           >
             <div className="grid size-8 shrink-0 place-items-center rounded-md bg-primary/10 text-primary-glow">
               <Cpu className="size-4" />
             </div>
+            {/* `min-w-0` on both the flex item and its parent is what lets
+                truncate shrink instead of overflowing the sidebar. */}
             {!sidebarCollapsed && (
-              <div className="min-w-0 leading-tight">
+              <div className="min-w-0 flex-1 leading-tight">
                 <p className="truncate text-xs font-medium">{t('account.localWorkspace')}</p>
                 <p className="truncate text-[10.5px] text-muted-foreground">{t('account.localHint')}</p>
               </div>

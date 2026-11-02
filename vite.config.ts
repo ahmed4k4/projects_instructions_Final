@@ -1,50 +1,97 @@
-import path from 'node:path';
-import { defineConfig, loadEnv } from 'vite';
+﻿import path from 'node:path';
+import type { IncomingMessage, ServerResponse } from 'node:http';
+import { defineConfig, loadEnv, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { handleAiRoute, readGeminiConfig, splitRoute } from './src/server/geminiProxy';
 
 /**
- * Exposes whether the dev server holds a Gemini key.
+ * Dev-server twin of the Vercel function in `api/ai/[...route].ts`.
  *
- * The key has no `VITE_` prefix, so Vite never inlines it and the browser cannot
- * read `import.meta.env.GEMINI_API_KEY`. This endpoint answers the one question
- * the UI needs — "is Gemini configured?" — as a boolean. No key material is
- * ever returned.
+ * Both share `src/server/geminiProxy.ts`, so `pnpm dev` and a Vercel deployment
+ * answer the identical contract:
+ *
+ *   GET  /api/ai/config                          -> { gemini, model }
+ *   POST /api/ai/v1beta/models/<model>:<method>  -> proxied Gemini call
+ *
+ * Previously this plugin only served `/api/ai/config` and the provider called a
+ * separate `/api/gemini` proxy - a path that exists only under `vite dev`, which
+ * is exactly why the AI 404'd in production. One prefix now, everywhere.
  */
-function aiConfigPlugin(config: { gemini: boolean; model: string | null }) {
+function geminiProxyPlugin(): Plugin {
   return {
-    name: 'nexus-ai-config',
-    configureServer(server: {
-      middlewares: { use: (path: string, fn: (req: unknown, res: ResponseLike) => void) => void };
-    }) {
-      server.middlewares.use('/api/ai/config', (_req, res) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.setHeader('Cache-Control', 'no-store');
-        res.end(JSON.stringify({ gemini: config.gemini, model: config.model }));
+    name: 'nexus-ai-proxy',
+    configureServer(server) {
+      const env = loadEnv(server.config.mode, process.cwd(), '');
+      const apiKey = env.GEMINI_API_KEY ?? process.env.GEMINI_API_KEY ?? '';
+      const config = readGeminiConfig({ ...env, ...process.env });
+
+      server.middlewares.use('/api/ai', (req: IncomingMessage, res: ServerResponse) => {
+        void forward(req, res, config, apiKey);
       });
     },
   };
 }
 
-interface ResponseLike {
-  setHeader(name: string, value: string): void;
-  end(body: string): void;
+async function forward(
+  req: IncomingMessage,
+  res: ServerResponse,
+  config: ReturnType<typeof readGeminiConfig>,
+  apiKey: string,
+): Promise<void> {
+  const [rawPath = '', rawQuery = ''] = (req.url ?? '/').replace(/^\/api\/ai\/?/, '').split('?');
+
+  const result = await handleAiRoute(
+    {
+      route: splitRoute(rawPath),
+      search: rawQuery,
+      method: (req.method ?? 'GET').toUpperCase(),
+      body: await readBody(req),
+    },
+    config,
+    apiKey,
+  );
+
+  res.statusCode = result.status;
+  for (const [key, value] of Object.entries(result.headers)) res.setHeader(key, value);
+
+  if (result.status === 204) {
+    res.end();
+    return;
+  }
+  if (result.text !== undefined) {
+    res.end(result.text);
+    return;
+  }
+  if (!result.body) {
+    res.end();
+    return;
+  }
+
+  // Relay the upstream stream chunk-for-chunk: buffering an SSE body would turn
+  // token-by-token output into one long silence.
+  const reader = result.body.getReader();
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    res.write(value);
+  }
+  res.end();
 }
 
-export default defineConfig(({ mode }) => {
-  // Server-side env only. `GEMINI_API_KEY` has no VITE_ prefix, so Vite never
-  // inlines it into the client bundle — it is injected into proxied requests
-  // here, on the dev server, and nowhere else.
-  const env = loadEnv(mode, process.cwd(), '');
-  const geminiKey = env.GEMINI_API_KEY ?? process.env.GEMINI_API_KEY ?? '';
-
+async function readBody(req: IncomingMessage): Promise<string | null> {
+  return new Promise((resolve) => {
+    const chunks: Buffer[] = [];
+    req.on('data', (chunk: Buffer) => chunks.push(Buffer.from(chunk)));
+    req.on('end', () => resolve(chunks.length ? Buffer.concat(chunks).toString('utf8') : null));
+    req.on('error', () => resolve(null));
+  });
+}
+export default defineConfig(() => {
   return {
-    plugins: [
-      react(),
-      aiConfigPlugin({ gemini: Boolean(geminiKey), model: env.GEMINI_MODEL ?? null }),
-    ],
+    plugins: [react(), geminiProxyPlugin()],
     // Keep the dependency pre-bundle at the project root (Vite's documented
     // Windows workaround). Inside node_modules some filesystems race on the
-    // deps_temp → deps rename, which surfaces as "504 Outdated Optimize Dep".
+    // deps_temp â†’ deps rename, which surfaces as "504 Outdated Optimize Dep".
     cacheDir: '.vite',
     // Pre-bundle every static entry once up front so the dependency graph stays
     // stable for the whole dev session (late optimisation causes 504s).
@@ -83,43 +130,13 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 5173,
       open: false,
-      proxy: {
-        /**
-         * Gemini proxy — the only AI provider in Phase 5.
-         * The browser calls `/api/gemini/v1beta/...`; the dev server attaches the
-         * key. No CORS preflight, no deploy, and the key never reaches the bundle.
-         */
-        '/api/gemini': {
-          target: 'https://generativelanguage.googleapis.com',
-          changeOrigin: true,
-          secure: true,
-          rewrite: (p) => p.replace(/^\/api\/gemini/, ''),
-          configure: (proxy) => {
-            proxy.on('proxyReq', (proxyReq) => {
-              if (geminiKey) {
-                proxyReq.setHeader('x-goog-api-key', geminiKey);
-                // Ensure the query-string form is not required.
-                proxyReq.removeHeader('authorization');
-              }
-            });
-            proxy.on('proxyRes', (proxyRes) => {
-              // SSE must not be buffered or compressed away.
-              const type = proxyRes.headers['content-type'];
-              if (typeof type === 'string' && type.includes('text/event-stream')) {
-                proxyRes.headers['cache-control'] = 'no-cache, no-transform';
-                delete proxyRes.headers['content-encoding'];
-              }
-            });
-          },
-        },
-      },
     },
     build: {
       target: 'es2020',
       sourcemap: false,
       /**
        * The only chunk over 500 kB is Hero3DScene (Three.js + drei), which is
-       * lazy and reached only by desktop visitors — phones load a static image
+       * lazy and reached only by desktop visitors â€” phones load a static image
        * instead. Raising the limit keeps the warning meaningful for chunks that
        * are actually eager.
        */
@@ -135,7 +152,7 @@ export default defineConfig(({ mode }) => {
              * Three.js is deliberately NOT listed here.
              *
              * An explicit `three` chunk forced the entry to reference it, so every
-             * route — including mobile, where the hero is a static image — still
+             * route â€” including mobile, where the hero is a static image â€” still
              * downloaded ~250 kB gzip. Rollup splits a lazily-imported graph on
              * its own; letting it do so keeps `three` inside the Hero3DScene chunk
              * where only desktop visitors reach it.

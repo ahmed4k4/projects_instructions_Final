@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -100,8 +101,9 @@ export function StreamingMessage({ message, streaming = false, onCitation }: Str
 
 export function TypingDots() {
   const reduce = useReducedMotion();
+  const { t } = useTranslation();
   return (
-    <span className="flex items-center gap-1" aria-label="Assistant is typing">
+    <span className="flex items-center gap-1" aria-label={t('common.assistantTyping')}>
       {[0, 1, 2].map((index) => (
         <motion.span
           key={index}

@@ -1,34 +1,55 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
+import { HERO_IMAGE_PNG, HERO_IMAGE_WEBP } from '@/lib/assets';
 
 /**
- * Static replacement for `Hero3DScene` on phones and low-end devices.
+ * Static replacement for `Hero3DScene`.
+ *
+ * Used in three situations, all of which must look identical:
+ *   · phones and low-end devices (`hooks/useSceneCapability`)
+ *   · the Suspense fallback while the Three.js chunk loads
+ *   · **WebGL failed** — context lost, driver reset, blocklisted GPU. The
+ *     `SceneErrorBoundary` renders this instead of a dead canvas.
  *
  * The image is a real render of the same 3D scene (captured by
- * `scripts/shot.mjs`), not a stock photo, so the hero looks identical across
- * device tiers — it simply stops moving. 309 kB PNG at 960×516, `loading="lazy"`
- * and `decoding="async"` so it never competes with the hero text for bandwidth.
+ * `scripts/shot.mjs`), not a stock photo, so the hero does not change shape
+ * across device tiers — it simply stops moving.
  *
- * A `<picture>` with a WebP source means dropping `hero-scene.webp` into
- * `public/media/` upgrades this automatically, with the PNG as the fallback.
+ * Both formats ship: WebP is 16 kB, the PNG 309 kB. `<picture>` lets the browser
+ * pick WebP when it can decode it and fall back automatically. If neither file
+ * can be fetched (an odd CSP, a broken deploy) the box still holds its size and
+ * shows the ambient glow, so layout never jumps.
  */
 export function HeroSceneStatic({ className }: { className?: string }) {
   const { t } = useTranslation();
+  const [failed, setFailed] = useState(false);
 
   return (
     <div className={cn('relative', className)}>
-      <picture>
-        <source srcSet="/media/hero-scene.webp" type="image/webp" />
-        <img
-          src="/media/hero-scene.png"
-          alt={t('landing.sceneAlt')}
-          width={960}
-          height={516}
-          loading="lazy"
-          decoding="async"
-          className="h-full w-full object-contain drop-shadow-[0_24px_60px_rgba(79,107,255,0.25)]"
+      {failed ? (
+        <div
+          role="img"
+          aria-label={t('landing.sceneAlt')}
+          className="h-full w-full rounded-2xl border border-white/5 bg-[radial-gradient(60%_60%_at_50%_45%,rgba(79,107,255,0.22),transparent_70%)]"
         />
-      </picture>
+      ) : (
+        <picture>
+          <source srcSet={HERO_IMAGE_WEBP} type="image/webp" />
+          <img
+            src={HERO_IMAGE_PNG}
+            alt={t('landing.sceneAlt')}
+            width={960}
+            height={516}
+            // Above the fold: eager in the DOM, but the chunk/decoder is async so
+            // it never blocks the hero text from painting.
+            decoding="async"
+            fetchPriority="high"
+            onError={() => setFailed(true)}
+            className="h-full w-full object-contain drop-shadow-[0_24px_60px_rgba(79,107,255,0.25)]"
+          />
+        </picture>
+      )}
       {/* Same ambient glow the live scene produces, so the swap is invisible. */}
       <div
         aria-hidden

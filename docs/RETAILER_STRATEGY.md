@@ -1,19 +1,41 @@
 # Retailer Strategy
 
-**Phase 8 — how Egyptian retailer data is collected, matched and refreshed.**
+**Phase 10 — how Egyptian retailer data is collected, matched and refreshed.**
 
 ---
 
 ## 1. What is integrated
 
-| Retailer                 | Platform                 | Status     | Categories | Products |
-| ------------------------ | ------------------------ | ---------- | ---------- | -------- |
-| **Elbadr Group**         | OpenCart                 | ✅ live    | 8          | 127      |
-| **Elnekhely Technology** | OpenCart (same theme)    | ✅ live    | 8          | 92       |
-| **Alfrensia**            | WooCommerce / Flatsome   | ✅ live    | 8          | 52       |
-| **Sigma Computer**       | Next.js App Router (RSC) | ⛔ blocked | —          | 0        |
+| Retailer                 | Platform                 | Status     | Categories | Products | Images |
+| ------------------------ | ------------------------ | ---------- | ---------- | -------- | ------ |
+| **Elbadr Group**         | OpenCart                 | ✅ live    | 8          | 368      | 100%   |
+| **Elnekhely Technology** | OpenCart (same theme)    | ⚠️ partial | 8          | 103      | 100%   |
+| **Alfrensia**            | WooCommerce / Flatsome   | ✅ live    | 8          | 243      | 100%   |
+| **Sigma Computer**       | Next.js (browser worker) | ✅ live    | 8          | 300      | 100%   |
+| **Total**                |                          |            |            | **1014** | **100%** |
 
-**271 listings** in the current snapshot, up from 67 in Phase 7.
+Elbadr / Elnekhely live in the serverless snapshot (714 listings, verified by
+`pnpm verify:coverage`); Sigma lives in the worker feed. The app merges both, so
+the search page sees **1014 listings across four retailers**, every one of them
+with a real photo.
+
+### Elnekhely's ceiling
+
+Page 2+ answers **503** on every URL form tried (`?page=2`, `/page/2/`,
+`&page=2`), so ~100 products from page 1 of eight categories is its accessible
+maximum. Its page budgets are a ceiling it will not reach; the sync records
+`partial` rather than failing the retailer, and this is why it is marked partial
+above.
+
+### Alfrensia images — root cause found in Phase 10
+
+Its listing cards put a **"3-year warranty" badge PNG first** in the card, then
+the lazy product `<img src="data:…" data-src="…">`. The extractor returned the
+first candidate it found, so 81 % of rows were stored pointing at a badge. The
+shared `extractImage()` now rejects badge/logo/flag URLs everywhere, and the
+share went from **19 % to 100 %**. Two category slugs were also 404s (`case`,
+`cooling`); the real paths are `/product-category/cases/` and
+`/product-category/air-liquid-cooling/`.
 
 ---
 
@@ -76,38 +98,88 @@ crawl.
 
 ---
 
-## 3. Sigma Computer — why it is blocked
+## 3. Sigma Computer — solved with a browser worker
 
-**Decision: do not scrape Sigma with a headless browser. Report it honestly.**
+**Decision (Phase 10): a headless browser renders the real page and publishes a
+JSON feed. The browser never scrapes, and the serverless sync never tries.**
 
-Sigma is a Next.js App Router storefront. Its category pages contain:
+### What was measured (2026-11-02)
 
-- **no product markup** — the grid is rendered from React Server Component
-  payloads (`self.__next_f.push(...)`),
-- **no `application/ld+json`**,
-- no `__NEXT_DATA__` (that is the older Pages Router).
+Every plausible route was tried and recorded, so nothing below is a guess:
 
-The two suggested workarounds were evaluated and rejected:
+| Route | Result |
+|---|---|
+| `GET /en/category/vga` | rewrites to a search page that renders **"Something went wrong"** |
+| `GET /en/category/<uuid>` | 200, but **no product markup** — only `self.__next_f` RSC payloads |
+| `GET /en/search` | ✅ renders a real paginated grid — the surface the worker uses |
+| `api.sigma-computer.com/api/stores/v1/products` | **403 Unauthorized** (key-gated) |
+| `api.sigma-computer.com/media/…` | **200** to a page request, blocked for a hotlinked `<img>` |
 
-| Option                              | Why not                                                                                                                                                                                         |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Playwright in the Edge Function** | Supabase Edge Functions run on Deno Deploy; a headless Chromium is not available there. A separate Node host would be a second deployment surface and a second set of secrets for one retailer. |
-| **Parse `__next_f` RSC chunks**     | These are an internal, versioned serialisation. It changes without notice, and a parser that silently returns _wrong_ prices is worse than one that returns none.                               |
+The listing is narrowed the way a shopper narrows it: click a leaf label in the
+Categories rail (`Nvidia GeForce`, `AMD CPU`, `Mid Tower`, …). Pagination is an
+`aria-label="page N"` control, **not** a numbered button — matching on text
+silently re-reads page 1.
 
-The brief's own guard-rail — _"Do not spend more than 30 minutes fighting a
-single retailer's anti-bot; use mock data for the blocked one, documenting the
-limitation"_ — applies here in spirit: the block is architectural, not an
-anti-bot challenge that better tooling would solve.
+### The worker
 
-**What the user sees instead:** a standing notice on `/search` —
-_"Sigma Computer data is temporarily unavailable — Sigma renders its catalogue
-client-side, so it is not included in these results."_ The retailer also appears
-in the filter rail, disabled, rather than silently missing.
+`scripts/sigma_worker.py` (Playwright, Python) writes
+`public/data/sigma_products.json`:
 
-**If Sigma is required later**, the viable route is a separate Node worker with
-Playwright writing into the same `retailer_products` table. That is a deployment
-decision, not a parser change — the table, matcher and UI would all work
-unchanged.
+```bash
+pip install playwright && python -m playwright install chromium
+
+python scripts/sigma_worker.py                 # full catalogue
+python scripts/sigma_worker.py --only gpu --max-pages 3
+```
+
+| Property | Value |
+|---|---|
+| Surface | `/en/search`, one rail label at a time |
+| Extraction | render, then read DOM cards (`a[href*="/en/item"]`, price `<p>`, `<img>`) |
+| Images | media URLs wrapped in `sigma-computer.com/_next/image?url=…` — the only form a browser can load |
+| Politeness | one page at a time, 2.5 s gap, identifying UA, page cap per label |
+| Failure mode | an empty run writes `status: "blocked"` with notes — never invented prices |
+| Current capture | **300 products, 100 % with images**, all 8 categories |
+
+### How the app consumes it
+
+`src/services/retailers/sigmaFeed.ts` fetches `data/sigma_products.json`
+**relative to the deploy base**, and the aggregator merges those rows into the
+snapshot set, so grouping, ranking and the compare table treat Sigma like any
+other store. A bundled copy (`sigmaSnapshot.ts`) answers on first paint before
+any request resolves, so `/search` never flashes "Sigma pending".
+
+Availability is data-driven: Sigma is *live* exactly when the feed has rows
+(`useLiveRetailers`). With an empty feed the UI keeps its honest **Pending**
+badge and the standing notice rather than pretending the store does not exist.
+
+### Cron it
+
+A headless browser cannot run on Vercel or Deno Deploy, so the worker runs on a
+schedule and commits its output. GitHub Actions example:
+
+```yaml
+name: sigma-feed
+on:
+  schedule: [{ cron: '0 1 * * *' }]
+  workflow_dispatch:
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - run: python scripts/sigma_worker.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: refresh sigma feed'
+          file_pattern: public/data/sigma_products.json
+```
+
+The app picks the new file up on the next deploy, and `sigmaFeed.ts` also
+re-reads it at runtime, so a fresh capture does not need a code change.
 
 ---
 
@@ -198,8 +270,10 @@ old.
 
 1. **Alfrensia serves AJAX placeholder prices** for some products (`<bdi>1</bdi>`).
    Rows priced under 100 EGP are skipped rather than published.
-2. **Retailer images are hotlinked** and some CDNs block cross-origin requests
-   (`ERR_BLOCKED_BY_ORB`). The card falls back to a ghosted category icon.
+2. **Retailer images are hotlinked** and individual files disappear from the
+   stores' own CDs. `retailerImageUrl()` rejects known placeholders, the card
+   falls back to a ghosted category icon, and one dead file is one card — never a
+   broken grid.
 3. **`retailer_products` is not yet migrated on the hosted project** — it returns
    `401 42501 permission denied`, i.e. the table exists without `GRANT SELECT TO
 anon`. The app treats that as "not migrated", falls back to the snapshot and
@@ -208,4 +282,9 @@ anon`. The app treats that as "not migrated", falls back to the snapshot and
    grant select on public.retailer_products to anon, authenticated;
    ```
    (It is already in `008_retailer_products.sql` for a fresh `db push`.)
-4. **Sigma has no data** — see §3.
+4. **Sigma's feed is a capture, not a live feed.** It carries `capturedAt` and is
+   refreshed by the worker on a schedule (§3). The UI never presents a price as
+   live when it may be hours old.
+5. **Sigma is not in the nightly serverless sync** by design — that is what the
+   worker exists for. Pointing the cron job at `scripts/sigma_worker.py` is the
+   only setup needed.

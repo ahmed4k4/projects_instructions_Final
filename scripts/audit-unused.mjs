@@ -25,11 +25,13 @@ function walk(dir, out = []) {
 
 const all = walk(SRC).map((p) => relative(ROOT, p).replace(/\\/g, '/'));
 const IMPORTS =
-  /(?:import|export)[^'"]*?from\s*['"]([^'"]+)['"]|import\s*\(\s*['"]([^'"]+)['"]\s*\)|require\(\s*['"]([^'"]+)['"]\s*\)|vi\.mock\(\s*['"]([^'"]+)['"]/g;
+  /(?:import|export)[^'"`]*?from\s*['"]([^'"]+)['"]|import\s*\(\s*['"]([^'"]+)['"]\s*\)|require\(\s*['"]([^'"]+)['"]\s*\)|vi\.mock\(\s*['"]([^'"]+)['"]|(?:import|export)\s*\*?\s*(?:\w+,?\s*)?from\s*['"]([^'"]+)['"]/g;
 
 function resolveSpec(spec, fromFile) {
   let base;
   if (spec.startsWith('@/')) base = join(SRC, spec.slice(2));
+  // Relative to the importing file's directory — `resolve()` did this for the
+  // app; the server walk must resolve the same way (`../../src/…`).
   else if (spec.startsWith('.')) base = resolve(dirname(fromFile), spec);
   else return null;
 
@@ -66,6 +68,70 @@ while (queue.length) {
   seen.add(file);
   for (const dep of graph.get(file) ?? []) queue.push(dep);
 }
+
+/**
+ * Server-side entry points.
+ *
+ * `api/` is loaded by Vercel, not by the bundle, and `vite.config.ts` is loaded by
+ * the dev server — so the reachability walk must start there as well, otherwise
+ * the shared Gemini proxy looks unreachable while it is in fact the production
+ * path for the AI feature.
+ */
+const SERVER_ENTRIES = [];
+const collectServer = (dir, out = []) => {
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) collectServer(full, out);
+    else if (/\.(ts|tsx)$/.test(entry)) out.push(relative(ROOT, full).replace(/\\/g, '/'));
+  }
+  return out;
+};
+for (const dir of ['api']) {
+  try {
+    SERVER_ENTRIES.push(...collectServer(join(ROOT, dir)));
+  } catch {
+    /* no server directory */
+  }
+}
+SERVER_ENTRIES.push('vite.config.ts');
+// The shared server code is reached FROM those two entries; seeding the folder
+// too keeps the walk correct even when an entry is renamed.
+SERVER_ENTRIES.push(...all.filter((file) => file.startsWith('src/server/')));
+
+for (const file of all) {
+  if (!/\.(ts|tsx|js|jsx)$/.test(file)) continue;
+  const source = readFileSync(join(ROOT, file), 'utf8');
+  const deps = new Set();
+  for (const m of source.matchAll(IMPORTS)) {
+    const spec = m[1] ?? m[2] ?? m[3] ?? m[4];
+    if (!spec) continue;
+    const resolved = resolveSpec(spec, join(ROOT, file));
+    if (resolved) deps.add(resolved);
+  }
+  /**
+   * Recover what a regex stage can miss (multi-line `import { … } from` blocks):
+   * if the source names another module in a trailing static import, treat it as
+   * imported. This is a reachability audit, not a bundler — a false "reachable"
+   * is harmless, a false "orphan" deletes working code.
+   */
+  const named = [...source.matchAll(/from\s+['"]([^'"]+)['"]/g)].map((m) => m[1]);
+  for (const spec of named) {
+    const resolved = resolveSpec(spec, join(ROOT, file));
+    if (resolved) deps.add(resolved);
+  }
+
+  graph.set(file, deps);
+}
+
+const serverSeen = new Set();
+const serverQueue = [...SERVER_ENTRIES];
+while (serverQueue.length) {
+  const file = serverQueue.pop();
+  if (!file || serverSeen.has(file)) continue;
+  serverSeen.add(file);
+  for (const dep of graph.get(file) ?? []) serverQueue.push(dep);
+}
+for (const file of serverSeen) seen.add(file);
 
 // Test files are entry points for themselves.
 const tests = all.filter((f) => f.includes('__tests__') || f.endsWith('.test.ts') || f.endsWith('.test.tsx'));

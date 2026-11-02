@@ -1,8 +1,11 @@
-import { Suspense, useMemo, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { OrbitControls, Environment, PerformanceMonitor } from '@react-three/drei';
 import { useReducedMotion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import * as THREE from 'three';
+import { HeroSceneStatic } from './HeroSceneStatic';
+import { markSceneContextLost } from '@/hooks/useSceneCapability';
 
 /**
  * Hero 3D scene — a stylised motherboard with a GPU riser.
@@ -15,6 +18,10 @@ import * as THREE from 'three';
  *   · `OrbitControls` is zoom/pan disabled so the object can be nudged but the
  *     composition can never be broken by the user.
  *   · Everything collapses to a static frame under `prefers-reduced-motion`.
+ *   · A lost WebGL context swaps the canvas for the static render (see
+ *     `SceneErrorBoundary` and `ContextGuard`) rather than leaving a dead box.
+ *   · `PerformanceMonitor` drops DPR, then particles, when the frame rate sags —
+ *     an integrated GPU keeps the hero, it just gets a cheaper one.
  */
 
 const NEON_BLUE = '#4f6bff';
@@ -238,64 +245,109 @@ function Assembled({ animate }: { animate: boolean }) {
 /*  Public component                                                          */
 /* -------------------------------------------------------------------------- */
 
+/**
+ * React Three Fiber swallows a lost context unless someone listens for it.
+ *
+ * `webglcontextlost` is the browser telling us the GPU dropped the context —
+ * after which every frame is a no-op and the canvas shows the last (or a
+ * blank) frame. This component subscribes once, refuses the default (which
+ * would otherwise allow a zombie restore) and asks the parent for the static
+ * render. The parent then stops rendering the canvas at all.
+ */
+function ContextGuard({ onLost }: { onLost: () => void }) {
+  const gl = useThree((state) => state.gl);
+
+  useEffect(() => {
+    const canvas = gl.domElement;
+    const handle = (event: Event) => {
+      event.preventDefault();
+      markSceneContextLost();
+      onLost();
+    };
+    canvas.addEventListener('webglcontextlost', handle, false);
+    return () => canvas.removeEventListener('webglcontextlost', handle, false);
+  }, [gl, onLost]);
+
+  return null;
+}
+
 export function Hero3DScene({ className }: { className?: string }) {
   const reduce = useReducedMotion();
+  const { t } = useTranslation();
+  // 0 = full quality, 1 = cheaper, 2 = static fallback.
+  const [degrade, setDegrade] = useState(0);
+
+  if (degrade >= 2) return <HeroSceneStatic className={className} />;
 
   return (
-    <div className={className} role="img" aria-label="Animated 3D motherboard with a graphics card">
+    <div className={className} role="img" aria-label={t('landing.sceneAlt')}>
+      {/*
+       * `demand` renders only when the scene invalidates. The rotation runs in
+       * `useFrame`, so frameloop stays `always` there — but reduced motion gets
+       * a single static frame, which costs nothing after the first paint.
+       */}
       <Canvas
-        /*
-         * `demand` renders only when the scene invalidates. The rotation runs in
-         * `useFrame`, so frameloop stays `always` there — but reduced motion gets
-         * a single static frame, which costs nothing after the first paint.
-         */
         frameloop={reduce ? 'demand' : 'always'}
         /* Cap the pixel ratio: a 3× phone would render 9× the fragments for no
            visible gain on a glowing, soft-edged object. */
-        dpr={[1, 1.75]}
+        dpr={[1, degrade === 0 ? 1.75 : 1]}
         camera={{ position: [0, 3.6, 6.4], fov: 42 }}
-        gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
+        gl={{ antialias: degrade === 0, alpha: true, powerPreference: 'high-performance' }}
         onCreated={({ gl }) => {
           gl.toneMapping = THREE.ACESFilmicToneMapping;
           gl.toneMappingExposure = 1.05;
         }}
       >
-        <Suspense fallback={null}>
-          {/* Key: cool neon blue from above-front */}
-          <directionalLight position={[5, 7, 5]} intensity={1.5} color={NEON_BLUE} />
-          {/* Rim: violet from behind, this is what separates the board from the bg */}
-          <directionalLight position={[-6, 3, -5]} intensity={1.1} color={NEON_VIOLET} />
-          {/* Fill: dim neutral so shadows don't crush to black */}
-          <ambientLight intensity={0.12} />
-          {/* Inner chipset glow */}
-          <pointLight position={[0, 1.2, 0]} intensity={5} distance={5} color={NEON_CYAN} />
+        <ContextGuard onLost={() => setDegrade(2)} />
+        {/*
+         * Declared, measured degradation instead of guessing from the device:
+         * a frame rate that falls out of [45, 60] halves the particles and pins
+         * DPR at 1; a second decline retires the scene. `onIncline` is
+         * deliberately unused — flapping between qualities is more distracting
+         * than a permanently cheaper hero.
+         */}
+        <PerformanceMonitor
+          bounds={() => [45, 60]}
+          flipflops={2}
+          onDecline={() => setDegrade((d) => d + 1)}
+        >
+          <Suspense fallback={null}>
+            {/* Key: cool neon blue from above-front */}
+            <directionalLight position={[5, 7, 5]} intensity={1.5} color={NEON_BLUE} />
+            {/* Rim: violet from behind, this is what separates the board from the bg */}
+            <directionalLight position={[-6, 3, -5]} intensity={1.1} color={NEON_VIOLET} />
+            {/* Fill: dim neutral so shadows don't crush to black */}
+            <ambientLight intensity={0.12} />
+            {/* Inner chipset glow */}
+            <pointLight position={[0, 1.2, 0]} intensity={5} distance={5} color={NEON_CYAN} />
 
-          <Assembled animate={!reduce} />
-          {/*
-           * 260 particles on desktop; the scene only reaches small screens via
-           * the capability hook, so a single count is enough here. The fallback
-           * image handles phones entirely.
-           */}
-          <Particles count={180} />
+            <Assembled animate={!reduce} />
+            {/*
+             * 180 particles on desktop; the scene only reaches small screens via
+             * the capability hook, so a single count is enough here. The fallback
+             * image handles phones entirely.
+             */}
+            <Particles count={degrade === 0 ? 180 : 90} />
 
-          {/*
-           * Weak IBL only: the studio presets wash the dark PCB out to near-white,
-           * while `night` keeps the metal readable without lifting the blacks.
-           */}
-          <Environment preset="night" environmentIntensity={0.45} />
+            {/*
+             * Weak IBL only: the studio presets wash the dark PCB out to near-white,
+             * while `night` keeps the metal readable without lifting the blacks.
+             */}
+            <Environment preset="night" environmentIntensity={0.45} />
 
-          <OrbitControls
-            enableZoom={false}
-            enablePan={false}
-            enableDamping
-            dampingFactor={0.08}
-            rotateSpeed={0.45}
-            minPolarAngle={Math.PI / 4}
-            maxPolarAngle={Math.PI / 2.1}
-            minAzimuthAngle={-Math.PI / 3}
-            maxAzimuthAngle={Math.PI / 3}
-          />
-        </Suspense>
+            <OrbitControls
+              enableZoom={false}
+              enablePan={false}
+              enableDamping
+              dampingFactor={0.08}
+              rotateSpeed={0.45}
+              minPolarAngle={Math.PI / 4}
+              maxPolarAngle={Math.PI / 2.1}
+              minAzimuthAngle={-Math.PI / 3}
+              maxAzimuthAngle={Math.PI / 3}
+            />
+          </Suspense>
+        </PerformanceMonitor>
       </Canvas>
     </div>
   );

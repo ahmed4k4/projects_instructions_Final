@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Check, Loader2, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -25,6 +26,7 @@ interface AIThinkingPanelProps {
  */
 export function AIThinkingPanel({ narration, steps, phase, error, className }: AIThinkingPanelProps) {
   const reduce = useReducedMotion();
+  const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -53,10 +55,10 @@ export function AIThinkingPanel({ narration, steps, phase, error, className }: A
         </span>
         <p className="text-xs font-medium">
           {phase === 'thinking'
-            ? 'Building your PC'
+            ? t('thinking.building')
             : phase === 'error'
-              ? 'Generation failed'
-              : 'Build complete'}
+              ? t('thinking.failed')
+              : t('thinking.complete')}
         </p>
       </div>
 

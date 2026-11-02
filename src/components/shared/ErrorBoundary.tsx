@@ -1,6 +1,7 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { AlertTriangle, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import i18n from '@/i18n';
 
 interface Props {
   children: ReactNode;
@@ -10,7 +11,14 @@ interface State {
   error: Error | null;
 }
 
-/** Top-level safety net: keeps one broken page from blanking the whole app. */
+/**
+ * Top-level safety net: keeps one broken page from blanking the whole app.
+ *
+ * A class boundary cannot use hooks, so it translates through the i18n instance
+ * directly. It also re-reads the language on every render, which is correct here:
+ * the boundary is re-mounted on navigation, and an error screen that cannot be
+ * switched to Arabic is exactly the "some strings are still English" bug.
+ */
 export class ErrorBoundary extends Component<Props, State> {
   state: State = { error: null };
 
@@ -30,21 +38,24 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (!this.state.error) return this.props.children;
 
+    const t = i18n.t.bind(i18n);
+
     return (
       <div className="grid min-h-[100dvh] place-items-center bg-background px-6">
-        <div className="w-full max-w-md rounded-2xl border border-danger/25 bg-surface p-8 text-center shadow-card">
+        <div
+          role="alert"
+          className="w-full max-w-md rounded-2xl border border-danger/25 bg-surface p-8 text-center shadow-card"
+        >
           <div className="mx-auto mb-5 grid size-12 place-items-center rounded-xl bg-danger/10">
             <AlertTriangle className="size-6 text-danger" />
           </div>
-          <h1 className="text-lg font-semibold">Something shorted out</h1>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            An unexpected error interrupted rendering. Your saved build is safe in local storage.
-          </p>
+          <h1 className="text-lg font-semibold">{t('errors.boundaryTitle')}</h1>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t('errors.boundaryBody')}</p>
           <pre className="mt-4 max-h-32 overflow-auto rounded-lg border border-border bg-surface-inset p-3 text-start text-xs text-danger/90">
             {this.state.error.message}
           </pre>
           <Button className="mt-6 w-full" onClick={this.reset}>
-            <RotateCcw /> Reload Nexus
+            <RotateCcw /> {t('errors.reload')}
           </Button>
         </div>
       </div>

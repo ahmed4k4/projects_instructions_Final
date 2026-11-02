@@ -1,5 +1,6 @@
 import LZString from 'lz-string';
 import type { BuildSelection } from '@/types/build';
+import { appUrl } from './appUrl';
 
 /**
  * Anonymous build sharing — everything happens in the URL fragment.
@@ -84,7 +85,9 @@ export function buildShareUrl(
   if (!payload) return null;
   // Always point at the landing/build page — a shared build is a fresh session,
   // not a snapshot of the sharer's current route.
-  return `${window.location.origin}/${SHARE_HASH_PREFIX}${payload}`;
+  // `appUrl()` honours VITE_APP_URL so a staging deploy does not hand out
+  // preview links.
+  return `${appUrl()}/${SHARE_HASH_PREFIX}${payload}`;
 }
 
 function isPayload(value: unknown): value is SharedBuildPayload {

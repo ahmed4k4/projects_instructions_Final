@@ -1,8 +1,10 @@
 /**
  * Google Gemini provider (free tier, Google AI Studio).
  *
- * Talks to `/api/gemini` — the Vite dev proxy — so `GEMINI_API_KEY` stays on the
- * server and never enters the bundle. Uses the REST API directly rather than
+ * Talks to `/api/ai` — the server-side proxy (Vercel Serverless Function in
+ * production, the Vite dev middleware locally; both share
+ * `src/server/geminiProxy.ts`) — so `GEMINI_API_KEY` stays on the server and
+ * never enters the bundle. Uses the REST API directly rather than
  * `@google/generative-ai`: the SDK pins model names and does not expose
  * `groundingMetadata` cleanly, both of which this app needs.
  *
@@ -26,7 +28,7 @@ import {
 } from './types';
 import { invalidateModel, resolveModelSync } from '../models';
 
-const BASE = '/api/gemini/v1beta';
+const BASE = '/api/ai/v1beta';
 
 /* -------------------------------------------------------------------------- */
 /*  Wire format                                                               */

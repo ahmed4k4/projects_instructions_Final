@@ -41,8 +41,9 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
   const useCase = useBuildStore((state) => state.useCase);
   const budget = useBuildStore((state) => state.budget);
   const buildName = useBuildStore((state) => state.buildName);
-  // The store seeds a human default; translate it without changing stored data.
-  const displayName = buildName === 'Untitled Build' ? t('builder.untitled') : buildName;
+  // The store keeps an empty name until the user picks one, so the placeholder
+  // is translated at render time and follows a language switch.
+  const displayName = buildName?.trim() ? buildName : t('builder.untitled');
   const { data: rules = [] } = useCompatibilityRules();
   const { user, available } = useAuth();
   const quantities = useBuildStore((state) => state.quantities);

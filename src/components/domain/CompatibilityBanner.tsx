@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { AlertTriangle, CheckCircle2, ChevronDown, XCircle } from 'lucide-react';
 import type { CompatibilityReport } from '@/lib/compatibility/types';
+import { useCompatibilityMessage } from '@/lib/i18nCompatibility';
 import { cn } from '@/lib/utils';
 import { EASE_OUT } from '@/lib/motion';
 
@@ -19,6 +20,7 @@ interface CompatibilityBannerProps {
 export function CompatibilityBanner({ report, className }: CompatibilityBannerProps) {
   const reduce = useReducedMotion();
   const { t } = useTranslation();
+  const localise = useCompatibilityMessage();
   const [open, setOpen] = useState(false);
 
   const errors = report.errors;
@@ -92,7 +94,7 @@ export function CompatibilityBanner({ report, className }: CompatibilityBannerPr
                   <AlertTriangle className="mt-0.5 size-3 shrink-0 text-warning" />
                 )}
                 <span className={issue.severity === 'error' ? 'text-danger' : 'text-warning'}>
-                  {issue.message}
+                  {localise(issue)}
                 </span>
               </li>
             ))}

@@ -13,45 +13,26 @@ import type { UseCase } from '@/types/build';
 import type { ComponentCategory } from '@/types/components';
 
 export interface NavItem {
-  label: string;
+  /** i18n key; resolved by the shell, never rendered raw. */
+  labelKey: string;
   to: string;
   icon: LucideIcon;
-  description: string;
   /** Visible only on larger screens or in docs. */
   primary?: boolean;
   badge?: string;
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Builder', to: '/builder', icon: Wrench, description: 'Pick every part', primary: true },
-  {
-    label: 'Search',
-    to: '/search',
-    icon: Search,
-    description: 'Live prices from Egyptian stores',
-    primary: true,
-  },
-  {
-    label: 'Smart Builder',
-    to: '/builder/ai',
-    icon: Sparkles,
-    description: 'Describe it, AI specs it',
-    badge: 'AI',
-  },
-  {
-    label: 'AI Advisor',
-    to: '/ai-advisor',
-    icon: MessageSquareCode,
-    description: 'Ask Gemini anything',
-  },
-  { label: 'Prebuilt', to: '/prebuilt', icon: LayoutTemplate, description: 'Curated configurations' },
-  { label: 'Community', to: '/community', icon: Users, description: 'Builds from the crowd' },
-  { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard, description: 'Your builds and alerts' },
+  { labelKey: 'nav.builder', to: '/builder', icon: Wrench, primary: true },
+  { labelKey: 'nav.search', to: '/search', icon: Search, primary: true },
+  { labelKey: 'nav.smartBuilder', to: '/builder/ai', icon: Sparkles, badge: 'AI' },
+  { labelKey: 'nav.advisor', to: '/ai-advisor', icon: MessageSquareCode },
+  { labelKey: 'nav.prebuilt', to: '/prebuilt', icon: LayoutTemplate },
+  { labelKey: 'nav.community', to: '/community', icon: Users },
+  { labelKey: 'nav.dashboard', to: '/dashboard', icon: LayoutDashboard },
 ];
 
-export const SECONDARY_NAV: NavItem[] = [
-  { label: 'Overview', to: '/', icon: Boxes, description: 'Back to landing' },
-];
+export const SECONDARY_NAV: NavItem[] = [{ labelKey: 'nav.overview', to: '/', icon: Boxes }];
 
 /* -------------------------------------------------------------------------- */
 /*  Prebuilt catalogue metadata                                               */
@@ -59,17 +40,16 @@ export const SECONDARY_NAV: NavItem[] = [
 
 export interface PrebuiltFilter {
   id: 'all' | UseCase;
-  label: string;
 }
 
 export const PREBUILT_FILTERS: PrebuiltFilter[] = [
-  { id: 'all', label: 'All builds' },
-  { id: 'gaming', label: 'Gaming' },
-  { id: 'ai', label: 'AI & ML' },
-  { id: 'editing', label: 'Editing' },
-  { id: 'programming', label: 'Programming' },
-  { id: 'workstation', label: 'Workstation' },
-  { id: 'streaming', label: 'Streaming' },
+  { id: 'all' },
+  { id: 'gaming' },
+  { id: 'ai' },
+  { id: 'editing' },
+  { id: 'programming' },
+  { id: 'workstation' },
+  { id: 'streaming' },
 ];
 
 /* -------------------------------------------------------------------------- */

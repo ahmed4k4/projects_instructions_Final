@@ -6,6 +6,7 @@ import {
   getRetailerOffersForComponent,
 } from '@/services/retailers/aggregator';
 import { RETAILERS } from '@/services/retailers/types';
+import { SIGMA_SNAPSHOT } from '@/services/retailers/sigmaSnapshot';
 import { isSupabaseConfigured } from '@/services/supabaseClient';
 
 /**
@@ -57,7 +58,10 @@ export function useRetailerHealth() {
     queryKey: ['retailer-health'] as const,
     queryFn: getRetailerHealth,
     staleTime: PRICE_STALE_MS,
-    enabled: isSupabaseConfigured,
+    // Health is also the only source of Sigma's availability: its rows come from
+    // the Playwright feed, not from the database, so this must run even when
+    // Supabase is unconfigured.
+    enabled: true,
   });
 }
 
@@ -69,7 +73,12 @@ export function useLiveRetailers() {
   );
   return Object.values(RETAILERS).map((meta) => ({
     ...meta,
-    // A retailer is only "live" if the registry says so AND its last sync worked.
-    live: meta.live && (healthy.size === 0 || healthy.has(meta.id)),
+    // Sigma has no database sync row at all — it publishes a JSON feed from a
+    // Playwright worker — so its availability is "does that feed have rows?".
+    // The bundled capture answers immediately, before any request resolves.
+    live:
+      meta.id === 'sigma'
+        ? healthy.has('sigma') || SIGMA_SNAPSHOT.products.length > 0
+        : meta.live && (healthy.size === 0 || healthy.has(meta.id)),
   }));
 }

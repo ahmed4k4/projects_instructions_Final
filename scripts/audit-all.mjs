@@ -20,11 +20,19 @@ const steps = [
   ['typecheck', 'pnpm', ['typecheck']],
   ['lint', 'pnpm', ['lint']],
   ['i18n', 'node', ['scripts/check-i18n.mjs']],
+  ['i18n strings', 'node', ['scripts/audit-i18n-strings.mjs']],
   ['rtl', 'node', ['scripts/check-rtl.mjs']],
   ['design system', 'node', ['scripts/check-design-system.mjs']],
+  ['hardcoded strings', 'node', ['scripts/find-hardcoded-strings.mjs']],
   ['dependencies', 'node', ['scripts/check-deps.mjs'], { allowFindings: true }],
   ['build', 'pnpm', ['build']],
   ['bundle secrets', 'node', ['scripts/check-bundle-secrets.mjs']],
+  ['spa routing', 'node', ['scripts/verify-spa-routing.mjs']],
+  // The AI route is the one thing that only exists in production, so it is
+  // checked without a deploy: the real Serverless Function module is imported and
+  // called. Live calls are skipped when GEMINI_API_KEY is absent.
+  ['ai route', 'node', ['scripts/verify-ai-function.mjs']],
+  ['retailer coverage', 'node', ['scripts/verify-listing-coverage.mjs']],
   ['unused files', 'node', ['scripts/audit-unused.mjs']],
   ['tests', 'pnpm', ['test']],
 ];

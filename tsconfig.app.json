@@ -32,5 +32,8 @@
 
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
   },
-  "include": ["src"]
+  "include": ["src"],
+  // Server-only code: runs on Node (Vercel function / Vite middleware), so it must
+  // not be type-checked against the browser lib and must never be bundled.
+  "exclude": ["src/server", "src/**/__tests__/**", "api"]
 }

@@ -10,17 +10,7 @@ import { useBuildStore } from '@/store/useBuildStore';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Logo } from './Logo';
 
-/** Nav labels live in i18n; `NavItem.label` is the English fallback. */
-const NAV_KEYS: Record<string, string> = {
-  '/builder': 'nav.builder',
-  '/search': 'nav.search',
-  '/builder/ai': 'nav.smartBuilder',
-  '/ai-advisor': 'nav.advisor',
-  '/prebuilt': 'nav.prebuilt',
-  '/community': 'nav.community',
-  '/dashboard': 'nav.dashboard',
-  '/': 'nav.overview',
-};
+/** Nav labels are i18n keys on the item itself (`labelKey`). */
 
 function isActivePath(path: string, to: string): boolean {
   return to === '/' ? path === '/' : path.startsWith(to);
@@ -30,7 +20,7 @@ interface SidebarProps {
   collapsed: boolean;
 }
 
-function NavContent({ collapsed }: SidebarProps) {
+function NavContent({ collapsed, onNavigate }: SidebarProps & { onNavigate?: () => void }) {
   const { pathname } = useLocation();
   const { t } = useTranslation();
   const { isRtl } = useDirection();
@@ -55,25 +45,40 @@ function NavContent({ collapsed }: SidebarProps) {
           <NavLink
             key={item.to}
             to={item.to}
+            // In the mobile drawer this closes the panel; in the desktop rail it is
+            // undefined and the click is a plain navigation.
+            onClick={onNavigate}
             aria-current={active ? 'page' : undefined}
             className={cn(
-              'group relative flex h-10 items-center gap-3 rounded-lg px-2.5 text-sm font-medium',
+              // h-11 gives a 44px tap target; sm restores the compact desktop rail.
+              'group relative flex h-11 items-center gap-3 rounded-lg px-2.5 text-sm font-medium lg:h-10',
               'transition-colors duration-200',
               active ? 'text-foreground' : 'text-muted-foreground hover:text-foreground',
               collapsed && 'justify-center px-0',
             )}
           >
+            {/*
+             * `pointer-events-none` is load-bearing.
+             *
+             * These indicators are `absolute inset-0`, so they sit on top of the
+             * link's own hit area. Without this, tapping the ACTIVE item hit the
+             * decorative span instead of the anchor — the elementFromPoint was
+             * `SPAN.absolute inset-0 rounded-lg`, and navigation silently did
+             * nothing on the item the user most likely wanted to re-open.
+             */}
             {active && (
               <motion.span
+                aria-hidden
                 layoutId="nav-indicator"
-                className="absolute inset-0 rounded-lg border border-primary/20 bg-primary/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
+                className="pointer-events-none absolute inset-0 rounded-lg border border-primary/20 bg-primary/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
                 transition={spring}
               />
             )}
             {active && (
               <motion.span
+                aria-hidden
                 layoutId="nav-indicator-bar"
-                className="absolute start-0 top-1/2 h-5 w-[2px] -translate-y-1/2 rounded-full bg-primary shadow-glow"
+                className="pointer-events-none absolute start-0 top-1/2 h-5 w-[2px] -translate-y-1/2 rounded-full bg-primary shadow-glow"
                 transition={spring}
               />
             )}
@@ -86,7 +91,7 @@ function NavContent({ collapsed }: SidebarProps) {
             />
             {!collapsed && (
               <>
-                <span className="relative flex-1 truncate">{t(NAV_KEYS[item.to] ?? 'nav.workspace')}</span>
+                <span className="relative flex-1 truncate">{t(item.labelKey)}</span>
                 {item.badge && (
                   <span className="relative rounded-full border border-accent/25 bg-accent/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-accent">
                     {item.badge}
@@ -106,7 +111,7 @@ function NavContent({ collapsed }: SidebarProps) {
           <Tooltip key={item.to} delayDuration={150}>
             <TooltipTrigger asChild>{link}</TooltipTrigger>
             <TooltipContent side={isRtl ? 'left' : 'right'}>
-              {t(NAV_KEYS[item.to] ?? 'nav.workspace')}
+              {t(item.labelKey)}
             </TooltipContent>
           </Tooltip>
         ) : (
@@ -204,25 +209,60 @@ export function Sidebar({ collapsed }: SidebarProps) {
         </div>
       </motion.aside>
 
-      {/* Mobile drawer */}
+      {/*
+       * Mobile drawer.
+       *
+       * Two things here used to freeze the whole page:
+       *   · The backdrop and the panel were siblings inside one AnimatePresence via
+       *     a fragment. Framer Motion tracks ONE child per AnimatePresence, so the
+       *     drawer's exit animation was skipped and the `fixed inset-0` backdrop
+       *     stayed mounted — invisible at opacity 0 but still capturing every tap.
+       *   · NavContent's links did not close the drawer, so navigating left it open
+       *     behind the new page.
+       *
+       * Each overlay now has its own AnimatePresence (so each unmounts on its own
+       * schedule) and the backdrop is `pointer-events-none` while exiting.
+       */}
       <AnimatePresence>
         {sidebarOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              onClick={() => setSidebarOpen(false)}
-              className="fixed inset-0 z-40 bg-background/70 backdrop-blur-sm lg:hidden"
-            />
-            <motion.aside
-              initial={{ x: isRtl ? '100%' : '-100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: isRtl ? '100%' : '-100%' }}
-              transition={reduce ? { duration: 0 } : spring}
-              className="fixed inset-y-0 start-0 z-50 flex w-[264px] flex-col border-e border-border bg-surface/95 backdrop-blur-xl lg:hidden"
-            >
+          <motion.div
+            key="mobile-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setSidebarOpen(false)}
+            aria-hidden
+            className="fixed inset-0 z-40 bg-background/70 backdrop-blur-sm lg:hidden"
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {sidebarOpen && (
+          // ONE child per AnimatePresence: a fragment here left the panel with
+          // zero measured size and Framer could not run its enter animation.
+          <motion.aside
+            key="mobile-drawer"
+            initial={{ x: isRtl ? '100%' : '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: isRtl ? '100%' : '-100%' }}
+            /*
+             * A bounded tween, not a spring.
+             *
+             * The panel is closed from TWO places at once — the link's onClick and
+             * AppShell's route effect — and an interrupted spring never settled,
+             * so AnimatePresence never fired `onExitComplete` and the drawer stayed
+             * mounted (and visible) after navigating. A fixed-duration tween always
+             * completes, which is what "the menu is stuck" actually needed.
+             */
+            transition={reduce ? { duration: 0 } : { duration: 0.22, ease: EASE_OUT }}
+            /* Belt and braces: while the drawer is closing it must not keep
+               capturing pointer events, otherwise a tap during the exit
+               animation lands on a panel the user has already dismissed. */
+            style={{ pointerEvents: sidebarOpen ? 'auto' : 'none' }}
+            className="fixed inset-y-0 start-0 z-50 flex w-[264px] flex-col border-e border-border bg-surface/95 backdrop-blur-xl lg:hidden"
+          >
               <div className="flex h-16 items-center justify-between px-4">
                 <Logo />
                 <button
@@ -234,12 +274,13 @@ export function Sidebar({ collapsed }: SidebarProps) {
                   <X className="size-4" />
                 </button>
               </div>
-              <NavContent collapsed={false} />
-              <div className="border-t border-border p-4 text-[11px] text-muted-foreground">
-                {t('app.tagline')} · {NAV_ITEMS.length} {t('nav.workspace')}
-              </div>
-            </motion.aside>
-          </>
+              {/* onClick closes the drawer: without it the panel stayed open over
+                  the page the user had just navigated to. */}
+              <NavContent collapsed={false} onNavigate={() => setSidebarOpen(false)} />
+            <div className="border-t border-border p-4 text-[11px] text-muted-foreground">
+              {t('app.tagline')} · {NAV_ITEMS.length} {t('nav.workspace')}
+            </div>
+          </motion.aside>
         )}
       </AnimatePresence>
     </>

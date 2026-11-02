@@ -9,6 +9,21 @@
     "case": "Case",
     "cooling": "Cooling"
   },
+  "compat": {
+    "cpu_socket": "CPU socket must match the motherboard.",
+    "cpu_ram_type": "Memory type is not supported by this CPU.",
+    "motherboard_ram_type": "Motherboard does not accept this memory type.",
+    "ram_capacity_max": "Total memory exceeds the motherboard limit.",
+    "gpu_case_length": "The GPU is longer than the case supports.",
+    "cooler_case_height": "The cooler is taller than the case allows.",
+    "cooler_socket": "Cooler has no bracket for this socket.",
+    "psu_gpu_power": "The PSU is below the GPU recommendation plus headroom.",
+    "psu_gpu_connectors": "The PSU lacks the GPU power connectors.",
+    "case_motherboard_form": "Case does not support this board size.",
+    "gpu_slot_blocked": "The GPU may block an expansion slot.",
+    "m2_slots": "All M.2 slots are occupied.",
+    "missing": "{{category}} not selected yet."
+  },
   "categoryDescriptions": {
     "cpu": "Headroom for gaming, compiling and AI workloads",
     "motherboard": "Socket, chipset and expansion for your platform",
@@ -111,5 +126,23 @@
     "body": "Your build is saved in this browser only. Sign in to sync across devices.",
     "restored": "Shared build loaded",
     "missing": "{{count}} part(s) in that link are no longer in the catalogue."
+  },
+  "buildScore": {
+    "labels": {
+      "compatibility": "Compatibility",
+      "performance": "Performance",
+      "value": "Value",
+      "efficiency": "Efficiency",
+      "upgradability": "Upgradability"
+    },
+    "label": "Build score"
+  },
+  "useCaseDescriptions": {
+    "gaming": "High refresh 1440p / 4K play",
+    "ai": "Local LLMs, training, inference",
+    "editing": "Timeline scrubbing, 4K/8K exports",
+    "programming": "Compiles, containers, IDEs",
+    "workstation": "CAD, simulation, rendering",
+    "streaming": "Encode while you play"
   }
 }

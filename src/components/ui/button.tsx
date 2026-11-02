@@ -7,10 +7,13 @@ const buttonVariants = cva(
   'inline-flex select-none items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ' +
     'transition-[background-color,color,border-color,box-shadow,transform] duration-200 ease-nexus ' +
       'disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 ' +
-    // Touch targets under the `md` breakpoint only. A pointer-based media query
-    // was the wrong test: tablets report `pointer: coarse` at 768px, where the
-    // layout is already full-size and 44px buttons just look oversized.
-    'max-md:min-h-11 max-md:min-w-11',
+    // Touch targets wherever the input is a finger.
+    //
+    // This used to key off the `max-md` breakpoint, which missed exactly one
+    // class of device: a 768–1024px tablet reports `pointer: coarse` but lays
+    // out the desktop grid, so its buttons were 32–36px. `pointer-coarse` is the
+    // input capability, which is what the 44px rule is actually about.
+    'max-md:min-h-11 max-md:min-w-11 pointer-coarse:min-h-11 pointer-coarse:min-w-11',
   {
     variants: {
       variant: {

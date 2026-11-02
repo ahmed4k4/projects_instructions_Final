@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowRight, Layers, Sparkles } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
@@ -14,6 +15,7 @@ import type { UseCase } from '@/types/build';
 const stagger = makeStagger(0.07, 0.05);
 
 export default function PrebuiltConfigs() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<(typeof PREBUILT_FILTERS)[number]['id']>('all');
 
   const builds = useMemo(
@@ -25,14 +27,14 @@ export default function PrebuiltConfigs() {
   return (
     <div className="container py-8 lg:py-10">
       <PageHeader
-        eyebrow="Prebuilt"
-        title="Configurations that ship unchanged"
-        description="Six opinionated builds, each verified against the compatibility rules. Start from one and swap a part — totals update instantly."
-        breadcrumbs={[{ label: 'Workspace', to: '/' }, { label: 'Prebuilt' }]}
+        eyebrow={t('nav.prebuilt')}
+        title={t('prebuilt.title')}
+        description={t('prebuilt.description')}
+        breadcrumbs={[{ label: t('nav.workspace'), to: '/' }, { label: t('nav.prebuilt') }]}
         actions={
           <Button asChild variant="secondary" size="sm">
             <Link to="/builder">
-              Start from scratch <ArrowRight />
+              {t('prebuilt.fromScratch')} <ArrowRight />
             </Link>
           </Button>
         }
@@ -58,7 +60,9 @@ export default function PrebuiltConfigs() {
                   transition={spring}
                 />
               )}
-              <span className="relative">{item.label}</span>
+              <span className="relative">
+                {item.id === 'all' ? t('prebuilt.all') : t(`builder.useCases.${item.id}`)}
+              </span>
             </button>
           );
         })}
@@ -67,7 +71,7 @@ export default function PrebuiltConfigs() {
       {builds.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-dashed border-border-strong p-16 text-center">
           <Layers className="mx-auto size-8 text-muted-foreground" />
-          <p className="mt-4 text-sm font-medium">No configuration in this category yet</p>
+          <p className="mt-4 text-sm font-medium">{t('prebuilt.emptyCategory')}</p>
           <p className="mt-1 text-xs text-muted-foreground">
             The catalogue grows every release — try “All builds”.
           </p>
@@ -92,14 +96,12 @@ export default function PrebuiltConfigs() {
             <Sparkles className="size-5" />
           </span>
           <div>
-            <p className="text-sm font-semibold">Nothing quite fits?</p>
-            <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
-              Give the advisor your budget and workload — it drafts a list you can edit part by part.
-            </p>
+            <p className="text-sm font-semibold">{t('prebuilt.ctaTitle')}</p>
+            <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{t('prebuilt.ctaBody')}</p>
           </div>
         </div>
         <Button asChild size="sm">
-          <Link to="/ai-advisor">Generate a build</Link>
+          <Link to="/ai-advisor">{t('smartBuilder.generate')}</Link>
         </Button>
       </div>
     </div>

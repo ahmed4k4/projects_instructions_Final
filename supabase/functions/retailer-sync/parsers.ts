@@ -1,19 +1,19 @@
-/**
+﻿/**
  * Retailer scrapers.
  *
- * ── Why regex and not cheerio ─────────────────────────────────────────────
+ * â”€â”€ Why regex and not cheerio â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
  * The three sites that respond are server-rendered templates with stable, shallow
  * structure (OpenCart `.product-layout` cards, WooCommerce `.product-small`
  * blocks). A DOM parser would pull ~1 MB into the Edge Function cold start to do
- * what five anchored regexes do — and the class names are the contract, not the
+ * what five anchored regexes do â€” and the class names are the contract, not the
  * nesting. Each parser is deliberately narrow so a template change returns FEWER
  * products rather than wrong ones.
  *
- * ── Politeness ────────────────────────────────────────────────────────────
- *   · robots.txt is checked before each host is used (see `isAllowed`).
- *   · One request every `REQUEST_DELAY_MS` per retailer, sequential.
- *   · An identifiable bot User-Agent.
- *   · A hard page budget per run so a runaway category cannot become a crawl.
+ * â”€â”€ Politeness â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+ *   آ· robots.txt is checked before each host is used (see `isAllowed`).
+ *   آ· One request every `REQUEST_DELAY_MS` per retailer, sequential.
+ *   آ· An identifiable bot User-Agent.
+ *   آ· A hard page budget per run so a runaway category cannot become a crawl.
  *
  * Every parser is pure: `(html, cfg) => Product[]`. That keeps them testable
  * against saved fixtures without network access.
@@ -39,7 +39,7 @@ export interface CategoryTarget {
   category: string;
   url: string;
   /**
-   * Extra pages to fetch, appended as `?page=N` (OpenCart) — see `pageUrl`.
+   * Extra pages to fetch, appended as `?page=N` (OpenCart) â€” see `pageUrl`.
    * Measured: Elbadr returns 28 cards per page, Elnekhely 12 per page but 503s
    * on page 2, Alfrensia 20 per page.
    */
@@ -51,8 +51,8 @@ export interface CategoryTarget {
  *
  * The two platforms paginate differently, and using the wrong one silently
  * returns page 1 again (which looks like "page 2 has the same products"):
- *   · OpenCart (Elbadr, Elnekhely):  `/vga?page=2`
- *   · WooCommerce (Alfrensia):       `/product-category/gpu/page/2/`
+ *   آ· OpenCart (Elbadr, Elnekhely):  `/vga?page=2`
+ *   آ· WooCommerce (Alfrensia):       `/product-category/gpu/page/2/`
  * The distinction is detected from the URL shape, so callers stay declarative.
  */
 export function pageUrl(target: CategoryTarget, n: number): string {
@@ -78,12 +78,12 @@ export interface RetailerConfig {
   parse: (html: string, pageUrl: string) => ScrapedProduct[];
 }
 
-const EGP = /(?:EGP|ج\.م|LE)\b/i;
+const EGP = /(?:EGP|ط¬\.ظ…|LE)\b/i;
 
 /**
  * Parse an Egyptian price.
  *
- * Handles `6,799 EGP`, `EGP 6,799.00`, `٦٬٧٩٩` (Arabic-Indic digits) and
+ * Handles `6,799 EGP`, `EGP 6,799.00`, `ظ¦ظ¬ظ§ظ©ظ©` (Arabic-Indic digits) and
  * `6.799,00` (European ordering). Returns null when the text is not a price so
  * callers skip the row instead of inserting a zero.
  */
@@ -100,9 +100,9 @@ export function parseEgpPrice(raw: string | null | undefined): number | null {
 
   let digits = match[1];
 
-  // "6.799,00" → thousands '.' and decimal ','  (European)
+  // "6.799,00" â†’ thousands '.' and decimal ','  (European)
   if (/,\d{1,2}$/.test(digits)) digits = digits.replace(/\./g, '').replace(',', '.');
-  // "6,799" or "6,799.00" → ',' is a thousands separator
+  // "6,799" or "6,799.00" â†’ ',' is a thousands separator
   else digits = digits.replace(/,/g, '');
 
   const value = Number.parseFloat(digits);
@@ -117,7 +117,7 @@ function decodeEntities(text: string): string {
     .replace(/&quot;/g, '"')
     .replace(/&#0?39;/g, "'")
     .replace(/&nbsp;/g, ' ')
-    .replace(/&times;/g, '×')
+    .replace(/&times;/g, 'أ—')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -131,22 +131,22 @@ function stripTags(html: string): string {
  *
  * These stores emit pretty-printed markup, so attributes are frequently on
  * their own line: `<div\nclass="name">`. Every parser here anchors on
- * `<div class="…">`, which would then never match. Normalising the tag
+ * `<div class="â€¦">`, which would then never match. Normalising the tag
  * interiors once keeps the parsers readable and the anchors reliable.
  *
- * Only `<…>` runs are touched, so text content (product names) is unaffected.
+ * Only `<â€¦>` runs are touched, so text content (product names) is unaffected.
  */
 function normaliseTags(html: string): string {
   return html.replace(/<[^>]*>/g, (tag) => tag.replace(/\s+/g, ' '));
 }
 
 /**
- * OpenCart product cards — used by Elbadr and Elnekhely (same theme).
+ * OpenCart product cards â€” used by Elbadr and Elnekhely (same theme).
  *
  *   <div class="product-layout" data-product-id="7633">
- *     <img src="…/image/cache/…-250x250.png">
+ *     <img src="â€¦/image/cache/â€¦-250x250.png">
  *     <div class="caption">
- *       <h4><a href="…">Name</a></h4>
+ *       <h4><a href="â€¦">Name</a></h4>
  *       <p class="price">6,799 EGP <span class="price-old">8,000 EGP</span></p>
  *     </div>
  */
@@ -164,12 +164,12 @@ function parseOpenCart(
   // markup is one long line and greedy groups overrun into the next product.
   // Anchor on `data-product-id` alone: the class attribute is rendered as
   // `class="product-layout "` (trailing space), so a stricter anchor matches
-  // nothing — and the <style> block never carries the id attribute.
+  // nothing â€” and the <style> block never carries the id attribute.
   const cards = source.split(/(?=<div[^>]*data-product-id=)/).slice(1);
 
   for (const card of cards) {
     const idMatch = /data-product-id="(\d+)"/.exec(card);
-    // Real markup: <div class="caption"><div class="name"><a href="…">Name</a></div>
+    // Real markup: <div class="caption"><div class="name"><a href="â€¦">Name</a></div>
     const linkMatch =
       /<div class="name">\s*<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i.exec(card) ??
       /<h4[^>]*>\s*<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i.exec(card);
@@ -180,7 +180,7 @@ function parseOpenCart(
     if (!name) continue;
 
     const resolvedCategory = classifyByName(name, category);
-    // '' means the row is an accessory, not a component — skip it entirely.
+    // '' means the row is an accessory, not a component â€” skip it entirely.
     if (!resolvedCategory) continue;
 
     // This theme renders the price as
@@ -198,7 +198,7 @@ function parseOpenCart(
     const price = parseEgpPrice(stripTags(priceNew?.[1] ?? withoutOld));
     if (price === null) continue;
 
-    const image = /<img[^>]+src="([^"]+)"[^>]*>/i.exec(card)?.[1] ?? null;
+    const image = extractImage(card);
     // Elnekhely prints "Stock: In Stock"; Elbadr omits it entirely.
     const stockText = /Stock:\s*([A-Za-z \u0600-\u06FF]+)/i.exec(card)?.[1] ?? '';
 
@@ -206,13 +206,13 @@ function parseOpenCart(
       retailerId,
       externalId: idMatch?.[1] ?? href.split('/').filter(Boolean).pop() ?? name.slice(0, 60),
       name,
-      // Elbadr's category pages are loose — classify by name, fall back to page.
+      // Elbadr's category pages are loose â€” classify by name, fall back to page.
       category: resolvedCategory,
       priceEgp: price,
       originalPriceEgp: originalMatch ? parseEgpPrice(stripTags(originalMatch[1] ?? '')) : null,
-      stockStatus: /out of stock|نفذ/i.test(stockText)
+      stockStatus: /out of stock|ظ†ظپط°/i.test(stockText)
         ? 'out_of_stock'
-        : /in stock|متوفر/i.test(stockText)
+        : /in stock|ظ…طھظˆظپط±/i.test(stockText)
           ? 'in_stock'
           : 'unknown',
       productUrl: href.startsWith('http') ? href : origin + href,
@@ -225,11 +225,64 @@ function parseOpenCart(
 }
 
 /**
- * WooCommerce / Flatsome cards — Alfrensia.
+ * Pull the best image URL out of a product card.
  *
- *   <div class="product-small col … out-of-stock product type-product post-145653 …">
- *     <a href="…/product/zotac-gaming-geforce-rtx-5080-…/"> … <img src="…">
- *     <p class="name product-title woocommerce-loop-product__title"><a …>Name</a></p>
+ * Retail cards carry the real image in any of four places, and choosing wrong is
+ * why Phase 8 stored placeholders:
+ *   آ· `src`          â€” usually correct on OpenCart, a placeholder on lazy shops
+ *   آ· `data-src`     â€” the lazy-loading attribute
+ *   آ· `srcset`       â€” responsive sets; the FIRST entry is the smallest
+ *   آ· `data-srcset`  â€” the lazy variant
+ *
+ * A `woocommerce-placeholder` or `no_image` URL is treated as "no image" rather
+ * than stored, so the UI can draw its category icon instead of a grey box.
+ *
+ * Promotional badges are also rejected: Alfrensia puts a 3-year-warranty PNG as
+ * the FIRST `<img>` in some cards, and because it matched before the lazy
+ * `<img src="data:..." data-src="...">` that followed, the stored photo for
+ * those products was a warranty sticker (Phase 9: Alfrensia at 14% real images).
+ */
+export function extractImage(html: string): string | null {
+  const tags = [...html.matchAll(/<img\b[^>]*>/gi)].map((m) => m[0]);
+
+  for (const tag of tags) {
+    const attrs = (name: string) =>
+      new RegExp(`\\b${name}="([^"]+)"`, 'i').exec(tag)?.[1] ??
+      new RegExp(`\\b${name}='([^']+)'`, 'i').exec(tag)?.[1] ??
+      null;
+
+    // Prefer the real source, then the lazy attribute, then a srcset entry.
+    const candidates = [attrs('src'), attrs('data-src')];
+
+    const srcset = attrs('data-srcset') ?? attrs('srcset');
+    if (srcset) {
+      // "a.png 250w, b.png 500w" â†’ take the first URL that is not a placeholder.
+      for (const part of srcset.split(',')) {
+        const url = part.trim().split(/\s+/)[0];
+        if (url) candidates.push(url);
+      }
+    }
+
+    for (const candidate of candidates) {
+      if (!candidate) continue;
+      // Inline data URIs and spacer gifs are not product photos.
+      if (candidate.startsWith('data:')) continue;
+      if (/(woocommerce-placeholder|no_image|noimage|placeholder|spacer|blank)\.?/i.test(candidate)) continue;
+      // Badges, flags and payment logos are pictures, but not of the product.
+      if (/warranty|badge|logo|flag|payment|icon-3/i.test(candidate)) continue;
+      return candidate;
+    }
+  }
+
+  return null;
+}
+
+/**
+ * WooCommerce / Flatsome cards â€” Alfrensia.
+ *
+ *   <div class="product-small col â€¦ out-of-stock product type-product post-145653 â€¦">
+ *     <a href="â€¦/product/zotac-gaming-geforce-rtx-5080-â€¦/"> â€¦ <img src="â€¦">
+ *     <p class="name product-title woocommerce-loop-product__title"><a â€¦>Name</a></p>
  *     <span class="woocommerce-Price-amount amount">129,000 <bdi>EGP</bdi></span>
  */
 function parseWooCommerce(
@@ -270,19 +323,18 @@ function parseWooCommerce(
     const priceElem = /<span class="woocommerce-Price-amount amount">\s*<bdi>([\s\S]*?)<\/bdi>/i.exec(block);
 
     const price = parseEgpPrice(stripTags(priceElem?.[1] ?? ''));
-    // A graphics card for 1–4 EGP is never real: this store renders a tiny
+    // A graphics card for 1â€“4 EGP is never real: this store renders a tiny
     // placeholder and fills the true price in by AJAX. Skip rather than publish
-    // a wrong number — a missing price is recoverable, a wrong one is not.
+    // a wrong number â€” a missing price is recoverable, a wrong one is not.
     if (price === null || price <= 100) continue;
 
     const original =
       /<del[^>]*>[\s\S]*?<span class="woocommerce-Price-amount amount">\s*<bdi>([\s\S]*?)<\/bdi>/i.exec(block);
-    const image = /<img[^>]+src="([^"]+)"[^>]*>/i.exec(block)?.[1] ?? null;
-    // WooCommerce shops serve `woocommerce-placeholder-*.jpg` for items with no
-    // photo, and this store promotes badges (`3-year-warranty.png`) as the card
-    // thumbnail. Showing a grey box or a warranty logo is worse than no image.
-    const usableImage =
-      image && !/woocommerce-placeholder|warranty|badge|logo|flag|payment/i.test(image) ? image : null;
+    // This store promotes badges (`3-year-warranty.png`) as the card thumbnail
+    // and serves `woocommerce-placeholder-*.jpg` for items with no photo, so the
+    // shared extractor's placeholder filter is not quite enough here.
+    const candidate = extractImage(block);
+    const usableImage = candidate;
 
     out.push({
       retailerId,
@@ -312,8 +364,8 @@ function parseWooCommerce(
  * Sigma is the one retailer whose markup could not be sampled reliably during
  * this phase (its VGA listing redirects to a JS-rendered route). It is wired with
  * the same OpenCart parser plus a generic JSON-LD fallback, and the sync function
- * marks it `blocked` rather than failing the run when zero products parse — see
- * docs/AUDIT.md § Retailer status.
+ * marks it `blocked` rather than failing the run when zero products parse â€” see
+ * docs/AUDIT.md آ§ Retailer status.
  */
 function parseSigma(html: string, pageUrl: string): ScrapedProduct[] {
   const openCart = parseOpenCart(html, pageUrl, 'sigma', 'gpu');
@@ -321,7 +373,7 @@ function parseSigma(html: string, pageUrl: string): ScrapedProduct[] {
   return parseJsonLd(html, pageUrl, 'sigma', 'gpu');
 }
 
-/** Generic schema.org Product fallback — works on any store with ld+json. */
+/** Generic schema.org Product fallback â€” works on any store with ld+json. */
 export function parseJsonLd(
   html: string,
   pageUrl: string,
@@ -391,14 +443,14 @@ export const RETAILERS: RetailerConfig[] = [
     home: 'https://elbadrgroupeg.store/',
     // All eight categories, verified live (Phase 8 expanded coverage from 2).
     targets: [
-      { category: 'gpu', url: 'https://elbadrgroupeg.store/vga' },
-      { category: 'cpu', url: 'https://elbadrgroupeg.store/cpu' },
-      { category: 'motherboard', url: 'https://elbadrgroupeg.store/motherboard' },
-      { category: 'ram', url: 'https://elbadrgroupeg.store/ram' },
-      { category: 'storage', url: 'https://elbadrgroupeg.store/storage' },
-      { category: 'psu', url: 'https://elbadrgroupeg.store/power-supply' },
-      { category: 'case', url: 'https://elbadrgroupeg.store/cases', pages: 2 },
-      { category: 'cooling', url: 'https://elbadrgroupeg.store/cooling', pages: 2 },
+      { category: 'gpu', url: 'https://elbadrgroupeg.store/vga', pages: 5 },
+      { category: 'cpu', url: 'https://elbadrgroupeg.store/cpu', pages: 5 },
+      { category: 'motherboard', url: 'https://elbadrgroupeg.store/motherboard', pages: 4 },
+      { category: 'ram', url: 'https://elbadrgroupeg.store/ram', pages: 4 },
+      { category: 'storage', url: 'https://elbadrgroupeg.store/storage', pages: 4 },
+      { category: 'psu', url: 'https://elbadrgroupeg.store/power-supply', pages: 3 },
+      { category: 'case', url: 'https://elbadrgroupeg.store/cases', pages: 3 },
+      { category: 'cooling', url: 'https://elbadrgroupeg.store/cooling', pages: 3 },
     ],
     parse: (html, url) => parseOpenCart(html, url, 'elbadr', categoryOf(url)),
   },
@@ -406,17 +458,22 @@ export const RETAILERS: RetailerConfig[] = [
     id: 'elnekhely',
     name: 'Elnekhely Technology',
     home: 'https://www.elnekhelytechnology.com/',
-    // Several category paths intermittently answer 503; the sync records
-    // `partial` rather than failing the whole retailer.
+    // Page 2+ of every listing answers **503** â€” the site rate-limits or blocks
+    // paginated requests from bots even when page 1 is served normally (verified
+    // by hand against `?page=2`, `/page/2/` and `&page=2`). The page budgets are
+    // therefore a ceiling this retailer will not reach; ~100 products from page 1
+    // of eight categories is its accessible maximum.
+    //
+    // The sync records `partial` rather than failing the whole retailer.
     targets: [
-      { category: 'gpu', url: 'https://www.elnekhelytechnology.com/graphics-card' },
-      { category: 'cpu', url: 'https://www.elnekhelytechnology.com/processors' },
-      { category: 'motherboard', url: 'https://www.elnekhelytechnology.com/motherboards' },
-      { category: 'ram', url: 'https://www.elnekhelytechnology.com/ram' },
-      { category: 'storage', url: 'https://www.elnekhelytechnology.com/ssd' },
-      { category: 'psu', url: 'https://www.elnekhelytechnology.com/power-supply' },
-      { category: 'case', url: 'https://www.elnekhelytechnology.com/cases' },
-      { category: 'cooling', url: 'https://www.elnekhelytechnology.com/fans-coolers' },
+      { category: 'gpu', url: 'https://www.elnekhelytechnology.com/graphics-card', pages: 8 },
+      { category: 'cpu', url: 'https://www.elnekhelytechnology.com/processors', pages: 6 },
+      { category: 'motherboard', url: 'https://www.elnekhelytechnology.com/motherboards', pages: 6 },
+      { category: 'ram', url: 'https://www.elnekhelytechnology.com/ram', pages: 5 },
+      { category: 'storage', url: 'https://www.elnekhelytechnology.com/ssd', pages: 5 },
+      { category: 'psu', url: 'https://www.elnekhelytechnology.com/power-supply', pages: 4 },
+      { category: 'case', url: 'https://www.elnekhelytechnology.com/cases', pages: 4 },
+      { category: 'cooling', url: 'https://www.elnekhelytechnology.com/fans-coolers', pages: 4 },
     ],
     parse: (html, url) => parseOpenCart(html, url, 'elnekhely', categoryOf(url)),
   },
@@ -427,14 +484,16 @@ export const RETAILERS: RetailerConfig[] = [
     // EN catalogue: on this store the AR listing ships `<bdi>1</bdi>` placeholders
     // for most items and resolves the real price via AJAX.
     targets: [
-      { category: 'gpu', url: 'https://alfrensia.com/product-category/graphics-card/', pages: 3 },
-      { category: 'cpu', url: 'https://alfrensia.com/product-category/processor/', pages: 2 },
-      { category: 'motherboard', url: 'https://alfrensia.com/product-category/motherboard/', pages: 2 },
+      { category: 'gpu', url: 'https://alfrensia.com/product-category/graphics-card/', pages: 4 },
+      { category: 'cpu', url: 'https://alfrensia.com/product-category/processor/', pages: 3 },
+      { category: 'motherboard', url: 'https://alfrensia.com/product-category/motherboard/', pages: 3 },
       { category: 'ram', url: 'https://alfrensia.com/product-category/ram/', pages: 2 },
       { category: 'storage', url: 'https://alfrensia.com/product-category/storage/', pages: 2 },
       { category: 'psu', url: 'https://alfrensia.com/product-category/power-supply/', pages: 2 },
-      { category: 'case', url: 'https://alfrensia.com/product-category/case/' },
-      { category: 'cooling', url: 'https://alfrensia.com/product-category/cooling/' },
+      // Real slugs, verified against the store's nav: `case` and `cooling` both
+      // answer 404 and silently contributed nothing in Phase 9.
+      { category: 'case', url: 'https://alfrensia.com/product-category/cases/', pages: 2 },
+      { category: 'cooling', url: 'https://alfrensia.com/product-category/air-liquid-cooling/', pages: 3 },
     ],
     // Alfrensia paginates 20 per page and serves page 2+ normally.
     // (Applied per-target below via `pages`.)
@@ -445,7 +504,7 @@ export const RETAILERS: RetailerConfig[] = [
     name: 'Sigma Computer',
     home: 'https://sigma-computer.com/en',
     /**
-     * BLOCKED — documented, not silently skipped.
+     * BLOCKED â€” documented, not silently skipped.
      *
      * Sigma is a Next.js App Router storefront: category pages are rendered from
      * `self.__next_f` streamed RSC payloads, with no product markup and no
@@ -504,7 +563,7 @@ export function classifyByName(name: string, fallback: string): string {
   // Monitors have no catalogue category either (the enum has 8 PC-part values).
   if (/\bmonitor\b|\bdisplay\b|\bscreen\b/.test(n)) return '';
 
-  // CPU first, GPU second — deliberately.
+  // CPU first, GPU second â€” deliberately.
   //
   // AMD APUs are named e.g. "Ryzen 5 8600G (Zen 4 & Radeon 760M)": the iGPU is
   // mentioned inside a PROCESSOR name, so a GPU-first rule files a CPU under

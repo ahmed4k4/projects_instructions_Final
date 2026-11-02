@@ -3,6 +3,7 @@ import { RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { RetailerLogo } from './RetailerLogo';
 import { RETAILERS, RETAILER_IDS, type RetailerId } from '@/services/retailers/types';
+import { useLiveRetailers } from '@/hooks/useRetailers';
 import type { ComponentCategory } from '@/types/components';
 import type { SearchFilters } from '@/services/searchService';
 import { CategoryIcon } from '@/components/domain/CategoryIcon';
@@ -53,6 +54,7 @@ export function FilterPanel({
 
   const min = filters.minPriceEgp ?? DEFAULT_PRICE_MIN;
   const max = filters.maxPriceEgp ?? DEFAULT_PRICE_MAX;
+  const live = useLiveRetailers();
 
   return (
     <div className={cn('space-y-6', className)}>
@@ -110,9 +112,11 @@ export function FilterPanel({
         <h3 className="mb-2 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
           {t('search.retailer')}
         </h3>
-        <div className="space-y-0.5">
-          {RETAILER_IDS.map((id) => {
-            const meta = RETAILERS[id];
+         <div className="space-y-0.5">
+           {RETAILER_IDS.map((id) => {
+            // Live availability is data-driven (Sigma arrives through its own
+            // worker feed), so the roster below is authoritative.
+            const meta = live.find((r) => r.id === id) ?? RETAILERS[id];
             const checked = filters.retailerIds?.includes(id) ?? false;
             return (
               <label
@@ -133,7 +137,16 @@ export function FilterPanel({
                 <RetailerLogo retailerId={id} size="sm" />
                 <span className="min-w-0 flex-1 truncate">{meta.name}</span>
                 {!meta.live ? (
-                  <span className="shrink-0 text-[10px] text-muted-foreground">{t('retail.outOfStock')}</span>
+                  // "Pending", not "out of stock": the retailer has no data yet,
+                  // which is a different fact from having no stock. The title
+                  // explains why, so the limitation is visible rather than a
+                  // silently disabled checkbox.
+                  <span
+                    className="shrink-0 rounded border border-warning/30 bg-warning/10 px-1.5 py-0.5 text-[9.5px] font-medium text-warning"
+                    title={t('search.sigmaHint')}
+                  >
+                    {t('search.sigmaPending')}
+                  </span>
                 ) : null}
               </label>
             );

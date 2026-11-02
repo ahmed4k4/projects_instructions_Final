@@ -59,7 +59,7 @@ export default function AIAdvisor() {
   const context: AdvisorContext = hasBuild
     ? {
         build: {
-          name: 'Current build',
+          name: t('advisor.currentBuild'),
           items: buildItems,
           totalPrice: buildItems.reduce((sum, c) => sum + c.price, 0),
           totalWatts: buildItems.reduce((sum, c) => sum + (c.powerDrawWatts ?? 0), 0),
@@ -134,7 +134,7 @@ export default function AIAdvisor() {
         const aiError =
           error instanceof AIError
             ? error
-            : new AIError('network', 'Something went wrong reaching the advisor.');
+            : new AIError('network', t('advisor.errors.network'));
         setLastError(aiError);
         setMessages((prev) => prev.filter((m) => m.id !== assistantId));
 

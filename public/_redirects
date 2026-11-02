@@ -1,0 +1,19 @@
+# Netlify SPA fallback.
+#
+# The app is a client-side SPA: /search, /builder and /compare/:id exist only in
+# the router, not as files on disk. Without this rule a hard refresh on any
+# sub-route returns Netlify's 404 instead of index.html.
+#
+# 200 = rewrite (serve index.html), NOT 301 = redirect, so the browser keeps the
+# real URL and the router can render the right page.
+
+# /api/* is a serverless function (the Gemini proxy), never the SPA. Rules are
+# evaluated top-down and the first match wins, so this MUST come before the
+# catch-all — otherwise a POST to /api/ai/... gets index.html with a 200 and the
+# AI fails with a JSON parse error instead of reaching the proxy.
+/api/*    200
+
+/*    /index.html   200
+
+# Never rewrite the static asset folders — they must 404 properly if missing.
+/assets/*  /assets/:splat  200

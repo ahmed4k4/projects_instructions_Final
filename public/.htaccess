@@ -1,0 +1,21 @@
+# Apache SPA fallback (shared hosting, cPanel, or any .htaccess-aware host).
+#
+# Serves index.html for every path that is not a real file or directory, so
+# /search and /builder survive a hard refresh.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Let real files and directories through untouched (assets, fonts, images).
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # /api/* belongs to the serverless proxy where one exists; on plain Apache the
+  # 404 is correct and must not be answered with index.html.
+  RewriteRule ^api/ - [L]
+
+  # Everything else is a client-side route.
+  RewriteRule ^ index.html [L]
+</IfModule>

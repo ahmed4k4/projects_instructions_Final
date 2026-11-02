@@ -22,11 +22,32 @@ export interface SceneCapability {
   use3d: boolean;
   /** Still probing — render nothing yet to avoid a flash of the wrong variant. */
   pending: boolean;
-  reason: 'desktop' | 'mobile' | 'low-end' | 'reduced-motion' | 'no-webgl';
+  reason: 'desktop' | 'mobile' | 'low-end' | 'reduced-motion' | 'no-webgl' | 'context-lost';
+}
+
+/**
+ * Set for the rest of the session once a GPU context has been lost.
+ *
+ * The context-loss event fires on the canvas, not the page, so it cannot be
+ * caught by a React boundary on its own — and re-mounting the scene after a loss
+ * usually just loses it again (the driver is in a bad state). Once seen, every
+ * later visit in this tab renders the static image.
+ */
+let contextLostForSession = false;
+
+export function markSceneContextLost(): void {
+  contextLostForSession = true;
+}
+
+/** True when `detect()` should refuse the 3D variant after a context loss. */
+export function isSceneBlacklisted(): boolean {
+  return contextLostForSession;
 }
 
 function detect(): SceneCapability {
   if (typeof window === 'undefined') return { use3d: false, pending: true, reason: 'no-webgl' };
+
+  if (contextLostForSession) return { use3d: false, pending: false, reason: 'context-lost' };
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     return { use3d: false, pending: false, reason: 'reduced-motion' };

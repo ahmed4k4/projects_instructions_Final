@@ -1,6 +1,17 @@
-import type { Config } from "tailwindcss";
-import plugin from "tailwindcss/plugin";
-import animate from "tailwindcss-animate";
+import { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
+import animate from 'tailwindcss-animate';
+
+/**
+ * `pointer-coarse:` — true when the primary input is a finger.
+ *
+ * Width breakpoints answer "how much room is there", not "can this be tapped".
+ * A 768–1024px tablet lays out the desktop grid and still gets 32px icon
+ * buttons, which were the last sub-44px targets left on the site.
+ */
+const coarsePointer = plugin(({ addVariant }) => {
+  addVariant('pointer-coarse', '@media (pointer: coarse)');
+});
 
 /**
  * Logical (direction-aware) spacing and inset utilities.
@@ -178,7 +189,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [animate, logicalProperties],
+  plugins: [animate, logicalProperties, coarsePointer],
 };
 
 export default config;

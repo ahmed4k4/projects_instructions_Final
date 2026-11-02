@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { Session, User } from '@supabase/supabase-js';
 import { isSupabaseConfigured, supabase } from '@/services/supabaseClient';
+import { absoluteUrl } from '@/lib/appUrl';
+import i18n from '@/i18n';
 
 export interface AuthState {
   user: User | null;
@@ -54,10 +56,12 @@ export function useAuth(): AuthState & {
   }, []);
 
   const signInWithMagicLink = useCallback(async (email: string) => {
-    if (!supabase) return { error: 'Supabase is not configured.' };
+    if (!supabase) return { error: i18n.t('auth.noSupabase') };
     const { error } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/auth` },
+      // Must be an absolute URL Supabase can redirect back to; on staging this
+      // is the configured public app URL, not the preview host.
+      options: { emailRedirectTo: absoluteUrl('/auth') },
     });
     return { error: error?.message ?? null };
   }, []);

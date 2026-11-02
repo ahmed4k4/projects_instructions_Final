@@ -1,8 +1,8 @@
-/**
+﻿/**
  * Persistence for builds, community publishing, ratings and alerts.
  *
  * Every function is a thin, typed wrapper over Supabase with RLS doing the
- * authorisation. Mapping follows the same snake_case → camelCase convention as
+ * authorisation. Mapping follows the same snake_case â†’ camelCase convention as
  * `componentsService`.
  */
 import type { PCComponent } from '@/types/components';
@@ -11,6 +11,7 @@ import type { Database } from '@/types/database';
 import { isSupabaseConfigured, requireSupabase, supabase } from './supabaseClient';
 import { mapComponentRow } from './componentsService';
 import { slugify } from '@/lib/utils';
+import i18n from '@/i18n';
 
 type BuildRow = Database['public']['Tables']['builds']['Row'];
 
@@ -57,7 +58,7 @@ export function mapBuildRow(row: BuildRow): SavedBuild {
 async function currentUserId(): Promise<string> {
   const client = requireSupabase();
   const { data, error } = await client.auth.getUser();
-  if (error || !data.user) throw new Error('Sign in to save builds.');
+  if (error || !data.user) throw new Error(i18n.t('errors.signInToSave'));
   return data.user.id;
 }
 
@@ -111,7 +112,8 @@ export async function saveBuild(input: SaveBuildInput): Promise<SavedBuild> {
     .select()
     .single();
 
-  if (error || !build) throw new Error(`Could not save the build: ${error?.message ?? 'unknown error'}`);
+  if (error || !build)
+    throw new Error(i18n.t('errors.saveFailed', { detail: error?.message ?? i18n.t('errors.unknown') }));
 
   if (input.components.length > 0) {
     const { error: itemsError } = await client.from('build_items').insert(
@@ -204,7 +206,7 @@ export async function publishBuild(buildId: string, title: string, tags: string[
     .select()
     .single();
 
-  if (error || !data) throw new Error(`Could not publish: ${error?.message ?? 'unknown error'}`);
+  if (error || !data) throw new Error(i18n.t('errors.publishFailed', { detail: error?.message ?? i18n.t('errors.unknown') }));
 
   return {
     id: data.id,
@@ -242,7 +244,7 @@ export async function listCommunityBuilds(): Promise<CommunityPost[]> {
   }));
 }
 
-/** Upsert a 1–5 star rating; the trigger refreshes the aggregate. */
+/** Upsert a 1â€“5 star rating; the trigger refreshes the aggregate. */
 export async function rateBuild(communityBuildId: string, rating: number): Promise<void> {
   const client = requireSupabase();
   const userId = await currentUserId();
@@ -309,7 +311,7 @@ export async function createAlert(input: {
     .select()
     .single();
 
-  if (error || !data) throw new Error(`Could not create the alert: ${error?.message ?? 'unknown error'}`);
+  if (error || !data) throw new Error(i18n.t('errors.alertFailed', { detail: error?.message ?? i18n.t('errors.unknown') }));
 
   return {
     id: data.id,

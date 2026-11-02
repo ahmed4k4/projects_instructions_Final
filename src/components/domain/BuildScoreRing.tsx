@@ -22,7 +22,7 @@ export function BuildScoreRing({
   score,
   size = 120,
   strokeWidth = 8,
-  label = 'Build score',
+  label,
   className,
 }: BuildScoreRingProps) {
   const reduce = useReducedMotion();

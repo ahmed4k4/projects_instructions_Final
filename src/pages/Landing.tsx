@@ -30,6 +30,7 @@ import { GradientMesh } from '@/components/shared/GradientMesh';
 import { Magnetic } from '@/components/shared/Magnetic';
 import { ComponentName } from '@/components/shared/ComponentName';
 import { HeroSceneStatic } from '@/components/scene/HeroSceneStatic';
+import { SceneErrorBoundary } from '@/components/scene/SceneErrorBoundary';
 import { useSceneCapability } from '@/hooks/useSceneCapability';
 import { PriceTag } from '@/components/shared/PriceTag';
 import { fadeUp, hoverLift, makeStagger, staggerItem, viewportOnce } from '@/lib/motion';
@@ -227,9 +228,11 @@ export default function Landing() {
             {/* Glow sits behind the canvas, inside the same sized box. */}
             <div className="pointer-events-none absolute inset-4 -z-10 rounded-full bg-primary/20 blur-[130px]" />
             {scene.pending ? null : scene.use3d ? (
-              <Suspense fallback={<HeroSceneStatic className="h-full w-full" />}>
-                <Hero3DScene className="h-full w-full cursor-grab active:cursor-grabbing" />
-              </Suspense>
+              <SceneErrorBoundary>
+                <Suspense fallback={<HeroSceneStatic className="h-full w-full" />}>
+                  <Hero3DScene className="h-full w-full cursor-grab active:cursor-grabbing" />
+                </Suspense>
+              </SceneErrorBoundary>
             ) : (
               <HeroSceneStatic className="h-full w-full" />
             )}

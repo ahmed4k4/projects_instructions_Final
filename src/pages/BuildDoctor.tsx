@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+﻿import { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import {
@@ -39,18 +40,20 @@ import { useBuildStore } from '@/store/useBuildStore';
 
 const stagger = makeStagger(0.06, 0.04);
 
+/** Tone per verdict. The label is an i18n key, resolved at render time. */
 const VERDICT_TONE: Record<
   BuildDoctorReport['verdict'],
-  { label: string; variant: 'success' | 'primary' | 'warning' | 'danger' }
+  { labelKey: string; variant: 'success' | 'primary' | 'warning' | 'danger' }
 > = {
-  excellent: { label: 'Excellent', variant: 'success' },
-  good: { label: 'Good', variant: 'primary' },
-  needs_work: { label: 'Needs work', variant: 'warning' },
-  rebuild: { label: 'Rebuild', variant: 'danger' },
+  excellent: { labelKey: 'doctor.verdicts.excellent', variant: 'success' },
+  good: { labelKey: 'doctor.verdicts.good', variant: 'primary' },
+  needs_work: { labelKey: 'doctor.verdicts.needs_work', variant: 'warning' },
+  rebuild: { labelKey: 'doctor.verdicts.rebuild', variant: 'danger' },
 };
 
 export default function BuildDoctor() {
   const { id } = useParams<{ id: string }>();
+  const { t } = useTranslation();
   const reduce = useReducedMotion();
 
   const { data: catalogue = [], isLoading: catalogueLoading } = useCatalogue();
@@ -58,7 +61,7 @@ export default function BuildDoctor() {
   const hydrate = useBuildStore((state) => state.hydrateFromSelection);
 
   const [components, setComponents] = useState<PCComponent[] | null>(null);
-  const [buildName, setBuildName] = useState('This build');
+  const [buildName, setBuildName] = useState<string | null>(null);
   const [useCase, setUseCase] = useState<UseCase>('gaming');
   const [loadError, setLoadError] = useState<string | null>(null);
 
@@ -76,20 +79,23 @@ export default function BuildDoctor() {
       .then((result) => {
         if (cancelled) return;
         if (!result) {
-          setLoadError('That build could not be found.');
+          setLoadError(t('doctor.notFound'));
           return;
         }
-        setBuildName(result.build.name);
+        setBuildName(result.build.name || t('doctor.thisBuild'));
         setUseCase((result.build.useCase as UseCase) ?? 'gaming');
         setComponents(result.items.map((item) => item.component));
       })
       .catch((error) => {
-        if (!cancelled) setLoadError(error instanceof Error ? error.message : 'Could not load the build.');
+        if (!cancelled) setLoadError(error instanceof Error ? error.message : t('doctor.loadFailed'));
       });
 
     return () => {
       cancelled = true;
     };
+    // `t` is stable for a given language; re-fetching a build on every language
+    // switch would be wrong, so only the slug re-runs the effect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const items = useMemo(
@@ -112,11 +118,11 @@ export default function BuildDoctor() {
     if (!components?.length) return;
     setRunning(true);
     try {
-      const result = await runBuildDoctor({ name: buildName, useCase, items, rules }, catalogue);
+      const result = await runBuildDoctor({ name: buildName ?? t('doctor.thisBuild'), useCase, items, rules }, catalogue);
       setReport(result);
     } catch (error) {
-      toast.error('The doctor could not complete', {
-        description: error instanceof Error ? error.message : 'Unknown error',
+      toast.error(t('doctor.diagnoseFailed'), {
+        description: error instanceof Error ? error.message : t('errors.unknown'),
       });
     } finally {
       setRunning(false);
@@ -135,12 +141,12 @@ export default function BuildDoctor() {
     const next = components.map((c) => (c.category === component.category ? component : c));
     setComponents(next);
     setReport(null);
-    toast.success(`Swapped in ${component.name}`, { description: 'Re-running the diagnosis…' });
+    toast.success(`Swapped in ${component.name}`, { description: 'Re-running the diagnosisâ€¦' });
   };
 
   const openInBuilder = () => {
     if (!components) return;
-    hydrate(Object.fromEntries(components.map((c) => [c.category, c])) as never, buildName);
+    hydrate(Object.fromEntries(components.map((c) => [c.category, c])) as never, buildName ?? t('doctor.thisBuild'));
     window.location.assign('/builder');
   };
 
@@ -149,21 +155,21 @@ export default function BuildDoctor() {
   return (
     <div className="container py-8 lg:py-10">
       <PageHeader
-        eyebrow="Build Doctor"
-        title={buildName}
-        description="A grounded diagnosis: compatibility, sub-scores and the upgrades that actually raise the score."
+        eyebrow={t('doctor.eyebrow')}
+        title={buildName ?? t('doctor.thisBuild')}
+        description={t('doctor.description')}
         breadcrumbs={[
-          { label: 'Workspace', to: '/' },
-          { label: 'Dashboard', to: '/dashboard' },
-          { label: 'Build Doctor' },
+          { label: t('nav.workspace'), to: '/' },
+          { label: t('nav.dashboard'), to: '/dashboard' },
+          { label: t('doctor.title') },
         ]}
         actions={
           <>
             <Button variant="outline" size="sm" onClick={diagnose} disabled={running || loading}>
-              {running ? <Loader2 className="animate-spin" /> : <RefreshCw />} Re-diagnose
+              {running ? <Loader2 className="animate-spin" /> : <RefreshCw />} {t('doctor.rediagnose')}
             </Button>
             <Button size="sm" onClick={openInBuilder} disabled={!components?.length}>
-              <Wrench /> Open in builder
+              <Wrench /> {t('smartBuilder.openInBuilder')}
             </Button>
           </>
         }
@@ -175,7 +181,7 @@ export default function BuildDoctor() {
           <p className="mt-3 text-sm font-medium">{loadError}</p>
           <Button asChild variant="outline" size="sm" className="mt-4">
             <Link to="/dashboard">
-              <ArrowRight /> Back to the dashboard
+              <ArrowRight /> {t('doctor.backToDashboard')}
             </Link>
           </Button>
         </div>
@@ -196,22 +202,22 @@ export default function BuildDoctor() {
             >
               <div className="flex flex-wrap items-center gap-2">
                 <Badge variant={VERDICT_TONE[report?.verdict ?? 'good'].variant}>
-                  {VERDICT_TONE[report?.verdict ?? 'good'].label}
+                  {t(VERDICT_TONE[report?.verdict ?? 'good'].labelKey)}
                 </Badge>
                 <CompatibilityBadge
                   status={health.compatibility.errors.length ? 'error' : 'ok'}
-                  label={`${health.compatibility.errors.length} errors · ${health.compatibility.warnings.filter((w) => !w.ruleKey.startsWith('missing_')).length} warnings`}
+                  label={`${health.compatibility.errors.length} errors آ· ${health.compatibility.warnings.filter((w) => !w.ruleKey.startsWith('missing_')).length} warnings`}
                 />
                 {!report && running && (
                   <span className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-                    <Loader2 className="size-3 animate-spin" /> Reviewing…
+                    <Loader2 className="size-3 animate-spin" /> {t('doctor.reviewing')}
                   </span>
                 )}
               </div>
 
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {report?.summary ??
-                  'Running the deterministic analyser — the AI review follows if it is available.'}
+                  'Running the deterministic analyser â€” the AI review follows if it is available.'}
               </p>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -264,7 +270,7 @@ export default function BuildDoctor() {
               <div className="mt-3 space-y-2">
                 {upgrades.length === 0 && (
                   <div className="rounded-xl border border-dashed border-border-strong p-6 text-center text-xs text-muted-foreground">
-                    Nothing in the catalogue would raise this build's score within budget.
+                    {t('doctor.noUpgrades')}
                   </div>
                 )}
 
@@ -287,7 +293,7 @@ export default function BuildDoctor() {
                         {upgrade.priceDelta !== 0 && (
                           <span className={upgrade.priceDelta > 0 ? 'text-warning' : 'text-success'}>
                             {' '}
-                            ({upgrade.priceDelta > 0 ? '+' : '−'}
+                            ({upgrade.priceDelta > 0 ? '+' : 'âˆ’'}
                             {formatCurrency(Math.abs(upgrade.priceDelta))})
                           </span>
                         )}

@@ -1,11 +1,14 @@
 /**
  * Gemini configuration discovery.
  *
- * The API key is read only by the dev server (it has no `VITE_` prefix, so Vite
+ * The API key is read only by the server (it has no `VITE_` prefix, so Vite
  * never inlines it). The browser therefore cannot answer "is Gemini
  * configured?" from `import.meta.env` — it asks the server instead:
  *
  *   GET /api/ai/config  →  { gemini: boolean, model?: string }
+ *
+ * That route is a Vercel Serverless Function in production (`api/ai/[...route].ts`)
+ * and a Vite middleware in development — one contract, both environments.
  *
  * Only booleans are returned; no key material ever crosses this boundary. The
  * result is cached for 5 minutes to avoid a request per render.
@@ -44,7 +47,7 @@ function writeCache(config: AIProviderConfig): void {
   }
 }
 
-/** Discover whether the dev server holds a Gemini key. */
+/** Discover whether the server holds a Gemini key. */
 export async function discoverGeminiConfig(force = false): Promise<AIProviderConfig> {
   if (!force) {
     const cached = readCache();

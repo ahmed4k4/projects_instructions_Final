@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import {
   ArrowLeft,
@@ -57,6 +58,7 @@ interface SmartBuildWizardProps {
 
 /** Four-step intake. Animated slide between steps, keyboard friendly. */
 export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuildWizardProps) {
+  const { t } = useTranslation();
   const reduce = useReducedMotion();
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -148,11 +150,14 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
             {steps[visibleStep] === 'Budget & purpose' && (
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="budget">Budget</Label>
+                  <Label htmlFor="budget">{t('smartBuilder.budgetLabel')}</Label>
                   <div className="mt-2 flex flex-wrap items-center gap-3">
                     <div className="relative shrink-0">
-                      <span className="pointer-events-none absolute start-3 top-1/2 -translate-y-1/2 font-mono text-sm text-muted-foreground">
-                        $
+                      <span
+                        dir="ltr"
+                        className="pointer-events-none absolute start-3 top-1/2 -translate-y-1/2 font-mono text-xs text-muted-foreground"
+                      >
+                        {CURRENCY}
                       </span>
                       <Input
                         id="budget"
@@ -173,7 +178,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                       step={50}
                       value={Math.min(5000, Math.max(500, budget))}
                       onChange={(event) => setBudget(Number(event.target.value))}
-                      aria-label="Budget slider"
+                      aria-label={t('smartBuilder.budgetSlider')}
                       className="h-1.5 flex-1 min-w-[140px] cursor-pointer appearance-none rounded-full bg-surface-elevated accent-primary"
                     />
                   </div>
@@ -197,7 +202,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                 </div>
 
                 <div>
-                  <Label>What will you use it for?</Label>
+                  <Label>{t('smartBuilder.purposeTitle')}</Label>
                   <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
                     {USE_CASES.map((item) => {
                       const Icon = USE_CASE_ICONS[item.id];
@@ -222,9 +227,11 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                             )}
                           />
                           <span className="min-w-0">
-                            <span className="block text-xs font-medium">{item.label}</span>
+                            <span className="block text-xs font-medium">
+                              {t(`builder.useCases.${item.id}`)}
+                            </span>
                             <span className="mt-0.5 block text-[10.5px] leading-snug text-muted-foreground">
-                              {item.description}
+                              {t(`builder.useCaseDescriptions.${item.id}`)}
                             </span>
                           </span>
                         </button>
@@ -239,10 +246,8 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
             {steps[visibleStep] === 'Resolution' && (
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-semibold">What are you playing at?</h3>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    This changes how much of the budget the GPU deserves.
-                  </p>
+                  <h3 className="text-sm font-semibold">{t('smartBuilder.resolutionTitle2')}</h3>
+                  <p className="mt-1 text-xs text-muted-foreground">{t('smartBuilder.resolutionHint')}</p>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
                   {RESOLUTIONS.map((item) => {
@@ -262,11 +267,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                       >
                         <span className="block font-mono text-lg font-medium">{item}</span>
                         <span className="mt-1 block text-[10.5px] text-muted-foreground">
-                          {item === '1080p'
-                            ? 'High refresh, esports'
-                            : item === '1440p'
-                              ? 'The sweet spot'
-                              : 'Large 4K panels'}
+                          {t(`smartBuilder.resolution.${item.toLowerCase()}`)}
                         </span>
                       </button>
                     );
@@ -279,8 +280,8 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
             {steps[visibleStep] === 'Preferences' && (
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-semibold">Anything you care about?</h3>
-                  <p className="mt-1 text-xs text-muted-foreground">Optional — pick as many as you like.</p>
+                  <h3 className="text-sm font-semibold">{t('smartBuilder.preferencesTitle2')}</h3>
+                  <p className="mt-1 text-xs text-muted-foreground">{t('smartBuilder.preferencesHint2')}</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {PREFERENCE_CHIPS.map((chip) => {
@@ -311,7 +312,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
             {steps[visibleStep] === 'Final details' && (
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="notes">Anything else?</Label>
+                  <Label htmlFor="notes">{t('smartBuilder.notesLabel')}</Label>
                   <p className="mt-1 text-xs text-muted-foreground">
                     Games you play, software you run, parts you already own.
                   </p>
@@ -319,7 +320,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                     id="notes"
                     value={notes}
                     onChange={(event) => setNotes(event.target.value)}
-                    placeholder="e.g. I mostly play Cyberpunk and CS2, I already have a monitor, I want it to be quiet."
+                    placeholder={t('smartBuilder.notesPlaceholder')}
                     className="mt-2 min-h-28"
                   />
                 </div>
@@ -345,17 +346,17 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
           onClick={() => go(visibleStep - 1)}
           disabled={visibleStep === 0 || busy}
         >
-          <ArrowLeft /> Back
+          <ArrowLeft className="rtl:rotate-180" /> {t('common.back')}
         </Button>
 
         {isLast ? (
           <Button onClick={submit} disabled={busy}>
             {busy ? <Loader2 className="animate-spin" /> : <Sparkles />}
-            {busy ? 'Designing your build…' : 'Generate build'}
+            {busy ? t('smartBuilder.generating') : t('smartBuilder.generate')}
           </Button>
         ) : (
           <Button onClick={() => go(visibleStep + 1)} disabled={busy}>
-            Continue <ArrowRight />
+            {t('common.continue')} <ArrowRight className="rtl:rotate-180" />
           </Button>
         )}
       </div>

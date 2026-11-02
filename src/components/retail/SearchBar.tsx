@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Search, X, Loader2 } from 'lucide-react';
 import { useSuggestions } from '@/hooks/useSearch';
 import { formatCurrency } from '@/lib/utils';
+import { retailerImageUrl } from '@/lib/retailerImage';
 import { RetailerLogo } from '@/components/retail/RetailerLogo';
 import { cn } from '@/lib/utils';
 import type { ProductGroup } from '@/services/searchService';
@@ -176,9 +177,9 @@ export function SearchBar({
                       )}
                     >
                       <span className="grid size-9 shrink-0 place-items-center overflow-hidden rounded-md border border-border bg-surface-elevated">
-                        {group.imageUrl ? (
+                        {retailerImageUrl(group.imageUrl) ? (
                           <img
-                            src={group.imageUrl}
+                            src={retailerImageUrl(group.imageUrl) ?? ''}
                             alt=""
                             loading="lazy"
                             className="size-full object-contain p-0.5"

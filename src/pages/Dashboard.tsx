@@ -27,7 +27,7 @@ export default function Dashboard() {
   // Anonymous users get the same workspace, labelled honestly as local-only.
   const { user, available } = useAuth();
   const isLocal = !user;
-  const displayName = activeName === 'Untitled Build' ? t('builder.untitled') : activeName;
+  const displayName = activeName?.trim() ? activeName : t('builder.untitled');
 
   const averageScore = Math.round(
     myBuilds.reduce((sum, build) => sum + build.buildScore, 0) / Math.max(1, myBuilds.length),

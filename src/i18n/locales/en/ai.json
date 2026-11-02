@@ -19,12 +19,14 @@
       "expired": "Session expired",
       "notConfigured": "AI is not configured",
       "generic": "The advisor could not answer",
-      "rateToast": "Slow down a second"
+      "rateToast": "Slow down a second",
+      "network": "Something went wrong reaching the advisor."
     },
     "translate": "Translate",
     "translating": "Translating…",
     "translated": "Translated",
-    "sourceBadge": "Gemini · live"
+    "sourceBadge": "Gemini · live",
+    "currentBuild": "Current build"
   },
   "smartBuilder": {
     "title": "Describe it. We'll spec it.",
@@ -66,11 +68,23 @@
     "peakDraw": "Peak draw",
     "estFps": "Est. 1440p avg",
     "compatible": "All compatible",
-    "errors": "{{count}} error(s)",
+    "errors": {
+      "empty": "The build came back empty.",
+      "generic": "Build generation failed."
+    },
     "saved": "Build saved",
     "saveFailed": "Could not save the build",
     "loaded": "Loaded into the builder",
-    "loadedHint": "Swap any part — totals and scores update live."
+    "loadedHint": "Swap any part — totals and scores update live.",
+    "purposeTitle": "What will you use it for?",
+    "resolutionTitle2": "What are you playing at?",
+    "preferencesTitle2": "Anything you care about?",
+    "preferencesHint2": "Optional - pick as many as you like.",
+    "emptyPreview": "Your build will appear here",
+    "emptyPreviewBody": "Every part is pulled from the catalogue and verified by the compatibility engine - the advisor cannot invent a component.",
+    "fallbackTitle": "AI unavailable — rule-based build shown",
+    "budgetSlider": "Budget slider",
+    "breadcrumb": "AI Build"
   },
   "thinking": {
     "building": "Building your PC",
@@ -103,7 +117,9 @@
       "good": "Good",
       "needs_work": "Needs work",
       "rebuild": "Rebuild"
-    }
+    },
+    "thisBuild": "This build",
+    "notFound": "That build could not be found."
   },
   "aiStatus": {
     "title": "AI status",

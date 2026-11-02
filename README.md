@@ -62,6 +62,7 @@ a fresh clone. Add the env vars and the same hooks switch to live rows.
 | --- | --- | --- | --- |
 | `VITE_SUPABASE_URL` | `.env.local` | persistence/auth | Supabase project URL |
 | `VITE_SUPABASE_ANON_KEY` | `.env.local` | persistence/auth | Public anon key |
+| `VITE_APP_URL` | `.env.local` | deployment | Public base URL for share links and auth redirects. Leave empty locally; set it to the deployed origin. |
 | `GEMINI_API_KEY` | **Supabase secret** | AI features | Google AI Studio key |
 
 > There is **no** `VITE_GEMINI_API_KEY`. A `VITE_` variable is inlined into the
@@ -110,6 +111,52 @@ a 45 s timeout and one retry with backoff. See
 **[docs/AI_ARCHITECTURE.md](docs/AI_ARCHITECTURE.md)** and
 `supabase/functions/gemini-proxy/README.md`.
 
+## Deployment
+
+This is a **client-side SPA**: `/search`, `/builder/ai` and `/compare/:id` exist
+only in the React router, not as files on disk. A static host must therefore
+serve `index.html` for any path it cannot resolve, or a hard refresh on a
+sub-route returns **404**.
+
+Fallbacks are committed for every common host:
+
+| Host | File | Behaviour |
+| --- | --- | --- |
+| **Vercel** | `vercel.json` | rewrites everything except `/api/*` to `index.html` |
+| **Netlify** | `public/_redirects` | `/*  /index.html  200` (a rewrite, not a redirect) |
+| **Cloudflare Pages** | `public/_routes.json` | SPA rewrite rule |
+| **Apache / cPanel** | `public/.htaccess` | `mod_rewrite` fallback |
+| **GitHub Pages** | — | needs a host-level fallback; prefer one of the above |
+
+`public/` is copied verbatim into `dist/`, so no extra build step is needed.
+
+### Steps
+
+1. **Build**
+   ```bash
+   pnpm build        # -> dist/
+   ```
+2. **Set the public URL** in the host's environment before building, so share
+   links point at the real domain:
+   ```
+   VITE_APP_URL=https://your-domain.com
+   ```
+   This is inlined at build time — a change requires a rebuild.
+3. **Deploy** `dist/` to the host. Publish directory is `dist`, build command
+   `pnpm build`.
+4. **Verify** the fix — open `/search` directly and refresh the page. It must
+   render the app, not a 404:
+   ```bash
+   pnpm verify:spa
+   ```
+
+### Why the 404 happened
+
+Without a rewrite, requesting `/search` asks the host for a file at that path.
+There is none, so the host answers 404 — even though the app handles the route
+perfectly once `index.html` is served. The rewrite maps unknown paths to the
+shell and lets the router take over; the browser keeps the real URL.
+
 ## Scripts
 
 | Script | Description |
@@ -119,6 +166,10 @@ a 45 s timeout and one retry with backoff. See
 | `pnpm preview` | Serve the production build |
 | `pnpm lint` | ESLint (0 errors / 0 warnings expected) |
 | `pnpm format` | Prettier |
+| `pnpm audit:all` | Full gate: types, lint, i18n, RTL, design system, hardcoded strings, build, secrets, SPA routing, dead code, tests |
+| `pnpm verify:spa` | Prove sub-routes survive a hard refresh |
+| `pnpm audit:mobile` | Overflow + 44px tap targets at 375/390/414/768 |
+| `pnpm snapshot:retailers` | Re-scrape retailer prices into the offline snapshot |
 | `pnpm typecheck` | `tsc -p tsconfig.app.json --noEmit` |
 | `pnpm test` | Vitest — engine unit tests |
 | `pnpm test:coverage` | Coverage (80 % gate on the engine folders) |

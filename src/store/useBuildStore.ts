@@ -25,7 +25,9 @@ interface BuildState {
 export const useBuildStore = create<BuildState>()(
   persist(
     immer((set) => ({
-      buildName: 'Untitled Build',
+      // Empty means "not named yet"; the UI shows the translated placeholder so
+      // a build created in English does not keep an English name in Arabic.
+      buildName: '',
       useCase: 'gaming',
       // EGP. The old 1800 was a USD-era default; at the current rate it is about
       // $36 and cannot buy a CPU. 60,000 EGP is a realistic 1440p gaming budget.

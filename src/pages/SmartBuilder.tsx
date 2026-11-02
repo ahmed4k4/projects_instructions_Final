@@ -28,6 +28,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { CATEGORY_MAP } from '@/lib/constants';
 import { formatCurrency, formatWatts } from '@/lib/utils';
 import { buildShareUrl } from '@/lib/share';
+import { absoluteUrl } from '@/lib/appUrl';
 import { EASE_OUT, makeStagger, staggerItem } from '@/lib/motion';
 import { useTranslation } from 'react-i18next';
 
@@ -92,7 +93,7 @@ export default function SmartBuilder() {
         .map((item) => byId.get(item.componentId))
         .filter((c): c is PCComponent => Boolean(c));
 
-      if (components.length === 0) throw new Error('The build came back empty.');
+      if (components.length === 0) throw new Error(t('smartBuilder.errors.empty'));
 
       const items = Object.fromEntries(components.map((c) => [c.category, c]));
       const compatibility = evaluateCompatibility(items, rules);
@@ -111,7 +112,7 @@ export default function SmartBuilder() {
       setPhase('done');
 
       if (response.source === 'fallback') {
-        toast.warning('AI unavailable — rule-based build shown', {
+        toast.warning(t('smartBuilder.fallbackTitle'), {
           description: fallbackNotice(response.degradedReason),
         });
       }
@@ -120,7 +121,7 @@ export default function SmartBuilder() {
         setPhase('idle');
       } else {
         setPhase('error');
-        setError(err instanceof Error ? err.message : 'Build generation failed.');
+        setError(err instanceof Error ? err.message : t('smartBuilder.errors.generic'));
       }
     } finally {
       setBusy(false);
@@ -172,7 +173,7 @@ export default function SmartBuilder() {
         scoreBreakdown: result.score.breakdown,
       });
 
-      await navigator.clipboard.writeText(`${window.location.origin}/b/${saved.slug}`).catch(() => undefined);
+      await navigator.clipboard.writeText(absoluteUrl(`/b/${saved.slug}`)).catch(() => undefined);
       toast.success(t('smartBuilder.saved'), { description: t('builder.share.copiedHint') });
       navigate(`/b/${saved.slug}`);
     } catch (err) {
@@ -198,12 +199,12 @@ export default function SmartBuilder() {
     <div className="container py-8 lg:py-10">
       <PageHeader
         eyebrow="Smart Builder"
-        title="Describe it. We'll spec it."
-        description="Tell us the budget and the workload. The agent searches the live catalogue, checks compatibility and scores every candidate before it answers."
+        title={t('smartBuilder.title')}
+        description={t('smartBuilder.description')}
         breadcrumbs={[
-          { label: 'Workspace', to: '/' },
-          { label: 'Builder', to: '/builder' },
-          { label: 'AI Build' },
+          { label: t('nav.workspace'), to: '/' },
+          { label: t('nav.builder'), to: '/builder' },
+          { label: t('smartBuilder.breadcrumb') },
         ]}
         actions={
           <Button asChild variant="ghost" size="sm">
@@ -238,10 +239,9 @@ export default function SmartBuilder() {
                 <span className="mx-auto grid size-12 place-items-center rounded-xl border border-primary/25 bg-primary/10 text-primary-glow">
                   <Sparkles className="size-5" />
                 </span>
-                <h2 className="mt-4 text-base font-semibold">Your build will appear here</h2>
+                <h2 className="mt-4 text-base font-semibold">{t('smartBuilder.emptyPreview')}</h2>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                  Every part is pulled from the catalogue and verified by the compatibility engine — the
-                  advisor cannot invent a component.
+                  {t('smartBuilder.emptyPreviewBody')}
                 </p>
               </div>
             </div>
@@ -290,8 +290,8 @@ export default function SmartBuilder() {
                   status={result.compatibility.errors.length ? 'error' : 'ok'}
                   label={
                     result.compatibility.errors.length
-                      ? `${result.compatibility.errors.length} error(s)`
-                      : 'All compatible'
+                      ? t('builder.banner.errors', { count: result.compatibility.errors.length })
+                      : t('smartBuilder.compatible')
                   }
                 />
                 {result.compatibility.warnings
@@ -336,7 +336,7 @@ export default function SmartBuilder() {
 
               <motion.div variants={staggerItem} className="flex flex-wrap gap-2 pt-1">
                 <Button onClick={save} disabled={saving}>
-                  <Save /> {saving ? 'Saving…' : 'Save this build'}
+                  <Save /> {saving ? t('smartBuilder.saving') : t('smartBuilder.save')}
                 </Button>
                 <Button variant="secondary" onClick={openInBuilder}>
                   <Check /> Open in builder

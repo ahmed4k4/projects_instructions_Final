@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ShoppingCart, Store, TrendingDown } from 'lucide-react';
+import { ArrowUpRight, ShoppingCart, TrendingDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { RetailerLogo } from './RetailerLogo';
-import { CategoryIcon } from '@/components/domain/CategoryIcon';
+import { CategoryPlaceholder } from './CategoryPlaceholder';
 import { staggerItem } from '@/lib/motion';
+import { retailerImageUrl } from '@/lib/retailerImage';
 import { cn, formatCurrency } from '@/lib/utils';
 import { RETAILERS } from '@/services/retailers/types';
 import type { ProductGroup } from '@/services/searchService';
@@ -23,6 +24,7 @@ import type { ProductGroup } from '@/services/searchService';
 export function SearchResultCard({ group }: { group: ProductGroup }) {
   const { t } = useTranslation();
   const [imageFailed, setImageFailed] = useState(false);
+  const imageUrl = retailerImageUrl(group.imageUrl);
   const best = group.best;
   const extraRetailers = group.retailerIds.length - 1;
 
@@ -42,9 +44,9 @@ export function SearchResultCard({ group }: { group: ProductGroup }) {
         {/* Retailer images are hotlinked from the store CDN; some are blocked.
             A broken <img> leaves an empty box, so a load failure falls back to
             the same placeholder used when there is no image at all. */}
-        {group.imageUrl && !imageFailed ? (
+        {imageUrl && !imageFailed ? (
           <img
-            src={group.imageUrl}
+            src={imageUrl}
             alt=""
             loading="lazy"
             decoding="async"
@@ -52,15 +54,10 @@ export function SearchResultCard({ group }: { group: ProductGroup }) {
             className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.04]"
           />
         ) : (
-          /* The store CDN blocks hotlinking for some retailers, so this is a
-             normal state, not an error: a large ghosted icon reads as "no photo"
-             instead of "something failed". */
-          <div className="flex flex-col items-center gap-1.5 text-muted-foreground/25">
-            {group.category ? (
-              <CategoryIcon category={group.category} size="md" />
-            ) : (
-              <Store className="size-7" />
-            )}
+          // Missing or hotlink-blocked images are a normal state, not an error:
+          // a category illustration fills the frame so the grid stays even.
+          <div className="flex flex-col items-center gap-1.5 text-muted-foreground/40">
+            <CategoryPlaceholder category={group.category} className="size-9" />
             <span className="text-[9px] uppercase tracking-[0.16em]">
               {group.category ? t(`builder.categories.${group.category}`) : t('search.noImage')}
             </span>

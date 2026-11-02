@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Check, Copy, Layers, Pencil, Share2, Zap } from 'lucide-react';
 import { toast } from 'sonner';
@@ -12,17 +13,19 @@ import { ComponentName } from '@/components/shared/ComponentName';
 import { EmptyState } from '@/components/shared/EmptyState';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { CATEGORY_MAP, SCORE_LABELS, USE_CASE_MAP } from '@/lib/constants';
+import { CATEGORY_MAP, USE_CASE_MAP } from '@/lib/constants';
 import { BUILD_ORDER } from '@/lib/navigation';
 import { sampleBuilds, resolveSampleBuild } from '@/lib/sampleData';
 import type { UseCase } from '@/types/build';
 import { formatCurrency, formatSpecValue, formatWatts } from '@/lib/utils';
+import { absoluteUrl } from '@/lib/appUrl';
 import { makeStagger, staggerItem } from '@/lib/motion';
 import { useBuildStore } from '@/store/useBuildStore';
 
 const stagger = makeStagger(0.05, 0.05);
 
 export default function BuildDetail() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const build = sampleBuilds.find((item) => item.slug === slug);
   const hydrate = useBuildStore((state) => state.hydrateFromSelection);
@@ -33,7 +36,7 @@ export default function BuildDetail() {
       <div className="container py-16">
         <EmptyState
           icon={Layers}
-          title="That build page doesn't exist"
+          title={t('buildDetail.notFoundTitle')}
           description={`No saved build matches “${slug}”. It may be private or the link is incomplete.`}
           actionLabel="Browse prebuilt builds"
           onAction={() => window.location.assign('/prebuilt')}
@@ -44,16 +47,18 @@ export default function BuildDetail() {
 
   const components = resolveSampleBuild(build);
   const useCase = USE_CASE_MAP[build.useCase as UseCase];
-  const shareUrl = `${window.location.origin}/b/${build.slug}`;
+  // `absoluteUrl` honours VITE_APP_URL, so a link copied on staging points at
+  // the configured public address rather than the preview host.
+  const shareUrl = absoluteUrl(`/b/${build.slug}`);
 
   const copyShareLink = async () => {
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-      toast.success('Share link copied', { description: shareUrl });
+      toast.success(t('builder.share.copied'), { description: shareUrl });
     } catch {
-      toast.error('Could not copy the link', { description: 'Your browser blocked clipboard access.' });
+      toast.error(t('builder.share.copyFailed'));
     }
   };
 
@@ -64,14 +69,14 @@ export default function BuildDetail() {
         title={build.name}
         description={build.description}
         breadcrumbs={[
-          { label: 'Workspace', to: '/' },
-          { label: 'Builds', to: '/prebuilt' },
+          { label: t('nav.workspace'), to: '/' },
+          { label: t('nav.prebuilt'), to: '/prebuilt' },
           { label: build.name },
         ]}
         actions={
           <>
             <Button variant="outline" size="sm" onClick={copyShareLink}>
-              {copied ? <Check /> : <Copy />} {copied ? 'Copied' : 'Copy share link'}
+              {copied ? <Check /> : <Copy />} {copied ? t('buildDetail.copied') : t('buildDetail.copyLink')}
             </Button>
             <Button
               size="sm"
@@ -80,8 +85,8 @@ export default function BuildDetail() {
                   Object.fromEntries(components.map((component) => [component.category, component])),
                   build.name,
                 );
-                toast.success('Loaded into the builder', {
-                  description: 'Swap any part and totals update live.',
+                toast.success(t('buildDetail.loaded'), {
+                  description: t('buildDetail.loadedHint'),
                 });
                 window.location.assign('/builder');
               }}
@@ -138,8 +143,10 @@ export default function BuildDetail() {
           <Card className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Overall</p>
-                <p className="mt-1 text-sm font-semibold">Build score</p>
+                <p className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                  {t('buildDetail.overall')}
+                </p>
+                <p className="mt-1 text-sm font-semibold">{t('buildDetail.scoreTitle')}</p>
               </div>
               <BuildScoreRing score={build.buildScore} size={88} strokeWidth={6} />
             </div>
@@ -148,7 +155,7 @@ export default function BuildDetail() {
               {Object.entries(build.scoreBreakdown).map(([key, value]) => (
                 <div key={key}>
                   <div className="flex items-center justify-between text-[11.5px]">
-                    <dt className="text-muted-foreground">{SCORE_LABELS[key] ?? key}</dt>
+                    <dt className="text-muted-foreground">{t(`builder.buildScore.labels.${key}`, key)}</dt>
                     <dd className="font-mono">{value}</dd>
                   </div>
                   <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-surface-elevated">
@@ -168,11 +175,11 @@ export default function BuildDetail() {
             <p className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Totals</p>
             <div className="mt-3 space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">Price</span>
+                <span className="text-xs text-muted-foreground">{t('buildDetail.priceLabel')}</span>
                 <PriceTag value={build.totalPrice} size="sm" />
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">Peak draw</span>
+                <span className="text-xs text-muted-foreground">{t('buildDetail.draw')}</span>
                 <span className="flex items-center gap-1 font-mono text-xs">
                   <Zap className="size-3 text-warning" /> {formatWatts(build.totalPowerWatts)}
                 </span>
@@ -182,7 +189,7 @@ export default function BuildDetail() {
                 <span className="font-mono text-xs">{components.length}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">Est. build time</span>
+                <span className="text-xs text-muted-foreground">{t('buildDetail.timeLabel')}</span>
                 <span className="font-mono text-xs">~2 h</span>
               </div>
             </div>

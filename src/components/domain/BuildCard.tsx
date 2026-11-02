@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Cpu, Star, Zap } from 'lucide-react';
 import type { SampleBuild } from '@/lib/sampleData';
@@ -17,6 +18,7 @@ interface BuildCardProps {
 
 /** Shared card for prebuilt + dashboard + community grids. */
 export function BuildCard({ build, rating, className }: BuildCardProps) {
+  const { t } = useTranslation();
   const useCase = USE_CASE_MAP[build.useCase as UseCase];
   const gpuId = build.componentIds.find((id) => id.startsWith('gpu-'));
   const cpuId = build.componentIds.find((id) => id.startsWith('cpu-'));
@@ -73,7 +75,7 @@ export function BuildCard({ build, rating, className }: BuildCardProps) {
               score={build.buildScore}
               size={56}
               strokeWidth={5}
-              label="Build score"
+              label={t('builder.buildScore.label')}
               className="shrink-0"
             />
           </div>

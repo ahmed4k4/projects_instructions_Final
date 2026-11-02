@@ -36,7 +36,8 @@
     "partsOne": "{{count}} part",
     "copy": "Copy",
     "live": "Live",
-    "error": "Unknown error"
+    "error": "Unknown error",
+    "assistantTyping": "Assistant is typing"
   },
   "theme": {
     "dark": "Dark",
@@ -61,12 +62,14 @@
     "engine": "Deterministic engines · Gemini agent"
   },
   "errors": {
-    "generic": "Something went wrong.",
-    "network": "Could not reach the server. Check your connection.",
-    "notFound": "That page does not exist.",
     "boundaryTitle": "Something shorted out",
     "boundaryBody": "An unexpected error interrupted rendering. Your saved build is safe in local storage.",
-    "reload": "Reload Nexus"
+    "reload": "Reload Nexus",
+    "signInToSave": "Sign in to save builds.",
+    "saveFailed": "Could not save the build: {{detail}}",
+    "unknown": "unknown error",
+    "publishFailed": "Could not publish: {{detail}}",
+    "alertFailed": "Could not create the alert: {{detail}}"
   },
   "retail": {
     "compareTitle": "Compare prices",
@@ -87,7 +90,7 @@
   },
   "search": {
     "title": "Search every Egyptian retailer",
-    "subtitle": "One search across Elbadr, Elnekhely and Alfrensia — with the cheapest EGP price for every part.",
+    "subtitle": "One search across Elbadr, Elnekhely, Alfrensia and Sigma — with the cheapest EGP price for every part.",
     "placeholder": "Search RTX 5070, Ryzen 7, B650…",
     "search": "Search",
     "clear": "Clear search",
@@ -145,7 +148,8 @@
     "updatedDays_one": "{{count}} d ago",
     "updatedDays_other": "{{count}} d ago",
     "noImage": "No photo",
-    "lowestPrice": "Lowest recorded price"
+    "lowestPrice": "Lowest recorded price",
+    "sigmaPending": "Pending"
   },
   "compare": {
     "title": "Compare prices",
@@ -163,5 +167,11 @@
     "open": "Open",
     "backToSearch": "Back to search",
     "notFound": "That comparison link is no longer valid."
+  },
+  "asset": {
+    "sceneUnavailable": "3D preview unavailable on this device"
+  },
+  "auth": {
+    "noSupabase": "Sign-in is unavailable: Supabase is not configured."
   }
 }

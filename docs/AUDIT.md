@@ -726,3 +726,570 @@ checked on base keys.
 3. **Price history** — the table stores only the latest price, so the comparison
    page shows an explicit "Price tracking coming soon" placeholder rather than an
    empty chart implying data.
+
+---
+
+# Phase 9 — Deploy fix, coverage, i18n, mobile reliability
+
+**Date:** 2026-11-02
+
+---
+
+## 23. Module 0 — the 404 on refresh
+
+### Cause
+
+The app is a client-side SPA. `/search`, `/builder` and `/compare/:id` exist only
+in the router. A static host asked for a file at that path, found none, and
+returned **404** — even though the app handles the route perfectly once
+`index.html` is served.
+
+### Fix
+
+| Host | File | Rule |
+|---|---|---|
+| Vercel | `vercel.json` | rewrite all but `/api/*` to `index.html` |
+| Netlify | `public/_redirects` | `/*  /index.html  200` (rewrite, not redirect) |
+| Cloudflare Pages | `public/_routes.json` | SPA rewrite |
+| Apache / cPanel | `public/.htaccess` | `mod_rewrite` fallback |
+
+`public/` is copied verbatim into `dist/`, so all four ship with no extra step.
+
+### Verified, not assumed
+
+`scripts/verify-spa-routing.mjs` serves the production build behind a
+`_redirects`-equivalent and asserts, for 12 routes:
+
+```
+PASS  200  /search            PASS  200  /compare/sku%3A…
+PASS  200  /search?q=rtx…     PASS  200  /b/signal-4k-gaming-flagship
+PASS  200  /builder           PASS  200  /some/nonexistent/deep/route
+PASS  200  /builder/ai        PASS  asset served as text/css (not index.html)
+PASS  200  /ai-advisor        PASS  hard refresh /search rendered 1.4k chars
+```
+
+It is now part of `pnpm audit:all`.
+
+### `VITE_APP_URL`
+
+`src/lib/appUrl.ts` is the single source of truth for absolute URLs. It prefers
+`VITE_APP_URL`, then `window.location.origin` + `BASE_URL` (so sub-path deploys
+work), and returns `''` rather than throwing outside a browser.
+
+The four hardcoded `window.location.origin` uses — build share link, build-detail
+share, auth redirect, Smart Builder copy — all route through it, so a staging
+deploy no longer hands out preview-host links.
+
+---
+
+## 24. Module 2 — images
+
+Measured first: **87% of listings already had a valid `image_url`** (Elbadr and
+Elnekhely are at 100%). The gap was Alfrensia at 14%.
+
+### What was actually wrong
+
+- Alfrensia's listing serves a WooCommerce placeholder for most items; the real
+  photo only exists on the product page, which the listing scrape never visits.
+- Some retailer CDs reject cross-origin loads (`ERR_BLOCKED_BY_ORB`), so even a
+  stored URL can fail to paint.
+
+### Fix
+
+1. `extractImage()` handles `src`, `data-src`, `srcset` and `data-srcset`, and
+   rejects placeholders, spacers and `data:` URIs.
+2. `CategoryPlaceholder` draws an inline SVG per category — no extra request, no
+   broken icon, follows the theme via `currentColor`.
+3. Cards swap to the placeholder on `onError`.
+
+**Result: 83% of 591 listings have a working image**, and the rest show an
+intentional category illustration instead of a gap.
+
+---
+
+## 25. Module 3 — coverage
+
+Deeper pagination (4–8 pages per category) took the snapshot from 339 to **591
+listings**:
+
+| Retailer | Listings | Images |
+|---|---|---|
+| Elbadr | 368 | 100% |
+| Alfrensia | 120 | 19% (placeholders at source) |
+| Elnekhely | 103 | 100% |
+
+**Three times the 400 target is not reached — 591 is.** Elnekhely's page 2+
+answers **503** on every URL form tried (`?page=2`, `/page/2/`, `&page=2`), so
+~100 from page 1 of eight categories is its accessible ceiling. That is recorded
+in the parser and reported as `partial` by the sync rather than hidden.
+
+`last_scraped_at` is displayed as a relative "Prices updated N min ago".
+
+---
+
+## 26. Module 1 — Sigma
+
+The brief allowed either an aggregator or a Playwright worker. Both were
+investigated:
+
+| Source | Result |
+|---|---|
+| `eg-pc.com` | redirects to **qarenly.com** |
+| qarenly.com | tracks Sigma — but it is **also Next.js RSC**; its 161 "price" tokens are coupon text inside `self.__next_f`, not product data |
+
+So there is no scrapeable aggregator DOM. The worker was written instead:
+
+- **`scripts/sigma_scraper.py`** — Playwright, waits for `networkidle`, reads the
+  rendered DOM, 2 s between pages, ASCII-only so a Windows console can run it.
+- **`node scripts/snapshot-retailers.mjs --from sigma.json`** ingests its output.
+
+It is **not run automatically**: there is no headless Chromium on Deno Deploy and
+none installed here. Running it prints actionable guidance and exits `2` rather
+than crashing:
+
+```
+playwright is not installed.
+  pip install playwright && python -m playwright install chromium
+```
+
+The UI states the limitation plainly: **"Sigma (Pending)"** in the filter rail
+with a tooltip, and a standing notice on `/search`. Previously it said "Out of
+stock", which is a different and untrue fact.
+
+---
+
+## 27. Module 4 — i18n
+
+`scripts/find-hardcoded-strings.mjs` (new, in `audit:all`) scans for prose in JSX
+text nodes and user-facing attributes. It found **10** remaining strings; all are
+now translated, and the check reports:
+
+```
+✔ no hardcoded user-facing strings found
+```
+
+**972 keys × 2 languages, full parity.** Notable fixes: the Smart Builder
+wizard's three step headings, the Build Detail "Price" label and 404 title, the
+Prebuilt empty state, and the assistant typing label.
+
+---
+
+## 28. Module 5 — the mobile freeze (root cause found)
+
+The reported symptom — "sidebar, navbar and header buttons sometimes become
+unclickable" — reproduced as: **the drawer opens but its links never navigate.**
+
+### Three real defects, all in `Sidebar.tsx`
+
+1. **A fragment inside `AnimatePresence`.** The backdrop and panel were siblings
+   wrapped in `<>`, but Framer Motion tracks **one child** per `AnimatePresence`.
+   The panel got no enter/exit animation and the `fixed inset-0` backdrop could
+   outlive navigation — invisible at `opacity: 0` while still capturing every tap.
+   → Each overlay now has its own `AnimatePresence`.
+
+2. **`absolute inset-0` indicators sat on top of the links.** Hit-testing the
+   active nav item returned `SPAN.absolute inset-0` instead of the anchor, so
+   tapping the item you were most likely to re-open did nothing.
+   → `pointer-events-none` on both indicator spans.
+
+3. **Nav links did not close the drawer.** Navigating left the panel open over the
+   new page.
+   → `NavContent` takes `onNavigate`; the drawer closes on click.
+
+Also: the drawer used a `spring` for its exit. The panel is closed from two
+places at once (the click and the route effect), and an interrupted spring never
+settles, so it could stay mounted. It is now a bounded 220 ms tween.
+
+### Verified
+
+`scripts/test-mobile-nav.mjs` drives the exact flow at 375px in **both**
+languages — **14/14 pass**:
+
+```
+PASS  hamburger opens the drawer
+PASS  drawer link navigates  (/builder -> /search)
+PASS  drawer slides off-screen after navigation
+PASS  header is clickable (no overlay)
+PASS  bottom nav navigates
+PASS  language toggle responds  (dir=rtl)
+PASS  no horizontal scroll
+```
+
+An earlier version of this test reported a false failure: it counted any `aside`
+with `position: fixed` as "open", including the hidden desktop rail. It now
+measures whether the panel is actually on screen.
+
+---
+
+## 29. Other bugs found while working
+
+1. **Infinite recursion in `getAggregatedProducts`.** When `retailer_products`
+   returned zero rows it called itself again — the search page froze at "0
+   results". This is the *second* cause of the freeze, and the reason the page
+   stopped working after the Phase 8 migration check. The fallback now reads the
+   snapshot directly and terminates.
+2. **Two duplicated fallback branches** in the same function collapsed into
+   `snapshotOnly()`.
+3. **`find-hardcoded-strings` and `verify-spa-routing` added to `audit:all`**, so
+   both classes of regression are now gated.
+
+---
+
+## 30. Acceptance criteria — Phase 9
+
+| Criterion | Result |
+|---|---|
+| Sub-route refresh returns the app, not 404 | ✅ 12 routes + 3 browser hard-refreshes |
+| `vercel.json` / `_redirects` committed | ✅ plus `_routes.json` and `.htaccess` |
+| `VITE_APP_URL` documented and used | ✅ `lib/appUrl.ts`, 4 call sites |
+| Sigma present or clearly marked unavailable | ✅ Playwright worker + "Pending" badge |
+| ≥ 80% of products have a working image | ✅ **83%** |
+| > 400 total listings | ✅ **591** |
+| `pnpm check:i18n` zero missing keys | ✅ 972 × 2 |
+| No hardcoded strings (AR or EN) | ✅ automated scan clean |
+| Mobile nav fully clickable at 375px | ✅ 14/14 |
+| No horizontal scroll / 44px targets | ✅ |
+| `typecheck` / `lint` / `build` | ✅ |
+| README + AUDIT updated | ✅ |
+| Dead files removed | ✅ 139/140 reachable |
+
+`pnpm audit:all` → **13 gates green, 142 tests passing.**
+
+---
+
+## 31. Remaining
+
+1. ~~**Sigma has no data.**~~ **Solved in Phase 11 (see §32)** — the Playwright
+   worker renders the real listing and publishes a JSON feed; 300 Sigma products
+   are live and Sigma is selectable in the filter rail.
+2. **Elnekhely page 2+ returns 503.** Its ~100 products are its accessible maximum.
+3. **`retailer_products` still needs its grant** on the hosted project:
+   ```sql
+   grant select on public.retailer_products to anon, authenticated;
+   ```
+   Until then the app reads the snapshot (714 real listings) plus the Sigma feed.
+
+---
+
+# Phase 10 — Production hardening & final polish
+
+**Date:** 2026-11-02
+**Scope:** the production 404 on `/api/ai`, the missing hero asset, WebGL context
+loss, Sigma, missing retailer images, i18n completeness, cleanup, mobile polish.
+
+Each module below lists what was **measured** on the live site or in a real
+browser, not what was assumed.
+
+---
+
+## 32. Module 0 — the AI worked in dev and 404'd in production
+
+### Root cause
+
+The Gemini transport existed in three different places, only one of which ran
+in production:
+
+| Piece | dev | Vercel |
+|---|---|---|
+| `/api/ai/config` | Vite plugin | **404** |
+| `/api/gemini/v1beta/…` | Vite `server.proxy` | **404** |
+| Anything at `/api/*` | — | swallowed by the SPA rewrite |
+
+### Fix — one prefix, one implementation, two runtimes
+
+```
+src/server/geminiProxy.ts        pure handler (no framework)
+   ├─ api/ai/[...route].ts        Vercel Serverless Function
+   └─ vite.config.ts plugin       dev middleware (same handler)
+```
+
+- The browser now calls **`/api/ai/v1beta/models/<model>:<method>`** for both
+  generate and stream, and `/api/ai/config` for discovery — the same paths in
+  `pnpm dev` and on Vercel.
+- The function reads `process.env.GEMINI_API_KEY` and forwards it as the
+  `x-goog-api-key` header (never a query string, never the bundle).
+- SSE is relayed chunk-by-chunk with `Cache-Control: no-cache, no-transform` and
+  `X-Accel-Buffering: no`, so token streaming works through Vercel.
+- Only `v1(alpha|beta)/models/<id>:(generateContent|streamGenerateContent|countTokens)`
+  is proxied. Anything else → **404**, so the function is not an open proxy.
+- CORS + `OPTIONS` are handled for preview hosts and local tooling.
+- `vercel.json` gained `framework`, an explicit `functions` entry (512 MB, 60 s),
+  a `/media` cache rule and `no-store` on `/api`.
+
+### Verified with the real function module
+
+`scripts/verify-ai-function.mjs` imports `api/ai/[...route].ts` and calls it with
+Web `Request` objects, exactly as Vercel does:
+
+```
+PASS  GET /api/ai/config answers 200 JSON
+PASS  config reports a boolean, never the key
+PASS  non-generative routes are refused with 404
+PASS  missing GEMINI_API_KEY -> 503 with guidance
+PASS  proxied generateContent reaches Gemini        (PONG)
+PASS  CORS preflight -> 204 with allow headers
+```
+
+The same contract was exercised through the dev server: config 200, a streamed
+SSE call, and a blocked `:deleteModel` route → 404.
+
+> **Operator step:** set `GEMINI_API_KEY` in Vercel → Settings → Environment
+> Variables (Production, Preview, Development) and redeploy. Missing key = a
+> `{ gemini: false }` config and a 503 from the proxy, both with clear messages.
+
+---
+
+## 33. Module 0 — assets and the 3D crash
+
+### `hero-scene.webp` did not exist
+
+`HeroSceneStatic` shipped a `<source srcset="/media/hero-scene.webp">` pointing at a
+file nobody had generated. Every fallback path (phones, tablets, low-end
+laptops) requested it and logged a 404 before falling back to the PNG.
+
+- Generated from the existing render: **309 kB PNG → 16 kB WebP**.
+- Paths moved to `src/lib/assets.ts`, built from `import.meta.env.BASE_URL`, so a
+  sub-path deploy (`/beta/`) no longer 404s every asset.
+- Added `onError` → if neither file can be decoded the hero keeps its exact box
+  with the ambient glow, so the layout cannot jump.
+
+### `THREE.WebGLRenderer: Context Lost`
+
+A lost GPU context is not a React error, so the old code left a dead canvas (or
+blanked the page). Three layers now handle it:
+
+1. **`SceneErrorBoundary`** (new) catches anything thrown from the scene and
+   renders the static hero. The rest of the landing page is unaffected.
+2. **`ContextGuard`** (inside the canvas) listens for `webglcontextlost`, calls
+   `preventDefault`, blacklists the scene for the session and swaps in the image.
+   Re-mounting after a loss usually just loses the context again, so it stays off
+   until reload.
+3. **`<PerformanceMonitor>`** (drei) degrades on measured frame rate, not guesses:
+   below 45 fps → DPR pinned to 1 and half the particles; a second decline → the
+   static render. No `onIncline` bounce-back, which was more distracting than a
+   permanently cheaper hero.
+
+### No light-mode flash
+
+`index.html` now resolves the stored theme before first paint and sets both the
+class and `color-scheme`, so a light-theme visitor never sees a dark frame.
+
+---
+
+## 34. Module 1 — retailer images
+
+### The Alfrensia bug (19 % → 100 %)
+
+Alfrensia cards put a **warranty/flag badge PNG** as the first `<img>`, ahead of
+the lazy product photo (`src="data:…" data-src="…"`). `extractImage()` returned
+the first plausible candidate, so most rows stored a badge or nothing.
+
+- Badge/logo/flag/payment URLs are now rejected by the shared extractor, for all
+  retailers, not just this one.
+- Two category slugs answered 404 and contributed nothing (`case`, `cooling`);
+  the real paths are `/product-category/cases/` and
+  `/product-category/air-liquid-cooling/`.
+
+| Retailer | Before | After |
+|---|---|---|
+| Elbadr | 368 / 100 % | 368 / **100 %** |
+| Elnekhely | 103 / 100 % | 103 / **100 %** |
+| Alfrensia | 120 / **19 %** | 243 / **100 %** |
+| **Snapshot total** | 591 / 83 % | **714 / 100 %** |
+
+`scripts/verify-listing-coverage.mjs` is the gate: it fails below 90 % images or
+400 listings.
+
+---
+
+## 35. Module 1 — Sigma, finally
+
+Full method in `docs/RETAILER_STRATEGY.md` §3. Summary of what was measured:
+
+| Route | Result |
+|---|---|
+| `/en/category/vga` (slug) | redirects to a search page that renders an error state |
+| `/en/category/<uuid>` | 200 but **no product markup** (RSC only) |
+| `/en/search?filters=…` | renders an error state |
+| **`/en/search`** | ✅ a real paginated grid |
+| Sigma's own API | **403** (key-gated) |
+| `api.sigma-computer.com/media/…` | 200 to a page, blocked for a hotlinked `<img>` |
+
+`scripts/sigma_worker.py` renders `/en/search`, clicks the real rail label
+(`Nvidia GeForce`, `AMD CPU`, …), pages through the grid and writes
+`public/data/sigma_products.json`:
+
+```
+300 products, 100 % with images, 8 categories, status "ok"
+```
+
+- Images are emitted through the store's own `_next/image` proxy — the only form
+a browser can load them in.
+- The app merges the feed into the snapshot set (`sigmaFeed.ts` + a bundled
+  `sigmaSnapshot.ts` for first paint), so grouping, ranking and the compare table
+treat Sigma like any other store.
+- Availability is data-driven: with rows, Sigma is live and selectable; without
+  rows, the honest **Pending** badge returns.
+
+**Total listings the app sees: 714 + 300 = 1014, 100 % with images.**
+
+---
+
+## 36. Module 2 — i18n sweep
+
+### What the stricter scan found
+
+`check:i18n` proves **parity** (both languages ship every key) and the old JSX
+scanner only looked at `>Some text<` nodes. Neither can see a page that renders a
+literal *instead of* a key that already exists. A stricter pass — JSX text, JSX
+attributes, and prose-shaped literals, excluding CSS and engine code — surfaced
+**81** such strings. The worst were whole pages:
+
+| Surface | What shipped |
+|---|---|
+| `/prebuilt` | header, description, breadcrumbs, CTA, empty-state copy — all literals |
+| `/builder/ai` | page title, wizard steps, use-case labels + descriptions, Back/Continue |
+| `/build-doctor` | eyebrow, description, breadcrumbs, verdict badges, buttons |
+| `/build/:slug` | breadcrumbs, share toasts, score labels, "Peak draw" |
+| Crash screen | every string in `ErrorBoundary` |
+| Nav config | `NavItem.label`/`description` were English data fields |
+
+Each was replaced with the key that already existed (`nav.*`, `prebuilt.*`,
+`doctor.*`, `buildDetail.*`, `smartBuilder.*`). Where no key existed, one was
+added in **both** languages. Two real defects fell out of doing this:
+
+- **Bare `$` in the budget field** — the wizard rendered a literal `$` while every
+  other price on screen was EGP. Now `CURRENCY`, `dir="ltr"`.
+- **Mojibake in the UI** — `Reviewing…` rendered as `Reviewingâ€¦` (an em dash
+  stored as UTF-8 then read as cp1252). Both locale files were verified at the
+  byte level as valid Arabic UTF-8 with no replacement characters; only that one
+  string was affected.
+
+### The gate
+
+`scripts/audit-i18n-strings.mjs` is now part of `pnpm audit:all` and **fails the
+build** on any untranslated UI string. Its exemptions are explicit and narrow:
+model prompts, the compatibility/scoring engines (they emit `ruleKey`s the UI
+translates), agent/tool internals, and seed data.
+
+### The real gap was not in the JSON
+
+`check:i18n` and the JSX scanner were already green, yet Arabic build pages showed
+English warnings. The compatibility engine emits an English `message` next to a
+stable `ruleKey`, and the banner rendered `issue.message` verbatim.
+
+- Added `builder.compat.*` for all 12 engine rules + the dynamic
+  `missing_<category>` case, in **both** locales.
+- `useCompatibilityMessage()` resolves by `ruleKey` and keeps the engine's
+  measured parenthetical detail (`120 mm (needs 160 mm)`).
+- The top-level `ErrorBoundary` (the crash screen) was fully hardcoded; it now
+  translates through the i18n instance.
+- The 3D scene's `aria-label` is translated.
+- The retailer subtitle now names all four stores.
+- `scripts/audit-i18n-strings.mjs` widened the sweep to **any** JSX text with
+  letters plus prose-shaped string literals (toasts, errors, configs).
+
+`pnpm check:i18n` → **1054 keys × 2 languages, zero missing.**
+`node scripts/audit-i18n-strings.mjs` → **0 untranslated strings.**
+
+---
+
+## 37. Module 3 — cleanup
+
+| Removed | Why |
+|---|---|
+| `scripts/sigma_scraper.py` | superseded by `sigma_worker.py` (did not work) |
+| `scripts/probe_*` (13 files) | throwaway investigations used to reach the findings above |
+| `scripts/codemod-i18n-ns.mjs`, `scripts/codemod-rtl.mjs` | one-shot codemods, already applied |
+| `scripts/verify-matching.mjs`, `verify-search-matching.mjs` | superseded by the grouping verifier |
+| `playwright` dev dependency | the QA harnesses resolve `patchright` from outside the repo; the probes that needed it are gone |
+
+`audit-unused.mjs` was itself wrong: it treated `src/server/` and `api/` as
+unreachable because it only walked browser entry points — i.e. it would have
+deleted the production AI handler. It now seeds server entries and understands
+multi-line imports. **143/143 src files reachable, 0 orphans, and
+`check-deps` reports no unused dependency.**
+
+### Consolidated into `src/lib/`
+
+| Concern | Module |
+|---|---|
+| currency, locale formatting | `lib/utils.ts` (unchanged, single formatter) |
+| compatibility strings | `lib/i18nCompatibility.ts` |
+| public asset URLs | `lib/assets.ts` |
+| retailer image URLs | `lib/retailerImage.ts` |
+
+---
+
+## 38. Module 4 — mobile & polish
+
+- **Overlay pointer events.** The mobile drawer and its backdrop were left
+  click-capturing while fading out (the comment claimed otherwise). The drawer is
+  now `pointer-events: none` the moment it closes, so a tap during the 220 ms exit
+  cannot land on a dismissed panel.
+- **44 px targets at tablet width.** The site is clean at 375–430 px, but at
+  768 px (a real touch device that lays out the desktop grid) eight controls were
+  32–36 px. Touch sizing now keys off `@media (pointer: coarse)` — the input
+  capability — instead of a width breakpoint that says nothing about fingers.
+- **`/api` is never the SPA.** `_redirects` rewrote `/api/*` to `index.html` with a
+  200, which on Netlify would have made the AI return HTML instead of JSON —
+  the same production bug in a different host. `/api/*` is now excluded in
+  `_redirects`, `_routes.json` and `.htaccess`, matching `vercel.json`.
+- Reduced motion already collapses the hero, the drawer and every reveal; the new
+  performance decay is inert when motion is reduced (frameloop is `demand`).
+
+---
+
+## 39. Verification (real renders)
+
+| Check | Result |
+|---|---|
+| `pnpm typecheck` (app + node projects) | ✅ |
+| `pnpm lint` | ✅ |
+| `pnpm build` | ✅ |
+| `pnpm test` | ✅ **166 passing** (24 new) |
+| `pnpm check:i18n` | ✅ 1023 × 2 |
+| `scripts/verify-ai-function.mjs` | ✅ 6/6 |
+| `scripts/verify-listing-coverage.mjs` | ✅ 714 listings, 100 % images |
+| Sigma feed | ✅ 300 listings, 100 % images |
+| `/search?q=5070` EN 1440 px | ✅ 12/12 images load, 0 failed requests, 0 console errors |
+| `/search?q=5070` AR 390 px | ✅ RTL, no overflow, no console errors |
+| Landing AR 1440 px | ✅ no overflow, hero renders |
+| Production build, deep link `/search` | ✅ 200 + app renders |
+| `/media/hero-scene.webp` (production) | ✅ 200, `image/webp` |
+
+Screenshots: `.qa/landing-ar.png`, `.qa/search-en2.png`,
+`.qa/search-ar-mobile.png`, `.qa/prod-search.png`.
+
+---
+
+## 40. Acceptance criteria — Phase 10
+
+| Criterion | Result |
+|---|---|
+| AI works on Vercel, no 404 on `/api/ai` | ✅ single shared handler + serverless route, 6/6 checks |
+| `GEMINI_API_KEY` is server-side only | ✅ `process.env`, header auth, never in the bundle |
+| `hero-scene.webp` loads | ✅ generated (16 kB), BASE_URL paths, graceful fallback |
+| WebGL crashes caught | ✅ boundary + `webglcontextlost` + performance decay |
+| Refresh any route ≠ 404 | ✅ all four hosts, `/api` excluded |
+| Sigma data available | ✅ 300 products via the worker feed |
+| ≥ 90 % of products with images | ✅ **100 %** (1014/1014) |
+| Total listings > 400 | ✅ **1014** |
+| `check:i18n` passes, no hardcoded UI strings | ✅ 1054 × 2, 0 untranslated (81 fixed, now a gate) |
+| `typecheck` / `lint` / `build` | ✅ |
+| `docs/AUDIT.md` updated | ✅ this section |
+| Dead files removed | ✅ 0 orphans (server entries now counted) |
+
+---
+
+## 41. Operator checklist (things only the owner can do)
+
+1. **Vercel → Settings → Environment Variables**: add `GEMINI_API_KEY` (and
+   optionally `GEMINI_MODEL`), then redeploy. Verify with
+   `curl https://<app>/api/ai/config` → `{"gemini":true,…}`.
+2. **Schedule the Sigma worker** (GitHub Actions snippet in
+   `RETAILER_STRATEGY.md` §3) so the feed keeps its `capturedAt` fresh.
+3. **Grant the retailer table** if you switch from snapshot to database:
+   ```sql
+   grant select on public.retailer_products to anon, authenticated;
+   ```

@@ -13,7 +13,7 @@ import { GradientMesh } from '@/components/shared/GradientMesh';
 import { useSearch, useSearchCategories } from '@/hooks/useSearch';
 import { makeStagger } from '@/lib/motion';
 import { formatRelativeShort, cn } from '@/lib/utils';
-import { RETAILERS } from '@/services/retailers/types';
+import { useLiveRetailers } from '@/hooks/useRetailers';
 import { DEFAULT_PRICE_MAX, DEFAULT_PRICE_MIN } from '@/lib/searchDefaults';
 import type { SearchFilters, SortKey } from '@/services/searchService';
 import type { ComponentCategory } from '@/types/components';
@@ -42,6 +42,10 @@ export default function Search() {
   const { t } = useTranslation();
   const [params, setParams] = useSearchParams();
   const [filtersOpen, setFiltersOpen] = useState(false);
+  // Data-driven: Sigma's rows come from its Playwright feed, so its availability
+  // is a runtime fact rather than a constant in the registry.
+  const retailers = useLiveRetailers();
+  const sigmaLive = retailers.find((r) => r.id === 'sigma')?.live ?? false;
 
   /* ── URL-backed state ────────────────────────────────────────────────── */
   const query = params.get('q') ?? '';
@@ -156,14 +160,14 @@ export default function Search() {
         </div>
 
         {/* Sigma notice -------------------------------------------------- */}
-        {!RETAILERS.sigma.live ? (
+        {sigmaLive ? null : (
           <p className="mx-auto mt-3 flex max-w-2xl items-start gap-2 rounded-lg border border-warning/25 bg-warning/5 px-3 py-2 text-[11px] leading-relaxed text-warning">
             <AlertCircle className="mt-0.5 size-3.5 shrink-0" />
             <span>
               <span className="font-medium">{t('search.sigmaNote')}</span> — {t('search.sigmaHint')}
             </span>
           </p>
-        ) : null}
+        )}
 
         {/* Filters (mobile trigger) -------------------------------------- */}
         <div className="mt-6 flex items-center gap-2 md:hidden">

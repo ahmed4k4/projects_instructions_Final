@@ -1,0 +1,4 @@
+{
+  "_comment": "SPA fallback for Cloudflare Pages and any host that understands the SPA convention. The lookahead keeps /api/* (the serverless Gemini proxy) and real files out of the rewrite — every hosting target in this repo uses the same rule as vercel.json.",
+  "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }]
+}

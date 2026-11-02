@@ -59,7 +59,9 @@
     "ctaTitle": "Nothing quite fits?",
     "ctaBody": "Give the advisor your budget and workload — it drafts a list you can edit part by part.",
     "ctaAction": "Generate a build",
-    "viewBuild": "View build"
+    "viewBuild": "View build",
+    "subtitle": "Configurations that ship unchanged",
+    "emptyCategory": "No configuration in this category yet"
   },
   "community": {
     "title": "What everyone else is running",
@@ -120,7 +122,10 @@
     "missingHint": "No saved build matches “{{slug}}”. It may have been removed.",
     "browse": "Browse prebuilt builds",
     "loaded": "Loaded into the builder",
-    "loadedHint": "Swap any part and totals update live."
+    "loadedHint": "Swap any part and totals update live.",
+    "notFoundTitle": "That build page doesn't exist",
+    "priceLabel": "Price",
+    "timeLabel": "Est. build time"
   },
   "auth": {
     "title": "Sign in to Nexus",
@@ -146,5 +151,11 @@
     "home": "Back to home",
     "builder": "Open the builder",
     "dashboard": "Or check your dashboard"
+  },
+  "doctor": {
+    "loadFailed": "Could not load this build.",
+    "diagnoseFailed": "The diagnosis failed. Try again.",
+    "noUpgrades": "Nothing in the catalogue would raise this build's score within budget.",
+    "contextPlaceholder": "Describe how you use the PC…"
   }
 }

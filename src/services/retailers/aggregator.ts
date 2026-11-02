@@ -262,10 +262,29 @@ export function isRetailerTableMissing(): boolean {
   return retailerTableMissing;
 }
 
-/** Recognise "relation does not exist" so callers can degrade instead of throwing. */
-function isMissingTable(error: { code?: string; message?: string } | null): boolean {
+/**
+ * Recognise "this table is not available" so callers degrade instead of throwing.
+ *
+ * Supabase answers differently depending on the path AND the key:
+ *   · PostgREST, when a table is missing from the schema cache → `PGRST205`
+ *     ("Could not find the table … in the schema cache").
+ *   · The anon key hitting a table that does not exist yet → plain **401**, often
+ *     with an empty body — there is no table to grant a policy on.
+ * Treating only PGRST205 as "missing" left the 401 bubbling up and the whole
+ * search page rendered its error state on an unmigrated project.
+ */
+function isMissingTable(error: { code?: string; message?: string; status?: number } | null): boolean {
   if (!error) return false;
-  return error.code === 'PGRST205' || /could not find the table|does not exist/i.test(error.message ?? '');
+  if (error.code === 'PGRST205' || error.code === '42P01') return true;
+  // 42501 = insufficient_privilege. A table created without
+  // `GRANT SELECT … TO anon` is unreachable even though it exists, and PostgREST
+  // rejects before RLS is evaluated. From the app's point of view that is the
+  // same state as "not migrated yet": no data to read, use the snapshot.
+  if (error.code === '42501') return true;
+  if (/could not find the table|does not exist|relation .* does not exist/i.test(error.message ?? '')) return true;
+  if (/permission denied for table/i.test(error.message ?? '')) return true;
+  // 401/404 with no usable body: nothing to query.
+  return (error.status === 401 || error.status === 404) && !error.message;
 }
 
 /**

@@ -21,7 +21,7 @@
  * Secrets: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are injected automatically.
  */
 import { createClient } from 'npm:@supabase/supabase-js@2';
-import { RETAILERS, isAllowed, type RetailerConfig, type ScrapedProduct } from './parsers.ts';
+import { RETAILERS, isAllowed, pageUrl, type RetailerConfig, type ScrapedProduct } from './parsers.ts';
 
 const USER_AGENT = 'NexusPCBuilderBot/1.0 (+https://nexus-pc-builder.example/bot)';
 /** 2s between requests to the same retailer — both spec and courtesy. */
@@ -256,32 +256,46 @@ async function syncRetailer(
     }
     if (failures.some((f) => f.includes(target.url))) continue;
 
-    const page = await fetchText(target.url);
-    stats.pages += 1;
+    // Walk the pages of this listing. Stops early on the first empty page so a
+    // generous `pages` budget never turns into a crawl.
+    const pageCount = Math.max(1, target.pages ?? 1);
 
-    if (page.status !== 200 || !page.body) {
-      failures.push(`${target.url} → HTTP ${page.status || 'error'}`);
+    for (let pageNo = 1; pageNo <= pageCount; pageNo += 1) {
+      if (Date.now() - started > MAX_RUNTIME_MS) {
+        failures.push('runtime budget exhausted');
+        break;
+      }
+
+      const page = await fetchText(pageUrl(target, pageNo));
+      stats.pages += 1;
+
+      if (page.status !== 200 || !page.body) {
+        // Page 1 failing is a real problem; a later page simply does not exist.
+        if (pageNo === 1) failures.push(`${target.url} → HTTP ${page.status || 'error'}`);
+        break;
+      }
+
+      let products: ScrapedProduct[] = [];
+      try {
+        products = retailer.parse(page.body, page.finalUrl);
+      } catch (error) {
+        if (pageNo === 1) failures.push(`${target.url} → parse: ${(error as Error).message}`);
+        break;
+      }
+
+      if (products.length === 0 && pageNo > 1) break;
+
+      for (const product of products) {
+        const match = matchComponent(product, catalogue);
+        byExternalId.set(product.externalId, {
+          ...product,
+          matchedId: match?.id ?? null,
+          confidence: match ? Number(match.confidence.toFixed(3)) : null,
+        });
+      }
+
       await sleep(REQUEST_DELAY_MS);
-      continue;
     }
-
-    let products: ScrapedProduct[] = [];
-    try {
-      products = retailer.parse(page.body, page.finalUrl);
-    } catch (error) {
-      failures.push(`${target.url} → parse: ${(error as Error).message}`);
-    }
-
-    for (const product of products) {
-      const match = matchComponent(product, catalogue);
-      byExternalId.set(product.externalId, {
-        ...product,
-        matchedId: match?.id ?? null,
-        confidence: match ? Number(match.confidence.toFixed(3)) : null,
-      });
-    }
-
-    await sleep(REQUEST_DELAY_MS);
   }
 
   const rows = [...byExternalId.values()];

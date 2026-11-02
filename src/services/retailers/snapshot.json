@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-02T03:25:18.665Z",
+  "capturedAt": "2026-11-02T12:43:23.686Z",
   "source": "scripts/snapshot-retailers.mjs",
   "retailers": [
     "elbadr",
@@ -498,6 +498,1294 @@
       }
     },
     {
+      "retailerId": "elbadr",
+      "externalId": "7922",
+      "name": "ASUS X870 MAX GAMING WIFI7 AM5 ATX Motherboard – Wi-Fi 7, PCIe 5.0 & USB4",
+      "category": "motherboard",
+      "priceEgp": 16000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-x870-max-gaming-wifi7-am5-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/0Yna12qHVe9Wh13MI4ZaoiqeAb-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7867",
+      "name": "ASUS PRIME B860M-A WIFI-CSM – LGA1851 Micro-ATX Motherboard, DDR5 & Wi-Fi 6E",
+      "category": "motherboard",
+      "priceEgp": 7900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-prime-b860m-a-wifi-csm-lga1851-micro-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/Hngfb0aTv1B5C6lhUp8fr3XBwq-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7846",
+      "name": "ASUS PRIME B550M-A WIFI II – AM4 Micro-ATX Motherboard, Wi-Fi 6 & PCIe 4.0",
+      "category": "motherboard",
+      "priceEgp": 5500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-prime-b550m-a-wifi-ii-am4-micro-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/ZWFHLQSwngK4HvHCmGGtNbpUJ0-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7845",
+      "name": "ASUS PRIME B550M-A AM4 Micro-ATX Motherboard – 4× DDR4, PCIe 4.0 & Dual M.2",
+      "category": "motherboard",
+      "priceEgp": 4650,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-prime-b550m-a-am4-micro-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/SEe2kamO265UrTLZqcfcTqww1p-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7844",
+      "name": "ASUS PRIME B550M-K AM4 Micro-ATX Motherboard – PCIe 4.0, DDR4 & Dual M.2",
+      "category": "motherboard",
+      "priceEgp": 4300,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-prime-b550m-k-am4-micro-atx-motherboard-pcie-4-0-ddr4-dual-m-2",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/JlxBVVjnFbaJOj02J4gPhboY8h-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7842",
+      "name": "ASUS ROG STRIX X870E-E GAMING WIFI7 NEO – AM5 ATX, PCIe 5.0, 5× M.2 & Wi-Fi 7",
+      "category": "motherboard",
+      "priceEgp": 28500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-rog-strix-x870e-e-gaming-wifi7-neo-am5-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/RlwHKITDE9oc0vb9itZL20zQc8-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7841",
+      "name": "ASUS ROG CROSSHAIR X870E DARK HERO – AM5 ATX, PCIe 5.0 x8/x8, Wi-Fi 7 & 10GbE",
+      "category": "motherboard",
+      "priceEgp": 38500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-rog-crosshair-x870e-dark-hero-am5-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/GW5ZfLO0fcOULa4vL6A6sDi3pM-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7840",
+      "name": "ASUS ROG STRIX X870E-A GAMING WIFI7 NEO – AM5 ATX, PCIe 5.0, USB4 & Wi-Fi 7",
+      "category": "motherboard",
+      "priceEgp": 23500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-rog-strix-x870e-a-gaming-wifi7-neo-am5-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/ToxOeLT0oI8wgDsDsnnzHAousZ-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7839",
+      "name": "ASUS TUF GAMING X870-PRO WIFI7 W NEO – AM5 DDR5 ATX Motherboard, PCIe 5.0 & Wi-Fi 7",
+      "category": "motherboard",
+      "priceEgp": 18500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-tuf-gaming-x870-pro-wifi7-w-neo-am5-ddr5-atx-motherboard-pcie-5-0-wi-fi-7",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/jOw7OLXzNJ135VVITyQ61mWtss-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7808",
+      "name": "GIGABYTE B760M DS3H WIFI6E DDR4 GEN5 – LGA 1700 Micro-ATX, PCIe 5.0, Wi-Fi 6E",
+      "category": "ram",
+      "priceEgp": 7100,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gigabyte-b760m-ds3h-wifi6e-ddr4-gen5-micro-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/18JK4mgnWIuJDj0aOves1aBtRd-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7775",
+      "name": "ASUS PRIME B850M-K Micro-ATX Motherboard – AMD AM5, DDR5-9600+, PCIe 5.0",
+      "category": "motherboard",
+      "priceEgp": 6000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-prime-b850m-k-micro-atx-am5-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/wUnl5nWDkeAhctDidXbsXF3FIM-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7774",
+      "name": "ASUS B860M MAX GAMING AX Micro-ATX Motherboard – LGA 1851, DDR5-8666+, PCIe 5.0",
+      "category": "motherboard",
+      "priceEgp": 8000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-b860m-max-gaming-ax-micro-atx-motherboard",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/F9AndfCfYlNyPxAPisEy6ksozR-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7887",
+      "name": "ADATA AD5U560064G-S 64GB DDR5 5600 MT/s CL46 U-DIMM Desktop Memory",
+      "category": "ram",
+      "priceEgp": 78000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/adata-ad5u560064g-s-64gb-ddr5-5600mhz-cl46-udimm-desktop-memory",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/Yi0sIC6pgbSkM9ySKdEgNXqUuO-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7870",
+      "name": "Kingston FURY Impact DDR5 5600MHz 16GB (1×16GB) CL40 SO-DIMM Laptop Memory",
+      "category": "ram",
+      "priceEgp": 12500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/kingston-fury-impact-ddr5-5600mhz-16gb-cl40-sodimm-laptop-memory",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Kingston/7VzPEFXCmi6CsuK6VynX8dXmU3-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7806",
+      "name": "Addlink 16GB DDR5 5600MHz CL46 UDIMM – 1.1V Desktop Memory",
+      "category": "ram",
+      "priceEgp": 12000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/addlink-16gb-ddr5-5600mhz-cl46-desktop-memory",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/addlink/0483or0sucx0gIr25XX4GlK9GrefrySvF19YCwfa34-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7780",
+      "name": "Acer UD200 16GB DDR5 UDIMM 4800MHz Desktop RAM – JEDEC Standard, 1.1V",
+      "category": "ram",
+      "priceEgp": 12500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/acer-ud200-ddr5-16gb-4800mhz-udimm-desktop-ram",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/ABopeHD82uNZfKwowHUIPWpclM-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7750",
+      "name": "TEAM T-FORCE DELTA RGB DDR5 64GB (2x32GB) Dual-Channel Kit – 6000MHz CL38",
+      "category": "ram",
+      "priceEgp": 53000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/team-t-force-delta-rgb-ddr5-64gb-2x32gb-dual-channel-kit-6000mhz-cl38",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/YbcrICVfR2XbGAuxFm4rsRAklX-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7749",
+      "name": "T-FORCE DELTA RGB DDR5 16GB Single Module – 6000MHz CL38 1.25V",
+      "category": "ram",
+      "priceEgp": 15000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/t-force-delta-rgb-ddr5-16gb-6000mhz-cl38-single-module",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/OMD7l3a3Dxmc9wpwcFCnTWtmEz-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7748",
+      "name": "TEAM T-FORCE DELTA RGB DDR5 32GB (2x16GB) Dual-Channel Kit – 6000MHz CL38 1.25V",
+      "category": "ram",
+      "priceEgp": 29000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/t-force-delta-rgb-ddr5-32gb-6000mhz-cl38-dual-kit",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/qE3RifdQfkOJ8cgKhm35hNaFQr-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7747",
+      "name": "TEAM T-FORCE DELTA RGB DDR5 32GB Single Module – 6000MHz CL38 XMP 3.0/EXPO",
+      "category": "ram",
+      "priceEgp": 29000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/t-force-delta-rgb-ddr5-32gb-6000mhz-cl38-single-module",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/oUamSZ3MpoEl0GtuvmTuymZO53-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7739",
+      "name": "Lexar ARES Gen2 RGB DDR5 32GB (2x16GB) Kit – 6000MHz CL28",
+      "category": "ram",
+      "priceEgp": 35000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/lexar-ares-gen2-rgb-ddr5-32gb-6000mhz-cl28-kit",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/FdZmtFnpJRFQnXQuMdZAAuFpD3-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7738",
+      "name": "TEAMGROUP T-Force VULCAN DDR5 32GB (2x16GB) Kit – 6000MHz CL30",
+      "category": "ram",
+      "priceEgp": 30500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/teamgroup-t-force-vulcan-ddr5-32gb-6000mhz-cl30-kit",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/dPK4DyId2yMAnxstLH8ZLjgdx7-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7412",
+      "name": "G.SKILL Ripjaws S5 64GB (2x32GB) DDR5 6000MT/s CL36 Desktop RAM - Intel XMP 3.0 & AMD EXPO Memory Kit",
+      "category": "ram",
+      "priceEgp": 49000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gskill-ripjaws-s5-64gb-2x32gb-ddr5-6000-cl36-desktop-ram",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/G.Skill/PeaQGuOyBz69rtv9uABsUlRfGt-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7395",
+      "name": "G.SKILL Ripjaws S5 32GB (1x32GB) DDR5 6000MHz CL36 Desktop RAM – XMP 3.0 Memory",
+      "category": "ram",
+      "priceEgp": 29500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gskill-ripjaws-s5-32gb-ddr5-6000-cl36-1x32gb-ram",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/G.Skill/joLX3eytjtMo0fhNEEFm5EjhwNP3I2l1wc4nBfIiQG-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7837",
+      "name": "Lexar NQ780 2TB M.2 2280 NVMe SSD – PCIe Gen 4x4, 7000/5000 MB/s",
+      "category": "storage",
+      "priceEgp": 14500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/lexar-nq780-2tb-m2-2280-pcie-gen4-nvme-ssd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/ZHamEmHfwnX8Iz4JwNUVTQYoMo-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7832",
+      "name": "Seagate One Touch Desktop 24TB External HDD – USB-C Bus-Powered, Plug-and-Play",
+      "category": "storage",
+      "priceEgp": 54000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-one-touch-desktop-stnb24000400-24tb-external-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/HSUZY4sIJti5kk4mRrM41L75Fo-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7831",
+      "name": "Seagate One Touch Desktop 20TB External HDD – USB-C Bus-Powered, Plug-and-Play",
+      "category": "storage",
+      "priceEgp": 44500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-one-touch-desktop-stnb20000400-20tb-external-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/Xdem140Cgg5eV5Z2SF48pNS2ZN-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7830",
+      "name": "Seagate Expansion Desktop 6TB External HDD – USB 3.0, Plug-and-Play, Black",
+      "category": "storage",
+      "priceEgp": 11200,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-expansion-desktop-stkp6000400-6tb-external-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/cTY4Wa2fe2Q7BrNZCnEmSVOAGU-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7829",
+      "name": "Seagate IronWolf ST2000VN003 2TB NAS HDD – 7200 RPM, 256MB Cache",
+      "category": "storage",
+      "priceEgp": 11500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-ironwolf-st2000vn003-2tb-nas-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/xoMbT58xAwRUy2HRL6O2MxPTHs-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7828",
+      "name": "Seagate SkyHawk AI 32TB Internal Surveillance HDD – 7200 RPM, CMR & ImagePerfect AI",
+      "category": "storage",
+      "priceEgp": 89500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-skyhawk-ai-st32000ve000-32tb-surveillance-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/0kLQ65czNquZR6rGHd94iXOskO-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7827",
+      "name": "Seagate Exos M 30TB Enterprise HDD – 7200 RPM, CMR, Mozaic 3+ & 512MB Cache",
+      "category": "storage",
+      "priceEgp": 88500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-exos-m-30tb-st30000nm004k-enterprise-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/r1IXFD8BH98QsiMcFdQqshtmPvlYItIw2Drgyqi70b-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7826",
+      "name": "Seagate Exos M 28TB Enterprise HDD – 7200 RPM, CMR, Helium-Sealed & MTC",
+      "category": "storage",
+      "priceEgp": 76500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-exos-m-st28000nm003k-28tb-enterprise-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/r2sJnleFuXMSV4xAkYMCCpOI3gIm3hopttxWJUzSfs-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7825",
+      "name": "Seagate SkyHawk AI 24TB Internal Surveillance HDD – 7200 RPM, CMR & ImagePerfect AI",
+      "category": "storage",
+      "priceEgp": 67500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/seagate-skyhawk-ai-st24000ve000-24tb-surveillance-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/VoU4zjEmnEaNIi3YW1i1YbYTZy-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7824",
+      "name": "Western Digital Ultrastar DC HC680 26TB SATA Enterprise HDD – SMR, ArmorCache & OptiNAND",
+      "category": "storage",
+      "priceEgp": 75800,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/western-digital-ultrastar-dc-hc680-26tb-sata-enterprise-hdd-smr-armorcache-optinand",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/TMF4g7OxR2zYG9qTAyPY6JTEw5-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7823",
+      "name": "Western Digital Ultrastar DC HC580 24TB SATA Enterprise HDD – 7200 RPM, ArmorCache & OptiNAND",
+      "category": "storage",
+      "priceEgp": 71500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/wd-ultrastar-dc-hc580-24tb-sata-enterprise-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/9ojWwhZPV02IgnLZveOJSE6JT6-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7822",
+      "name": "Western Digital Ultrastar DC HC560 20TB SATA Enterprise HDD – 7200 RPM, OptiNAND & SED Security",
+      "category": "storage",
+      "priceEgp": 61500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/wd-ultrastar-dc-hc560-20tb-sata-sed-hdd",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/9WFgR0fNZ7eROypJfrsl0pCuWP-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7909",
+      "name": "NZXT C1500 Platinum ATX 3.1 1500W Power Supply – 80 PLUS Platinum, Fully Modular & Dual 12V-2x6",
+      "category": "psu",
+      "priceEgp": 19499,
+      "originalPriceEgp": 20350,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-c1500-platinum-atx-3-1-1500w-fully-modular-power-supply",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/kEcu5VWEo0TPPrtPIOkHwwezev-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7908",
+      "name": "NZXT C1200 Gold ATX 3.1 1200W Power Supply – 80 PLUS Gold, Fully Modular & PCIe 5.1",
+      "category": "psu",
+      "priceEgp": 11499,
+      "originalPriceEgp": 12500,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-c1200-gold-atx-3-1-1200w-fully-modular-power-supply",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/Fpa4J9lcs6XK4PMoGFSAX7oU4v-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7907",
+      "name": "NZXT C1000 Gold Core ATX 3.1 1000W Power Supply – 80 PLUS Gold, Fully Modular & PCIe Gen 5.1",
+      "category": "psu",
+      "priceEgp": 8999,
+      "originalPriceEgp": 9750,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-c1000-gold-core-atx-3-1-1000w-fully-modular-power-supply",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/t2wPO2QdFECRJSHeozHysnoBeW-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7906",
+      "name": "NZXT C850 Gold Core ATX 3.1 850W Power Supply – 80 PLUS Gold, Fully Modular & PCIe Gen 5.1",
+      "category": "psu",
+      "priceEgp": 6799,
+      "originalPriceEgp": 7700,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-c850-gold-core-atx-3-1-850w-fully-modular-power-supply",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/SiylC86MhvhIhFYGMaUUeMKecy-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7905",
+      "name": "NZXT C750 Gold Core ATX 3.1 750W Power Supply – 80 PLUS Gold, Fully Modular & PCIe Gen 5.1",
+      "category": "psu",
+      "priceEgp": 5799,
+      "originalPriceEgp": 6600,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-c750-gold-core-atx-3-1-750w-fully-modular-power-supply",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/cF8KuWavXiB2oWiVbZDdJzSLKC-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7904",
+      "name": "NZXT C750 Bronze ATX 3.1 750W Power Supply – 80 PLUS Bronze, PCIe Gen 5.1, Non-Modular",
+      "category": "psu",
+      "priceEgp": 4100,
+      "originalPriceEgp": 4300,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-c750-bronze-atx-3-1-750w-power-supply-80-plus-bronze-pcie-gen-5-1-non-modular",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/OhyXr2BpBeaPblD6mJtq5qIgNM-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7710",
+      "name": "Cooler Master Elite Gold 850 – 850W 80 PLUS Gold Fully Modular ATX 12V Ver. 3.1 PSU",
+      "category": "psu",
+      "priceEgp": 5250,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-gold-850-psu-fully-modular-atx12v-3-1",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/y8LVRnbVwtTfXMG9eC0WkLAUeG-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7709",
+      "name": "Cooler Master Elite Gold 750 – 750W 80 PLUS Gold Fully Modular ATX 12V Ver. 3.1 PSU",
+      "category": "psu",
+      "priceEgp": 4299,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-gold-750-psu-fully-modular-atx12v-3-1",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/4Lnxd3nLG35tMICaoxmNKP484M-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7626",
+      "name": "Cooler Master Elite Gold 1000W 80 PLUS Gold Fully Modular ATX 3.1 PSU",
+      "category": "psu",
+      "priceEgp": 5999,
+      "originalPriceEgp": 6500,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-gold-1000w-80-plus-gold-atx-3-1-psu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/rUranOVUdGWRqfEE9R6drOZOld-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7456",
+      "name": "ASUS Pro WS 3000W Platinum Power Supply - 3000W, 80 PLUS Platinum, ATX 3.1, PCIe 5.1, 12V-2x6, Fully Modular",
+      "category": "psu",
+      "priceEgp": 48500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-pro-ws-3000w-platinum-3000w-atx-3-1-power-supply",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/XdrU33PHgsw7wprVWVu3Us9smB-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7386",
+      "name": "Cooler Master GX II Gold 850W Power Supply – 80 Plus Gold, ATX 3.0 Ready, Fully Modular, Native 90-Degree 12VHPWR Connector | MPX-8503-AFAG-2",
+      "category": "psu",
+      "priceEgp": 4599,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-gx-ii-gold-850w-atx-3-0-fully-modular-psu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/DCuqzazcBIL5ITMHgQpi3uHtTg-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7347",
+      "name": "Gamdias HELIOS M2-750B 750W 80 PLUS Silver Non Modular ATX 3.1 Power Supply – DC-to-DC Design, C6/C7 Support, High-Quality Capacitors",
+      "category": "psu",
+      "priceEgp": 3000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gamdias-helios-m2-750b-750w-silver-atx3",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/GAMDIAS/FOEGwshgH1B4qcfUTCvMbYNLZswsGImu22gTn-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7928",
+      "name": "HYTE Y50 RGB Strawberry Milk / Soft Pink Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect",
+      "category": "case",
+      "priceEgp": 6299,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-strawberry-milk-soft-pink-dual-chamber-atx-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/j2Svfy0WYoRc1Lq1yBFuAhcddw-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7927",
+      "name": "HYTE Y50 RGB Taro Milk Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect",
+      "category": "case",
+      "priceEgp": 6299,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-taro-milk-pastel-purple-dual-chamber-atx-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/3mFp9wTANnYmClOlyz2oKEfVMj-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7926",
+      "name": "HYTE Y50 RGB Black Cherry Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect Support",
+      "category": "case",
+      "priceEgp": 6299,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-black-cherry-dual-chamber-atx-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/mivKjCdGCigzlEm61h8iTCcC1L-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7925",
+      "name": "HYTE Y50 RGB Pitch Black Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect Support",
+      "category": "case",
+      "priceEgp": 6299,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-pitch-black-dual-chamber-atx-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/0tubXGFNr6dpX1VpWJl8pCk4VD-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7923",
+      "name": "HYTE Y50 RGB Snow White Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect Support",
+      "category": "case",
+      "priceEgp": 6299,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-snow-white-dual-chamber-atx-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/TJHl1xhYrmRhP0HfY4SCTqozxR-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7921",
+      "name": "Xander Gaming Jupiter II White E-ATX PC Case Bundle – 6x ARGB Fans & 850W PSU",
+      "category": "psu",
+      "priceEgp": 5800,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/xander-gaming-jupiter-ii-white-e-atx-pc-case-bundle-850w-psu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/WhkdU8WxomyrzzX3ttgwUk5Jzp-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7920",
+      "name": "Xander Gaming Jupiter II Black E-ATX PC Case Bundle – 6x ARGB Fans & 850W PSU",
+      "category": "psu",
+      "priceEgp": 5500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/xander-gaming-jupiter-ii-black-e-atx-pc-case-bundle-850w-psu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/gWuvlGbYsmq5jAh3akhXSauJVC-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7903",
+      "name": "NZXT H9 Flow RGB White Large Dual-Chamber Mid-Tower PC Case – Tempered Glass & 420mm Rad Support",
+      "category": "case",
+      "priceEgp": 9999,
+      "originalPriceEgp": 11550,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-h9-flow-rgb-white-large-dual-chamber-mid-tower-pc-case-1",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/2nnq2hPCPcZhtV7QEiXI7qJDA5-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7902",
+      "name": "NZXT H9 Flow RGB Black Large Dual-Chamber Mid-Tower PC Case – Tempered Glass & 420mm Rad Support",
+      "category": "case",
+      "priceEgp": 9999,
+      "originalPriceEgp": 11550,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-h9-flow-rgb-black-large-dual-chamber-mid-tower-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/azNGmGYQiU3xkb1EJE4jWFTgcb-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7901",
+      "name": "NZXT H6 Flow RGB Black Compact Dual-Chamber Mid-Tower PC Case – Tempered Glass & 3x F120 RGB Fans",
+      "category": "case",
+      "priceEgp": 5999,
+      "originalPriceEgp": 7425,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-h6-flow-rgb-black-dual-chamber-mid-tower-pc-case-1",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/vxLFwMk5A6yFOKGPlmxAlYz91U-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7900",
+      "name": "NZXT H6 Flow RGB White Compact Dual-Chamber Mid-Tower PC Case – Tempered Glass & 3x F120 RGB Fans",
+      "category": "case",
+      "priceEgp": 5999,
+      "originalPriceEgp": 7425,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-h6-flow-rgb-white-dual-chamber-mid-tower-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/lYXYx68LdQ2i5f7PiTRXublqOd-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7899",
+      "name": "NZXT H5 Flow RGB Black Compact Mid-Tower PC Case – Tempered Glass & Included RGB Fans",
+      "category": "case",
+      "priceEgp": 4999,
+      "originalPriceEgp": 6600,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-h5-flow-rgb-blackl-compact-mid-tower-pc-case-1",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/5Qn99mAOy2UkATX7qruWHfhSdz-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7898",
+      "name": "NZXT H5 Flow RGB White Compact Mid-Tower PC Case – Tempered Glass & Included RGB Fans",
+      "category": "case",
+      "priceEgp": 4999,
+      "originalPriceEgp": 6600,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-h5-flow-rgb-white-compact-mid-tower-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/v9sj4iRc4AQTOKREdEq4uZphH1-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7812",
+      "name": "Xander Velox II TG/Mesh Mid Tower PC Case – Mesh Front, 4× ARGB Fans, 700W PSU",
+      "category": "psu",
+      "priceEgp": 2950,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/xander-velox-ii-tg-mesh-mid-tower-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/LKbQDkf08Oj2dACtRje3nsjiF7-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7811",
+      "name": "Xander Velox Flow WCE0917 Mid Tower PC Case – Mesh Front, 4× ARGB Fans, 750W PSU",
+      "category": "psu",
+      "priceEgp": 3900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/xander-velox-flow-wce0917-mid-tower-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/bhxNZ6n77LetYX9p4p4cJy6MhZ-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7810",
+      "name": "Xander Velox Plus WCE0504 Mid Tower PC Case – Mesh Front, 4× ARGB Fans, 600W PSU",
+      "category": "psu",
+      "priceEgp": 2750,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/xander-velox-plus-wce0504-mid-tower-pc-case",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/z2EiBMsXdR82z4ZvILkwwW6pbU-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7707",
+      "name": "Cooler Master MasterFrame 360 Panorama Mid-Tower PC Case – 360° Tempered Glass",
+      "category": "case",
+      "priceEgp": 11499,
+      "originalPriceEgp": 12000,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-360-panorama-mid-tower-pc-case-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/OEcIlk02hSYBcNWtnvtvUGkNag-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7706",
+      "name": "Cooler Master MasterFrame 600 Mesh Mid-Tower PC Case Silver – FreeForm 2.0 Exo-Structure",
+      "category": "case",
+      "priceEgp": 8900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-600-mesh-mid-tower-pc-case-silver",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/NTfzowZi4UFtAQgZUdaau1MgUa-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7705",
+      "name": "Cooler Master MasterFrame 600 Mesh Mid-Tower PC Case Black – FreeForm 2.0 Exo-Structure",
+      "category": "case",
+      "priceEgp": 8900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-600-mesh-mid-tower-pc-case-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/d6G5PVEdadYbdwjezBIQfHIjBI-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7704",
+      "name": "Cooler Master MasterFrame 600 ATX Mid-Tower PC Case – Premium Aluminum Modular",
+      "category": "case",
+      "priceEgp": 7500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-600-atx-mid-tower-pc-case-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/YFmRxVLuecasCSN3T9B1dXYYZp-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7703",
+      "name": "Cooler Master MasterFrame 500 Mesh Mid-Tower PC Case – Black",
+      "category": "case",
+      "priceEgp": 6999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-500-mesh-mid-tower-pc-case-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/RJGnE4DiJzQekvWb4WK7ai7inG-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7702",
+      "name": "Cooler Master MasterFrame 500 Mesh Mid-Tower PC Case – Silver",
+      "category": "case",
+      "priceEgp": 7099,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-500-mesh-mid-tower-pc-case-silver",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/PROlooV1YPxzO2fuLYFnTIMaRvXwsEsxw5CVILhaWw-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7693",
+      "name": "Cooler Master ELITE 502 White Mid-Tower PC Case – Tempered Glass & ARGB",
+      "category": "case",
+      "priceEgp": 3900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-502-mid-tower-pc-case-white",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/fo0vK5BQ9J7IiazbTu9naMBYc7-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7917",
+      "name": "NZXT Kraken Core 360 RGB AIO Liquid CPU Cooler – 360mm Radiator & Single-Frame Fan",
+      "category": "cpu",
+      "priceEgp": 6999,
+      "originalPriceEgp": 7500,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-kraken-core-360-rgb-aio-liquid-cpu-cooler",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/ROG5Ui3DUntuq34p4cU2OMra6P-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7916",
+      "name": "NZXT F360X 360mm Performance RGB Single-Frame Fan (White) – 3100 RPM PWM & 7.53 mmH₂O",
+      "category": "cooling",
+      "priceEgp": 5499,
+      "originalPriceEgp": 6600,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-f360x-360mm-performance-rgb-single-frame-fan-white",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/Z9Go7TaUM6Ogls4z175BWDTRSD-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7915",
+      "name": "NZXT F360X 360mm Performance RGB Single-Frame Fan Black – 3100 RPM PWM & 7.53 mmH₂O",
+      "category": "cooling",
+      "priceEgp": 5499,
+      "originalPriceEgp": 6600,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-f360x-360mm-performance-rgb-single-frame-fan",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/DTYeI1wcmvvD90Y3rPpZaK7cTS-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7914",
+      "name": "NZXT F420 RGB Core 420mm Single-Frame RGB Fan Unit – PWM, FDB & 5V ARGB",
+      "category": "cooling",
+      "priceEgp": 3499,
+      "originalPriceEgp": 4125,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-f420-rgb-core-420mm-single-frame-rgb-fan-unit-pwm-fdb-5v-argb",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/JGaPWm91pFhilX8DYkcQMf9Hue-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7913",
+      "name": "NZXT F360 RGB Core 360mm Single-Frame RGB Fan Unit White – PWM, FDB & 5V ARGB",
+      "category": "cooling",
+      "priceEgp": 2999,
+      "originalPriceEgp": 3850,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-f360-rgb-core-360mm-single-frame-pwm-case-fan-w",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/3XPvNX81xyFV1VtjrsWArPe4c5-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7912",
+      "name": "NZXT F360 RGB Core 360mm Single-Frame RGB Fan Unit Matte Black – PWM, FDB & 5V ARGB",
+      "category": "cooling",
+      "priceEgp": 2999,
+      "originalPriceEgp": 3850,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/nzxt-f360-rgb-core-360mm-single-frame-pwm-case-fan",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/CVhuiDMmYJ8tYJzQ5EW1cK4jz3-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7838",
+      "name": "FEHONDA TR50L Thermal Grease – 14.8 W/m·K, 12g, Non-Conductive TIM",
+      "category": "cooling",
+      "priceEgp": 750,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/fehonda-tr50l-thermal-grease-12g-14-8-wmk",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Fehonda/NjMVOs3dtGY1C6EwIYeHnBJ45Z6d5usT2TJA4BGmtw-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7814",
+      "name": "Thermalright TL-M12QRW X3 – 3x White 120mm ARGB PWM Fans, 47.6 CFM & S-FDB Bearing",
+      "category": "cooling",
+      "priceEgp": 1250,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/thermalright-tl-m12qrw-x3-white-120mm-argb-fan-3-pack",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/THERMALRIGHT/1nxIxd8XtSD6eLhz6970MB1Y0lck-250x250.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7813",
+      "name": "Thermalright TL-M12QR X3 – 3x 120mm ARGB PWM Case Fans, 47.6 CFM & S-FDB Bearing",
+      "category": "case",
+      "priceEgp": 1250,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/thermalright-tl-m12qr-x3-120mm-argb-pwm-fan-3-pack",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/THERMALRIGHT/anCqk5ufLQ1S3cCeAaGI9kjlq2zs-250x250.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7673",
+      "name": "GIGABYTE EAGLE 360 All-In-One Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 3999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gigabyte-eagle-360-aio-liquid-cpu-cooler-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/ecBmYvqQ7uCNrFYqNkGaYaezes-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7672",
+      "name": "GIGABYTE EAGLE 360 ICE All-In-One Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 4100,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gigabyte-eagle-360-ice-aio-liquid-cpu-cooler-white",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/nWLV5j0KgNQEDzTTATSYgjraFD-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7670",
+      "name": "GIGABYTE GAMING 360 ICE All-In-One Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 5350,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gigabyte-gaming-360-ice-aio-liquid-cpu-cooler-white",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/EmCYriNScdyljkogRTOCuuJSs9-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7648",
+      "name": "GIGABYTE GAMING 360 All-In-One Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 5200,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gigabyte-gaming-360-aio-liquid-cpu-cooler-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/FrisK4Xz709LdDOsyDVOtYz1nQ-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7631",
+      "name": "Cooler Master MasterLiquid Atmos II LCD 360 Black AIO Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 8150,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterliquid-atmos-ii-lcd-360-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/QzojpPtc7RHLrDkQbk3tNd0vyh-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7630",
+      "name": "Cooler Master MasterLiquid Atmos II VRM Fan 360 Black AIO Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 6750,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterliquid-atmos-ii-vrm-fan-360-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/6Zx3BNNgdPyiJr7IBhUjubLovY-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7629",
+      "name": "Cooler Master MasterLiquid Core Nex Digital 360 White AIO Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 4900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterliquid-core-nex-digital-360-white",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/4u9ItA48jkPEzlgMy7lZpAbl88Nv3NMZ38hLXotsYUS6EXQaKkQX3pb7kMVYOXoUCEEa-250x250.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7628",
+      "name": "Cooler Master MasterLiquid Core Nex Digital 360 Black AIO Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 4900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterliquid-core-nex-digital-360-black",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/ij4WcRMjAsKeDNIiX3VY9X1eCj-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7627",
+      "name": "Cooler Master MasterLiquid Core Nex 360 ARGB Liquid CPU Cooler",
+      "category": "cpu",
+      "priceEgp": 4250,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-masterliquid-core-nex-360-argb-liquid-cooler",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/N1vi2ReATuAcoHqIAUK7fYXtRv-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7624",
+      "name": "Cooler Master V4 Alpha 3DHP Black Dual 120mm CPU Air Cooler",
+      "category": "cpu",
+      "priceEgp": 2000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-v4-alpha-3dhp-black-dual-fan-cpu-cooler",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/fHSkIVMP4V8oBbMVSJ20GAuDHg-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7623",
+      "name": "Cooler Master Hyper 212 3DHP Black ARGB CPU Air Cooler",
+      "category": "cpu",
+      "priceEgp": 1650,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-hyper-212-3dhp-black-argb-cpu-cooler",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/zLPhBrO2OC3DDM9jz9laJVpDph-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7621",
+      "name": "Cooler Master MF120 Lite ARGB 120mm Case Fan",
+      "category": "case",
+      "priceEgp": 650,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/cooler-master-mf120-lite-argb-120mm-fan",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/yMIDaVKOA4fBZJB6o4kPW3QP0Y-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
       "retailerId": "elnekhely",
       "externalId": "2664",
       "name": "AORUS GeForce RTX 5070 MASTER 12GB – NVIDIA Blackwell GPU, 192-bit GDDR7, 2715MHz Boost Clock, WINDFORCE Cooling, RGB Halo, Hawk Fan, Dual BIOS, DLSS 4, Ray Tracing & PCIe 5.0 Support",
@@ -666,6 +1954,1126 @@
       }
     },
     {
+      "retailerId": "elnekhely",
+      "externalId": "2418",
+      "name": "AMD Ryzen 7 9800X3D 8 Cores- 16 Threads AM5 Processor",
+      "category": "cpu",
+      "priceEgp": 23999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-9800x3d-8-cores-16-threads-am5-processor",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9800X%203D/amd-ryzen-7-9800x3d-8-cores-16-threads-am5-processor-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "1742",
+      "name": "AMD RYZEN 5 5500 ZEN3 4.2GHz",
+      "category": "cpu",
+      "priceEgp": 4499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-5500-4-2ghz",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/amd-ryzen-5-5600-6-core-12-thread-max-boost-4-4-ghz-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3136",
+      "name": "AMD Ryzen 5 5600 MPK Processor – 6 Cores, 12 Threads, 4.4GHz Boost, 32MB Cache, 7nm Architecture, AM4 CPU for Gaming & Productivity",
+      "category": "cpu",
+      "priceEgp": 6199,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-5600-mpk-processor-–-6-cores-12-threads-4-4ghz-boost-32mb-cache-7nm-architecture-am4-cpu-for-gaming-productivity",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5600%20TRAY/amd-ryzen-5-5600-mpk-processor-–-6-cores-12-threads-4-4ghz-boost-32mb-cache-7nm-architecture-am4-cpu-for-gaming-productivity-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3468",
+      "name": "AMD Ryzen 5 5600X Tray Desktop Processor (6 Cores, 12 Threads, Up to 4.6 GHz, Socket AM4)",
+      "category": "cpu",
+      "priceEgp": 7399,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-5600x-tray-6-core-12-thread-am4-processor",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5600X%20/amd-ryzen-5-5600x-tray-desktop-processor-6-cores-12-threads-up-to-4-6-ghz-socket-am4-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3411",
+      "name": "AMD Ryzen 5 7400 Desktop Processor – 6 Cores, 12 Threads, Up to 4.3 GHz, Socket AM5, Zen 4 Architecture, Tray",
+      "category": "cpu",
+      "priceEgp": 6400,
+      "originalPriceEgp": 6500,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7400-desktop-processor-–-6-cores-12-threads-up-to-4-3-ghz-socket-am5-zen-4-architecture-tray",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7400%20TRAY/amd-ryzen-5-7400-desktop-processor-–-6-cores-12-threads-up-to-4-3-ghz-socket-am5-zen-4-architecture-tray-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2296",
+      "name": "AMD Ryzen 5 7500F - 6 Core, 3.7GHz 32MB Cache - Socket AM5 Tray",
+      "category": "cpu",
+      "priceEgp": 7499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7500f-6-core-3-7ghz-32mb-cache-socket-am5-tray",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/amd-ryzen-5-7500f-6-core-3-7ghz-32mb-cache-socket-am5-tray-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3527",
+      "name": "AMD Ryzen 5 7500X3D 6 Cores 12 Threads Up to 4.5GHz 102MB Cache AM5 MPK Processor",
+      "category": "cpu",
+      "priceEgp": 12499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7500x3d",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7500X3D/amd-ryzen-5-7500x3d-6-cores-12-threads-up-to-4-5ghz-102mb-cache-am5-mpk-processor-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2272",
+      "name": "AMD Ryzen 5 7600 Processor — AM5, Zen 4, 6 Core, 12 Thread, 3.8GHz, 5.1GHz Turbo, 32MB Cache, PCIe 5.0, 65W, CPU",
+      "category": "cpu",
+      "priceEgp": 8799,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7600-processor-—-am5-zen-4-6-core-12-thread-3-8ghz-5-1ghz-turbo-32mb-cache-pcie-5-0-65w-cpu",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7600/amd-ryzen-5-7600-processor-—-am5-zen-4-6-core-12-thread-3-8ghz-5-1ghz-turbo-32mb-cache-pcie-5-0-65w-cpu-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2465",
+      "name": "AMD Ryzen 5 8400F MPK Desktop Processor with AMD Fan (6 Cores, 12 Threads, Up to 4.7 GHz, Socket AM5)",
+      "category": "cpu",
+      "priceEgp": 5399,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-8400f-mpk-6-core-12-thread-am5-processor",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/8400F/amd-ryzen-5-8400f-mpk-desktop-processor-with-amd-fan-6-cores-12-threads-up-to-4-7-ghz-socket-am5-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3170",
+      "name": "AMD Ryzen 5 8500G BOX Processor – 6 Cores, 12 Threads, Integrated Radeon Graphics, High-Performance AM5 APU for Gaming & Productivity",
+      "category": "cpu",
+      "priceEgp": 8500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-8500g-box-processor-–-6-cores-12-threads-integrated-radeon-graphics-high-performance-am5-apu-for-gaming-productivity",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/8500g/amd-ryzen-5-8500g-box-processor-–-6-cores-12-threads-integrated-radeon-graphics-high-performance-am5-apu-for-gaming-productivity-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3344",
+      "name": "AMD Ryzen 5 8600G 6-Core, 12-Thread Desktop Processor with AMD Ryzen AI & Radeon 760M Graphics",
+      "category": "cpu",
+      "priceEgp": 9000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-8600g-6-core-12-thread-desktop-processor-with-amd-ryzen-ai-radeon-760m-graphics",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/8600g/amd-ryzen-5-8600g-6-core-12-thread-desktop-processor-with-amd-ryzen-ai-radeon-760m-graphics-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3171",
+      "name": "AMD Ryzen 5 9500F TRAY Processor – 6 Cores 12 Threads, Zen 4 Architecture, Up to 4.8GHz Boost, AM5 Socket, 65W TDP, DDR5 & PCIe 5.0 Support (No Integrated Graphics)",
+      "category": "cpu",
+      "priceEgp": 10399,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-9500f-tray-processor-–-6-cores-12-threads-zen-4-architecture-up-to-4-8ghz-boost-am5-socket-65w-tdp-ddr5-pcie-5-0-support-no-integrated-graphics",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9500F/amd-ryzen-5-9500f-tray-processor-–-6-cores-12-threads-zen-4-architecture-up-to-4-8ghz-boost-am5-socket-65w-tdp-ddr5-pcie-5-0-support-no-integrated-graphics-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2274",
+      "name": "ASUS TUF GAMING X870-PLUS WIFI AM5 ATX Gaming Motherboard",
+      "category": "motherboard",
+      "priceEgp": 17499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-x870-plus-wifi-am5-atx-gaming-motherboard",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870-PLUS/asus-tuf-gaming-x870-plus-wifi-am5-atx-gaming-motherboard-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2276",
+      "name": "ROG CROSSHAIR X870E HERO WiFi AM5 ATX Gaming Motherboard",
+      "category": "motherboard",
+      "priceEgp": 31888,
+      "originalPriceEgp": 33000,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/rog-crosshair-x870e-hero-wifi-am5-atx-gaming-motherboard",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20X870E%20HERO/rog-crosshair-x870e-hero-wifi-am5-atx-gaming-motherboard-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2273",
+      "name": "ROG STRIX X870E-E GAMING WIFI — Socket AM5/X870E-E/DDR5 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 27399,
+      "originalPriceEgp": 30500,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/rog-strix-x870e-e-gaming-wifi-—-socket-am5-x870e-e-ddr5-motherboard",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870E-E/rog-strix-x870e-e-gaming-wifi-—-socket-am5-x870e-e-ddr5-motherboard-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3514",
+      "name": "ASUS B850 MAX GAMING WIFI AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 9999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b850-max-gaming-wifi",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/ASUS%20B850%20Max%20Gaming%20WiFi/asus-b850-max-gaming-wifi-am5-ddr5-atx-motherboard-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2996",
+      "name": "ASUS B850 MAX GAMING WIFI W Socket AM5 Motherboard - DDR5, PCIe 5.0, Wi-Fi 6E",
+      "category": "motherboard",
+      "priceEgp": 10899,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b850-max-gaming-wifi-w-am5",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/%20B850%20MAX%2022222222/asus-b850-max-gaming-wifi-w-socket-am5-motherboard-ddr5-pcie-5-0-wi-fi-6e-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3162",
+      "name": "ASUS B850M MAX GAMING WIFI Socket AM5 Motherboard - DDR5, PCIe 5.0, WiFi 6",
+      "category": "motherboard",
+      "priceEgp": 8499,
+      "originalPriceEgp": 9249,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b850m-max-gaming-wifi-am5",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850M%20MAX%20WIFI/asus-b850m-max-gaming-wifi-socket-am5-motherboard-ddr5-pcie-5-0-wifi-6-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3397",
+      "name": "ASUS B860M MAX GAMING AX Intel LGA1851 Micro-ATX Motherboard – DDR5, PCIe 5.0, Wi-Fi 6, Realtek 2.5Gb LAN",
+      "category": "motherboard",
+      "priceEgp": 8499,
+      "originalPriceEgp": 8999,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b860m-max-gaming-ax-intel-lga1851-micro-atx-motherboard-–-ddr5-pcie-5-0-wi-fi-6-realtek-2-5gb-lan",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B860M%20MAX/asus-b860m-max-gaming-ax-intel-lga1851-micro-atx-motherboard-–-ddr5-pcie-5-0-wi-fi-6-realtek-2-5gb-lan-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3149",
+      "name": "ASUS PRIME B650M-A II-CSM Micro-ATX Motherboard – DDR5, PCIe 5.0 M.2, 2.5Gb Ethernet, DisplayPort, HDMI, VGA, Rear USB 3.2 Gen 2, Front USB 3.2 Gen 1 Type-C, BIOS FlashBack, Aura Sync",
+      "category": "gpu",
+      "priceEgp": 6499,
+      "originalPriceEgp": 6999,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b650m-a-ii-csm-micro-atx-motherboard-–-ddr5-pcie-5-0-m-2-2-5gb-ethernet-displayport-hdmi-vga-rear-usb-3-2-gen-2-front-usb-3-2-gen-1-type-c-bios-flashback-aura-sync",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B650M-A%20II-CSM/asus-prime-b650m-a-ii-csm-micro-atx-motherboard-–-ddr5-pcie-5-0-m-2-2-5gb-ethernet-displayport-hdmi-vga-rear-usb-3-2-gen-2-front-usb-3-2-gen-1-type-c-bios-flashback-aura-sync-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2966",
+      "name": "ASUS Prime B760-PLUS ATX Motherboard – Intel B760, LGA 1700, DDR5, PCIe 5.0, 3×M.2 PCIe 4.0, 2.5Gb LAN, USB Type-C, HDMI & DisplayPort",
+      "category": "motherboard",
+      "priceEgp": 6500,
+      "originalPriceEgp": 8000,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760-plus-atx-motherboard-–-intel-b760-lga-1700-ddr5-pcie-5-0-3×m-2-pcie-4-0-2-5gb-lan-usb-type-c-hdmi-displayport",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/PRIME%20B760-PLUS/asus-prime-b760-plus-atx-motherboard-–-intel-b760-lga-1700-ddr5-pcie-5-0-3×m-2-pcie-4-0-2-5gb-lan-usb-type-c-hdmi-displayport-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3513",
+      "name": "ASUS PRIME B760-PLUS D4 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 6500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760-plus-d4",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760-PLUS%20D4%20/asus-prime-b760-plus-d4-atx-motherboard-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2415",
+      "name": "ASUS PRIME B760M-A D4-CSM",
+      "category": "motherboard",
+      "priceEgp": 6199,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-a-d4-csm",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20B760M-A%20D4-CSM/asus-prime-b760m-a-d4-csm-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2127",
+      "name": "ASUS PRIME B760M-A WIFI D4 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 6999,
+      "originalPriceEgp": 7500,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-a-wifi-d4-motherboard",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/b760m-a/asus-prime-b760m-a-wifi-d4-motherboard-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3055",
+      "name": "G.SKILL DDR5 32GB (2x16GB) 6400MT/s CL30 Desktop Memory Kit – AMD EXPO Ready, Dual Channel, High-Performance RAM",
+      "category": "ram",
+      "priceEgp": 41999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-ddr5-32gb-2x16gb-6400mt-s-cl30-desktop-memory-kit-–-amd-expo-ready-dual-channel-high-performance-ram",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ACCESSORIES/G.SKILL%20Trident%20Z5%20Royal%20Ne/g-skill-ddr5-32gb-2x16gb-6400mt-s-cl30-desktop-memory-kit-–-amd-expo-ready-dual-channel-high-performance-ram-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2558",
+      "name": "G.SKILL Trident Z5 Neo RGB Series (AMD Expo) DDR5 RAM 48GB (2x24GB) 8000MT/s CL40-48-48-128 1.40V Desktop Computer Memory UDIMM - Matte Black",
+      "category": "ram",
+      "priceEgp": 42999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-neo-rgb-series-amd-expo-ddr5-ram-48gb-2x24gb-8000mt-s-cl40-48-48-128-1-40v-desktop-computer-memory-udimm-matte-black",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Rams/G.skill/2X32%206000/g-skill-trident-z5-neo-rgb-series-amd-expo-ddr5-ram-48gb-2x24gb-8000mt-s-cl40-48-48-128-1-40v-desktop-computer-memory-udimm-matte-black-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3056",
+      "name": "G.SKILL Trident Z5 RGB DDR5 64GB (2x32GB) 6800MT/s CL34-45-45-108 1.40V Dual Channel Desktop Memory Kit – Intel XMP 3.0",
+      "category": "ram",
+      "priceEgp": 64999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-rgb-ddr5-64gb-2x32gb-6800mt-s-cl34-45-45-108-1-40v-dual-channel-desktop-memory-kit-–-intel-xmp-3-0",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/RAM/TR5NG%20RAMM/g-skill-trident-z5-rgb-ddr5-64gb-2x32gb-6800mt-s-cl34-45-45-108-1-40v-dual-channel-desktop-memory-kit-–-intel-xmp-3-0-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2556",
+      "name": "G.SKILL Trident Z5 RGB Series (Intel XMP 3.0) DDR5 RAM 64GB (2x32GB) 6000MT/s CL36-36-36-96 1.35V Desktop Computer Memory UDIMM - Matte White (F5-6000J3636F32GX2-TZ5RW)",
+      "category": "ram",
+      "priceEgp": 59999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-rgb-series-intel-xmp-3-0-ddr5-ram-64gb-2x32gb-6000mt-s-cl36-36-36-96-1-35v-desktop-computer-memory-udimm-matte-white-f5-6000j3636f32gx2-tz5rw",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Rams/G.skill/2x32%206000%20w/g-skill-trident-z5-rgb-series-intel-xmp-3-0-ddr5-ram-64gb-2x32gb-6000mt-s-cl36-36-36-96-1-35v-desktop-computer-memory-udimm-matte-white-f5-6000j3636f32gx2-tz5rw-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2555",
+      "name": "G.Skill Trident Z5 RGB Series 64GB (2 x 32GB) DDR5 Dual Channel Desktop Memory Kit, 6000 MHz Memory Speed, CL36 CAS Latency, 1.35 V, Intel XMP 3.0, 288-Pin, Matte Black | F5-6000J3636F32GX2-TZ5RK",
+      "category": "ram",
+      "priceEgp": 59999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-rgb-series-64gb-2-x-32gb-ddr5-dual-channel-desktop-memory-kit-6000-mhz-memory-speed-cl36-cas-latency-1-35-v-intel-xmp-3-0-288-pin-matte-black-f5-6000j3636f32gx2-tz5rk",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Rams/G.skill/2X32%206000/g-skill-trident-z5-rgb-series-intel-xmp-3-0-ddr5-ram-64gb-2x32gb-6800mt-s-cl34-45-45-108-1-40v-desktop-computer-memory-udimm-matte-black-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2112",
+      "name": "G.SKILL Trident Z5 RGB Series DDR5 RAM 64GB (2x32GB) 6000MT/s CL30",
+      "category": "ram",
+      "priceEgp": 64999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-rgb-series-ddr5-ram-64gb-2x32gb-6000mt-s-cl30",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/RAMM/G.SKILL%206400/g-skill-trident-z5-rgb-series-ddr5-ram-64gb-2x32gb-6000mt-s-cl30-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2328",
+      "name": "G.SKILL Trident Z5 Royal DDR5 RAM 64GB Kit (2x32GB) 6400MHz CL32 Silver",
+      "category": "ram",
+      "priceEgp": 74999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-royal-ddr5-64gb-6400mhz-silver-ram",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/RAMM/%20Royal%2064GB%2032X2%206400/g-skill-trident-z5-royal-ddr5-ram-64gb-kit-2x32gb-6400mhz-cl32-silver-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3053",
+      "name": "G.SKILL Trident Z5 Royal Neo DDR5 32GB (2x16GB) 8000MT/s CL38 Desktop Memory Kit – AMD EXPO Overclocking RAM, Gold Heatspreader, 1.45V High-Performance UDIMM",
+      "category": "ram",
+      "priceEgp": 41999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-royal-neo-ddr5-32gb-2x16gb-8000mt-s-cl38-desktop-memory-kit-–-amd-expo-overclocking-ram-gold-heatspreader-1-45v-high-performance-udimm",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/G.SKILL%20Trident%20Z5%20Royal%20Ne/g-skill-trident-z5-royal-neo-ddr5-32gb-2x16gb-8000mt-s-cl38-desktop-memory-kit-–-amd-expo-overclocking-ram-gold-heatspreader-1-45v-high-performance-udimm-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3493",
+      "name": "G.Skill Trident Z5 Royal Neo RGB 32GB Kit (2x16GB) DDR5 8000MT/s CL38 Silver Desktop RAM – AMD EXPO",
+      "category": "ram",
+      "priceEgp": 41999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-royal-neo-rgb-32gb-ddr5-8000mt-s-cl38-silver-ram-kit",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/RAM/G.Skill%20Trident%20Z5%20Royal/g-skill-trident-z5-royal-neo-rgb-32gb-kit-2x16gb-ddr5-8000mt-s-cl38-silver-desktop-ram-–-amd-expo-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3492",
+      "name": "G.Skill Trident Z5 Royal RGB 32GB Kit (2x16GB) DDR5 6400MHz CL30 Silver Desktop RAM",
+      "category": "ram",
+      "priceEgp": 41999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ram/g-skill-trident-z5-royal-rgb-32gb-ddr5-6400mhz-cl30-silver-ram-kit",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/RAM/G.Skill%20Trident%20Z5%20Royal/g-skill-trident-z5-royal-rgb-32gb-kit-2x16gb-ddr5-6400mhz-cl30-silver-desktop-ram-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2135",
+      "name": "990 PRO PCIe® 4.0 NVMe® SSD 4TB",
+      "category": "storage",
+      "priceEgp": 44999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/990-pro-pcie-4-0-nvme-ssd-4tb",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ssd/990-pro-pcie-4-0-nvme-ssd-4tb-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3507",
+      "name": "Addlink S70 Lite 256GB PCIe Gen3 x4 NVMe 1.4 M.2 2280 SSD – Up to 3,000MB/s Read, 1,000MB/s Write",
+      "category": "storage",
+      "priceEgp": 3500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/addlink-s70-lite-256gb-m2-pcie-gen3x4-2280-nvme",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/addlink%20/S70%20Lite%20256Gb/addlink-s70-lite-256gb-pcie-gen3-x4-nvme-1-4-m-2-2280-ssd-–-up-to-3-000mb-s-read-1-000mb-s-write-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2597",
+      "name": "Crucial E100 1TB PCIe 4.0 Gen4 2280 NVMe M.2 SSD - CT1000E100SSD8",
+      "category": "storage",
+      "priceEgp": 7999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/crucial-e100-1tb-pcie-4-0-gen4-2280-nvme-m-2-ssd-ct1000e100ssd8",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Crucial/E100%201T/crucial-e100-1tb-pcie-4-0-gen4-2280-nvme-m-2-ssd-ct1000e100ssd8-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2881",
+      "name": "Crucial E100 480GB M.2 NVMe PCIe Gen4 SSD – Up to 4700MB/s Read Speed, Internal Solid State Drive for Laptops & Desktops",
+      "category": "storage",
+      "priceEgp": 5500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/crucial-e100-480gb-m-2-nvme-pcie-gen4-ssd-–-up-to-4700mb-s-read-speed-internal-solid-state-drive-for-laptops-desktops",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Crucial/480G/crucial-e100-480gb-m-2-nvme-pcie-gen4-ssd-–-up-to-4700mb-s-read-speed-internal-solid-state-drive-for-laptops-desktops-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3065",
+      "name": "Crucial P3 Plus 1TB PCIe 4.0 NVMe M.2 Internal SSD | High-Performance 3D NAND Storage Drive, Up to 5000MB/s | CT1000P3PSSD8",
+      "category": "storage",
+      "priceEgp": 7749,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/crucial-p3-plus-1tb-pcie-4-0-nvme-m-2-internal-ssd-high-performance-3d-nand-storage-drive-up-to-5000mb-s-ct1000p3pssd8",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Crucial/P3%20PLUS%201TB/crucial-p3-plus-1tb-pcie-4-0-nvme-m-2-internal-ssd-high-performance-3d-nand-storage-drive-up-to-5000mb-s-ct1000p3pssd8-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3504",
+      "name": "Kingston NV3 1TB PCIe 4.0 NVMe M.2 2280 SSD – Up to 6000MB/s Read, 4000MB/s Write (SNV3S/1000G)",
+      "category": "storage",
+      "priceEgp": 7999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/kingston-nv3-pcie-4-0-nvme-ssd-1tb",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Kingston/1TB%20NV3%20/kingston-nv3-1tb-pcie-4-0-nvme-m-2-2280-ssd-–-up-to-6000mb-s-read-4000mb-s-write-snv3s-1000g-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3103",
+      "name": "Kingston NV3 2TB M.2 NVMe PCIe 4.0 Internal Solid State Drive – High-Performance Gen 4 SSD with 6000MB/s Read Speed, Reliable Storage for Gaming and Productivity PC",
+      "category": "storage",
+      "priceEgp": 15499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/kingston-nv3-2tb-m-2-nvme-pcie-4-0-internal-solid-state-drive-–-high-performance-gen-4-ssd-with-6000mb-s-read-speed-reliable-storage-for-gaming-and-productivity-pc",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Kingston/KINGSTON%20NV3%202TB/kingston-nv3-2tb-m-2-nvme-pcie-4-0-internal-solid-state-drive-–-high-performance-gen-4-ssd-with-6000mb-s-read-speed-reliable-storage-for-gaming-and-productivity-pc-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2050",
+      "name": "Lexar NM790 1TB M.2 Nvme Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 9499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/lexar-nm790-1tb-m-2-nvme-internal-solid-state-drive-ssd",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/1tb/lexar-nm790-1tb-m-2-nvme-internal-solid-state-drive-ssd-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2051",
+      "name": "Lexar NM790 2TB M.2 Nvme Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 15499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/lexar-nm790-2tb-m-2-nvme-internal-solid-state-drive-ssd",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/1tb/2tb/lexar-nm790-2tb-m-2-nvme-internal-solid-state-drive-ssd-1-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2238",
+      "name": "Lexar NM790 4TB M.2 Nvme Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 27000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/lexar-nm790-4tb-m-2-nvme-internal-solid-state-drive-ssd",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Lexar/4T%20790/lexar-nm790-4tb-m-2-nvme-internal-solid-state-drive-ssd-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2879",
+      "name": "Lexar NM800 PRO 512GB Gen4 NVMe M.2 SSD with Heatsink – Up to 7450MB/s Read, 7500MB/s Write, PCIe 4.0 Internal Drive for PS5, Gaming PCs & Creators – LNM800P512G-RN8NG",
+      "category": "storage",
+      "priceEgp": 5750,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/lexar-nm800-pro-512gb-gen4-nvme-m-2-ssd-with-heatsink-–-up-to-7450mb-s-read-7500mb-s-write-pcie-4-0-internal-drive-for-ps5-gaming-pcs-creators-–-lnm800p512g-rn8ng",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Lexar/512G%207500/lexar-nm800-pro-512gb-gen4-nvme-m-2-ssd-with-heatsink-–-up-to-7450mb-s-read-7500mb-s-write-pcie-4-0-internal-drive-for-ps5-gaming-pcs-creators-–-lnm800p512g-rn8ng-2-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3132",
+      "name": "Lexar NQ780 1TB PCIe Gen 4 NVMe M.2 2280 SSD – 6500MB/s High-Performance Internal Solid State Drive",
+      "category": "storage",
+      "priceEgp": 8499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/ssd/lexar-nq780-1tb-pcie-gen-4-nvme-m-2-2280-ssd-–-6500mb-s-high-performance-internal-solid-state-drive",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/Lexar/1TB%20NQ780/lexar-nq780-1tb-pcie-gen-4-nvme-m-2-2280-ssd-–-6500mb-s-high-performance-internal-solid-state-drive-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2322",
+      "name": "ASUS Prime AP-750G - 750W Gold 80+ Gold, Full Modular, PCIe 5.0",
+      "category": "psu",
+      "priceEgp": 4500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/asus-prime-ap-750g-750w-gold-80-gold-full-modular-pcie-5-0",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/ASUS/Prime%20750W%20Gold/asus-prime-ap-750g-750w-gold-80-gold-full-modular-pcie-5-0-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "1342",
+      "name": "EVGA 750W 80 Plus Gold Fully Modular Power Supply",
+      "category": "psu",
+      "priceEgp": 7200,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/evga-750w-80-plus-gold-fully-modular-power-supply-1",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/EVGA/750W/evga-750w-80-plus-gold-fully-modular-power-supply-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3270",
+      "name": "AeroCool LUX 650W Power Supply Unit – 80Plus Bronze Certified, Silent Fan, Flat Cables",
+      "category": "psu",
+      "priceEgp": 2850,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/aerocool-lux-650w-lux-650w-psu-80-plus-bronze-power-supply-650w-bronze-psu-aerocool-egypt-silent-12cm-fan-psu-88-efficiency-power-supply-gaming-pc-power-supply-aerocool-lux-series-flat-cables-psu",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Aerocool/Aerocool%20LUX%20650W/aerocool-lux-650w-power-supply-unit-–-80plus-bronze-certified-silent-fan-flat-cables-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3271",
+      "name": "AeroCool LUX 750W Power Supply Unit – 80Plus Bronze Certified, Silent 12cm Fan, Flat Cables",
+      "category": "psu",
+      "priceEgp": 2650,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/aerocool-lux-750w",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Aerocool/Aerocool%20LUX%20650W/aerocool-lux-750w-power-supply-unit-–-80plus-bronze-certified-silent-12cm-fan-flat-cables-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2312",
+      "name": "ANTEC 1000W NeoECO NE1000G M White — ATX3.0, Full Modular PSU, 80 Plus Gold",
+      "category": "psu",
+      "priceEgp": 8000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/antec-1000w-neoeco-ne1000g-m-white-—-atx3-0-full-modular-psu-80-plus-gold",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Antec/1000W%20NeoECO%20W/antec-1000w-neoeco-ne1000g-m-white-—-atx3-0-full-modular-psu-80-plus-gold-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3180",
+      "name": "Antec CSK Pro 1000W Power Supply – 80 Plus Bronze, Semi-Modular, ATX 3.1, High-Stability 1000W PSU with Enhanced Efficiency & Reliable Protection",
+      "category": "psu",
+      "priceEgp": 5500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/antec-csk-pro-1000w-power-supply-–-80-plus-bronze-semi-modular-atx-3-1-high-stability-1000w-psu-with-enhanced-efficiency-reliable-protection",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Antec/1000W/antec-csk-pro-1000w-power-supply-–-80-plus-bronze-semi-modular-atx-3-1-high-stability-1000w-psu-with-enhanced-efficiency-reliable-protection-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3181",
+      "name": "Antec CSK850 PRO 850W Semi-Modular Power Supply – 80 Plus Bronze, ATX 3.1 Compliant, PCIe 5.1 12V-2x6 (12VHPWR) Connector, 120mm Silent Fan, High-Performance PSU for Desktop Builds",
+      "category": "psu",
+      "priceEgp": 3600,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/antec-csk850-pro-850w-semi-modular-power-supply-–-80-plus-bronze-atx-3-1-compliant-pcie-5-1-12v-2x6-12vhpwr-connector-120mm-silent-fan-high-performance-psu-for-desktop-builds",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Antec/850W/antec-csk850-pro-850w-semi-modular-power-supply-–-80-plus-bronze-atx-3-1-compliant-pcie-5-1-12v-2x6-12vhpwr-connector-120mm-silent-fan-high-performance-psu-for-desktop-builds-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2893",
+      "name": "ANTEC GSK850 ATX 3.1 Power Supply – 850W 80 Plus Gold Certified, Full Modular PSU, PCIe 5.1 & ATX12V 3.1 Support, Japanese Capacitors, PhaseWave Design, Zero RPM Fan Mode, 120mm Silent Fan, 100-240V Input",
+      "category": "psu",
+      "priceEgp": 5250,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/antec-gsk850-atx-3-1-power-supply-–-850w-80-plus-gold-certified-full-modular-psu-pcie-5-1-atx12v-3-1-support-japanese-capacitors-phasewave-design-zero-rpm-fan-mode-120mm-silent-fan-100-240v-input",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Antec/GSK850/antec-gsk850-atx-3-1-power-supply-–-850w-80-plus-gold-certified-full-modular-psu-pcie-5-1-atx12v-3-1-support-japanese-capacitors-phasewave-design-zero-rpm-fan-mode-120mm-silent-fan-100-240v-input-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2894",
+      "name": "ANTEC GSK850 ATX 3.1 White Power Supply – 850W 80 Plus Gold, Full Modular PSU, PCIe 5.1 & ATX12V 3.1 Support, Japanese Capacitors, PhaseWave Design, Zero RPM Silent Fan Mode, 120mm White Fan, 100–240V Input",
+      "category": "psu",
+      "priceEgp": 5350,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/antec-gsk850-atx-3-1-white-power-supply-–-850w-80-plus-gold-full-modular-psu-pcie-5-1-atx12v-3-1-support-japanese-capacitors-phasewave-design-zero-rpm-silent-fan-mode-120mm-white-fan-100–240v-input",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Antec/850w%20w/antec-gsk850-atx-3-1-white-power-supply-–-850w-80-plus-gold-full-modular-psu-pcie-5-1-atx12v-3-1-support-japanese-capacitors-phasewave-design-zero-rpm-silent-fan-mode-120mm-white-fan-100–240v-input-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2005",
+      "name": "Antec NeoECO NE1300 1300W 80+ Gold Full Modular ATX3.0",
+      "category": "psu",
+      "priceEgp": 9500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/antec-neoeco-ne1300-1300w-80-gold-full-modular-atx3-0",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Antec/antec-neoeco-ne1300-1300w-80-gold-full-modular-atx3-0-350x350w.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2080",
+      "name": "ANTEC NeoECO, NE1000G M ATX3.0, 1000W Full Modular PSU, 80 Plus Gold",
+      "category": "psu",
+      "priceEgp": 7199,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/antec-neoeco-ne1000g-m-atx3-0-1000w-full-modular-psu-80-plus-gold",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/Antec/1000W%20NeoECO/antec-neoeco-ne1000g-m-atx3-0-1000w-full-modular-psu-80-plus-gold-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2743",
+      "name": "ASUS 1200W ROG-THOR-1200P3-GAMING 80Plus Platinum III Full Modular Power Supply",
+      "category": "psu",
+      "priceEgp": 22500,
+      "originalPriceEgp": 23500,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/power-supply/asus-1200w-rog-thor-1200p3-gaming-80plus-platinum-iii-full-modular-power-supply",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/PSU/ASUS/120W%20III/asus-1200w-rog-thor-1200p3-gaming-80plus-platinum-iii-full-modular-power-supply-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2183",
+      "name": "Cooler Master Sneaker X Gaming Case",
+      "category": "case",
+      "priceEgp": 49999,
+      "originalPriceEgp": 57000,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-sneaker-x-gaming-case",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/Sneaker%20X%20/cooler-master-sneaker-x-gaming-case-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2146",
+      "name": "Corsair 6500D Airflow Mid Tower Case Black",
+      "category": "case",
+      "priceEgp": 13000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-6500d-airflow-mid-tower-case-black",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/6500D/corsair-6500d-airflow-mid-tower-case-black-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "1990",
+      "name": "Asus ROG Hyperion GR701 EATX White Full Tower Case",
+      "category": "case",
+      "priceEgp": 22500,
+      "originalPriceEgp": 22700,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-hyperion-gr701-eatx-white-full-tower-case",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/ROG%20Hyperion/asus-rog-hyperion-gr701-eatx-white-full-tower-case-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3275",
+      "name": "AeroCool P500C Mid-Tower Gaming Case + PSU Lux Pro 750W Bronze",
+      "category": "psu",
+      "priceEgp": 5500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/aerocool-p500c-lux-pro-750w",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/AEROCOOL%20/P500C%20750W%20WHITE/aerocool-p500c-mid-tower-gaming-case-psu-lux-pro-750w-bronze-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3276",
+      "name": "AeroCool P500C Mid-Tower Gaming Case + PSU Lux Pro 750W Bronze - Black",
+      "category": "psu",
+      "priceEgp": 5500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/aerocool-p500c-black-750w",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/AEROCOOL%20/P500C%20750W%20BLACK/aerocool-p500c-mid-tower-gaming-case-psu-lux-pro-750w-bronze-black-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3410",
+      "name": "Antec AX1000 Lite Mid Tower Case with 4 ARGB Fans & Antec Atom B750 80+ Bronze PSU Bundle – Black",
+      "category": "psu",
+      "priceEgp": 4850,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax1000-lite-mid-tower-case-with-4-argb-fans-antec-atom-b750-80-bronze-psu-bundle-–-black",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX1000+750w/antec-ax1000-lite-mid-tower-case-with-4-argb-fans-antec-atom-b750-80-bronze-psu-bundle-–-black-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3343",
+      "name": "Antec AX1000 Lite Mid-Tower Gaming Case with 4x ARGB PWM Fans & Antec Atom G750 750W 80+ Gold Semi-Modular PSU",
+      "category": "psu",
+      "priceEgp": 5800,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax1000-lite-mid-tower-gaming-case-with-4x-argb-pwm-fans-antec-atom-g750-750w-80-gold-semi-modular-psu",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX1000+750w/antec-ax1000-lite-mid-tower-gaming-case-with-4x-argb-pwm-fans-antec-atom-g750-750w-80-gold-semi-modular-psu-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3642",
+      "name": "Antec AX65 ARGB Mid Tower Case + Antec Atom B750 PSU - Black",
+      "category": "psu",
+      "priceEgp": 3999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax65-case-atom-b750-psu",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX65+B750/antec-ax65-argb-mid-tower-case-antec-atom-b750-psu-black-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3543",
+      "name": "Antec AX65 ARGB Mid Tower Case with Atom V450 450W PSU",
+      "category": "psu",
+      "priceEgp": 2550,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax65-argb-1",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX65-V450/antec-ax65-argb-mid-tower-case-with-atom-v450-450w-psu-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3542",
+      "name": "Antec AX65 ARGB Mid Tower Case with Atom V650 650W PSU",
+      "category": "psu",
+      "priceEgp": 3150,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax65-argb",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/%20AX65-V650/antec-ax65-argb-mid-tower-case-with-atom-v650-650w-psu-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2301",
+      "name": "Antec C3 ARGB Black Mid-Tower Case",
+      "category": "case",
+      "priceEgp": 4000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c3-argb-black-mid-tower-case",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c3%20black/antec-c3-argb-black-mid-tower-case-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2302",
+      "name": "Antec C3 ARGB White Mid-Tower Case",
+      "category": "case",
+      "priceEgp": 4200,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c3-argb-white-mid-tower-case",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c3%20white/antec-c3-argb-white-mid-tower-case-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3453",
+      "name": "Aerocool Core Plus ARGB Top-Down CPU Air Cooler – 110W TDP, 83mm Low Profile",
+      "category": "cpu",
+      "priceEgp": 799,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/aerocool-core-plus-argb-top-down-cpu-air-cooler",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Aerocool%20Core%20plus%20/aerocool-core-plus-argb-top-down-cpu-air-cooler-–-110w-tdp-83mm-low-profile-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2531",
+      "name": "Antec Connect C120R Reverse ARGB 3 Fan Pack Black",
+      "category": "cooling",
+      "priceEgp": 1600,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-connect-c120r-reverse-argb-3-fan-pack-black",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/C120R/antec-connect-c120r-reverse-argb-3-fan-pack-black-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2530",
+      "name": "Antec Connect C120R Reverse ARGB 3 Fan Pack White",
+      "category": "cooling",
+      "priceEgp": 1600,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-connect-c120r-reverse-argb-3-fan-pack-white",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/C120R/antec-connect-c120r-reverse-argb-3-fan-pack-white-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3324",
+      "name": "Antec Skeleton 360mm ARGB Liquid Cooler Skeleton Frame Pump 3x 120mm PWM Fans – BLACK Edition",
+      "category": "cooling",
+      "priceEgp": 3500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-skeleton-360mm-argb-liquid-cooler-skeleton-frame-pump-3x-120mm-pwm-fans-black",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/Skeleton%20360%20ARGB/antec-skeleton-360mm-argb-liquid-cooler-skeleton-frame-pump-3x-120mm-pwm-fans-–-black-edition-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2407",
+      "name": "AORUS WATERFORCE II 360 Liquid CPU Cooler, 360mm Radiator with 3x120mm Low Noise ARGB Fans, Compatible with Intel LGA1851, LGA1700, and AMD AM5 (GP-AORUS WATERFORCE II 360)",
+      "category": "cpu",
+      "priceEgp": 6149,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/aorus-waterforce-ii-360-liquid-cpu-cooler-360mm-radiator-with-3x120mm-low-noise-argb-fans-compatible-with-intel-lga1851-lga1700-and-amd-am5-gp-aorus-waterforce-ii-360",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/aorus%20ii%20360%20black/aorus-waterforce-ii-360-liquid-cpu-cooler-360mm-radiator-with-3x120mm-low-noise-argb-fans-compatible-with-intel-lga1851-lga1700-and-amd-am5-gp-aorus-waterforce-ii-360-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2508",
+      "name": "ARCTIC Freezer 36 ARGB CPU Air Cooler Black",
+      "category": "cpu",
+      "priceEgp": 2500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-freezer-36-argb-cpu-air-cooler-black",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/%20Freezer%2036/arctic-freezer-36-argb-cpu-air-cooler-black-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3429",
+      "name": "Arctic Freezer 36 ARGB White Tower Air CPU Cooler – Dual P12 PWM Fans, Intel LGA 1851/1700 & AMD AM5",
+      "category": "cpu",
+      "priceEgp": 2600,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-freezer-36-argb-white-tower-air-cpu-cooler",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%2036-W/arctic-freezer-36-argb-white-tower-air-cpu-cooler-–-dual-p12-pwm-fans-intel-lga-1851-1700-amd-am5-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3093",
+      "name": "ARCTIC Freezer 36 CPU Air Cooler – Dual 120mm PWM Fans, High-Performance Tower Cooler, Compatible with Intel LGA1851/LGA1700 and AMD AM5/AM4 – Black",
+      "category": "cpu",
+      "priceEgp": 2300,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-freezer-36-cpu-air-cooler-–-dual-120mm-pwm-fans-high-performance-tower-cooler-compatible-with-intel-lga1851-lga1700-and-amd-am5-am4-–-black",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Freezer%2036%20(Black)/arctic-freezer-36-cpu-air-cooler-–-dual-120mm-pwm-fans-high-performance-tower-cooler-compatible-with-intel-lga1851-lga1700-and-amd-am5-am4-–-black-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2510",
+      "name": "Arctic Liquid Freezer III 360 A-RGB (Black) AIO CPU Cooler - Intel 1851/1700 & AMD AM5/AM4 Compatible - 360mm Radiator - Triple P12 PWM A-RGB Fans - Copper Cold Plate - MX-6 Pre-Applied Thermal Paste - Adjustable A-RGB Lighting",
+      "category": "cpu",
+      "priceEgp": 6500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-360-a-rgb-black-aio-cpu-cooler-intel-1851-1700-amd-am5-am4-compatible-360mm-radiator-triple-p12-pwm-a-rgb-fans-copper-cold-plate-mx-6-pre-applied-thermal-paste-adjustable-a-rgb-lighting",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%20360mm%20B/arctic-liquid-freezer-iii-360-a-rgb-black-aio-cpu-cooler-intel-1851-1700-amd-am5-am4-compatible-360mm-radiator-triple-p12-pwm-a-rgb-fans-copper-cold-plate-mx-6-pre-applied-thermal-paste-adjustable-a-rgb-lighting-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2509",
+      "name": "ARCTIC Liquid Freezer III 360 A-RGB - CPU AIO Water Cooler Water Cooling PC Intel AMD Efficient PWM-Controlled Pump Fan 200 2000 RPM LGA1851 and LGA1700 Contact Frame - White",
+      "category": "cpu",
+      "priceEgp": 6650,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-360-a-rgb-cpu-aio-water-cooler-water-cooling-pc-intel-amd-efficient-pwm-controlled-pump-fan-200-2000-rpm-lga1851-and-lga1700-contact-frame-white",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%20360mm%20W/arctic-liquid-freezer-iii-360-a-rgb-cpu-aio-water-cooler-water-cooling-pc-intel-amd-efficient-pwm-controlled-pump-fan-200-2000-rpm-lga1851-and-lga1700-contact-frame-white-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
       "retailerId": "alfrensia",
       "externalId": "pny-geforce-rtx-5070-ti-argb-overclocked-triple-fan-16gb-gddr7-graphics-card",
       "name": "PNY GeForce RTX 5070 Ti ARGB Overclocked Triple Fan 16GB GDDR7 Graphics Card",
@@ -787,6 +3195,1560 @@
       "stockStatus": "out_of_stock",
       "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-5600-tray-processor/",
       "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-7-5800x3d-10th-year-am4-anniversary-edition-with-carbice-ice-pad-desktop-processor",
+      "name": "AMD Ryzen 7 5800X3D 10th Year AM4 Anniversary Edition With Carbice Ice Pad Desktop Processor",
+      "category": "cpu",
+      "priceEgp": 19246,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-7-5800x3d-10th-year-am4-anniversary-edition-with-carbice-ice-pad-desktop-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "intel-core-i5-14400-tray-processor",
+      "name": "Intel Core I5 14400 Tray Processor",
+      "category": "cpu",
+      "priceEgp": 9688,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/intel-core-i5-14400-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-9-9950x3d2-dual-edition-desktop-processor",
+      "name": "AMD Ryzen 9 9950X3D2 Dual Edition Desktop Processor",
+      "category": "cpu",
+      "priceEgp": 55388,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-9-9950x3d2-dual-edition-desktop-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "intel-core-ultra-7-270k-plus-processor",
+      "name": "Intel Core Ultra 7 270K Plus Processor",
+      "category": "cpu",
+      "priceEgp": 19578,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/intel-core-ultra-7-270k-plus-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "intel-core-ultra-5-250k-plus-processor",
+      "name": "Intel Core Ultra 5 250K Plus Processor",
+      "category": "cpu",
+      "priceEgp": 14108,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/intel-core-ultra-5-250k-plus-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-7600-tray-processor",
+      "name": "AMD Ryzen 5 7600 Tray Processor",
+      "category": "cpu",
+      "priceEgp": 8489,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-7600-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-7400-tray-processor",
+      "name": "AMD Ryzen 5 7400 Tray Processor",
+      "category": "cpu",
+      "priceEgp": 6499,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-7400-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-8600g-tray-processor",
+      "name": "AMD Ryzen 5 8600G Tray Processor",
+      "category": "cpu",
+      "priceEgp": 9758,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-8600g-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "intel-core-i5-12400f-tray-processor",
+      "name": "Intel Core i5 12400F Tray Processor",
+      "category": "cpu",
+      "priceEgp": 7158,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/intel-core-i5-12400f-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-7500x3d-tray-processor",
+      "name": "AMD Ryzen 5 7500X3D Tray Processor",
+      "category": "cpu",
+      "priceEgp": 12518,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-7500x3d-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-7-5700-tray-processor",
+      "name": "AMD Ryzen 7 5700 Tray Processor",
+      "category": "cpu",
+      "priceEgp": 6738,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-7-5700-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-5500gt-tray-processor",
+      "name": "AMD Ryzen 5 5500GT Tray Processor",
+      "category": "cpu",
+      "priceEgp": 5599,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-5500gt-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-rog-strix-b550-f-gaming-socket-am4-ddr4-atx-motherboard",
+      "name": "ASUS ROG Strix B550-F Gaming Socket AM4 DDR4 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 8799,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-rog-strix-b550-f-gaming-socket-am4-ddr4-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-prime-b550-plus-socket-am4-ddr4-atx-motherboard",
+      "name": "ASUS Prime B550-Plus Socket AM4 DDR4 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 5749,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-prime-b550-plus-socket-am4-ddr4-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-tuf-gaming-a520m-plus-ii-v2-socket-am4-ddr4-micro-atx-motherboard",
+      "name": "ASUS TUF Gaming A520M-Plus II V2 Socket AM4 DDR4 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 4050,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-tuf-gaming-a520m-plus-ii-v2-socket-am4-ddr4-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-rog-strix-b550-a-gaming-socket-am4-ddr4-atx-motherboard",
+      "name": "ASUS ROG Strix B550-A Gaming Socket AM4 DDR4 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 8426,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-rog-strix-b550-a-gaming-socket-am4-ddr4-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-tuf-gaming-b850i-wifi-neo-socket-am5-ddr5-mini-itx-motherboard",
+      "name": "ASUS TUF Gaming B850I WiFi Neo Socket AM5 DDR5 Mini ITX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 11138,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-tuf-gaming-b850i-wifi-neo-socket-am5-ddr5-mini-itx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-tuf-gaming-b550-plus-wifi-ii-socket-am4-ddr4-atx-motherboard",
+      "name": "ASUS TUF Gaming B550-Plus WiFi II Socket AM4 DDR4 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 6799,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-tuf-gaming-b550-plus-wifi-ii-socket-am4-ddr4-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-prime-b550m-a-csm-socket-am4-ddr4-micro-atx-motherboard",
+      "name": "ASUS Prime B550M-A/CSM Socket AM4 DDR4 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 4999,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-prime-b550m-a-csm-socket-am4-ddr4-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "gigabyte-x870e-aero-x3d-dark-wood-socket-am5-ddr5-atx-motherboard",
+      "name": "Gigabyte X870E Aero X3D Dark Wood Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 21999,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/gigabyte-x870e-aero-x3d-dark-wood-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "gigabyte-b850-a-stealth-socket-am5-ddr5-atx-motherboard",
+      "name": "GIGABYTE B850 AORUS STEALTH Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 15499,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/gigabyte-b850-a-stealth-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "gigabyte-z890-a-elite-wifi7-p-socket-lga1851-ddr5-atx-motherboard",
+      "name": "GIGABYTE Z890 AORUS ELITE WIFI7 PLUS Socket LGA1851 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 16448,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/gigabyte-z890-a-elite-wifi7-p-socket-lga1851-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-prime-b550m-k-wifi-socket-am4-ddr4-micro-atx-motherboard",
+      "name": "ASUS PRIME B550M-K WiFi Socket AM4 DDR4 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 4749,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-prime-b550m-k-wifi-socket-am4-ddr4-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-prime-b850m-a-csm-socket-am5-ddr5-micro-atx-motherboard",
+      "name": "ASUS PRIME B850M-A-CSM Socket AM5 DDR5 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 7999,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-prime-b850m-a-csm-socket-am5-ddr5-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "gigabyte-b850m-force-wifi6e-socket-am5-ddr5-micro-atx-motherboard",
+      "name": "Gigabyte B850M FORCE WIFI6E Socket AM5 DDR5 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 7999,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/gigabyte-b850m-force-wifi6e-socket-am5-ddr5-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "gigabyte-b760m-gaming-x-ddr4-gen5-socket-lga1700-ddr4-micro-atx-motherboard",
+      "name": "Gigabyte B760M GAMING X DDR4 GEN5 Socket LGA1700 DDR4 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 7218,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/gigabyte-b760m-gaming-x-ddr4-gen5-socket-lga1700-ddr4-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "gigabyte-b760m-d3hp-ddr4-socket-lga1700-ddr4-micro-atx-motherboard",
+      "name": "Gigabyte B760M D3HP DDR4 Socket LGA1700 DDR4 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 5799,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/gigabyte-b760m-d3hp-ddr4-socket-lga1700-ddr4-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "msi-mag-x870e-tomahawk-max-wifi-pz-socket-am5-ddr5-back-connect-atx-motherboard",
+      "name": "MSI MAG X870E TOMAHAWK MAX WIFI PZ Socket AM5 DDR5 Back-Connect ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 19628,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/msi-mag-x870e-tomahawk-max-wifi-pz-socket-am5-ddr5-back-connect-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "msi-mag-b850-gaming-plus-max-wifi-socket-am5-ddr5-atx-motherboard",
+      "name": "MSI MAG B850 GAMING PLUS MAX WIFI Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 11999,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/msi-mag-b850-gaming-plus-max-wifi-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-proart-b850-creator-wifi-neo-socket-am5-ddr5-atx-motherboard",
+      "name": "ASUS ProArt B850-CREATOR WIFI NEO Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 14499,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-proart-b850-creator-wifi-neo-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-rog-crosshair-x870e-dark-hero-socket-am5-ddr5-atx-motherboard",
+      "name": "ASUS ROG CROSSHAIR X870E DARK HERO Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 38728,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-rog-crosshair-x870e-dark-hero-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-rog-strix-x870e-e-gaming-wifi7-neo-socket-am5-ddr5-atx-motherboard",
+      "name": "ASUS ROG STRIX X870E-E GAMING WIFI7 NEO Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 30238,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-rog-strix-x870e-e-gaming-wifi7-neo-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-rog-strix-b850-a-gaming-wifi7-neo-socket-am5-ddr5-atx-motherboard",
+      "name": "ASUS ROG STRIX B850-A GAMING WIFI7 NEO Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 14499,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-rog-strix-b850-a-gaming-wifi7-neo-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-b850-max-gaming-wifi-socket-am5-ddr5-atx-motherboard",
+      "name": "ASUS B850 MAX GAMING WIFI Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 9499,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-b850-max-gaming-wifi-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-tuf-gaming-a520m-plus-ii-socket-am4-ddr4-micro-atx-motherboard",
+      "name": "ASUS TUF GAMING A520M-PLUS II Socket AM4 DDR4 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 4050,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-tuf-gaming-a520m-plus-ii-socket-am4-ddr4-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-rog-strix-b550-f-gaming-wifi-ii-socket-am4-ddr4-motherboard",
+      "name": "ASUS ROG STRIX B550-F GAMING WIFI II Socket AM4 DDR4 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 8499,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-rog-strix-b550-f-gaming-wifi-ii-socket-am4-ddr4-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "gigabyte-b860m-eagle-wifi6-v2-micro-atx-motherboard",
+      "name": "Gigabyte B860M EAGLE WIFI6 V2 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 8399,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/gigabyte-b860m-eagle-wifi6-v2-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "msi-mag-x870e-tomahawk-max-wifi-socket-am5-ddr5-atx-motherboard",
+      "name": "MSI MAG X870E Tomahawk Max WiFi Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 17999,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/msi-mag-x870e-tomahawk-max-wifi-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/06/MSI-MAG-X870E-Tomahawk-Max-WiFi-Socket-AM5-DDR5-ATX-Motherboard-1-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "msi-meg-x870e-ace-max-socket-am5-ddr5-atx-motherboard",
+      "name": "MSI MEG X870E Ace Max Socket AM5 DDR5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 37138,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/msi-meg-x870e-ace-max-socket-am5-ddr5-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-prime-a620am-k-am5-ddr5-micro-atx-motherboard",
+      "name": "ASUS PRIME A620AM-K AM5 DDR5 Micro ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 4099,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-prime-a620am-k-am5-ddr5-micro-atx-motherboard/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-vengeance-rgb-32gb-2x16gb-ddr5-6400mhz-cl36-black-desktop-memory",
+      "name": "Corsair Vengeance RGB 32GB 2x16GB DDR5 6400MHz CL36 Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 29708,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-rgb-32gb-2x16gb-ddr5-6400mhz-cl36-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "g-skill-trident-z5-neo-rgb-64gb-2x32gb-ddr5-6000mhz-cl36-desktop-memory",
+      "name": "G Skill Trident Z5 Neo RGB 64GB (2x32GB) DDR5 6000MHz CL36 Desktop Memory",
+      "category": "ram",
+      "priceEgp": 44000,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/g-skill-trident-z5-neo-rgb-64gb-2x32gb-ddr5-6000mhz-cl36-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "kingston-ddr4-3200mhz-cl22-16gb-laptop-memory",
+      "name": "Kingston DDR4 3200MHz CL22 16GB Laptop Memory",
+      "category": "ram",
+      "priceEgp": 5200,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/kingston-ddr4-3200mhz-cl22-16gb-laptop-memory/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/07/Kingston-DDR4-3200MHz-CL22-16GB-Laptop-Memory-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "g-skill-trident-z5-neo-rgb-96gb-2x48gb-ddr5-6000mhz-cl30-intel-xmp-3-0-and-amd-expo-black-desktop-memory",
+      "name": "G Skill Trident Z5 Neo RGB 96GB 2x48GB DDR5 6000MHz CL30 INTEL XMP 3.0 and AMD EXPO Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 68251,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/g-skill-trident-z5-neo-rgb-96gb-2x48gb-ddr5-6000mhz-cl30-intel-xmp-3-0-and-amd-expo-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "g-skill-trident-z5-royal-96gb-2x48gb-ddr5-6800mhz-cl34-silver-desktop-memory",
+      "name": "G Skill Trident Z5 Royal 96GB 2x48GB DDR5 6800MHz CL34 Silver Desktop Memory",
+      "category": "ram",
+      "priceEgp": 69001,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/g-skill-trident-z5-royal-96gb-2x48gb-ddr5-6800mhz-cl34-silver-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-fit-v-32gb-2x16gb-ddr5-6400mhz-cl30-jet-black-desktop",
+      "name": "Klevv Fit V 32GB 2x16GB DDR5 6400MHz CL30 Jet Black Desktop",
+      "category": "ram",
+      "priceEgp": 26920,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-fit-v-32gb-2x16gb-ddr5-6400mhz-cl30-jet-black-desktop/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-fit-v-16gb-1x16gb-ddr5-6400mhz-cl32-jet-black-desktop-memory",
+      "name": "Klevv Fit V 16GB 1x16GB DDR5 6400MHz CL32 Jet Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 14038,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-fit-v-16gb-1x16gb-ddr5-6400mhz-cl32-jet-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-vengeance-lpx-8gb-ddr4-3200mhz-cl16-black-desktop-memory",
+      "name": "Corsair Vengeance LPX 8GB DDR4 3200MHz CL16 Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 3658,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-lpx-8gb-ddr4-3200mhz-cl16-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "g-skill-trident-z5-neo-rgb-32gb-2x16gb-ddr5-6000mhz-cl36-intel-xmp-and-amd-expo-white-desktop-memory",
+      "name": "G Skill Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz CL36 Intel XMP and AMD EXPO White Desktop Memory",
+      "category": "ram",
+      "priceEgp": 34598,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/g-skill-trident-z5-neo-rgb-32gb-2x16gb-ddr5-6000mhz-cl36-intel-xmp-and-amd-expo-white-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-vengeance-rgb-64gb-2x32gb-ddr5-5600mhz-cl40-intel-xmp-white-desktop-memory",
+      "name": "Corsair Vengeance RGB 64GB (2x32GB) DDR5 5600MHz CL40 Intel XMP White Desktop Memory",
+      "category": "ram",
+      "priceEgp": 51258,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-rgb-64gb-2x32gb-ddr5-5600mhz-cl40-intel-xmp-white-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "kingston-fury-beast-16gb-ddr5-6000mhz-cl36-amd-expo-and-intel-xmp-black-desktop-memory",
+      "name": "Kingston Fury Beast 16GB DDR5 6000MHz CL36 AMD EXPO and Intel XMP Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 14099,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/kingston-fury-beast-16gb-ddr5-6000mhz-cl36-amd-expo-and-intel-xmp-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-vengeance-rgb-128gb-2x64gb-ddr5-6000mhz-cl40-xmp-3-0-black-desktop-memory",
+      "name": "Corsair Vengeance RGB 128GB (2x64GB) DDR5 6000MHz CL40 XMP 3.0 Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 115328,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-rgb-128gb-2x64gb-ddr5-6000mhz-cl40-xmp-3-0-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-vengeance-64gb-2x32gb-ddr5-6000mhz-cl40-amd-expo-and-intel-xmp-grey-desktop-memory",
+      "name": "Corsair Vengeance 64GB (2x32GB) DDR5 6000MHz CL40 AMD EXPO and Intel XMP Grey Desktop Memory",
+      "category": "ram",
+      "priceEgp": 55098,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-64gb-2x32gb-ddr5-6000mhz-cl40-amd-expo-and-intel-xmp-grey-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-bolt-v-32gb-2x16gb-ddr5-6000mhz-cl28-intel-xmp-3-0-and-amd-expo-charcoal-grey-desktop-memory",
+      "name": "Klevv Bolt V 32GB (2x16GB) DDR5 6000MHz CL28 Intel XMP 3.0 and AMD EXPO Charcoal Grey Desktop Memory",
+      "category": "ram",
+      "priceEgp": 28558,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-bolt-v-32gb-2x16gb-ddr5-6000mhz-cl28-intel-xmp-3-0-and-amd-expo-charcoal-grey-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-bolt-v-32gb-2x16gb-ddr5-6000mhz-cl28-intel-xmp-3-0-and-amd-expo-pure-white-desktop-memory",
+      "name": "Klevv Bolt V 32GB (2x16GB) DDR5 6000MHz CL28 Intel XMP 3.0 and AMD EXPO Pure White Desktop Memory",
+      "category": "ram",
+      "priceEgp": 28558,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-bolt-v-32gb-2x16gb-ddr5-6000mhz-cl28-intel-xmp-3-0-and-amd-expo-pure-white-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-vengeance-rgb-128gb-2x64gb-ddr5-6400mhz-cl42-intel-xmp-black-desktop-memory",
+      "name": "Corsair Vengeance RGB 128GB (2x64GB) DDR5 6400MHz CL42 Intel XMP Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 121738,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-rgb-128gb-2x64gb-ddr5-6400mhz-cl42-intel-xmp-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-cras-v-rgb-48gb-2x24gb-ddr5-6000mhz-cl28-intel-xmp-and-amd-expo-brilliant-white-desktop-memory",
+      "name": "Klevv Cras V RGB 48GB (2x24GB) DDR5 6000MHz CL28 Intel XMP and AMD EXPO Brilliant White Desktop Memory",
+      "category": "ram",
+      "priceEgp": 33500,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-cras-v-rgb-48gb-2x24gb-ddr5-6000mhz-cl28-intel-xmp-and-amd-expo-brilliant-white-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "kingston-fury-beast-16gb-ddr5-5600mhz-cl36-amd-expo-with-intel-xmp-black-desktop-memory",
+      "name": "Kingston Fury Beast 16GB DDR5 5600MHz CL36 AMD EXPO With Intel XMP Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 10501,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/kingston-fury-beast-16gb-ddr5-5600mhz-cl36-amd-expo-with-intel-xmp-black-desktop-memory/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/10/Kingston-Fury-Beast-16GB-DDR5-5600MHz-CL36-AMD-EXPO-With-Intel-XMP-Black-Desktop-Memory-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-cras-v-rgb-48gb-24gbx2-ddr5-6000mhz-cl28-obsidian-black-desktop-memory",
+      "name": "Klevv Cras V RGB 48GB (24GBx2) DDR5 6000Mhz CL28 Obsidian Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 40878,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-cras-v-rgb-48gb-24gbx2-ddr5-6000mhz-cl28-obsidian-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-fit-v-16gb-ddr5-6000mhz-cl30-intel-xmp-and-amd-expo-jet-black-desktop-memory",
+      "name": "Klevv Fit V 16GB DDR5 6000Mhz CL30 Intel XMP and AMD Expo Jet Black Desktop Memory",
+      "category": "ram",
+      "priceEgp": 3220,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-fit-v-16gb-ddr5-6000mhz-cl30-intel-xmp-and-amd-expo-jet-black-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-fit-v-32gb-16gbx2-ddr5-6000mhz-cl28-intel-xmp-and-amd-expo-jet-black-gaming-memory",
+      "name": "Klevv Fit V 32GB (16GBx2) DDR5 6000Mhz CL28 Intel XMP and AMD Expo Jet Black Gaming Memory",
+      "category": "ram",
+      "priceEgp": 5000,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-fit-v-32gb-16gbx2-ddr5-6000mhz-cl28-intel-xmp-and-amd-expo-jet-black-gaming-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-cras-v-rgb-rog-certified-32gb-16gbx2-ddr5-6200mhz-cl32-white-desktop-memory",
+      "name": "Klevv Cras V RGB ROG Certified 32GB (16GBx2) DDR5 6200Mhz CL32 White Desktop Memory",
+      "category": "ram",
+      "priceEgp": 12240,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-cras-v-rgb-rog-certified-32gb-16gbx2-ddr5-6200mhz-cl32-white-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "klevv-fit-v-ultimate-32gb-16gbx2-ddr5-6000mhz-cl28-white-desktop-memory",
+      "name": "Klevv Fit V Ultimate 32GB (16GBx2) DDR5 6000Mhz CL28 White Desktop Memory",
+      "category": "ram",
+      "priceEgp": 27458,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/klevv-fit-v-ultimate-32gb-16gbx2-ddr5-6000mhz-cl28-white-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-vengeance-32gb-2x16gb-ddr5-6400mhz-cl32-desktop-memory",
+      "name": "Corsair Vengeance 32GB (2X16GB) DDR5 6400Mhz CL32 Desktop Memory",
+      "category": "ram",
+      "priceEgp": 17001,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-32gb-2x16gb-ddr5-6400mhz-cl32-desktop-memory/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sabrent-rocket-4-plus-1tb-pcie-gen-4-nvme-ssd-heatsink",
+      "name": "Sabrent Rocket 4 Plus 1TB PCIe Gen 4 NVMe SSD with Heatsink",
+      "category": "storage",
+      "priceEgp": 7080,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sabrent-rocket-4-plus-1tb-pcie-gen-4-nvme-ssd-heatsink/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/03/sabrent-Rocket-4-Plus-SB-RKTG-GHSK-1TB-Gen-4-Nvme-With-Heatsink-Internal-Solid-State-Drive-SSD-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sabrent-rocket-4-plus-2tb-gen-4-nvme-ssd-heatsink",
+      "name": "Sabrent Rocket 4 Plus 2TB Gen 4 NVMe SSD with Heatsink",
+      "category": "storage",
+      "priceEgp": 12280,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sabrent-rocket-4-plus-2tb-gen-4-nvme-ssd-heatsink/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/03/sabrent-Rocket-4-Plus-SB-RKTG-GHSK-2TB-Gen-4-Nvme-With-Heatsink-Internal-Solid-State-Drive-SSD-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sabrent-rocket-4-plus-1tb-pcie-gen-4-nvme-ssd-with-heatsink-2",
+      "name": "Sabrent Rocket 4 Plus 1TB PCIe Gen 4 NVMe SSD with Heatsink",
+      "category": "storage",
+      "priceEgp": 6560,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sabrent-rocket-4-plus-1tb-pcie-gen-4-nvme-ssd-with-heatsink-2/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/03/sabrent-Rocket-4-Plus-SB-RKTG-GHSK-1TB-Gen-4-Nvme-With-Heatsink-Internal-Solid-State-Drive-SSD-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sabrent-rocket-4-plus-2tb-pcie-gen-4-nvme-ssd-with-heatsink",
+      "name": "Sabrent Rocket 4 Plus 2TB PCIe Gen 4 NVMe SSD with PS5 Heatsink",
+      "category": "storage",
+      "priceEgp": 11820,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sabrent-rocket-4-plus-2tb-pcie-gen-4-nvme-ssd-with-heatsink/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/03/sabrent-rocket-4-plus-pshs-2tb-gallery-2-300x300.jpg",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "kingston-xs1000r-1tb-usb-3-2-gen-2-1050mbs-red-external-solid-state-drive",
+      "name": "Kingston XS1000R 1TB USB 3.2 Gen 2 1050MBs Red External Solid State Drive",
+      "category": "storage",
+      "priceEgp": 8399,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/kingston-xs1000r-1tb-usb-3-2-gen-2-1050mbs-red-external-solid-state-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "hikvision-c1-64gb-92mbps-microsdhc-memory-card",
+      "name": "Hikvision C1 64GB 92MBps MicroSDHC Memory Card",
+      "category": "storage",
+      "priceEgp": 550,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/hikvision-c1-64gb-92mbps-microsdhc-memory-card/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/07/Hikvision-C1-64GB-92MBps-MicroSDHC-Memory-Card-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "ugreen-cm302-dual-protocol-m-2-nvme-and-sata-ssd-to-pcie-3-0-x4-32gbps-high-speed-data-transfer-with-aluminum-heatsink-supports-2230-2242-2260-2280-sizes-pcie-expansion-card",
+      "name": "Ugreen CM302 Dual Protocol M.2 NVMe and SATA SSD to PCIe 3.0 x4 32Gbps High Speed Data Transfer With Aluminum Heatsink Supports 2230 2242 2260 2280 Sizes PCIe Expansion Card",
+      "category": "storage",
+      "priceEgp": 550,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/ugreen-cm302-dual-protocol-m-2-nvme-and-sata-ssd-to-pcie-3-0-x4-32gbps-high-speed-data-transfer-with-aluminum-heatsink-supports-2230-2242-2260-2280-sizes-pcie-expansion-card/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/03/Ugreen-CM302-Dual-Protocol-M.2-NVMe-and-SATA-SSD-to-PCIe-3.0-x4-32Gbps-High-Speed-Data-Transfer-With-Aluminum-Heatsink-Supports-2230-2242-2260-2280-Sizes-PCIe-Expansion-Card-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "wd-blue-sn5100-2tb-7100mbps-m-2-2280-pcie-gen-4-nvme-ssd",
+      "name": "Wd Blue Sn5100 2Tb 7100MBps M.2 2280 Pcie Gen 4 Nvme Ssd",
+      "category": "storage",
+      "priceEgp": 13499,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/wd-blue-sn5100-2tb-7100mbps-m-2-2280-pcie-gen-4-nvme-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "hiksemi-wave-256gb-2-5-inch-sata-iii-3d-nand-internal-solid-state-drive-ssd",
+      "name": "Hiksemi Wave 256GB 2.5 Inch SATA III 3D NAND Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 2150,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/hiksemi-wave-256gb-2-5-inch-sata-iii-3d-nand-internal-solid-state-drive-ssd/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/02/Hiksemi-Wave-256GB-2.5-Inch-SATA-III-3D-NAND-Internal-Solid-State-Drive-SSD-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "hiksemi-wave-512gb-2-5-inch-sata-iii-3d-nand-internal-solid-state-drive-ssd",
+      "name": "Hiksemi Wave 512GB 2.5 Inch SATA III 3D NAND Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 3255,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/hiksemi-wave-512gb-2-5-inch-sata-iii-3d-nand-internal-solid-state-drive-ssd/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/02/Hiksemi-Wave-512GB-2.5-Inch-SATA-III-3D-NAND-Internal-Solid-State-Drive-SSD-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "wd-red-plus-wd40efzz-4tb-5400rpm-128mb-cache-3-5-inch-sata-internal-hard-drive",
+      "name": "Wd Red Plus WD40EFZZ 4Tb 5400Rpm 128Mb Cache 3.5 Inch Sata Internal Hard Drive",
+      "category": "storage",
+      "priceEgp": 15918,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/wd-red-plus-wd40efzz-4tb-5400rpm-128mb-cache-3-5-inch-sata-internal-hard-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "wd-red-plus-wd20efpx-2tb-5400rpm-64mb-cache-3-5-inch-sata-internal-hard-drive",
+      "name": "Wd Red Plus WD20EFPX 2Tb 5400Rpm 64Mb Cache 3.5 Inch Sata Internal Hard Drive",
+      "category": "storage",
+      "priceEgp": 6720,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/wd-red-plus-wd20efpx-2tb-5400rpm-64mb-cache-3-5-inch-sata-internal-hard-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "crucial-e100-gen4-2tb-pcie-4-0-nvme-m-2-2280-5000mbs-read-4500mbs-write-internal-solid-state-drive-ssd",
+      "name": "Crucial E100 Gen4 2Tb Pcie 4.0 Nvme M.2 2280 5000Mbs Read 4500Mbs Write Internal Solid State Drive Ssd",
+      "category": "storage",
+      "priceEgp": 11199,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/crucial-e100-gen4-2tb-pcie-4-0-nvme-m-2-2280-5000mbs-read-4500mbs-write-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "redragon-ru014-16gb-usb-3-0-flash-drive",
+      "name": "Redragon RU014 16GB USB 3.0 Flash Drive",
+      "category": "storage",
+      "priceEgp": 210,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/redragon-ru014-16gb-usb-3-0-flash-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "wd-purple-surveillance-4tb-128mb-cache-3-5-inch-sata-hard-drive",
+      "name": "Wd Purple Surveillance 4TB 128MB Cache 3.5 Inch Sata Hard Drive",
+      "category": "storage",
+      "priceEgp": 7378,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/wd-purple-surveillance-4tb-128mb-cache-3-5-inch-sata-hard-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "samsung-9100-pro-heatsink-2tb-m-2-pcie-5-0-nvme-internal-solid-state-drive-ssd",
+      "name": "Samsung 9100 Pro Heatsink 2TB M.2 Pcie 5.0 Nvme Internal Solid State Drive Ssd",
+      "category": "storage",
+      "priceEgp": 23999,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/samsung-9100-pro-heatsink-2tb-m-2-pcie-5-0-nvme-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-ultra-512gb-150mbps-a1-micro-sd-card",
+      "name": "Sandisk Ultra 512Gb 150MBps A1 Micro Sd Card",
+      "category": "storage",
+      "priceEgp": 2730,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-ultra-512gb-150mbps-a1-micro-sd-card/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/01/Sandisk-Ultra-512Gb-150MBps-A1-Micro-Sd-Card-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "wd-blue-sn5100-1tb-7100mbps-m-2-2280-pcie-gen-4-nvme-ssd",
+      "name": "Wd Blue Sn5100 1Tb 7100MBps M.2 2280 Pcie Gen 4 Nvme Ssd",
+      "category": "storage",
+      "priceEgp": 7899,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/wd-blue-sn5100-1tb-7100mbps-m-2-2280-pcie-gen-4-nvme-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-ultra-dual-drive-luxe-128gb-400mbps-silver-metal-usb-3-2-type-c-and-type-a-flash-drive",
+      "name": "Sandisk Ultra Dual Drive Luxe 128Gb 400MBps Silver Metal Usb 3.2 Type C And Type A Flash Drive",
+      "category": "storage",
+      "priceEgp": 919,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-ultra-dual-drive-luxe-128gb-400mbps-silver-metal-usb-3-2-type-c-and-type-a-flash-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-ultra-dual-drive-luxe-64gb-400mbps-silver-metal-usb-3-2-type-c-and-type-a-flash-drive",
+      "name": "Sandisk Ultra Dual Drive Luxe 64Gb 400MBps Silver Metal Usb 3.2 Type C And Type A Flash Drive",
+      "category": "storage",
+      "priceEgp": 604,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-ultra-dual-drive-luxe-64gb-400mbps-silver-metal-usb-3-2-type-c-and-type-a-flash-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-ultra-dual-drive-go-64gb-300mbps-black-usb-3-2-type-c-and-type-a-flash-drive",
+      "name": "Sandisk Ultra Dual Drive Go 64Gb 300MBps Black Usb 3.2 Type C And Type A Flash Drive",
+      "category": "storage",
+      "priceEgp": 525,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-ultra-dual-drive-go-64gb-300mbps-black-usb-3-2-type-c-and-type-a-flash-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-ultra-dual-drive-go-128gb-400mbps-black-usb-3-2-type-c-and-type-a-flash-drive",
+      "name": "Sandisk Ultra Dual Drive Go 128Gb 400MBps Black Usb 3.2 Type C And Type A Flash Drive",
+      "category": "storage",
+      "priceEgp": 814,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-ultra-dual-drive-go-128gb-400mbps-black-usb-3-2-type-c-and-type-a-flash-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-ultra-sdsqunr-032g-gn3mn-32gb-microsdhc-uhs-i-up-to-100mbs-class-10-memory-card",
+      "name": "SanDisk Ultra SDSQUNR-032G-GN3MN 32GB microSDHC UHS I Up To 100MBs Class 10 Memory Card",
+      "category": "storage",
+      "priceEgp": 448,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-ultra-sdsqunr-032g-gn3mn-32gb-microsdhc-uhs-i-up-to-100mbs-class-10-memory-card/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/01/SanDisk-Ultra-SDSQUNR-032G-GN3MN-32GB-microSDHC-UHS-I-Up-To-100MBs-Class-10-Memory-Card-1-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "western-digital-red-plus-wd80efpx-8tb-sata-256mb-cache-3-5-inch-cmr-internal-nas-hdd",
+      "name": "Western Digital Red Plus WD80EFPX 8TB SATA 256MB Cache 3.5 Inch CMR Internal NAS HDD",
+      "category": "storage",
+      "priceEgp": 14595,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/western-digital-red-plus-wd80efpx-8tb-sata-256mb-cache-3-5-inch-cmr-internal-nas-hdd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "western-digital-my-book-26tb-usb-3-2-gen-1-256-bit-aes-encryption-password-protection-black-external-hdd",
+      "name": "Western Digital My Book 26TB USB 3.2 Gen 1 256 Bit AES Encryption Password Protection Black External HDD",
+      "category": "storage",
+      "priceEgp": 35500,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/western-digital-my-book-26tb-usb-3-2-gen-1-256-bit-aes-encryption-password-protection-black-external-hdd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "wd-purple-2tb-wd23purz-internal-desktop-hard-drive",
+      "name": "WD Purple 2TB WD23PURZ Internal Desktop Hard Drive",
+      "category": "storage",
+      "priceEgp": 6898,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/wd-purple-2tb-wd23purz-internal-desktop-hard-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "lexar-jumpdrive-dual-drive-d400-256gb-130mb-s-usb-3-2-type-c-to-usb-a-flash-drive",
+      "name": "Lexar JumpDrive Dual Drive D400 256GB 130MB/s USB 3.2 Type-C to USB-A Flash Drive",
+      "category": "storage",
+      "priceEgp": 1109,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/lexar-jumpdrive-dual-drive-d400-256gb-130mb-s-usb-3-2-type-c-to-usb-a-flash-drive/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "corsair-mp600-pro-nh-8tb-7000mb-s-m-2-2280-pcie-gen-4-nvme-internal-solid-state-drive-ssd",
+      "name": "Corsair MP600 PRO NH 8TB 7000MB/s M.2 2280 PCIe Gen 4 NVMe Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 67999,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/corsair-mp600-pro-nh-8tb-7000mb-s-m-2-2280-pcie-gen-4-nvme-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "lexar-nm610-pro-500gb-3300mb-s-m-2-2280-pcie-gen-3-nvme-internal-solid-state-drive-ssd",
+      "name": "Lexar NM610 Pro 500GB 3300MB/s M.2 2280 PCIe Gen 3 NVMe Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 3750,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/lexar-nm610-pro-500gb-3300mb-s-m-2-2280-pcie-gen-3-nvme-internal-solid-state-drive-ssd/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/10/Lexar-NM610-Pro-500GB-3300MB_s-M.2-2280-PCIe-Gen-3-NVMe-Internal-Solid-State-Drive-SSD-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "western-digital-black-sn8100-4tb-m-2-2280-pcie-gen-5-nvme-without-heatsink-internal-solid-state-drive-ssd",
+      "name": "Western Digital Black SN8100 4TB M.2 2280 PCIe Gen 5 NVMe Without Heatsink Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 28500,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/western-digital-black-sn8100-4tb-m-2-2280-pcie-gen-5-nvme-without-heatsink-internal-solid-state-drive-ssd/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/10/Western-Digital-Black-SN8100-4TB-M.2-2280-PCIe-Gen-5-NVMe-Without-Heatsink-Internal-Solid-State-Drive-SSD-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "lexar-nq780-1tb-6500mb-s-m-2-2280-pcie-gen-4-nvme-internal-solid-state-drive-ssd",
+      "name": "Lexar NQ780 1TB 6500MB/s M.2 2280 PCIe Gen 4 NVMe Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 3840,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/lexar-nq780-1tb-6500mb-s-m-2-2280-pcie-gen-4-nvme-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "lexar-nq100-256gb-550mb-s-2-5-inch-sata-6gb-s-internal-solid-state-drive-ssd",
+      "name": "Lexar NQ100 256GB 550MB/s 2.5 Inch SATA 6GB/s Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 2888,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/lexar-nq100-256gb-550mb-s-2-5-inch-sata-6gb-s-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "lexar-nq100-512gb-550mb-s-2-5-inch-sata-6gb-s-internal-solid-state-drive-ssd",
+      "name": "Lexar NQ100 512GB 550MB/s 2.5 Inch SATA 6GB/s Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 4550,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/lexar-nq100-512gb-550mb-s-2-5-inch-sata-6gb-s-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-extreme-portable-1tb-usb-3-2-gen-2-for-playstation-5-console-and-pc-external-solid-state-drive-ssd",
+      "name": "Sandisk Extreme Portable 1TB USB 3.2 Gen 2 For Playstation 5 Console and PC External Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 9499,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-extreme-portable-1tb-usb-3-2-gen-2-for-playstation-5-console-and-pc-external-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "western-digital-black-sn7100-4tb-m2-2280-pcie-gen-4-nvme-internal-solid-state-drive-ssd",
+      "name": "Western Digital Black SN7100 4TB M2 2280 PCIe Gen 4 Nvme Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 24300,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/western-digital-black-sn7100-4tb-m2-2280-pcie-gen-4-nvme-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-extreme-pro-4tb-with-usb4-external-solid-state-drive-ssd",
+      "name": "Sandisk Extreme PRO 4TB With USB4 External Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 23039,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-extreme-pro-4tb-with-usb4-external-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "western-digital-black-sn8100-2tb-m2-2280-pcie-gen-5-nvme-without-heatsink-internal-solid-state-drive-ssd",
+      "name": "Western Digital Black SN8100 2TB M2 2280 PCIe Gen 5 Nvme Without Heatsink Internal Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 19400,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/western-digital-black-sn8100-2tb-m2-2280-pcie-gen-5-nvme-without-heatsink-internal-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-extreme-portable-2tb-usb-3-2-gen-2-for-playstation-5-console-and-pc-external-solid-state-drive-ssd",
+      "name": "Sandisk Extreme Portable 2TB USB 3.2 Gen 2 For Playstation 5 Console and PC External Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 16749,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-extreme-portable-2tb-usb-3-2-gen-2-for-playstation-5-console-and-pc-external-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "sandisk-extreme-pro-2tb-with-usb4-external-solid-state-drive-ssd",
+      "name": "Sandisk Extreme PRO 2TB With USB4 External Solid State Drive SSD",
+      "category": "storage",
+      "priceEgp": 18899,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/sandisk-extreme-pro-2tb-with-usb4-external-solid-state-drive-ssd/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "nzxt-c750-gold-core-atx-3-1-750w-80-plus-gold-fully-modular-black-power-supply",
+      "name": "NZXT C750 Gold Core ATX 3.1 750W 80 Plus Gold Fully Modular Black Power Supply",
+      "category": "psu",
+      "priceEgp": 5918,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/nzxt-c750-gold-core-atx-3-1-750w-80-plus-gold-fully-modular-black-power-supply/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "nzxt-c850-gold-core-atx-3-1-850w-80-plus-gold-fully-modular-black-power-supply",
+      "name": "NZXT C850 Gold Core ATX 3.1 850W 80 Plus Gold Fully Modular Black Power Supply",
+      "category": "psu",
+      "priceEgp": 6938,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/nzxt-c850-gold-core-atx-3-1-850w-80-plus-gold-fully-modular-black-power-supply/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "nzxt-c1200-gold-atx-3-1-1200w-80-plus-gold-fully-modular-black-power-supply",
+      "name": "NZXT C1200 Gold ATX 3.1 1200W 80 Plus Gold Fully Modular Black Power Supply",
+      "category": "psu",
+      "priceEgp": 11728,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/nzxt-c1200-gold-atx-3-1-1200w-80-plus-gold-fully-modular-black-power-supply/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "nzxt-c1500-platinum-atx-3-1-1500w-80-plus-platinum-fully-modular-black-power-supply",
+      "name": "NZXT C1500 Platinum ATX 3.1 1500W 80 Plus Platinum Fully Modular Black Power Supply",
+      "category": "psu",
+      "priceEgp": 19888,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/nzxt-c1500-platinum-atx-3-1-1500w-80-plus-platinum-fully-modular-black-power-supply/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "nzxt-c1000-gold-core-1000w-80-plus-gold-fully-modular-atx-3-1-power-supply",
+      "name": "NZXT C1000 Gold Core 1000W 80 Plus Gold Fully Modular ATX 3.1 Power Supply",
+      "category": "psu",
+      "priceEgp": 9178,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/nzxt-c1000-gold-core-1000w-80-plus-gold-fully-modular-atx-3-1-power-supply/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "nzxt-c750-bronze-750w-80-plus-bronze-non-modular-atx-3-1-power-supply",
+      "name": "NZXT C750 Bronze 750W 80 Plus Bronze Non-Modular ATX 3.1 Power Supply",
+      "category": "psu",
+      "priceEgp": 4178,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/nzxt-c750-bronze-750w-80-plus-bronze-non-modular-atx-3-1-power-supply/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-prime-750w-gold-black-edition-atx-3-1-80-plus-gold-fully-modular-power-supply",
+      "name": "ASUS Prime 750W Gold Black Edition ATX 3.1 80 Plus Gold Fully Modular Power Supply",
+      "category": "psu",
+      "priceEgp": 4768,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-prime-750w-gold-black-edition-atx-3-1-80-plus-gold-fully-modular-power-supply/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/08/ASUS-Prime-750W-Gold-Black-Edition-ATX-3.1-80-Plus-Gold-Fully-Modular-Power-Supply-4-300x300.webp",
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "asus-prime-850w-gold-black-edition-atx-3-1-80-plus-gold-fully-modular-power-supply",
+      "name": "ASUS Prime 850W Gold Black Edition ATX 3.1 80 Plus Gold Fully Modular Power Supply",
+      "category": "psu",
+      "priceEgp": 5838,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/asus-prime-850w-gold-black-edition-atx-3-1-80-plus-gold-fully-modular-power-supply/",
+      "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/08/ASUS-Prime-850W-Gold-Black-Edition-ATX-3.1-80-Plus-Gold-Fully-Modular-Power-Supply-300x300.webp",
       "specs": {
         "template": "woocommerce"
       }

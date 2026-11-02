@@ -13,6 +13,7 @@ import { Logo } from './Logo';
 /** Nav labels live in i18n; `NavItem.label` is the English fallback. */
 const NAV_KEYS: Record<string, string> = {
   '/builder': 'nav.builder',
+  '/search': 'nav.search',
   '/builder/ai': 'nav.smartBuilder',
   '/ai-advisor': 'nav.advisor',
   '/prebuilt': 'nav.prebuilt',

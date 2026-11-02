@@ -79,6 +79,13 @@ create policy "retailer products are public"
 
 -- No insert/update/delete policy: writes go through the service role held by
 -- the Edge Function, never from the browser.
+--
+-- The GRANT is not optional. A policy alone is not enough: PostgREST checks table
+-- privileges BEFORE row security, so without this the anon key gets
+--   401 {"code":"42501","message":"permission denied for table retailer_products"}
+-- and the entire search page degrades. This bit the Phase 8 build on a project
+-- where the table had been created by hand.
+grant select on public.retailer_products to anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- Scrape audit log — one row per retailer per run, so a silent breakage is
@@ -107,6 +114,8 @@ drop policy if exists "sync runs are public" on public.retailer_sync_runs;
 create policy "sync runs are public"
   on public.retailer_sync_runs for select
   using (true);
+
+grant select on public.retailer_sync_runs to anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- Cheapest-in-stock view: one row per catalogue component.

@@ -70,6 +70,29 @@ export function formatScore(score: number | null | undefined): string {
 }
 
 /**
+ * Relative "prices updated …" caption: "just now", "5 min ago", "3 h ago".
+ *
+ * Uses the caller's `t()` so the result is translated and pluralised, and falls
+ * back to the raw date after a week — beyond that "17 d ago" stops being useful.
+ */
+export function formatRelativeShort(iso: string, t: (key: string, vars?: Record<string, unknown>) => string): string {
+  const time = new Date(iso).getTime();
+  if (Number.isNaN(time)) return '';
+
+  const minutes = Math.floor((Date.now() - time) / 60_000);
+  if (minutes < 2) return t('search.updatedJustNow');
+  if (minutes < 60) return t('search.updatedMinutes', { count: minutes });
+
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return t('search.updatedHours', { count: hours });
+
+  const days = Math.floor(hours / 24);
+  if (days <= 7) return t('search.updatedDays', { count: days });
+
+  return formatDateShort(iso);
+}
+
+/**
  * Short, locale-aware date for "prices updated…" captions — e.g. `2 Nov` / `٢ نوفمبر`.
  * Returns an empty string for an unparseable value so callers never print `Invalid Date`.
  */

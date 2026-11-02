@@ -6,6 +6,8 @@ import { LoadingSkeleton } from '@/components/shared/LoadingSkeleton';
 const Landing = lazy(() => import('@/pages/Landing'));
 const Builder = lazy(() => import('@/pages/Builder'));
 const AIAdvisor = lazy(() => import('@/pages/AIAdvisor'));
+const Search = lazy(() => import('@/pages/Search'));
+const Compare = lazy(() => import('@/pages/Compare'));
 const PrebuiltConfigs = lazy(() => import('@/pages/PrebuiltConfigs'));
 const Community = lazy(() => import('@/pages/Community'));
 const Dashboard = lazy(() => import('@/pages/Dashboard'));
@@ -60,6 +62,22 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={fallback}>
             <BuildDoctor />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'search',
+        element: (
+          <Suspense fallback={fallback}>
+            <Search />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'compare/:groupId',
+        element: (
+          <Suspense fallback={fallback}>
+            <Compare />
           </Suspense>
         ),
       },

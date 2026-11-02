@@ -38,6 +38,35 @@ export interface CategoryTarget {
   /** Catalogue category this listing maps to. */
   category: string;
   url: string;
+  /**
+   * Extra pages to fetch, appended as `?page=N` (OpenCart) — see `pageUrl`.
+   * Measured: Elbadr returns 28 cards per page, Elnekhely 12 per page but 503s
+   * on page 2, Alfrensia 20 per page.
+   */
+  pages?: number;
+}
+
+/**
+ * URL of page `n` (1-based) for a target.
+ *
+ * The two platforms paginate differently, and using the wrong one silently
+ * returns page 1 again (which looks like "page 2 has the same products"):
+ *   · OpenCart (Elbadr, Elnekhely):  `/vga?page=2`
+ *   · WooCommerce (Alfrensia):       `/product-category/gpu/page/2/`
+ * The distinction is detected from the URL shape, so callers stay declarative.
+ */
+export function pageUrl(target: CategoryTarget, n: number): string {
+  if (n <= 1) return target.url;
+
+  // WooCommerce permalinks live under /product-category/.
+  if (/\/product-category\//.test(target.url)) {
+    const base = target.url.replace(/\/?$/, '/');
+    return `${base}page/${n}/`;
+  }
+
+  const url = new URL(target.url);
+  url.searchParams.set('page', String(n));
+  return url.toString();
 }
 
 export interface RetailerConfig {
@@ -360,10 +389,16 @@ export const RETAILERS: RetailerConfig[] = [
     id: 'elbadr',
     name: 'Elbadr Group',
     home: 'https://elbadrgroupeg.store/',
-    // Verified live: both return OpenCart cards with EGP prices.
+    // All eight categories, verified live (Phase 8 expanded coverage from 2).
     targets: [
       { category: 'gpu', url: 'https://elbadrgroupeg.store/vga' },
       { category: 'cpu', url: 'https://elbadrgroupeg.store/cpu' },
+      { category: 'motherboard', url: 'https://elbadrgroupeg.store/motherboard' },
+      { category: 'ram', url: 'https://elbadrgroupeg.store/ram' },
+      { category: 'storage', url: 'https://elbadrgroupeg.store/storage' },
+      { category: 'psu', url: 'https://elbadrgroupeg.store/power-supply' },
+      { category: 'case', url: 'https://elbadrgroupeg.store/cases', pages: 2 },
+      { category: 'cooling', url: 'https://elbadrgroupeg.store/cooling', pages: 2 },
     ],
     parse: (html, url) => parseOpenCart(html, url, 'elbadr', categoryOf(url)),
   },
@@ -371,11 +406,17 @@ export const RETAILERS: RetailerConfig[] = [
     id: 'elnekhely',
     name: 'Elnekhely Technology',
     home: 'https://www.elnekhelytechnology.com/',
-    // `/cpu` intermittently answers 503; the sync records `partial` rather than
-    // failing the whole retailer when one target is unavailable.
+    // Several category paths intermittently answer 503; the sync records
+    // `partial` rather than failing the whole retailer.
     targets: [
       { category: 'gpu', url: 'https://www.elnekhelytechnology.com/graphics-card' },
-      { category: 'cpu', url: 'https://www.elnekhelytechnology.com/cpu' },
+      { category: 'cpu', url: 'https://www.elnekhelytechnology.com/processors' },
+      { category: 'motherboard', url: 'https://www.elnekhelytechnology.com/motherboards' },
+      { category: 'ram', url: 'https://www.elnekhelytechnology.com/ram' },
+      { category: 'storage', url: 'https://www.elnekhelytechnology.com/ssd' },
+      { category: 'psu', url: 'https://www.elnekhelytechnology.com/power-supply' },
+      { category: 'case', url: 'https://www.elnekhelytechnology.com/cases' },
+      { category: 'cooling', url: 'https://www.elnekhelytechnology.com/fans-coolers' },
     ],
     parse: (html, url) => parseOpenCart(html, url, 'elnekhely', categoryOf(url)),
   },
@@ -383,12 +424,20 @@ export const RETAILERS: RetailerConfig[] = [
     id: 'alfrensia',
     name: 'Alfrensia',
     home: 'https://alfrensia.com/ar/',
-    // EN catalogue first: on this store the AR listing ships `<bdi>1</bdi>`
-    // placeholders for most items and resolves the real price via AJAX.
+    // EN catalogue: on this store the AR listing ships `<bdi>1</bdi>` placeholders
+    // for most items and resolves the real price via AJAX.
     targets: [
-      { category: 'gpu', url: 'https://alfrensia.com/product-category/graphics-card/' },
-      { category: 'cpu', url: 'https://alfrensia.com/product-category/processor/' },
+      { category: 'gpu', url: 'https://alfrensia.com/product-category/graphics-card/', pages: 3 },
+      { category: 'cpu', url: 'https://alfrensia.com/product-category/processor/', pages: 2 },
+      { category: 'motherboard', url: 'https://alfrensia.com/product-category/motherboard/', pages: 2 },
+      { category: 'ram', url: 'https://alfrensia.com/product-category/ram/', pages: 2 },
+      { category: 'storage', url: 'https://alfrensia.com/product-category/storage/', pages: 2 },
+      { category: 'psu', url: 'https://alfrensia.com/product-category/power-supply/', pages: 2 },
+      { category: 'case', url: 'https://alfrensia.com/product-category/case/' },
+      { category: 'cooling', url: 'https://alfrensia.com/product-category/cooling/' },
     ],
+    // Alfrensia paginates 20 per page and serves page 2+ normally.
+    // (Applied per-target below via `pages`.)
     parse: (html, url) => parseWooCommerce(html, url, 'alfrensia', categoryOf(url)),
   },
   {
@@ -414,15 +463,18 @@ export const RETAILERS: RetailerConfig[] = [
 ];
 
 function categoryOf(url: string): string {
+  // Order matters only where paths overlap (`storage/hdd` vs `hdd/ssd`).
   if (/vga|graphic|gpu/i.test(url)) return 'gpu';
   if (/processor|cpu/i.test(url)) return 'cpu';
   if (/motherboard|mainboard/i.test(url)) return 'motherboard';
   if (/memory|ram/i.test(url)) return 'ram';
-  if (/storage|ssd/i.test(url)) return 'storage';
+  if (/storage|ssd|hdd/i.test(url)) return 'storage';
   if (/power|psu/i.test(url)) return 'psu';
-  if (/case/i.test(url)) return 'case';
-  if (/cool/i.test(url)) return 'cooling';
-  return 'gpu';
+  if (/case|chassis/i.test(url)) return 'case';
+  if (/cool|fan/i.test(url)) return 'cooling';
+  // Unknown path: return '' so `classifyByName` decides, rather than silently
+  // filing the products under GPU.
+  return '';
 }
 
 /**

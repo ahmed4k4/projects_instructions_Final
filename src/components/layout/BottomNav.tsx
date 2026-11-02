@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Boxes, LayoutDashboard, MessageSquareCode, Users, Wrench, type LucideIcon } from 'lucide-react';
+import { Boxes, LayoutDashboard, MessageSquareCode, Search, Wrench, type LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 /**
@@ -27,9 +27,9 @@ interface Tab {
 
 const TABS: Tab[] = [
   { to: '/builder', icon: Wrench, labelKey: 'nav.builder', end: true },
+  { to: '/search', icon: Search, labelKey: 'nav.search' },
   { to: '/builder/ai', icon: Boxes, labelKey: 'nav.smartBuilder' },
   { to: '/ai-advisor', icon: MessageSquareCode, labelKey: 'nav.advisor' },
-  { to: '/community', icon: Users, labelKey: 'nav.community' },
   { to: '/dashboard', icon: LayoutDashboard, labelKey: 'nav.dashboard' },
 ];
 
@@ -41,6 +41,9 @@ export function BottomNav() {
       aria-label={t('nav.primary')}
       className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/85 backdrop-blur-xl pb-[env(safe-area-inset-bottom)] md:hidden"
     >
+      {/* Five tabs: Builder · Search · Smart Builder · Advisor · Dashboard.
+          Community moves to the drawer on phones — five is the practical limit
+          before labels start truncating at 375px. */}
       <ul className="grid grid-cols-5">
         {TABS.map((tab) => (
           <li key={tab.to}>

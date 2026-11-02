@@ -48,10 +48,20 @@ for (const lang of LANGUAGES) keys[lang] = buildKeySet(lang);
 
 let failures = 0;
 
-// 1. Parity between languages.
+/**
+ * Strip a CLDR plural suffix so parity is checked on the BASE key.
+ *
+ * Arabic has six plural categories and English two, so `results_few` legitimately
+ * exists in `ar` and not in `en`. Comparing raw key sets reported 21 phantom
+ * "missing" keys and failed the gate for a file that was correct.
+ */
+const PLURAL_SUFFIX = /_(zero|one|two|few|many|other)$/;
+const baseKey = (key) => key.replace(PLURAL_SUFFIX, '');
+
+// 1. Parity between languages, on base keys (plural sets differ by design).
 for (const ns of NAMESPACES) {
-  const en = new Set(flatten(load('en', ns)).map((k) => `${ns}:${k}`));
-  const ar = new Set(flatten(load('ar', ns)).map((k) => `${ns}:${k}`));
+  const en = new Set(flatten(load('en', ns)).map((k) => `${ns}:${baseKey(k)}`));
+  const ar = new Set(flatten(load('ar', ns)).map((k) => `${ns}:${baseKey(k)}`));
 
   for (const key of en) {
     if (!ar.has(key)) {
@@ -89,7 +99,7 @@ for (const file of walk(SRC)) {
     // The runtime merges every file into one `translation` namespace, so a key
     // resolves if it exists in ANY of them (see src/i18n/index.ts). A call may
     // also carry an explicit `ns:key` prefix, which is checked as written.
-    const base = raw.replace(/(_plural|_one|_other)$/, '');
+    const base = raw.replace(PLURAL_SUFFIX, '');
     const bare = base.includes(':') ? base.split(':').slice(1).join(':') : base;
     if (!keys.en.has(base) && !keys.en.has(bare)) {
       failures += 1;

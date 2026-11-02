@@ -3,6 +3,7 @@ import {
   LayoutDashboard,
   LayoutTemplate,
   MessageSquareCode,
+  Search,
   Sparkles,
   Users,
   Wrench,
@@ -23,6 +24,13 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Builder', to: '/builder', icon: Wrench, description: 'Pick every part', primary: true },
+  {
+    label: 'Search',
+    to: '/search',
+    icon: Search,
+    description: 'Live prices from Egyptian stores',
+    primary: true,
+  },
   {
     label: 'Smart Builder',
     to: '/builder/ai',

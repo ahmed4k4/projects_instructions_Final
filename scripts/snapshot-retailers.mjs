@@ -12,7 +12,7 @@
  * always carries `capturedAt` so staleness is visible.
  */
 import { writeFileSync } from 'node:fs';
-import { RETAILERS } from '../supabase/functions/retailer-sync/parsers.ts';
+import { RETAILERS, pageUrl } from '../supabase/functions/retailer-sync/parsers.ts';
 
 const UA = 'NexusPCBuilderBot/1.0 (+https://nexus-pc-builder.example/bot)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -20,23 +20,34 @@ const rows = [];
 
 for (const retailer of RETAILERS) {
   for (const target of retailer.targets) {
-    try {
-      const res = await fetch(target.url, {
-        headers: { 'User-Agent': UA, Accept: 'text/html' },
-        signal: AbortSignal.timeout(25000),
-      });
-      if (res.status !== 200) {
-        console.log(`  ${retailer.id}/${target.category}: HTTP ${res.status}`);
-        await sleep(2000);
-        continue;
+    // Each target may span several listing pages; page 1 is always fetched.
+    const pages = Math.max(1, target.pages ?? 1);
+    let fetched = 0;
+
+    for (let page = 1; page <= pages; page += 1) {
+      const url = pageUrl(target, page);
+      try {
+        const res = await fetch(url, {
+          headers: { 'User-Agent': UA, Accept: 'text/html' },
+          signal: AbortSignal.timeout(25000),
+        });
+        if (res.status !== 200) {
+          if (page === 1) console.log(`  ${retailer.id}/${target.category}: HTTP ${res.status}`);
+          break;
+        }
+        const products = retailer.parse(await res.text(), res.url);
+        // A page with no products means we ran past the end of the listing.
+        if (products.length === 0 && page > 1) break;
+        fetched += products.length;
+        rows.push(...products);
+      } catch (error) {
+        if (page === 1) console.log(`  ${retailer.id}/${target.category}: ${error.message}`);
+        break;
       }
-      const products = retailer.parse(await res.text(), res.url);
-      console.log(`  ${retailer.id}/${target.category}: ${products.length} products`);
-      rows.push(...products);
-    } catch (error) {
-      console.log(`  ${retailer.id}/${target.category}: ${error.message}`);
+      await sleep(2000);
     }
-    await sleep(2000);
+
+    console.log(`  ${retailer.id}/${target.category}: ${fetched} products`);
   }
 }
 

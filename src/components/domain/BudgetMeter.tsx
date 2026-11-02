@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
+import { CURRENCY } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { EASE_OUT } from '@/lib/motion';
 
@@ -18,7 +19,7 @@ interface BudgetMeterProps {
  * currency placement and digit grouping follow the locale. In RTL the bar fills
  * from the right automatically (it uses logical inset properties).
  */
-export function BudgetMeter({ spent, budget, currency = 'USD', className }: BudgetMeterProps) {
+export function BudgetMeter({ spent, budget, currency = CURRENCY, className }: BudgetMeterProps) {
   const { t, i18n } = useTranslation();
   const reduce = useReducedMotion();
 

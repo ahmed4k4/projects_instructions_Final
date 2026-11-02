@@ -1,0 +1,795 @@
+{
+  "capturedAt": "2026-11-02T03:25:18.665Z",
+  "source": "scripts/snapshot-retailers.mjs",
+  "retailers": [
+    "elbadr",
+    "elnekhely",
+    "alfrensia"
+  ],
+  "products": [
+    {
+      "retailerId": "elbadr",
+      "externalId": "5778",
+      "name": "ADATA SC750 1TB - Up to 1000 MB/s- HighSpeed USB 3.2 Gen 2 USB-C External Portable SSD Black Titanium - Work with PS5 & XBOX",
+      "category": "storage",
+      "priceEgp": 4999,
+      "originalPriceEgp": 7500,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/sc750-1000g-ccbk",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/wtkUdgrBaiXY80zZujsJWLDTXgr1wLPks408qtOdlU-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "4391",
+      "name": "AMD Ryzen 3 4100 4-Core, 8-Thread Unlocked Desktop Processor with Wraith Stealth Cooler Tray",
+      "category": "cpu",
+      "priceEgp": 1850,
+      "originalPriceEgp": 2500,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-3-4100-4-core-8-thread-unlocked-desktop-processor-with-wraith-stealth-cooler-1",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/Azg30kQNtAAYfsOcKtEwTfnpd5oB-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "5317",
+      "name": "AMD Ryzen 5 5600 MPK 4.4GHz 32MB Cache 6 Core AM4 7nm Processor",
+      "category": "cpu",
+      "priceEgp": 5999,
+      "originalPriceEgp": 6900,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-5600-mpk-4.4ghz-32mb-cache-6-core-am4-7nm-processor",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/xFCDlpTFHxTMqEyMlUFunZlDfZfpdMV8XBBlEZ3D6NK1fFZ9a5XHUT0lk1ZyVGIFvcWbz7DIT7lKWMIHALEo7MFaPhrAN-250x250.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7185",
+      "name": "AMD Ryzen 5 7500X3D Desktop Processor – 6-Core/12-Thread, up to 5.0 GHz, 96MB Total Cache (64MB 3D V-Cache), AM5 Socket, Supports DDR5 & PCIe 5.0, 120W TDP",
+      "category": "cpu",
+      "priceEgp": 13750,
+      "originalPriceEgp": 14200,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-7500x3d-processor-64mb-3d-v-cache",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/Zg5hNudz8lMKjj3cSlm9zCjwNGadZtNstjvzGrGepb-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "6655",
+      "name": "AMD Ryzen 5 7600X MPK 6-Core 12-Thread Desktop Processor — Zen 4 (Raphael), 4.7GHz Base, Up to 5.3GHz Boost, 32MB L3 Cache, 105W TDP, AM5 Socket, PCIe 5.0, DDR5-5200 Support, Radeon Graphics, Unlocked, No Cooler, 5nm",
+      "category": "cpu",
+      "priceEgp": 8850,
+      "originalPriceEgp": 10000,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-7600x-mpk",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/4yXzRePQV3W9faPpqg3NnP7Exa8pQd0PprjqylA-250x250w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "6563",
+      "name": "AMD Ryzen 7 7800X3D MPK — 8-Core, 16-Thread 4.2 GHz Socket AM5 120W AMD Radeon Graphics Desktop Processor",
+      "category": "cpu",
+      "priceEgp": 16499,
+      "originalPriceEgp": 18500,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-7800x3d-mpk",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/qn4BqoQx9nOwLWhhqM5uBmjOOY-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "6942",
+      "name": "Palit GeForce RTX 5050 Dual 8GB GDDR6 — NVIDIA Blackwell Architecture, 2560 CUDA Cores, 20 Gbps Memory Speed, PCIe 5.0, Composite Heat Pipe Cooling, Dual Axial Fans, 2-Slot Design",
+      "category": "gpu",
+      "priceEgp": 24500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/palit-geforce-rtx-5050-dual-8gb-gddr6",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Palit/G1KcL15JD8LQmOOPaAZI7WN3CV-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "4355",
+      "name": "AMD Ryzen 5 5500 - Ryzen 5 5000 Series 6-Core Socket AM4 65W Desktop Processor",
+      "category": "cpu",
+      "priceEgp": 4950,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-5500-ryzen-5-5000-series-6-core-socket-am4-65w-desktop-processor",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/CWy7ayJ2fmzdba7FVhL5FAGSJcebrq3FcwTdrbJ-250x250w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "5156",
+      "name": "TEAMGROUP 8GB (1X8GB) DDR4 3200MHZ —T-Force Delta RGB Series Black Gaming Desktop Memory - TF3D48G3200HC16C01",
+      "category": "ram",
+      "priceEgp": 4000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/teamgroup-8gb-(1x8gb)-ddr4-3200mhz-t-force-delta-rgb-series-black-gaming-desktop-memory-tf3d48g3200hc16c01",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/ILtlpavJfD06PyWBe2uQvuC2Db-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "4390",
+      "name": "AMD Ryzen 3 4100 4-Core, 8-Thread Unlocked Desktop Processor with Wraith Stealth Cooler",
+      "category": "cpu",
+      "priceEgp": 2200,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-3-4100-4-core-8-thread-unlocked-desktop-processor-with-wraith-stealth-cooler",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/ZnBXaW2tDy4uUTz7MURHZlJCBJBqGe4Ujl37REkSoeCW3w5B-250x250h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "6656",
+      "name": "AMD Ryzen 7 5700X MPK 8-Core 16-Thread Desktop Processor — Zen 3 Architecture, 3.4GHz Base, Up to 4.6GHz Boost, 32MB L3 Cache, 65W TDP, AM4 Socket, DDR4-3200 Support, PCIe 4.0, Unlocked Multiplier",
+      "category": "cpu",
+      "priceEgp": 8799,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-5700x-mpk",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/3n18EJjLAL32apAGZKO8NSaBdBHycDERo4bfZQK-250x250w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7809",
+      "name": "Palit GeForce RTX 5070 Ti GamingPro-S 16GB – NVIDIA Blackwell, PCIe 5.0, Dual BIOS",
+      "category": "gpu",
+      "priceEgp": 71000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/palit-geforce-rtx-5070-ti-gamingpro-s-16gb-gddr7",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Palit/xCiP1xpB4hIzxxOjkCUMlqDcfu-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7745",
+      "name": "ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 WHITE OC Edition",
+      "category": "gpu",
+      "priceEgp": 475000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-rog-astral-rtx-5090-32gb-gddr7-white-oc-edition",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/K03emO4q55crU0kOEemwmEJY2N-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7687",
+      "name": "ASUS PRIME Radeon RX 9060 XT OC Edition 16GB GDDR6 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 31500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/asus-prime-radeon-rx-9060-xt-oc-16gb-gddr6",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/CMRoigD9ctZLfAYVXS9M8lFTjK-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7647",
+      "name": "GIGABYTE GeForce RTX 5060 WINDFORCE MAX OC 8GB GDDR7 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 29499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gigabyte-geforce-rtx-5060-windforce-max-oc-8gb-gddr7",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/T17M1ZRxF4mkemQhgK1CO6lOgm-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7645",
+      "name": "GIGABYTE Radeon RX 9060 XT GAMING OC ICE 16GB GDDR6 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 31500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/gigabyte-radeon-rx-9060-xt-gaming-oc-ice-16gb-gddr6",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/MNCTc8K5oFpC7jpv4aJ4m6ba2b-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7640",
+      "name": "PNY GeForce RTX 5060 8GB GDDR7 Single Fan Graphics Card",
+      "category": "gpu",
+      "priceEgp": 28899,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/pny-geforce-rtx-5060-8gb-gddr7-single-fan",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/Jg8vWhztN4lbkH6n4NgH8yUhZk-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7639",
+      "name": "PNY GeForce RTX 5050 8GB GDDR6 Single Fan Graphics Card",
+      "category": "gpu",
+      "priceEgp": 23500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/pny-geforce-rtx-5050-8gb-gddr6-single-fan",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/Fzt6MMupdxMh3FudzlOG2IGUTU-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7637",
+      "name": "PNY GeForce RTX 5060 Ti 8GB GDDR7 Overclocked Triple Fan Graphics Card",
+      "category": "gpu",
+      "priceEgp": 34500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/pny-geforce-rtx-5060-ti-8gb-gddr7-oc-triple-fan",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/2NcfAoZi8IGvKCsUxv1Jle21tD-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7636",
+      "name": "PNY GeForce RTX 5080 16GB GDDR7 Overclocked Triple Fan Graphics Card",
+      "category": "gpu",
+      "priceEgp": 91000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/pny-geforce-rtx-5080-16gb-gddr7-oc-triple-fan",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/Zj7fqkB6QJMTkZvG3oofU37did-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7617",
+      "name": "MSI GeForce RTX 5060 Ti 16G VENTUS 3X OC Graphics Card",
+      "category": "gpu",
+      "priceEgp": 42500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/msi-rtx-5060-ti-16g-ventus-3x-oc",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/hnYR3Meh65sDrc1CVSC1OJUXQB-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7616",
+      "name": "MSI GeForce RTX 5060 8G VENTUS 2X OC WHITE Graphics Card",
+      "category": "gpu",
+      "priceEgp": 31000,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/msi-rtx-5060-8g-ventus-2x-oc-white",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/UIihfyy7xdk4a6qVu0kCTOzmy0-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7611",
+      "name": "ZOTAC GAMING GeForce RTX 5080 SOLID OC White Edition 16GB GDDR7",
+      "category": "gpu",
+      "priceEgp": 104999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/zotac-rtx-5080-solid-oc-white-edition-16gb-gddr7",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Zotac/bbE3pWNrv4XwlwJxx192zhsw8P-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7918",
+      "name": "Intel Core Ultra 5 250KF Plus Desktop Processor – 18 Cores, 5.3GHz, LGA 1851 Tray",
+      "category": "cpu",
+      "priceEgp": 12900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/intel-core-ultra-5-250kf-plus-lga1851-desktop-processor-tray",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Intel/aOiUb3kFeUN4zVSTX5S0Ve7eEv0POCtoydNhrQFNgv-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7807",
+      "name": "AMD Ryzen 7 9850X3D Desktop Processor – 8 Cores, 96MB 3D V-Cache, Up to 5.6 GHz",
+      "category": "cpu",
+      "priceEgp": 27500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-9850x3d-am5-desktop-cpu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/mWSK581Q8CdpJSEYNEUym7sxHbAYRJQ73PbOzB9FZP-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7804",
+      "name": "Intel Core i7-12700KF Desktop Processor Tray – 12 Cores/20 Threads, Up to 5.0 GHz",
+      "category": "cpu",
+      "priceEgp": 12800,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/intel-core-i7-12700kf-alder-lake-cpu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Intel/QCqjcz0o4mXLF01OZChIbYthUNuEFbeCiLh9h2a5Pr-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7803",
+      "name": "Intel Core Ultra 5 250K Plus Desktop Processor Tray – 18 Cores, Up to 5.3 GHz, 30 TOPS AI",
+      "category": "cpu",
+      "priceEgp": 13500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/intel-core-ultra-5-250k-plus-arrow-lake-cpu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Intel/4g5Ctc4ZelGXIgRGGWL5YFno9Bff1IMRBoqHFs0EEb-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7801",
+      "name": "Intel Core Ultra 5 245K Desktop Processor Tray – 14 Cores, Up to 5.2 GHz, DDR5-6400",
+      "category": "cpu",
+      "priceEgp": 11500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/intel-core-ultra-5-245k-arrow-lake-cpu",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Intel/fMKClLnhuWvRuNyZLjkT8vdFEQD9pHczK9RjYSP5Xt-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7800",
+      "name": "Intel Core i7-14700K Desktop Processor Tray – 20 Cores/28 Threads, Up to 5.6 GHz",
+      "category": "cpu",
+      "priceEgp": 19500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/intel-core-i7-14700k-desktop-processor-tray-20-cores-28-threads-up-to-5-6-ghz",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Intel/XA1uoiIS0vwiRQKN4s2DI1Rpyy28zVUGC9UqYRMFOA-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7799",
+      "name": "Intel Core Ultra 7 270K Plus Desktop Processor Tray – 24 Cores, Up to 5.5 GHz, 36 TOPS AI",
+      "category": "cpu",
+      "priceEgp": 18800,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/intel-core-ultra-7-270k-plus-desktop-processor-tray-24-cores-up-to-5-5-ghz-36-tops-ai",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Intel/UFng8oRekh9vsbxGeRVOeuKYn0Kbvxur4E16WFfLvu-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7759",
+      "name": "AMD Ryzen 9 5900XT Desktop Processor – 16 Cores, 32 Threads, Up to 4.8 GHz",
+      "category": "cpu",
+      "priceEgp": 18799,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-9-5900xt-desktop-processor-am4-zen3",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/W0zsAaHjhI988l7TzUcR1mUHcHn8YYzVjjbL3Fusxy-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7599",
+      "name": "AMD Ryzen 7 7700X Tray Desktop Processor (8-Core, 16-Thread)",
+      "category": "cpu",
+      "priceEgp": 12700,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-7700x-tray-8-core-am5-processor",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/znWgkVPOFZoA2yuWB1VGYjcMur79dLcNtniQlxwgG1-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7598",
+      "name": "Intel Core i5-12600K Tray Processor (10-Core, 16-Thread)",
+      "category": "cpu",
+      "priceEgp": 10900,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/intel-core-i5-12600k-tray-processor-10-core",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Intel/RMwqIMTGpl7PSJeurxjHDOPaW2j4fHBy3FSpsQjzFy-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7543",
+      "name": "AMD Ryzen 5 8600G Tray Desktop Processor (Zen 4 & Radeon 760M)",
+      "category": "cpu",
+      "priceEgp": 9500,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-8600g-tray-desktop-processor",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/gmhM7yQrTAO3Sxaul3r5bBd1Hqay3AzPMV2SmvksBX-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elbadr",
+      "externalId": "7542",
+      "name": "AMD Ryzen 7 5700 Tray Processor (8-Core Zen 3)",
+      "category": "cpu",
+      "priceEgp": 6299,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-5700-tray-8-core-zen-3-processor",
+      "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/vmw4zkyKpLBsZWTe86MB5Rhir7UYf2oRjvYY0p6avS-250x250.png",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2664",
+      "name": "AORUS GeForce RTX 5070 MASTER 12GB – NVIDIA Blackwell GPU, 192-bit GDDR7, 2715MHz Boost Clock, WINDFORCE Cooling, RGB Halo, Hawk Fan, Dual BIOS, DLSS 4, Ray Tracing & PCIe 5.0 Support",
+      "category": "gpu",
+      "priceEgp": 59999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/aorus-geforce-rtx-5070-master-12gb-–-nvidia-blackwell-gpu-192-bit-gddr7-2715mhz-boost-clock-windforce-cooling-rgb-halo-hawk-fan-dual-bios-dlss-4-ray-tracing-pcie-5-0-support",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/5070%20AORUS/aorus-geforce-rtx-5070-master-12gb-–-nvidia-blackwell-gpu-192-bit-gddr7-2715mhz-boost-clock-windforce-cooling-rgb-halo-hawk-fan-dual-bios-dlss-4-ray-tracing-pcie-5-0-support-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2587",
+      "name": "ASUS AMD Radeon RX 9070 PRIME OC RDNA4 16GB GDDR6 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 42499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-amd-radeon-rx-9070-prime-oc-rdna4-16gb-gddr6-graphics-card",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/PRIME%20Radeon%20RX%209070/asus-amd-radeon-rx-9070-prime-oc-rdna4-16gb-gddr6-graphics-card-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2588",
+      "name": "ASUS AMD Radeon RX 9070 XT TUF GAMING OC RDNA4 16GB GDDR6 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 59999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-amd-radeon-rx-9070-xt-tuf-gaming-oc-rdna4-16gb-gddr6-graphics-card",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/TUF%20Radeon%20RX%209070%20XT/asus-amd-radeon-rx-9070-xt-tuf-gaming-oc-rdna4-16gb-gddr6-graphics-card-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2030",
+      "name": "ASUS Dual GeForce RTX 3050 OC Edition 6GB GDDR6 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 16499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-rtx-3050-6gb-oc",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/3050%206GB%20ASUS%20DUAL/asus-dual-geforce-rtx-3050-oc-edition-6gb-gddr6-graphics-card-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "1299",
+      "name": "ASUS DUAL GeForce RTX 3060 12GB GDDR6 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 28999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-3060-12gb-gddr6-graphics-card",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/VGA/Asus/3060/DUAL/asus-dual-geforce-rtx-3060-12gb-gddr6-graphics-card-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2979",
+      "name": "ASUS Dual GeForce RTX 5050 OC Edition 8GB GDDR6 Graphics Card – PCIe 5.0, Ray Tracing, AI-Enhanced Performance, Dual Fan Cooling",
+      "category": "gpu",
+      "priceEgp": 24499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-5050-oc-edition-8gb-gddr6-graphics-card-–-pcie-5-0-ray-tracing-ai-enhanced-performance-dual-fan-cooling",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/Dual%205050%208GB/asus-dual-geforce-rtx-5050-oc-edition-8gb-gddr6-graphics-card-–-pcie-5-0-ray-tracing-ai-enhanced-performance-dual-fan-cooling-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2661",
+      "name": "ASUS Dual GeForce RTX 5060 8GB GDDR7 OC Edition",
+      "category": "gpu",
+      "priceEgp": 29499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-5060-8gb-gddr7-oc-edition",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/5060%20asus/asus-dual-geforce-rtx-5060-8gb-gddr7-oc-edition-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3027",
+      "name": "ASUS Dual GeForce RTX 5060 Ti 8GB GDDR7 White Graphics Card PCIe 5.0, 4K & 8K Support, HDMI 2.1, DisplayPort 2.1",
+      "category": "gpu",
+      "priceEgp": 32499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-5060-ti-8gb-gddr7-white-graphics-card-pcie-5-0-4k-8k-support-hdmi-2-1-displayport-2-1",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/RTX5060%20TTI/ASUS%20Dual%205060%20TI%208G/asus-dual-geforce-rtx-5060-ti-8gb-gddr7-white-graphics-card-pcie-5-0-4k-8k-support-hdmi-2-1-displayport-2-1-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2977",
+      "name": "ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 Graphics Card – PCIe 5.0, 28Gbps, 4608 CUDA Cores",
+      "category": "gpu",
+      "priceEgp": 41999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-5060-ti-oc-edition-16gb-gddr7-graphics-card-–-pcie-5-0-28gbps-4608-cuda-cores",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/5060%20ti%2016g%20dual/asus-dual-geforce-rtx-5060-ti-oc-edition-16gb-gddr7-graphics-card-–-pcie-5-0-28gbps-4608-cuda-cores-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3026",
+      "name": "ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 White Gaming Graphics Card",
+      "category": "gpu",
+      "priceEgp": 41999,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-5060-ti-oc-edition-16gb-gddr7-white-gaming-graphics-card",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/RTX5060%20TTI/asus-dual-geforce-rtx-5060-ti-oc-edition-16gb-gddr7-white-gaming-graphics-card-350x350.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "3454",
+      "name": "ASUS Dual GeForce RTX 5060 White OC Edition 8GB GDDR7 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 29499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-5060-white-oc-edition-8gb-gddr7",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/ASUS%20Dual%205060%20White%208GB/asus-dual-geforce-rtx-5060-white-oc-edition-8gb-gddr7-graphics-card-350x350h.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "elnekhely",
+      "externalId": "2857",
+      "name": "ASUS Dual GeForce RTX 5070 OC Edition 12GB GDDR7 Graphics Card – PCIe 5.0, 672GB/s Bandwidth, DLSS 4, Ray Tracing, 2.5-Slot Cooling, Dual Axial-Tech Fans, HDMI 2.1, DisplayPort 2.1, 16-Pin Power Connector",
+      "category": "gpu",
+      "priceEgp": 47499,
+      "originalPriceEgp": null,
+      "stockStatus": "unknown",
+      "productUrl": "https://www.elnekhelytechnology.com/graphics-card/asus-dual-geforce-rtx-5070-oc-edition-12gb-gddr7-graphics-card-–-pcie-5-0-672gb-s-bandwidth-dlss-4-ray-tracing-2-5-slot-cooling-dual-axial-tech-fans-hdmi-2-1-displayport-2-1-16-pin-power-connector",
+      "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/card/5070%20Asus%20dual%2012g/asus-dual-geforce-rtx-5070-oc-edition-12gb-gddr7-graphics-card-–-pcie-5-0-672gb-s-bandwidth-dlss-4-ray-tracing-2-5-slot-cooling-dual-axial-tech-fans-hdmi-2-1-displayport-2-1-16-pin-power-connector-350x350w.jpg",
+      "specs": {
+        "template": "opencart"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "pny-geforce-rtx-5070-ti-argb-overclocked-triple-fan-16gb-gddr7-graphics-card",
+      "name": "PNY GeForce RTX 5070 Ti ARGB Overclocked Triple Fan 16GB GDDR7 Graphics Card",
+      "category": "gpu",
+      "priceEgp": 63887,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/pny-geforce-rtx-5070-ti-argb-overclocked-triple-fan-16gb-gddr7-graphics-card/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-7-8700g-8-core-16-thread-5-1ghz-am5-65w-tray-processor",
+      "name": "AMD Ryzen 7 8700G 8 Core 16 Thread 5.1GHz AM5 65W Tray Processor",
+      "category": "cpu",
+      "priceEgp": 13258,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-7-8700g-8-core-16-thread-5-1ghz-am5-65w-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "intel-core-ultra-5-250k-plus-18-core-5-3ghz-lga1851-125w-tray-processor",
+      "name": "Intel Core Ultra 5 250K Plus 18 Core 5.3GHz LGA1851 125W Tray Processor",
+      "category": "cpu",
+      "priceEgp": 12483,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/intel-core-ultra-5-250k-plus-18-core-5-3ghz-lga1851-125w-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-8400f-6-core-12-thread-4-7ghz-am5-65w-tray-processor",
+      "name": "AMD Ryzen 5 8400F 6 Core 12 Thread 4.7GHz AM5 65W Tray Processor",
+      "category": "cpu",
+      "priceEgp": 5839,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-8400f-6-core-12-thread-4-7ghz-am5-65w-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-7-9850x3d-tray-processor",
+      "name": "AMD Ryzen 7 9850X3D Tray Processor",
+      "category": "cpu",
+      "priceEgp": 26528,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-7-9850x3d-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "intel-core-i9-14900k-tray-processor",
+      "name": "Intel Core I9 14900K Tray Processor",
+      "category": "cpu",
+      "priceEgp": 24999,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/intel-core-i9-14900k-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-5500x3d-tray-processor",
+      "name": "AMD Ryzen 5 5500X3D Tray Processor",
+      "category": "cpu",
+      "priceEgp": 9499,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-5500x3d-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "intel-core-i9-14900kf-tray-processor",
+      "name": "Intel Core I9 14900KF Tray Processor",
+      "category": "cpu",
+      "priceEgp": 23500,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/intel-core-i9-14900kf-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    },
+    {
+      "retailerId": "alfrensia",
+      "externalId": "amd-ryzen-5-5600-tray-processor",
+      "name": "AMD Ryzen 5 5600 Tray Processor",
+      "category": "cpu",
+      "priceEgp": 5999,
+      "originalPriceEgp": null,
+      "stockStatus": "out_of_stock",
+      "productUrl": "https://alfrensia.com/en/product/amd-ryzen-5-5600-tray-processor/",
+      "imageUrl": null,
+      "specs": {
+        "template": "woocommerce"
+      }
+    }
+  ]
+}

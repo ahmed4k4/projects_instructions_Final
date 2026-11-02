@@ -19,6 +19,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { setFormatLocale } from '@/lib/utils';
+import { loadArabicFont } from './fonts';
 
 import enCommon from './locales/en/common.json';
 import enBuilder from './locales/en/builder.json';
@@ -136,6 +137,10 @@ export function applyDocumentLanguage(language: string): void {
   // Number/currency formatting must follow the UI language, otherwise Arabic
   // pages show prices as "US$1,800".
   setFormatLocale(language);
+
+  // The Arabic face is not in the base stylesheet (it is ~125 kB an English
+  // visitor never renders). Pull it in the moment the UI turns Arabic.
+  if (language.startsWith('ar')) void loadArabicFont();
 }
 
 applyDocumentLanguage(i18n.language || 'en');

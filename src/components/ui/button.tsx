@@ -6,7 +6,11 @@ import { cn } from '@/lib/utils';
 const buttonVariants = cva(
   'inline-flex select-none items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ' +
     'transition-[background-color,color,border-color,box-shadow,transform] duration-200 ease-nexus ' +
-    'disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+      'disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 ' +
+    // Touch targets under the `md` breakpoint only. A pointer-based media query
+    // was the wrong test: tablets report `pointer: coarse` at 768px, where the
+    // layout is already full-size and 44px buttons just look oversized.
+    'max-md:min-h-11 max-md:min-w-11',
   {
     variants: {
       variant: {
@@ -23,10 +27,18 @@ const buttonVariants = cva(
         danger: 'bg-danger/90 text-white hover:bg-danger',
         link: 'text-primary-glow underline-offset-4 hover:underline',
       },
+      /**
+       * Sizes are measured against the 44×44 px touch minimum (WCAG 2.5.5).
+       *
+       * On touch devices `min-h-11 min-w-11` (44px) is applied by the base
+       * classes below, so a compact button still looks compact on desktop but
+       * becomes a full-size tap target on a phone. Visual size is unchanged —
+       * the extra height is padding, not type.
+       */
       size: {
         sm: 'h-8 px-3 text-xs',
         default: 'h-10 px-4',
-        lg: 'h-12 rounded-xl px-7 text-[15px]',
+        lg: 'h-12 rounded-xl px-7 text-base',
         icon: 'size-10',
         'icon-sm': 'size-8 rounded-md',
       },

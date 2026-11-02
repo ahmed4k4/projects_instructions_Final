@@ -15,15 +15,24 @@ const currencyFormatters = new Map<string, Intl.NumberFormat>();
  * otherwise Arabic page. The active language is injected once on
  * `languageChanged` so every formatter (including cached ones) agrees.
  */
-let formatLocale = 'en-US';
+let formatLocale = 'en-EG';
 
+/* LOCALE_TAGS is declared below, before setFormatLocale. */
+
+/**
+ * Formatting locales for Egyptian pricing.
+ *
+ * `en-EG` renders `EGP 6,799`; `ar-EG` renders `٦٬٧٩٩ ج.م.‏`. Both keep Western
+ * digits (`numberingSystem: 'latn'`) because these sit next to Latin product
+ * names and model numbers, where Arabic-Indic digits read as noise.
+ */
 const LOCALE_TAGS: Record<string, string> = {
-  en: 'en-US',
+  en: 'en-EG',
   ar: 'ar-EG',
 };
 
 export function setFormatLocale(language: string): void {
-  const next = LOCALE_TAGS[language.split('-')[0] ?? 'en'] ?? 'en-US';
+  const next = LOCALE_TAGS[language.split('-')[0] ?? 'en'] ?? 'en-EG';
   if (next === formatLocale) return;
   formatLocale = next;
   // Cached formatters were built for the previous locale.
@@ -31,7 +40,7 @@ export function setFormatLocale(language: string): void {
 }
 
 /** `$1,899.00` in English, `US$1,800` in Arabic — same currency, locale digits. */
-export function formatCurrency(value: number, currency = 'USD', compact = false): string {
+export function formatCurrency(value: number, currency = 'EGP', compact = false): string {
   const key = `${formatLocale}:${currency}:${compact ? 1 : 0}`;
   let formatter = currencyFormatters.get(key);
   if (!formatter) {
@@ -58,6 +67,19 @@ export function formatWatts(watts: number): string {
 export function formatScore(score: number | null | undefined): string {
   if (score === null || score === undefined) return '—';
   return Math.round(score).toString();
+}
+
+/**
+ * Short, locale-aware date for "prices updated…" captions — e.g. `2 Nov` / `٢ نوفمبر`.
+ * Returns an empty string for an unparseable value so callers never print `Invalid Date`.
+ */
+export function formatDateShort(value: string | Date, language = 'en'): string {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat(LOCALE_TAGS[language.split('-')[0] ?? 'en'] ?? 'en-EG', {
+    day: 'numeric',
+    month: 'short',
+  }).format(date);
 }
 
 /** 2.4k / 18.3k views */

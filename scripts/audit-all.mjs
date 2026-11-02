@@ -21,6 +21,8 @@ const steps = [
   ['lint', 'pnpm', ['lint']],
   ['i18n', 'node', ['scripts/check-i18n.mjs']],
   ['rtl', 'node', ['scripts/check-rtl.mjs']],
+  ['design system', 'node', ['scripts/check-design-system.mjs']],
+  ['dependencies', 'node', ['scripts/check-deps.mjs'], { allowFindings: true }],
   ['build', 'pnpm', ['build']],
   ['bundle secrets', 'node', ['scripts/check-bundle-secrets.mjs']],
   ['unused files', 'node', ['scripts/audit-unused.mjs']],
@@ -28,6 +30,10 @@ const steps = [
 ];
 
 let failed = 0;
+
+// `check-deps` reports rather than fails: `@types/three` is resolved implicitly
+// by TypeScript with no import statement, so a non-empty list is expected.
+const ADVISORY = new Set(['dependencies']);
 
 for (const [name, cmd, args] of steps) {
   process.stdout.write(`\n──────── ${name} ────────\n`);
@@ -40,10 +46,13 @@ for (const [name, cmd, args] of steps) {
     env: process.env,
   });
 
-  if (result.status !== 0) {
+  if (result.status !== 0 && !ADVISORY.has(name)) {
     console.error(`\n✖ ${name} failed (exit ${result.status})`);
     failed += 1;
     break;
+  }
+  if (result.status !== 0 && ADVISORY.has(name)) {
+    console.log(`\n~ ${name}: reported above (advisory, not a failure)`);
   }
 }
 

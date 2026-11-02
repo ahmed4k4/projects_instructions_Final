@@ -29,6 +29,8 @@ import { Badge } from '@/components/ui/badge';
 import { GradientMesh } from '@/components/shared/GradientMesh';
 import { Magnetic } from '@/components/shared/Magnetic';
 import { ComponentName } from '@/components/shared/ComponentName';
+import { HeroSceneStatic } from '@/components/scene/HeroSceneStatic';
+import { useSceneCapability } from '@/hooks/useSceneCapability';
 import { PriceTag } from '@/components/shared/PriceTag';
 import { fadeUp, hoverLift, makeStagger, staggerItem, viewportOnce } from '@/lib/motion';
 import { sampleComponents } from '@/lib/sampleData';
@@ -118,6 +120,8 @@ export default function Landing() {
   const reduce = useReducedMotion();
   const heroRef = useRef<HTMLElement>(null);
   const hydrateFromSelection = useBuildStore((state) => state.hydrateFromSelection);
+  // Decided before the Three.js chunk is requested — see useSceneCapability.
+  const scene = useSceneCapability();
 
   /**
    * A `#b=<payload>` link is a complete, anonymous build. Load it into the
@@ -222,9 +226,13 @@ export default function Landing() {
           >
             {/* Glow sits behind the canvas, inside the same sized box. */}
             <div className="pointer-events-none absolute inset-4 -z-10 rounded-full bg-primary/20 blur-[130px]" />
-            <Suspense fallback={null}>
-              <Hero3DScene className="h-full w-full cursor-grab active:cursor-grabbing" />
-            </Suspense>
+            {scene.pending ? null : scene.use3d ? (
+              <Suspense fallback={<HeroSceneStatic className="h-full w-full" />}>
+                <Hero3DScene className="h-full w-full cursor-grab active:cursor-grabbing" />
+              </Suspense>
+            ) : (
+              <HeroSceneStatic className="h-full w-full" />
+            )}
           </motion.div>
 
           {/* Floating spec cards */}

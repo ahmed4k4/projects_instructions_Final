@@ -11,7 +11,8 @@
     "prebuilt": "Prebuilt",
     "community": "Community",
     "dashboard": "Dashboard",
-    "overview": "Overview"
+    "overview": "Overview",
+    "primary": "Primary navigation"
   },
   "common": {
     "save": "Save",
@@ -65,5 +66,22 @@
     "boundaryTitle": "Something shorted out",
     "boundaryBody": "An unexpected error interrupted rendering. Your saved build is safe in local storage.",
     "reload": "Reload Nexus"
+  },
+  "retail": {
+    "compareTitle": "Compare prices",
+    "loading": "Fetching live prices…",
+    "saveAmount": "Save {{amount}} by buying from the cheapest store",
+    "updatedAt": "Prices updated {{date}}",
+    "bestPrice": "Best price",
+    "outOfStock": "Out of stock",
+    "visit": "Visit store",
+    "buy": "Buy",
+    "noneTitle": "No live prices yet",
+    "noneBody": "No Egyptian retailer matches this part in the last sync. The catalogue price below is a converted estimate, not a live quote.",
+    "noneHint": "Retailer prices refresh daily",
+    "compare": "Compare prices",
+    "availableAt": "Available at",
+    "from": "from",
+    "retailersLive": "{{count}} retailers"
   }
 }

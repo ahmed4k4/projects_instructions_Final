@@ -46,7 +46,8 @@
     "ctaTitle": "Your next build is 8 parts away.",
     "ctaBody": "Start from an empty list or let the advisor draft one from your budget. Nothing leaves your browser until you ask it to.",
     "ctaPrimary": "Open the builder",
-    "ctaSecondary": "See prebuilt configs"
+    "ctaSecondary": "See prebuilt configs",
+    "sceneAlt": "An illuminated 3D motherboard with a graphics card installed"
   },
   "prebuilt": {
     "title": "Configurations that ship unchanged",

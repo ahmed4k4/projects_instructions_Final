@@ -13,6 +13,7 @@ import {
   Video,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { CURRENCY } from '@/lib/constants';
 import { Input, Textarea } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import type { AIBuildRequest } from '@/types/ai';
@@ -83,7 +84,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
   const submit = () => {
     onSubmit({
       budget,
-      currency: 'USD',
+      currency: CURRENCY,
       useCase,
       resolution: isGaming ? resolution : undefined,
       preferences,

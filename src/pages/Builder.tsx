@@ -25,6 +25,11 @@ import { useComponents } from '@/hooks/useComponents';
 import { useCompatibilityRules, useCategoryCounts } from '@/hooks/useCatalogue';
 import { evaluateCompatibility } from '@/lib/compatibility/engine';
 import { useBuildStore } from '@/store/useBuildStore';
+import { useBestPrices, useRetailerOffers } from '@/hooks/useRetailers';
+import { summariseOffers } from '@/services/retailers/aggregator';
+import type { PriceComparison } from '@/services/retailers/types';
+import { ComparePricesModal } from '@/components/retail/ComparePricesModal';
+import type { PCComponent } from '@/types/components';
 
 export default function Builder() {
   const { t } = useTranslation();
@@ -43,6 +48,19 @@ export default function Builder() {
 
   const { data: rules = [] } = useCompatibilityRules();
   const categoryCounts = useCategoryCounts();
+
+  // Live Egyptian retail prices. One batched query for the visible grid — a
+  // per-card request would be N round-trips on every category switch.
+  const componentIds = useMemo(() => (components ?? []).map((c) => c.id), [components]);
+  const { data: bestPrices } = useBestPrices(componentIds);
+
+  const [compareFor, setCompareFor] = useState<PCComponent | null>(null);
+  const { data: compareOffers, isLoading: comparing } = useRetailerOffers(compareFor?.id ?? null);
+
+  const comparison = useMemo<PriceComparison | null>(() => {
+    if (!compareFor || !compareOffers) return null;
+    return summariseOffers(compareFor.id, compareFor.name, compareOffers.offers);
+  }, [compareFor, compareOffers]);
 
   // Re-evaluated on every add/remove — pure and cheap, so no debouncing needed.
   const liveReport = useMemo(() => evaluateCompatibility(items, rules), [items, rules]);
@@ -78,20 +96,32 @@ export default function Builder() {
               <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
                 {t('builder.budget')}
               </span>
-              {/* `dir="ltr"` keeps "$1,800" as one unit; in RTL the symbol
-                  otherwise detaches and renders on the far side of the field. */}
-              <span className="font-mono text-sm" dir="ltr">$</span>
+              {/* `dir="ltr"` keeps "EGP 1,800" as one unit; in RTL the code would
+                  otherwise detach and render on the far side of the field. */}
+              <span className="font-mono text-[11px] text-muted-foreground" dir="ltr">
+                EGP
+              </span>
+              {/*
+               * `type="text"` + inputMode="numeric", not `type="number"`.
+               * A number input renders its own digits, and the browser picks the
+               * numbering system from the page language: an English UI on an
+               * Arabic-locale browser showed `١٬٨٠٠`. Formatting it ourselves
+               * keeps Western digits consistent with every other price.
+               */}
               <input
-                type="number"
-                min={0}
-                step={50}
+                type="text"
+                inputMode="numeric"
+                autoComplete="off"
                 size={7}
-                value={budget}
-                onChange={(event) => setBudget(Number(event.target.value))}
+                value={budget.toLocaleString('en-US')}
+                onChange={(event) => {
+                  const digits = event.target.value.replace(/[^\d]/g, '');
+                  setBudget(digits ? Number(digits) : 0);
+                }}
                 aria-label={t('builder.budget')}
-                /* Wide enough for "12,500" plus the $ prefix and the spinner gutter;
-                   4.5rem clipped anything above four digits. */
-                className="w-[6.5rem] min-w-0 bg-transparent text-end font-mono text-sm tabular-nums outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                /* Wide enough for "12,500" plus the currency code. */
+                className="h-11 w-[5.5rem] min-w-0 bg-transparent text-end font-mono text-sm tabular-nums outline-none sm:h-auto sm:w-[6.5rem]"
+                dir="ltr"
               />
             </div>
             <Select value={useCase} onValueChange={(value) => setUseCase(value as UseCase)}>
@@ -116,7 +146,13 @@ export default function Builder() {
         {/* -------------------------------------------------------------- */}
         {/* Category rail                                                  */}
         {/* -------------------------------------------------------------- */}
-        <aside className="lg:sticky lg:top-24 lg:self-start">
+        {/*
+         * `min-w-0` is load-bearing. This rail is a horizontal scroller on
+         * mobile; as a grid child its default `min-width: auto` let the scroller's
+         * full 8-item intrinsic width (≈1386px) push the whole page wider than a
+         * 375px viewport. The same applies to the component column below.
+         */}
+        <aside className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <div className="flex gap-1.5 overflow-x-auto pb-2 no-scrollbar lg:flex-col lg:overflow-visible lg:pb-0">
             {BUILD_ORDER.map((id) => {
               const selected = Boolean(items[id]);
@@ -183,13 +219,13 @@ export default function Builder() {
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder={t('builder.filter')}
-                  className="h-9 ps-8 text-xs"
+                  className="h-9 min-h-11 ps-8 text-xs sm:min-h-9"
                   aria-label={t('builder.filter')}
                 />
               </div>
               <Select value={sort} onValueChange={(value) => setSort(value as typeof sort)}>
                 <SelectTrigger
-                  className="h-9 w-[150px] shrink-0 gap-1.5 px-2.5 text-xs"
+                  className="h-9 min-h-11 w-[150px] shrink-0 gap-1.5 px-2.5 text-xs sm:min-h-9"
                   aria-label={t('builder.sort.label')}
                 >
                   <SlidersHorizontal className="size-3.5 shrink-0" />
@@ -231,6 +267,8 @@ export default function Builder() {
                     component={component}
                     selected={items[category]?.id === component.id}
                     onSelect={handleSelect}
+                    livePrice={bestPrices?.get(component.id) ?? null}
+                    onCompare={setCompareFor}
                     onRemove={() => {
                       removeComponent(category);
                       toast(t('builder.removed', { name: component.name }), {
@@ -263,6 +301,14 @@ export default function Builder() {
       <div className="mt-8 xl:hidden">
         <BuildSummaryPanel compact />
       </div>
+
+      {/* Price comparison — one instance, driven by whichever card asked for it. */}
+      <ComparePricesModal
+        open={Boolean(compareFor)}
+        onClose={() => setCompareFor(null)}
+        comparison={comparison}
+        loading={comparing}
+      />
 
       <div className="mt-10 flex flex-col items-start justify-between gap-3 rounded-xl border border-border bg-surface/50 p-5 sm:flex-row sm:items-center">
         <div className="flex items-start gap-3">

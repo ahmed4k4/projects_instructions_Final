@@ -27,7 +27,9 @@ export const useBuildStore = create<BuildState>()(
     immer((set) => ({
       buildName: 'Untitled Build',
       useCase: 'gaming',
-      budget: 1800,
+      // EGP. The old 1800 was a USD-era default; at the current rate it is about
+      // $36 and cannot buy a CPU. 60,000 EGP is a realistic 1440p gaming budget.
+      budget: 60_000,
       items: {},
       quantities: {},
       lastUpdatedAt: null,

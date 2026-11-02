@@ -14,6 +14,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(({ className, type,
       'hover:border-white/20 focus:border-primary/60 focus:bg-surface focus:outline-none focus:ring-2 focus:ring-primary/25',
       'disabled:cursor-not-allowed disabled:opacity-50',
       'file:border-0 file:bg-transparent file:text-sm file:font-medium',
+      // 44px min tap target on touch only (WCAG 2.5.5); desktop keeps h-10.
+      '[@media(pointer:coarse)]:min-h-11',
       className,
     )}
     {...props}

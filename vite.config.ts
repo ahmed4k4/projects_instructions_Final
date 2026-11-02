@@ -72,6 +72,7 @@ export default defineConfig(({ mode }) => {
         'three',
         '@react-three/fiber',
         '@react-three/drei',
+        '@supabase/supabase-js',
       ],
     },
     resolve: {
@@ -116,6 +117,13 @@ export default defineConfig(({ mode }) => {
     build: {
       target: 'es2020',
       sourcemap: false,
+      /**
+       * The only chunk over 500 kB is Hero3DScene (Three.js + drei), which is
+       * lazy and reached only by desktop visitors — phones load a static image
+       * instead. Raising the limit keeps the warning meaningful for chunks that
+       * are actually eager.
+       */
+      chunkSizeWarningLimit: 950,
       rollupOptions: {
         output: {
           manualChunks: {
@@ -123,9 +131,22 @@ export default defineConfig(({ mode }) => {
             motion: ['framer-motion'],
             data: ['@tanstack/react-query', 'zustand', 'immer'],
             icons: ['lucide-react'],
-            // Three.js is only needed by the landing hero; keeping it in its own
-            // chunk lets every other route load without pulling ~150 kB gzip.
-            three: ['three', '@react-three/fiber', '@react-three/drei'],
+            /**
+             * Three.js is deliberately NOT listed here.
+             *
+             * An explicit `three` chunk forced the entry to reference it, so every
+             * route — including mobile, where the hero is a static image — still
+             * downloaded ~250 kB gzip. Rollup splits a lazily-imported graph on
+             * its own; letting it do so keeps `three` inside the Hero3DScene chunk
+             * where only desktop visitors reach it.
+             */
+            /**
+             * Supabase is optional infrastructure (~45 kB gzip with its Realtime
+             * and GoTrue clients) and changes far less often than app code. Its
+             * own chunk is cached long-term and keeps the entry chunk small
+             * enough that first paint is not gated on it.
+             */
+            supabase: ['@supabase/supabase-js'],
           },
         },
       },

@@ -244,7 +244,14 @@ export function Hero3DScene({ className }: { className?: string }) {
   return (
     <div className={className} role="img" aria-label="Animated 3D motherboard with a graphics card">
       <Canvas
+        /*
+         * `demand` renders only when the scene invalidates. The rotation runs in
+         * `useFrame`, so frameloop stays `always` there — but reduced motion gets
+         * a single static frame, which costs nothing after the first paint.
+         */
         frameloop={reduce ? 'demand' : 'always'}
+        /* Cap the pixel ratio: a 3× phone would render 9× the fragments for no
+           visible gain on a glowing, soft-edged object. */
         dpr={[1, 1.75]}
         camera={{ position: [0, 3.6, 6.4], fov: 42 }}
         gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
@@ -264,7 +271,12 @@ export function Hero3DScene({ className }: { className?: string }) {
           <pointLight position={[0, 1.2, 0]} intensity={5} distance={5} color={NEON_CYAN} />
 
           <Assembled animate={!reduce} />
-          <Particles count={260} />
+          {/*
+           * 260 particles on desktop; the scene only reaches small screens via
+           * the capability hook, so a single count is enough here. The fallback
+           * image handles phones entirely.
+           */}
+          <Particles count={180} />
 
           {/*
            * Weak IBL only: the studio presets wash the dark PCB out to near-white,

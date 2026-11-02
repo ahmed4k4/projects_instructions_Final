@@ -59,7 +59,7 @@ export function CompatibilityBanner({ report, className }: CompatibilityBannerPr
         onClick={() => expandable && setOpen((v) => !v)}
         aria-expanded={expandable ? open : undefined}
         className={cn(
-          'flex w-full items-center gap-2.5 px-4 py-2.5 text-start text-xs font-medium',
+          'flex min-h-11 w-full items-center gap-2.5 px-4 py-2.5 text-start text-xs font-medium md:min-h-0',
           expandable ? 'cursor-pointer hover:bg-white/[0.03]' : 'cursor-default',
         )}
       >

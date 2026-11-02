@@ -17,6 +17,8 @@ const SelectTrigger = React.forwardRef<
       'flex h-10 w-full items-center justify-between gap-2 rounded-lg border border-border-strong bg-surface-inset/60 px-3 py-2 text-sm',
       'transition-colors duration-200 hover:border-white/20 focus:outline-none focus:ring-2 focus:ring-primary/25',
       'data-[placeholder]:text-muted-foreground [&>span]:truncate',
+      // 44px minimum tap target on phones (WCAG 2.5.5).
+      'max-md:min-h-11',
       className,
     )}
     {...props}

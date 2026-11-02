@@ -1,5 +1,6 @@
 import type { PCComponent } from '@/types/components';
 import type { BuildScoreBreakdown } from '@/types/build';
+import { CURRENCY, toEgp } from './constants';
 
 /**
  * Offline demo catalogue.
@@ -13,10 +14,17 @@ type Seed = Omit<PCComponent, 'createdAt' | 'updatedAt' | 'isActive' | 'currency
 
 const now = new Date('2026-01-12T10:00:00.000Z').toISOString();
 
+/**
+ * The rows below are USD list prices — that is how the Phase 1 catalogue was
+ * authored and changing every literal would silently break the compatibility and
+ * scoring tests that assert on them. They are converted to EGP once, here, so the
+ * rest of the app only ever sees Egyptian pounds.
+ */
 const seed = (rows: Omit<Seed, 'stockStatus'>[]): PCComponent[] =>
   rows.map((row) => ({
     ...row,
-    currency: 'USD',
+    price: toEgp(row.price),
+    currency: CURRENCY,
     stockStatus: 'in_stock',
     storeLinks: [],
     isActive: true,

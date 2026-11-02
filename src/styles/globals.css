@@ -2,11 +2,17 @@
 @import '@fontsource/jetbrains-mono/400.css';
 @import '@fontsource/jetbrains-mono/500.css';
 @import '@fontsource/jetbrains-mono/600.css';
-/* Arabic UI face. Latin specs keep JetBrains Mono in both languages. */
-@import '@fontsource/ibm-plex-sans-arabic/400.css';
-@import '@fontsource/ibm-plex-sans-arabic/500.css';
-@import '@fontsource/ibm-plex-sans-arabic/600.css';
-@import '@fontsource/ibm-plex-sans-arabic/700.css';
+/*
+ * The Arabic face is NOT imported here on purpose.
+ *
+ * IBM Plex Sans Arabic is ~125 kB of woff2 across four weights, and an English
+ * visitor never renders a glyph of it — yet as a static @import it downloaded
+ * before first paint and was the largest single cost on mobile (240 kB of fonts
+ * vs 234 kB of everything else). `src/i18n` now injects these stylesheets only
+ * when the UI actually switches to Arabic; until then the RTL stack falls back
+ * to the system Arabic face, which is already installed on the devices that need
+ * it. See `loadArabicFont()` in src/i18n/fonts.ts.
+ */
 
 @tailwind base;
 @tailwind components;
@@ -90,6 +96,17 @@
       'ss01' 1;
     text-rendering: optimizeLegibility;
     min-height: 100dvh;
+    /*
+     * Explicit leading for both faces. Arabic ascenders and descenders are far
+     * deeper than Latin's, so the same line-height reads cramped in Arabic and
+     * loose in English — hence a value per direction rather than one number.
+     */
+    line-height: 1.6;
+  }
+
+  /* Arabic script needs more leading to stay comfortable. */
+  [dir='rtl'] body {
+    line-height: 1.75;
   }
 
   /* ---------------------------------------------------------------------

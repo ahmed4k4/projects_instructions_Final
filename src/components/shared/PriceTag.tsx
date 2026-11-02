@@ -1,3 +1,4 @@
+import { CURRENCY } from '@/lib/constants';
 import { formatCurrency } from '@/lib/utils';
 import { AnimatedNumber } from './AnimatedNumber';
 import { cn } from '@/lib/utils';
@@ -16,8 +17,13 @@ const sizes = {
   lg: 'text-3xl',
 } as const;
 
-/** Monospace, tabular price with an animated value change. */
-export function PriceTag({ value, currency = 'USD', className, size = 'md', animate = true }: PriceTagProps) {
+/**
+ * Monospace, tabular price with an animated value change.
+ *
+ * The default follows `CURRENCY` (EGP). It used to default to a literal 'USD',
+ * which overrode the app-wide currency and kept `$` on every price tag.
+ */
+export function PriceTag({ value, currency = CURRENCY, className, size = 'md', animate = true }: PriceTagProps) {
   return (
     <span className={cn('font-mono font-medium tracking-tight tabular-nums', sizes[size], className)}>
       {animate ? (

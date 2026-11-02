@@ -52,25 +52,32 @@ export function Topbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 border-b border-border bg-background/60 backdrop-blur-xl">
-        <div className="flex h-16 items-center gap-3 px-4 sm:px-6">
-          <div className="flex items-center gap-2 lg:hidden">
+      <header className="sticky top-0 z-30 min-w-0 border-b border-border bg-background/60 backdrop-blur-xl">
+        {/*
+         * `min-w-0` on the row AND on the search button is what keeps the topbar
+         * inside a 375px viewport: a flex child defaults to `min-width: auto`,
+         * so `w-full max-w-md` (448px) refused to shrink and pushed the header
+         * 636px wide — the source of the page's horizontal scrollbar.
+         */}
+        <div className="flex h-16 min-w-0 items-center gap-2 px-4 sm:gap-3 sm:px-6">
+          <div className="flex shrink-0 items-center gap-2 lg:hidden">
             <Button
               variant="ghost"
               size="icon-sm"
               aria-label={t('nav.workspace')}
               onClick={() => setSidebarOpen(true)}
+              className="min-h-11 min-w-11"
             >
               <Menu />
             </Button>
-            <Logo compact />
+            <Logo compact className="hidden sm:flex" />
           </div>
 
           <button
             type="button"
             onClick={() => setCommandOpen(true)}
             className={cn(
-              'group ms-auto flex h-9 w-full max-w-md items-center gap-2.5 rounded-lg border border-border-strong',
+              'group ms-auto flex h-11 min-h-11 min-w-0 flex-1 max-w-md items-center gap-2.5 rounded-lg border border-border-strong sm:h-9 sm:min-h-9',
               'bg-surface/60 px-3 text-start text-sm text-muted-foreground transition-colors duration-200',
               'hover:border-primary/30 hover:bg-surface lg:ms-0',
             )}
@@ -87,7 +94,16 @@ export function Topbar() {
               <span className="size-1.5 rounded-full bg-success" />
               <span className="font-mono text-[11px] text-muted-foreground">
                 {t('common.parts', { count: totals.itemCount })} ·{' '}
-                <span dir="ltr">{formatCurrency(totals.totalPrice)}</span>
+                {/*
+                 * `dir="auto"`, not `dir="ltr"`. Intl already wraps an Arabic
+                 * currency string in RTL marks (U+200F … ج.م. U+200F); forcing
+                 * LTR overrode them and rendered "ج.م 379" with the currency
+                 * first. `auto` lets the embedded marks place it correctly
+                 * while still isolating the run from the surrounding sentence.
+                 */}
+                <span dir="auto" className="inline-block">
+                  {formatCurrency(totals.totalPrice)}
+                </span>
               </span>
             </div>
 

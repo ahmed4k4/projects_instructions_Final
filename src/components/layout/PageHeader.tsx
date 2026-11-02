@@ -45,7 +45,9 @@ export function PageHeader({
                 {crumb.to ? (
                   <Link
                     to={crumb.to}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
+                    /* inline-flex + min-h-11: a bare inline link is only 16px
+                       tall, well under the 44px touch minimum. */
+                    className="inline-flex min-h-11 items-center text-muted-foreground transition-colors hover:text-foreground sm:min-h-0"
                   >
                     {crumb.label}
                   </Link>

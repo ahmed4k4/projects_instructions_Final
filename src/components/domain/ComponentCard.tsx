@@ -7,6 +7,8 @@ import { staggerItem } from '@/lib/motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ComponentName } from '@/components/shared/ComponentName';
+import { RetailerLogo } from '@/components/retail/RetailerLogo';
+import type { RetailerId } from '@/services/retailers/types';
 import { CategoryIcon } from './CategoryIcon';
 
 /** Short, category-aware spec highlights (3 per card). */
@@ -63,9 +65,12 @@ interface ComponentCardProps {
   selected?: boolean;
   onSelect: (component: PCComponent) => void;
   onRemove?: (component: PCComponent) => void;
+  /** Cheapest live Egyptian retailer offer for this part, when one exists. */
+  livePrice?: { bestPriceEgp: number; retailerId: RetailerId; url: string; count: number } | null;
+  onCompare?: (component: PCComponent) => void;
 }
 
-export function ComponentCard({ component, selected, onSelect, onRemove }: ComponentCardProps) {
+export function ComponentCard({ component, selected, onSelect, onRemove, livePrice, onCompare }: ComponentCardProps) {
   const { t } = useTranslation();
   const outOfStock = component.stockStatus === 'out_of_stock';
 
@@ -124,7 +129,34 @@ export function ComponentCard({ component, selected, onSelect, onRemove }: Compo
 
       <footer className="mt-5 flex items-center justify-between gap-3 border-t border-border pt-4">
         <div>
-          <div className="font-mono text-lg font-medium tabular-nums">{formatCurrency(component.price)}</div>
+          {/*
+           * Live retailer price when one has been matched, otherwise the
+           * converted catalogue estimate. The two are never mixed: a converted
+           * seed price must not look like a real quote.
+           */}
+          {livePrice ? (
+            <>
+              <div className="flex items-center gap-1.5">
+                {/* `auto`, not `ltr`: Intl wraps Arabic currency in RTL marks and
+                    forcing LTR renders "ج.م 379" with the currency first. */}
+                <span
+                  className="font-mono text-lg font-medium tabular-nums text-success"
+                  dir="auto"
+                  title={t('retail.bestPrice')}
+                >
+                  {formatCurrency(livePrice.bestPriceEgp)}
+                </span>
+                <RetailerLogo retailerId={livePrice.retailerId} size="sm" />
+              </div>
+              <div className="mt-0.5 text-[11px] text-muted-foreground line-through" dir="auto">
+                {formatCurrency(component.price)}
+              </div>
+            </>
+          ) : (
+            <div className="font-mono text-lg font-medium tabular-nums" dir="auto">
+              {formatCurrency(component.price)}
+            </div>
+          )}
           {component.powerDrawWatts ? (
             <div className="mt-0.5 flex items-center gap-1 text-[11px] text-muted-foreground">
               <Zap className="size-3" /> {formatWatts(component.powerDrawWatts)}
@@ -139,9 +171,21 @@ export function ComponentCard({ component, selected, onSelect, onRemove }: Compo
             <Check /> {t('builder.selected')}
           </Button>
         ) : (
-          <Button size="sm" variant="outline" disabled={outOfStock} onClick={() => onSelect(component)}>
-            <Plus /> {t('builder.add')}
-          </Button>
+          <div className="flex flex-col items-stretch gap-1.5">
+            <Button size="sm" variant="outline" disabled={outOfStock} onClick={() => onSelect(component)}>
+              <Plus /> {t('builder.add')}
+            </Button>
+            {/* Only offered when a retailer actually lists this part. */}
+            {livePrice ? (
+              <button
+                type="button"
+                onClick={() => onCompare?.(component)}
+                className="min-h-11 rounded-md px-2 text-[11px] font-medium text-primary-glow underline-offset-2 transition-colors hover:underline"
+              >
+                {t('retail.compare')}
+              </button>
+            ) : null}
+          </div>
         )}
       </footer>
     </motion.article>

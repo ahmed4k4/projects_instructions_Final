@@ -341,8 +341,94 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['build_ratings']['Insert']>;
         Relationships: [];
       };
+
+      /** Migration 008 — scraped Egyptian retailer listings (read-only client-side). */
+      retailer_products: {
+        Row: {
+          id: string;
+          retailer_id: string;
+          external_id: string;
+          name: string;
+          category: ComponentCategoryDb | null;
+          price_egp: number;
+          original_price_egp: number | null;
+          currency: string;
+          stock_status: string;
+          product_url: string;
+          image_url: string | null;
+          specs: Json;
+          matched_component_id: string | null;
+          match_confidence: number | null;
+          last_scraped_at: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          retailer_id: string;
+          external_id: string;
+          name: string;
+          category?: ComponentCategoryDb | null;
+          price_egp: number;
+          original_price_egp?: number | null;
+          currency?: string;
+          stock_status?: string;
+          product_url: string;
+          image_url?: string | null;
+          specs?: Json;
+          matched_component_id?: string | null;
+          match_confidence?: number | null;
+          last_scraped_at?: string;
+          created_at?: string;
+        };
+        Update: Partial<Database['public']['Tables']['retailer_products']['Insert']>;
+        Relationships: [];
+      };
+
+      /** Migration 008 — one row per retailer per sync run, for observability. */
+      retailer_sync_runs: {
+        Row: {
+          id: string;
+          retailer_id: string;
+          started_at: string;
+          finished_at: string | null;
+          status: string;
+          pages_fetched: number;
+          products_seen: number;
+          products_upserted: number;
+          products_matched: number;
+          error: string | null;
+        };
+        Insert: {
+          id?: string;
+          retailer_id: string;
+          started_at?: string;
+          finished_at?: string | null;
+          status?: string;
+          pages_fetched?: number;
+          products_seen?: number;
+          products_upserted?: number;
+          products_matched?: number;
+          error?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['retailer_sync_runs']['Insert']>;
+        Relationships: [];
+      };
     };
-    Views: Record<never, never>;
+    Views: {
+      /** Migration 008 — cheapest in-stock price per catalogue component. */
+      component_best_price: {
+        Row: {
+          component_id: string | null;
+          best_price_egp: number | null;
+          lowest_price_egp: number | null;
+          retailer_count: number;
+          best_retailer_id: string | null;
+          best_url: string | null;
+          last_scraped_at: string | null;
+        };
+        Relationships: [];
+      };
+    };
     Functions: {
       increment_build_view: {
         Args: { target_build: string };

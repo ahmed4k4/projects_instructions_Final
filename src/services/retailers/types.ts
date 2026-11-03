@@ -101,6 +101,11 @@ export interface RetailerOffer {
   matchedComponentId: string | null;
   matchConfidence: number | null;
   lastScrapedAt: string;
+  /**
+   * Scrape payload (brand, template, inferred specs once `enrich-specs` ran).
+   * Optional: the snapshot and Sigma's feed do not always carry one.
+   */
+  specs?: Record<string, unknown>;
 }
 
 /** Aggregated view used by cards and the comparison modal. */

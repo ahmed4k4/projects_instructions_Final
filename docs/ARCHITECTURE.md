@@ -99,7 +99,7 @@ reusable to `components/` and anything computational to `lib/`.
 | `ui/`     | Appearance and a11y of primitives              | Domain logic, fetching                    |
 | `layout/` | Navigation, shell chrome, responsive behaviour | Business rules                            |
 | `domain/` | Presenting a component, a build, a score       | Fetching, price parsing                   |
-| `retail/` | Presenting a retailer offer, filter state      | Scraping                                  |
+| `retail/` | Presenting a retailer offer, filters, pagination, mobile sheet | Scraping |
 | `scene/`  | WebGL hero and its graceful degradation        | Anything outside the hero                 |
 | `ai/`     | Chat rendering, streaming display              | Calling the model (that is `services/ai`) |
 
@@ -124,6 +124,8 @@ reusable to `components/` and anything computational to `lib/`.
 | `retailerImage.ts`     | One rule for "can this retailer photo be shown?"               |
 | `assets.ts`            | Public URLs built from `BASE_URL`                              |
 | `share.ts`             | `#b=` build-link codec                                         |
+| `brand.ts`             | Canonical manufacturer extraction (filter rail + grouping)     |
+| `offerRanking.ts`      | The ONE price-ranking policy (placeholders, stock, price)      |
 | `navigation.ts`        | Nav + filter definitions (translation **keys**, not English)   |
 | `utils.ts`             | `cn`, `formatCurrency` (the only currency formatter), locale   |
 | `motion.ts`            | Shared easing and stagger presets                              |

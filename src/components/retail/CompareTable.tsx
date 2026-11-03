@@ -55,10 +55,26 @@ export function CompareTable({ group }: { group: ProductGroup }) {
         </table>
       </div>
 
-      {group.savingsEgp > 0 ? (
-        <p className="flex items-center gap-2 border-t border-border bg-success/5 px-3 py-2.5 text-[11.5px] text-success">
+      {/*
+       * The note describes the ROW COUNT, not the savings.
+       *
+       * Keying it on `savingsEgp > 0` printed "Only one retailer lists this part"
+       * directly under a table listing three retailers — they happened to be
+       * priced the same, so the spread was zero. Two different facts were sharing
+       * one branch.
+       */}
+      {group.offers.length > 1 ? (
+        <p
+          className={
+            group.savingsEgp > 0
+              ? 'flex items-center gap-2 border-t border-border bg-success/5 px-3 py-2.5 text-[11.5px] text-success'
+              : 'flex items-center gap-2 border-t border-border px-3 py-2.5 text-[11.5px] text-muted-foreground'
+          }
+        >
           <Check className="size-3.5 shrink-0" />
-          {t('compare.savingsNote', { amount: formatCurrency(group.savingsEgp) })}
+          {group.savingsEgp > 0
+            ? t('compare.savingsNote', { amount: formatCurrency(group.savingsEgp) })
+            : t('compare.samePriceNote', { count: group.offers.length })}
         </p>
       ) : (
         <p className="flex items-center gap-2 border-t border-border px-3 py-2.5 text-[11.5px] text-muted-foreground">

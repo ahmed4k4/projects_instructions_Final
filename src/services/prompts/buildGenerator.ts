@@ -31,7 +31,10 @@ export function buildTools(): ToolDeclaration[] {
           },
           budgetMax: {
             type: 'NUMBER',
-            description: 'Maximum unit price in USD. Omit to see the whole category.',
+            // EGYPTIAN POUNDS. Every price in the tool results is EGP, so a model
+            // told USD here budgets a $600 card against a 95,000 EGP ceiling
+            // and returns the cheapest part it can find.
+            description: 'Maximum unit price in Egyptian pounds (EGP). Omit to see the whole category.',
           },
           minPerfScore: {
             type: 'NUMBER',
@@ -155,7 +158,7 @@ export function buildUserInstruction(req: AIBuildRequest): string {
   const lines = [
     `Build me a PC.`,
     ``,
-    `Budget: ${formatCurrency(req.budget, req.currency)} (hard ceiling)`,
+    `Budget: ${formatCurrency(req.budget)} (hard ceiling; all prices and budgets are Egyptian pounds / EGP)`,
     `Primary use case: ${useCase?.label ?? req.useCase} — ${useCase?.description ?? ''}`,
   ];
 

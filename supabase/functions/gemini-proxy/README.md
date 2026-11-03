@@ -78,8 +78,8 @@ The proxy pins an allow-list — a client cannot request an arbitrary model:
 
 | Key     | Model              | Why                                           |
 | ------- | ------------------ | --------------------------------------------- |
-| `flash` | `gemini-3.6-flash` | Streaming + tool calling, lowest latency      |
-| `pro`   | `gemini-3.8-flash` | Higher quality for analysis/structured output |
+| `flash` | `gemini-3.5-flash-lite` | Streaming + tool calling, lowest latency      |
+| `pro`   | `gemini-3.5-flash` | Higher quality for analysis/structured output |
 
 > `gemini-2.5-flash` is **retired for new API keys** and `gemini-3.8-pro` does
 > not exist — both verified live against this project's key. Change `MODELS` in

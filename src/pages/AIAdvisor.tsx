@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+﻿import { useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { nanoid } from 'nanoid';
@@ -17,6 +17,7 @@ import { advisorSuggestions } from '@/services/prompts/advisor';
 import { useBuildStore } from '@/store/useBuildStore';
 import { useUIStore } from '@/store/useUIStore';
 import { EASE_OUT, makeStagger, staggerItem } from '@/lib/motion';
+import { appendText, toDisplayText } from '@/lib/displayText';
 import { cn } from '@/lib/utils';
 
 const stagger = makeStagger(0.05, 0.02);
@@ -43,12 +44,32 @@ export default function AIAdvisor() {
   const [thinking, setThinking] = useState(false);
   const [toolNote, setToolNote] = useState<string | null>(null);
   const [lastError, setLastError] = useState<AIError | null>(null);
-  /** Last question the user asked — what "Retry" must resend. */
+  /** Last question the user asked â€” what "Retry" must resend. */
   const [lastQuestion, setLastQuestion] = useState<string | null>(null);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
+  const pendingTokensRef = useRef('');
+  const tokenFrameRef = useRef<number | null>(null);
+  const activeAssistantIdRef = useRef<string | null>(null);
+
+  // Batch streamed chunks to one React update per animation frame. The old
+  // implementation re-rendered every message and smooth-scrolled for every
+  // token, which was especially expensive on mid-range phones.
+  const flushTokenBuffer = () => {
+    if (tokenFrameRef.current !== null) {
+      cancelAnimationFrame(tokenFrameRef.current);
+      tokenFrameRef.current = null;
+    }
+    const chunk = pendingTokensRef.current;
+    pendingTokensRef.current = '';
+    const targetId = activeAssistantIdRef.current;
+    if (!chunk || !targetId) return;
+    setMessages((prev) => prev.map((m) =>
+      m.id === targetId ? { ...m, content: appendText(m.content, chunk), pending: true } : m,
+    ));
+  };
 
   const items = useBuildStore((state) => state.items);
   const budget = useBuildStore((state) => state.budget);
@@ -70,11 +91,18 @@ export default function AIAdvisor() {
     : { budget };
 
   useEffect(() => {
-    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
+    const node = scrollRef.current;
+    if (!node) return;
+    const distanceFromBottom = node.scrollHeight - node.scrollTop - node.clientHeight;
+    // Keep the view pinned only while the user is already near the latest turn.
+    if (distanceFromBottom < 180) node.scrollTop = node.scrollHeight;
   }, [messages, thinking]);
 
-  // Cancel an in-flight request when the user leaves the page.
-  useEffect(() => () => abortRef.current?.abort(), []);
+  // Cancel an in-flight request and pending frame when the user leaves.
+  useEffect(() => () => {
+    abortRef.current?.abort();
+    if (tokenFrameRef.current !== null) cancelAnimationFrame(tokenFrameRef.current);
+  }, []);
 
   const send = async (content: string) => {
     const text = content.trim();
@@ -87,6 +115,8 @@ export default function AIAdvisor() {
       createdAt: new Date().toISOString(),
     };
     const assistantId = nanoid(8);
+    activeAssistantIdRef.current = assistantId;
+    pendingTokensRef.current = '';
 
     setMessages((prev) => [
       ...prev,
@@ -112,21 +142,24 @@ export default function AIAdvisor() {
         locale: language,
         signal: controller.signal,
         onToken: (token) => {
-          setMessages((prev) =>
-            prev.map((m) => (m.id === assistantId ? { ...m, content: m.content + token, pending: true } : m)),
-          );
+          pendingTokensRef.current += token;
+          if (tokenFrameRef.current === null) {
+            tokenFrameRef.current = requestAnimationFrame(() => flushTokenBuffer());
+          }
         },
         onTool: (event) => setToolNote(event.summary),
       });
 
+      flushTokenBuffer();
       setMessages((prev) =>
         prev.map((m) =>
           m.id === assistantId
-            ? { ...m, content: answer.text || m.content, pending: false, citations: answer.citations }
+            ? { ...m, content: toDisplayText(answer.text) || m.content, pending: false, citations: answer.citations }
             : m,
         ),
       );
     } catch (error) {
+      flushTokenBuffer();
       if (error instanceof AIError && error.code === 'aborted') {
         setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, pending: false } : m)));
         toast('Message cancelled');
@@ -150,6 +183,7 @@ export default function AIAdvisor() {
       setThinking(false);
       setToolNote(null);
       abortRef.current = null;
+      activeAssistantIdRef.current = null;
       textareaRef.current?.focus();
     }
   };
@@ -160,6 +194,9 @@ export default function AIAdvisor() {
 
   const reset = () => {
     abortRef.current?.abort();
+    pendingTokensRef.current = '';
+    activeAssistantIdRef.current = null;
+    if (tokenFrameRef.current !== null) { cancelAnimationFrame(tokenFrameRef.current); tokenFrameRef.current = null; }
     setMessages([welcome]);
     setLastError(null);
     setThinking(false);

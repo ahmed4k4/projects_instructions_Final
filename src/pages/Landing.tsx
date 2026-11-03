@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -34,7 +34,7 @@ import { SceneErrorBoundary } from '@/components/scene/SceneErrorBoundary';
 import { useSceneCapability } from '@/hooks/useSceneCapability';
 import { PriceTag } from '@/components/shared/PriceTag';
 import { fadeUp, hoverLift, makeStagger, staggerItem, viewportOnce } from '@/lib/motion';
-import { sampleComponents } from '@/lib/sampleData';
+import { useComponents } from '@/hooks/useComponents';
 import { readShareFragment, resolveSharedBuild } from '@/lib/share';
 import { useBuildStore } from '@/store/useBuildStore';
 
@@ -124,18 +124,25 @@ export default function Landing() {
   // Decided before the Three.js chunk is requested — see useSceneCapability.
   const scene = useSceneCapability();
 
+  // Real stock, cheapest first: the landing page advertises what is actually for
+  // sale rather than a hand-written demo set.
+  const { data: catalogue = [] } = useComponents();
+
   /**
    * A `#b=<payload>` link is a complete, anonymous build. Load it into the
    * store so "Start building" continues from the shared parts instead of an
    * empty list, then clean the hash so a refresh doesn't re-apply it.
+   *
+   * Runs once the catalogue has arrived: resolving ids against an empty list
+   * would report every part as "missing".
    */
   useEffect(() => {
-    if (!window.location.hash.includes('b=')) return;
+    if (!window.location.hash.includes('b=') || catalogue.length === 0) return;
 
     const payload = readShareFragment();
     if (!payload) return;
 
-    const { selection, missing } = resolveSharedBuild(payload, sampleComponents);
+    const { selection, missing } = resolveSharedBuild(payload, catalogue);
     if (Object.keys(selection).length === 0) return;
 
     hydrateFromSelection(selection, payload.n);
@@ -145,7 +152,7 @@ export default function Landing() {
     window.history.replaceState(null, '', window.location.pathname);
     // Runs once per mounted landing page, deliberately not on every i18n change.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [catalogue.length]);
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -157,9 +164,29 @@ export default function Landing() {
   // Never fully transparent: the scene is the hero, it should only dim.
   const sceneOpacity = useTransform(smooth, [0, 0.6], [1, 0.35]);
 
-  const featured = sampleComponents.filter((component) =>
-    ['cpu-7800x3d', 'gpu-4090', 'ram-ddr5-32-6000', 'mb-x670e'].includes(component.id),
-  );
+  /**
+   * Featured parts: one in-stock CORE component per category.
+   *
+   * "Cheapest in each category" surfaced accessories, not components — a
+   * "Cooler Master Vertical GPU Holder Kit" under Cooling and an "Anti-Bend
+   * Frame" under CPUs. The landing page's job is to show real hardware, so the
+   * four categories that define a build are used, and accessories are filtered
+   * out by name.
+   */
+  const featured = useMemo(() => {
+    const WANTED = ['cpu', 'gpu', 'ram', 'psu'] as const;
+    const ACCESSORY =
+      /\b(holder|anti-?bend|bracket|mount|kit|frame|riser|cable|adapter|sleeve|stand|support bar)\b/i;
+
+    return WANTED.map((category) =>
+      catalogue.find(
+        (component) =>
+          component.category === category &&
+          component.stockStatus !== 'out_of_stock' &&
+          !ACCESSORY.test(component.name),
+      ),
+    ).filter((component): component is NonNullable<typeof component> => Boolean(component));
+  }, [catalogue]);
 
   return (
     <div className="relative">
@@ -238,27 +265,39 @@ export default function Landing() {
             )}
           </motion.div>
 
-          {/* Floating spec cards */}
+          {/* Floating spec cards — the REAL cheapest in-stock part per category. */}
           <div className="relative mx-auto mt-4 hidden h-56 max-w-5xl lg:block">
             <FloatingCard
               icon={Cpu}
               label={t('landing.floatCpu')}
-              value="Ryzen 7 7800X3D"
-              hint="AM5 · 120 W"
+              value={featured.find((part) => part.category === 'cpu')?.name ?? '—'}
+              hint={
+                featured.find((part) => part.category === 'cpu')?.specs.socket
+                  ? `${featured.find((part) => part.category === 'cpu')!.specs.socket} · ${featured.find((part) => part.category === 'cpu')!.specs.tdp ?? '—'} W`
+                  : '—'
+              }
               className="left-[2%] top-4"
             />
             <FloatingCard
               icon={CircuitBoard}
               label={t('landing.floatGpu')}
-              value="RTX 4090 · 24 GB"
-              hint="336 mm · 450 W"
+              value={featured.find((part) => part.category === 'gpu')?.name ?? '—'}
+              hint={
+                featured.find((part) => part.category === 'gpu')?.specs.length
+                  ? `${featured.find((part) => part.category === 'gpu')!.specs.length} mm · ${featured.find((part) => part.category === 'gpu')!.specs.tdp ?? '—'} W`
+                  : '—'
+              }
               className="right-[2%] top-0"
             />
             <FloatingCard
               icon={MemoryStick}
               label={t('landing.floatPower')}
-              value="138 W"
-              hint="1000 W Titanium"
+              value={
+                featured.find((part) => part.category === 'psu')?.specs.wattage
+                  ? `${featured.find((part) => part.category === 'psu')!.specs.wattage} W`
+                  : '—'
+              }
+              hint={featured.find((part) => part.category === 'psu')?.name ?? '—'}
               className="left-[20%] top-28"
             />
             <motion.div
@@ -270,7 +309,12 @@ export default function Landing() {
               <p className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                 {t('landing.floatTotal')}
               </p>
-              <PriceTag value={3249} size="lg" className="mt-1 block text-foreground" />
+              {/* The cheapest in-stock CPU — a real price, not a demo total. */}
+              <PriceTag
+                value={featured.find((part) => part.category === 'cpu')?.price ?? 0}
+                size="lg"
+                className="mt-1 block text-foreground"
+              />
               <div className="mt-3 flex items-center justify-center gap-1.5 text-[11px] text-success">
                 <Check className="size-3" /> {t('landing.floatCompatible')}
               </div>
@@ -424,7 +468,7 @@ export default function Landing() {
                 className="glass-card rounded-xl p-4 transition-colors duration-300 hover:border-primary/30"
               >
                 <p className="text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                  {t(`categories.${component.category}`)}
+                  {t(`builder.categories.${component.category}`)}
                 </p>
                 <p className="mt-1 line-clamp-2 min-h-10 text-sm font-medium leading-snug">
                   <ComponentName component={component} />
@@ -432,7 +476,7 @@ export default function Landing() {
                 <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
                   <PriceTag value={component.price} size="sm" animate={false} />
                   <span className="font-mono text-[10px] text-muted-foreground">
-                    {t('builder.specs.score', { value: component.performanceScore })}
+                    {component.storeLinks[0]?.store ?? t('builder.specs.inStock')}
                   </span>
                 </div>
               </motion.div>

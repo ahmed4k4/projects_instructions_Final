@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+﻿import { useMemo, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Check, MessageSquareCode, RefreshCw, Save, Sparkles, Zap } from 'lucide-react';
@@ -18,7 +18,8 @@ import type { PCComponent } from '@/types/components';
 import { generateBuild } from '@/services/buildAgent';
 import { saveBuild } from '@/services/buildsService';
 import { fallbackNotice } from '@/lib/scoring/fallbackBuild';
-import { useCatalogue, useCompatibilityRules } from '@/hooks/useCatalogue';
+import { useCompatibilityRules } from '@/hooks/useCatalogue';
+import { useComponents } from '@/hooks/useComponents';
 import { evaluateCompatibility } from '@/lib/compatibility/engine';
 import { calculateBuildScore } from '@/lib/scoring/buildScore';
 import { estimateFpsSync, averageFpsAt } from '@/lib/performance/estimator';
@@ -31,6 +32,7 @@ import { buildShareUrl } from '@/lib/share';
 import { absoluteUrl } from '@/lib/appUrl';
 import { EASE_OUT, makeStagger, staggerItem } from '@/lib/motion';
 import { useTranslation } from 'react-i18next';
+import { appendText } from '@/lib/displayText';
 
 const stagger = makeStagger(0.06, 0.05);
 
@@ -58,7 +60,9 @@ export default function SmartBuilder() {
 
   const abortRef = useRef<AbortController | null>(null);
 
-  const { data: catalogue = [] } = useCatalogue();
+  // One catalogue, one query key: the AI resolves IDs against exactly the parts
+  // the Builder shows (see hooks/useComponents).
+  const { data: catalogue = [] } = useComponents();
   const { data: rules = [] } = useCompatibilityRules();
   const { data: benchmarks = [] } = useBenchmarks();
   const hydrate = useBuildStore((state) => state.hydrateFromSelection);
@@ -83,7 +87,7 @@ export default function SmartBuilder() {
     try {
       const response = await generateBuild(req, {
         signal: controller.signal,
-        onNarration: (chunk) => setNarration((prev) => prev + chunk),
+        onNarration: (chunk) => setNarration((prev) => appendText(prev, chunk)),
         onTool: (tool) =>
           setSteps((prev) => [...prev, { name: tool.name, summary: tool.summary, done: true }]),
       });
@@ -282,7 +286,7 @@ export default function SmartBuilder() {
                   value={formatWatts(result.components.reduce((s, c) => s + (c.powerDrawWatts ?? 0), 0))}
                   icon={<Zap className="size-3 text-warning" />}
                 />
-                <Stat label="Est. 1440p avg" value={avg1440 ? `${avg1440} fps` : '—'} />
+                <Stat label="Est. 1440p avg" value={avg1440 ? `${avg1440} fps` : 'â€”'} />
               </motion.div>
 
               <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-2">

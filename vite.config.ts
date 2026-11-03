@@ -1,4 +1,4 @@
-﻿import path from 'node:path';
+import path from 'node:path';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { defineConfig, loadEnv, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
@@ -22,11 +22,21 @@ function geminiProxyPlugin(): Plugin {
     name: 'nexus-ai-proxy',
     configureServer(server) {
       const env = loadEnv(server.config.mode, process.cwd(), '');
-      const apiKey = env.GEMINI_API_KEY ?? process.env.GEMINI_API_KEY ?? '';
+      const apiKey = env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY ?? process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY ?? '';
       const config = readGeminiConfig({ ...env, ...process.env });
 
       server.middlewares.use('/api/ai', (req: IncomingMessage, res: ServerResponse) => {
-        void forward(req, res, config, apiKey);
+        void forward(req, res, config, apiKey).catch((error: unknown) => {
+          console.error('[Nexus AI proxy] request failed:', error instanceof Error ? error.message : 'unknown error');
+          if (res.headersSent) {
+            res.destroy(error instanceof Error ? error : undefined);
+            return;
+          }
+          res.statusCode = 502;
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-store');
+          res.end(JSON.stringify({ error: { message: 'The AI service is temporarily unavailable.', status: 'UNAVAILABLE' } }));
+        });
       });
     },
   };

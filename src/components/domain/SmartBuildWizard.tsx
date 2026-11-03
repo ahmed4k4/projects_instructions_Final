@@ -19,7 +19,7 @@ import { Input, Textarea } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import type { AIBuildRequest } from '@/types/ai';
 import type { UseCase } from '@/types/build';
-import { RESOLUTIONS, USE_CASES } from '@/lib/constants';
+import { BUDGET_PRESETS, RESOLUTIONS, USE_CASES } from '@/lib/constants';
 import { cn, formatCurrency } from '@/lib/utils';
 import { EASE_OUT } from '@/lib/motion';
 
@@ -46,8 +46,6 @@ const PREFERENCE_CHIPS = [
   'Room to upgrade',
 ];
 
-const BUDGET_PRESETS = [900, 1200, 1500, 2000, 3000];
-
 const STEPS = ['Budget & purpose', 'Resolution', 'Preferences', 'Final details'] as const;
 
 interface SmartBuildWizardProps {
@@ -63,7 +61,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
 
-  const [budget, setBudget] = useState(initial?.budget ?? 1500);
+  const [budget, setBudget] = useState(initial?.budget ?? 75_000);
   const [useCase, setUseCase] = useState<UseCase>(initial?.useCase ?? 'gaming');
   const [resolution, setResolution] = useState<string>(initial?.resolution ?? '1440p');
   const [preferences, setPreferences] = useState<string[]>(initial?.preferences ?? []);
@@ -166,17 +164,17 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                         value={budget}
                         onChange={(event) => {
                           const digits = event.target.value.replace(/[^0-9]/g, '');
-                          setBudget(digits ? Math.max(300, Number(digits)) : 300);
+                          setBudget(digits ? Math.max(20_000, Number(digits)) : 20_000);
                         }}
                         className="w-[9.5rem] ps-7 font-mono text-sm tabular-nums"
                       />
                     </div>
                     <input
                       type="range"
-                      min={500}
-                      max={5000}
-                      step={50}
-                      value={Math.min(5000, Math.max(500, budget))}
+                      min={20_000}
+                      max={250_000}
+                      step={5_000}
+                      value={Math.min(250_000, Math.max(20_000, budget))}
                       onChange={(event) => setBudget(Number(event.target.value))}
                       aria-label={t('smartBuilder.budgetSlider')}
                       className="h-1.5 flex-1 min-w-[140px] cursor-pointer appearance-none rounded-full bg-surface-elevated accent-primary"

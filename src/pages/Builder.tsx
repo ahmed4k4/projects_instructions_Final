@@ -21,13 +21,13 @@ import type { ComponentCategory } from '@/types/components';
 import type { UseCase } from '@/types/build';
 import { cn } from '@/lib/utils';
 import { spring } from '@/lib/motion';
-import { useComponents } from '@/hooks/useComponents';
-import { useCompatibilityRules, useCategoryCounts } from '@/hooks/useCatalogue';
+import { useComponents, useCategoryCounts } from '@/hooks/useComponents';
+import { useCompatibilityRules } from '@/hooks/useCatalogue';
 import { evaluateCompatibility } from '@/lib/compatibility/engine';
 import { useBuildStore } from '@/store/useBuildStore';
-import { useBestPrices, useRetailerOffers } from '@/hooks/useRetailers';
 import { summariseOffers } from '@/services/retailers/aggregator';
-import type { PriceComparison } from '@/services/retailers/types';
+import { offersFor } from '@/lib/retailerCatalogue';
+import { RETAILERS, type PriceComparison, type RetailerId } from '@/services/retailers/types';
 import { ComparePricesModal } from '@/components/retail/ComparePricesModal';
 import type { PCComponent } from '@/types/components';
 
@@ -49,27 +49,38 @@ export default function Builder() {
   const { data: rules = [] } = useCompatibilityRules();
   const categoryCounts = useCategoryCounts();
 
-  // Live Egyptian retail prices. One batched query for the visible grid — a
-  // per-card request would be N round-trips on every category switch.
-  const componentIds = useMemo(() => (components ?? []).map((c) => c.id), [components]);
-  const { data: bestPrices } = useBestPrices(componentIds);
+  // The catalogue is the retailer listings themselves, so `storeLinks` and the
+  // per-card price are the same numbers: no second query, no chance of the card
+  // and the comparison modal disagreeing.
 
+  /**
+   * "Compare (N stores)" for the chosen card.
+   *
+   * One component is one SKU sold by every shop that lists it, so the offers are
+   * already on the component (`storeLinks`); the modal opens instantly instead
+   * of waiting for a per-card request.
+   */
   const [compareFor, setCompareFor] = useState<PCComponent | null>(null);
-  const { data: compareOffers, isLoading: comparing } = useRetailerOffers(compareFor?.id ?? null);
 
   const comparison = useMemo<PriceComparison | null>(() => {
-    if (!compareFor || !compareOffers) return null;
-    return summariseOffers(compareFor.id, compareFor.name, compareOffers.offers);
-  }, [compareFor, compareOffers]);
+    if (!compareFor) return null;
+    return summariseOffers(compareFor.id, compareFor.name, offersFor(compareFor));
+  }, [compareFor]);
 
   // Re-evaluated on every add/remove — pure and cheap, so no debouncing needed.
   const liveReport = useMemo(() => evaluateCompatibility(items, rules), [items, rules]);
 
+  /**
+   * Sorted so the default view leads with what is buyable: an out-of-stock part
+   * at a great price is not a recommendation.
+   */
   const visible = useMemo(() => {
+    const needle = query.trim().toLowerCase();
     const filtered = (components ?? []).filter((component) =>
-      `${component.brand} ${component.name}`.toLowerCase().includes(query.trim().toLowerCase()),
+      `${component.brand} ${component.name}`.toLowerCase().includes(needle),
     );
     return [...filtered].sort((a, b) => {
+      if (a.stockStatus !== b.stockStatus) return a.stockStatus === 'out_of_stock' ? 1 : -1;
       if (sort === 'price-asc') return a.price - b.price;
       if (sort === 'price-desc') return b.price - a.price;
       return (b.performanceScore ?? 0) - (a.performanceScore ?? 0);
@@ -204,15 +215,23 @@ export default function Builder() {
         {/* -------------------------------------------------------------- */}
         <section aria-live="polite">
           <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
-            <div className="min-w-0">
-              <h2 className="text-lg font-semibold tracking-tight">
+            {/*
+             * The heading keeps a FLOOR, the controls yield.
+             *
+             * `min-w-0` alone let the search + sort block claim its full intrinsic
+             * width and the heading collapse to "C…" (visible in the phase 16
+             * screenshot). `xl:min-w-[12rem]` gives the title enough room to stay
+             * readable; `shrink` on the control group lets IT give way instead.
+             */}
+            <div className="min-w-0 xl:min-w-[12rem]">
+              <h2 className="truncate text-lg font-semibold tracking-tight">
                 {t(`builder.categories.${category}`)}
               </h2>
               <p className="truncate text-xs text-muted-foreground">
                 {t(`builder.categoryDescriptions.${category}`)}
               </p>
             </div>
-            <div className="flex w-full shrink-0 items-center gap-2 xl:w-auto">
+            <div className="flex w-full min-w-0 shrink items-center gap-2 xl:w-auto">
               <div className="relative min-w-0 flex-1 xl:w-44">
                 <Search className="pointer-events-none absolute start-2.5 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
                 <Input
@@ -267,7 +286,21 @@ export default function Builder() {
                     component={component}
                     selected={items[category]?.id === component.id}
                     onSelect={handleSelect}
-                    livePrice={bestPrices?.get(component.id) ?? null}
+                    livePrice={
+                      // The card's price and the modal's "best" are the same
+                      // offer, so the badge is read from the component itself.
+                      component.storeLinks.length
+                        ? {
+                            bestPriceEgp: component.price,
+                            retailerId:
+                              (Object.keys(RETAILERS) as RetailerId[]).find(
+                                (id) => RETAILERS[id].name === component.storeLinks[0]?.store,
+                              ) ?? 'elbadr',
+                            url: component.storeLinks[0]?.url ?? '',
+                            count: component.storeLinks.length,
+                          }
+                        : null
+                    }
                     onCompare={setCompareFor}
                     onRemove={() => {
                       removeComponent(category);
@@ -307,7 +340,7 @@ export default function Builder() {
         open={Boolean(compareFor)}
         onClose={() => setCompareFor(null)}
         comparison={comparison}
-        loading={comparing}
+        loading={false}
       />
 
       <div className="mt-10 flex flex-col items-start justify-between gap-3 rounded-xl border border-border bg-surface/50 p-5 sm:flex-row sm:items-center">

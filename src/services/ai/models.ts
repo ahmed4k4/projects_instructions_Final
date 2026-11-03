@@ -1,22 +1,9 @@
 /**
- * Free-tier model resolution.
- *
- * ── Measured, not assumed ─────────────────────────────────────────────────
- * Probed live against this project's key (scripts/probe-models.mjs):
- *
- *   gemini-3.5-flash-lite  ✓ 200 in ~750-900 ms — streams, tools, Arabic
- *   gemini-flash-lite-latest ✓ 200 in ~890 ms   — rolling alias of the above
- *   gemini-3.6-flash       ✓ 200 in ~975 ms     — answers, more quota-hungry
- *   gemini-3.5-flash       ✗ 429 quota exhausted for this key
- *   gemini-3.8-flash       ✗ 503 high demand    — never usable interactively
- *   gemini-1.5-flash       ✗ 404 retired for API v1beta
- *
- * Phase 6 asked for `gemini-1.5-flash` as the pin. It returns 404 on the current
- * API, so pinning it would break every request. `gemini-3.5-flash-lite` is the
- * working equivalent: it is the model that actually answers with function
- * calling, which is what the pin was for.
- *
- * Change `MODEL_CANDIDATES` in one place if Google's availability shifts.
+ * Model selection tuned for low-latency interactive use and resilient fallback.
+ * Gemini 3.5 Flash-Lite is the primary low-latency chat model for interactive
+ * use and long-context tasks; stronger Flash models are fallback-only.
+ * Model availability and quotas remain project/tier dependent, so one fallback
+ * is attempted automatically after 404, 429 or 503 responses.
  */
 import type { GeminiModelKey } from '@/types/ai';
 
@@ -24,16 +11,21 @@ import type { GeminiModelKey } from '@/types/ai';
  * `chat` is used for interactive turns; `quality` for analysis where a few
  * extra seconds are acceptable (Build Doctor).
  */
-const MODEL_CANDIDATES: Record<GeminiModelKey, readonly string[]> = {
-  chat: ['gemini-3.5-flash-lite', 'gemini-flash-lite-latest', 'gemini-3.6-flash'],
-  quality: ['gemini-3.6-flash', 'gemini-3.5-flash-lite', 'gemini-flash-lite-latest'],
+export const MODEL_CANDIDATES: Record<GeminiModelKey, readonly string[]> = {
+  // Google currently identifies 3.5 Flash-Lite as its fastest stable,
+  // low-latency high-throughput model. It also supports a 1M input context.
+  chat: ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.6-flash'],
+  // Keep the same fast model as the first choice for long structured tasks;
+  // the provider raises thinking effort to LOW for these tasks.
+  quality: ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.5-flash'],
 };
 
 /** The model every fresh workspace starts on. */
 const DEFAULT_CHAT_MODEL = 'gemini-3.5-flash-lite';
 
-const CACHE_KEY = 'nexus:ai:model';
-const PROBE_TIMEOUT_MS = 20_000;
+// v2 deliberately invalidates cached 3.8/3.1 selections from older releases.
+const CACHE_KEY = 'nexus:ai:model:v3';
+const PROBE_TIMEOUT_MS = 8_000;
 
 interface CacheShape {
   chat?: string;
@@ -42,7 +34,12 @@ interface CacheShape {
 
 function readCache(): CacheShape {
   try {
-    return JSON.parse(localStorage.getItem(CACHE_KEY) ?? '{}') as CacheShape;
+    const cached = JSON.parse(localStorage.getItem(CACHE_KEY) ?? '{}') as CacheShape;
+    // Never trust a stale model id from an older build or an edited browser cache.
+    return {
+      chat: cached.chat && MODEL_CANDIDATES.chat.includes(cached.chat) ? cached.chat : undefined,
+      quality: cached.quality && MODEL_CANDIDATES.quality.includes(cached.quality) ? cached.quality : undefined,
+    };
   } catch {
     return {};
   }
@@ -56,7 +53,15 @@ function writeCache(next: CacheShape): void {
   }
 }
 
-export function invalidateModel(key: GeminiModelKey): void {
+export function advanceModel(key: GeminiModelKey, failedModel: string): string {
+  const candidates = MODEL_CANDIDATES[key];
+  const currentIndex = candidates.indexOf(failedModel);
+  const next = candidates[(currentIndex + 1 + candidates.length) % candidates.length] ?? DEFAULT_CHAT_MODEL;
+  rememberModel(key, next);
+  return next;
+}
+
+function invalidateModel(key: GeminiModelKey): void {
   const cache = readCache();
   delete cache[key];
   writeCache(cache);

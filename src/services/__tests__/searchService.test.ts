@@ -52,10 +52,45 @@ describe('skuKey', () => {
 });
 
 describe('groupLabel', () => {
-  it('prefers the most descriptive name', () => {
+  /**
+   * A name with no model number and no board-partner line is a worse label than
+   * a complete one: "RTX 5070 Ti" alone does not say WHOSE card it is, and the
+   * comparison table is about choosing between brands.
+   */
+  it('prefers a complete name over a bare model', () => {
     expect(groupLabel(['RTX 5070 Ti', 'PNY GeForce RTX 5070 Ti ARGB Overclocked Triple Fan 16GB'])).toBe(
-      'RTX 5070 Ti',
+      'PNY GeForce RTX 5070 Ti ARGB Overclocked Triple Fan 16GB',
     );
+  });
+
+  it('prefers the shorter complete name', () => {
+    expect(
+      groupLabel(['ASUS Dual GeForce RTX 5070 OC 12GB', 'ASUS Dual GeForce RTX 5070 OC 12GB GDDR7 Graphics Card']),
+    ).toBe('ASUS Dual GeForce RTX 5070 OC 12GB');
+  });
+
+  /**
+   * The label has to survive a two-line clamp.
+   *
+   * Two genuinely different cards from one shop — GIGABYTE's EAGLE and
+   * WINDFORCE 5070 Ti — were labelled with the same opening words, so the grid
+   * showed what looked like one product at two prices. The label therefore
+   * prefers a name whose board-partner line appears early.
+   */
+  it('picks the name that distinguishes its board-partner line', () => {
+    const label = groupLabel([
+      'GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16G – NVIDIA Blackwell GPU, 256-bit',
+      'GIGABYTE GeForce RTX 5070 Ti EAGLE OC SFF 16GB GDDR7',
+    ]);
+    expect(label.toLowerCase()).toContain('eagle');
+  });
+
+  it('drops marketing tail words when choosing', () => {
+    const label = groupLabel([
+      'ASUS Dual GeForce RTX 5070 OC 12GB GDDR7 Graphics Card – NVIDIA Blackwell Architecture',
+      'ASUS Dual GeForce RTX 5070 OC 12GB',
+    ]);
+    expect(label).toBe('ASUS Dual GeForce RTX 5070 OC 12GB');
   });
 });
 

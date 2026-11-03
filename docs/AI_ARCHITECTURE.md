@@ -34,26 +34,29 @@ flowchart TB
         Tools --> Svc
     end
 
-    subgraph Edge["Supabase Edge Function (Deno)"]
-        Proxy["gemini-proxy<br/>auth · rate limit · retry · SSE"]
+    subgraph Vercel["Vercel Node.js Web Function · /api/ai/*"]
+        Proxy["Gemini proxy<br/>Guest IP hash / optional JWT · atomic quota · allow-list · timeout"]
     end
 
     subgraph Google["Google AI Studio"]
-        Gemini["gemini-3.6-flash<br/>gemini-3.8-flash"]
+        Gemini["gemini-3.5-flash-lite<br/>gemini-flash-lite-latest<br/>gemini-3.6-flash"]
     end
 
     subgraph DB["Postgres (RLS)"]
         Tables["components · compatibility_rules<br/>builds · builds_items · fps_benchmarks<br/>chat_sessions · ai_usage · build_ratings"]
     end
 
-    Agent -->|"POST + user JWT<br/>(SSE or JSON)"| Proxy
+    Agent -->|"POST + Supabase access token<br/>(SSE or JSON)"| Proxy
+    Proxy -->|"single authenticated quota RPC"| DB
     Proxy -->|"GEMINI_API_KEY (server only)"| Gemini
-    Proxy -->|"ai_usage insert"| DB
     Svc --> Tables
 ```
 
-**The key never reaches the browser.** `/env.example` no longer has
-`VITE_GEMINI_API_KEY`; the only consumer is `Deno.env.get('GEMINI_API_KEY')`.
+**The key never reaches the browser.** `GEMINI_API_KEY` and
+`SUPABASE_ANON_KEY` and `SUPABASE_URL` are Vercel environment variables used for the authenticated quota RPC. The
+browser receives only its Supabase anon key and the signed-in user's access
+token. AI is available to guests and signed-in users. Guest calls use a server-side SHA-256 fingerprint of the Vercel client IP and an atomic 30 requests/minute quota in `ai_guest_usage`; signed-in users use their verified account and a separate 60 requests/minute quota in `ai_usage`. Login is optional and never gates the AI advisor or PC builder. `VITE_GEMINI_API_KEY` and
+The AI proxy does not need or use the Supabase service-role key.
 
 ## The agent loop
 
@@ -63,7 +66,7 @@ Both the builder and the advisor use the same shape
 ```
 user turn → Gemini → tool calls → executor (DB + engines) → functionResponse
                 ↑                                              │
-                └───────────── repeat, max 8 rounds ───────────┘
+                └───────────── repeat, capped at 5 rounds for Smart Builder and 2 tool rounds for Advisor ───────────┘
 ```
 
 The **browser** owns the loop rather than the model because the tools run
@@ -100,26 +103,25 @@ Tool schemas live in `src/services/prompts/buildGenerator.ts` and
 
 ## Models
 
-Verified live against this project's key:
+Model routing is defined in `src/services/ai/models.ts`:
 
-| Key     | Model              | Use                                                  |
-| ------- | ------------------ | ---------------------------------------------------- |
-| `flash` | `gemini-3.6-flash` | agent turns, chat, FPS fallback (fast, tool-capable) |
-| `pro`   | `gemini-3.8-flash` | Build Doctor, structured JSON (higher quality)       |
+| Key | Primary | Fallback chain | Use |
+| --- | --- | --- | --- |
+| `chat` | `gemini-3.5-flash-lite` | `gemini-3.1-flash-lite` → `gemini-3.6-flash` | Interactive chat and agent turns; MINIMAL thinking |
+| `quality` | `gemini-3.5-flash` | `gemini-3.5-flash-lite` → `gemini-3.6-flash` | Structured requests; LOW thinking by default |
 
-> `gemini-2.5-flash` returns 404 ("no longer available to new users") and
-> `gemini-3.8-pro` does not exist. Both were confirmed with real requests, not
-> assumed. `MODELS` in `supabase/functions/gemini-proxy/index.ts` is the single
-> place to change.
+On 404, 429 or 503, the provider tries one next model and remembers the selection. Cached model IDs from older releases are invalidated by the v2 cache key. The chat tier explicitly uses MINIMAL thinking; the quality tier uses LOW thinking by default. Gemini 3.5 Flash-Lite supports up to 1,048,576 input tokens and 65,536 output tokens. Google API quotas remain controlled by the AI Studio project tier.
 
 ## Cost controls
 
 | Control           | Implementation                                                             |
 | ----------------- | -------------------------------------------------------------------------- |
-| Rate limit        | 20 req / 60 s per user, counted in `ai_usage` (survives cold starts)       |
-| Model allow-list  | The client sends `flash`/`pro`; the proxy maps them to pinned model IDs    |
+| Rate limit        | 30 requests / 60 s per guest IP hash and 60 requests / 60 s per verified user via atomic Supabase RPCs |
+| Auth              | Supabase PostgREST validates the signed access token; the RPC rejects anonymous/unverified accounts   |
+| Model allow-list  | Vercel proxy accepts only the model IDs listed by the active client         |
+| Request bounds    | JSON only, 2 MiB body cap, 55 s upstream deadline                           |
 | Bounded context   | `list_components` returns ≤12 compact rows, not full specs                 |
-| Bounded rounds    | 8 tool rounds (builder), 5 (advisor)                                       |
+| Bounded rounds    | 5 tool rounds (builder), 4 (advisor)                                       |
 | Caching           | `ai_fps_estimates` caches fallback FPS per (GPU, game, resolution, preset) |
 | Prompt discipline | System instructions cap answer length (~180 words for the advisor)         |
 | Token caps        | `maxOutputTokens` per action in the proxy                                  |
@@ -138,8 +140,9 @@ The user always gets a build. Nothing crashes.
 
 ## Streaming
 
-`geminiStream.ts` opens a raw `fetch` (Supabase's `functions.invoke` buffers)
-and parses `data: {json}\r\n\r\n` frames. The Gemini upstream uses CRLF, and
+`geminiProvider.ts` opens a raw same-origin `fetch` through the Vercel proxy
+(Supabase's `functions.invoke` buffers) and parses `data: {json}\r\n\r\n`
+frames. The Gemini upstream uses CRLF, and
 the parser normalises it — an early version split on `\n\n` and silently
 yielded zero chunks.
 

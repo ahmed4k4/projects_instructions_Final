@@ -9,7 +9,7 @@ import type { PCComponent } from '@/types/components';
 import type { BuildScoreBreakdown, UseCase } from '@/types/build';
 import type { Database } from '@/types/database';
 import { isSupabaseConfigured, requireSupabase, supabase } from './supabaseClient';
-import { mapComponentRow } from './componentsService';
+import { loadCatalogue } from '@/hooks/useComponents';
 import { slugify } from '@/lib/utils';
 import i18n from '@/i18n';
 
@@ -134,10 +134,23 @@ export async function saveBuild(input: SaveBuildInput): Promise<SavedBuild> {
   return mapBuildRow(build);
 }
 
-/** Load a build by slug with its parts (works for anonymous visitors). */
-export async function getBuildBySlug(
-  slug: string,
-): Promise<{ build: SavedBuild; items: SavedBuildItem[] } | null> {
+/**
+ * Load a build by slug with its parts (works for anonymous visitors).
+ *
+ * ── Phase 15: what a saved build's parts are ───────────────────────────────
+ * `build_items.component_id` points at the legacy `components` table — the shape
+ * users saved before the catalogue moved to real retailer listings. Two things
+ * happen here now, in order:
+ *
+ *   1. try the legacy id (a build saved by an older deploy still resolves);
+ *   2. otherwise fall back to a SKU match against the live catalogue by name, so
+ *      a build saved today — whose id is `sku:gpu:asus:geforce|5070|12` — opens
+ *      with the parts it was built from.
+ *
+ * The fallback keeps the Build Doctor (and "Open in builder") useful for every
+ * build, instead of rendering an empty page for anything saved after the move.
+ */
+export async function getBuildBySlug(slug: string): Promise<{ build: SavedBuild; items: SavedBuildItem[] } | null> {
   if (!isSupabaseConfigured || !supabase) return null;
 
   const { data: build, error } = await supabase.from('builds').select('*').eq('slug', slug).maybeSingle();
@@ -150,15 +163,68 @@ export async function getBuildBySlug(
     .eq('build_id', build.id);
   if (itemsError) throw new Error(`Could not load the parts: ${itemsError.message}`);
 
-  const mapped: SavedBuildItem[] = (items ?? [])
-    .filter((row) => row.components)
-    .map((row) => ({
-      component: mapComponentRow(row.components as Database['public']['Tables']['components']['Row']),
-      quantity: row.quantity,
-      priceAtAdd: Number(row.price_at_add),
-    }));
+  let catalogue: PCComponent[] | null = null;
+  const loadCatalogueOnce = async (): Promise<PCComponent[]> => {
+    catalogue ??= await loadCatalogue();
+    return catalogue;
+  };
+
+  const mapped: SavedBuildItem[] = [];
+  for (const row of items ?? []) {
+    if (row.components) {
+      /**
+       * A build saved BEFORE Phase 15 stores a `components` row — a part from
+       * the retired seed catalogue. It is rendered from the row itself (spec,
+       * price, name) rather than re-resolved against live stock, because the id
+       * no longer exists and pretending it does would drop the part silently.
+       */
+      const legacy = row.components as Database['public']['Tables']['components']['Row'];
+      mapped.push({
+        component: {
+          id: legacy.id,
+          category: legacy.category,
+          brand: legacy.brand,
+          model: legacy.model,
+          name: legacy.name,
+          nameAr: legacy.name_ar,
+          specs: (legacy.specs ?? {}) as Record<string, unknown>,
+          price: Number(legacy.price),
+          currency: legacy.currency,
+          stockStatus: (legacy.stock_status as PCComponent['stockStatus']) ?? 'in_stock',
+          storeLinks: [],
+          performanceScore: legacy.performance_score,
+          powerDrawWatts: legacy.power_draw_watts,
+          imageUrl: legacy.image_url,
+          isActive: false,
+          createdAt: legacy.created_at,
+          updatedAt: legacy.updated_at,
+        },
+        quantity: row.quantity,
+        priceAtAdd: Number(row.price_at_add),
+      });
+      continue;
+    }
+
+    // A listing-based build: resolve the saved id (or name) against live stock.
+    const savedId = String((row as { component_id?: string | null }).component_id ?? '');
+    const savedName = String((row as { component_name?: string | null }).component_name ?? '');
+    const live = await loadCatalogueOnce();
+    const component =
+      live.find((entry) => entry.id === savedId) ??
+      (savedName ? findByName(live, savedName) : undefined) ??
+      live.find((entry) => entry.name === savedId);
+
+    if (!component) continue;
+    mapped.push({ component, quantity: row.quantity, priceAtAdd: Number(row.price_at_add) });
+  }
 
   return { build: mapBuildRow(build), items: mapped };
+}
+
+/** Case-insensitive exact-ish name match (a saved build's part still exists). */
+function findByName(catalogue: PCComponent[], name: string): PCComponent | undefined {
+  const needle = name.trim().toLowerCase();
+  return catalogue.find((entry) => entry.name.toLowerCase() === needle);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -191,4 +257,50 @@ export interface SavedAlert {
   targetPrice: number | null;
   isActive: boolean;
   createdAt: string;
+}
+
+/**
+ * Builds the Community page can read.
+ *
+ * Removed in an earlier cleanup as "unused", which was wrong once Community was
+ * pointed at the database: without it the page had no real source and rendered
+ * curated demo builds with no indication they were samples.
+ *
+ * Returns `null` — not `[]` — when the database is unavailable. The caller needs
+ * to distinguish "nobody has published yet" (show an empty state) from "there is
+ * no database here" (show labelled demo data).
+ */
+export async function listCommunityBuilds(limit = 24): Promise<SavedBuild[] | null> {
+  if (!isSupabaseConfigured || !supabase) return null;
+
+  const { data, error } = await supabase
+    .from('builds')
+    .select('*')
+    .eq('is_public', true)
+    .order('created_at', { ascending: false })
+    .limit(limit);
+
+  if (error) return null;
+  return ((data ?? []) as BuildRow[]).map(mapBuildRow);
+}
+
+/**
+ * The signed-in user's own builds.
+ *
+ * `null` when there is no database or no session — the dashboard shows its local
+ * workspace in that case, rather than pretending to have cloud data.
+ */
+export async function listMyBuilds(limit = 24): Promise<SavedBuild[] | null> {
+  if (!isSupabaseConfigured || !supabase) return null;
+
+  const userId = await currentUserId();
+  const { data, error } = await supabase
+    .from('builds')
+    .select('*')
+    .eq('user_id', userId)
+    .order('updated_at', { ascending: false })
+    .limit(limit);
+
+  if (error) return null;
+  return ((data ?? []) as BuildRow[]).map(mapBuildRow);
 }

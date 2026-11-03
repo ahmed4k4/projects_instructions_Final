@@ -182,6 +182,8 @@ export function SearchBar({
                             src={retailerImageUrl(group.imageUrl) ?? ''}
                             alt=""
                             loading="lazy"
+                            // Elnekhely 403s a hotlink that carries our Referer.
+                            referrerPolicy="no-referrer"
                             className="size-full object-contain p-0.5"
                           />
                         ) : (

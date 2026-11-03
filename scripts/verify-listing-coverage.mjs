@@ -1,7 +1,7 @@
 ﻿/**
  * Measure listing coverage and image availability per retailer, from the live
  * snapshot. Reports per-retailer product counts and the share with a usable
- * image URL, plus the total â€” the Phase 10 acceptance numbers.
+ * image URL, plus the total — the Phase 10 acceptance numbers.
  *
  *   node scripts/verify-listing-coverage.mjs
  */
@@ -48,14 +48,14 @@ console.log(
 
 if (overall < TARGET.minImages) {
   console.error(
-    `âœ– only ${(overall * 100).toFixed(0)}% of listings have an image (target â‰¥ ${TARGET.minImages * 100}%)`,
+    `✖ only ${(overall * 100).toFixed(0)}% of listings have an image (target â‰¥ ${TARGET.minImages * 100}%)`,
   );
   failures += 1;
 }
 if (total < TARGET.minProducts) {
-  console.error(`âœ– only ${total} listings (target > ${TARGET.minProducts})`);
+  console.error(`✖ only ${total} listings (target > ${TARGET.minProducts})`);
   failures += 1;
 }
 
 if (failures) process.exit(1);
-console.log('âœ” coverage targets met');
+console.log('✔ coverage targets met');

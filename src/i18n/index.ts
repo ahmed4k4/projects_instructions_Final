@@ -35,8 +35,7 @@ const SUPPORTED_LANGUAGES = ['en', 'ar'] as const;
 export type AppLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
 /** Files on disk — re-exported so scripts can validate them individually. */
-const LOCALE_FILES = ['common', 'builder', 'ai', 'pages'] as const;
-export type LocaleFile = (typeof LOCALE_FILES)[number];
+export type LocaleFile = 'common' | 'builder' | 'ai' | 'pages';
 
 export type Direction = 'ltr' | 'rtl';
 

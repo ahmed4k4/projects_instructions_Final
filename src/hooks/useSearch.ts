@@ -1,9 +1,10 @@
-import { keepPreviousData, useInfiniteQuery, useQuery } from '@tanstack/react-query';
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import {
   searchProductsPage,
   SEARCH_PAGE_SIZE,
   suggestProducts,
   getGroupById,
+  getAvailableBrands,
   getAvailableCategories,
   type SearchFilters,
   type SortKey,
@@ -25,21 +26,21 @@ import {
 const SEARCH_STALE_MS = 5 * 60 * 1000;
 
 /**
- * Paginated search for the results grid.
+ * Numbered-pagination search (Phase 12).
  *
- * `useInfiniteQuery` rather than a manual page state: it keeps every loaded page
- * cached under the same key, so navigating to /compare and back restores the
- * scroll position instead of refetching from page 1. A filter or sort change
- * produces a new key and therefore a fresh first page — nothing stale survives.
+ * Infinite scroll was replaced by pages for two reasons: a shopper comparing
+ * prices wants to know how deep the list goes, and `?page=3` is a state they can
+ * bookmark or send to someone. The page lives in the URL key, so `keepPreviousData`
+ * holds the old grid on screen while the next page loads instead of collapsing
+ * to a skeleton.
  */
-export function useSearch(filters: SearchFilters, sort: SortKey) {
-  return useInfiniteQuery({
-    queryKey: ['search', filters, sort] as const,
-    queryFn: ({ pageParam }) => searchProductsPage(filters, sort, pageParam, SEARCH_PAGE_SIZE),
-    initialPageParam: 0,
-    getNextPageParam: (lastPage) => lastPage.nextOffset,
+export function useSearch(filters: SearchFilters, sort: SortKey, page = 1) {
+  const offset = Math.max(0, (page - 1) * SEARCH_PAGE_SIZE);
+
+  return useQuery({
+    queryKey: ['search', filters, sort, page] as const,
+    queryFn: () => searchProductsPage(filters, sort, offset, SEARCH_PAGE_SIZE),
     staleTime: SEARCH_STALE_MS,
-    // Keeps the previous results visible while the next set loads.
     placeholderData: keepPreviousData,
   });
 }
@@ -62,6 +63,15 @@ export function useProductGroup(groupId: string | null) {
     queryFn: () => getGroupById(groupId as string),
     staleTime: SEARCH_STALE_MS,
     enabled: Boolean(groupId),
+  });
+}
+
+/** Brands present in the catalogue, for the filter rail. */
+export function useSearchBrands() {
+  return useQuery({
+    queryKey: ['search-brands'] as const,
+    queryFn: getAvailableBrands,
+    staleTime: SEARCH_STALE_MS,
   });
 }
 

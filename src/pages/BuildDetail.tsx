@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -15,7 +15,10 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { CATEGORY_MAP, USE_CASE_MAP } from '@/lib/constants';
 import { BUILD_ORDER } from '@/lib/navigation';
-import { sampleBuilds, resolveSampleBuild } from '@/lib/sampleData';
+import { buildPrebuilts } from '@/lib/prebuiltFromCatalogue';
+import { useComponents } from '@/hooks/useComponents';
+import { useCompatibilityRules } from '@/hooks/useCatalogue';
+import { useUIStore } from '@/store/useUIStore';
 import type { UseCase } from '@/types/build';
 import { formatCurrency, formatSpecValue, formatWatts } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/appUrl';
@@ -27,9 +30,40 @@ const stagger = makeStagger(0.05, 0.05);
 export default function BuildDetail() {
   const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
-  const build = sampleBuilds.find((item) => item.slug === slug);
+  const language = useUIStore((state) => state.language);
   const hydrate = useBuildStore((state) => state.hydrateFromSelection);
   const [copied, setCopied] = useState(false);
+
+  /**
+   * A prebuilt detail page is generated from the live catalogue, exactly like
+   * the /prebuilt index — the same slug resolves to the same parts, and the
+   * parts are ones a shopper can order today.
+   */
+  const { data: catalogue = [], isLoading } = useComponents();
+  const { data: rules = [] } = useCompatibilityRules();
+  const prebuilts = useMemo(
+    () => buildPrebuilts(catalogue, rules, language),
+    [catalogue, rules, language],
+  );
+
+  const build = prebuilts.find((item) => item.slug === slug) ?? null;
+  const components = useMemo(
+    () =>
+      build
+        ? build.componentIds
+            .map((id) => catalogue.find((component) => component.id === id))
+            .filter((component): component is NonNullable<typeof component> => Boolean(component))
+        : [],
+    [build, catalogue],
+  );
+
+  if (isLoading) {
+    return (
+      <div className="container py-16">
+        <p className="text-center text-sm text-muted-foreground">{t('common.loading')}</p>
+      </div>
+    );
+  }
 
   if (!build) {
     return (
@@ -37,15 +71,14 @@ export default function BuildDetail() {
         <EmptyState
           icon={Layers}
           title={t('buildDetail.notFoundTitle')}
-          description={`No saved build matches “${slug}”. It may be private or the link is incomplete.`}
-          actionLabel="Browse prebuilt builds"
+          description={t('buildDetail.notFoundBody', { slug })}
+          actionLabel={t('buildDetail.browsePrebuilt')}
           onAction={() => window.location.assign('/prebuilt')}
         />
       </div>
     );
   }
 
-  const components = resolveSampleBuild(build);
   const useCase = USE_CASE_MAP[build.useCase as UseCase];
   // `absoluteUrl` honours VITE_APP_URL, so a link copied on staging points at
   // the configured public address rather than the preview host.

@@ -107,6 +107,110 @@ export function headersFor(url: string): Record<string, string> {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*  Category from the store's own path                                        */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Path rules, ordered — the first match wins.
+ *
+ * A more specific path is always tested before a shorter one: `/cpu-cooler`
+ * must reach `cooling` before the `cpu` rule sees it, and a chassis path that
+ * mentions a GPU must reach `case` before `gpu`.
+ *
+ * Every pattern is anchored on a path separator, so a BRAND word cannot win:
+ * "cooler-master-…" is not a cooling product because the company is called
+ * Cooler Master, and "…/cases/cooler-master-…" is a case because `/cases/`
+ * matches first.
+ */
+const PATH_CATEGORY_RULES: ReadonlyArray<readonly [RegExp, string]> = [
+  [
+    /(?:^|\/)chassis(?:\/|$)|(?:^|\/)pc[-_]?cases?(?:\/|$)|(?:^|\/)cases?(?:\/|$)/,
+    'case',
+  ],
+  [
+    /cpu[-_]?coolers?(?:\/|$)|(?:^|\/)cooling(?:\/|$)|(?:^|\/)coolers?(?:\/|$)|water[-_]?cooling|liquid[-_]?cool(?:ing)?|(?:^|\/)aio(?:\/|$)|(?:^|\/)fans?(?:\/|$)|fans[-_]?coolers(?:\/|$)|heatsinks?(?:\/|$)|air[-_]?cooling/,
+    'cooling',
+  ],
+  [
+    /(?:^|\/)graphics?[-_]?cards?(?:\/|$)|(?:^|\/)graphics?(?:\/|$)|(?:^|\/)vga(?:\/|$)|(?:^|\/)gpus?(?:\/|$)|video[-_]?cards?(?:\/|$)/,
+    'gpu',
+  ],
+  [
+    /(?:^|\/)processors?(?:\/|$)|(?:^|\/)cpus?(?:\/|$)|cpu[-_]?processor(?:\/|$)|microprocessor(?:\/|$)/,
+    'cpu',
+  ],
+  [/(?:^|\/)motherboards?(?:\/|$)|mainboards?(?:\/|$)/, 'motherboard'],
+  [/(?:^|\/)ram(?:\/|$)|desktop[-_]?memory(?:\/|$)|(?:^|\/)memory(?:\/|$)/, 'ram'],
+  [
+    /(?:^|\/)storage(?:\/|$)|(?:^|\/)ssds?(?:\/|$)|(?:^|\/)hdd(?:\/|$)|hard[-_]?drives?(?:\/|$)|(?:^|\/)nvme(?:\/|$)/,
+    'storage',
+  ],
+  [/power[-_]?suppl(?:y|ies)(?:\/|$)|(?:^|\/)psus?(?:\/|$)/, 'psu'],
+];
+
+/**
+ * Category named by a LISTING page's path — the store's own classification.
+ *
+ * This is the primary signal, not the product name. Keyword matching on names is
+ * how a "Corsair iCUE H100i Elite CPU Liquid Cooler" was filed as a CPU and a
+ * chassis advertising "420mm GPU support" as a graphics card. The path a product
+ * is published under has neither problem.
+ *
+ * Returns '' when the path names no category (a search result, a landing page) —
+ * the caller then keeps its configured target category.
+ */
+export function categoryFromPath(url: string): string {
+  if (!url) return '';
+  let pathname = url;
+  try {
+    pathname = new URL(url).pathname;
+  } catch {
+    pathname = String(url).split('?')[0] ?? '';
+  }
+
+  const segments = pathname.toLowerCase().split('/').filter(Boolean);
+  if (segments.length === 0) return '';
+
+  // `/product-category/<collection>/`: the segment AFTER the marker is the name.
+  const collectionAt = segments.findIndex((segment) => /^product-category$/.test(segment));
+  if (collectionAt >= 0) {
+    const slug = segments[collectionAt + 1] ?? '';
+    for (const [pattern, category] of PATH_CATEGORY_RULES) {
+      if (pattern.test(`/${slug}/`)) return category;
+    }
+    return '';
+  }
+
+  // Walk forward, skipping the product slug (the last segment of a nested path,
+  // and everything after `/product/`).
+  const productAt = segments.findIndex((segment) => /^(product|products|item|items)$/.test(segment));
+  for (let index = 0; index < segments.length; index += 1) {
+    const segment = segments[index] ?? '';
+    if (segments.length > 1 && index === segments.length - 1) break;
+    if (productAt >= 0 && index > productAt) break;
+    for (const [pattern, category] of PATH_CATEGORY_RULES) {
+      if (pattern.test(`/${segment}/`)) return category;
+    }
+  }
+
+  return '';
+}
+
+/**
+ * Resolve what a scraped row IS.
+ *
+ *  1. the listing page's own path (the store's classification),
+ *  2. the category of the listing we crawled (also the store's),
+ *  3. only then the product NAME — for rows the page did not classify.
+ *
+ * Step 3 stays a fallback because it is the step that misfiles: it is a guess
+ * made from marketing copy.
+ */
+export function resolveCategory(productUrl: string, pageUrl: string, name: string): string {
+  return categoryFromPath(productUrl) || categoryFromPath(pageUrl) || classifyByName(name, '');
+}
+
 /**
  * URL of page `n` (1-based) for a target.
  *
@@ -263,8 +367,19 @@ function parseOpenCart(
     const name = cleanProductName(linkMatch[2] ?? '');
     if (!name) continue;
 
-    const resolvedCategory = classifyByName(name, category);
-    // '' means the row is an accessory, not a component — skip it entirely.
+    /**
+     * The PATH decides the category, not the name.
+     *
+     * The name is marketing copy: "Corsair iCUE H100i Elite CPU Liquid Cooler"
+     * contains "CPU", and a chassis advertising "420mm GPU clearance" contains
+     * "GPU". Both were filed by those words. The URL says which collection the
+     * store published the product in, and that is the classification the filters
+     * need.
+     */
+    const productUrl = cleanProductUrl(href, origin);
+    const resolvedCategory = resolveCategory(productUrl, pageUrl, name) || category;
+    // '' means the row is an accessory or a whole system, not a component — the
+    // name rules recognised it and there is nothing to file it under.
     if (!resolvedCategory) continue;
 
     // This theme renders the price in one of two shapes:
@@ -310,9 +425,9 @@ function parseOpenCart(
         : /in stock|متوفر/i.test(stockText)
           ? 'in_stock'
           : 'unknown',
-      productUrl: cleanProductUrl(href, origin),
+      productUrl,
       imageUrl: cleanImageUrl(image, origin),
-      specs: { template: 'opencart' },
+      specs: { template: 'opencart', pageCategory: category },
     });
   }
 
@@ -442,7 +557,11 @@ function parseWooCommerce(
     const name = cleanProductName(titleMatch?.[1] ?? '');
     if (!name) continue;
 
-    const resolvedCategory = classifyByName(name, category);
+    // Path first, name last — see `resolveCategory`. The PAGE is what we know
+    // here: a WooCommerce card links to `/product/<slug>/`, which carries no
+    // collection, while the page being parsed IS the store's collection.
+    const productUrl = cleanProductUrl(slugMatch[1], origin);
+    const resolvedCategory = resolveCategory(productUrl, pageUrl, name) || category;
     if (!resolvedCategory) continue;
 
     // Flatsome renders the price as
@@ -480,9 +599,9 @@ function parseWooCommerce(
         : /in-stock|instock/.test(block)
           ? 'in_stock'
           : 'unknown',
-      productUrl: cleanProductUrl(slugMatch[1], origin),
+      productUrl,
       imageUrl: cleanImageUrl(usableImage, origin),
-      specs: { template: 'woocommerce' },
+      specs: { template: 'woocommerce', pageCategory: category },
     });
   }
 
@@ -683,10 +802,21 @@ function categoryOf(url: string): string {
 /**
  * Infer the real category from a product NAME.
  *
- * Retailers mix categories inside one listing: Elbadr's `/cpu` page returns
- * monitors, external SSDs and processors together. Filing all of them as `cpu`
- * would put a monitor in a CPU price comparison, so the name wins whenever it is
- * confident and the page category is only the fallback.
+ * ── Where this sits now (Phase 15) ─────────────────────────────────────────
+ * This is the FALLBACK, not the classifier. `resolveCategory` asks the store
+ * first — the listing path, then the listing page it was crawled from — and only
+ * comes here when neither names a category. That order matters: keyword
+ * matching on a name is a guess, and it guessed wrong in exactly the way users
+ * noticed (a fan called "… CPU Cooler" became a CPU; a chassis advertising
+ * "420mm GPU" became a graphics card).
+ *
+ * Two jobs remain for this function, and they are both about EXCLUSION:
+ *
+ *   · dropping things that are not components at all (mice, monitors, laptops,
+ *     thermal paste, flash drives) — the catalogue is eight COMPONENT buckets,
+ *     and a tube of paste is not one of them;
+ *   · naming a product whose path says nothing (a store that publishes flat
+ *     URLs and no page category).
  *
  * Order matters: "SSD" must resolve before a bare "memory" match, and
  * "graphics card" before "card".
@@ -706,6 +836,22 @@ export function classifyByName(name: string, fallback: string): string {
   }
   // Monitors have no catalogue category either (the enum has 8 PC-part values).
   if (/\bmonitor\b|\bdisplay\b|\bscreen\b/.test(n)) return '';
+
+  /**
+   * Complete SYSTEMS are not components.
+   *
+   * A laptop is named by its CPU ("LENOVO LOQ 15IRX9 … Intel Core i7-14700HX"),
+   * so 21 machines were filed as CPUs. A prebuilt desktop is likewise a whole
+   * PC, not a part. Both are dropped rather than mis-categorised: the catalogue
+   * is eight COMPONENT categories.
+   */
+  if (
+    /\b(laptop|notebook|ideapad|thinkpad|legion|loq|victus|nitro|predator|cyborg|katana|thin \d|tuf (?:dash|f16)|vivobook|zenbook|surface|macbook|chromebook)\b/.test(
+      n,
+    )
+  ) {
+    return '';
+  }
 
   /**
    * Consumables: thermal paste, pads, coolant, cleaning kits.
@@ -738,16 +884,101 @@ export function classifyByName(name: string, fallback: string): string {
   // AMD APUs are named e.g. "Ryzen 5 8600G (Zen 4 & Radeon 760M)": the iGPU is
   // mentioned inside a PROCESSOR name, so a GPU-first rule files a CPU under
   // GPUs and it then competes in GPU price comparisons.
-  if (/\b(cpu|processor|ryzen|core i[3579]|core ultra|threadripper|xeon)\b/.test(n)) return 'cpu';
-  // PSU BEFORE GPU: "Corsair RM850x 850W 80 Plus Gold" contains no GPU word, but
-  // "MSI MPG A850G PCIE5 850W" and PSUs marketed as "GeForce-ready" do — and a
-  // `watt` match is a far stronger signal than a brand mention.
-  if (/\b(psu|power supply|\d+\s?w\b|watt|80\+|80plus|fully modular|semi modular)\b/.test(n)) return 'psu';
+  // "Core i5" appears with AND without a model suffix: "Intel Core i5-12400F"
+  // and "Intel Core i5 12400F" are the same part, and the no-hyphen spelling
+  // used to miss because the rule required `core i5` to be followed by a word
+  // boundary that never comes.
+  // "CPU Cooler" is not a CPU — the noun decides, and a cooler always names
+  // itself cooler/heatsink/fan/AIO further along the string.
+  // A motherboard is named BY ITS CPU support: "Gigabyte Z890 AERO G … for Intel
+  // Core Ultra Series 2" — so the chipset rule must run first, or the board is
+  // filed as a processor. Anti-bend frames and contact frames likewise name a
+  // socket while being mounting hardware.
+  // A chipset is a letter plus three digits (B650, X870E, Z790). The PSU model
+  // "A850G" has the same shape, so a wattage in the name disqualifies it.
+  const chipset = /\b[bxz]\d{3}[a-z]{0,2}\b/.test(n) && !/\b\d{3,4}\s?w\b/.test(n);
+  const isBoard = /(motherboard|mainboard|chipset)/.test(n) || chipset;
+  const isMountingHardware = /\b(anti-?bend|contact frame|mounting kit|bracket|fastener|frame)\b/.test(n);
+  const namesCpu = /\b(cpu|processor|ryzen|ryzen\d|core i[3579]|core ultra|threadripper|xeon)\b/.test(n);
+
+  if (isBoard) return 'motherboard';
+
+  if (
+    namesCpu &&
+    !isMountingHardware &&
+    !/\bcooler\b|\bheatsink\b|\bfan\b|\baio\b|\bliquid\b|\bthermal interface\b/.test(n)
+  ) {
+    return 'cpu';
+  }
+
+  /**
+   * PSU needs a WATTAGE or an explicit PSU word — not a bare `\d+W`.
+   *
+   * The loose rule filed an "ASUS Z870E Plus WiFi (30W PD)" motherboard as a
+   * power supply, because "30W" matched. A power supply is identified by its
+   * model family or a wattage in the PSU range (300–2000 W).
+   */
+  if (/\b(psu|power supply|80\s?plus|80plus|fully modular|semi modular|atx 3\.?[01])\b/.test(n)) {
+    return 'psu';
+  }
+
+  /**
+   * Wattage alone does NOT identify a PSU.
+   *
+   * "ID-COOLING SE-802-SD V3 95W … CPU Cooler" and "Thermalright TL-C12B PWM Fan"
+   * were both filed as power supplies by a bare `\d+W` rule, and then appeared
+   * under the CPU filter as coolers. A PSU needs a wattage in the PSU RANGE,
+   * and must not also be a cooler, fan or case.
+   */
+  const wattage = /\b([3-9]\d{2}|1[0-9]{3}|2000)\s?w\b/.test(n);
+  const isThermalOrCase = /\b(cooler|heatsink|fan|aio|liquid|case|tower|chassis|tdp)\b/.test(n);
+  if (wattage && !isThermalOrCase) return 'psu';
+
+  /**
+   * CASE and MOTHERBOARD before GPU.
+   *
+   * A chassis describes itself by what it holds: "Xigmatek Crystal Storm E-ATX
+   * 420mm GPU 360mm Radiator Mid Tower Case" contains the word GPU, so the GPU
+   * rule claimed 47 cases. "Case", "tower" and "chassis" are hardware nouns;
+   * a bare "GPU" in a product name is usually a clearance figure. Same for a
+   * board's "PCIe x16 for GPU".
+   */
+  /**
+   * `case` / `chassis` win outright.
+   *
+   * Cases advertise their fans — "Heaven Air Arctic White 8-Fan ARGB Mid-Tower
+   * Case" — so excluding names containing "fan" moved 81 chassis into cooling.
+   * "Case"/"chassis" is a structural noun a cooler never uses.
+   *
+   * A bare "tower" is ambiguous: "Dual Tower" is a cooler heatsink shape, so it
+   * only counts with case vocabulary around it.
+   */
+  if (/\b(case|chassis)\b/.test(n)) return 'case';
+  if (/\btower\b/.test(n) && /(mid[- ]?tower|full[- ]?tower|mini[- ]?tower|super tower|pc tower|pc case)/.test(n)) {
+    return 'case';
+  }
+
+  /**
+   * Chassis brands beat board keywords.
+   *
+   * A case describes the boards it accepts — "Lian Li O11 Dynamic Mini … E-ATX",
+   * "NZXT H5 Flow … Modular I/O" — so `atx` filed 19 cases as motherboards. These
+   * brands make chassis (and, for NZXT, coolers) and nothing else in this
+   * catalogue, which makes them a reliable signal.
+   */
+  if (/\b(lian li|nzxt h[0-9]|fractal design|phanteks|montech|darkflash|deepcool (?:matrexx|ch|ck)|thermaltake (?:versa|core|view)|corsair \d{3}[td]|o11|h5 flow|h7 flow|h9 flow)\b/.test(n)) {
+    return 'case';
+  }
+
+  // `pcie x16` / `atx` / `matx` are board signals: a motherboard is often named
+  // by its slot layout rather than the word "motherboard".
+  if (/(motherboard|mainboard|b650|x670|z790|b760|a620|chipset|pcie x16|\batx\b|\bmatx\b|\bitx board\b)/.test(n)) {
+    return 'motherboard';
+  }
+
   if (/\b(gpu|graphics card|geforce|radeon|rtx|gtx|arc a\d|vga)\b/.test(n)) return 'gpu';
-  if (/\b(motherboard|mainboard|b650|x670|z790|b760|a620|chipset)\b/.test(n)) return 'motherboard';
   if (/\b(nvme|ssd|hdd|hard drive|solid state)\b/.test(n)) return 'storage';
   if (/\b(ddr[345]|dimm|memory kit)\b/.test(n)) return 'ram';
-  if (/\b(case|chassis|tower)\b/.test(n)) return 'case';
   if (/\b(cooler|aio|liquid cooling|heatsink|fan)\b/.test(n)) return 'cooling';
 
   // `fallback` is the PAGE's category. An accessory on a component page (thermal

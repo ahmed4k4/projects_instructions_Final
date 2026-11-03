@@ -99,6 +99,7 @@
   },
   "specs": {
     "score": "score {{value}}",
+    "estimatedScore": "Relative tier estimated from the model number, not a measured benchmark",
     "inStock": "In stock",
     "limited": "Limited",
     "outOfStock": "Out of stock"

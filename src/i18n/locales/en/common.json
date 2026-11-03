@@ -76,6 +76,7 @@
   },
   "retail": {
     "compareTitle": "Compare prices",
+    "compareStores": "Compare ({{count}} stores)",
     "loading": "Fetching live prices…",
     "saveAmount": "Save {{amount}} by buying from the cheapest store",
     "updatedAt": "Prices updated {{date}}",
@@ -114,11 +115,13 @@
     "sortNewest": "Recently updated",
     "results": "{{count}} results",
     "results_plural": "{{count}} results",
+    "resultsIn": "Showing {{shown}} of {{total}} products",
     "listingCount": "{{count}} listings compared",
     "retailersAvailable": "Available at {{count}} retailers",
     "oneRetailer": "One retailer",
     "bestPrice": "Best price",
     "compare": "Compare",
+    "compareStores": "Compare ({{count}} stores)",
     "buyNow": "Buy now",
     "viewDeal": "View deal",
     "save": "Save {{amount}}",
@@ -159,7 +162,17 @@
     "endOfResults_other": "That is all {{count}} results.",
     "showingOf": "Showing {{shown}} of {{total}}",
     "endOfResults": "That is every result.",
-    "priceUnavailable": "Price unavailable"
+    "priceUnavailable": "Price unavailable",
+    "brand": "Brand",
+    "pagination": "Results pages",
+    "previous": "Previous",
+    "next": "Next",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "pageNumber": "Page {{page}}",
+    "showingRange": "Showing {{first}}–{{last}} of {{total}} results",
+    "showingAll": "{{count}} results",
+    "showResults": "Show {{count}} results"
   },
   "compare": {
     "title": "Compare prices",
@@ -176,7 +189,8 @@
     "historyBody": "We are recording prices daily. A trend chart will appear once a few weeks of history exist.",
     "open": "Open",
     "backToSearch": "Back to search",
-    "notFound": "That comparison link is no longer valid."
+    "notFound": "That comparison link is no longer valid.",
+    "samePriceNote": "{{count}} retailers carry this part at the same price."
   },
   "asset": {
     "sceneUnavailable": "3D preview unavailable on this device"

@@ -290,9 +290,9 @@ export function Hero3DScene({ className }: { className?: string }) {
         frameloop={reduce ? 'demand' : 'always'}
         /* Cap the pixel ratio: a 3× phone would render 9× the fragments for no
            visible gain on a glowing, soft-edged object. */
-        dpr={[1, degrade === 0 ? 1.75 : 1]}
+        dpr={[1, degrade === 0 ? 1.35 : 1]}
         camera={{ position: [0, 3.6, 6.4], fov: 42 }}
-        gl={{ antialias: degrade === 0, alpha: true, powerPreference: 'high-performance' }}
+        gl={{ antialias: false, alpha: true, powerPreference: 'low-power', stencil: false }}
         onCreated={({ gl }) => {
           gl.toneMapping = THREE.ACESFilmicToneMapping;
           gl.toneMappingExposure = 1.05;
@@ -327,13 +327,13 @@ export function Hero3DScene({ className }: { className?: string }) {
              * the capability hook, so a single count is enough here. The fallback
              * image handles phones entirely.
              */}
-            <Particles count={degrade === 0 ? 180 : 90} />
+            <Particles count={degrade === 0 ? 120 : 60} />
 
             {/*
              * Weak IBL only: the studio presets wash the dark PCB out to near-white,
              * while `night` keeps the metal readable without lifting the blacks.
              */}
-            <Environment preset="night" environmentIntensity={0.45} />
+            <Environment preset="night" environmentIntensity={0.3} />
 
             <OrbitControls
               enableZoom={false}

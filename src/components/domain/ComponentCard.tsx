@@ -11,53 +11,79 @@ import { RetailerLogo } from '@/components/retail/RetailerLogo';
 import type { RetailerId } from '@/services/retailers/types';
 import { CategoryIcon } from './CategoryIcon';
 
-/** Short, category-aware spec highlights (3 per card). */
+/**
+ * A specification chip is only shown when it HAS a value.
+ *
+ * The template used to render every slot regardless ("— C / — T", "— GHz
+ * boost") because the catalogue was guaranteed to carry complete spec sheets.
+ * Retailer listings do not: a title that omits the core count is not a broken
+ * product, so the chip is dropped rather than shown as a dash — the card then
+ * shows the specs that are actually known instead of three empty boxes.
+ */
 function specHighlights(component: PCComponent): string[] {
   const s = component.specs;
+  const has = (value: unknown) => value !== undefined && value !== null && value !== '';
+  const chips: Array<string | null> = [];
+
   switch (component.category) {
     case 'cpu':
-      return [
-        `${formatSpecValue(s.cores)}C / ${formatSpecValue(s.threads)}T`,
-        `${formatSpecValue(s.boostClock)} GHz boost`,
-        formatSpecValue(s.socket),
-      ];
+      chips.push(
+        has(s.cores) ? `${formatSpecValue(s.cores)}C / ${formatSpecValue(s.threads)}T` : null,
+        has(s.boostClock) ? `${formatSpecValue(s.boostClock)} GHz boost` : null,
+        has(s.socket) ? formatSpecValue(s.socket) : null,
+      );
+      break;
     case 'gpu':
-      return [
-        `${formatSpecValue(s.vram)} GB GDDR6X`,
-        `${formatSpecValue(s.tdp)} W`,
-        `${formatSpecValue(s.length)} mm`,
-      ];
+      chips.push(
+        has(s.vram) ? `${formatSpecValue(s.vram)} GB` : null,
+        has(s.tdp) ? `${formatSpecValue(s.tdp)} W` : null,
+        has(s.length) ? `${formatSpecValue(s.length)} mm` : null,
+      );
+      break;
     case 'motherboard':
-      return [formatSpecValue(s.chipset), formatSpecValue(s.socket), formatSpecValue(s.formFactor)];
+      chips.push(
+        has(s.chipset) ? formatSpecValue(s.chipset) : null,
+        has(s.socket) ? formatSpecValue(s.socket) : null,
+        has(s.formFactor) ? formatSpecValue(s.formFactor) : null,
+      );
+      break;
     case 'ram':
-      return [
-        `${formatSpecValue(s.capacity)} GB`,
-        `${formatSpecValue(s.speed)} MT/s`,
-        `CL${formatSpecValue(s.casLatency)}`,
-      ];
+      chips.push(
+        has(s.capacity) ? `${formatSpecValue(s.capacity)} GB` : null,
+        has(s.speed) ? `${formatSpecValue(s.speed)} MT/s` : null,
+        has(s.casLatency) ? `CL${formatSpecValue(s.casLatency)}` : null,
+      );
+      break;
     case 'storage':
-      return [
-        `${formatSpecValue(s.capacity)} GB`,
-        `${formatSpecValue(s.readSpeed)} MB/s read`,
-        formatSpecValue(s.interface),
-      ];
+      chips.push(
+        has(s.capacity) ? `${formatSpecValue(s.capacity)} GB` : null,
+        has(s.interface) ? formatSpecValue(s.interface) : null,
+      );
+      break;
     case 'psu':
-      return [formatSpecValue(s.wattage) + ' W', formatSpecValue(s.efficiency), formatSpecValue(s.modular)];
+      chips.push(
+        has(s.wattage) ? `${formatSpecValue(s.wattage)} W` : null,
+        has(s.efficiency) ? formatSpecValue(s.efficiency) : null,
+        has(s.modular) ? `${formatSpecValue(s.modular)} modular` : null,
+      );
+      break;
     case 'case':
-      return [
-        Array.isArray(s.formFactorSupport) ? (s.formFactorSupport as string[]).join(' · ') : '—',
-        `GPU ≤ ${formatSpecValue(s.maxGpuLength)} mm`,
-        `Cooler ≤ ${formatSpecValue(s.maxCoolerHeight)} mm`,
-      ];
+      chips.push(
+        Array.isArray(s.formFactorSupport) ? (s.formFactorSupport as string[]).join(' · ') : null,
+        has(s.maxGpuLength) ? `GPU ≤ ${formatSpecValue(s.maxGpuLength)} mm` : null,
+      );
+      break;
     case 'cooling':
-      return [
-        formatSpecValue(s.type),
-        `${formatSpecValue(s.tdpRating)} W TDP`,
-        Array.isArray(s.socketSupport) ? (s.socketSupport as string[]).slice(0, 2).join(' · ') : '—',
-      ];
+      chips.push(
+        has(s.type) ? formatSpecValue(s.type) : null,
+        Array.isArray(s.socketSupport) ? (s.socketSupport as string[]).slice(0, 2).join(' · ') : null,
+      );
+      break;
     default:
-      return [];
+      break;
   }
+
+  return chips.filter((chip): chip is string => Boolean(chip && chip.trim() && chip.trim() !== '—'));
 }
 
 interface ComponentCardProps {
@@ -93,7 +119,10 @@ export function ComponentCard({ component, selected, onSelect, onRemove, livePri
         <CategoryIcon category={component.category} />
         <div className="flex flex-col items-end gap-1.5">
           {component.performanceScore !== null && (
-            <span className="font-mono text-xs text-muted-foreground">
+            <span
+              className="font-mono text-xs text-muted-foreground"
+              title={t('builder.specs.estimatedScore')}
+            >
               {t('builder.specs.score', { value: component.performanceScore })}
             </span>
           )}
@@ -127,66 +156,71 @@ export function ComponentCard({ component, selected, onSelect, onRemove, livePri
         </ul>
       </div>
 
-      <footer className="mt-5 flex items-center justify-between gap-3 border-t border-border pt-4">
-        <div>
-          {/*
-           * Live retailer price when one has been matched, otherwise the
-           * converted catalogue estimate. The two are never mixed: a converted
-           * seed price must not look like a real quote.
-           */}
-          {livePrice ? (
-            <>
-              <div className="flex items-center gap-1.5">
-                {/* `auto`, not `ltr`: Intl wraps Arabic currency in RTL marks and
-                    forcing LTR renders "ج.م 379" with the currency first. */}
-                <span
-                  className="font-mono text-lg font-medium tabular-nums text-success"
-                  dir="auto"
-                  title={t('retail.bestPrice')}
-                >
-                  {formatCurrency(livePrice.bestPriceEgp)}
-                </span>
-                <RetailerLogo retailerId={livePrice.retailerId} size="sm" />
-              </div>
-              <div className="mt-0.5 text-[11px] text-muted-foreground line-through" dir="auto">
-                {formatCurrency(component.price)}
-              </div>
-            </>
-          ) : (
-            <div className="font-mono text-lg font-medium tabular-nums" dir="auto">
-              {formatCurrency(component.price)}
-            </div>
-          )}
+      {/**
+       * Three-line footer, one idea per line.
+       *
+       * At 1280px a builder card is ~290px wide. Price + store logo + wattage on
+       * one row left "EGP 61,500" colliding with the logo and "300 W", and a
+       * side-by-side Add/Compare clipped the label to "Compare (2 s…)".
+       *
+       * So: price alone, then the store and wattage as quiet metadata, then the
+       * actions full-width. Nothing shares a baseline that cannot fit.
+       */}
+      <footer className="mt-5 border-t border-border pt-4">
+        {/* `auto`, not `ltr`: Intl wraps Arabic currency in RTL marks and forcing
+            LTR renders "ج.م 379" with the currency first. */}
+        <span
+          className="block whitespace-nowrap pb-0.5 font-mono text-base font-medium tabular-nums text-success"
+          dir="auto"
+          title={t('retail.bestPrice')}
+        >
+          {formatCurrency(livePrice?.bestPriceEgp ?? component.price)}
+        </span>
+
+        <div className="flex min-w-0 items-center gap-1.5 text-[11px] text-muted-foreground">
+          {livePrice ? <RetailerLogo retailerId={livePrice.retailerId} size="sm" /> : null}
           {component.powerDrawWatts ? (
-            <div className="mt-0.5 flex items-center gap-1 text-[11px] text-muted-foreground">
+            <span className="flex items-center gap-1 whitespace-nowrap">
               <Zap className="size-3" /> {formatWatts(component.powerDrawWatts)}
-            </div>
-          ) : (
-            <div className="mt-0.5 text-[11px] text-muted-foreground">—</div>
-          )}
+            </span>
+          ) : null}
         </div>
 
-        {selected ? (
-          <Button size="sm" variant="secondary" onClick={() => onRemove?.(component)}>
-            <Check /> {t('builder.selected')}
-          </Button>
-        ) : (
-          <div className="flex flex-col items-stretch gap-1.5">
-            <Button size="sm" variant="outline" disabled={outOfStock} onClick={() => onSelect(component)}>
-              <Plus /> {t('builder.add')}
+        <div className="mt-3 flex flex-col gap-2">
+          {selected ? (
+            <Button size="sm" variant="secondary" className="w-full" onClick={() => onRemove?.(component)}>
+              <Check /> {t('builder.selected')}
             </Button>
-            {/* Only offered when a retailer actually lists this part. */}
-            {livePrice ? (
-              <button
-                type="button"
-                onClick={() => onCompare?.(component)}
-                className="min-h-11 rounded-md px-2 text-[11px] font-medium text-primary-glow underline-offset-2 transition-colors hover:underline"
+          ) : (
+            <>
+              <Button
+                size="sm"
+                variant="outline"
+                disabled={outOfStock}
+                className="w-full"
+                onClick={() => onSelect(component)}
               >
-                {t('retail.compare')}
-              </button>
-            ) : null}
-          </div>
-        )}
+                <Plus /> {t('builder.add')}
+              </Button>
+              {/*
+                * Full-width so "Compare (3 stores)" is never truncated to
+                * "Compare (3 s…)" in a 290px card.
+                */}
+              {onCompare && (livePrice || component.storeLinks.length > 0) ? (
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="w-full whitespace-nowrap text-[11px]"
+                  onClick={() => onCompare(component)}
+                >
+                  {component.storeLinks.length > 1
+                    ? t('retail.compareStores', { count: component.storeLinks.length })
+                    : t('retail.compare')}
+                </Button>
+              ) : null}
+            </>
+          )}
+        </div>
       </footer>
     </motion.article>
   );

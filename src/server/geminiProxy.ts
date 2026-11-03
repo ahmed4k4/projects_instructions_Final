@@ -38,7 +38,7 @@ export function readGeminiConfig(
   env: Record<string, string | undefined> = process.env as Record<string, string | undefined>,
 ): ProxyConfig {
   const key = (env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY ?? '').trim();
-  return { configured: key.length > 0, model: env.GEMINI_MODEL?.trim() || null };
+  return { configured: key.length > 0, model: env.GEMINI_MODEL?.trim() || 'gemini-3.5-flash-lite' };
 }
 
 export interface ProxyRequest {
@@ -61,12 +61,12 @@ export interface ProxyResponse {
   text?: string;
 }
 
-const CORS = {
-  // The function is same-origin for the deployed app; the wildcard keeps
-  // `vercel dev`, preview hosts and local tooling working unchanged.
-  'Access-Control-Allow-Origin': '*',
+const PREFLIGHT_HEADERS = {
+  // No wildcard Access-Control-Allow-Origin: the browser app and API are
+  // same-origin. A public wildcard would allow unrelated sites to call the
+  // proxy backed by the server's Gemini key.
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Headers': 'Authorization, Content-Type',
   'Access-Control-Max-Age': '86400',
 };
 
@@ -75,7 +75,7 @@ const NO_STORE = 'no-store';
 function json(status: number, payload: unknown): ProxyResponse {
   return {
     status,
-    headers: { ...CORS, 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': NO_STORE },
+    headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': NO_STORE },
     body: null,
     text: JSON.stringify(payload),
   };
@@ -92,12 +92,36 @@ export async function handleAiRoute(
   apiKey: string | undefined,
 ): Promise<ProxyResponse> {
   if (req.method === 'OPTIONS') {
-    return { status: 204, headers: CORS, body: null };
+    return { status: 204, headers: PREFLIGHT_HEADERS, body: null };
   }
 
-  // GET /api/ai/config — the only question the UI asks: "is Gemini available?"
+  /**
+   * GET /api/ai/config — health check and configuration discovery.
+   *
+   * Always answers 200: the endpoint itself is working even when no key is set,
+   * and a deploy that 404s here is a *routing* failure, not a missing key. The
+   * body distinguishes the two:
+   *
+   *   { ok: true,  gemini: true,  model }   → AI is live
+   *   { ok: false, gemini: false, reason }  → deploy is fine, key is missing
+   *
+   * `reason` is written for the person who has to fix it, and it names the
+   * exact dashboard location — the most common cause is setting the variable on
+   * a different environment (Preview vs Production) or not redeploying after
+   * adding it, both of which leave `process.env` empty at runtime.
+   */
   if (req.route === 'config') {
-    return json(200, { gemini: config.configured, model: config.model });
+    return json(200, {
+      ok: config.configured,
+      gemini: config.configured,
+      model: config.model,
+      ...(config.configured
+        ? {}
+        : {
+            reason: 'GEMINI_API_KEY is not set for this deployment.',
+            hint: 'Vercel → Project → Settings → Environment Variables → add GEMINI_API_KEY for Production, Preview AND Development, then Redeploy.',
+          }),
+    });
   }
 
   if (!ALLOWED_PATH.test(req.route)) {
@@ -109,6 +133,7 @@ export async function handleAiRoute(
       error: {
         message: 'GEMINI_API_KEY is not configured on the server.',
         status: 'FAILED_PRECONDITION',
+        hint: 'Set it in Vercel → Settings → Environment Variables (all three environments) and redeploy.',
       },
     });
   }
@@ -128,8 +153,12 @@ export async function handleAiRoute(
       signal: req.signal,
     });
   } catch (error) {
-    return json(502, {
-      error: { message: `Upstream unreachable: ${(error as Error).message}`, status: 'UNAVAILABLE' },
+    const timedOut = (error as Error)?.name === 'TimeoutError' || (error as Error)?.name === 'AbortError';
+    return json(timedOut ? 504 : 502, {
+      error: {
+        message: timedOut ? 'GEMINI_TIMEOUT' : 'GEMINI_UPSTREAM_UNAVAILABLE',
+        status: timedOut ? 'DEADLINE_EXCEEDED' : 'UNAVAILABLE',
+      },
     });
   }
 
@@ -139,10 +168,10 @@ export async function handleAiRoute(
   return {
     status: upstream.status,
     headers: {
-      ...CORS,
       'Content-Type': contentType,
       // SSE must not be buffered or compressed away by a CDN or a proxy.
       'Cache-Control': isStream ? 'no-cache, no-transform' : NO_STORE,
+      'X-AI-Upstream': 'google',
       ...(isStream ? { 'X-Accel-Buffering': 'no' } : {}),
     },
     body: upstream.body,

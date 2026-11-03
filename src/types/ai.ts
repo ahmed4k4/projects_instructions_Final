@@ -129,6 +129,7 @@ export interface GenerateRequestPayload {
   systemInstruction?: string;
   tools?: ToolDeclaration[];
   temperature?: number;
+  thinkingLevel?: 'MINIMAL' | 'LOW' | 'MEDIUM' | 'HIGH';
   maxOutputTokens?: number;
   /** JSON schema → the model must answer with structured JSON. */
   responseSchema?: Record<string, unknown>;
@@ -145,6 +146,7 @@ export interface GenerateOptions {
   grounded?: boolean;
   responseSchema?: Record<string, unknown>;
   temperature?: number;
+  thinkingLevel?: 'MINIMAL' | 'LOW' | 'MEDIUM' | 'HIGH';
   maxOutputTokens?: number;
   /** Streaming token callback (chat + build narration). */
   onToken?: (token: string) => void;

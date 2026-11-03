@@ -123,6 +123,17 @@ export function ComparePricesModal({
                     ))}
                   </ul>
 
+                  {/*
+                    * One card per product, many shops: say how many, because the
+                    * point of this sheet is that the same part is sold elsewhere
+                    * for less.
+                    */}
+                  {comparison.offers.length > 1 ? (
+                    <p className="mt-3 text-[11px] text-muted-foreground">
+                      {t('retail.compareStores', { count: comparison.offers.length })}
+                    </p>
+                  ) : null}
+
                   {comparison.lastScrapedAt ? (
                     <p className="mt-4 flex items-center gap-1.5 text-[11px] text-muted-foreground">
                       <Clock className="size-3" />

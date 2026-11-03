@@ -1,21 +1,23 @@
-﻿import { useEffect, useMemo, useRef, useState } from 'react';
+﻿import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { AnimatePresence, motion } from 'framer-motion';
-import { AlertCircle, ChevronDown, Loader2, PackageSearch, SlidersHorizontal } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { AlertCircle, ChevronDown, PackageSearch, SlidersHorizontal } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { SearchBar } from '@/components/retail/SearchBar';
 import { FilterPanel } from '@/components/retail/FilterPanel';
+import { Pagination } from '@/components/retail/Pagination';
+import { MobileFilterSheet } from '@/components/retail/MobileFilterSheet';
 import { SearchResultCard, SearchResultSkeleton } from '@/components/retail/SearchResultCard';
 import { GradientMesh } from '@/components/shared/GradientMesh';
-import { useSearch, useSearchCategories } from '@/hooks/useSearch';
+import { useSearch, useSearchBrands, useSearchCategories } from '@/hooks/useSearch';
 import { makeStagger } from '@/lib/motion';
 import { formatRelativeShort, cn } from '@/lib/utils';
 import { useLiveRetailers } from '@/hooks/useRetailers';
 import { DEFAULT_PRICE_MAX, DEFAULT_PRICE_MIN } from '@/lib/searchDefaults';
-import type { SearchFilters, SortKey } from '@/services/searchService';
+import { SEARCH_PAGE_SIZE, type SearchFilters, type SortKey } from '@/services/searchService';
 import type { ComponentCategory } from '@/types/components';
 import type { RetailerId } from '@/services/retailers/types';
 
@@ -60,10 +62,18 @@ export default function Search() {
   const retailerParam = params.get('ret');
   const minParam = params.get('min');
   const maxParam = params.get('max');
+  const brandParam = params.get('brand');
+  const pageParam = Number(params.get('page') ?? '1');
+  const page = Number.isFinite(pageParam) && pageParam > 0 ? Math.floor(pageParam) : 1;
 
   const retailerIds = useMemo<RetailerId[] | undefined>(
     () => (retailerParam ? (retailerParam.split(',').filter(Boolean) as RetailerId[]) : undefined),
     [retailerParam],
+  );
+
+  const brands = useMemo<string[] | undefined>(
+    () => (brandParam ? brandParam.split(',').filter(Boolean) : undefined),
+    [brandParam],
   );
 
   const filters: SearchFilters = useMemo(
@@ -71,11 +81,15 @@ export default function Search() {
       query,
       category,
       retailerIds,
+      brands,
       inStockOnly,
+      // Page is part of the query key, so paging is URL-addressable and a shared
+      // link can resume at the same page.
+      page,
       minPriceEgp: minParam ? Number(minParam) : undefined,
       maxPriceEgp: maxParam ? Number(maxParam) : undefined,
     }),
-    [query, category, retailerIds, inStockOnly, minParam, maxParam],
+    [query, category, retailerIds, brands, inStockOnly, minParam, maxParam, page],
   );
 
   /** Write one key back to the URL without losing the others. */
@@ -94,6 +108,10 @@ export default function Search() {
       cat: next.category ?? null,
       stock: next.inStockOnly ? '1' : null,
       ret: next.retailerIds?.length ? next.retailerIds.join(',') : null,
+      brand: next.brands?.length ? next.brands.join(',') : null,
+      // Any filter change resets to page 1: page 7 of the old result set is
+      // meaningless against a new one.
+      page: null,
       min:
         next.minPriceEgp !== undefined && next.minPriceEgp > DEFAULT_PRICE_MIN
           ? String(next.minPriceEgp)
@@ -105,62 +123,35 @@ export default function Search() {
     });
   };
 
-  const {
-    data: pages,
-    isLoading,
-    isFetching,
-    isFetchingNextPage,
-    hasNextPage,
-    fetchNextPage,
-    isError,
-    refetch,
-  } = useSearch(filters, sort);
+  const { data, isLoading, isFetching, isError, refetch } = useSearch(filters, sort, page);
   const { data: categories = [] } = useSearchCategories();
+  const { data: brandOptions = [] } = useSearchBrands();
 
-  // One flat list for the grid; totals come from the first page's whole-match
-  // figures so "N results" never changes as more pages load.
-  const data = pages?.pages[0];
-
-  // Scroll back to the top of the results when the query changes — otherwise a
-  // new search can land the user halfway down a long grid.
+  // Scroll back to the top when the QUERY or PAGE changes — a new search or a
+  // page turn should start at the top of the grid, not halfway down it.
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [query, category, sort]);
+  }, [query, category, sort, page]);
 
   const activeFilterCount =
     (category ? 1 : 0) +
     (retailerIds?.length ?? 0) +
+    (brands?.length ?? 0) +
     (inStockOnly ? 1 : 0) +
     (minParam ? 1 : 0) +
     (maxParam ? 1 : 0);
 
-  const groups = pages?.pages.flatMap((page) => page.groups) ?? [];
+  const groups = data?.groups ?? [];
+  const totalGroups = data?.totalGroups ?? 0;
+  const totalPages = Math.max(1, Math.ceil(totalGroups / SEARCH_PAGE_SIZE));
+  const firstShown = totalGroups === 0 ? 0 : (page - 1) * SEARCH_PAGE_SIZE + 1;
+  const lastShown = Math.min(page * SEARCH_PAGE_SIZE, totalGroups);
 
-  /**
-   * Infinite scroll.
-   *
-   * An IntersectionObserver on a sentinel below the grid, with `rootMargin`
-   * pre-loading the next page before the user reaches the bottom. A "Load more"
-   * button stays visible for keyboards, screen readers and browsers without the
-   * API — automatic loading must never be the ONLY way forward.
-   */
-  const sentinelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const node = sentinelRef.current;
-    if (!node || !hasNextPage || isFetchingNextPage) return;
-    if (typeof IntersectionObserver === 'undefined') return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) void fetchNextPage();
-      },
-      { rootMargin: '600px 0px' },
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [hasNextPage, isFetchingNextPage, fetchNextPage, groups.length]);
+  /** Jump to a page, keeping every other filter intact. */
+  const goToPage = (nextPage: number) => {
+    const clamped = Math.min(Math.max(1, nextPage), totalPages);
+    patch({ page: clamped === 1 ? null : String(clamped) });
+  };
 
   return (
     <div className="relative">
@@ -235,24 +226,14 @@ export default function Search() {
           <SortSelect value={sort} onChange={(next) => patch({ sort: next })} />
         </div>
 
-        <AnimatePresence initial={false}>
-          {filtersOpen ? (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="overflow-hidden md:hidden"
-            >
-              <FilterPanel
-                filters={filters}
-                onChange={applyFilters}
-                categories={categories}
-                className="mt-3 rounded-xl border border-border bg-surface/70 p-4"
-              />
-            </motion.div>
-          ) : null}
-        </AnimatePresence>
+        {/* Mobile: a bottom sheet, not an accordion. It applies filters live and
+            stays open so results behind the scrim can be compared as they change. */}
+        <MobileFilterSheet open={filtersOpen} onClose={() => setFiltersOpen(false)}>
+          <FilterPanel filters={filters} onChange={applyFilters} categories={categories} brands={brandOptions} />
+          <Button className="mt-5 w-full" onClick={() => setFiltersOpen(false)}>
+            {t('search.showResults', { count: totalGroups })}
+          </Button>
+        </MobileFilterSheet>
 
         {/* Body ---------------------------------------------------------- */}
         <div className="mt-6 grid gap-6 md:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[240px_minmax(0,1fr)]">
@@ -269,7 +250,7 @@ export default function Search() {
                   </Badge>
                 ) : null}
               </div>
-              <FilterPanel filters={filters} onChange={applyFilters} categories={categories} />
+              <FilterPanel filters={filters} onChange={applyFilters} categories={categories} brands={brandOptions} />
             </div>
           </aside>
 
@@ -308,37 +289,16 @@ export default function Search() {
                   ))}
                 </motion.div>
 
-                {/* Paging footer ------------------------------------------------ */}
-                <div ref={sentinelRef} className="mt-8 flex flex-col items-center gap-3">
-                  {hasNextPage ? (
-                    <Button
-                      variant="outline"
-                      onClick={() => void fetchNextPage()}
-                      disabled={isFetchingNextPage}
-                      className="min-w-48"
-                    >
-                      {isFetchingNextPage ? (
-                        <>
-                          <Loader2 className="animate-spin" /> {t('search.loadingMore')}
-                        </>
-                      ) : (
-                        <>
-                          {t('search.loadMore')}
-                          <ChevronDown />
-                        </>
-                      )}
-                    </Button>
-                  ) : (
-                    <p className="text-[11px] text-muted-foreground">
-                      {t('search.endOfResults', { count: groups.length })}
-                    </p>
-                  )}
-
-                  {/* Progress stays honest about what is rendered vs. matched. */}
-                  <p className="font-mono text-[10.5px] text-muted-foreground/70" aria-live="polite">
-                    {t('search.showingOf', { shown: groups.length, total: data?.total ?? 0 })}
-                  </p>
-                </div>
+                {/* Pagination ------------------------------------------------ */}
+                <Pagination
+                  className="mt-10"
+                  page={page}
+                  totalPages={totalPages}
+                  firstShown={firstShown}
+                  lastShown={lastShown}
+                  total={totalGroups}
+                  onChange={goToPage}
+                />
               </>
             )}
           </section>

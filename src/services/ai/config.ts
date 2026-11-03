@@ -1,39 +1,42 @@
 /**
  * Gemini configuration discovery.
  *
- * The API key is read only by the server (it has no `VITE_` prefix, so Vite
- * never inlines it). The browser therefore cannot answer "is Gemini
- * configured?" from `import.meta.env` — it asks the server instead:
- *
- *   GET /api/ai/config  →  { gemini: boolean, model?: string }
- *
- * That route is a Vercel Serverless Function in production (`api/ai/[...route].ts`)
- * and a Vite middleware in development — one contract, both environments.
- *
- * Only booleans are returned; no key material ever crosses this boundary. The
- * result is cached for 5 minutes to avoid a request per render.
+ * The browser never receives the Gemini API key. It checks the same-origin
+ * server endpoint, which validates deployment configuration and returns only
+ * readiness metadata. Successful results are cached briefly; failures are
+ * retried quickly so a transient Vercel cold start is not remembered for five
+ * minutes.
  */
 export interface AIProviderConfig {
   configured: boolean;
-  /** Optional server-side default model override (GEMINI_MODEL). */
   model: string | null;
   discovered: boolean;
   checkedAt: number;
+  diagnosis: string | null;
 }
 
 const CONFIG_TTL_MS = 5 * 60 * 1000;
+const FAILURE_TTL_MS = 20 * 1000;
 const CACHE_KEY = 'nexus:ai:gemini-config';
+const CONFIG_TIMEOUT_MS = 5000;
 
 let inFlight: Promise<AIProviderConfig> | null = null;
 
-const EMPTY: AIProviderConfig = { configured: false, model: null, discovered: false, checkedAt: 0 };
+const EMPTY: AIProviderConfig = {
+  configured: false,
+  model: null,
+  discovered: false,
+  checkedAt: 0,
+  diagnosis: null,
+};
 
 function readCache(): AIProviderConfig | null {
   try {
     const raw = localStorage.getItem(CACHE_KEY);
     if (!raw) return null;
     const parsed = JSON.parse(raw) as AIProviderConfig;
-    return Date.now() - parsed.checkedAt < CONFIG_TTL_MS ? parsed : null;
+    const ttl = parsed.configured ? CONFIG_TTL_MS : FAILURE_TTL_MS;
+    return Number.isFinite(parsed.checkedAt) && Date.now() - parsed.checkedAt < ttl ? parsed : null;
   } catch {
     return null;
   }
@@ -41,13 +44,17 @@ function readCache(): AIProviderConfig | null {
 
 function writeCache(config: AIProviderConfig): void {
   try {
+    if (!config.discovered) {
+      localStorage.removeItem(CACHE_KEY);
+      return;
+    }
     localStorage.setItem(CACHE_KEY, JSON.stringify(config));
   } catch {
     // Storage disabled — discovery simply repeats next time.
   }
 }
 
-/** Discover whether the server holds a Gemini key. */
+/** Discover whether the deployment can safely serve Gemini requests. */
 export async function discoverGeminiConfig(force = false): Promise<AIProviderConfig> {
   if (!force) {
     const cached = readCache();
@@ -56,32 +63,65 @@ export async function discoverGeminiConfig(force = false): Promise<AIProviderCon
   }
 
   inFlight = (async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), CONFIG_TIMEOUT_MS);
     let config: AIProviderConfig = { ...EMPTY, checkedAt: Date.now() };
 
     try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 3000);
-      const res = await fetch('/api/ai/config', { signal: controller.signal });
-      clearTimeout(timer);
+      const res = await fetch('/api/ai/config', {
+        method: 'GET',
+        headers: { Accept: 'application/json' },
+        cache: 'no-store',
+        signal: controller.signal,
+      });
+      const payload = (await res.json().catch(() => null)) as
+        | { ok?: boolean; gemini?: boolean; model?: string | null; hint?: string; reason?: string; error?: { message?: string } }
+        | null;
 
-      if (res.ok && (res.headers.get('content-type') ?? '').includes('json')) {
-        const data = (await res.json()) as { gemini?: boolean; model?: string };
+      if (res.ok && payload && (typeof payload.ok === 'boolean' || typeof payload.gemini === 'boolean')) {
+        const configured = Boolean(payload.ok ?? payload.gemini);
         config = {
-          configured: Boolean(data.gemini),
-          model: data.model ?? null,
+          configured,
+          model: payload.model ?? null,
           discovered: true,
           checkedAt: Date.now(),
+          diagnosis: configured
+            ? null
+            : (payload.hint ?? payload.reason ?? payload.error?.message ?? 'The AI service is not configured on this deployment.'),
+        };
+      } else {
+        config = {
+          ...EMPTY,
+          discovered: true,
+          checkedAt: Date.now(),
+          diagnosis:
+            payload?.hint ?? payload?.reason ?? payload?.error?.message ??
+            (res.status === 404
+              ? 'The AI endpoint is missing (404). Check the Vercel API routing and deployment.'
+              : `The AI endpoint returned HTTP ${res.status}. Check the Vercel Function logs.`),
         };
       }
-    } catch {
-      // Production build without the dev server: no provider is available, which
-      // is correct — the key is never shipped to the browser.
+    } catch (error) {
+      config = {
+        ...EMPTY,
+        discovered: false,
+        checkedAt: Date.now(),
+        diagnosis:
+          (error as Error)?.name === 'AbortError'
+            ? 'The AI configuration check timed out. Retry the connection.'
+            : 'The AI endpoint could not be reached. Check the deployment and network connection.',
+      };
+    } finally {
+      clearTimeout(timer);
     }
 
     writeCache(config);
-    inFlight = null;
     return config;
   })();
 
-  return inFlight;
+  try {
+    return await inFlight;
+  } finally {
+    inFlight = null;
+  }
 }

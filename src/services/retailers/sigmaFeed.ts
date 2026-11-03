@@ -24,6 +24,14 @@ export interface FeedProduct {
   stockStatus: 'in_stock' | 'out_of_stock' | 'limited' | 'unknown';
   productUrl: string;
   imageUrl: string | null;
+  /**
+   * Scrape payload, optional.
+   *
+   * The worker publishes whatever the store rendered; the app infers the rest
+   * (`lib/specInference`) at read time. Types are deliberately loose because the
+   * feed is JSON produced by a Python script, not by this schema.
+   */
+  specs?: Record<string, unknown> | null;
 }
 
 export interface RetailerFeed {
@@ -35,6 +43,9 @@ export interface RetailerFeed {
 const FEED_PATH = 'data/sigma_products.json';
 
 let cached: Promise<RetailerFeed> | null = null;
+let retryAfter = 0;
+const RETRY_DELAY_MS = 30_000;
+const FEED_TIMEOUT_MS = 8_000;
 
 const EMPTY: RetailerFeed = { capturedAt: null, downloaded: false, products: [] };
 
@@ -56,24 +67,40 @@ function isValid(row: unknown): row is FeedProduct {
   );
 }
 
-/** Load the Sigma feed once per session. Never throws. */
+/** Load Sigma's published feed. Failed/empty reads retry after a short cooldown. */
 export function loadSigmaFeed(): Promise<RetailerFeed> {
-  cached ??= (async () => {
+  if (cached) return cached;
+  if (Date.now() < retryAfter) return Promise.resolve(EMPTY);
+
+  cached = (async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FEED_TIMEOUT_MS);
     try {
-      const res = await fetch(feedUrl(), { headers: { Accept: 'application/json' } });
-      if (!res.ok) return EMPTY;
+      const res = await fetch(feedUrl(), {
+        cache: 'no-cache',
+        headers: { Accept: 'application/json' },
+        signal: controller.signal,
+      });
+      if (!res.ok) throw new Error(`Sigma feed returned HTTP ${res.status}`);
 
       const payload = (await res.json()) as { capturedAt?: string; products?: unknown[] };
       const products = (payload.products ?? []).filter(isValid).map((row) => ({
         ...row,
         retailerId: 'sigma' as const,
       }));
+      if (!products.length) throw new Error('Sigma feed contains no valid products');
 
+      retryAfter = 0;
       return { capturedAt: payload.capturedAt ?? null, downloaded: true, products };
-    } catch {
-      // Not deployed yet, blocked by the host, or offline — Sigma simply has no
-      // data, which the UI already communicates.
+    } catch (error) {
+      // Avoid a retry loop when a CDN or network outage persists, but recover
+      // automatically instead of caching an empty response for the full session.
+      cached = null;
+      retryAfter = Date.now() + RETRY_DELAY_MS;
+      if (import.meta.env.DEV) console.warn('[retailers] Sigma feed unavailable; retry scheduled.', error);
       return EMPTY;
+    } finally {
+      clearTimeout(timer);
     }
   })();
 

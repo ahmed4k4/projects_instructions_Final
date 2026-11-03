@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowLeft, Loader2, Mail, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Loader2, Mail, ShieldCheck, UserPlus, LogIn } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,116 +12,88 @@ import { GradientMesh } from '@/components/shared/GradientMesh';
 import { useAuth } from '@/hooks/useAuth';
 import { EASE_OUT } from '@/lib/motion';
 
-/**
- * Magic-link sign-in.
- *
- * Supabase emails a one-time link pointing back to /auth; the session is then
- * restored automatically by `onAuthStateChange`, so the page only has to submit
- * the email and (when already signed in) honour the `returnTo` intent.
- */
 export default function Auth() {
-  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const ar = i18n.language.startsWith('ar');
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const reduce = useReducedMotion();
-  const { user, isLoading, available, signInWithMagicLink } = useAuth();
-
-  const [email, setEmail] = useState('');
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
-
+  const { user, isLoading, available, signInWithPassword, signUpWithPassword } = useAuth();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [mode, setMode] = useState<'login' | 'signup'>('login');
+  const [busy, setBusy] = useState(false);
+  const [confirmation, setConfirmation] = useState(false);
   const returnTo = params.get('returnTo') || '/dashboard';
 
-  // Already signed in (including after returning from the email link).
-  useEffect(() => {
-    if (user && !isLoading) navigate(returnTo, { replace: true });
-  }, [user, isLoading, navigate, returnTo]);
+  useEffect(() => { if (user && !isLoading) navigate(returnTo, { replace: true }); }, [user, isLoading, navigate, returnTo]);
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!email.trim()) return;
-
-    setSending(true);
-    const { error } = await signInWithMagicLink(email.trim());
-    setSending(false);
-
-    if (error) {
-      toast.error(t('auth.sendError'), { description: error });
+    if (!username.trim() || password.length < 8) return;
+    setBusy(true);
+    const result = mode === 'login'
+      ? await signInWithPassword(username, password)
+      : await signUpWithPassword(username, password);
+    setBusy(false);
+    if (result.error) { toast.error(ar ? 'تعذر إتمام العملية' : 'Could not complete the request', { description: result.error }); return; }
+    if (mode === 'signup' && 'needsConfirmation' in result && result.needsConfirmation) {
+      setConfirmation(true);
+      toast.info(ar ? 'تعذر تفعيل الجلسة. راجع إعداد Confirm email في Supabase.' : 'No session was created. Check the Supabase Confirm email setting.');
       return;
     }
-    setSent(true);
-    toast.success(t('auth.sentToast'), {
-      description: t('auth.sentToastBody', { email: email.trim() }),
-    });
+    toast.success(ar ? 'تم تسجيل الدخول' : 'Signed in successfully');
+    navigate(returnTo, { replace: true });
   };
 
   return (
-    <div className="relative flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden px-4 py-14">
+    <div className="relative flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden px-4 py-10">
       <GradientMesh intensity="subtle" />
-
-      <motion.div
-        initial={{ opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: reduce ? 0 : 0.35, ease: EASE_OUT }}
-        className="relative w-full max-w-md"
-      >
-        <div className="rounded-2xl border border-border bg-surface/80 p-7 shadow-card backdrop-blur-xl">
+      <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reduce ? 0 : 0.3, ease: EASE_OUT }} className="relative w-full max-w-md">
+        <div className="rounded-2xl border border-border bg-surface/90 p-6 shadow-card backdrop-blur-xl sm:p-7">
           <Logo className="mb-6" />
-
           {!available ? (
             <div className="space-y-3">
-              <h1 className="text-xl font-semibold tracking-tight">{t('auth.noSupabase')}</h1>
-              <p className="text-sm leading-relaxed text-muted-foreground">{t('auth.noSupabaseBody')}</p>
-              <Button variant="outline" size="sm" onClick={() => navigate('/builder')}>
-                <ArrowLeft className="rtl:rotate-180" /> {t('auth.backToBuilder')}
-              </Button>
+              <h1 className="text-xl font-semibold">{ar ? 'الحسابات غير مفعّلة' : 'Accounts are not configured'}</h1>
+              <p className="text-sm text-muted-foreground">{ar ? 'يمكنك استخدام كل أدوات الموقع والمستشار الذكي كزائر.' : 'You can use every feature and the AI advisor as a guest.'}</p>
             </div>
-          ) : sent ? (
+          ) : confirmation ? (
             <div className="space-y-3">
-              <span className="grid size-11 place-items-center rounded-xl border border-success/25 bg-success/10 text-success">
-                <Mail className="size-5" />
-              </span>
-              <h1 className="text-xl font-semibold tracking-tight">{t('auth.sentTitle')}</h1>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {t('auth.sentBody', { email })}
-              </p>
-              <Button variant="ghost" size="sm" onClick={() => setSent(false)}>
-                {t('auth.differentEmail')}
-              </Button>
+              <Mail className="size-8 text-primary" />
+              <h1 className="text-xl font-semibold">{ar ? 'تم إنشاء الحساب' : 'Account created'}</h1>
+              <p className="text-sm text-muted-foreground">{ar ? 'إذا ظهرت هذه الرسالة، عطّل خيار Confirm email في إعدادات Supabase Auth ثم أعد إنشاء الحساب؛ الحسابات هنا لا تستخدم بريدًا حقيقيًا.' : 'If you see this message, disable Confirm email in Supabase Auth and create the account again; these accounts do not use a real email address.'}</p>
+              <Button variant="outline" onClick={() => { setConfirmation(false); setMode('login'); }}>{ar ? 'العودة لتسجيل الدخول' : 'Back to sign in'}</Button>
             </div>
           ) : (
             <form onSubmit={submit} className="space-y-4">
               <div>
-                <h1 className="text-xl font-semibold tracking-tight">{t('auth.title')}</h1>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{t('auth.body')}</p>
+                <h1 className="text-xl font-semibold">{mode === 'login' ? (ar ? 'تسجيل الدخول' : 'Sign in') : (ar ? 'إنشاء حساب' : 'Create account')}</h1>
+                <p className="mt-1 text-sm text-muted-foreground">{ar ? 'الحساب اختياري. كل المميزات تعمل بدون تسجيل الدخول.' : 'An account is optional. All features work without signing in.'}</p>
               </div>
-
               <div className="space-y-2">
-                <Label htmlFor="email">{t('auth.email')}</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  placeholder="you@example.com"
-                  dir="ltr"
-                />
+                <Label htmlFor="username">{ar ? 'اسم المستخدم' : 'Username'}</Label>
+                <Input id="username" type="text" autoComplete="username" minLength={3} maxLength={24} pattern="[A-Za-z0-9][A-Za-z0-9_.-]{2,23}" required value={username} onChange={(e) => setUsername(e.target.value)} placeholder="ahmed_4k4" dir="ltr" />
               </div>
-
-              <Button type="submit" className="w-full" disabled={sending || !email.trim()}>
-                {sending ? <Loader2 className="animate-spin" /> : <Mail />}
-                {sending ? t('auth.sending') : t('auth.sendLink')}
+              <div className="space-y-2">
+                <Label htmlFor="password">{ar ? 'كلمة المرور' : 'Password'}</Label>
+                <Input id="password" type="password" autoComplete={mode === 'login' ? 'current-password' : 'new-password'} minLength={8} required value={password} onChange={(e) => setPassword(e.target.value)} placeholder={ar ? '8 أحرف على الأقل' : 'At least 8 characters'} dir="ltr" />
+              </div>
+              <Button type="submit" className="w-full" disabled={busy || !username.trim() || password.length < 8}>
+                {busy ? <Loader2 className="animate-spin" /> : mode === 'login' ? <LogIn /> : <UserPlus />}
+                {busy ? (ar ? 'جارٍ التنفيذ...' : 'Please wait...') : mode === 'login' ? (ar ? 'دخول' : 'Sign in') : (ar ? 'إنشاء الحساب' : 'Create account')}
               </Button>
-
-              <p className="flex items-start gap-2 text-[11px] leading-relaxed text-muted-foreground">
-                <ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-success" />
-                {t('auth.passwordless')}
-              </p>
-              <p className="text-[11px] leading-relaxed text-muted-foreground">{t('auth.optionalNote')}</p>
+              <button type="button" className="w-full text-sm text-primary hover:underline" onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
+                {mode === 'login' ? (ar ? 'ليس لديك حساب؟ أنشئ حسابًا' : 'New here? Create an account') : (ar ? 'لديك حساب بالفعل؟ سجل الدخول' : 'Already have an account? Sign in')}
+              </button>
+              <p className="flex items-start gap-2 text-[11px] leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-success" />{ar ? 'لا نستخدم البريد الإلكتروني أو رسائل التأكيد. اسم المستخدم وكلمة المرور فقط.' : 'No email address or confirmation emails are used. Username and password only.'}</p>
             </form>
           )}
+          <div className="mt-5 border-t border-border pt-4">
+            <Button variant="outline" className="w-full" onClick={() => navigate(returnTo, { replace: true })}>
+              <ArrowLeft className="rtl:rotate-180" />{ar ? 'المتابعة كزائر بدون حساب' : 'Continue as guest'}
+            </Button>
+            <p className="mt-2 text-center text-[11px] text-muted-foreground">{ar ? 'المستشار الذكي وبناء التجميعات والبحث والمقارنة متاحة للزوار.' : 'AI advisor, PC builder, search and comparison are available to guests.'}</p>
+          </div>
         </div>
       </motion.div>
     </div>

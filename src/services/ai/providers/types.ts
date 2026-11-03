@@ -32,6 +32,8 @@ export interface ChatRequest {
   messages: ChatMessage[];
   tools?: ToolDeclaration[];
   temperature?: number;
+  /** Gemini 3.x reasoning effort. MINIMAL is reserved for latency-sensitive chat. */
+  thinkingLevel?: 'MINIMAL' | 'LOW' | 'MEDIUM' | 'HIGH';
   maxTokens?: number;
   /** JSON schema for structured (JSON) output. */
   jsonSchema?: Record<string, unknown>;

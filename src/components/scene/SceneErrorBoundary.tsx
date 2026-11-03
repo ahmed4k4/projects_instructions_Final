@@ -1,5 +1,6 @@
 import { Component, type ReactNode } from 'react';
 import { HeroSceneStatic } from './HeroSceneStatic';
+import { markSceneContextLost } from '@/hooks/useSceneCapability';
 
 /**
  * Isolates the WebGL hero from the rest of the page.
@@ -34,6 +35,13 @@ export class SceneErrorBoundary extends Component<Props, State> {
     // One line, deliberately: a lost GPU context is a device fact, not a bug to
     // investigate from a screenshot of console noise.
     console.warn('[Nexus] 3D hero disabled — falling back to the static render.', error.message);
+
+    // Remember the failure for the rest of the session (Module 4). Without
+    // this the scene is re-mounted on every navigation and on every re-render
+    // of the hero, so a driver that cannot create a context throws again and
+    // again — which is what a phone with WebGL disabled by its browser did.
+    markSceneContextLost();
+
     this.props.onError?.(error);
   }
 

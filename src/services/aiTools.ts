@@ -1,12 +1,14 @@
 /**
  * Tool executor for the AI agents.
  *
- * Every tool the model can call lands here. Reads go to Supabase, and every
+ * Every tool the model can call lands here. Reads go to the real Egyptian
+ * catalogue (see `hooks/useComponents` / `lib/retailerCatalogue`), and every
  * judgement (compatibility, score) is delegated to the deterministic engines —
  * the model never computes a number itself.
  *
  * The executor also keeps a per-run catalogue of everything it has shown the
- * model, so `validateFinalBuild` can prove no component ID was invented.
+ * model, so `validateFinalBuild` can prove no component ID was invented and that
+ * every recommended part is one a shopper can actually buy.
  */
 import type { ComponentCategory, PCComponent } from '@/types/components';
 import type { ToolCall, ToolTraceEntry } from '@/types/ai';
@@ -14,9 +16,8 @@ import { evaluateCompatibility } from '@/lib/compatibility/engine';
 import type { BuildItems, CompatibilityRule } from '@/lib/compatibility/types';
 import { calculateBuildScore } from '@/lib/scoring/buildScore';
 import type { UseCase } from '@/types/build';
-import { listComponents, getComponentById, getCompatibilityRules } from './componentsService';
-import { isSupabaseConfigured } from './supabaseClient';
-import { sampleComponents } from '@/lib/sampleData';
+import { loadCatalogueForAI } from '@/hooks/useComponents';
+import { getCompatibilityRules } from './componentsService';
 
 const CATEGORIES: ComponentCategory[] = [
   'cpu',
@@ -58,20 +59,22 @@ export class ToolExecutor {
   /** Every component the model has been allowed to see during this run. */
   private readonly seen = new Map<string, PCComponent>();
   private rulesCache: CompatibilityRule[] | null = null;
-  private catalogueCache: PCComponent[] | null = null;
+  private readonly catalogueCache = new Map<string, PCComponent[]>();
 
   readonly trace: ToolTraceEntry[] = [];
 
   /** Load (once) the catalogue and rules used by this run. */
-  private async catalogue(): Promise<PCComponent[]> {
-    if (this.catalogueCache) return this.catalogueCache;
+  private async catalogue(category?: ComponentCategory): Promise<PCComponent[]> {
+    const key = category ?? 'all';
+    const cached = this.catalogueCache.get(key);
+    if (cached) return cached;
     let rows: PCComponent[];
     try {
-      rows = isSupabaseConfigured ? await listComponents() : sampleComponents;
+      rows = await loadCatalogueForAI(category);
     } catch {
-      rows = sampleComponents;
+      rows = [];
     }
-    this.catalogueCache = rows;
+    this.catalogueCache.set(key, rows);
     for (const row of rows) this.seen.set(row.id, row);
     return rows;
   }
@@ -99,7 +102,8 @@ export class ToolExecutor {
 
   /** Resolve IDs to components from the memoised catalogue. */
   async resolve(ids: string[]): Promise<PCComponent[]> {
-    const catalogue = await this.catalogue();
+    const unresolved = ids.filter((id) => !this.seen.has(id));
+    const catalogue = unresolved.length ? await this.catalogue() : [];
     return ids
       .map((id) => this.seen.get(id) ?? catalogue.find((c) => c.id === id))
       .filter((c): c is PCComponent => Boolean(c));
@@ -138,8 +142,7 @@ export class ToolExecutor {
         const max = typeof args.budgetMax === 'number' ? args.budgetMax : null;
         const minPerf = typeof args.minPerfScore === 'number' ? args.minPerfScore : null;
 
-        const rows = (await this.catalogue())
-          .filter((c) => c.category === category)
+        const rows = (await this.catalogue(category))
           .filter((c) => (max === null ? true : c.price <= max))
           .filter((c) => (minPerf === null ? true : (c.performanceScore ?? 0) >= minPerf))
           .sort((a, b) => (b.performanceScore ?? 0) - (a.performanceScore ?? 0))
@@ -153,8 +156,7 @@ export class ToolExecutor {
 
       case 'get_component_details': {
         const id = String(args.id ?? '');
-        const inMemory = this.seen.get(id);
-        const component = inMemory ?? (await getComponentById(id).catch(() => null));
+        const component = this.seen.get(id) ?? (await this.catalogue()).find((c) => c.id === id) ?? null;
         if (!component) throw new Error(`No component with id "${id}".`);
         this.seen.set(component.id, component);
         result = { component: compact(component) };
@@ -195,7 +197,7 @@ export class ToolExecutor {
           compatible: report.isCompatible,
           notes: score.notes,
         };
-        summary = `Score ${score.total}/100 · ${totalPrice} USD · ${totalWatts} W`;
+        summary = `Score ${score.total}/100 · EGP ${totalPrice.toLocaleString('en-US')} · ${totalWatts} W`;
         break;
       }
 
@@ -204,8 +206,8 @@ export class ToolExecutor {
         const budget = typeof args.budget === 'number' ? args.budget : null;
         const current = await this.resolve([id]).then((c) => c[0]);
         if (!current) throw new Error(`No component with id "${id}".`);
-        const alternatives = (await this.catalogue())
-          .filter((c) => c.category === current.category && c.id !== current.id)
+        const alternatives = (await this.catalogue(current.category))
+          .filter((c) => c.id !== current.id)
           .filter((c) => (budget === null ? true : c.price <= budget))
           .sort((a, b) => (b.performanceScore ?? 0) - (a.performanceScore ?? 0))
           .slice(0, 3)

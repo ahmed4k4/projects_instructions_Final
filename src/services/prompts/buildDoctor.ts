@@ -44,7 +44,7 @@ export function doctorSystemInstruction(): string {
 RULES
 - Never recompute or contradict the supplied numbers. Interpret them.
 - The "upgrades" array must only reference component IDs that appear in the "Candidates" section of the input. Never invent an ID.
-- Rank upgrades by value: expected score gain for the money.
+- All prices and budgets are in Egyptian pounds (EGP / ج.م.) only. Never use USD or dollars. Rank upgrades by value: expected score gain per EGP.
 - Be specific and blunt. "PSU is undersized for transient spikes on this GPU" beats "could be better".
 - verdict: excellent (>=85 score and no errors), good (>=70), needs_work (>=50 or one error), rebuild (below 50 or multiple errors).
 - Return at most 3 upgrades.`;
@@ -64,18 +64,18 @@ export interface DoctorInput {
 
 export function doctorUserPrompt(input: DoctorInput): string {
   const parts = input.parts
-    .map((p) => `- ${p.category}: ${p.name} (id ${p.id}, $${p.price}, perf ${p.perf ?? 'n/a'})`)
+    .map((p) => `- ${p.category}: ${p.name} (id ${p.id}, EGP ${p.price}, perf ${p.perf ?? 'n/a'})`)
     .join('\n');
 
   const candidates = input.candidates
-    .map((c) => `- ${c.category}: ${c.name} (id ${c.id}, $${c.price}, perf ${c.perf ?? 'n/a'})`)
+    .map((c) => `- ${c.category}: ${c.name} (id ${c.id}, EGP ${c.price}, perf ${c.perf ?? 'n/a'})`)
     .join('\n');
 
   return `Review this build.
 
 Name: ${input.buildName}
 Use case: ${input.useCase}
-Total: $${input.totalPrice}${input.budget ? ` (budget $${input.budget})` : ''}
+Total: EGP ${input.totalPrice}${input.budget ? ` (budget EGP ${input.budget})` : ''}
 Peak draw: ${input.totalWatts} W
 Score: ${input.score.total}/100 — ${Object.entries(input.score.breakdown)
     .map(([k, v]) => `${k} ${v}`)

@@ -27,6 +27,8 @@ const OUT_DIR = '.qa/crawl';
 const SNAPSHOT_PATH = 'public/data/retailer_snapshot.json';
 /** A small bundled subset so the app has real data before the fetch resolves. */
 const BOOTSTRAP_PATH = 'src/services/retailers/bootstrap.json';
+const CATEGORY_SHARD_DIR = 'public/data/retailer_snapshot_by_category';
+const SNAPSHOT_CATEGORIES = ['cpu', 'gpu', 'motherboard', 'ram', 'storage', 'psu', 'case', 'cooling'];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const polite = () => sleep(1500 + Math.random() * 1500);
 
@@ -94,6 +96,20 @@ for (const retailer of retailers) {
         }
         if (!res?.ok) break;
         products = retailer.parse(await res.text(), res.url);
+        /**
+         * Record the store's OWN listing on every row.
+         *
+         * `scripts/reclassify-catalogue.mjs` prefers the URL, but some products
+         * are linked from a search result or a flat path (Elbadr publishes
+         * `/<product-name>`), so the page they were found on is the only
+         * classification the store actually gave. Without this the reclassifier
+         * had nothing to fall back to but the keyword guess it exists to
+         * replace.
+         */
+        products = products.map((product) => ({
+          ...product,
+          specs: { ...(product.specs ?? {}), pageCategory: target.category, pageUrl: url },
+        }));
       } catch (error) {
         console.log(`  ${retailer.id}/${target.category} p${page}: ${String(error).slice(0, 60)}`);
         break;
@@ -163,6 +179,19 @@ const snapshot = {
 
 writeFileSync(SNAPSHOT_PATH, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
 
+// Small static shards let the AI fetch only the category it needs when the
+// database is sleeping or not configured; this avoids downloading the full
+// multi-megabyte catalogue for a single GPU/CPU question.
+mkdirSync(CATEGORY_SHARD_DIR, { recursive: true });
+for (const category of SNAPSHOT_CATEGORIES) {
+  const categoryProducts = products.filter((product) => product.category === category);
+  writeFileSync(
+    `${CATEGORY_SHARD_DIR}/${category}.json`,
+    `${JSON.stringify({ capturedAt: snapshot.capturedAt, products: categoryProducts })}\n`,
+    'utf8',
+  );
+}
+
 /**
  * Regenerate the bundled subset: two products per (retailer, category), so the
  * builder and search have a real, representative answer before the feed loads.
@@ -191,6 +220,7 @@ writeFileSync(
 
 console.log(`\n${products.length} products → ${SNAPSHOT_PATH}`);
 console.log(`${bootstrapProducts.length} products → ${BOOTSTRAP_PATH} (first paint)`);
+console.log(`Category shards → ${CATEGORY_SHARD_DIR}`);
 for (const id of snapshot.retailers) {
   const list = products.filter((p) => p.retailerId === id);
   const withImages = list.filter((p) => p.imageUrl).length;

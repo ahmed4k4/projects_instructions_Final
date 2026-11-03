@@ -8,7 +8,7 @@
     "welcomeTitle": "Ask me to build you a PC",
     "welcomeBody": "Budget, resolution, the apps you use — the more context, the better the answer.",
     "welcome": "I'm your build advisor. Tell me a budget and what you do with your machine, or ask about the build you're working on. I'll only recommend parts that exist in the catalogue.",
-    "placeholderGeneral": "e.g. $2,000 for 4K gaming with quiet acoustics…",
+    "placeholderGeneral": "e.g. EGP 95,000 for 1440p gaming with quiet acoustics…",
     "placeholderBuild": "Ask about your build — e.g. “can I upgrade the GPU without a new PSU?”",
     "send": "Send message",
     "stop": "Stop generating",
@@ -20,13 +20,20 @@
       "notConfigured": "AI is not configured",
       "generic": "The advisor could not answer",
       "rateToast": "Slow down a second",
-      "network": "Something went wrong reaching the advisor."
+      "network": "Something went wrong reaching the advisor.",
+      "verifyEmail": "Your account session is unavailable. You can continue using the AI advisor as a guest.",
+      "timeout": "The AI request timed out. Please try again.",
+      "invalidRequest": "The AI request was rejected. Check the prompt and try again."
     },
     "translate": "Translate",
     "translating": "Translating…",
     "translated": "Translated",
     "sourceBadge": "Gemini · live",
-    "currentBuild": "Current build"
+    "currentBuild": "Current build",
+    "structured": {
+      "component": "Recommended part",
+      "build": "Suggested build"
+    }
   },
   "smartBuilder": {
     "title": "Describe it. We'll spec it.",
@@ -100,7 +107,7 @@
     "strengths": "Strengths",
     "weaknesses": "Weaknesses",
     "upgrades": "Recommended upgrades",
-    "upgradesHint": "Ranked by score gained per dollar, computed against the live catalogue.",
+    "upgradesHint": "Ranked by score gained per EGP, computed against the live catalogue.",
     "noUpgrades": "Nothing in the catalogue would raise this build's score within budget.",
     "awaiting": "Awaiting review",
     "apply": "Apply",

@@ -166,7 +166,7 @@ function explain(breakdown: BuildScoreBreakdown, input: ScoreInputs): string[] {
     notes.push(`${input.compatibility.errors.length} compatibility error(s) cap the score.`);
   if (!items.gpu && input.useCase !== 'programming')
     notes.push('No GPU selected — performance is scored for CPU-only tasks.');
-  if (breakdown.value < 50) notes.push('Performance per dollar is below the reference builds.');
+  if (breakdown.value < 50) notes.push('Performance per EGP is below the reference builds.');
   if (breakdown.upgradability < 60)
     notes.push('Limited headroom for future upgrades (socket, PSU or slots).');
   if (budget && totalPrice > budget) notes.push(`Over budget by $${Math.round(totalPrice - budget)}.`);

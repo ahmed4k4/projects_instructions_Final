@@ -76,6 +76,7 @@
   },
   "retail": {
     "compareTitle": "قارن الأسعار",
+    "compareStores": "قارن ({{count}} متاجر)",
     "loading": "جارٍ جلب الأسعار الحيّة…",
     "saveAmount": "وفّر {{amount}} بالشراء من أرخص متجر",
     "updatedAt": "آخر تحديث للأسعار {{date}}",
@@ -114,11 +115,13 @@
     "sortNewest": "الأحدث تحديثًا",
     "results": "{{count}} نتيجة",
     "results_plural": "{{count}} نتيجة",
+    "resultsIn": "عرض {{shown}} من {{total}} منتج",
     "listingCount": "{{count}} عرض",
     "retailersAvailable": "متوفر لدى {{count}} متجر",
     "oneRetailer": "متجر واحد",
     "bestPrice": "أفضل سعر",
     "compare": "قارن",
+    "compareStores": "قارن ({{count}} متاجر)",
     "buyNow": "اشترِ الآن",
     "viewDeal": "عرض العرض",
     "save": "وفّر {{amount}}",
@@ -184,7 +187,17 @@
     "endOfResults_other": "هذه كل {{count}} نتيجة.",
     "showingOf": "يُعرض {{shown}} من {{total}}",
     "endOfResults": "هذه كل النتائج.",
-    "priceUnavailable": "السعر غير متاح"
+    "priceUnavailable": "السعر غير متاح",
+    "brand": "العلامة التجارية",
+    "pagination": "صفحات النتائج",
+    "previous": "السابق",
+    "next": "التالي",
+    "previousPage": "الصفحة السابقة",
+    "nextPage": "الصفحة التالية",
+    "pageNumber": "صفحة {{page}}",
+    "showingRange": "يُعرض {{first}}–{{last}} من {{total}} نتيجة",
+    "showingAll": "{{count}} نتيجة",
+    "showResults": "عرض {{count}} نتيجة"
   },
   "compare": {
     "title": "قارن الأسعار",
@@ -201,7 +214,8 @@
     "historyBody": "نسجّل الأسعار يوميًا، وسيظهر مخطط الاتجاه بعد تجمّع بضعة أسابيع من البيانات.",
     "open": "فتح",
     "backToSearch": "العودة للبحث",
-    "notFound": "رابط المقارنة هذا لم يعد صالحًا."
+    "notFound": "رابط المقارنة هذا لم يعد صالحًا.",
+    "samePriceNote": "{{count}} متاجر تعرض هذه القطعة بالسعر نفسه."
   },
   "asset": {
     "sceneUnavailable": "المعاينة ثلاثية الأبعاد غير متاحة على هذا الجهاز"

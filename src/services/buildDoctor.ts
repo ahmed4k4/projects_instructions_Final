@@ -69,7 +69,7 @@ export interface UpgradeCandidate {
   component: PCComponent;
   scoreDelta: number;
   priceDelta: number;
-  /** Score gain per dollar — the ranking key. */
+  /** Score gain per EGP — the ranking key. */
   efficiency: number;
 }
 
@@ -237,7 +237,7 @@ function localReport(
 
   if (health.compatibility.errors.length)
     weaknesses.push(...health.compatibility.errors.map((e) => e.message));
-  if (breakdown.value < 60) weaknesses.push('Performance per dollar is below the reference builds.');
+  if (breakdown.value < 60) weaknesses.push('Performance per EGP is below the reference builds.');
   if (breakdown.efficiency < 60)
     weaknesses.push('The build draws more power than its performance justifies.');
   if (breakdown.upgradability < 60) weaknesses.push('Limited upgrade headroom (socket, PSU or slots).');
@@ -266,7 +266,7 @@ function localReport(
       fromComponentId: u.fromComponentId,
       toComponentId: u.toComponentId,
       expectedScoreDelta: u.scoreDelta,
-      reason: `Swap to ${u.component.name} for +${u.scoreDelta} points${u.priceDelta >= 0 ? ` (+$${Math.round(u.priceDelta)})` : ` (-$${Math.round(Math.abs(u.priceDelta))})`}.`,
+      reason: `Swap to ${u.component.name} for +${u.scoreDelta} points${u.priceDelta >= 0 ? ` (+EGP ${Math.round(u.priceDelta).toLocaleString('en-EG')})` : ` (-EGP ${Math.round(Math.abs(u.priceDelta)).toLocaleString('en-EG')})`}.`,
     })),
   };
 }

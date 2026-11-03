@@ -43,11 +43,11 @@ const files = walk(SRC);
 const sources = new Map(files.map((file) => [file, readFileSync(join(ROOT, file), 'utf8')]));
 
 /**
- * Server entry points live OUTSIDE src/ (`api/ai/[...route].ts`, `vite.config.ts`)
+ * Server entry points live OUTSIDE src/ (`api/ai/[...path].ts`, `vite.config.ts`)
  * and import `src/server/*`. Without them every export there looks unused.
  */
 const SERVER_SOURCES = [];
-for (const file of ['api/ai/[...route].ts', 'vite.config.ts']) {
+for (const file of ['api/ai/[...path].ts', 'vite.config.ts']) {
   try {
     SERVER_SOURCES.push(readFileSync(join(ROOT, file), 'utf8'));
   } catch {

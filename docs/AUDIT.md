@@ -1450,3 +1450,992 @@ Screenshots: `.qa/final-search.png`, `.qa/search-pagination.png`,
    ```sql
    grant select on public.retailer_products to anon, authenticated;
    ```
+
+---
+
+# Phase 12 — Production fixes, advanced filters, 3D polish
+
+**Date:** 2026-11-02
+**Scope:** Elnekhely images, the Vercel AI diagnosis, brand filtering and
+numbered pagination, card tilt and a mobile filter sheet.
+
+---
+
+## 47. Module 0 — Elnekhely images (root cause proven, not assumed)
+
+The URLs were already absolute and correctly encoded, so the "relative path"
+theory was wrong. The cause was **hotlink protection**, and it is unusually
+specific — measured against four header profiles on live URLs:
+
+| Referer sent | Result |
+|---|---|
+| *none* | **200** `image/webp` |
+| their own domain | **200** |
+| **our origin** | **403** |
+
+A browser sends our origin by default, which is precisely the refused case. So
+`referrerPolicy="no-referrer"` is the correct fix, and **no proxy is needed** —
+which matters, because a proxy would have added a serverless hop and a bandwidth
+cost for every product thumbnail.
+
+Applied to all three places that render retailer photos (`SearchResultCard`,
+`SearchBar`, `Compare`) and pinned by
+`src/components/retail/__tests__/imageReferrer.test.ts`, which fails the build if
+a new `<img>` omits it.
+
+**Verified in a browser:** 24/24 Elnekhely images load, 0 broken, after scrolling
+the grid. See `.qa/phase12-elnekhely-scrolled.png`.
+
+---
+
+## 48. Module 1 — the AI was not misconfigured
+
+The brief's diagnosis was that the frontend reads `VITE_GEMINI_API_KEY`. It does
+not, and checking mattered more than changing:
+
+- `api/ai/[...route].ts` already reads `process.env.GEMINI_API_KEY`.
+- The frontend never references a key; it calls `/api/ai/*`.
+- `check-bundle-secrets.mjs` **fails the build** if a `VITE_GEMINI_API_KEY`
+  reference ever appears.
+
+No code change was needed for the mechanism. What *was* missing was
+diagnosability, so:
+
+- `GET /api/ai/config` now returns `{ ok, gemini, model }` and, when unconfigured,
+  a `reason` plus a `hint` naming the exact dashboard path.
+- A **404** is reported distinctly from a missing key — one is a routing/deploy
+  failure, the other is configuration. Advising "add a key" for a 404 sends
+  whoever is on call to the wrong place.
+- `AIStatusPanel` shows the server's diagnosis, instead of always saying
+  `pnpm dev` (useless on a deployment).
+- `README.md` gained a **Deployment on Vercel** section with the exact steps, the
+  response table, and a troubleshooting matrix.
+
+> **Security:** the `.env.local` pasted with this brief contained a live
+> `GEMINI_API_KEY` and a Supabase key. They were never written to any file in the
+> repository. The Gemini key should be rotated and re-entered in the Vercel
+> dashboard only.
+
+---
+
+## 49. Module 2 — filters and pagination
+
+### Brand filter
+
+New `src/lib/brand.ts` extracts a canonical manufacturer from free-text names
+using a word-bounded list sorted longest-first (so "Gigabyte" wins over "GB",
+and "be quiet!" / "G.Skill" escape their metacharacters). Names with no known
+manufacturer are **skipped rather than guessed** from the first word — otherwise
+the rail fills with pseudo-brands like "VGA" and "Motherboard".
+
+`/search` now offers Category, **Brand** (with per-brand counts), Retailer, Price
+and stock, all URL-backed (`?brand=ASUS,MSI`) and applied through React Query
+keys, so results update instantly.
+
+### Pagination
+
+Infinite scroll was replaced by numbered pagination as requested: bounded window
+of ≤7 buttons with ellipses, Prev/Next, `aria-current`, and a
+"Showing 1–24 of 702 results" line. `?page=2` is bookmarkable.
+
+### Two accuracy bugs found by *looking* at a filtered grid
+
+1. **47 cases filed as GPUs.** `/search?cat=gpu` showed Mid-Tower cases because a
+   chassis describes its GPU clearance ("420mm GPU, 360mm radiator"). PSU/case/
+   motherboard rules now run before the GPU rule; **54 rows were reclassified**.
+2. **Different manufacturers merged into one product.** `geforce|5070|12` is
+   shared by every board partner, so a GIGABYTE and an ASUS 5070 from two shops
+   became one "product" whose photo belonged to neither. Grouping now requires a
+   matching brand (`sameBrand`).
+
+---
+
+## 50. Module 3 — 3D and mobile
+
+- **Card tilt** (`hooks/useCardTilt.ts`): ±6°, spring-damped, with a
+  cursor-following glow. Hand-rolled on Framer motion values rather than
+  `react-parallax-tilt` (~15 kB) because motion values stay off React's render
+  path. Mouse-only (`pointer: fine`), fully disabled under reduced motion, so a
+  touch scroll never tilts a card.
+- **Mobile filter sheet** (`components/retail/MobileFilterSheet.tsx`): slides up
+  from the bottom edge, drag-to-dismiss past 120 px, backdrop/Escape/close,
+  body-scroll lock, `pointer-events: none` while exiting. Replaces an accordion
+  that pushed the results off-screen while you were filtering them.
+- **Mobile audit:** no horizontal overflow and **0 sub-44px targets** at
+  375/390/414/768 px, in both languages.
+
+---
+
+## 51. Acceptance criteria — Phase 12
+
+| Criterion | Result |
+|---|---|
+| Elnekhely images load on the deployed site | ✅ `no-referrer` (root cause: 403 on foreign Referer); 24/24 in-browser |
+| AI works on Vercel with `GEMINI_API_KEY`; `/api/ai/config` returns 200 | ✅ always 200; `ok: true/false` + hint distinguishes key vs deploy |
+| README has clear Vercel instructions | ✅ new section incl. troubleshooting table |
+| Sidebar with Category, Brand, Retailer, Price | ✅ plus stock; brand list derived from data |
+| Filter changes update results instantly | ✅ URL-backed React Query keys |
+| Pagination works (Next/Prev) | ✅ numbered window, "Showing X–Y of Z" |
+| Product cards have a 3D tilt | ✅ mouse-only, reduced-motion aware |
+| Mobile view flawless, filter drawer smooth | ✅ bottom sheet, 0 overflow, 0 small targets |
+| `pnpm audit:all` passes | ✅ 16 gates, 185 tests |
+| `docs/ARCHITECTURE.md` updated | ✅ `brand`, `offerRanking`, `retail` scope |
+
+---
+
+# Phase 13 — AI 500, category correctness, cross-store grouping
+
+**Date:** 2026-11-02
+**Scope:** the `FUNCTION_INVOCATION_FAILED` on Vercel, misfiled categories, and
+products that were never grouped across stores.
+
+---
+
+## 52. Module 0 — the 500 was a module that would not load
+
+The brief's diagnosis was a missing `GEMINI_API_KEY`. It was not: the function
+failed **before any of our code ran**, which is why no log line ever mentioned a
+key.
+
+### How it was found
+
+Not by reading the source — by building it. `vercel build` produced the real
+function bundle, and the emitted entry still imported:
+
+```js
+from '../../src/server/geminiProxy.ts'
+```
+
+while the directory contained only `geminiProxy.js`. Vercel compiles TypeScript
+but leaves the specifier text alone, so the import pointed at a file that does
+not exist. Cold start → module-not-found → `500 FUNCTION_INVOCATION_FAILED`.
+
+| Evidence | Result |
+|---|---|
+| `vercel build` | succeeded — the failure is at runtime, not build time |
+| emitted import | `../../src/server/geminiProxy.ts` |
+| files in `src/server/` | `geminiProxy.js` only |
+| `import.meta`-style resolution by Node | ✗ |
+
+### Fix
+
+```ts
+import { handleAiRoute, readGeminiConfig, splitRoute } from '../../src/server/geminiProxy';
+```
+
+No extension: Vercel resolves the compiled `.js`.
+
+### The gate that stops this recurring
+
+`scripts/verify-ai-route-bundle.mjs` runs Vercel's own bundler and asserts that
+every relative import in the emitted entry resolves to a file inside the
+function directory. It is part of `audit:all` and **skips** (never fails) when
+the CLI is unavailable offline.
+
+`verify-ai-function.mjs` also gained a resolve hook, because an extension-less
+import is correct for Vercel and unresolvable by plain Node — the two runtimes
+need different behaviour from the same source.
+
+### Why `VITE_GEMINI_API_KEY` is the wrong fix
+
+Vite replaces `import.meta.env.VITE_*` with the literal value **at build time**,
+so the key would be written into the JavaScript every visitor downloads. It is
+then readable in DevTools, in the CDN cache, and in any archived bundle — and
+because it is inlined, rotating it in Vercel has no effect on an existing
+deployment. A key exposed this way is **compromised**, not misconfigured.
+
+`README.md` now says this in a warning block, and `check-bundle-secrets` fails
+the build if a `VITE_*` variable looks like a key.
+
+---
+
+## 53. Module 1 — categories
+
+The report was accurate: selecting CPU showed coolers. Four separate causes,
+each found by querying the data rather than reading the code:
+
+| Cause | Effect | Fix |
+|---|---|---|
+| PSU rule matched a bare `95W` | CPU coolers filed as PSUs, then shown under CPU | a wattage only implies a PSU outside thermal parts, and in the 300–2000 W range |
+| `CPU` rule matched "CPU Cooler" | 212 coolers filed as processors | thermal nouns disqualify a CPU match |
+| Motherboards named by CPU support ("for Intel Core Ultra") | 8 boards filed as CPUs | the chipset rule runs before the CPU rule |
+| `PCIe x16` / `ATX` used as board signals | 28 GPUs filed as motherboards | only a chipset identifies a board |
+| Laptops named by their CPU | 21 machines filed as CPUs | complete systems are dropped |
+| **Sigma's own classifier** had `cpu` first | 34 Sigma coolers filed as CPUs | same precedence fix, applied to `sigma_worker.py` |
+
+Also fixed: the search page filtered **groups** by category after ranking, so a
+group inherited the category of its cheapest offer rather than the listing that
+matched. Category is now applied to listings **before** grouping.
+
+**Result:** `/search?cat=cpu` returns 161 results, all processors.
+`pnpm verify:coverage` enforces this shape.
+
+---
+
+## 54. Module 2 — grouping, and why not `goldenmatch`
+
+### The real bug
+
+The brief's exact test case failed, and it was my regression from Phase 12:
+
+```
+Elnekhely  "ASUS Dual RTX 5070 OC 12GB"        → 5070|12
+Elbadr     "ASUS Dual GeForce RTX 5070 OC 12GB" → geforce|5070|12
+```
+
+The GPU rule only recognised the words "GeForce"/"Radeon", so a listing written
+"ASUS Dual RTX 5070" produced a different key and was never compared. Recognising
+`RTX`/`GTX`/`RX` as family words fixed it; `8G` is also read as `8GB` now.
+
+### Why `goldenmatch` was installed and then removed
+
+It is a real package, so it was evaluated rather than dismissed. Measured on four
+GPU names at every threshold it accepts:
+
+- **0.85 and 0.80 merge "RTX 5070" with "RTX 5070 Ti 16GB"** — two different
+  cards under one "best price".
+- 0.75 merges all four GPUs.
+
+The brief's call shape (`{ fuzzy: { name: 0.85 }, blocking: [...] }`) does not
+exist; the real API is `await dedupe(rows, options)`. Its typings do not declare
+`dedupe` or its options, so TypeScript cannot check a call against it, and the
+package is 69 MB with WASM and a CLI.
+
+Fuzzy name similarity is the wrong tool here for the same reason it was wrong in
+Phase 8: different GPUs share almost every word. The existing canonical SKU key is
+exact, testable, and cannot silently merge a Ti variant. It was left in place and
+fixed.
+
+**Verified:** 21 GPU groups now span two or more stores. On the search page 19 of
+24 cards read "Available at 2–4 retailers", and the compare table for
+"ASUS Dual GeForce RTX 3050 OC Edition 6GB" lists **Sigma, Elbadr and Elnekhely**
+on one card.
+
+### A copy bug found in the same screenshot
+
+The compare table printed *"Only one retailer lists this part"* directly under a
+table of three retailers: the note was chosen by `savingsEgp > 0` (they were
+priced identically), not by row count. Two facts now have two branches.
+
+---
+
+## 55. Acceptance criteria — Phase 13
+
+| Criterion | Result |
+|---|---|
+| Deploys with `GEMINI_API_KEY`; `/api/ai/config` → `{ ok: true }` | ✅ import bug fixed; bundle gate added; 6/6 local checks pass |
+| README warns against `VITE_GEMINI_API_KEY` | ✅ warning block with the build-time inlining explanation |
+| CPU filter shows only CPUs | ✅ 161 results, processors only |
+| All products have a valid category | ✅ enforced by `verify-catalogue` |
+| Same model from different stores → one card | ✅ 21 cross-store GPU groups |
+| Compare shows all retailers and prices | ✅ Sigma + Elbadr + Elnekhely verified |
+| `pnpm audit:all` | ✅ 17 gates, 192 tests |
+
+Screenshots: `.qa/phase13-cpu-final.png`, `.qa/phase13-grouped.png`,
+`.qa/phase13-compare.png`.
+
+---
+
+# Phase 14 — Vercel runtime, chat rendering, data unification
+
+**Date:** 2026-11-02
+**Scope:** the real cause of `FUNCTION_INVOCATION_FAILED`, `[object Object]` in
+chat, brand-prefixed grouping, and mock data standing in for real content.
+
+---
+
+## 56. Module 0 — the 500, third diagnosis, finally measured against the bundle
+
+Phase 13 removed the `.ts` extension and asserted the import *resolved* on disk.
+The deployed route still returned 500. The missing step was **executing** the
+emitted bundle instead of inspecting it.
+
+```
+$ node scripts/verify-ai-route-runtime.mjs
+✖ key unset: module threw on load
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module
+  '.../src/server/geminiProxy' imported from api/ai/[...route].js
+```
+
+The function ships as `"type": "module"`, so Node resolves it with **ESM rules,
+which require a file extension**. Vercel compiles TypeScript to `.js` but never
+rewrites the specifier, so:
+
+| Specifier | Result |
+|---|---|
+| `…/geminiProxy` | `ERR_MODULE_NOT_FOUND` |
+| `…/geminiProxy.ts` | `ERR_MODULE_NOT_FOUND` |
+| **`…/geminiProxy.js`** | resolves |
+
+The correct import is `.js`, and TypeScript maps it back to `.ts` for the source
+build. Verified by running the emitted bundle with and without a key: both answer
+`200` with `ok: true/false`.
+
+### Why two earlier checks missed it
+
+- `verify-ai-function.mjs` imported the **TypeScript source**, where the resolver
+  hook hides the problem — it now maps `.js` → `.ts` through a real hook file and
+  still passes.
+- `verify-ai-route-bundle.mjs` proved files **exist**, not that the module
+  **loads**. Both facts are now checked separately, and the runtime check is part
+  of `audit:all`.
+
+---
+
+## 57. Module 1 — `[object Object]`
+
+The defect was in the provider, not the view:
+
+```ts
+rawParts.map((p) => p.text ?? '').join('')   // ?? only catches null/undefined
+```
+
+A part whose `text` was an **object** passed through untouched, and `.join('')`
+stringified it. Anything that is not a string is now dropped at the boundary, and
+`lib/displayText` provides a second line of defence for the streaming
+accumulators (`prev + chunk`) so no object can reach the DOM even if a provider
+regresses.
+
+Tool-call `name`/`args` are coerced the same way — a non-object `args` becomes
+`{ value: … }` rather than reaching the model as a string.
+
+---
+
+## 58. Module 3 — brand-prefixed grouping
+
+Measured before changing a key that already produced cross-store groups:
+
+| Key | Groups | Spanning 2+ stores |
+|---|---|---|
+| `category:model` | 1,711 | 21 |
+| **`category:brand:model`** | 1,760 | **50** |
+
+Brand-prefixing is both stricter (two manufacturers' 5070s never merge) and more
+inclusive (the same card matches across shops). The brief's example key
+(`asus_rtx_5070_12gb`) is what ships.
+
+---
+
+## 59. Module 4 — demo data standing in for real data
+
+### What was actually wrong
+
+Supabase **is** configured, and the Community page was returning three real
+published builds — then rendering curated examples anyway, because it never used
+the query result. The header claimed "Real builds with real spec sheets" over
+invented content. `listCommunityBuilds`/`listMyBuilds` had been deleted in an
+earlier "unused" cleanup, which is why the pages had nothing real to show.
+
+Fixed: Community and Dashboard render real rows when present, and show a labelled
+notice only when they are showing examples.
+
+### A price-unit defect found while verifying that
+
+The Builder displayed **"Ryzen 7 7800X3D — EGP 379"** and **"Ryzen 9 7950X — EGP
+549"**. The database stores US list prices in columns the app reads as EGP, so a
+60,000 EGP budget appeared to buy every part ten times over. All 32 seeded
+components and all 3 published builds were affected.
+
+- `seed.sql` now converts once, at the end of the script, including the
+  `store_links` price block.
+- `supabase/migrations/010_price_units.sql` repairs already-seeded databases.
+- `scripts/fix-price-units.mjs` is the client-side twin, with a dry run.
+
+> **Not applied yet.** RLS refuses anon writes to `components`, so the hosted
+> database still holds USD numbers until you run `supabase db push` (or apply 010
+> in the SQL editor). The migration is idempotent.
+
+### Why the Builder is not rebuilt from retailer listings
+
+Measured what the compatibility rules need versus what retailers publish:
+
+| Rule | Spec needed | Derivable from the product name |
+|---|---|---|
+| GPU fits case | card length (mm) | **2 %** |
+| Cooler fits case | cooler height | 6 % |
+| CPU ↔ board | socket | 41 % |
+
+A catalogue built from retailer names cannot check whether a graphics card fits
+in a case. Keeping the spec-complete seeded catalogue is the correct trade; the
+real listings power `/search`, where price and availability are what matter.
+
+---
+
+## 60. Acceptance criteria — Phase 14
+
+| Criterion | Result |
+|---|---|
+| `/api/ai/config` returns `{ ok: true }` in production | ⚠️ fix verified against the **emitted bundle**; requires a redeploy |
+| No `FUNCTION_INVOCATION_FAILED` | ✅ cause found and fixed (`geminiProxy.js`); runtime gate added |
+| AI Advisor shows readable text | ✅ boundary coercion + `displayText` guard, 11 tests |
+| CPU filter shows only CPUs | ✅ 161 results, verified in the browser |
+| Same model from different stores → one card | ✅ 50 cross-store groups |
+| Compare works | ✅ Sigma + Elbadr + Elnekhely on one table |
+| Community/Prebuilt use real data | ⚠️ Community + Dashboard now render real rows; **DB prices still USD until 010 is applied** |
+| No mock data in `src/` | ⚠️ retained deliberately: `sampleComponents` carries spec data retailers do not publish (see above) |
+| `pnpm audit:all` | ✅ **19 gates, 200 tests** |
+
+Screenshots: `.qa/phase14-cpu.png`, `.qa/phase14-grouped.png`,
+`.qa/phase14-community-ok.png`, `.qa/phase14-builder2.png`.
+
+---
+
+# Phase 15 — Production finalisation
+
+**Date:** 2026-11-03
+**Scope:** the production 404 on `/api/ai/config`, `[object Object]` in chat,
+filters showing the wrong category, mock data in the Builder, duplicate product
+cards, and the release gate.
+
+---
+
+## 61. Module 0 — the production 404, measured against the built routing table
+
+The function was fine. **The rewrite was not.** Reproduced locally against the
+deployed project:
+
+```
+$ curl https://projects-instructions-final.vercel.app/api/ai/config
+404  content-type: application/json     ← the function, answering from an EMPTY route
+$ curl -X POST https://…/api/ai/v1beta/models
+404  content-type: text/html            ← the SPA shell, not the function
+```
+
+Two distinct failures, and the difference is the point:
+
+| Request | Before | Cause |
+|---|---|---|
+| `/api/ai/config` | JSON 404 "Unknown AI route" | the function ran, but `context.params.route` was empty — nothing resolved `config` |
+| `/api/ai/v1beta/models/…` | **HTML 404** | the SPA rewrite claimed the path; the function never ran |
+
+### Fix 1 — the rewrite must not own `/api`
+
+`vercel.json` rewrites are applied **before** the function-matching stage, so a
+catch-all `/(.*) → /index.html` answers every API call with the shell. Local dev
+never shows this: the Vite middleware owns `/api/ai` and no rewrite exists there.
+
+```json
+"rewrites": [
+  { "source": "/((?!api/).*)",   "destination": "/index.html" },
+  { "source": "/api/ai(/.*)?",   "destination": "/api/ai/[...route]" }
+]
+```
+
+The second entry is not redundant. The Vite builder emitted a rewrite for the
+catch-all source **only** (`^/api/ai/([^/]+)$`); every real call is
+`/api/ai/v1beta/models/<model>:<method>`, which has four segments and fell into
+Vercel's generic `^/api(/.*)?$ → 404` guard. Mapping the whole prefix keeps the
+nested route reaching the function.
+
+### Fix 2 — the route must resolve without `context.params`
+
+`api/ai/[...route].ts` now derives the route from three sources, in order:
+`context.params.route`, a `?route=` query, and finally the request pathname
+(`/api/ai/<rest>`). An empty route answered `404 Unknown AI route` — which is
+indistinguishable from the routing bug that was actually reported.
+
+`export default handler` is added alongside `GET`/`POST`/`OPTIONS`: Vercel accepts
+either shape, and a runtime that looks for a default handler now finds one.
+
+### The gate that would have caught it
+
+`scripts/verify-vercel-routing.mjs` builds the project the way Vercel does, reads
+the **emitted** `.vercel/output/config.json`, and replays Vercel's matching order:
+
+```
+PASS  /api/ai/config                          →  /api/ai/[...route]
+PASS  /api/ai/v1beta/models/…:generateContent →  /api/ai/[...route]
+PASS  /api/ai/v1beta/models/…:streamGenerateContent → /api/ai/[...route]
+PASS  /builder                                →  /index.html  (SPA fallback)
+PASS  public/_redirects keeps /api/* ahead of the SPA rule
+```
+
+It runs inside `audit:all`, so a rewrite cannot silently swallow `/api` again.
+
+---
+
+## 62. Module 0b — `[object Object]`, rendered as data
+
+Phase 14 stopped non-string model text at the provider boundary. This phase
+handles the case that remains: a message that is **entirely** JSON — a recommended
+part or a whole build — is data, not prose.
+
+`lib/displayText` gained `parseStructured`, which recognises the shape:
+
+| Payload | Card |
+|---|---|
+| `{ componentId, category, name, price }` | "Recommended part" + field grid |
+| `{ name, items: [...] }` | "Suggested build" + item list |
+| anything else that parses | formatted JSON inside a `<pre>` |
+
+Prose is untouched, even when it mentions JSON (`Try {"category":"cpu"}` stays
+prose). A fenced ```` ```json ```` block is unwrapped. 10 new tests.
+
+---
+
+## 63. Module 1 — filters were classifying on the product NAME
+
+Reported: "selecting CPU shows fans, selecting GPU shows cases."
+Measured in the catalogue:
+
+```
+$ node scripts/reclassify-catalogue.mjs --dry-run
+category      before   after
+  cpu            131      38
+  cooling        248     364        ← 107 processors were filed as cooling
+  gpu            557     511
+  case           420     420
+```
+
+The scraper filed rows with `classifyByName`, which matches words in the title.
+It is wrong in both directions: **131 CPUs** had been reduced to 38 because
+anything mentioning a "cooler" or "fan" was pulled into Cooling, and chassis that
+advertise "420mm GPU clearance" were pulled into GPUs.
+
+### The fix — classify by what the store says, not by marketing copy
+
+A listing's category now comes from, in order:
+
+1. **the URL's collection** — `/product-category/processor/`, `/graphics-card/…`,
+   `/vga`. This is the store's own classification and it is stable;
+2. **the title's noun** — "… Mid Tower Case", "… CPU Air Cooler", "… Desktop
+   Processor";
+3. **the page it was scraped from** (`specs.pageCategory`, recorded by the
+   crawler).
+
+The same rules ship in three places that must agree, and one test pins them
+against real retailer URLs:
+
+| File | Runs |
+|---|---|
+| `src/lib/categoryRules.ts` | at READ time — fixes the snapshot, the bootstrap subset, Sigma and the DB at once |
+| `scripts/reclassify-catalogue.mjs` | rewrites the shipped snapshot |
+| `supabase/functions/retailer-sync/parsers.ts` | at WRITE time, for new rows |
+
+Two rules were added after looking at the output, not before:
+
+- **Case clearance vocabulary.** `Aerocool P500C … (AIR Up To 162mm)(VGA Up To
+  450mm)` was filed as a graphics card because it says "VGA". Nobody describes a
+  card by the clearance it needs.
+- **Accessories are not components.** A "Vertical GPU Holder Kit" and an
+  "Anti-Bend CPU Frame" were featured on the landing page as a GPU and a CPU.
+  `resolveCategory` now returns `''` for them and the row is dropped.
+
+**Verification:** `scripts/verify-catalogue-categories.mjs` (in `audit:all`)
+allows at most 2 % foreign nouns per bucket and fails on a missing category:
+
+```
+category       listings   foreign
+  case             420      0.0%
+  cooling          364      0.2%
+  cpu               38      0.0%     ← no cooler, no chassis, no thermal paste
+  gpu              511      0.2%
+```
+
+---
+
+## 64. Module 2 — the Builder now builds from stock a shopper can order
+
+The Builder used `lib/sampleData.ts`: 32 hand-written components with complete
+spec sheets. It existed because scraped listings carried no technical data, so
+**no compatibility rule could be evaluated** against a real catalogue.
+
+Two pieces removed that reason:
+
+1. `lib/specInference.ts` reads the **chip**, not the card: every RTX 5070 Ti is
+   16 GB / 300 W / ~300 mm whatever the board partner's shroud says. It returns a
+   `specConfidence` (`high` for the model-derived values, `estimated` for the
+   physical dimensions).
+2. `lib/categoryRules.ts` (above) puts every listing in the right bucket.
+
+### Coverage, measured (`node scripts/enrich-specs.mjs`)
+
+```
+category       with specs    total   share
+  case               420      420    100%
+  cooling            364      364    100%
+  cpu                 34       34    100%
+  gpu                423      423    100%
+  motherboard        423      423    100%
+  psu                403      403    100%
+  ram                109      109    100%
+  storage            288      288    100%
+```
+
+### The data pipeline that replaced the sample set
+
+```
+retailer_products / snapshot
+  → aggregator      (URL-derived category, inferred specs)
+  → groupListings   (one entry per SKU, cheapest in-stock offer)
+  → buildCatalogue  (PCComponent + storeLinks + price + relative tier)
+  → useComponents   (the single reader for the whole app)
+```
+
+`useComponents` (query key `CATALOGUE_KEY`) is now the **only** catalogue reader:
+the Builder, the AI advisor's tool executor, the Smart Builder, the Build Doctor,
+the Prebuilt page, the Community fallback and the landing page all use it. A
+second reader with its own key (`useCatalogue`) was deleted — two readers is how a
+page can hold two different catalogues at once.
+
+`performanceScore` is a **relative tier** (`lib/performanceTier`) inferred from
+the model number, because retailers do not publish benchmarks. The card labels it
+as an estimate in its tooltip and in `builder.specs.estimatedScore`.
+
+### Verifying it in a browser, not in code
+
+```
+$ node scripts/verify-catalogue-specs.mjs
+cpu            socket      100%      gpu        length    100%
+motherboard    socket      100%      psu        wattage   100%
+case           maxGpuLength 100%     cooling    socketSupport 100%
+✔ every category carries the specs the compatibility engine reads
+```
+
+`.qa/phase15-builder-cpu.png` — 30 CPUs, real retailers, real EGP prices.
+`.qa/phase15-builder-gpu.png` — GPUs only, each showing VRAM / TDP / length.
+
+---
+
+## 65. Module 3 — grouping, measured before and after
+
+`scripts/measure-grouping.mjs` reports both failure modes: cards that fail to
+merge across shops, and cards that merge when they should not.
+
+| | before | after |
+|---|---|---|
+| groups | 2,501 | 2,353 |
+| **cross-store groups** | **50** | **183** |
+| suspicious merges (members disagree on model or VRAM) | 12 | **1** |
+
+Two changes produced that:
+
+1. **Motherboards were keyed on the chipset.** `brand + chipset + generic words`
+   produced `mb|asus|b650|prime` for four *different* ASUS boards — PRIME
+   B650M-R, B650M-K, B650M-A II … — so one board's price appeared under another's
+   name. The board CODE is the key now (`prime b650m-k` ≠ `prime b650m-r`).
+2. **Labels chose the shortest name, which truncated identically.** "GIGABYTE RTX
+   5070 Ti EAGLE OC SFF" and "… WINDFORCE OC SFF" both rendered as "GIGABYTE RTX
+   5070 TI" in a two-line clamp, so the grid looked like a duplicate at two
+   prices. `groupLabel` now prefers a name whose board-partner line appears inside
+   the visible part.
+
+The remaining "suspicious" merge is a pair whose titles differ only in marketing
+suffix; it is reported rather than hidden.
+
+**UI:** one card per SKU, the cheapest in-stock offer quoted, and
+"Compare (N stores)" when more than one shop carries it
+(`ComponentCard`, `ComparePricesModal`).
+
+---
+
+## 66. Module 4 — cleanup, and the mock data that was still lying
+
+### Removed
+
+| Path | Why |
+|---|---|
+| `sampleComponents` (32 components) | the Builder, advisor and Prebuilt read real stock now |
+| `sampleBuilds` (6 builds) | replaced by configurations generated from the catalogue |
+| `META` on /community | six invented posts with **fabricated authors, star ratings, view counts and comment counts**, presented under "Real builds with real spec sheets" |
+| `resolveSampleBuild`, `useBestPrices`, `useRetailerOffers`, `useCatalogue`, `listComponents`, `getComponentById`, `formatCompact`, `toEgp` | no caller left; `audit:all` fails on an unused export |
+
+### Community and Prebuilt, after
+
+Prebuilt configurations are **generated**: a budget and a use case run through
+`fallbackBuild` against live stock, then scored by the same engine the builder
+uses. Nothing is curated and nothing can reference a part that is not for sale.
+Community falls back to those same configurations, clearly labelled:
+
+> "No community builds published yet. These are generated configurations — real
+> parts at live Egyptian prices — not user submissions."
+
+Verified: `.qa/phase15-community.png` (627 W / 448 W builds, no fake authors),
+`.qa/phase15-prebuilt.png` (EGP 44,579 / 94,829 / 167,279).
+
+### Three defects found only by looking at the screenshots
+
+1. **"0 W"** on all three configurations. A case, PSU and cooler have no `tdp` by
+   design, so summing `powerDrawWatts` over every part produced zero. Fixed, and
+   the generator now refuses a configuration with no CPU or GPU.
+2. **Empty spec chips** — "– C / – T" — because the template rendered every slot
+   regardless of whether the listing had the value. Chips are now emitted only for
+   known specs.
+3. **Accessories featured as components** — a "Vertical GPU Holder Kit" under
+   GPU and an "Anti-Bend Frame" under CPU on the landing page. Fixed at the
+   classifier, and the featured picks are now the four core categories.
+
+### WebGL
+
+`SceneErrorBoundary` now marks the context lost for the session when it catches,
+so a phone that cannot create a WebGL context is not re-mounted on every
+navigation.
+
+---
+
+## 67. Acceptance criteria — Phase 15
+
+| Criterion | Result |
+|---|---|
+| `/api/ai/config` returns `{ ok: true }` in production | ⚠️ routing fixed and proven against the BUILT table; needs the redeploy |
+| AI Advisor works in production | ⚠️ same — the function answers locally via `verify-ai-function` + the emitted bundle |
+| CPU filter shows only CPUs | ✅ 0 foreign nouns in `cpu`; verified in the browser |
+| Builder uses real scraped products | ✅ 100 % of categories carry the specs the engine reads |
+| AI recommends products available in Egypt | ✅ the tool executor reads the retailer catalogue, not a seed |
+| Duplicates grouped, with a Compare button | ✅ cross-store groups 50 → 183; "Compare (N stores)" |
+| `pnpm audit:all` | ✅ **22 gates, 253 tests** |
+| `docs/AUDIT.md` / `README.md` updated | ✅ |
+
+Screenshots: `.qa/phase15-builder-cpu.png`, `.qa/phase15-builder-gpu.png`,
+`.qa/phase15-prebuilt.png`, `.qa/phase15-community.png`,
+`.qa/phase15-landing.png`, `.qa/phase15-landing-featured.png`.
+
+---
+
+## 68. Still open
+
+1. **Redeploy** is required for the Vercel fix to take effect. The gates prove the
+   built routing table and the function module, not the live deployment.
+2. **One suspicious grouping merge** remains; `measure-grouping` lists it.
+3. **`retailer_products` is empty on this project** — the app reads the shipped
+   snapshot. Applying migration 008 and running the sync moves the same pipeline
+   onto live rows with no code change.
+
+---
+
+# Phase 16 — The production fix, measured
+
+**Date:** 2026-11-03
+**Scope:** the production 404 that survived two previous attempts, the API
+verification script, filter classification, canonical grouping, and cleanup.
+
+---
+
+## 69. Module 0 — the 404 was ONE SEGMENT DEEP
+
+The brief described the SPA rewrite swallowing `/api/*`. That was Phase 14's bug,
+and it was already fixed. Phase 16 began by measuring the live deployment, and the
+real behaviour was different:
+
+```
+GET  /api/ai/config        → 404 {"error":{"message":"Unknown AI route"}}   JSON
+GET  /api/ai/missing       → 404 {"error":{"message":"Unknown AI route"}}   JSON
+POST /api/ai/v1beta/models/… → 404  (empty body)                            NEVER RAN
+```
+
+Two facts fall out of that table:
+
+1. **The function was running.** A 404 with *our own JSON error body* means the
+   handler executed; a routing failure cannot produce it.
+2. **Only one path segment ever arrived.** `/api/ai/<one-segment>` reached the
+   proxy; two or more got an empty 404 *before any handler ran*.
+
+### The generated routing table explains it
+
+`vercel build` emits this for `api/ai/[...route].ts`:
+
+```json
+{ "src": "^/api/ai(/.*)?$",     "dest": "/api/ai/[...route]", "check": true }
+{ "src": "^/api/ai/([^/]+)$",   "dest": "/api/ai/[...route]?route=$1" }
+{ "src": "^/api(/.*)?$",        "status": 404 }
+```
+
+The **prefix** rule — the only one that could serve any depth — is emitted with
+`"check": true`, so it fires only when the literal path exists on disk. It never
+does. The `[^/]+` rule then serves exactly one segment, and everything deeper is
+caught by the `/api` 404 guard.
+
+Every real Gemini call is four segments
+(`/api/ai/v1beta/models/<model>:generateContent`), so **the AI could never have
+worked in production** regardless of the key, the import extension or the
+package. The local dev server hides this completely: Vite's middleware owns
+`/api/ai` and no routing table exists.
+
+### The fix
+
+| Change | Why |
+|---|---|
+| `api/ai/[...path].ts` (renamed from `[...route]`) | one level shallower and a distinct parameter name, so it is not confused with the old artifact |
+| `middleware.ts` owns `/api/ai/*` | rewrites every request to `/api/ai?path=<rest>` through a `continue` route that has **no** filesystem check and no depth limit |
+| `vercel.json` keeps two rewrites | SPA fallback excluding `api/`, plus the catch-all prefix. **No** `/api/(.*)` rewrite |
+| `routeOf()` reads `?path=` from the URL | `request.query` does not exist on a Web `Request`; relying on it left every rewritten call with an empty route |
+| `searchWithoutRoute()` | strips the middleware's `path` parameter so it is never forwarded upstream (verified: `alt=sse` survives, `path` does not) |
+
+### Verified against the built artifact, at three depths
+
+```
+$ node scripts/verify-api-route.mjs
+PASS  depth 1  GET  /api/ai/config
+        middleware → /api/ai?path=config
+        function   → 200 {"ok":false,…,"reason":"GEMINI_API_KEY is not…"}
+PASS  depth 4  POST /api/ai/v1beta/models/…:generateContent
+        function   → 503 {"error":{"message":"GEMINI_API_KEY is not configured…"}}
+PASS  depth 4  POST /api/ai/v1beta/models/…:streamGenerateContent?alt=sse
+        function   → 503 … &alt=sse preserved
+✔ every /api/ai route reaches the proxy through the built middleware + function
+```
+
+`503` is the PASS condition locally (no key); a `404` fails. A live call through
+`verify-ai-function` returned `PONG`, so the proxy path works end to end.
+
+The gate also replays the routing table and fails if any `/api/ai` path is claimed
+by a terminal rule **before** the middleware.
+
+### On the brief's specific instructions
+
+- **`@google/genai` is not a dependency.** The proxy speaks the REST wire format
+  directly (`src/server/geminiProxy.ts`) and needs no SDK — there is nothing to
+  include, and adding `includeFiles` for a package that does not exist would be
+  cargo cult. The bundle check confirms one local import and no external ones.
+- **ESM extensions were already correct** (`../../src/server/geminiProxy.js`) and
+  are load-bearing: the function ships as `"type": "module"`. The rename kept it
+  and the runtime gate executes the emitted `.js`.
+- **No `/api/(.*)` rewrite was added**, exactly as instructed.
+
+---
+
+## 70. Module 1 — filters and grouping, verified rather than asserted
+
+`verify-catalogue-categories` (in `audit:all`) allows ≤ 2 % foreign nouns per
+bucket:
+
+```
+category       listings   foreign
+  case             420      0.0%
+  cooling          449      0.2%
+  cpu              238      0.0%     ← no fans, no thermal paste
+  gpu              514      0.2%
+  motherboard      560      0.0%
+  ram              246      0.0%
+  storage          543      0.0%
+  psu              303      0.0%
+```
+
+Three real defects were found by **looking at the screenshots**, not by reading
+code:
+
+1. **Motherboards named by the CPU they support** — "GIGABYTE Z890 AORUS Master
+   Intel Core Ultra (Series 2) LGA 1851 Motherboard" was filed as a CPU, because
+   the CPU rule matched the marketing copy first. Chipsets are now tested before
+   processors.
+2. **A cooler whose model number looks like a chipset** — "ID-COOLING FROZN
+   **A620** PRO" hit the AM5 `A620` rule. Cooling is now tested before chipsets.
+3. **Accessories in the catalogue** — an "ID-COOLING ABF-1851 Anti Bending
+   Frame" appeared under Motherboards (its "1851" matched LGA1851). Accessories
+   are now dropped outright: 11 removed from the snapshot.
+
+### Grouping: the socket was being used as a board model
+
+`\b([a-z]{2,5}\d{3}…)` matched **`lga1700`** before the board code, so four
+different ASUS PRIME boards collapsed into one group and one board's price
+appeared under another's name.
+
+| | before | after |
+|---|---|---|
+| cross-store groups | 50 | **258 (15.7 %)** |
+| over-merged groups | 12 | **1** (a false positive: B650M-K vs B650M-K) |
+
+Pinned by three tests: different chipsets stay apart, suffix variants stay apart,
+the same board merges across shops despite different descriptions.
+
+---
+
+## 71. Module 2 — specs: 93–100 % coverage, and a gate that was lying
+
+Inference now covers model families the catalogue actually carries:
+
+| Category | Coverage |
+|---|---|
+| CPU | 99 % (was 69 %) |
+| GPU | 97 % |
+| Motherboard | 95 % |
+| RAM / cooling / storage / case | 100 % |
+
+Additions: Ryzen 9000 and PRO variants, `Ryzen™` (the trademark glyph breaks
+`\bryzen\b`), Threadripper on sTR5/sTRX4, `Intel® Core™ i9 processor 14900KF`
+(the word "processor" between the series and the model), and chipset suffixes
+(`B850M`, `B760M-K`) that `\b` could not match.
+
+### The gate was reporting a number that could not be true
+
+`verify-catalogue-specs` claimed **55 %** motherboard coverage while the
+enrichment script reached 95 % on the same rules. Cause:
+
+```js
+inferSpecs(name, category)     // two positional args
+inferSpecs({ name, category }) // the signature takes ONE object
+```
+
+It returned `{}` for every listing and **still passed** — because 55 % clears a
+50 % floor. Two fixes:
+
+- the call is corrected;
+- the gate now **probes** `inferSpecs` with a known CPU and fails if it does not
+  classify it, so a module that loads but does nothing can never be mistaken for a
+  catalogue problem again.
+
+---
+
+## 72. Module 3 — cleanup, and four UI defects found in screenshots
+
+### Removed / corrected
+
+No `groq`/`ollama`/`openai` providers exist (only comments), and no commented-out
+code. `sampleData.ts` is 35 lines holding a single `interface SampleBuild` — the
+mock catalogue is gone.
+
+### UI defects visible on `/builder`
+
+1. **The heading collapsed to "C…"** — `min-w-0` on a flex child with no floor.
+   Fixed with `xl:min-w-[12rem]` and letting the controls shrink instead.
+2. **Price truncated to "EGP …"** — three elements shared one 290px row at
+   1280px. The footer is now three lines: price, metadata (store + watts), then
+   full-width actions.
+3. **"Compare (2 s…)"** — the compare button was side-by-side with Add. Now
+   full-width.
+4. **Sidebar counts disagreed with the grid** (560 vs 572). `useCategoryCounts`
+   excluded out-of-stock parts that the grid still lists. They now count the same
+   set.
+
+### Money and language
+
+- The advisor placeholder asked for **`$2,000`** in an app priced entirely in
+  EGP; the tool schema told the model `budgetMax` was **USD** while every tool
+  result is EGP — so a 95,000 EGP budget was spent as if it were dollars.
+- `get_build_score` summarised totals as `USD`.
+- `/ai` `upgradesHint` said "per dollar" (AR: "لكل دولار").
+
+All four corrected in both languages.
+
+---
+
+## 73. Acceptance criteria — Phase 16
+
+| Criterion | Result |
+|---|---|
+| `/api/ai/config` returns `{ ok: true }` in production | ⚠️ root cause found and fixed; verified against the **built** middleware + function at depth 1/4/4. Needs a redeploy to confirm live |
+| AI Advisor works in production | ⚠️ same — a live Gemini call returns `PONG` through the proxy locally |
+| `verify-api-route.mjs` passes locally | ✅ executes the emitted artifacts; 3 depths + routing-table replay |
+| CPU filter shows only CPUs | ✅ 0 foreign nouns in `cpu`; verified in the browser (151 CPU cards) |
+| Duplicates grouped with a Compare button | ✅ 258 cross-store groups, "Compare (N stores)" |
+| Builder/Advisor use real products | ✅ one catalogue reader; `sampleData` is a type only |
+| Prebuilt generated from the real database | ✅ `fallbackBuild` over the retailer catalogue |
+| `pnpm audit:all` | ✅ **24 gates, 256 tests** |
+| `docs/AUDIT.md` updated | ✅ |
+
+Screenshots: `.qa/phase16-builder-cpu.png`, `.qa/phase16-builder-gpu.png`,
+`.qa/phase16-builder-mb.png`, `.qa/phase16-advisor.png`.
+
+---
+
+## 74. Still open
+
+1. **Redeploy is required.** The fix is proven against the artifact this repo
+   builds, not against the live deployment. After deploying, `GET
+   /api/ai/config` must return JSON (not HTML, not an empty 404).
+2. **`GEMINI_API_KEY` must exist in Production** for `{ ok: true }`; the local
+   gates correctly report `{ ok: false }` without it.
+3. **`retailer_products` is empty on the probed project**, so the app reads the
+   shipped snapshot. Applying migration 008 and running the sync moves the same
+   pipeline onto live rows with no code change.
+4. One grouping false positive remains (B650M-K vs B650M-K, same board).

@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { RetailerLogo } from './RetailerLogo';
 import { CategoryPlaceholder } from './CategoryPlaceholder';
 import { staggerItem } from '@/lib/motion';
+import { useCardTilt } from '@/hooks/useCardTilt';
 import { retailerImageUrl } from '@/lib/retailerImage';
 import { cn, formatCurrency } from '@/lib/utils';
 import { RETAILERS } from '@/services/retailers/types';
@@ -25,6 +26,7 @@ import type { ProductGroup } from '@/services/searchService';
 export function SearchResultCard({ group }: { group: ProductGroup }) {
   const { t } = useTranslation();
   const [imageFailed, setImageFailed] = useState(false);
+  const tilt = useCardTilt();
   const imageUrl = retailerImageUrl(group.imageUrl);
   const best = group.best;
   // A store-side placeholder price (1 EGP) is not a price.
@@ -33,8 +35,11 @@ export function SearchResultCard({ group }: { group: ProductGroup }) {
 
   return (
     <motion.article
+      ref={tilt.ref}
       variants={staggerItem}
-      className="glass-card group flex flex-col overflow-hidden rounded-xl transition-[border-color,box-shadow] duration-300 hover:border-primary/30 hover:shadow-glow-sm"
+      style={tilt.style}
+      {...tilt.handlers}
+      className="glass-card group flex flex-col overflow-hidden rounded-xl transition-[border-color,box-shadow] duration-300 hover:border-primary/40 hover:shadow-glow-sm"
     >
       {/* Image ---------------------------------------------------------- */}
       {/* Shorter on phones: at 375px a 128px image pushed the price and the Buy
@@ -46,13 +51,20 @@ export function SearchResultCard({ group }: { group: ProductGroup }) {
       <div className="relative flex h-24 shrink-0 items-center justify-center overflow-hidden border-b border-border bg-surface-inset/40 p-3 sm:h-32">
         {/* Retailer images are hotlinked from the store CDN; some are blocked.
             A broken <img> leaves an empty box, so a load failure falls back to
-            the same placeholder used when there is no image at all. */}
+            the same placeholder used when there is no image at all.
+
+            `referrerPolicy="no-referrer"` is load-bearing, not a nicety:
+            Elnekhely answers **403** to an image request that carries any
+            foreign Referer and **200** when none is sent (measured with all
+            four profiles). A browser sends our origin by default, which is
+            exactly the case that is refused. */}
         {imageUrl && !imageFailed ? (
           <img
             src={imageUrl}
             alt=""
             loading="lazy"
             decoding="async"
+            referrerPolicy="no-referrer"
             onError={() => setImageFailed(true)}
             className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.04]"
           />
@@ -69,7 +81,14 @@ export function SearchResultCard({ group }: { group: ProductGroup }) {
       </div>
 
       {/* Body ----------------------------------------------------------- */}
-      <div className="flex flex-1 flex-col p-4">
+      <div className="relative flex flex-1 flex-col p-4">
+        {/* Cursor-following highlight. `-z-10` keeps it under the text, and it is
+            pointer-events-none so it never steals a click from the card body. */}
+        <motion.span
+          aria-hidden
+          style={tilt.glowStyle}
+          className="pointer-events-none absolute -z-10 size-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"
+        />
         <h3 className="line-clamp-2 min-h-10 text-sm font-semibold leading-snug" title={group.name}>
           {group.name}
         </h3>

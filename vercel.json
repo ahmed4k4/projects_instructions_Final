@@ -1,16 +1,18 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
   "installCommand": "pnpm install --frozen-lockfile",
   "functions": {
-    "api/ai/[...route].ts": {
+    "api/ai/[...path].ts": {
       "memory": 512,
       "maxDuration": 60
     }
   },
-  "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }],
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" },
+    { "source": "/api/ai(/.*)?", "destination": "/api/ai/[...path]" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

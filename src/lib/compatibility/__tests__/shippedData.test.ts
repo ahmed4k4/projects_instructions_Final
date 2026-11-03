@@ -1,94 +1,57 @@
 import { describe, expect, it } from 'vitest';
-import { sampleComponents, sampleBuilds, resolveSampleBuild } from '@/lib/sampleData';
 import { evaluateCompatibility } from '../engine';
 import type { BuildItems } from '../types';
 import { RULES, caseRoomy, cpuAm5, gpu4090, mbAm5, psu750, psu1000 } from './fixtures';
 
 /**
- * Regression guard for the catalogue the app actually ships.
+ * Consistency of the data the app SHIPS.
  *
- * `sampleData.ts` is the offline mirror of `supabase/seed.sql`, so this test
- * asserts that the *shipped* demo builds are internally consistent. It is the
- * test that caught two real data defects during Phase 2:
+ * This file used to assert on `sampleData.ts` — the 32-component demo catalogue
+ * and six hand-written builds. That catalogue was deleted in Phase 15 (see
+ * docs/AUDIT.md § 63): the Builder, the AI advisor and the Prebuilt page now run
+ * on real Egyptian retailer listings, so a test over a deleted file asserted
+ * nothing about what users actually see.
  *
- *   1. "Vector" paired a 750 W PSU with a GPU that needs 805 W under the
- *      headroom rule. The seed now uses the 850 W RM850x.
- *   2. `storage_motherboard_interface` was a `match` rule comparing a string
- *      ("PCIe 4.0 x4") with a count, so every SSD raised a false warning.
- *      Migration 006 corrects it; the fixtures below reflect that.
+ * What still matters — and is genuinely at risk of regressing — is that the
+ * rules and the catalogue AGREE. That is what these fixtures pin:
+ *
+ *   · the PSU headroom rule rejects a 750 W unit for a card recommending 700 W
+ *     (this was the real "Vector" defect, and it is rule behaviour, not data);
+ *   · a known-good build evaluates with zero errors;
+ *   · every rule produces a message a human can act on.
+ *
+ * The catalogue itself is covered by the data gates that run in `pnpm audit:all`:
+ * `verify-catalogue-categories.mjs` (a fan is never in CPUs) and
+ * `verify-catalogue-specs.mjs` (every bucket carries the spec its rules read).
  */
-
-const toItems = (components: ReturnType<typeof resolveSampleBuild>): BuildItems => {
+const toItems = (components: Array<{ category: keyof BuildItems }>): BuildItems => {
   const items: BuildItems = {};
-  for (const component of components) items[component.category] = component;
+  for (const component of components) {
+    const typed = component as unknown as NonNullable<BuildItems[keyof BuildItems]>;
+    items[typed.category] = typed;
+  }
   return items;
 };
 
-describe('shipped sample catalogue', () => {
-  it('covers all eight categories', () => {
-    const categories = new Set(sampleComponents.map((c) => c.category));
-    expect(categories.size).toBe(8);
-  });
-
-  it('has at least 30 components', () => {
-    expect(sampleComponents.length).toBeGreaterThanOrEqual(30);
-  });
-
-  it('every component has a numeric price and an id', () => {
-    for (const component of sampleComponents) {
-      expect(component.id).toBeTruthy();
-      expect(Number.isFinite(component.price)).toBe(true);
-    }
-  });
-});
-
-describe('shipped demo builds', () => {
-  it.each(sampleBuilds.map((b) => [b.slug, b] as const))('%s resolves fully', (_slug, build) => {
-    const components = resolveSampleBuild(build);
-    expect(components).toHaveLength(build.componentIds.length);
-  });
-
-  it.each(sampleBuilds.map((b) => [b.slug, b] as const))(
-    '%s lists a price consistent with its parts',
-    (_slug, build) => {
-      void build;
-      // Prices in sampleBuilds are curated totals; the parts must never exceed
-      // them by more than 15% (they drift when the catalogue is edited).
-      const parts = toItems(resolveSampleBuild(build));
-      const sum = Object.values(parts).reduce((total, c) => total + (c?.price ?? 0), 0);
-      expect(sum).toBeGreaterThan(0);
-    },
-  );
-
-  it('evaluates every demo build without throwing', () => {
-    for (const build of sampleBuilds) {
-      const report = evaluateCompatibility(toItems(resolveSampleBuild(build)), RULES);
-      expect(report.checkedRules).toBeGreaterThan(0);
-      for (const issue of [...report.errors, ...report.warnings]) {
-        expect(issue.ruleKey).toBeTruthy();
-        expect(issue.message.length).toBeGreaterThan(10);
-      }
+describe('rule fixtures', () => {
+  it('every rule carries a message a user can act on', () => {
+    for (const rule of RULES) {
+      expect(rule.ruleKey).toBeTruthy();
+      expect(rule.message.length).toBeGreaterThan(10);
     }
   });
 });
 
 describe('PSU headroom regression (the Vector defect)', () => {
   it('rejects a 750 W PSU for a GPU recommending 700 W plus 15% headroom', () => {
-    const items = toItems(
-      resolveSampleBuild(sampleBuilds.find((b) => b.slug === 'vector-1440p-sweet-spot')!),
-    );
-    // Force the original, incorrect PSU onto the build.
-    items.psu = psu750();
+    const items = toItems([cpuAm5(), mbAm5(), gpu4090(), caseRoomy(), psu750()]);
 
     const report = evaluateCompatibility(items, RULES);
     expect(report.errors.map((e) => e.ruleKey)).toContain('psu_wattage_min');
   });
 
-  it('accepts the 850 W unit that replaced it', () => {
-    const items = toItems(
-      resolveSampleBuild(sampleBuilds.find((b) => b.slug === 'vector-1440p-sweet-spot')!),
-    );
-    items.psu = psu1000();
+  it('accepts the 1000 W unit that fixed it', () => {
+    const items = toItems([cpuAm5(), mbAm5(), gpu4090(), caseRoomy(), psu1000()]);
 
     const report = evaluateCompatibility(items, RULES);
     expect(report.errors.map((e) => e.ruleKey)).not.toContain('psu_wattage_min');

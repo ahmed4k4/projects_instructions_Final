@@ -626,7 +626,8 @@ set
 
 -- -----------------------------------------------------------------------------
 -- DEMO BUILDS (public, platform-owned — user_id null)
--- Totals are recalculated by the build_items trigger.
+-- Totals are recalculated by the build_items trigger, then converted to EGP at
+-- the end of this file together with the component prices.
 -- -----------------------------------------------------------------------------
 insert into
   public.builds (
@@ -808,6 +809,36 @@ from
   join public.builds b on b.slug = m.build_slug
   join public.components c on c.brand = m.component_brand
   and c.model = m.component_model on conflict (build_id, component_id) do nothing;
+
+-- -----------------------------------------------------------------------------
+-- CURRENCY: USD -> EGP, ONCE, HERE.
+--
+-- The literals above are US list prices ("Ryzen 7 7800X3D = 379.00"), which is
+-- how the Phase 1 catalogue was authored. The application treats every money
+-- column as EGP (see lib/constants CURRENCY), so without this the Community page
+-- advertised a "4K Gaming Flagship" at 3,462 EGP — roughly the price of its case.
+--
+-- Converting here rather than rewriting 32 literals keeps ONE conversion point:
+-- `npm run db:reset` produces an EGP catalogue, and the store_links block is
+-- converted with it so the two never disagree.
+-- -----------------------------------------------------------------------------
+update public.components
+set
+  price = round(price * 50),
+  store_links = (
+    select coalesce(jsonb_agg(link || jsonb_build_object('price', round((link->>'price')::numeric * 50))), '[]'::jsonb)
+    from jsonb_array_elements(store_links) as link
+  )
+where price < 2500;
+
+-- Recompute the demo-build totals from the converted component prices.
+update public.builds b
+set total_price = coalesce((
+  select sum(c.price * bi.quantity)
+  from public.build_items bi
+  join public.components c on c.id = bi.component_id
+  where bi.build_id = b.id
+), b.total_price);
 
 commit;
 

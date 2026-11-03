@@ -67,21 +67,44 @@ ACCESSORY_RE = re.compile(
     re.I,
 )
 
+# Complete systems are not components. Sigma lists laptops by their CPU and GPU
+# ("LENOVO LOQ 15IRX9 - Intel Core i5-13450HX - NVIDIA GeForce RTX 3050"), so they
+# were filed as processors and then shown under the CPU filter.
+SYSTEM_RE = re.compile(
+    r"\b(lenovo|loq|ideapad|thinkpad|legion|msi thin|katana|cyborg|asus tuf dash|"
+    r"asus tuf f16|vivobook|zenbook|hp victus|omen|acer nitro|predator|aspire|"
+    r"dell g[0-9]|inspiron|alienware|macbook|chromebook|notebook)\b",
+    re.I,
+)
+
+# Products that are thermal parts or whole machines, whatever else their name says.
+COOLER_WORD = re.compile(r"\b(cooler|heatsink|aio|liquid cooling|air cooler|fan)\b", re.I)
+MOUNTING = re.compile(r"\b(anti-?bend|contact frame|mounting|bracket|frame)\b", re.I)
+
 # Name-based category, used to CORRECT the rail label (Sigma's rails overlap).
+#
+# ORDER IS THE RULE. `cpu` first caught "Aerocool Core plus ARGB CPU Cooler" and
+# filed 34 coolers as processors, which then showed up under the CPU filter. A
+# thermal product always names itself cooler/heatsink/fan, so that is checked
+# before any component keyword; and "CPU Cooler" is never a CPU.
 NAME_CATEGORY = (
+    ("cooling", COOLER_WORD),
+    ("motherboard", re.compile(r"\b(motherboard|mainboard|b650|x670|z790|b760|a620|chipset)\b", re.I)),
     ("cpu", re.compile(r"\b(cpu|processor|ryzen|core i[3579]|core ultra|threadripper|xeon)\b", re.I)),
     ("psu", re.compile(r"\b(psu|power supply|\d{3,4}\s?w\b|80\s?plus|modular)\b", re.I)),
     ("gpu", re.compile(r"\b(gpu|graphics card|geforce|radeon|rtx|gtx|arc a\d|vga)\b", re.I)),
-    ("motherboard", re.compile(r"\b(motherboard|mainboard|b650|x670|z790|b760|a620|chipset)\b", re.I)),
     ("storage", re.compile(r"\b(nvme|ssd|hdd|hard drive|solid state)\b", re.I)),
     ("ram", re.compile(r"\b(ddr[345]|dimm|memory kit)\b", re.I)),
     ("case", re.compile(r"\b(case|chassis|tower)\b", re.I)),
-    ("cooling", re.compile(r"\b(cooler|aio|liquid cooling|heatsink|fan)\b", re.I)),
 )
 
 
 def category_of_name(name):
     """Best-guess category from the product NAME, or None when unclear."""
+    # Mounting hardware names a socket but is not a processor.
+    if MOUNTING.search(name):
+        return None
+
     for category, pattern in NAME_CATEGORY:
         if pattern.search(name):
             return category
@@ -261,7 +284,7 @@ def scrape_listing(page, max_pages, delay):
                 continue
 
             # Accessories are not components: never publish a mouse as a GPU.
-            if ACCESSORY_RE.search(name):
+            if ACCESSORY_RE.search(name) or SYSTEM_RE.search(name):
                 continue
 
             category = category_of_name(name)

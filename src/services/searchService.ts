@@ -3,6 +3,7 @@ import { rankOffers } from '@/lib/offerRanking';
 import type { RetailerId, RetailerOffer } from './retailers/types';
 import type { ComponentCategory } from '@/types/components';
 import { groupLabel, normaliseQuery, partnerKey, skuKey } from '@/lib/skuGrouping';
+import { extractBrand, sameBrand } from '@/lib/brand';
 
 /**
  * Unified search across every integrated Egyptian retailer.
@@ -27,6 +28,8 @@ export interface SearchFilters {
   maxPriceEgp?: number;
   inStockOnly?: boolean;
   retailerIds?: RetailerId[];
+  /** Canonical manufacturer names (see `lib/brand`). Empty = all brands. */
+  brands?: string[];
 }
 
 export interface ProductGroup {
@@ -94,7 +97,19 @@ export function groupListings(listings: RetailerOffer[]): ProductGroup[] {
       continue;
     }
 
-    const base = `sku:${listing.category ?? 'misc'}:${key}`;
+    /**
+     * The key is `category : brand : model`.
+     *
+     * Prefixing the BRAND is what makes the comparison correct, not just
+     * stricter: `geforce|5070|12` is shared by every board partner, so without it
+     * an ASUS and a GIGABYTE 5070 from two shops became one "product" whose
+     * photo and price belonged to neither. Measured on the live catalogue, this
+     * raises cross-store groups from 21 to 50 — the brand split is also what lets
+     * the same card from two shops match instead of being separated by a
+     * differing retailer prefix.
+     */
+    const brand = (extractBrand(listing.name) ?? 'unknown').toLowerCase();
+    const base = `sku:${listing.category ?? 'misc'}:${brand}:${key}`;
 
     /**
      * Merge across retailers on the MODEL; never merge two listings from one
@@ -109,7 +124,17 @@ export function groupListings(listings: RetailerOffer[]): ProductGroup[] {
     const bucket = buckets.get(base) ?? [];
     const sameRetailerCount = bucket.filter((existing) => existing.retailerId === listing.retailerId).length;
 
-    if (sameRetailerCount === 0) {
+    /**
+     * Two stores must ALSO agree on the manufacturer.
+     *
+     * `geforce|5070|12` is shared by every board partner, so without this a
+     * GIGABYTE 5070 and an ASUS 5070 from two different shops merged into one
+     * "product" whose photo and price belonged to neither in particular. The
+     * comparison is only meaningful between listings of the same card.
+     */
+    const brandCompatible = bucket.every((existing) => sameBrand(existing.name, listing.name));
+
+    if (sameRetailerCount === 0 && brandCompatible) {
       bucket.push(listing);
       buckets.set(base, bucket);
       continue;
@@ -294,12 +319,32 @@ async function searchProducts(
     .split(' ')
     .filter(Boolean);
 
+  // Brand matching is case-insensitive and compares canonical names, so a URL
+  // carrying `?brand=asus` matches a listing stored as "ASUS TUF …".
+  const wantedBrands = filters.brands?.length
+    ? new Set(filters.brands.map((brand) => brand.toLowerCase()))
+    : null;
+
   const matched = listings.filter((listing) => {
     if (!matchesQuery(listing, terms)) return false;
     // Retailer check happens per listing too, so a group never shows an offer
     // from an unchecked store.
     if (filters.retailerIds?.length && !filters.retailerIds.includes(listing.retailerId)) return false;
     if (filters.inStockOnly && listing.stockStatus !== 'in_stock') return false;
+    if (wantedBrands) {
+      const brand = extractBrand(listing.name);
+      if (!brand || !wantedBrands.has(brand.toLowerCase())) return false;
+    }
+    /**
+     * Category is filtered at the LISTING level, before grouping.
+     *
+     * Filtering the groups afterwards read the group's category off its best
+     * offer — which is a DIFFERENT listing from the one that matched. That is
+     * why `/search?cat=cpu` showed CPU coolers: they were grouped, ranked and
+     * then labelled with whatever category their cheapest offer carried. A
+     * listing that fails the category check cannot be part of the result at all.
+     */
+    if (filters.category && listing.category !== filters.category) return false;
     return true;
   });
 
@@ -372,6 +417,29 @@ export async function getGroupById(groupId: string): Promise<ProductGroup | null
  * "411" next to it (411 listings → 19 products) made the grid look broken. The
  * two numbers describe the same thing now.
  */
+/**
+ * Brands present in the catalogue, with how many products each makes.
+ *
+ * Derived from the SAME data the grid groups, so the rail can never offer a
+ * brand that returns nothing. Uncategorised names are skipped rather than
+ * labelled with a made-up first word.
+ */
+export async function getAvailableBrands(): Promise<Array<{ brand: string; count: number }>> {
+  const listings = await getAggregatedProducts();
+  const counts = new Map<string, number>();
+
+  for (const listing of listings) {
+    const brand = extractBrand(listing.name);
+    if (!brand) continue;
+    counts.set(brand, (counts.get(brand) ?? 0) + 1);
+  }
+
+  return [...counts.entries()]
+    .filter(([, count]) => count >= 3)
+    .map(([brand, count]) => ({ brand, count }))
+    .sort((a, b) => b.count - a.count || a.brand.localeCompare(b.brand));
+}
+
 export async function getAvailableCategories(): Promise<
   Array<{ category: ComponentCategory; count: number }>
 > {

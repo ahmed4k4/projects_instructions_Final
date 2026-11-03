@@ -1,4 +1,4 @@
-﻿# Retailer Strategy
+# Retailer Strategy
 
 **Phase 10 — how Egyptian retailer data is collected, matched and refreshed.**
 
@@ -177,7 +177,7 @@ badge and the standing notice rather than pretending the store does not exist.
 ### Cron it
 
 A headless browser cannot run on Vercel or Deno Deploy, so the worker runs on a
-schedule and commits its output. GitHub Actions example:
+schedule and commits its output. The repository includes the active workflow at `.github/workflows/sigma-feed.yml` (the example below documents its implementation):
 
 ```yaml
 name: sigma-feed

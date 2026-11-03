@@ -16,3 +16,5 @@ supabase/.temp
 
 .qa-real.json
 coverage
+
+.vercel

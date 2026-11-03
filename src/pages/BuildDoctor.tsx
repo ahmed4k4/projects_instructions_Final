@@ -32,7 +32,8 @@ import {
   type UpgradeCandidate,
 } from '@/services/buildDoctor';
 import { getBuildBySlug } from '@/services/buildsService';
-import { useCatalogue, useCompatibilityRules } from '@/hooks/useCatalogue';
+import { useCompatibilityRules } from '@/hooks/useCatalogue';
+import { useComponents } from '@/hooks/useComponents';
 import { CATEGORY_MAP } from '@/lib/constants';
 import { formatCurrency } from '@/lib/utils';
 import { EASE_OUT, makeStagger, staggerItem } from '@/lib/motion';
@@ -56,7 +57,7 @@ export default function BuildDoctor() {
   const { t } = useTranslation();
   const reduce = useReducedMotion();
 
-  const { data: catalogue = [], isLoading: catalogueLoading } = useCatalogue();
+  const { data: catalogue = [], isLoading: catalogueLoading } = useComponents();
   const { data: rules = [], isLoading: rulesLoading } = useCompatibilityRules();
   const hydrate = useBuildStore((state) => state.hydrateFromSelection);
 
@@ -263,7 +264,7 @@ export default function BuildDoctor() {
                 <TrendingUp className="size-4 text-accent" /> Recommended upgrades
               </h2>
               <p className="mt-1 text-xs text-muted-foreground">
-                Ranked by score gained per dollar, computed against the live catalogue.
+                {t('doctor.upgradesHint')}
               </p>
 
               <div className="mt-3 space-y-2">

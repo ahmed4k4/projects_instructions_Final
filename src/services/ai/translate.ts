@@ -87,6 +87,7 @@ export function toNeutralRequest(options: GenerateOptions): Omit<ChatRequest, 'm
   return {
     tools: options.tools,
     temperature: options.temperature,
+    thinkingLevel: options.thinkingLevel,
     maxTokens: options.maxOutputTokens,
     jsonSchema: options.responseSchema,
   };

@@ -16,12 +16,31 @@ interface BuildCardProps {
   className?: string;
 }
 
-/** Shared card for prebuilt + dashboard + community grids. */
+/**
+ * Shared card for prebuilt + dashboard + community grids.
+ *
+ * A build's components are identified in two different shapes:
+ *
+ *   · legacy/seeded builds — `componentIds: ['cpu-7800x3d', 'gpu-4090', …]`,
+ *     where the category is the id prefix;
+ *   · builds generated from the live catalogue (`lib/prebuiltFromCatalogue`) —
+ *     a component id is a SKU key such as `sku:gpu:asus:geforce|5070|12`, which
+ *     says nothing about its prefix.
+ *
+ * The lookup below therefore handles both, and never assumes a `gpu-` prefix
+ * exists (an empty icon row is what that assumption used to produce).
+ */
+function hasCategory(build: SampleBuild, category: 'cpu' | 'gpu'): boolean {
+  return build.componentIds.some(
+    (id) => id.startsWith(`${category}-`) || id.includes(`:${category}:`),
+  );
+}
+
 export function BuildCard({ build, rating, className }: BuildCardProps) {
   const { t } = useTranslation();
   const useCase = USE_CASE_MAP[build.useCase as UseCase];
-  const gpuId = build.componentIds.find((id) => id.startsWith('gpu-'));
-  const cpuId = build.componentIds.find((id) => id.startsWith('cpu-'));
+  const isGpu = hasCategory(build, 'gpu');
+  const isCpu = hasCategory(build, 'cpu');
 
   return (
     <motion.article variants={staggerItem} className={cn('group relative', className)}>
@@ -47,12 +66,12 @@ export function BuildCard({ build, rating, className }: BuildCardProps) {
             )}
           </div>
           <div className="absolute bottom-3 end-4 flex gap-1.5">
-            {[cpuId, gpuId].filter(Boolean).map((id) => {
-              const meta = CATEGORY_MAP[id!.startsWith('gpu') ? 'gpu' : 'cpu'];
+            {[isCpu ? 'cpu' : null, isGpu ? 'gpu' : null].filter(Boolean).map((category) => {
+              const meta = CATEGORY_MAP[category as 'cpu' | 'gpu'];
               const Icon = meta.icon;
               return (
                 <span
-                  key={id}
+                  key={category}
                   className="grid size-7 place-items-center rounded-md border border-border-strong bg-surface/80 text-muted-foreground backdrop-blur"
                 >
                   <Icon className="size-3.5" />

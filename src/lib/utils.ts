@@ -39,8 +39,9 @@ export function setFormatLocale(language: string): void {
   currencyFormatters.clear();
 }
 
-/** `$1,899.00` in English, `US$1,800` in Arabic — same currency, locale digits. */
-export function formatCurrency(value: number, currency = 'EGP', compact = false): string {
+/** All catalogue and build prices are Egyptian pounds, in both UI languages. */
+export function formatCurrency(value: number, _currency = 'EGP', compact = false): string {
+  const currency = 'EGP';
   const key = `${formatLocale}:${currency}:${compact ? 1 : 0}`;
   let formatter = currencyFormatters.get(key);
   if (!formatter) {
@@ -99,14 +100,13 @@ export function formatDateShort(value: string | Date, language = 'en'): string {
   }).format(date);
 }
 
-/** 2.4k / 18.3k views */
-export function formatCompact(value: number): string {
-  return new Intl.NumberFormat(formatLocale, {
-    notation: 'compact',
-    maximumFractionDigits: 1,
-    numberingSystem: 'latn',
-  }).format(value);
-}
+/**
+ * REMOVED in Phase 15: `formatCompact`.
+ *
+ * Its only caller was the Community page's view counter — a number that page no
+ * longer shows because it was invented (docs/AUDIT.md § 64). A formatter with no
+ * caller is dead code.
+ */
 
 export function slugify(input: string): string {
   return input

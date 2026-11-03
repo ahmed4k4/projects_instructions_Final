@@ -10,11 +10,13 @@ import type { ChatMessage, GeminiContent, GeminiContentPart, GenerateResult, Too
 import { AIError } from '@/types/ai';
 import type { PCComponent } from '@/types/components';
 import { ToolExecutor } from './aiTools';
+import { warmCatalogueForAI } from '@/hooks/useComponents';
 import { geminiClient } from './geminiService';
 import { ADVISOR_TOOLS, advisorSystemInstruction } from './prompts/advisor';
 import { detectLocale } from './prompts/buildGenerator';
 
-const MAX_TOOL_ROUNDS = 5;
+const MAX_TOOL_ROUNDS = 2;
+const MAX_TOOL_CALLS = 4;
 const CITATION_PATTERN = /\[\[component:([a-zA-Z0-9-]+)\|([^\]]+)\]\]/g;
 
 export interface AdvisorContext {
@@ -66,24 +68,46 @@ function modelTurn(result: GenerateResult): GeminiContent {
   };
 }
 
-function buildSnapshot(context?: AdvisorContext): Record<string, unknown> {
-  if (!context?.build) return { build: null };
-  return {
-    build: {
-      name: context.build.name,
-      totalPrice: context.build.totalPrice,
-      totalWatts: context.build.totalWatts,
-      buildScore: context.build.buildScore,
-      compatibility: context.build.compatibility ?? { errors: [], warnings: [] },
-      items: context.build.items.map((c) => ({
-        id: c.id,
-        category: c.category,
-        name: c.name,
-        price: c.price,
-        specs: c.specs,
-      })),
-    },
+function buildContextInstruction(context?: AdvisorContext): string {
+  if (!context?.build) {
+    return context?.budget
+      ? `\n\nUSER BUDGET (Egyptian pounds): ${Math.round(context.budget).toLocaleString('en-EG')} EGP.`
+      : '';
+  }
+
+  const snapshot = {
+    name: context.build.name,
+    totalPriceEgp: Math.round(context.build.totalPrice),
+    totalWatts: Math.round(context.build.totalWatts),
+    buildScore: context.build.buildScore,
+    compatibility: context.build.compatibility ?? { errors: [], warnings: [] },
+    items: context.build.items.map((c) => ({
+      id: c.id,
+      category: c.category,
+      name: c.name,
+      priceEgp: Math.round(c.price),
+      specs: c.specs,
+    })),
   };
+  return `\n\nCURRENT BUILD SNAPSHOT (authoritative live app state; all prices are EGP):\n${JSON.stringify(snapshot)}\nUse these exact parts and values. Do not call a tool just to read the build.`;
+}
+
+/** Keep tools off the hot path for explanatory questions. This prevents a
+ * generic question from needlessly entering a multi-request catalogue loop. */
+export function selectAdvisorTools(question: string, hasBuild: boolean): typeof ADVISOR_TOOLS {
+  const q = question.toLowerCase();
+  const catalogIntent = /(رشح|رشحلي|اقترح|اختار|اختيار|اشتري|شراء|سعر|اسعار|الأسعار|ميزانيه|ميزانية|تجميعة|تجميعه|كرت شاشة|كارت شاشة|معالج|بروسيسور|رامات|مزود طاقة|مزود الباور|gpu|cpu|motherboard|graphics card|recommend|suggest|best .*?(gpu|cpu|ram|pc|part)|price|budget|build me|buy|shopping)/i.test(q);
+  const compatibilityIntent = /(توافق|متوافق|compatible|compatibility|bottleneck|عنق الزجاجة|عنق زجاجه|ترقية|ترقيه|upgrade|power supply|psu|مزود طاقة)/i.test(q);
+  const alternativesIntent = /(بديل|بدائل|أرخص|ارخص|alternative|alternatives|cheaper|replace|استبدل)/i.test(q);
+  const detailsIntent = /(مواصفات|تفاصيل|سرعة|استهلاك|حرارة|ضمان|specs|details|warranty|power draw|temperature)/i.test(q);
+  const selected = new Set<string>();
+
+  if (catalogIntent) selected.add('list_components');
+  if (alternativesIntent) selected.add('suggest_alternatives');
+  if (detailsIntent) selected.add('get_component_details');
+  if (hasBuild && compatibilityIntent) selected.add('check_compatibility');
+
+  return ADVISOR_TOOLS.filter((tool) => selected.has(tool.name));
 }
 
 /**
@@ -95,27 +119,40 @@ export async function askAdvisor(options: AdvisorOptions): Promise<AdvisorAnswer
   const hasBuild = Boolean(context?.build?.items.length);
 
   const executor = new ToolExecutor();
-  // Make the build's components "known" so citations to them validate.
   if (context?.build) executor.register(context.build.items);
 
-  const contents = toContents(history, question);
-  // The user's own language wins over the UI language: someone typing Arabic in
-  // an English UI still expects an Arabic answer. English text falls back to the
-  // UI locale, which is what makes "switch mid-conversation" feel natural.
+  const recentHistory = history.slice(-6).map((message) => ({
+    ...message,
+    content: message.content.length > 1_500 ? `${message.content.slice(0, 1_500)}\n[Earlier content trimmed]` : message.content,
+  }));
+  const contents = toContents(recentHistory, question);
   const typed = detectLocale(question);
   const locale = typed === 'ar' ? 'ar' : (options.locale ?? typed);
-  const systemInstruction = advisorSystemInstruction(hasBuild, locale);
+  const tools = selectAdvisorTools(question, hasBuild);
+  const systemInstruction = `${advisorSystemInstruction(hasBuild, locale)}${buildContextInstruction(context)}`;
+
+  // Warm the data source while Gemini is producing its first streamed turn.
+  // The AI-specific catalogue path skips the secondary Sigma feed, and the
+  // catalogue module coalesces concurrent loads and caches the result.
+  if (tools.some((tool) => tool.name === 'list_components')) warmCatalogueForAI();
 
   let text = '';
+  let toolCallsUsed = 0;
 
-  for (let round = 0; round < MAX_TOOL_ROUNDS; round += 1) {
+  // Most questions need one generation. Catalogue questions usually need two
+  // (tool request + final answer); a third no-tools pass is only used if the
+  // model insists on another tool batch.
+  for (let round = 0; round <= MAX_TOOL_ROUNDS; round += 1) {
     if (signal?.aborted) throw new AIError('aborted', 'Cancelled.');
 
+    const allowTools = round < MAX_TOOL_ROUNDS && tools.length > 0 && toolCallsUsed < MAX_TOOL_CALLS;
     const result = await geminiClient.generate(contents, {
       model: 'chat',
       systemInstruction,
-      tools: ADVISOR_TOOLS,
+      ...(allowTools ? { tools } : {}),
       temperature: 0.6,
+      thinkingLevel: 'MINIMAL',
+      maxOutputTokens: 1_200,
       onToken: (chunk) => {
         text += chunk;
         onToken(chunk);
@@ -128,40 +165,31 @@ export async function askAdvisor(options: AdvisorOptions): Promise<AdvisorAnswer
       break;
     }
 
-    // Replay the model turn exactly as Gemini returned it — the functionCall
-    // parts carry the `thoughtSignature` the next request must echo back.
     contents.push(modelTurn(result));
+    const remainingBudget = Math.max(0, MAX_TOOL_CALLS - toolCallsUsed);
+    const callsToRun = result.toolCalls.slice(0, remainingBudget);
+    toolCallsUsed += callsToRun.length;
 
-    // One `functionResponse` part per call, in the same order as the calls.
-    const parts: GeminiContentPart[] = [];
-    for (const call of result.toolCalls) {
-      if (call.name === 'get_build') {
-        parts.push({
-          functionResponse: {
-            name: 'get_build',
-            response: buildSnapshot(context),
-            ...(call.id ? { id: call.id } : {}),
-          },
-        });
-        continue;
+    const parts = await Promise.all(result.toolCalls.map(async (call, index): Promise<GeminiContentPart> => {
+      if (!allowTools || index >= callsToRun.length || !tools.some((tool) => tool.name === call.name)) {
+        return { functionResponse: {
+          name: call.name,
+          response: { error: 'Tool budget reached or this tool is not enabled for this question. Answer using the available context.' },
+          ...(call.id ? { id: call.id } : {}),
+        } };
       }
-
       try {
         const { result: toolResult, summary } = await executor.run(call as ToolCall);
         options.onTool?.({ name: call.name, summary });
-        parts.push({
-          functionResponse: { name: call.name, response: toolResult, ...(call.id ? { id: call.id } : {}) },
-        });
+        return { functionResponse: { name: call.name, response: toolResult, ...(call.id ? { id: call.id } : {}) } };
       } catch (error) {
-        parts.push({
-          functionResponse: {
-            name: call.name,
-            response: { error: error instanceof Error ? error.message : 'Tool failed' },
-            ...(call.id ? { id: call.id } : {}),
-          },
-        });
+        return { functionResponse: {
+          name: call.name,
+          response: { error: error instanceof Error ? error.message : 'Tool failed' },
+          ...(call.id ? { id: call.id } : {}),
+        } };
       }
-    }
+    }));
     contents.push({ role: 'user', parts });
   }
 

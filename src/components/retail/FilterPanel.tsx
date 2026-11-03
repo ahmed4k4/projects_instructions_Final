@@ -25,11 +25,13 @@ export function FilterPanel({
   filters,
   onChange,
   categories,
+  brands,
   className,
 }: {
   filters: SearchFilters;
   onChange: (next: SearchFilters) => void;
   categories: Array<{ category: ComponentCategory; count: number }>;
+  brands: Array<{ brand: string; count: number }>;
   className?: string;
 }) {
   const { t } = useTranslation();
@@ -42,11 +44,18 @@ export function FilterPanel({
     onChange({ ...filters, retailerIds: next.length ? next : undefined });
   };
 
+  const toggleBrand = (brand: string) => {
+    const current = filters.brands ?? [];
+    const next = current.includes(brand) ? current.filter((b) => b !== brand) : [...current, brand];
+    onChange({ ...filters, brands: next.length ? next : undefined });
+  };
+
   const reset = () =>
     onChange({
       query: filters.query,
       category: null,
       retailerIds: undefined,
+      brands: undefined,
       inStockOnly: false,
       minPriceEgp: undefined,
       maxPriceEgp: undefined,
@@ -80,6 +89,40 @@ export function FilterPanel({
             />
           ))}
         </div>
+      </section>
+
+      {/* Brand ---------------------------------------------------------- */}
+      <section>
+        <h3 className="mb-2 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+          {t('search.brand')}
+        </h3>
+
+        {brands.length === 0 ? (
+          <p className="px-2 text-[11px] text-muted-foreground">{t('common.loading')}</p>
+        ) : (
+          <div className="max-h-56 space-y-0.5 overflow-y-auto pe-1">
+            {brands.map(({ brand, count }) => {
+              const checked = filters.brands?.includes(brand) ?? false;
+              return (
+                <label
+                  key={brand}
+                  className="flex min-h-11 cursor-pointer items-center gap-2.5 rounded-lg px-2 text-xs transition-colors hover:bg-surface-elevated"
+                >
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => toggleBrand(brand)}
+                    className="size-4 shrink-0 accent-primary"
+                  />
+                  <span className="min-w-0 flex-1 truncate">{brand}</span>
+                  {/* The count is the number of listings, so a shopper can tell
+                      a major brand from one with a single imported card. */}
+                  <span className="shrink-0 font-mono text-[10.5px] text-muted-foreground">{count}</span>
+                </label>
+              );
+            })}
+          </div>
+        )}
       </section>
 
       {/* Price ---------------------------------------------------------- */}

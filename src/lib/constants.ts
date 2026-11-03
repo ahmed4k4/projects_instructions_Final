@@ -130,26 +130,18 @@ export const USE_CASE_MAP: Record<UseCase, UseCaseMeta> = USE_CASES.reduce(
 /**
  * Egypt is the target market: every price in the UI is EGP.
  *
- * The seed catalogue predates this and carries USD list prices, so it is
- * converted once, at read time, by `USD_TO_EGP`. Live retailer prices (from
- * `retailer_products`) are already EGP and always win over a converted seed price.
+ * All persisted component prices and live retailer offers must be normalized to EGP
+ * before they reach the UI or AI tools. Legacy rows are converted by the
+ * repair migration (`010_price_units.sql`) using `USD_EGP_RATE`.
  */
 export const CURRENCY = 'EGP';
 
-/**
- * Static conversion rate for the offline seed catalogue.
- *
- * A hardcoded rate is a documented compromise, not an oversight: the seed is
- * demo data with no live feed, and the alternative (an FX API call on every page
- * load) costs more than it is worth. Update it when the pound moves materially.
- */
-const USD_TO_EGP = 50;
+/* -------------------------------------------------------------------------- */
+/*  Presets                                                                    */
+/* -------------------------------------------------------------------------- */
 
-/** Budget presets, in EGP (approx. $1k / $1.5k / $2k / $3k / $4.5k at 50). */
+/** Budget presets, all denominated in Egyptian pounds (EGP). */
 export const BUDGET_PRESETS = [50_000, 75_000, 100_000, 150_000, 225_000] as const;
-
-/** Convert a seed (USD) price to EGP. Live EGP prices must not pass through here. */
-export const toEgp = (usdPrice: number): number => Math.round(usdPrice * USD_TO_EGP);
 
 export const RESOLUTIONS = ['1080p', '1440p', '4K'] as const;
 

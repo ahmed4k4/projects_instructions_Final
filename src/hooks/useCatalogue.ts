@@ -1,11 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
-import type { ComponentCategory } from '@/types/components';
 import type { CompatibilityRule } from '@/lib/compatibility/types';
 import type { BenchmarkRow } from '@/lib/performance/types';
 import type { Resolution } from '@/lib/performance/types';
-import { listComponents } from '@/services/componentsService';
 import { isSupabaseConfigured, supabase } from '@/services/supabaseClient';
-import { sampleComponents } from '@/lib/sampleData';
 
 /**
  * Rules used by the builder's live compatibility panel.
@@ -207,30 +204,11 @@ export function useBenchmarks() {
 
 /* -------------------------------------------------------------------------- */
 
-/** Full catalogue for client-side scoring/diffing (32 rows — cheap to hold). */
-async function loadCatalogue(): Promise<import('@/types/components').PCComponent[]> {
-  try {
-    const rows = isSupabaseConfigured ? await listComponents() : sampleComponents;
-    return rows.length ? rows : sampleComponents;
-  } catch {
-    return sampleComponents;
-  }
-}
-
-export function useCatalogue() {
-  return useQuery({
-    queryKey: ['catalogue'] as const,
-    queryFn: loadCatalogue,
-    staleTime: 10 * 60 * 1000,
-  });
-}
-
-/** Count of active components per category, for the builder sidebar badges. */
-export function useCategoryCounts(): Partial<Record<ComponentCategory, number>> {
-  const { data } = useCatalogue();
-  const counts: Partial<Record<ComponentCategory, number>> = {};
-  for (const component of data ?? []) {
-    counts[component.category] = (counts[component.category] ?? 0) + 1;
-  }
-  return counts;
-}
+/**
+ * REMOVED in Phase 15: `useCatalogue`.
+ *
+ * It was a second reader of the same data with its own query key, so a page
+ * could hold two different catalogues at once — the Smart Builder resolving IDs
+ * against one while the Builder showed the other. `hooks/useComponents` is now
+ * the single reader (query key `CATALOGUE_KEY`), and every page uses it.
+ */

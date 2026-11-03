@@ -28,11 +28,9 @@ import {
   buildUserInstruction,
 } from './prompts/buildGenerator';
 import { fallbackBuild } from '@/lib/scoring/fallbackBuild';
-import { isSupabaseConfigured } from './supabaseClient';
-import { sampleComponents } from '@/lib/sampleData';
-import { listComponents } from './componentsService';
+import { loadCatalogue } from '@/hooks/useComponents';
 
-const MAX_TOOL_ROUNDS = 8;
+const MAX_TOOL_ROUNDS = 3;
 
 export interface BuildAgentOptions {
   /** Streamed narration text ("Starting with the GPU — …"). */
@@ -68,10 +66,9 @@ function extractFinalize(toolCalls: ToolCall[]): FinalizePayload | null {
 
 async function catalogue(): Promise<PCComponent[]> {
   try {
-    const rows = isSupabaseConfigured ? await listComponents() : sampleComponents;
-    return rows.length ? rows : sampleComponents;
+    return await loadCatalogue();
   } catch {
-    return sampleComponents;
+    return [];
   }
 }
 
@@ -124,6 +121,8 @@ export async function generateBuild(
         tools,
         temperature: 0.4,
         onToken: options.onNarration,
+        maxOutputTokens: 1_536,
+        thinkingLevel: 'MINIMAL',
         signal: options.signal,
       });
 
@@ -156,22 +155,19 @@ export async function generateBuild(
       // Execute the tool calls and feed the results back.
       contents.push(modelTurn(result));
 
-      const responseParts: GeminiContent[] = [];
-      for (const call of result.toolCalls) {
+      const responseParts = await Promise.all(result.toolCalls.map(async (call): Promise<GeminiContent> => {
         try {
           const { result: toolResult, summary } = await executor.run(call);
           options.onTool?.({ name: call.name, summary });
-          responseParts.push(toolResultPart(call.name, toolResult, call.id));
+          return toolResultPart(call.name, toolResult, call.id);
         } catch (error) {
-          responseParts.push(
-            toolResultPart(
-              call.name,
-              { error: error instanceof Error ? error.message : 'Tool failed' },
-              call.id,
-            ),
+          return toolResultPart(
+            call.name,
+            { error: error instanceof Error ? error.message : 'Tool failed' },
+            call.id,
           );
         }
-      }
+      }));
       contents.push(...responseParts);
     }
 
@@ -240,7 +236,7 @@ export async function refineBuild(
   req: AIBuildRequest,
   options: BuildAgentOptions = {},
 ): Promise<AIBuildResponse> {
-  const inventory = current.map((c) => `- ${c.category}: ${c.name} ($${c.price})`).join('\n');
+  const inventory = current.map((c) => `- ${c.category}: ${c.name} (EGP ${Math.round(c.price).toLocaleString('en-EG')})`).join('\n');
 
   const notes = [
     req.notes,

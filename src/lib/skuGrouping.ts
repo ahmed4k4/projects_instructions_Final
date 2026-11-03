@@ -51,7 +51,10 @@ export function skuKey(name: string): string | null {
 
   // Memory size belongs to the identity. Read it before trimming, because the
   // capacity is usually the last meaningful token.
-  const memory = firstNumber(n, /\b(\d{1,2}) ?gb\b/);
+  //
+  // `8G` (MSI) and `8GB` (most others) are the same capacity — matching only
+  // `8gb` split "RTX 4060 … 8G" from "RTX 4060 … 8GB" into two products.
+  const memory = firstNumber(n, /\b(\d{1,2}) ?g(?:b)?\b/);
 
   /* ── CPUs ─────────────────────────────────────────────────────────────── */
   if (/\bryzen\b/.test(n)) {
@@ -71,14 +74,31 @@ export function skuKey(name: string): string | null {
   }
 
   /* ── GPUs ─────────────────────────────────────────────────────────────── */
-  for (const family of ['geforce', 'radeon'] as const) {
-    if (!new RegExp(`\\b${family}\\b`).test(n)) continue;
+  /**
+   * A GPU is identified by its FAMILY WORD, and retailers do not agree on it.
+   *
+   * The one product this page exists for arrives under both spellings:
+   *
+   *   Elnekhely: "ASUS Dual RTX 5070 OC 12GB"        (no "GeForce")
+   *   Elbadr:    "ASUS Dual GeForce RTX 5070 OC 12GB"
+   *
+   * Matching only `\bgeforce\b` gave those two different keys (`5070|12` vs
+   * `geforce|5070|12`), so the same card appeared as two separate results and was
+   * never compared. The brand prefixes RTX/GTX/RX are unambiguous on their own.
+   */
+  const family = /\bgeforce\b|\brtx\b|\bgtx\b/.test(n)
+    ? 'geforce'
+    : /\bradeon\b|\brx\b/.test(n)
+      ? 'radeon'
+      : null;
 
-    // "GeForce RTX 5070 Ti" → 5070 ; "Radeon RX 9060 XT" → 9060
+  if (family) {
+    // "GeForce RTX 5070 Ti" → 5070 ; "ASUS Dual RTX 5070" → 5070 ; "RX 9060 XT" → 9060
     const model =
       firstNumber(n, new RegExp(`\\b${family}\\s+(?:rtx|rx)?\\s*(\\d{3,4})\\b`)) ||
+      firstNumber(n, /\b(?:rtx|gtx)\s*(\d{3,4})\b/) ||
       firstNumber(n, /\brx\s*(\d{4})\b/);
-    if (!model) continue;
+    if (!model) return null;  // "RTX 5070" → no fallthrough to other rules
 
     // Only look a short way past the model number: "Ti" is a variant, a "Ti"
     // appearing 30 characters later is a different sentence.
@@ -89,21 +109,46 @@ export function skuKey(name: string): string | null {
   }
 
   /* ── Motherboards ─────────────────────────────────────────────────────── */
-  // A chipset is NOT a model: keying on X870E merged a Gigabyte Aero, an ASUS
-  // Strix-E and a Crosshair HERO into one price group. The model is the vendor's
-  // line name before the chipset ("ROG STRIX X870E-E", "MAG B650 TOMAHAWK").
+  /**
+   * A chipset is NOT the model.
+   *
+   * Keying on brand + chipset + generic line words merged five different ASUS
+   * boards (PRIME Z790-P, H610M-A, B760-PLUS D4, B860M-A-CSM, …) into ONE price
+   * group — measured with scripts/measure-grouping.mjs against the live
+   * catalogue, which is how the merge was found.
+   *
+   * The board CODE is the model, and its suffix is the part that differs:
+   * PRIME B650M-K ≠ PRIME B650M-R ≠ PRIME B650M-A II. A brand word ("Intel") is
+   * not a code, and a case that merely "supports ... Motherboards" is not a board
+   * (the caller has already excluded the case category, but ``line`` never
+   * matches a real board name).
+   */
   if (/\b(motherboard|mainboard|atx|matx|itx)\b/.test(n) || /\bx?[bza]\d{3}[a-z]*\b/.test(n)) {
-    const chipset = firstNumber(n, /\b([xhbza]\d{3}[a-z]{0,2})\b/);
-    if (!chipset) return null;
+    /**
+     * The board CODE, never the socket.
+     *
+     * The generic `[a-z]{2,5}\d{3}` shape matched "lga1700" — the socket every
+     * LGA1700 board shares — so ASUS PRIME Z790-P, H610M-A, B760-PLUS and
+     * B860M-A collapsed into ONE price group and one board's price appeared under
+     * another's name. Measured by scripts/measure-grouping.mjs after the previous
+     * fix: 5 listings in one group.
+     *
+     * A chipset is a letter set plus three digits (Z790, B650, H610M, X870E), and
+     * the suffix after it is part of the model (B650M-K ≠ B650M-R). Socket names
+     * (LGA1700/AM5) and the Intel/AMD brand words are excluded explicitly.
+     */
+    const board =
+      firstNumber(n, /\b([xbza]\d{3}[a-z]{0,3}(?:[-\s][a-z0-9]{1,4})?)\b/) ??
+      firstNumber(n, /\b([a-z]{2,5}\d{3}[a-z0-9]{0,6})\b/);
+    if (!board || /^(lga\d{3,4}|am[45]|intel|amd|nvidia|geforce|radeon|ddr[45])$/.test(board)) return null;
 
-    // Brand + line tokens that precede the chipset identify the board.
-    const brand = firstNumber(n, /\b(asus|msi|gigabyte|asrock|biostar|evga|nzxt)\b/) || 'generic';
-    const lineWords = ['rog', 'strix', 'tuf', 'prime', 'proart', 'crosshair', 'aero', 'aorus',
-      'tomahawk', 'mag', 'mpg', 'mpeg', 'edge', 'steel', 'legend', 'taichi', 'phantom', 'steel',
-      'b650m', 'b760m', 'z790', 'tuf', 'plus', 'wifi', 'hero', 'e', 'a', 'gaming'];
-    const line = lineWords.filter((w) => new RegExp(`\\b${w}\\b`).test(n));
+    const brand = firstNumber(n, /\b(asus|msi|gigabyte|asrock|biostar|evga|nzxt|aorus)\b/) || 'generic';
+    const family = firstNumber(
+      n,
+      /\b(rog strix|rog crosshair|rog maximus|tuf gaming|prime|proart|aorus|aero|master|elite|tomahawk|mag|mpg)\b/,
+    );
 
-    return ['mb', brand, chipset, ...line.slice(0, 3)].join('|');
+    return ['mb', brand, board, family].filter(Boolean).join('|');
   }
 
   /* ── Everything else ──────────────────────────────────────────────────── */
@@ -156,12 +201,42 @@ export function partnerKey(name: string): string {
  */
 export function groupLabel(names: string[]): string {
   if (names.length === 0) return '';
+  /**
+   * Choose the label that distinguishes this group from its siblings — not just
+   * the shortest name.
+   *
+   * Measured on the live catalogue: "GIGABYTE GeForce RTX 5070 Ti EAGLE OC SFF
+   * 16G – Blackwell Architecture…" and "… WINDFORCE OC SFF 16G – NVIDIA
+   * Blackwell GPU…" are two different cards, but a two-line clamp cut both at
+   * "GIGABYTE RTX 5070 TI", so the grid showed what looked like a duplicate with
+   * two prices. `groupLabel` therefore prefers a name whose board-partner line
+   * (EAGLE / WINDFORCE / TUF / SUPRIM …) appears EARLY — inside the part a card
+   * actually displays — before falling back to brevity.
+   */
+  const MARKETING = /\b(blackwell architecture|nvidia blackwell gpu|graphics card|gaming graphics|oc edition|architecture)\b/i;
+
+  /**
+   * Brevity is the tie-breaker ONLY, never the leader: a short name is easier to
+   * read, but two short names that share an opening can describe different
+   * products. `partnerKey` therefore wins when it is present and early, and
+   * length decides between two otherwise equal candidates.
+   */
   const scored = names
-    .map((name) => ({
-      name,
-      // Prefer the shortest name that still contains a model number.
-      score: (/\d/.test(name) ? 100 : 0) - name.length / 4,
-    }))
+    .map((name) => {
+      const partner = partnerKey(name).split('|').filter(Boolean).pop() ?? '';
+      const partnerAt = partner ? name.toLowerCase().indexOf(partner) : -1;
+      // A distinguishing word within the first ~42 characters survives the clamp
+      // (the card truncates at two lines).
+      const early = partnerAt >= 0 && partnerAt < 42;
+      const noise = (name.match(MARKETING) ?? []).length;
+
+      return {
+        name,
+        // 1st: the board-partner line, early. 2nd: brevity (0..~2). 3rd: a model
+        // number present. Marketing tail is a penalty, not a filter.
+        score: (early ? 10 : 0) - name.length / 60 - noise * 2 + (/\d/.test(name) ? 0.5 : 0),
+      };
+    })
     .sort((a, b) => b.score - a.score);
 
   return scored[0]?.name ?? names[0] ?? '';

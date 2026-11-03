@@ -1,14 +1,22 @@
+import { useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { BellRing, Cloud, Gauge, Layers, Plus, Wrench } from 'lucide-react';
+import { BellRing, Cloud, Gauge, Info, Layers, Plus, Wrench } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { BuildCard } from '@/components/domain/BuildCard';
 import { EmptyState } from '@/components/shared/EmptyState';
 import { AnimatedNumber } from '@/components/shared/AnimatedNumber';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { sampleBuilds } from '@/lib/sampleData';
+import { useComponents } from '@/hooks/useComponents';
+import { useCompatibilityRules } from '@/hooks/useCatalogue';
+import { buildPrebuilts } from '@/lib/prebuiltFromCatalogue';
+import type { SampleBuild } from '@/lib/sampleData';
+import { useUIStore } from '@/store/useUIStore';
+import type { BuildScoreBreakdown } from '@/types/build';
+import { useQuery } from '@tanstack/react-query';
+import { listMyBuilds } from '@/services/buildsService';
 import { useBuildStore, useBuildTotals } from '@/store/useBuildStore';
 import { formatCurrency } from '@/lib/utils';
 import { makeStagger, staggerItem } from '@/lib/motion';
@@ -16,11 +24,19 @@ import { useAuth } from '@/hooks/useAuth';
 
 const stagger = makeStagger(0.07, 0.05);
 
-const myBuilds = sampleBuilds.slice(0, 3);
+/** Breakdown for a cloud build that was saved before scoring existed. */
+const EMPTY_BREAKDOWN: BuildScoreBreakdown = {
+  compatibility: 0,
+  performance: 0,
+  value: 0,
+  efficiency: 0,
+  upgradability: 0,
+};
 
 export default function Dashboard() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const language = useUIStore((state) => state.language);
   const totals = useBuildTotals();
   const activeName = useBuildStore((state) => state.buildName);
   const budget = useBuildStore((state) => state.budget);
@@ -28,6 +44,56 @@ export default function Dashboard() {
   const { user, available } = useAuth();
   const isLocal = !user;
   const displayName = activeName?.trim() ? activeName : t('builder.untitled');
+
+  /**
+   * The signed-in user's own builds.
+   *
+   * Signed-in + database -> their builds; signed-in without one -> the generated
+   * prebuilt configurations, clearly labelled. Anonymous visitors never fetch:
+   * "my builds" only exists locally for them, which the Local Workspace banner
+   * already states.
+   */
+  const { data: cloudBuilds } = useQuery({
+    queryKey: ['my-builds', user?.id ?? 'anon'] as const,
+    queryFn: () => listMyBuilds(6),
+    staleTime: 60 * 1000,
+    enabled: Boolean(user) && available,
+  });
+
+  /** Generated from live stock — never a curated demo row (see lib/prebuiltFromCatalogue). */
+  const { data: catalogue = [] } = useComponents();
+  const { data: rules = [] } = useCompatibilityRules();
+  const prebuilts = useMemo(
+    () => buildPrebuilts(catalogue, rules, language),
+    [catalogue, rules, language],
+  );
+
+  /**
+   * Cloud rows and generated configurations are different shapes: a `SavedBuild`
+   * is a database row (nullable score, no component ids), a `SampleBuild` is a
+   * display model. Converting at the boundary keeps the card honest and the
+   * types honest, instead of a union that leaks `null` into the UI.
+   */
+  const myBuilds: SampleBuild[] = useMemo(() => {
+    if (!cloudBuilds || cloudBuilds.length === 0) return prebuilts.slice(0, 3);
+
+    return cloudBuilds.map((build) => ({
+      id: build.id,
+      name: build.name,
+      slug: build.slug,
+      description: build.description ?? '',
+      useCase: build.useCase ?? 'gaming',
+      totalPrice: build.totalPrice,
+      totalPowerWatts: build.totalPowerWatts,
+      buildScore: build.buildScore ?? 0,
+      scoreBreakdown: build.scoreBreakdown ?? EMPTY_BREAKDOWN,
+      isPublic: build.isPublic,
+      componentIds: [],
+      createdAt: build.createdAt,
+    }));
+  }, [cloudBuilds, prebuilts]);
+
+  const buildsAreSamples = !cloudBuilds || cloudBuilds.length === 0;
 
   const averageScore = Math.round(
     myBuilds.reduce((sum, build) => sum + build.buildScore, 0) / Math.max(1, myBuilds.length),
@@ -193,7 +259,15 @@ export default function Dashboard() {
             onAction={() => navigate('/builder')}
           />
         ) : (
-          <motion.div
+          <div>
+            {buildsAreSamples ? (
+              <p className="mt-4 flex items-start gap-2 rounded-lg border border-warning/25 bg-warning/5 px-3 py-2 text-[11px] leading-relaxed text-warning">
+                <Info className="mt-0.5 size-3.5 shrink-0" />
+                <span>{t('dashboard.samplesNote')}</span>
+              </p>
+            ) : null}
+
+            <motion.div
             variants={stagger}
             initial="hidden"
             animate="visible"
@@ -202,7 +276,8 @@ export default function Dashboard() {
             {myBuilds.map((build) => (
               <BuildCard key={build.id} build={build} />
             ))}
-          </motion.div>
+            </motion.div>
+          </div>
         )}
       </div>
     </div>

@@ -7,7 +7,10 @@ import { PageHeader } from '@/components/layout/PageHeader';
 import { BuildCard } from '@/components/domain/BuildCard';
 import { Button } from '@/components/ui/button';
 import { PREBUILT_FILTERS } from '@/lib/navigation';
-import { sampleBuilds } from '@/lib/sampleData';
+import { buildPrebuilts } from '@/lib/prebuiltFromCatalogue';
+import { useComponents } from '@/hooks/useComponents';
+import { useCompatibilityRules } from '@/hooks/useCatalogue';
+import { useUIStore } from '@/store/useUIStore';
 import { spring, makeStagger } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import type { UseCase } from '@/types/build';
@@ -16,12 +19,30 @@ const stagger = makeStagger(0.07, 0.05);
 
 export default function PrebuiltConfigs() {
   const { t } = useTranslation();
+  const language = useUIStore((state) => state.language);
   const [filter, setFilter] = useState<(typeof PREBUILT_FILTERS)[number]['id']>('all');
+
+  /**
+   * Configurations are GENERATED from live stock, not hard-coded.
+   *
+   * The three builds used to be hand-written against `sampleComponents`, so the
+   * parts were not sold anywhere in Egypt and opening one loaded components that
+   * did not exist. See `lib/prebuiltFromCatalogue`.
+   */
+  const { data: catalogue = [], isLoading } = useComponents();
+  const { data: rules = [] } = useCompatibilityRules();
+
+  const prebuilts = useMemo(
+    () => buildPrebuilts(catalogue, rules, language),
+    [catalogue, rules, language],
+  );
 
   const builds = useMemo(
     () =>
-      filter === 'all' ? sampleBuilds : sampleBuilds.filter((build) => build.useCase === (filter as UseCase)),
-    [filter],
+      filter === 'all'
+        ? prebuilts
+        : prebuilts.filter((build) => build.useCase === (filter as UseCase)),
+    [filter, prebuilts],
   );
 
   return (
@@ -40,7 +61,11 @@ export default function PrebuiltConfigs() {
         }
       />
 
-      <div className="mt-8 flex items-center gap-1 overflow-x-auto rounded-xl border border-border bg-surface/60 p-1 no-scrollbar">
+      <div className="mt-8 flex items-center justify-between gap-4">
+        <p className="text-[11px] text-muted-foreground">{t('prebuilt.liveNote')}</p>
+      </div>
+
+      <div className="mt-3 flex items-center gap-1 overflow-x-auto rounded-xl border border-border bg-surface/60 p-1 no-scrollbar">
         {PREBUILT_FILTERS.map((item) => {
           const active = filter === item.id;
           return (
@@ -68,13 +93,13 @@ export default function PrebuiltConfigs() {
         })}
       </div>
 
-      {builds.length === 0 ? (
+      {isLoading ? (
+        <p className="mt-10 text-center text-sm text-muted-foreground">{t('common.loading')}</p>
+      ) : builds.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-dashed border-border-strong p-16 text-center">
           <Layers className="mx-auto size-8 text-muted-foreground" />
           <p className="mt-4 text-sm font-medium">{t('prebuilt.emptyCategory')}</p>
-          <p className="mt-1 text-xs text-muted-foreground">
-            The catalogue grows every release — try “All builds”.
-          </p>
+          <p className="mt-1 text-xs text-muted-foreground">{t('prebuilt.emptyHint')}</p>
         </div>
       ) : (
         <motion.div

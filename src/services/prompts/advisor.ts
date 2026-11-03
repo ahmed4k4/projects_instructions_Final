@@ -60,11 +60,6 @@ export const ADVISOR_TOOLS: ToolDeclaration[] = [
       required: ['componentIds'],
     },
   },
-  {
-    name: 'get_build',
-    description: 'Read the build currently in context (parts, price, watts, score).',
-    parameters: { type: 'OBJECT', properties: {} },
-  },
 ];
 
 export function advisorSystemInstruction(hasBuildContext: boolean, locale: PromptLocale = 'en'): string {
@@ -76,13 +71,19 @@ STYLE
 - Answer in markdown. Lead with the direct answer, then the reasoning. Keep it under ~180 words unless the user asks for depth.
 - Be honest about uncertainty. Never invent benchmarks or specifications.
 - When you mention a component that is already in the user's build or that you looked up with a tool, cite it inline as [[component:<id>|<Name>]] so the UI can render a chip. Only cite IDs that exist in a tool result.
-- Numbers about the user's own build (price, watts, score, compatibility) MUST come from the get_build / check_compatibility tools, not from memory.
+- All budgets, prices, and component costs are in Egyptian pounds (EGP / ج.م.) only. Never use USD, dollars, or convert prices to another currency.
+- Numbers about the user's own build (price, watts, score, compatibility) must come from the attached CURRENT BUILD SNAPSHOT or check_compatibility tool, never from model memory.
 
 ${
   hasBuildContext
-    ? 'A build is in context. Treat it as the starting point for every answer and only suggest changes that are compatible with it.'
+    ? 'A build snapshot may be supplied below. Treat that snapshot as the authoritative source and do not call a tool merely to read it.'
     : 'No build is in context. Ask for budget and purpose before recommending specific parts if the question is vague.'
 }
+
+TOOL BUDGET
+- Use tools only when live Egyptian catalogue data, exact component details, or compatibility validation is needed.
+- Prefer one compact batch of independent calls. Never repeat a search that already returned enough options.
+- If the provided context is sufficient, answer immediately without tools.
 
 If a question is outside PC building, answer briefly and steer back.`;
 }
@@ -102,7 +103,7 @@ export function advisorSuggestions(
           'هل هذه التجميعة هادئة بما يكفي لغرفة نوم؟',
         ]
       : [
-          budget ? `ابنِ لي جهاز ألعاب بدقّة 1440p بميزانية ${budget} دولار` : 'ابنِ لي جهاز ألعاب بدقّة 1440p بميزانية 1500 دولار',
+          budget ? `ابنِ لي جهاز ألعاب بدقّة 1440p بميزانية ${budget.toLocaleString('en-EG')} جنيه مصري` : 'ابنِ لي جهاز ألعاب بدقّة 1440p بميزانية 75,000 جنيه مصري',
           'أي كرت شاشة أحتاج لتشغيل نموذج 13B محليًا؟',
           'هل DDR5 أفضل من DDR4 في 2026؟',
           'اشرح عنق الزجاجة في المعالج بفقرة واحدة.',
@@ -118,7 +119,7 @@ export function advisorSuggestions(
     ];
   }
   return [
-    budget ? `Build me a $${budget} 1440p gaming PC` : 'Build me a $1,500 1440p gaming PC',
+    budget ? `Build me a 1440p gaming PC with a budget of EGP ${budget.toLocaleString('en-EG')}` : 'Build me a 1440p gaming PC with a budget of EGP 75,000',
     'What GPU do I need to run a 13B model locally?',
     'Is DDR5 worth it over DDR4 in 2026?',
     'Explain CPU bottlenecking in one paragraph.',

@@ -180,7 +180,7 @@
       "retailerId": "sigma",
       "externalId": "wd-black-sn850x-nvme-ssd-2tb-pcie-gen4-x4-7300mbs-read-6600mbs-write-m2-2280-heatsink-1200-tbw-3-year-warranty-ihjeinesy",
       "name": "WD_BLACK SN850X NVMe SSD 2TB, PCIe Gen4 x4, 7300MB/s Read, 6600MB/s Write, M.2 2280, Heatsink, 1200 TBW, 3-Year Warranty",
-      "category": "storage",
+      "category": "cooling",
       "priceEgp": 19500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -220,20 +220,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx9-83dv012aed-intel-core-i5-13450hx-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-512gb-ssd-156-inch-fhd-156-inch",
-      "name": "LENOVO LOQ 15IRX9 83DV012AED - Intel Core i5-13450HX - NVIDIA GeForce RTX 3050 6GB - 16GB DDR5 4800 - 512GB SSD M.2 - 15.6 Inch FHD 144Hz - Grey",
-      "category": "cpu",
-      "priceEgp": 58999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx9-83dv012aed-intel-core-i5-13450hx-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-512gb-ssd-156-inch-fhd-156-inch-fhd-dos-grey-qeukvrcb9sou",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1eb04cf0-4f18-43c1-a5ad-cf254b43a8f5&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "amd-ryzen-5-9600-am5-6core-12-thread-65w-box-iseh1qydragf",
       "name": "AMD Ryzen 5 9600 AM5 (6Core \\12 Thread) 65W BOX",
       "category": "cpu",
@@ -264,7 +250,7 @@
       "retailerId": "sigma",
       "externalId": "seasonic-core-gx-850-atx3-850w-atx-31-80-plus-gold-cybenetics-platinum-fully-modular-hydro-dynamic-bearing-fan-kda0gtu9z",
       "name": "SEASONIC Core GX-850 ATX3 850W Atx 3.1 80 Plus Gold Cybenetics Platinum Fully Modular Hydro Dynamic Bearing Fan",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 5249.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -278,7 +264,7 @@
       "retailerId": "sigma",
       "externalId": "seasonic-core-gx-850-atx3-850w-atx-31-80-plus-gold-cybenetics-platinum-fully-modular-hydro-dynamic-bearing-fan-kda0gtu9z",
       "name": "SEASONIC Core GX-850 ATX3 850W Atx 3.1 80 Plus Gold Cybenetics Platinum Fully Modular Hydro Dynamic Bearing Fan",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 5749.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -304,20 +290,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx9-83dv01hsed-intel-core-i7-13645hx-14c20t-nvidia-geforce-rtx-4050-6g-16g-ddr5-4800hz-512g-nvme-gen4-156-",
-      "name": "LENOVO LOQ 15IRX9 83DV01HSED Intel Core i7 13645HX (14C/20T) - Nvidia Geforce RTX 4050 6G - 16G DDR5 4800HZ- 512G NVMe Gen4 - 15.6 inch IPS FHD 144Hz - White Backlit",
-      "category": "cpu",
-      "priceEgp": 68999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx9-83dv01hsed-intel-core-i7-13645hx-14c20t-nvidia-geforce-rtx-4050-6g-16g-ddr5-4800hz-512g-nvme-gen4-156-inch-ips-fhd-144hz-white-backlit-askwimi4rvvn",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F17868eb2-d9b9-46a2-8d1b-620869c1761a&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "gigabyte-rtx-5070-ti-windforce-oc-sff-16g-smjb9dvrerwe",
       "name": "Gigabyte RTX 5070 Ti WINDFORCE OC SFF 16G",
       "category": "gpu",
@@ -332,37 +304,9 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "msi-thin-15-b13uc-intel-core-i7-13620h-nvidia-geforce-rtx-3050-4gb-16gb-ddr4-3200mhz-512gb-nvme-156-fhd-19201080-144hz-4",
-      "name": "Msi Thin 15 B13UC Intel Core i7-13620H - Nvidia GeForce RTX 3050 4GB - 16GB DDR4 3200MHz - 512GB NVMe - 15.6\" FHD (1920*1080), 144Hz 45%NTSC IPS-Level - Blue Backlit - 9S7-16R831-3469",
-      "category": "cpu",
-      "priceEgp": 47499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=msi-thin-15-b13uc-intel-core-i7-13620h-nvidia-geforce-rtx-3050-4gb-16gb-ddr4-3200mhz-512gb-nvme-156-fhd-19201080-144hz-45ntsc-ips-level-blue-backlit-9s7-16r831-3469-3lh4pbbdrh6s",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2e78a64e-2c6e-43ed-a9ef-7390044fa98f&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "asus-zenbook-a14-ux3407na-qd15cw-snapdragon-x2-elite-x2e88100-qualcomm-adreno-16gb-lpddr5x-on-board-not-upgradable-512gb",
-      "name": "ASUS Zenbook A14-UX3407NA-QD15CW - Snapdragon X2 Elite X2E88100 - Qualcomm Adreno - 16GB LPDDR5X on board ( Not upgradable ) - 512GB Nvme GEN 4 - 14-inch WUXGA OLED 100% DCI-P3 400nits 60Hz - Windows 11",
-      "category": "storage",
-      "priceEgp": 75499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-zenbook-a14-ux3407na-qd15cw-snapdragon-x2-elite-x2e88100-qualcomm-adreno-16gb-lpddr5x-on-board-not-upgradable-512gb-nvme-gen-4-14-inch-wuxga-oled-100-dci-p3-400nits-60hz-windows-11-uwbwz2tysos0",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F221cc9ff-baf3-4a4b-8166-9211328fac4e&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "intel-core-i5-12400f-tray-version-6c12t-25-ghz-base-44-ghz-turbo-18mb-cache-65w-lga-1700-no-cooler-ngsjfcqltdf7",
       "name": "Intel Core i5-12400F (Tray version) | 6C/12T | 2.5 GHz (Base) / 4.4 GHz (Turbo) | 18MB Cache | 65W | LGA 1700 | No Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 7200.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -376,7 +320,7 @@
       "retailerId": "sigma",
       "externalId": "intel-core-i5-12400f-tray-version-6c12t-25-ghz-base-44-ghz-turbo-18mb-cache-65w-lga-1700-no-cooler-ngsjfcqltdf7",
       "name": "Intel Core i5-12400F (Tray version) | 6C/12T | 2.5 GHz (Base) / 4.4 GHz (Turbo) | 18MB Cache | 65W | LGA 1700 | No Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 7699.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -390,7 +334,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-qube-500-flatpack-white-high-airflow-gaming-atx-pc-mid-tower-customizable-tempered-glass-vertical-gpu-moun",
       "name": "Cooler Master QUBE 500 Flatpack White High Airflow Gaming ATX PC Mid-Tower",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 3600.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -404,7 +348,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-qube-500-flatpack-white-high-airflow-gaming-atx-pc-mid-tower-customizable-tempered-glass-vertical-gpu-moun",
       "name": "Cooler Master QUBE 500 Flatpack White High Airflow Gaming ATX PC Mid-Tower",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 4399.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -472,90 +416,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-ideapad-slim-3-15irh10-83k100fled-intel-core-i5-13420h-intel-uhd-graphics-16gb-ddr5-4800mhz-512gb-ssd-m2-153-inch",
-      "name": "Lenovo IdeaPad Slim 3 15IRH10 83K100FLED Intel Core i5-13420H - Intel UHD Graphics - 16GB DDR5 4800Mhz - 512GB SSD M.2 - 15.3-Inch WUXGA IPS 60Hz - Dos",
-      "category": "cpu",
-      "priceEgp": 41999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-ideapad-slim-3-15irh10-83k100fled-intel-core-i5-13420h-intel-uhd-graphics-16gb-ddr5-4800mhz-512gb-ssd-m2-153-inch-wuxga-ips-60hz-dos-shjka2gn2ein",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3c54cc51-6f96-4320-89f9-49448a9844c0&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx10-83je00wved-i7-14700hx-rtx-5060-8g-16g-ddr5-4800hz-512g-gen4-156-ips-fhd-144hz-100-srgb-white-backlit-",
-      "name": "LENOVO LOQ 15IRX10 83JE00WVED - iIntel Core i7-14700HX - NVIDIA GeForce RTX 5060 8GB - 16GB DDR5 4800HZ - 512GB SSD M.2 - 15.6\" FHD (1920x1080) IPS 300nits Anti-glare, 100% sRGB, 144Hz G-SYNC, Luna Grey",
-      "category": "cpu",
-      "priceEgp": 79499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx10-83je00wved-i7-14700hx-rtx-5060-8g-16g-ddr5-4800hz-512g-gen4-156-ips-fhd-144hz-100-srgb-white-backlit-wob3xweizxg7",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F954be0e7-8209-4551-9a45-16daef9682fe&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "acer-nitro-v15-anv15-51-767g-intel-core-i7-13620h-16gb-512gb-ssd-nvidia-geforce-rtx-3050-6gb-156-fhd-win11-finger-print-",
-      "name": "ACER Nitro V15 ANV15-51-767G - - Intel® Core™ i7-13620H - 16GB - 512GB SSD - NVIDIA® GeForce® RTX 3050 6GB - 15.6\" FHD - Win11 - Finger Print - Black",
-      "category": "gpu",
-      "priceEgp": 54000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=acer-nitro-v15-anv15-51-767g-intel-core-i7-13620h-16gb-512gb-ssd-nvidia-geforce-rtx-3050-6gb-156-fhd-win11-finger-print-black-kwa26jyjd0eq",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffae0709f-13f7-42ee-995e-a274d1b24f34&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-legion-5-15iax10-83f0006elk-intel-core-ultra-7-255hx-geforce-rtx-5060-8gb-32gb-ddr5-56002x16-512gb-ssd-m2-151-wqx",
-      "name": "LENOVO Legion 5 15IAX10 83F0006ELK, Intel Core Ultra 7 255HX, GeForce RTX 5060 8GB, 32GB DDR5-5600(2x16), 512GB SSD M.2, 15.1\" WQXGA OLED 165Hz, Win 11, Eclipse Black",
-      "category": "cpu",
-      "priceEgp": 114999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-legion-5-15iax10-83f0006elk-intel-core-ultra-7-255hx-geforce-rtx-5060-8gb-32gb-ddr5-56002x16-512gb-ssd-m2-151-wqxga-oled-165hz-win-11-eclipse-black-tskgd1alu2yd",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffa37c96a-b7a4-4943-9678-91f28e5ea04b&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "acer-nitro-v-15-anv15-52-78um-intel-core-i7-13620h-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-512gb-nvme-gen-4-156-inch-fhd-i",
-      "name": "ACER Nitro V 15 ANV15-52-78UM - Intel Core i7-13620H - NVIDIA GeForce RTX 3050 6GB - 16GB DDR5 - 512GB Nvme GEN 4 - 15.6-inch FHD IPS 165Hz - Windows 11.",
-      "category": "cpu",
-      "priceEgp": 54000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=acer-nitro-v-15-anv15-52-78um-intel-core-i7-13620h-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-512gb-nvme-gen-4-156-inch-fhd-ips-165hz-windows-11-ogpwqbu8ndcu",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6f0c8a93-89c0-4a66-a045-62ae81a21f75&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "acer-nitro-v16s-anv16s-71-76pu-intel-core-7-240h-nvidia-geforce-rtx-5070-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-w",
-      "name": "ACER Nitro V16S-ANV16S-71-76PU - Intel Core 7 240H - NVIDIA GeForce RTX 5070 8GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16-inch WQXGA IPS 180Hz - White Backlit - Windows 11.",
-      "category": "gpu",
-      "priceEgp": 80600.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=acer-nitro-v16s-anv16s-71-76pu-intel-core-7-240h-nvidia-geforce-rtx-5070-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-wqxga-ips-180hz-white-backlit-windows-11-aaioncfvx3ym",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2a5f2601-9b94-4dd4-9d86-a612f59e0cc3&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "apnx-vertical-gpu-holder-kit-3-black-gen-5-3zjglckv7c78",
       "name": "APNX Vertical GPU Holder Kit 3 Black Gen 5",
       "category": "gpu",
@@ -578,104 +438,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=lexar-nq100-256g-ssd-25-sata-iii-6gbs-up-to-550mbs-read-3-year-warranty-r94v8qpkggno",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6d87e373-b3c9-48c2-9688-3aa5442fd45a&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lexar-32gb-ddr4-3200mhz-cl22-notebook-ram-ld4as032g-b3200gsst-sdydcindn6m6",
-      "name": "Lexar 32Gb DDR4-3200MHZ CL22 Notebook Ram LD4AS032G-B3200GSST",
-      "category": "ram",
-      "priceEgp": 12550.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lexar-32gb-ddr4-3200mhz-cl22-notebook-ram-ld4as032g-b3200gsst-sdydcindn6m6",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F01f48d60-bcd4-4f91-b168-21f491e7de02&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "asus-14-ux3405ca-su157w-intel-core-ultra-7-255h-intel-arc-graphics-16gb-lpddr5x-on-board-not-upgradable-512gb-nvme-gen-4",
-      "name": "ASUS Zenbook 14-UX3405CA-SU157W - Intel Core Ultra 7 255H - Intel Arc Graphics - 16GB LPDDR5X on board ( Not upgradable ) - 512GB Nvme GEN 4 - 14-inch 3K OLED 100% DCI-P3 500nits 120Hz - Windows 11.",
-      "category": "cpu",
-      "priceEgp": 72499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-14-ux3405ca-su157w-intel-core-ultra-7-255h-intel-arc-graphics-16gb-lpddr5x-on-board-not-upgradable-512gb-nvme-gen-4-14-inch-3k-oled-100-dci-p3-500nits-120hz-windows-11-qlnwdcaq76dz",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F0036414b-1f29-410d-b12c-efa0266e2ca4&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "asus-zenbook-a16-ux3607oa-sq485w-snapdragon-x2-elite-x2e94100-qualcomm-adreno-48gb-lpddr5x-512gb-nvme-gen-4-16-inch-3k-o",
-      "name": "ASUS Zenbook A16-UX3607OA-SQ485W - Snapdragon X2 Elite X2E94100 - Qualcomm Adreno - 48GB LPDDR5X on board ( Not upgradable ) - 512GB Nvme GEN 4 - 16-inch 3K OLED 100% DCI-P3 500nits 120Hz - Windows 11.",
-      "category": "storage",
-      "priceEgp": 102999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-zenbook-a16-ux3607oa-sq485w-snapdragon-x2-elite-x2e94100-qualcomm-adreno-48gb-lpddr5x-512gb-nvme-gen-4-16-inch-3k-oled-100-dci-p3-500nits-120hz-windows-11-pmnrxv1o0oi6",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F918df0f6-1cfd-4527-9f54-330adc62f50e&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-loq-essential-15arp10-83s000c3in-amd-ryzen-7-170-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800hz-1x16-512gb-nvme-gen",
-      "name": "Lenovo LOQ Essential 15ARP10 83S000C3IN - AMD Ryzen 7 170 - NVIDIA GeForce RTX 3050 6GB - 16GB DDR5 4800Hz (1X16) - 512GB Nvme GEN 4 - 15.6-inch FHD IPS 100% sRGB 300nits 144Hz - Windows 11.",
-      "category": "cpu",
-      "priceEgp": 56000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-essential-15arp10-83s000c3in-amd-ryzen-7-170-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800hz-1x16-512gb-nvme-gen-4-156-inch-fhd-ips-100-srgb-300nits-144hz-windows-11-8d92urvnfuaa",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F0582e0e5-9b6b-46f4-8cbd-e0866de425e8&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-",
-      "name": "Fighter B65 - AMD RYZEN 7-5700 Tray - Ocypus Gamma A40 Black ARGB - MSI B550M PRO-VDH WiFi - Gigabyte RTX 5060 EAGLE OC 8G - ACER-8G-UD100 DDR4 3200MHz (2X8) -PNY CS2230 500GB - COUGAR UNIFACE MINI RGB Case + STC 600W PSU (Black)",
-      "category": "cpu",
-      "priceEgp": 54150.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-512gb-aerocool-viewport-mini-argb-and-lux-650w-80plus-bronze-psu-utjioyoljzxc",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff57cc3fd-b9d2-406c-89eb-13d5fa584e39&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-",
-      "name": "Fighter B65 - AMD RYZEN 7-5700 Tray - Ocypus Gamma A40 Black ARGB - MSI B550M PRO-VDH WiFi - Gigabyte RTX 5060 EAGLE OC 8G - ACER-8G-UD100 DDR4 3200MHz (2X8) -PNY CS2230 500GB - COUGAR UNIFACE MINI RGB Case + STC 600W PSU (Black)",
-      "category": "cpu",
-      "priceEgp": 56525.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-512gb-aerocool-viewport-mini-argb-and-lux-650w-80plus-bronze-psu-utjioyoljzxc",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff57cc3fd-b9d2-406c-89eb-13d5fa584e39&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx9-83dv008ped-intel-core-i7-13650hx-nvidia-geforce-rtx-4050-6gb-16gb-so-dimm-ddr5-4800-512gb-ssd-m2-156-f",
-      "name": "LENOVO LOQ 15IRX9 83DV008PED- Intel® Core™ i7-13650HX - NVIDIA® GeForce RTX™ 4050 6GB - 16GB SO-DIMM DDR5-4800 - 512GB SSD M.2 - 15.6 FHD IPS 300nits Anti-glare, 100% sRGB, 144Hz",
-      "category": "gpu",
-      "priceEgp": 69499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx9-83dv008ped-intel-core-i7-13650hx-nvidia-geforce-rtx-4050-6gb-16gb-so-dimm-ddr5-4800-512gb-ssd-m2-156-fhd-ips-300nits-anti-glare-100-srgb-144hz-q9f3v8d3thu9",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F4aedf541-16db-4876-92d7-4a4441e86e62&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -726,7 +488,7 @@
       "retailerId": "sigma",
       "externalId": "amd-ryzen-5-8400f-trey-with-fan-wnlzj4fdarxn",
       "name": "AMD Ryzen 5 8400F Tray Processor with Fan",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 6150.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -752,20 +514,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx9-83dv008qed-i7-13650hx-14c20t-nvidia-rtx-3050-6g-16g-ddr5-4800hz-512g-nvme-gen4-156-ips-fhd-144hz-rmcdl",
-      "name": "LENOVO LOQ 15IRX9 83DV008QED i7 13650HX (14C/20T) - NVIDIA RTX 3050 6G - 16G DDR5 4800HZ - 512G NVME Gen4 - 15.6 IPS FHD 144Hz",
-      "category": "gpu",
-      "priceEgp": 63999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx9-83dv008qed-i7-13650hx-14c20t-nvidia-rtx-3050-6g-16g-ddr5-4800hz-512g-nvme-gen4-156-ips-fhd-144hz-rmcdlnbmgi3c",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6f28034f-2119-4676-a668-a4cddf35ff15&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "cooler-master-masterliquid-240-atmos-argb-240mm-liquid-cooler-white-az5ajvmkhuzq",
       "name": "Cooler Master MasterLiquid 240 Atmos ARGB 240mm Liquid Cooler – White",
       "category": "cooling",
@@ -774,34 +522,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-masterliquid-240-atmos-argb-240mm-liquid-cooler-white-az5ajvmkhuzq",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F42c724d6-2b8c-4f45-a51c-ed8dd0ac63f3&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx9-83dv000dax-intel-core-i7-13650hx-nvidia-geforce-rtx-4050-6gb-24gb-ddr5-4800-512gb-ssd-m2-156-fhd-ips-3",
-      "name": "LENOVO LOQ 15IRX9 83DV000DAX - Intel Core™ i7-13650HX - NVIDIA GeForce RTX 4050 6GB - 24GB DDR5-4800 - 512GB SSD M.2 - 15.6\" FHD IPS 300nits Anti-glare 100% sRGB 144Hz.",
-      "category": "gpu",
-      "priceEgp": 69400.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx9-83dv000dax-intel-core-i7-13650hx-nvidia-geforce-rtx-4050-6gb-24gb-ddr5-4800-512gb-ssd-m2-156-fhd-ips-300nits-anti-glare-100-srgb-144hz-opzjveruocqx",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fffa17593-958d-4ae9-988b-fbfe594e8e6b&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-legion-pro-7-16iax10h-83f500fbin-ultra-9-275hx-24c24t-nvidia-geforce-rtx-5090-24g-64g-ddr5-6400hz-232-1tb-nvme-ge",
-      "name": "LENOVO LEGION Pro 7 16IAX10H 83F500FBIN Ultra 9 275HX (24C/24T) - NVIDIA Geforce RTX 5090 24G - 64G DDR5 6400HZ (2*32) - 1TB NVMe Gen4 - 16\" OLED 2K 240Hz 100% DCI-P3 - RGB Backlit - WIN11",
-      "category": "gpu",
-      "priceEgp": 290000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-legion-pro-7-16iax10h-83f500fbin-ultra-9-275hx-24c24t-nvidia-geforce-rtx-5090-24g-64g-ddr5-6400hz-232-1tb-nvme-gen4-16-oled-2k-240hz-100-dci-p3-rgb-backlit-win11-t9mmgiqlojxl",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fde97bbb9-b05a-40d0-80b8-b2326f005b95&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -836,34 +556,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "asus-tuf-f16-fx610jh-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-",
-      "name": "ASUS TUF F16-FX610JH-TU657W - Intel Core i7-14650HX - NVIDIA GeForce RTX 5050 8GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16-inch WUXGA IPS 144Hz 100% sRGB 300nits - RGB Backlit - Windows 11.",
-      "category": "cpu",
-      "priceEgp": 76999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-f16-fx610jh-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-wuxga-ips-144hz-100-srgb-300nits-rgb-backlit-rgb-backlit-lwp2ssophytp",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3a302bc1-14fb-45f8-aaf2-3f6e75ea2164&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "asus-tuf-f16-fx610jh-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-",
-      "name": "ASUS TUF F16-FX610JH-TU657W - Intel Core i7-14650HX - NVIDIA GeForce RTX 5050 8GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16-inch WUXGA IPS 144Hz 100% sRGB 300nits - RGB Backlit - Windows 11.",
-      "category": "cpu",
-      "priceEgp": 80000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-f16-fx610jh-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-wuxga-ips-144hz-100-srgb-300nits-rgb-backlit-rgb-backlit-lwp2ssophytp",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3a302bc1-14fb-45f8-aaf2-3f6e75ea2164&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "msi-pro-b760m-p-ddr4-proseries-motherboard-supports-12th13th-gen-intel-processors-lga-1700-ddr4-pcie-40-m2-gbps-lan-usb-",
       "name": "MSI PRO B760M-P DDR4 Socket LGA 1700 Motherboard",
       "category": "motherboard",
@@ -872,20 +564,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=msi-pro-b760m-p-ddr4-proseries-motherboard-supports-12th13th-gen-intel-processors-lga-1700-ddr4-pcie-40-m2-gbps-lan-usb-32-gen2-matx-wq8egcx2q18q",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd8b2f698-064f-43eb-a8af-6a943bae0f93&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "thermal-grizzly-intel-lga1851-v1-cpu-contact-frame-tg-cf-i1851-v1-nnyfwbov2svj",
-      "name": "Thermal Grizzly Intel Lga1851 v1 Cpu Contact Frame - TG-CF-i1851-V1",
-      "category": "cpu",
-      "priceEgp": 1000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=thermal-grizzly-intel-lga1851-v1-cpu-contact-frame-tg-cf-i1851-v1-nnyfwbov2svj",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa6b908aa-7373-4745-8add-a0aa3620f2f8&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -964,7 +642,7 @@
       "retailerId": "sigma",
       "externalId": "id-cooling-frozn-a620-pro-se-argb-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-snow-ta465b67hcyj",
       "name": "ID-COOLING FROZN A620 PRO SE ARGB 6 Heatpipe Dual Tower With 2 120mm Hydraulic Bearing Fan Snow",
-      "category": "motherboard",
+      "category": "cooling",
       "priceEgp": 2049.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -978,7 +656,7 @@
       "retailerId": "sigma",
       "externalId": "id-cooling-frozn-a620-pro-se-argb-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-snow-ta465b67hcyj",
       "name": "ID-COOLING FROZN A620 PRO SE ARGB 6 Heatpipe Dual Tower With 2 120mm Hydraulic Bearing Fan Snow",
-      "category": "motherboard",
+      "category": "cooling",
       "priceEgp": 2149.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1018,34 +696,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "gigabyte-aorus-c400-glass-pc-case-supports-mini-itx-micro-atx-and-atx-form-factor-rgb-lighting-dust-filters-vertical-gpu",
-      "name": "GIGABYTE AORUS AC400G GLASS PC Case, Supports Mini ITX, Micro ATX, and ATX Form Factor, RGB Lighting, Dust Filters, Vertical GPU Mounting, Black",
-      "category": "gpu",
-      "priceEgp": 5749.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-aorus-c400-glass-pc-case-supports-mini-itx-micro-atx-and-atx-form-factor-rgb-lighting-dust-filters-vertical-gpu-mounting-black-urxrhu93ggsd",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F89c789f2-0db9-4dce-8aac-58d4cc647abd&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "gigabyte-aorus-c400-glass-pc-case-supports-mini-itx-micro-atx-and-atx-form-factor-rgb-lighting-dust-filters-vertical-gpu",
-      "name": "GIGABYTE AORUS AC400G GLASS PC Case, Supports Mini ITX, Micro ATX, and ATX Form Factor, RGB Lighting, Dust Filters, Vertical GPU Mounting, Black",
-      "category": "gpu",
-      "priceEgp": 5750.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-aorus-c400-glass-pc-case-supports-mini-itx-micro-atx-and-atx-form-factor-rgb-lighting-dust-filters-vertical-gpu-mounting-black-urxrhu93ggsd",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F89c789f2-0db9-4dce-8aac-58d4cc647abd&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "ocypus-delta-l36-argb-v2-white-360mm-aio-liquid-cooler-nmmxd1d4ue79",
       "name": "Ocypus Delta L36 ARGB V2 White 360MM AIO Liquid Cooler",
       "category": "cooling",
@@ -1068,20 +718,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=ocypus-delta-l36-argb-v2-white-360mm-aio-liquid-cooler-nmmxd1d4ue79",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F618dfac4-55bb-4748-98c2-7e190c6d6c84&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-loq-15iax9-83dv01bcax-intel-core-i5-13450hx-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800-512gb-ssd-m2-156-fhd-ips-3",
-      "name": "LENOVO Loq 15IAX9 83DV01BCAX - Intel Core i5-13450HX - NVIDIA GeForce RTX 3050 6GB - 16GB DDR5-4800 - 512GB SSD M.2 - 15.6\" FHD IPS 300nits 100% sRGB, 144Hz - Luna Grey",
-      "category": "cpu",
-      "priceEgp": 56499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15iax9-83dv01bcax-intel-core-i5-13450hx-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800-512gb-ssd-m2-156-fhd-ips-300nits-100-srgb-144hz-luna-grey-7ul6gukl7wbp",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd53fa4bf-ddb4-4f95-8fce-56bac82949a8&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -1116,20 +752,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "asus-vivobook-16-x1607aa-mb155w-intel-core-ultra-5-325-intel-uhd-graphics-16gb-ddr5-512gb-nvme-gen-4-16-inch-wuxga-ips-6",
-      "name": "ASUS Vivobook 16-X1607AA-MB155W - Intel Core Ultra 5 325 - Intel UHD Graphics - 16GB DDR5 - 512GB Nvme GEN 4 - 16-inch WUXGA IPS 60Hz - Windows 11",
-      "category": "cpu",
-      "priceEgp": 48499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-vivobook-16-x1607aa-mb155w-intel-core-ultra-5-325-intel-uhd-graphics-16gb-ddr5-512gb-nvme-gen-4-16-inch-wuxga-ips-60hz-windows-11-lzw2oxednhec",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd6abb446-6b30-4d55-ba24-1d4184ef854b&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "apnx-v2-f-black-4fans-fp3-140mm-argbair-up-to-183mmvga-up-to-445mm-type-c-ready-btf-support-gpu-holder-5qxj1ma8ywvo",
       "name": "APNX V2-F Black (4Fans FP3 140MM ARGB)(AIR Up To 183mm)(VGA Up To 445mm) Type-C Ready-BTF Support-GPU Holder.",
       "category": "gpu",
@@ -1138,20 +760,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=apnx-v2-f-black-4fans-fp3-140mm-argbair-up-to-183mmvga-up-to-445mm-type-c-ready-btf-support-gpu-holder-5qxj1ma8ywvo",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F65687f2e-42f3-44fa-980f-5ef3fdf10854&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-ideapad-slim-5-14iph11-83s50035ed-intel-core-ultra-7-355-intel-graphics-32gb-ddr5-5600hz-2x-16-1tb-nvme-gen-4-14-",
-      "name": "LENOVO IdeaPad Slim 5 14IPH11 83S50035ED - Intel Core Ultra 7 355 - Intel Graphics - 32GB DDR5 5600Hz ( 2x 16 ) - 1TB Nvme GEN 4 - 14-inch WUXGA OLED 100% DCI-P3 60Hz - Windows 11",
-      "category": "cpu",
-      "priceEgp": 78500.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-ideapad-slim-5-14iph11-83s50035ed-intel-core-ultra-7-355-intel-graphics-32gb-ddr5-5600hz-2x-16-1tb-nvme-gen-4-14-inch-wuxga-oled-100-dci-p3-60hz-windows-11-np2xucmvwaqq",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F0811db0b-f040-46f8-ba43-e5b99db5a845&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -1188,7 +796,7 @@
       "retailerId": "sigma",
       "externalId": "aerocool-core-plus-argb-cpu-cooler-heat-up-to-110w-and-compatible-with-intel-1700-and-amd-am4-am5-x59kzrk01wj8",
       "name": "Aerocool Core plus ARGB CPU Cooler, heat up to 110W and compatible with Intel 1700 and AMD AM4, AM5",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 799.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1230,7 +838,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-masterframe-360-panorama-atx-mid-tower-pc-case-8lagsgkgkbpt",
       "name": "COOLER MASTER MasterFrame 360 Panorama ATX Mid-Tower PC Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 11500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1244,40 +852,12 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-masterframe-360-panorama-atx-mid-tower-pc-case-8lagsgkgkbpt",
       "name": "COOLER MASTER MasterFrame 360 Panorama ATX Mid-Tower PC Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 12000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-masterframe-360-panorama-atx-mid-tower-pc-case-8lagsgkgkbpt",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8d0fb96f-525c-4212-b3ed-1d9f0b77e3cd&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-legion-pro-7-16iax10h-83f500fcin-intel-core-ultra-9-275hx-nvidia-geforce-rtx-5080-16gb-64gb-ddr5-6400-232-1tb-ssd",
-      "name": "LENOVO LEGION Pro 7 16IAX10H 83F500FCIN - Intel Core Ultra 9 275HX - NVIDIA GeForce RTX 5080 16GB - 64GB DDR5-6400 (2*32) - 1TB SSD M.2 - 16\" WQXGA (2560x1600) OLED 500nits (typical) 100% DCI-P3, 240Hz - RGB Backlit .",
-      "category": "cpu",
-      "priceEgp": 240000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-legion-pro-7-16iax10h-83f500fcin-intel-core-ultra-9-275hx-nvidia-geforce-rtx-5080-16gb-64gb-ddr5-6400-232-1tb-ssd-m2-16-wqxga-2560x1600-oled-500nits-typical-100-dci-p3-240hz-rgb-backlit-8wbwb0wppmun",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc7a12c99-2d98-4fbc-baf1-df299463d659&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "asus-tuf-f16-fx608jmr-f16i75060-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-32gb-ddr5-5600hz-216-1tb-nvme-m2-16-in",
-      "name": "ASUS TUF F16-FX608JMR-F16.I75060 - Intel Core i7-14650HX - NVIDIA GeForce RTX 5060 8GB - 32GB DDR5 5600Hz (2*16) - 1TB NVMe M.2 - 16-inch WUXGA IPS-leve 165Hz 100% sRGB - Windows 11.",
-      "category": "cpu",
-      "priceEgp": 94999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-f16-fx608jmr-f16i75060-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-32gb-ddr5-5600hz-216-1tb-nvme-m2-16-inch-wuxga-ips-leve-165hz-100-srgb-windows-11-0skpvsqi3r8k",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6f64241e-c439-49a2-8bc5-e557955a1ef8&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -1326,34 +906,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-loq-essential-15iax9e-83lk0070ed-intel-core-i5-12450hx-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800mhz-512gb-m2-156",
-      "name": "Lenovo LOQ essential 15IAX9E 83LK0070ED Intel Core i5-12450HX - NVIDIA GeForce RTX 3050 6GB - 16GB DDR5 4800Mhz - 512GB M.2 - 15.6 FHD IPS 144Hz 100 sRGB - Dos",
-      "category": "cpu",
-      "priceEgp": 54499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-essential-15iax9e-83lk0070ed-intel-core-i5-12450hx-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800mhz-512gb-m2-156-fhd-ips-144hz-100-srgb-dos-id5obbhjwuc5",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd4c52f62-3157-4674-be1f-3e9146d1440a&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-ideapad-slim-3-15irh10-83k100e8ax-intel-core-i7-13620h-integrated-intel-uhd-graphics-16gb-ddr5-4800mhz-512gb-ssd-",
-      "name": "lenovo IdeaPad Slim 3 15IRH10 83K100E8AX Intel Core i7-13620H - Integrated Intel UHD Graphics - 16GB DDR5 4800Mhz - 512GB SSD M.2 - 15.3\" WUXGA IPS 300nits 60HZ",
-      "category": "cpu",
-      "priceEgp": 42499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-ideapad-slim-3-15irh10-83k100e8ax-intel-core-i7-13620h-integrated-intel-uhd-graphics-16gb-ddr5-4800mhz-512gb-ssd-m2-153-wuxga-ips-300nits-60hz-l9mzacr0mvmm",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fcae1085b-de94-434a-a9c8-ff26b9c20532&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "gigabyte-radeon-rx-9060-xt-gaming-oc-16g-e94vijcbdvew",
       "name": "GIGABYTE Radeon RX 9060 XT GAMING OC 16G",
       "category": "gpu",
@@ -1384,7 +936,7 @@
       "retailerId": "sigma",
       "externalId": "gigabyte-geforce-rtx-5070-ti-eagle-oc-sff-16g-gddr7-triple-fan-7xcf9afgeqxh",
       "name": "Gigabyte GeForce RTX 5070 Ti EAGLE OC SFF 16G GDDR7 (Triple Fan)",
-      "category": "gpu",
+      "category": "cooling",
       "priceEgp": 72000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1454,7 +1006,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-air-cooler-hyper-212-spectrum-v3-rgb-4-heat-pipes-1800-j3k9pamtnqrp",
       "name": "COOLER MASTER Hyper 212 Spectrum V3 RGB CPU Air Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 1099.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1468,7 +1020,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-air-cooler-hyper-212-spectrum-v3-rgb-4-heat-pipes-1800-j3k9pamtnqrp",
       "name": "COOLER MASTER Hyper 212 Spectrum V3 RGB CPU Air Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 1350.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1482,7 +1034,7 @@
       "retailerId": "sigma",
       "externalId": "gamdias-boreas-e1l-010-cpu-cooler-cpu-air-cooler-cpu-fan-fully-customizable-argb-lighting-built-in-led-affect-compatible",
       "name": "GAMDIAS BOREAS E1L-010 CPU Cooler, CPU Air Cooler, CPU Fan, Fully customizable ARGB lighting, Built in LED affect, Compatible with Intel",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 699.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1496,7 +1048,7 @@
       "retailerId": "sigma",
       "externalId": "gamdias-boreas-e1l-010-cpu-cooler-cpu-air-cooler-cpu-fan-fully-customizable-argb-lighting-built-in-led-affect-compatible",
       "name": "GAMDIAS BOREAS E1L-010 CPU Cooler, CPU Air Cooler, CPU Fan, Fully customizable ARGB lighting, Built in LED affect, Compatible with Intel",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1510,7 +1062,7 @@
       "retailerId": "sigma",
       "externalId": "gamdias-chione-e4-360-argb-cpu-liquid-cooler-yglxrjht1rho",
       "name": "Gamdias CHIONE E4 360 ARGB CPU Liquid Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 4650.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1524,7 +1076,7 @@
       "retailerId": "sigma",
       "externalId": "gamdias-chione-e4-240-argb-cpu-liquid-cooler-b0b0swtdnpxi",
       "name": "Gamdias CHIONE E4 240 ARGB CPU Liquid Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 2999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1538,7 +1090,7 @@
       "retailerId": "sigma",
       "externalId": "gamdias-boreas-m2-51d-white-cpu-air-cooler-akfhahvjapiv",
       "name": "GAMDIAS BOREAS M2-51D White CPU Air Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 1699.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1552,7 +1104,7 @@
       "retailerId": "sigma",
       "externalId": "gamdias-boreas-m2-51d-white-cpu-air-cooler-akfhahvjapiv",
       "name": "GAMDIAS BOREAS M2-51D White CPU Air Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 2349.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1566,26 +1118,12 @@
       "retailerId": "sigma",
       "externalId": "gamdias-white-mid-tower-gaming-computer-case-wdisplay-app-atx-tempered-glass-pc-case-built-in-3x120mm-argb-pwm-fans-up-t",
       "name": "GAMDIAS White Mid Tower Gaming Computer Case w/Display& App, ATX Tempered Glass PC Case, Built-in 3x120mm ARGB PWM Fans, Up to RTX GPU/VGA 410mm & 360mm AIO/Radiator & 6x120mm Fans & 160mm CPU Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 3699.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=gamdias-white-mid-tower-gaming-computer-case-wdisplay-app-atx-tempered-glass-pc-case-built-in-3x120mm-argb-pwm-fans-up-to-rtx-gpuvga-410mm-360mm-aioradiator-6x120mm-fans-160mm-cpu-cooler-xal4vx6figjd",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe28013b4-ae3a-4a82-8032-323dc6d6d0ec&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx9-83dv00uudp-intel-core-i7-14700hx-nvidia-geforce-rtx-4060-8gb-16gb-ddr5-5600mhz-1tb-ssd-m2-156-fhd-100-",
-      "name": "LENOVO LOQ 15IRX9 83DV00UUDP Intel Core i7-14700HX - NVIDIA GeForce RTX 4060 8GB - 16GB DDR5-5600Mhz - 1TB SSD M.2 - 15.6 FHD 100% sRGB, 144Hz",
-      "category": "cpu",
-      "priceEgp": 79499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx9-83dv00uudp-intel-core-i7-14700hx-nvidia-geforce-rtx-4060-8gb-16gb-ddr5-5600mhz-1tb-ssd-m2-156-fhd-100-srgb-144hz-vwafovxlhvay",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa02b3b64-d474-4746-b6ab-2e49e108512c&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -1676,20 +1214,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-loq-15ahp10-83jg0095ed-amd-ryzen-7-250-nvidia-geforce-rtx-5060-8gb-16gb-so-dimm-ddr5-5600-512gb-ssd-m2-156-fhd-19",
-      "name": "LENOVO LOQ 15AHP10 83JG0095ED - AMD Ryzen™ 7 250 - NVIDIA® GeForce RTX™ 5060 8GB - 16GB SO-DIMM DDR5-5600 - 512GB SSD M.2 - 15.6\" FHD (1920x1080) IPS 300nits Anti-glare, 100% sRGB, 144Hz.",
-      "category": "cpu",
-      "priceEgp": 74999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15ahp10-83jg0095ed-amd-ryzen-7-250-nvidia-geforce-rtx-5060-8gb-16gb-so-dimm-ddr5-5600-512gb-ssd-m2-156-fhd-1920x1080-ips-300nits-anti-glare-100-srgb-144hz-dyiuxv0lfsay",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff6291f8c-f347-4251-b09a-2f1e1f370b12&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "wd-blue-sn5100-nvme-ssd-1tb-kjxxganaoc9z",
       "name": "WD Blue SN5100 NVMe SSD - 1TB",
       "category": "storage",
@@ -1774,20 +1298,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lexar-16gb-ddr4-3200mhz-cl22-notebook-ram-ld4as016g-b3200gsst-vfr2xacl3c48",
-      "name": "Lexar 16Gb DDR4-3200MHZ CL22 Notebook Ram LD4AS016G-B3200GSST",
-      "category": "ram",
-      "priceEgp": 5700.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lexar-16gb-ddr4-3200mhz-cl22-notebook-ram-ld4as016g-b3200gsst-vfr2xacl3c48",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa11adb44-2231-41a4-b8ed-49ddec14c91d&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "crucial-16gb-ddr5-4800mhz-udimm-v11-cl40-desktop-od9wgolxn4bj",
       "name": "Crucial 16GB DDR5-4800mHZ UDIMM V1.1 CL40 Desktop",
       "category": "ram",
@@ -1804,7 +1314,7 @@
       "retailerId": "sigma",
       "externalId": "case-cooler-master-masterbox-520-4fans-v2-argb-white-dh9lj9sezpvq",
       "name": "Cooler Master MasterBox 520 White Mid Tower Argb Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 3600.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1818,7 +1328,7 @@
       "retailerId": "sigma",
       "externalId": "case-cooler-master-masterbox-520-4fans-v2-argb-white-dh9lj9sezpvq",
       "name": "Cooler Master MasterBox 520 White Mid Tower Argb Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 5000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1832,7 +1342,7 @@
       "retailerId": "sigma",
       "externalId": "case-cooler-master-haf700-argb-full-tower-5xfan-argb-kgch1dbevugs",
       "name": "COOLER MASTER-HAF 700 ARGB FULL TOWER - 5xFAN ARGB",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 11999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1860,7 +1370,7 @@
       "retailerId": "sigma",
       "externalId": "gamdias-aura-gl360-rgb-liquid-cpu-cooler-360mm-radiator-3x120mm-pwm-fans-800-2000-rpm-teflon-tube-copper-base-250w-tdp-r",
       "name": "GAMDIAS AURA GL360 RGB Liquid CPU Cooler: 360mm radiator, 3x120mm PWM fans (800-2000 RPM), Teflon tube, copper base, 250W TDP, RGB lighting, compatible with multiple Intel/AMD sockets.",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 3425.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1972,7 +1482,7 @@
       "retailerId": "sigma",
       "externalId": "asus-tuf-gaming-1200w-gold-1200-watt-atx-30-compatible-fully-modular-power-supply-80-gold-certified-military-grade-compo",
       "name": "ASUS TUF Gaming 1200W Gold (1200 Watt, ATX 3.0 Compatible Fully Modular Power Supply, 80+ Gold Certified, Military-grade Components, Dual Ball Bearing, Axial-tech Fan, PCB Coating)",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 8999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -1986,7 +1496,7 @@
       "retailerId": "sigma",
       "externalId": "asus-tuf-gaming-1200w-gold-1200-watt-atx-30-compatible-fully-modular-power-supply-80-gold-certified-military-grade-compo",
       "name": "ASUS TUF Gaming 1200W Gold (1200 Watt, ATX 3.0 Compatible Fully Modular Power Supply, 80+ Gold Certified, Military-grade Components, Dual Ball Bearing, Axial-tech Fan, PCB Coating)",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 9500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2266,7 +1776,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-elite-301-micro-atx-and-elite-nex-pn700-700w-psu-ctbafuxqtlwx",
       "name": "Cooler Master Elite 301 Micro-ATX And ELITE NEX PN700 700W PSU",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 3650.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2280,7 +1790,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-elite-301-micro-atx-and-elite-nex-pn700-700w-psu-ctbafuxqtlwx",
       "name": "Cooler Master Elite 301 Micro-ATX And ELITE NEX PN700 700W PSU",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 3850.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2308,7 +1818,7 @@
       "retailerId": "sigma",
       "externalId": "asus-proart-lc-360-all-in-one-aio-cpu-liquid-cooler-amd-am4-am5-intel-lga-1700-1200-115x-support-with-illuminated-system",
       "name": "ASUS ProArt LC 360 All-in-One AIO CPU Liquid Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 11000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2378,7 +1888,7 @@
       "retailerId": "sigma",
       "externalId": "wd-black-sn850x-4tb-nvme-ssd-pcie-gen4-x4-7300mbs-read-6600mbs-write-m2-2280-3-year-warranty-heatsink-model-directstorag",
       "name": "WD_BLACK SN850X 4TB NVMe SSD, PCIe Gen4 x4, 7300MB/s read, 6600MB/s write, M.2 2280, 3-year warranty, heatsink model, DirectStorage support",
-      "category": "storage",
+      "category": "cooling",
       "priceEgp": 31200.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2504,7 +2014,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-cosmos-c700m-white-edition-full-tower-case-with-e-atx-support-tempered-glass-usb-c-4x-usb-30-vertical-gpu-",
       "name": "Cooler Master Cosmos C700M White Edition: Full tower case with E-ATX support, tempered glass, USB-C, 4x USB 3.0, vertical GPU mount with PCIe 4.0 riser, ARGB lighting, and 420mm radiator support",
-      "category": "gpu",
+      "category": "cooling",
       "priceEgp": 22500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2518,7 +2028,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-cosmos-c700m-white-edition-full-tower-case-with-e-atx-support-tempered-glass-usb-c-4x-usb-30-vertical-gpu-",
       "name": "Cooler Master Cosmos C700M White Edition: Full tower case with E-ATX support, tempered glass, USB-C, 4x USB 3.0, vertical GPU mount with PCIe 4.0 riser, ARGB lighting, and 420mm radiator support",
-      "category": "gpu",
+      "category": "cooling",
       "priceEgp": 28499.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2544,23 +2054,9 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lian-li-o11d-evo-xl-upright-gpu-bracket-o11dexl-1w-white-supports-large-gpus-up-to-358mm-length-80mm-thickness-4-expansi",
-      "name": "Lian Li O11DEXL-1X Vertical GPU Bracket for O11D EVO XL, 1mm Steel, Supports GPUs up to 358mm Length & 80mm Thickness",
-      "category": "gpu",
-      "priceEgp": 300.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11d-evo-xl-upright-gpu-bracket-o11dexl-1w-white-supports-large-gpus-up-to-358mm-length-80mm-thickness-4-expansion-slots-made-of-1mm-steel-for-chimney-style-mounting-nddavxtgci25",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3b765419-6a9a-4f1a-ba0e-80210d9250d7&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "corsair-icue-7000x-rgb-white-full-tower-case-with-support-for-e-atx-up-to-3x-360mm-radiators-450mm-gpu-190mm-cpu-cooler-",
       "name": "Corsair iCUE 7000X RGB White – Full-Tower case with support for E-ATX, up to 3x 360mm radiators, 450mm GPU, 190mm CPU cooler, 4x RGB fans, and tempered glass panels.",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 12999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2574,7 +2070,7 @@
       "retailerId": "sigma",
       "externalId": "corsair-icue-7000x-rgb-white-full-tower-case-with-support-for-e-atx-up-to-3x-360mm-radiators-450mm-gpu-190mm-cpu-cooler-",
       "name": "Corsair iCUE 7000X RGB White – Full-Tower case with support for E-ATX, up to 3x 360mm radiators, 450mm GPU, 190mm CPU cooler, 4x RGB fans, and tempered glass panels.",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 15500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2588,7 +2084,7 @@
       "retailerId": "sigma",
       "externalId": "corsair-icue-link-titan-240-rx-rgb-240mm-aio-with-dual-120mm-rgb-fans-copper-cold-plate-digital-control-and-support-for-",
       "name": "Corsair iCUE LINK TITAN 240 RX RGB AIO Liquid CPU Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 7000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2602,7 +2098,7 @@
       "retailerId": "sigma",
       "externalId": "corsair-icue-link-titan-240-rx-rgb-240mm-aio-with-dual-120mm-rgb-fans-copper-cold-plate-digital-control-and-support-for-",
       "name": "Corsair iCUE LINK TITAN 240 RX RGB AIO Liquid CPU Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 8000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2700,7 +2196,7 @@
       "retailerId": "sigma",
       "externalId": "jonsbo-tg-240-argb-white-aio-liquid-cooler-with-2400rpm-pump-dual-120mm-pwm-fans-900-1800rpm-up-to-6619cfm-aluminum-radi",
       "name": "Jonsbo TG-240 ARGB White 240mm AIO Liquid CPU Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 3150.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2714,7 +2210,7 @@
       "retailerId": "sigma",
       "externalId": "jonsbo-tg-240-argb-white-aio-liquid-cooler-with-2400rpm-pump-dual-120mm-pwm-fans-900-1800rpm-up-to-6619cfm-aluminum-radi",
       "name": "Jonsbo TG-240 ARGB White 240mm AIO Liquid CPU Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 3499.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2922,37 +2418,9 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-legion-5-15irx10-83ly0099ed-intel-core-i7-13650hx-nvidia-rtx-5050-8gb-24gb-ddr5-512gb-ssd-153-wuxga-ips-165hz-win",
-      "name": "Lenovo NVIDIA RTX 5050 8GB - Legion 5 15IRX10 83LY0099ED Intel Core i7-13650HX - 24GB DDR5 4800MHz - 512GB SSD - 15.3\" WUXGA IPS 165Hz - Windows 11",
-      "category": "cpu",
-      "priceEgp": 86200.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-legion-5-15irx10-83ly0099ed-intel-core-i7-13650hx-nvidia-rtx-5050-8gb-24gb-ddr5-512gb-ssd-153-wuxga-ips-165hz-windows-11-i4kjbrxsinz2",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff679fe89-06a9-484d-b509-755a81be9514&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "hp-victus-15-fa2013dx-intel-core-i5-13420h-nvidia-rtx-3050-6gb-16gb-ddr4-3200mhz-512gb-ssd-156-fhd-144hz-win-11-jjgk4a0y",
-      "name": "HP Victus 15-fa2013dx Intel Core i5-13420H - NVIDIA RTX 3050 6GB - 8GB DDR4 3200Mhz - 512GB SSD - 15.6\" FHD 144Hz - Win 11",
-      "category": "cpu",
-      "priceEgp": 47400.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=hp-victus-15-fa2013dx-intel-core-i5-13420h-nvidia-rtx-3050-6gb-16gb-ddr4-3200mhz-512gb-ssd-156-fhd-144hz-win-11-jjgk4a0yckde",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff46bb415-7ddf-478e-a15a-44f77f6bce25&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "arctic-liquid-freezer-iii-pro-280-a-rgb-cpu-aio-water-cooler-ep8l7nijflpv",
       "name": "ARCTIC Liquid Freezer III Pro 280 A-RGB - CPU AIO Water Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 5775.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -2966,7 +2434,7 @@
       "retailerId": "sigma",
       "externalId": "arctic-liquid-freezer-iii-pro-280-a-rgb-cpu-aio-water-cooler-ep8l7nijflpv",
       "name": "ARCTIC Liquid Freezer III Pro 280 A-RGB - CPU AIO Water Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 5999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3036,7 +2504,7 @@
       "retailerId": "sigma",
       "externalId": "xigmatek-pano-ii-lcd-type-c-8-fan-argb-pwm-9inch-multi-display-lcd-panelcurved-tg-eatx-super-tower-case-xex1ex65kscq",
       "name": "XIGMATEK Pano II LCD Type C 8 Fan ARGB Pwm 9Inch Multi Display LCD PanelCurved TG EATX Super Tower Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 6999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3050,7 +2518,7 @@
       "retailerId": "sigma",
       "externalId": "xigmatek-pano-ii-lcd-type-c-8-fan-argb-pwm-9inch-multi-display-lcd-panelcurved-tg-eatx-super-tower-case-xex1ex65kscq",
       "name": "XIGMATEK Pano II LCD Type C 8 Fan ARGB Pwm 9Inch Multi Display LCD PanelCurved TG EATX Super Tower Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 7199.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3078,7 +2546,7 @@
       "retailerId": "sigma",
       "externalId": "xigmatek-connect-ultra-360-argb-magnetic-curved-oled-68-inch-full-hd-plusamoled-flexible-screen-aio-liquid-cpu-cooler-cs",
       "name": "XIGMATEK Connect Ultra 360 Argb Magnetic Curved OLED 6.8 Inch Full HD PlusAMOLED Flexible Screen Aio Liquid Cpu Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 10200.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3092,7 +2560,7 @@
       "retailerId": "sigma",
       "externalId": "xigmatek-connect-ultra-360-argb-magnetic-curved-oled-68-inch-full-hd-plusamoled-flexible-screen-aio-liquid-cpu-cooler-cs",
       "name": "XIGMATEK Connect Ultra 360 Argb Magnetic Curved OLED 6.8 Inch Full HD PlusAMOLED Flexible Screen Aio Liquid Cpu Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 10499.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3106,7 +2574,7 @@
       "retailerId": "sigma",
       "externalId": "seasonic-prime-px-1600-1600w-atx-31-80-plus-platinum-fully-modular-hybrid-fan-4fwky1nara8u",
       "name": "SEASONIC Prime PX-1600 1600W Atx 3.1 80 Plus Platinum Fully Modular Hybrid Fan",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 22499.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3148,7 +2616,7 @@
       "retailerId": "sigma",
       "externalId": "deepcool-ag400-plus-dual-120mm-fan-cpu-cooler-estebvz1k2iq",
       "name": "DEEPCOOL AG400 PLUS Dual 120mm Fan CPU Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 1349.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3244,20 +2712,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-legion-5-15irx10-83ly00mups-intel-core-i7-13650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-4800-1tb-ssd-m2-153-wuxga",
-      "name": "LENOVO Legion 5 15IRX10 83LY00MUPS-Intel® Core i7-13650HX-NVIDIA® GeForce RTX™ 5060 8GB-16GB DDR5-4800-1TB SSD M.2-15.3\" WUXGA (1920x1200) IPS 300nits Anti-glare, 100% sRGB, 165Hz-White Backlit-English",
-      "category": "cpu",
-      "priceEgp": 89999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-legion-5-15irx10-83ly00mups-intel-core-i7-13650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-4800-1tb-ssd-m2-153-wuxga-1920x1200-ips-300nits-anti-glare-100-srgb-165hz-white-backlit-english-za6zfeuxlllr",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9310f905-571e-4379-ba7f-2fd5f9e8f814&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "deepcool-pre-installed-fans-for-matrexx40-fan-tray-kcbaiajpoghq",
       "name": "DeepCool Pre-Installed Fans for MATREXX40 (Fan Tray)",
       "category": "cooling",
@@ -3280,20 +2734,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=deepcool-pre-installed-fans-for-matrexx-55-fan-tray-tjti9kvwtqmv",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F26b92ba9-b653-43d1-8f62-a24427eeb190&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "acer-nitro-v-15-anv15-52-50uu-intel-core-i5-13420h-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800hz-512gb-nvme-gen-4-156-ips",
-      "name": "Acer Nitro V 15 ANV15-52-50UU - Intel Core i5-13420H - NVIDIA GeForce RTX 3050 6GB - 16GB DDR5 4800Hz - 512GB Nvme GEN 4 - 15.6\"-IPS-FHD-165Hz - Finger Print - White Backlit - Windows 11 - Obsidian black - 2 Years Warranty",
-      "category": "cpu",
-      "priceEgp": 51500.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=acer-nitro-v-15-anv15-52-50uu-intel-core-i5-13420h-nvidia-geforce-rtx-3050-6gb-16gb-ddr5-4800hz-512gb-nvme-gen-4-156-ips-fhd-165hz-finger-print-white-backlit-windows-11-obsidian-black-2-years-warranty-n0mtf8vctjuq",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Face9f1cf-9059-4d18-97a8-414eee555a6e&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -3330,26 +2770,12 @@
       "retailerId": "sigma",
       "externalId": "deepcool-gammaxx-l360-argb-360mm-aio-liquid-cpu-cooler-i-intel-lga20662011-v3201117001200115111501155-i-amd-am4am5-kmxjk",
       "name": "DEEPCOOL GAMMAXX L360 ARGB 360mm AIO Liquid CPU Cooler I Intel LGA2066/2011-v3/2011/1700/1200/1151/1150/1155 I AMD AM4/AM5.",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 3150.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=deepcool-gammaxx-l360-argb-360mm-aio-liquid-cpu-cooler-i-intel-lga20662011-v3201117001200115111501155-i-amd-am4am5-kmxjkaxxesdn",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fae353e48-00a6-4c2c-9e11-815beabcf300&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lian-li-gen-5-200mm-riser-with-4-slots-vertical-bracket-argb-black-gpu-holder-kit-vg4-5-v4x-black-dgyvys5ccvr1",
-      "name": "LIAN LI Gen 5 200mm Riser With 4 SLOTS Vertical Bracket ARGB Black Gpu Holder Kit - VG4-5-V4X BLACK",
-      "category": "gpu",
-      "priceEgp": 3250.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-gen-5-200mm-riser-with-4-slots-vertical-bracket-argb-black-gpu-holder-kit-vg4-5-v4x-black-dgyvys5ccvr1",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F79dc9a5a-ad20-4324-bd54-d32474dd0b6d&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -3440,23 +2866,9 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lenovo-legion-5-15irx10-83ly00p7ed-i7-14700hx-rtx-5060-8g-32g-ddr5-5600hz-2x16-1tb-gen4-151-oled-wqxga-165hz-rgb-backlit",
-      "name": "LENOVO Legion 5 15IRX10 83LY00P7ED - Intel Core i7-14700HX - NVIDIA GeForce RTX 5060 8GB - 32GB DDR5-5600 ( 2x 16 ) - 1TB SSD M.2 - 15.1\" WQXGA (2560x1600) OLED 1000nits (peak) 100% DCI-P3 165Hz - Eclipse Black.",
-      "category": "cpu",
-      "priceEgp": 113299.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-legion-5-15irx10-83ly00p7ed-i7-14700hx-rtx-5060-8g-32g-ddr5-5600hz-2x16-1tb-gen4-151-oled-wqxga-165hz-rgb-backlit-ywwa61f9rwlc",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fba3acde9-383b-453f-ab41-d02808c65495&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "cooler-master-masterframe-500-mesh-silver-argb-atx-mid-tower-case-7t02nwpsev31",
       "name": "Cooler Master MasterFrame 500 Mesh Silver ARGB ATX Mid-Tower Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 7100.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3470,7 +2882,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-masterframe-500-mesh-silver-argb-atx-mid-tower-case-7t02nwpsev31",
       "name": "Cooler Master MasterFrame 500 Mesh Silver ARGB ATX Mid-Tower Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 7400.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3484,7 +2896,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-masterframe-600-black-mid-tower-case-xxsxdqq46xh0",
       "name": "Cooler Master MasterFrame 600 Black Mid Tower Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 7500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3498,7 +2910,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-masterframe-600-black-mid-tower-case-xxsxdqq46xh0",
       "name": "Cooler Master MasterFrame 600 Black Mid Tower Case",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 8000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3582,7 +2994,7 @@
       "retailerId": "sigma",
       "externalId": "seasonic-core-gc-850-atx3-850w-atx-31-80-plus-gold-braidad-cables-hydro-dynamic-bearing-fan-dnitx8pnk9hv",
       "name": "SEASONIC Core GC-850 ATX3 850W Atx 3.1 80 Plus Gold Braidad Cables Hydro Dynamic Bearing Fan",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 5099.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3596,7 +3008,7 @@
       "retailerId": "sigma",
       "externalId": "id-cooling-dx360-max-gen-7-pump-white-aio-liquid-cpu-wjk7r1wxxc8a",
       "name": "ID-COOLING DX360 MAX Gen 7 Pump White Liquid CPU Cooler (AIO)",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 3699.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3610,7 +3022,7 @@
       "retailerId": "sigma",
       "externalId": "id-cooling-frozn-a620-gdl-6-heatpipe-dual-tower-with-2-120mm-fdb-fan-lfxfry7vartc",
       "name": "ID-COOLING FROZN A620 GDL 6 Heatpipe Dual Tower With 2 120mm FDB Fan",
-      "category": "motherboard",
+      "category": "cooling",
       "priceEgp": 2499.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3638,7 +3050,7 @@
       "retailerId": "sigma",
       "externalId": "seasonic-core-bc-850-atx3-850w-atx-31-80-plus-bronze-braided-cables-hydro-dynamic-bearing-fan-power-supply-yxzljcse3hm4",
       "name": "Seasonic Core BC-850 ATX3 850W Atx 3.1 80 Plus Bronze braided cables Hydro Dynamic Bearing Fan Power Supply",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 3999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3680,7 +3092,7 @@
       "retailerId": "sigma",
       "externalId": "xigmatek-aero-dgt-120-digital-lcd-black-mwhzo6yzkamy",
       "name": "Xigmatek Aero DGT 120 Black – 120mm ARGB PWM Digital LCD Infinity Ring Case Fan (1 Fan)",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 349.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3792,7 +3204,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-elite-502-mid-tower-case-white-kd2zcfkurpkj",
       "name": "COOLER MASTER Elite 502 Mid Tower case - WHITE",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 3200.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3806,7 +3218,7 @@
       "retailerId": "sigma",
       "externalId": "cooler-master-elite-502-mid-tower-case-white-kd2zcfkurpkj",
       "name": "COOLER MASTER Elite 502 Mid Tower case - WHITE",
-      "category": "case",
+      "category": "cooling",
       "priceEgp": 3400.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -3826,20 +3238,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-v4-alpha-3dhp-black-uj2zsfio0hcd",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F14920ed1-efa5-4dc9-94b2-7285b491d9c3&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "asus-zenbook-a14-ux3407qa-qd155w-snapdragon-x-x1-26-100-8c8t-qualcomm-adreno-16g-lpddr5x-512g-ssd-gen4-16-wuxga-oled-60h",
-      "name": "ASUS Zenbook A14-UX3407QA-QD155W - Snapdragon X X1 26 100 (8C/8T) - Qualcomm Adreno - 16G LPDDR5X - 512G SSD Gen4- 16''-WUXGA-OLED-60Hz-100% DCI-P3-600nits - WIN11",
-      "category": "storage",
-      "priceEgp": 61300.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-zenbook-a14-ux3407qa-qd155w-snapdragon-x-x1-26-100-8c8t-qualcomm-adreno-16g-lpddr5x-512g-ssd-gen4-16-wuxga-oled-60hz-100-dci-p3-600nits-win11-rxnhm0oynsmb",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1197d2a7-8de5-4399-bcd8-2757a5fbf3a9&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -3868,48 +3266,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=msi-prestige-13-ai-evo-a1mg-intel-core-ultra-7-155h-intel-arc-graphics-16gb-lpddr5-6400mhz-512gb-nvme-gen-4-133-inch-28k-oled-60hz-100-dci-p3-windows-11-9s7-13q221-261-afvtygaown9r",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F56d0cb72-93d3-4549-9eb9-15300cb50729&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "msi-cyborg-15-max-c2wg-intel-core-i7-13620h-nvidia-geforce-rtx-5070-8gb-16gb-ddr5-5600mhz-512gb-nvme-gen-4-156-fhd-ips-1",
-      "name": "MSI Cyborg 15 Max C13WG - Intel Core i7-13620H - NVIDIA GeForce RTX 5070 8GB - 16GB DDR5 5600MHz - 512GB Nvme GEN 4 - 15.6\"-FHD-IPS-144Hz-100% sRGB - Windows 11 - 9S7-15T111-019",
-      "category": "cpu",
-      "priceEgp": 78000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=msi-cyborg-15-max-c2wg-intel-core-i7-13620h-nvidia-geforce-rtx-5070-8gb-16gb-ddr5-5600mhz-512gb-nvme-gen-4-156-fhd-ips-144hz-100-srgb-windows-11-9s7-15t111-019-q581ogvfrj3x",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2d6854e9-bf91-46da-bd3e-01f3a2d71ed9&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-loq-15irx10-83je00kccc-intel-core-i7-13650hx-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-4800mhz-116-512gb-nvme-gen-4-1",
-      "name": "LENOVO LOQ 15IRX10 83JE00KCCC - Intel Core i7 13650HX - NVIDIA GeForce RTX 5050 8GB - 16GB DDR5 4800MHz (1*16) - 512GB Nvme GEN 4 - 15.6-inch\" IPS FHD 144Hz 100% sRGB 300nits - Windows 11",
-      "category": "cpu",
-      "priceEgp": 72999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-loq-15irx10-83je00kccc-intel-core-i7-13650hx-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-4800mhz-116-512gb-nvme-gen-4-156-inch-ips-fhd-144hz-100-srgb-300nits-windows-11-uxifxtu5iekh",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff2f01d8e-7ebe-42bc-a37b-653099612966&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lenovo-legion-5-15irx10-83ly00qmps-intel-core-i7-13650hx-nvidia-geforce-rtx-5070-8gb-16gb-ddr5-4800mhz-1t-nvme-gen-4-153",
-      "name": "LENOVO Legion 5 15IRX10-83LY00QMPS - Intel Core i7 13650HX - NVIDIA GeForce RTX 5070 8GB - 16GB DDR5 4800MHz - 1T Nvme GEN 4 - 15.3-inch IPS FHD 100% sRGB 300nits 165Hz - White Backlit.",
-      "category": "cpu",
-      "priceEgp": 95000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lenovo-legion-5-15irx10-83ly00qmps-intel-core-i7-13650hx-nvidia-geforce-rtx-5070-8gb-16gb-ddr5-4800mhz-1t-nvme-gen-4-153-inch-ips-wqxga-100-srgb-300nits-165hz-white-backlit-pb6sig59a1tm",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F368997b3-afa3-44e6-843c-202981bfaf05&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -4044,7 +3400,7 @@
       "retailerId": "sigma",
       "externalId": "id-cooling-fx360-td-digital-screen-gen-7-pro-pump-argb-aio-liquid-cpu-cooler-ekp69efebhy8",
       "name": "ID-COOLING FX360 TD Digital Screen Gen 7 Pro Pump ARGB AIO Liquid Cpu Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 3399.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -4058,7 +3414,7 @@
       "retailerId": "sigma",
       "externalId": "id-cooling-frozn-a620-pro-xe-argb-snow-6-heatpipe-dual-tower-white-wavbiy2b5wy7",
       "name": "ID-COOLING FROZN A620 PRO XE ARGB 6 Heatpipe Dual Tower Cpu Air Cooler",
-      "category": "cpu",
+      "category": "cooling",
       "priceEgp": 1999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
@@ -4100,7 +3456,7 @@
       "retailerId": "sigma",
       "externalId": "xigmatek-hero-ii-air-4-fan-argb-valkyrie-750w-atx31-80-bronze-mid-tower-case-klgsdmiigrwk",
       "name": "Xigmatek Hero II Air 4 Fan ARGB + Valkyrie 750W ATX3.1 80+ Bronze Mid Tower Case",
-      "category": "psu",
+      "category": "cooling",
       "priceEgp": 3699.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",

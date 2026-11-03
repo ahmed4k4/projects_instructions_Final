@@ -37,8 +37,8 @@ enable_confirmations = false
 [storage]
 enabled = false
 
-# JWT verification stays ON (Supabase gateway). The function additionally
-# resolves the user itself so quota can be attributed per account and
-# anonymous sign-ins can be rejected.
+# JWT verification stays ON for the legacy Edge Function. The Vercel AI route
+# accepts guest requests and applies an IP-hash quota, or a per-user quota when
+# a valid Supabase access token is supplied.
 [functions.gemini-proxy]
 verify_jwt = true

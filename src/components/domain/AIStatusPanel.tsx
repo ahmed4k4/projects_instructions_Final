@@ -38,6 +38,7 @@ export function AIStatusPanel({ className }: { className?: string }) {
   };
 
   const configured = status?.configured ?? false;
+  const diagnosis = status?.diagnosis ?? null;
   const tone = status?.error ? 'warning' : configured ? 'ok' : 'idle';
   const Icon = status?.error ? AlertTriangle : configured ? CheckCircle2 : Plug;
 
@@ -135,6 +136,14 @@ export function AIStatusPanel({ className }: { className?: string }) {
 
               {!configured && (
                 <div className="space-y-2 rounded-lg border border-border bg-background/50 p-2.5">
+                  {/*
+                   * The server already knows WHY it has no key (missing env var
+                   * vs. a 404 on the endpoint), so show its diagnosis first — on
+                   * a deployment, "run pnpm dev" is useless advice.
+                   */}
+                  {diagnosis ? (
+                    <p className="text-[10.5px] leading-relaxed text-warning">{diagnosis}</p>
+                  ) : null}
                   <p className="text-[10.5px] leading-relaxed text-muted-foreground">
                     {t('aiStatus.configureBody')}
                   </p>

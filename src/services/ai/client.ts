@@ -19,7 +19,7 @@ import type {
   ToolCall,
 } from '@/types/ai';
 import { AIError } from '@/types/ai';
-import { geminiProvider, handleModelRetired, setGeminiConfigured } from './providers/geminiProvider';
+import { geminiProvider, setGeminiConfigured } from './providers/geminiProvider';
 import type { ChatMessage, ChatRequest, GroundingSource, ProviderId } from './providers/types';
 import { ProviderError } from './providers/types';
 import { toNeutralMessages, toNeutralRequest } from './translate';
@@ -27,6 +27,7 @@ import { probeModels, resolveModelSync } from './models';
 import { discoverGeminiConfig } from './config';
 import { getGroundingStatus, recordGroundedSearch } from './groundingBudget';
 import { shouldGround } from './grounding';
+import i18n from '@/i18n';
 
 let lastModel: string | null = null;
 let lastLatency: number | null = null;
@@ -39,6 +40,8 @@ export interface AIStatus {
   latencyMs: number | null;
   configured: boolean;
   error: string | null;
+  /** Server-supplied explanation when AI is unavailable (deploy or key issue). */
+  diagnosis: string | null;
   grounding: { used: number; remaining: number; limit: number; warn: boolean };
 }
 
@@ -54,6 +57,7 @@ export async function getAIStatus(): Promise<AIStatus> {
     latencyMs: lastLatency,
     configured: config.configured,
     error: lastError,
+    diagnosis: config.configured ? null : config.diagnosis,
     grounding: getGroundingStatus(),
   };
 }
@@ -72,11 +76,30 @@ function toAIError(error: unknown): AIError {
   if (error instanceof AIError) return error;
   if ((error as Error)?.name === 'AbortError') return new AIError('aborted', 'Cancelled.');
   if (error instanceof ProviderError) {
-    if (error.kind === 'rate_limit') return new AIError('rate_limited', 'Gemini quota is exhausted.');
-    if (error.kind === 'auth') return new AIError('not_configured', 'The Gemini API key is invalid.');
-    return new AIError('upstream_error', error.message);
+    if (error.kind === 'rate_limit') {
+      return new AIError('rate_limited', i18n.t('advisor.errors.quota'), error.status);
+    }
+    if (error.kind === 'auth') {
+      if (error.status === 403) {
+        return new AIError('unauthorized', i18n.t('advisor.errors.verifyEmail'), error.status);
+      }
+      if (/api key/i.test(error.message)) {
+        return new AIError('not_configured', i18n.t('advisor.errors.notConfigured'), error.status);
+      }
+      return new AIError('unauthorized', i18n.t('advisor.errors.expired'), error.status);
+    }
+    if (error.kind === 'timeout' || error.status === 504) {
+      return new AIError('upstream_timeout', i18n.t('advisor.errors.timeout'), error.status);
+    }
+    if (error.kind === 'invalid') {
+      return new AIError('invalid_request', i18n.t('advisor.errors.invalidRequest'), error.status);
+    }
+    if (error.kind === 'server' && /configuration|migration|SUPABASE|GEMINI_API_KEY|usage protection/i.test(error.message)) {
+      return new AIError('not_configured', i18n.t('advisor.errors.notConfigured'), error.status);
+    }
+    return new AIError('network', i18n.t('advisor.errors.network'), error.status);
   }
-  return new AIError('network', (error as Error)?.message ?? 'The AI request failed.');
+  return new AIError('network', i18n.t('advisor.errors.network'));
 }
 
 async function execute<T>(operation: () => Promise<T>, signal?: AbortSignal): Promise<T> {
@@ -91,18 +114,10 @@ async function execute<T>(operation: () => Promise<T>, signal?: AbortSignal): Pr
     if ((error as Error)?.name === 'AbortError' || signal?.aborted)
       throw new AIError('aborted', 'Cancelled.');
 
-    // A retired model shows up as a 404: drop the cache and retry once.
+    // Model fallback is handled inside the provider before an error reaches
+    // this layer. Retrying here used to clear the fallback cache and repeat the
+    // same failed model, adding latency without improving availability.
     const message = (error as Error)?.message ?? '';
-    if (/404|not found|no longer/i.test(message)) {
-      handleModelRetired();
-      try {
-        return await operation();
-      } catch (retryError) {
-        lastError = (retryError as Error).message;
-        throw toAIError(retryError);
-      }
-    }
-
     lastError = message;
     throw toAIError(error);
   }
@@ -195,6 +210,7 @@ export async function generateStructured<T>(
           messages,
           jsonSchema: schema,
           temperature: options.temperature,
+          thinkingLevel: options.thinkingLevel ?? 'LOW',
           maxTokens: options.maxOutputTokens ?? 4096,
         },
         options.signal,

@@ -32,7 +32,24 @@ const steps = [
   // checked without a deploy: the real Serverless Function module is imported and
   // called. Live calls are skipped when GEMINI_API_KEY is absent.
   ['ai route', 'node', ['scripts/verify-ai-function.mjs']],
+  // Builds the real Vercel function and asserts its shipped imports resolve —
+  // the failure mode that produced FUNCTION_INVOCATION_FAILED in production.
+  ['ai bundle', 'node', ['scripts/verify-ai-route-bundle.mjs']],
+  // Executes the emitted bundle — the only check that catches a module which
+  // resolves on disk but fails to load at runtime.
+  ['ai runtime', 'node', ['scripts/verify-ai-route-runtime.mjs']],
   ['retailer coverage', 'node', ['scripts/verify-listing-coverage.mjs']],
+  // Phase 15: the two data defects users reported — "CPU filter shows fans" and
+  // "the builder uses parts nobody sells". Both are checks over the shipped
+  // snapshot, so they fail a release instead of a screenshot.
+  ['catalogue categories', 'node', ['scripts/verify-catalogue-categories.mjs']],
+  ['catalogue specs', 'node', ['scripts/verify-catalogue-specs.mjs']],
+  // The production 404 was a rewrite claiming /api before the function stage.
+  // This replays the BUILT routing table, so local dev cannot hide it again.
+  ['vercel routing', 'node', ['scripts/verify-vercel-routing.mjs']],
+  // Executes the emitted middleware + function at every path depth — the check
+  // that would have caught "one segment works, two or more 404".
+  ['api route', 'node', ['scripts/verify-api-route.mjs']],
   ['unused files', 'node', ['scripts/audit-unused.mjs']],
   // Phase 11: both FAIL the build (unlike audit-unused, which only reports).
   ['orphans', 'node', ['scripts/check-orphans.mjs']],

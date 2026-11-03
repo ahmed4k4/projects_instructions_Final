@@ -103,6 +103,8 @@ export default function Compare() {
                       src={imageUrl}
                       alt=""
                       loading="lazy"
+                      // Elnekhely 403s a hotlink that carries our Referer.
+                      referrerPolicy="no-referrer"
                       onError={() => setImageFailed(true)}
                       className="max-h-full max-w-full object-contain"
                     />

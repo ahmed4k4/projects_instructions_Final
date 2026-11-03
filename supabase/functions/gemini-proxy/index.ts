@@ -38,12 +38,12 @@ const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta';
  *   client cannot ask for an arbitrary (expensive) model.
  */
 const MODELS = {
-  flash: 'gemini-3.6-flash',
-  pro: 'gemini-3.8-flash',
+  flash: 'gemini-3.5-flash-lite',
+  pro: 'gemini-3.5-flash',
 } as const;
 type ModelKey = keyof typeof MODELS;
 
-const RATE_LIMIT = { windowSeconds: 60, maxRequests: 20 };
+const RATE_LIMIT = { windowSeconds: 60, maxRequests: 60 };
 const UPSTREAM_TIMEOUT_MS = 45_000;
 const MAX_RETRIES = 1;
 
@@ -78,6 +78,7 @@ interface GenerateRequest {
   systemInstruction?: string;
   tools?: ToolDeclaration[];
   temperature?: number;
+  thinkingLevel?: 'MINIMAL' | 'LOW' | 'MEDIUM' | 'HIGH';
   maxOutputTokens?: number;
   responseSchema?: Record<string, unknown>;
 }

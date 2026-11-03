@@ -61,11 +61,26 @@
     "ctaAction": "Generate a build",
     "viewBuild": "View build",
     "subtitle": "Configurations that ship unchanged",
-    "emptyCategory": "No configuration in this category yet"
+    "emptyCategory": "No configuration in this category yet",
+    "liveNote": "Parts and prices are taken from live Egyptian retailer stock.",
+    "configs": {
+      "starter": {
+        "name": "Starter — 1080p Gaming",
+        "description": "High-refresh esports at 1080p. Every part is in stock in Egypt today."
+      },
+      "balanced": {
+        "name": "Balanced — 1440p Gaming",
+        "description": "The sweet spot: 1440p high refresh without paying flagship prices."
+      },
+      "flagship": {
+        "name": "Flagship — 4K Gaming",
+        "description": "4K high refresh: the strongest card and CPU the catalogue carries."
+      }
+    }
   },
   "community": {
     "title": "What everyone else is running",
-    "description": "Real builds with real spec sheets. Ratings and views are stored per build.",
+    "description": "Published builds with real prices and compatibility scores. Ratings and views are stored per build.",
     "publish": "Publish your build",
     "by": "by",
     "open": "Open build",
@@ -78,7 +93,11 @@
     "empty": "No published builds yet",
     "emptyHint": "Publish one of your builds to start the feed.",
     "rate": "Rate this build",
-    "yourRating": "Your rating"
+    "yourRating": "Your rating",
+    "demoNote": "These are example builds shipped with Nexus. Publish your own to see real submissions here.",
+    "prebuiltNote": "No community builds published yet. These are generated configurations — real parts at live Egyptian prices — not user submissions.",
+    "trendingNote": "Suggested topics, not measured activity.",
+    "viewBuild": "View build"
   },
   "dashboard": {
     "title": "Your build workspace",
@@ -102,7 +121,8 @@
     "openBuilder": "Open the builder",
     "alertsTab": "Alerts",
     "noAlerts": "No alerts yet",
-    "partsSelected": "{{count}} parts selected · {{price}} of {{budget}}"
+    "partsSelected": "{{count}} parts selected · {{price}} of {{budget}}",
+    "samplesNote": "These are example builds. Save a build to your account to see it here."
   },
   "buildDetail": {
     "copyLink": "Copy share link",
@@ -124,6 +144,8 @@
     "loaded": "Loaded into the builder",
     "loadedHint": "Swap any part and totals update live.",
     "notFoundTitle": "That build page doesn't exist",
+    "notFoundBody": "No configuration matches “{{slug}}”. It may have been retired, or the link is incomplete.",
+    "browsePrebuilt": "Browse prebuilt builds",
     "priceLabel": "Price",
     "timeLabel": "Est. build time"
   },

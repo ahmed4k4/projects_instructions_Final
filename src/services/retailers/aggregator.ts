@@ -1,9 +1,9 @@
-﻿import type { ComponentCategory } from '@/types/components';
+import type { ComponentCategory } from '@/types/components';
 import { supabase, isSupabaseConfigured } from '../supabaseClient';
 import snapshot from './bootstrap.json';
 import { compareOffers } from '@/lib/offerRanking';
+import { resolveCategory } from '@/lib/categoryRules';
 import { loadSigmaFeed } from './sigmaFeed';
-import { sampleComponents } from '@/lib/sampleData';
 import {
   RETAILERS,
   type PriceComparison,
@@ -45,6 +45,28 @@ interface SnapshotProduct {
   stockStatus: RetailerOffer['stockStatus'];
   productUrl: string;
   imageUrl: string | null;
+  specs?: Record<string, unknown>;
+}
+
+/**
+ * The category a listing belongs to, recomputed at READ time.
+ *
+ * The snapshot's stored category was written by the keyword classifier, and the
+ * database still holds rows written before Phase 15. Deriving it from the URL
+ * here means one code path fixes the snapshot, the bootstrap subset, the Sigma
+ * feed and the live table at once — a snapshot produced by the old scraper can
+ * never resurrect a fan as a CPU.
+ *
+ * Returns null for an ACCESSORY (see `ACCESSORY` in categoryRules) — a mounting
+ * bracket or thermal paste is not a component, and the caller drops it.
+ */
+function categoryOf(product: { category?: string | null; name?: string; productUrl?: string }): ComponentCategory | null {
+  const resolved = resolveCategory({
+    url: product.productUrl,
+    title: product.name,
+    stored: product.category ?? null,
+  });
+  return resolved ? (resolved as ComponentCategory) : null;
 }
 
 /**
@@ -83,30 +105,62 @@ interface SnapshotFeed {
 
 let snapshotOffers: RetailerOffer[] | null = null;
 let sigmaOffers: RetailerOffer[] = [];
-let feedLoaded = false;
+let snapshotPromise: Promise<SnapshotFeed> | null = null;
 
-/** Fetch the full retailer snapshot once, falling back to the bundle subset. */
-async function loadFullSnapshot(): Promise<SnapshotFeed> {
-  if (feedLoaded) return CURRENT_FEED;
-  feedLoaded = true;
+const FEED_TIMEOUT_MS = 8_000;
 
-  try {
-    const base = import.meta.env.BASE_URL || '/';
-    const res = await fetch(`${base.endsWith('/') ? base : `${base}/`}data/retailer_snapshot.json`);
-    if (res.ok) {
-      const payload = (await res.json()) as SnapshotFeed;
-      if (Array.isArray(payload.products) && payload.products.length) {
-        CURRENT_FEED = { capturedAt: payload.capturedAt ?? BOOTSTRAP.capturedAt, products: payload.products };
-        // Rebuild the offer list from the richer feed.
-        snapshotOffers = null;
-        return CURRENT_FEED;
-      }
+function isSnapshotProduct(value: unknown): value is SnapshotProduct {
+  if (!value || typeof value !== 'object') return false;
+  const row = value as Partial<SnapshotProduct>;
+  return (
+    typeof row.retailerId === 'string' && row.retailerId in RETAILERS &&
+    typeof row.externalId === 'string' &&
+    typeof row.name === 'string' && row.name.trim().length > 2 &&
+    typeof row.priceEgp === 'number' && Number.isFinite(row.priceEgp) && row.priceEgp > 0 &&
+    typeof row.productUrl === 'string' && /^https?:\/\//i.test(row.productUrl)
+  );
+}
+
+/** Fetch the full snapshot once on success; retry later when the network fails. */
+async function loadFullSnapshot(timeoutMs = FEED_TIMEOUT_MS): Promise<SnapshotFeed> {
+  if (snapshotPromise) return snapshotPromise;
+
+  snapshotPromise = (async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const base = import.meta.env.BASE_URL || '/';
+      const url = `${base.endsWith('/') ? base : `${base}/`}data/retailer_snapshot.json`;
+      const res = await fetch(url, {
+        cache: 'no-cache',
+        headers: { Accept: 'application/json' },
+        signal: controller.signal,
+      });
+      if (!res.ok) throw new Error(`Retailer snapshot returned HTTP ${res.status}`);
+
+      const payload = (await res.json()) as Partial<SnapshotFeed>;
+      const products = Array.isArray(payload.products) ? payload.products.filter(isSnapshotProduct) : [];
+      if (!products.length) throw new Error('Retailer snapshot did not contain valid products');
+
+      CURRENT_FEED = {
+        capturedAt: typeof payload.capturedAt === 'string' ? payload.capturedAt : BOOTSTRAP.capturedAt,
+        products,
+      };
+      // Rebuild the offer list from the richer feed.
+      snapshotOffers = null;
+      return CURRENT_FEED;
+    } catch (error) {
+      // The bundled subset remains usable. Reset the promise so the next read
+      // can recover when a transient CDN/network failure has cleared.
+      snapshotPromise = null;
+      if (import.meta.env.DEV) console.warn('[retailers] Snapshot load failed; using bootstrap data.', error);
+      return CURRENT_FEED;
+    } finally {
+      clearTimeout(timer);
     }
-  } catch {
-    // Offline / not deployed: the bundled subset is enough to keep the UI alive.
-  }
+  })();
 
-  return CURRENT_FEED;
+  return snapshotPromise;
 }
 
 let CURRENT_FEED: SnapshotFeed = { capturedAt: BOOTSTRAP.capturedAt, products: BOOTSTRAP.products };
@@ -132,13 +186,14 @@ async function loadSigmaOffers(): Promise<void> {
       seen.add(key);
       return true;
     })
-    .map((product, index) => {
-      const match = matchSnapshotToCatalogue(product.name, product.category);
+    .map((product, index): RetailerOffer => {
+      const category = categoryOf(product);
+      const match = matchSnapshotToCatalogue(product.name, category);
       return {
         id: `sigma-${index}`,
         retailerId: 'sigma' as const,
         name: product.name,
-        category: (product.category as ComponentCategory | null) ?? null,
+        category,
         priceEgp: product.priceEgp,
         originalPriceEgp: product.originalPriceEgp,
         stockStatus: product.stockStatus,
@@ -147,6 +202,7 @@ async function loadSigmaOffers(): Promise<void> {
         matchedComponentId: match?.id ?? null,
         matchConfidence: match?.confidence ?? null,
         lastScrapedAt: feed.capturedAt ?? new Date().toISOString(),
+        specs: product.specs ?? undefined,
       };
     });
 }
@@ -160,8 +216,10 @@ async function loadSigmaOffers(): Promise<void> {
  * app reads the snapshot directly and makes no further requests.
  */
 let retailerTableMissing = false;
+let retailerTableUnavailableUntil = 0;
 /** Resolves once: does `retailer_products` exist? Shared by every reader. */
 let tableProbe: Promise<void> | null = null;
+const TABLE_PROBE_TIMEOUT_MS = 2_500;
 
 /**
  * Probe the table exactly once per session.
@@ -173,36 +231,69 @@ let tableProbe: Promise<void> | null = null;
  */
 async function ensureTableProbed(): Promise<void> {
   if (retailerTableMissing || !isSupabaseConfigured || !supabase) return;
+  if (Date.now() < retailerTableUnavailableUntil) return;
+  retailerTableUnavailableUntil = 0;
+  if (tableProbe) return tableProbe;
 
-  tableProbe ??= (async () => {
-    const client = supabase;
-    if (!client) return;
-    const { error } = await client.from('retailer_products').select('id').limit(1);
-    if (error && isMissingTable(error)) retailerTableMissing = true;
+  const client = supabase;
+  tableProbe = (async () => {
+    let timedOut = false;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+    try {
+      const probe = client.from('retailer_products').select('id').limit(1);
+      const timeout = new Promise<null>((resolve) => {
+        timeoutId = setTimeout(() => {
+          timedOut = true;
+          resolve(null);
+        }, TABLE_PROBE_TIMEOUT_MS);
+      });
+      const result = await Promise.race([probe, timeout]);
+      if (timeoutId) clearTimeout(timeoutId);
+
+      if (result === null) {
+        // Do not let a sleeping DB block the first AI response indefinitely.
+        retailerTableUnavailableUntil = Date.now() + 30_000;
+        return;
+      }
+      if (result.error && isMissingTable(result.error)) {
+        retailerTableMissing = true;
+        return;
+      }
+      if (result.error) retailerTableUnavailableUntil = Date.now() + 30_000;
+    } catch {
+      if (timeoutId) clearTimeout(timeoutId);
+      retailerTableUnavailableUntil = Date.now() + 30_000;
+    } finally {
+      // Failed probes must be retried after the cooldown, rather than caching
+      // a resolved promise forever and silently treating the DB as healthy.
+      if (timedOut || retailerTableUnavailableUntil > Date.now()) tableProbe = null;
+    }
   })();
 
   await tableProbe;
 }
 
 /** Snapshot rows plus whatever the Sigma worker last published. */
-async function allOffers(): Promise<RetailerOffer[]> {
-  await loadFullSnapshot();
+async function allOffers(includeSigma = true): Promise<RetailerOffer[]> {
+  // AI has a tighter fallback deadline; the UI/catalogue can wait longer.
+  await loadFullSnapshot(includeSigma ? FEED_TIMEOUT_MS : 2_500);
   const base = loadSnapshotOffers();
-  await loadSigmaOffers();
-  return sigmaOffers.length ? [...base, ...sigmaOffers] : base;
+  // AI recommendations do not need Sigma to answer. Sigma is a separate feed
+  // and may time out on a mobile connection; keep it out of the AI hot path.
+  if (includeSigma) await loadSigmaOffers();
+  return includeSigma && sigmaOffers.length ? [...base, ...sigmaOffers] : base;
 }
 
-/** Build offers from the snapshot, linking each to a catalogue id by name. */
-function loadSnapshotOffers(): RetailerOffer[] {
-  if (snapshotOffers) return snapshotOffers;
-
-  snapshotOffers = CURRENT_FEED.products.map((product, index) => {
-    const match = matchSnapshotToCatalogue(product.name, product.category);
+/** Build offers from one snapshot page, linking each to a catalogue id by name. */
+function mapSnapshotOffers(products: SnapshotProduct[], capturedAt: string, prefix = 'snap'): RetailerOffer[] {
+  return products.map((product, index) => {
+    const category = categoryOf(product);
+    const match = matchSnapshotToCatalogue(product.name, category);
     return {
-      id: `snap-${index}`,
+      id: `${prefix}-${index}`,
       retailerId: product.retailerId,
       name: product.name,
-      category: (product.category as ComponentCategory | null) ?? null,
+      category: category ?? null,
       priceEgp: product.priceEgp,
       priceIsPlaceholder: product.priceIsPlaceholder,
       originalPriceEgp: product.originalPriceEgp,
@@ -211,11 +302,55 @@ function loadSnapshotOffers(): RetailerOffer[] {
       imageUrl: product.imageUrl,
       matchedComponentId: match?.id ?? null,
       matchConfidence: match?.confidence ?? null,
-      lastScrapedAt: CURRENT_FEED.capturedAt,
+      lastScrapedAt: capturedAt,
     };
   });
+}
 
+/** Full feed mapping is cached; category shards keep AI catalogue lookups small. */
+function loadSnapshotOffers(): RetailerOffer[] {
+  if (!snapshotOffers) snapshotOffers = mapSnapshotOffers(CURRENT_FEED.products, CURRENT_FEED.capturedAt);
   return snapshotOffers;
+}
+
+const categorySnapshotPromises = new Map<ComponentCategory, Promise<RetailerOffer[] | null>>();
+
+async function loadCategorySnapshotOffers(category: ComponentCategory): Promise<RetailerOffer[] | null> {
+  const cached = categorySnapshotPromises.get(category);
+  if (cached) return cached;
+
+  const pending = (async (): Promise<RetailerOffer[] | null> => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 2_500);
+    try {
+      const base = import.meta.env.BASE_URL || '/';
+      const url = `${base.endsWith('/') ? base : `${base}/`}data/retailer_snapshot_by_category/${category}.json`;
+      const response = await fetch(url, { cache: 'force-cache', headers: { Accept: 'application/json' }, signal: controller.signal });
+      if (!response.ok) return null;
+      const payload = (await response.json()) as Partial<SnapshotFeed>;
+      const products = Array.isArray(payload.products) ? payload.products.filter(isSnapshotProduct) : [];
+      if (!products.length) return null;
+      return mapSnapshotOffers(products, typeof payload.capturedAt === 'string' ? payload.capturedAt : BOOTSTRAP.capturedAt, `snap-${category}`);
+    } catch {
+      return null;
+    } finally {
+      clearTimeout(timer);
+    }
+  })();
+
+  categorySnapshotPromises.set(category, pending);
+  const result = await pending;
+  if (!result) categorySnapshotPromises.delete(category);
+  return result;
+}
+
+async function fallbackOffers(filters: RetailerProductFilters, includeSigma: boolean): Promise<RetailerOffer[]> {
+  let base: RetailerOffer[] | null = null;
+  if (filters.category) base = await loadCategorySnapshotOffers(filters.category);
+  if (!base) return allOffers(includeSigma);
+  if (!includeSigma) return base;
+  await loadSigmaOffers();
+  return sigmaOffers.length ? [...base, ...sigmaOffers] : base;
 }
 
 /**
@@ -269,19 +404,23 @@ export function scoreNameMatch(productName: string, catalogueName: string): numb
 }
 
 function matchSnapshotToCatalogue(
-  productName: string,
-  category: string | null,
+  _productName: string,
+  _category: ComponentCategory | null,
 ): { id: string; confidence: number } | null {
-  if (!category) return null;
-  let best: { id: string; confidence: number } | null = null;
-
-  for (const component of sampleComponents) {
-    if (component.category !== category) continue;
-    const confidence = scoreNameMatch(productName, component.name);
-    if (!best || confidence > best.confidence) best = { id: component.id, confidence };
-  }
-
-  return best && best.confidence >= 0.5 ? best : null;
+  /**
+   * Retired in Phase 15.
+   *
+   * These columns linked a listing to the hand-written `sampleComponents`
+   * catalogue. That catalogue is gone: the Builder builds from the retailer
+   * listings themselves (`lib/retailerCatalogue.ts`), grouped by SKU, so a
+   * listing IS the component and there is nothing to match against.
+   *
+   * The columns stay in the schema (migration 008, and its view
+   * `component_best_price`) because dropping them would need a migration; the
+   * read path simply stops populating them. `matchedComponentId` is kept as a
+   * nullable field on `RetailerOffer` so the type does not lie about the data.
+   */
+  return null;
 }
 
 interface RetailerRow {
@@ -297,6 +436,7 @@ interface RetailerRow {
   matched_component_id: string | null;
   match_confidence: number | string | null;
   last_scraped_at: string;
+  specs?: Record<string, unknown> | null;
 }
 
 function toOffer(row: RetailerRow): RetailerOffer {
@@ -304,12 +444,16 @@ function toOffer(row: RetailerRow): RetailerOffer {
     id: row.id,
     retailerId: row.retailer_id as RetailerId,
     name: row.name,
+    // Same rules as the snapshot: a row written before Phase 15 is corrected on
+    // read rather than trusted.
+    category: categoryOf({ category: row.category, name: row.name, productUrl: row.product_url }),
     // numeric columns arrive as strings from PostgREST.
     priceEgp: Number(row.price_egp),
     originalPriceEgp: row.original_price_egp === null ? null : Number(row.original_price_egp),
     stockStatus: (row.stock_status as RetailerOffer['stockStatus']) ?? 'unknown',
     productUrl: row.product_url,
     imageUrl: row.image_url,
+    specs: row.specs ?? undefined,
     matchedComponentId: row.matched_component_id,
     matchConfidence: row.match_confidence === null ? null : Number(row.match_confidence),
     lastScrapedAt: row.last_scraped_at,
@@ -391,19 +535,29 @@ function isMissingTable(error: { code?: string; message?: string; status?: numbe
  * short-circuits and narrows `supabase` to non-null.
  */
 function shouldUseSnapshot(): boolean {
-  return !isSupabaseConfigured || !supabase || retailerTableMissing;
+  return !isSupabaseConfigured || !supabase || retailerTableMissing || Date.now() < retailerTableUnavailableUntil;
 }
 
 /** Raw retailer listings, optionally filtered. */
-export async function getAggregatedProducts(filters: RetailerProductFilters = {}): Promise<RetailerOffer[]> {
-  await loadFullSnapshot();
+export interface AggregatedProductOptions {
+  /** Set false for latency-sensitive AI paths that do not need the Sigma-only feed. */
+  includeSigma?: boolean;
+}
+
+export async function getAggregatedProducts(
+  filters: RetailerProductFilters = {},
+  options: AggregatedProductOptions = {},
+): Promise<RetailerOffer[]> {
+  const includeSigma = options.includeSigma !== false;
+  // Probe Supabase first. When the live table is healthy, avoid downloading the
+  // large static snapshot entirely; it is only a fallback for missing/empty DB.
   await ensureTableProbed();
-  if (shouldUseSnapshot() || !supabase) return snapshotOnly(await allOffers(), filters);
+  if (shouldUseSnapshot() || !supabase) return snapshotOnly(await fallbackOffers(filters, includeSigma), filters);
 
   let query = supabase
     .from('retailer_products')
     .select(
-      'id, retailer_id, name, category, price_egp, original_price_egp, stock_status, product_url, image_url, matched_component_id, match_confidence, last_scraped_at',
+      'id, retailer_id, name, category, price_egp, original_price_egp, stock_status, product_url, image_url, specs, matched_component_id, match_confidence, last_scraped_at',
     )
     .order('price_egp', { ascending: true });
 
@@ -425,7 +579,7 @@ export async function getAggregatedProducts(filters: RetailerProductFilters = {}
   // recursed infinitely on an empty table: the query succeeds with zero rows, so
   // the recursive call re-queried, returned zero again, and re-queried — the page
   // froze with "0 results" forever. `snapshotOnly()` makes the fallback terminal.
-  if (rows.length === 0) return snapshotOnly(await allOffers(), filters);
+  if (rows.length === 0) return snapshotOnly(await fallbackOffers(filters, includeSigma), filters);
   return rows;
 }
 
@@ -442,10 +596,14 @@ function snapshotOnly(all: RetailerOffer[], filters: RetailerProductFilters): Re
 }
 
 /**
- * Every retailer's offer for one catalogue component, cheapest first.
+ * DEPRECATED — kept for the name-based compare path only.
  *
- * Rows below `MIN_MATCH_CONFIDENCE` are excluded: a wrong match is worse than no
- * comparison, because users act on prices.
+ * These ids were catalogue rows from the hand-written `components` table. The
+ * Builder's components are retailer LISTINGS now (`lib/retailerCatalogue`), so
+ * `matched_component_id` is never populated and nothing calls this. It stays
+ * because `comparePrices` (name-based, still used by advisor citations) shares
+ * its fallback shape, and deleting it would mean rewriting that path too — see
+ * docs/AUDIT.md § 65 for the follow-up.
  */
 export async function getRetailerOffersForComponent(
   componentId: string,
@@ -462,7 +620,7 @@ export async function getRetailerOffersForComponent(
   const { data, error } = await supabase
     .from('retailer_products')
     .select(
-      'id, retailer_id, name, category, price_egp, original_price_egp, stock_status, product_url, image_url, matched_component_id, match_confidence, last_scraped_at',
+      'id, retailer_id, name, category, price_egp, original_price_egp, stock_status, product_url, image_url, specs, matched_component_id, match_confidence, last_scraped_at',
     )
     .eq('matched_component_id', componentId)
     .or(`match_confidence.gte.${MIN_MATCH_CONFIDENCE},match_confidence.is.null`);
@@ -600,7 +758,7 @@ export async function comparePrices(componentName: string, componentId?: string)
   const { data, error } = await supabase
     .from('retailer_products')
     .select(
-      'id, retailer_id, name, category, price_egp, original_price_egp, stock_status, product_url, image_url, matched_component_id, match_confidence, last_scraped_at',
+      'id, retailer_id, name, category, price_egp, original_price_egp, stock_status, product_url, image_url, specs, matched_component_id, match_confidence, last_scraped_at',
     )
     .ilike('name', `%${componentName.slice(0, 40)}%`)
     .limit(20);
@@ -610,30 +768,33 @@ export async function comparePrices(componentName: string, componentId?: string)
 }
 
 /** Which retailers are actually returning data right now (from the audit log). */
+async function getSnapshotRetailerHealth(): Promise<
+  Array<{ retailerId: RetailerId; status: string; productsUpserted: number; startedAt: string }>
+> {
+  await loadFullSnapshot();
+  await loadSigmaOffers();
+  const fromSnapshot = [...new Set(CURRENT_FEED.products.map((p) => p.retailerId))].map((retailerId) => ({
+    retailerId,
+    // Snapshot data is usable, but it is not evidence of a recent live sync.
+    status: 'snapshot',
+    productsUpserted: CURRENT_FEED.products.filter((p) => p.retailerId === retailerId).length,
+    startedAt: CURRENT_FEED.capturedAt,
+  }));
+
+  if (!sigmaOffers.length) return fromSnapshot;
+
+  const latest = sigmaOffers.reduce((newest, offer) => (offer.lastScrapedAt > newest ? offer.lastScrapedAt : newest), '');
+  return [
+    ...fromSnapshot,
+    { retailerId: 'sigma' as const, status: 'snapshot', productsUpserted: sigmaOffers.length, startedAt: latest },
+  ];
+}
+
+/** Which retailers have usable data, distinguishing synced rows from snapshots. */
 export async function getRetailerHealth(): Promise<
   Array<{ retailerId: RetailerId; status: string; productsUpserted: number; startedAt: string }>
 > {
-  // No sync log to read (DB unconfigured or unmigrated) — report the snapshot
-  // capture time so the UI can still say how fresh the prices are. Sigma comes
-  // from its own worker feed, so it is added here only when it actually has rows.
-  if (shouldUseSnapshot() || !supabase) {
-    await loadFullSnapshot();
-    await loadSigmaOffers();
-    const fromSnapshot = [...new Set(CURRENT_FEED.products.map((p) => p.retailerId))].map((retailerId) => ({
-      retailerId,
-      status: 'ok',
-      productsUpserted: CURRENT_FEED.products.filter((p) => p.retailerId === retailerId).length,
-      startedAt: CURRENT_FEED.capturedAt,
-    }));
-
-    if (!sigmaOffers.length) return fromSnapshot;
-
-    const latest = sigmaOffers.reduce((newest, offer) => (offer.lastScrapedAt > newest ? offer.lastScrapedAt : newest), '');
-    return [
-      ...fromSnapshot,
-      { retailerId: 'sigma' as const, status: 'ok', productsUpserted: sigmaOffers.length, startedAt: latest },
-    ];
-  }
+  if (shouldUseSnapshot() || !supabase) return getSnapshotRetailerHealth();
 
   const { data, error } = await supabase
     .from('retailer_sync_runs')
@@ -642,16 +803,17 @@ export async function getRetailerHealth(): Promise<
     .limit(20);
 
   if (error) {
-    // A missing audit table means migration 008/009 have not been applied at
-    // all — flip the flag so no other query probes the DB this session.
+    // A missing audit table is a setup state, not a reason to hide working
+    // snapshot data. Other temporary DB failures use the same safe fallback.
     if (isMissingTable(error)) retailerTableMissing = true;
-    return [];
+    return getSnapshotRetailerHealth();
   }
 
+  if (!data?.length) return getSnapshotRetailerHealth();
+
   const seen = new Set<string>();
-  const out: Array<{ retailerId: RetailerId; status: string; productsUpserted: number; startedAt: string }> =
-    [];
-  for (const row of data ?? []) {
+  const out: Array<{ retailerId: RetailerId; status: string; productsUpserted: number; startedAt: string }> = [];
+  for (const row of data) {
     if (seen.has(row.retailer_id)) continue;
     seen.add(row.retailer_id);
     if (!(row.retailer_id in RETAILERS)) continue;
@@ -662,7 +824,7 @@ export async function getRetailerHealth(): Promise<
       startedAt: row.started_at,
     });
   }
-  return out;
+  return out.length ? out : getSnapshotRetailerHealth();
 }
 
 export type { ComponentCategory, PriceComparison, RetailerId, RetailerOffer };

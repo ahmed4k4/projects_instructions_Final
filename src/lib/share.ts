@@ -16,7 +16,7 @@ import { appUrl } from './appUrl';
  * "missing" instead of corrupting the build.
  */
 
-export const SHARE_HASH_PREFIX = '#b=';
+const SHARE_HASH_PREFIX = '#b=';
 
 /** Current payload version. Bump only on a breaking shape change. */
 const PAYLOAD_VERSION = 1;
@@ -37,7 +37,7 @@ export interface DecodedShare {
 }
 
 /** Serialise the current selection into a compact payload object. */
-export function createSharePayload(
+function createSharePayload(
   selection: BuildSelection,
   name?: string,
   quantities?: Partial<Record<string, number>>,
@@ -65,7 +65,7 @@ export function createSharePayload(
  * Encode a selection into the `#b=` fragment value.
  * Returns an empty string when there is nothing worth sharing.
  */
-export function encodeBuildFragment(
+function encodeBuildFragment(
   selection: BuildSelection,
   name?: string,
   quantities?: Partial<Record<string, number>>,
@@ -100,7 +100,7 @@ function isPayload(value: unknown): value is SharedBuildPayload {
  * Decode an encoded fragment back into component ids.
  * Returns `null` for anything malformed — a bad link must never throw.
  */
-export function decodeBuildFragment(encoded: string): SharedBuildPayload | null {
+function decodeBuildFragment(encoded: string): SharedBuildPayload | null {
   if (!encoded) return null;
   try {
     const json = LZString.decompressFromEncodedURIComponent(encoded);

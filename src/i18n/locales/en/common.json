@@ -1,7 +1,9 @@
 {
   "app": {
     "name": "Nexus",
-    "tagline": "AI-Powered PC Builder"
+    "tagline": "AI-Powered PC Builder",
+    "subtitle": "PC Builder",
+    "logoHome": "{{name}} — home"
   },
   "nav": {
     "workspace": "Workspace",
@@ -37,7 +39,8 @@
     "copy": "Copy",
     "live": "Live",
     "error": "Unknown error",
-    "assistantTyping": "Assistant is typing"
+    "assistantTyping": "Assistant is typing",
+    "logoHome": "{{name}} — home"
   },
   "theme": {
     "dark": "Dark",
@@ -149,7 +152,14 @@
     "updatedDays_other": "{{count}} d ago",
     "noImage": "No photo",
     "lowestPrice": "Lowest recorded price",
-    "sigmaPending": "Pending"
+    "sigmaPending": "Pending",
+    "loadMore": "Load more results",
+    "loadingMore": "Loading…",
+    "endOfResults_one": "That is every result.",
+    "endOfResults_other": "That is all {{count}} results.",
+    "showingOf": "Showing {{shown}} of {{total}}",
+    "endOfResults": "That is every result.",
+    "priceUnavailable": "Price unavailable"
   },
   "compare": {
     "title": "Compare prices",

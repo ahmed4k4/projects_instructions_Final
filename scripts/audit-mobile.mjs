@@ -85,8 +85,12 @@ for (const width of widths) {
   const ctx = await browser.newContext({
     viewport: { width, height: 812 },
     deviceScaleFactor: 2,
-    isMobile: width < 768,
-    hasTouch: width < 768,
+    // 768px IS a touch width: tablets are the devices this check exists for.
+    // Gating on `< 768` made the 768 pass a mouse context, so `pointer: coarse`
+    // never matched and the harness reported "8 sub-44px targets" on a layout
+    // where the rule was working exactly as designed.
+    isMobile: width < 1024,
+    hasTouch: width < 1024,
     locale: lang === 'ar' ? 'ar-EG' : 'en-US',
   });
   const page = await ctx.newPage();

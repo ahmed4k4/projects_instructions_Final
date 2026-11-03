@@ -12,7 +12,7 @@ import { sampleComponents } from '@/lib/sampleData';
  * Falls back to the bundled defaults when the DB is unreachable so the UI never
  * silently claims "compatible".
  */
-export const FALLBACK_RULES: CompatibilityRule[] = [
+const FALLBACK_RULES: CompatibilityRule[] = [
   {
     ruleKey: 'cpu_motherboard_socket',
     categoryA: 'cpu',
@@ -179,7 +179,7 @@ export function useCompatibilityRules() {
 
 /* -------------------------------------------------------------------------- */
 
-export async function loadBenchmarks(): Promise<BenchmarkRow[]> {
+async function loadBenchmarks(): Promise<BenchmarkRow[]> {
   if (!isSupabaseConfigured || !supabase) return [];
   try {
     const { data, error } = await supabase.from('fps_benchmarks').select('*');
@@ -208,7 +208,7 @@ export function useBenchmarks() {
 /* -------------------------------------------------------------------------- */
 
 /** Full catalogue for client-side scoring/diffing (32 rows — cheap to hold). */
-export async function loadCatalogue(): Promise<import('@/types/components').PCComponent[]> {
+async function loadCatalogue(): Promise<import('@/types/components').PCComponent[]> {
   try {
     const rows = isSupabaseConfigured ? await listComponents() : sampleComponents;
     return rows.length ? rows : sampleComponents;

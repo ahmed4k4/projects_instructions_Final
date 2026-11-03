@@ -227,22 +227,6 @@ export const caseTiny = () =>
     radiatorSupport: ['240mm'],
   });
 
-export const coolerAir = () =>
-  component(
-    'cooling',
-    'Noctua NH-D15',
-    109,
-    {
-      type: 'Air',
-      tdpRating: 250,
-      socketSupport: ['AM5', 'AM4', 'LGA1700', 'LGA1200'],
-      height: 165,
-      radiatorSize: null,
-    },
-    3,
-    92,
-  );
-
 export const coolerTallAir = () =>
   component(
     'cooling',

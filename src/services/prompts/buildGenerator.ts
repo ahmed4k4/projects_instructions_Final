@@ -14,14 +14,6 @@ import type { AIBuildRequest, ToolDeclaration } from '@/types/ai';
 import { USE_CASE_MAP } from '@/lib/constants';
 import { formatCurrency } from '@/lib/utils';
 
-export const BUILD_TOOL_NAMES = [
-  'list_components',
-  'get_component_details',
-  'check_compatibility',
-  'get_build_score',
-  'finalize_build',
-] as const;
-
 /** Tool declarations handed to Gemini (JSON-schema style parameters). */
 export function buildTools(): ToolDeclaration[] {
   return [

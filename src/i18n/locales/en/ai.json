@@ -119,7 +119,10 @@
       "rebuild": "Rebuild"
     },
     "thisBuild": "This build",
-    "notFound": "That build could not be found."
+    "notFound": "That build could not be found.",
+    "analysing": "Running the deterministic analyser — the AI review follows if it is available.",
+    "swapped": "Swapped in {{name}}",
+    "rerunning": "Re-running the diagnosis…"
   },
   "aiStatus": {
     "title": "AI status",

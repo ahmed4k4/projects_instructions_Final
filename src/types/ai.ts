@@ -224,11 +224,3 @@ export class AIError extends Error {
     this.name = 'AIError';
   }
 }
-
-/** Kept for callers written against Phase 1. */
-export class AIUnavailableError extends AIError {
-  constructor(feature: string) {
-    super('not_configured', `${feature} is not available.`);
-    this.name = 'AIUnavailableError';
-  }
-}

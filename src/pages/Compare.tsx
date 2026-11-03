@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -13,6 +14,7 @@ import { useProductGroup } from '@/hooks/useSearch';
 import { fadeUp, viewportOnce } from '@/lib/motion';
 import { cn, formatCurrency, formatRelativeShort } from '@/lib/utils';
 import { RETAILERS } from '@/services/retailers/types';
+import { retailerImageUrl } from '@/lib/retailerImage';
 
 /**
  * `/compare/:groupId` — the shareable comparison view.
@@ -26,6 +28,8 @@ export default function Compare() {
   const { t } = useTranslation();
   const { groupId } = useParams<{ groupId: string }>();
   const { data: group, isLoading } = useProductGroup(groupId ?? null);
+  const [imageFailed, setImageFailed] = useState(false);
+  const imageUrl = group ? retailerImageUrl(group.imageUrl) : null;
 
   // `rankOffers` sorts out-of-stock last, so the first offer is unavailable only
   // when every offer is.
@@ -91,24 +95,23 @@ export default function Compare() {
             {/* Best price banner --------------------------------------- */}
             <div className="glass-card flex flex-wrap items-center justify-between gap-3 rounded-xl p-4">
               <div className="flex items-center gap-3">
-                {group.imageUrl ? (
-                  <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-lg border border-border bg-surface-inset/50">
+                <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-lg border border-border bg-surface-inset/50 text-muted-foreground">
+                  {/* A dead retailer file must degrade to the category icon, not
+                      to the browser's broken-image glyph. */}
+                  {imageUrl && !imageFailed ? (
                     <img
-                      src={group.imageUrl}
+                      src={imageUrl}
                       alt=""
                       loading="lazy"
+                      onError={() => setImageFailed(true)}
                       className="max-h-full max-w-full object-contain"
                     />
-                  </span>
-                ) : (
-                  <span className="grid size-14 shrink-0 place-items-center rounded-lg border border-border bg-surface-inset/50 text-muted-foreground">
-                    {group.category ? (
-                      <CategoryIcon category={group.category} size="md" />
-                    ) : (
-                      <PackageSearch className="size-5" />
-                    )}
-                  </span>
-                )}
+                  ) : group.category ? (
+                    <CategoryIcon category={group.category} size="md" />
+                  ) : (
+                    <PackageSearch className="size-5" />
+                  )}
+                </span>
                 <div className="min-w-0">
                   <p className="text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
                     {bestAvailable ? t('search.bestPrice') : t('search.lowestPrice')}

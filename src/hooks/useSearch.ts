@@ -1,11 +1,11 @@
-import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { keepPreviousData, useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import {
-  searchProducts,
+  searchProductsPage,
+  SEARCH_PAGE_SIZE,
   suggestProducts,
   getGroupById,
   getAvailableCategories,
   type SearchFilters,
-  type SearchResult,
   type SortKey,
 } from '@/services/searchService';
 
@@ -24,14 +24,23 @@ import {
 
 const SEARCH_STALE_MS = 5 * 60 * 1000;
 
+/**
+ * Paginated search for the results grid.
+ *
+ * `useInfiniteQuery` rather than a manual page state: it keeps every loaded page
+ * cached under the same key, so navigating to /compare and back restores the
+ * scroll position instead of refetching from page 1. A filter or sort change
+ * produces a new key and therefore a fresh first page — nothing stale survives.
+ */
 export function useSearch(filters: SearchFilters, sort: SortKey) {
-  return useQuery<SearchResult>({
+  return useInfiniteQuery({
     queryKey: ['search', filters, sort] as const,
-    queryFn: () => searchProducts(filters, sort),
+    queryFn: ({ pageParam }) => searchProductsPage(filters, sort, pageParam, SEARCH_PAGE_SIZE),
+    initialPageParam: 0,
+    getNextPageParam: (lastPage) => lastPage.nextOffset,
     staleTime: SEARCH_STALE_MS,
     // Keeps the previous results visible while the next set loads.
     placeholderData: keepPreviousData,
-    enabled: true,
   });
 }
 

@@ -94,6 +94,10 @@ for (const dir of ['api']) {
   }
 }
 SERVER_ENTRIES.push('vite.config.ts');
+// Ambient declarations are never imported by design — `vite-env.d.ts` augments
+// `ImportMeta` globally. Counting it as an orphan was the one permanent
+// discrepancy between this audit and `check-orphans.mjs`.
+SERVER_ENTRIES.push(...all.filter((file) => file.endsWith('.d.ts')));
 // The shared server code is reached FROM those two entries; seeding the folder
 // too keeps the walk correct even when an entry is renamed.
 SERVER_ENTRIES.push(...all.filter((file) => file.startsWith('src/server/')));

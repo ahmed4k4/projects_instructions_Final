@@ -1,0 +1,2258 @@
+{
+ "retailerId": "elnekhely",
+ "category": "motherboard",
+ "complete": true,
+ "lastPage": 0,
+ "products": [
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2274",
+   "name": "ASUS TUF GAMING X870-PLUS WIFI AM5 ATX Gaming Motherboard",
+   "category": "motherboard",
+   "priceEgp": 17499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-x870-plus-wifi-am5-atx-gaming-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870-PLUS/asus-tuf-gaming-x870-plus-wifi-am5-atx-gaming-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2276",
+   "name": "ROG CROSSHAIR X870E HERO WiFi AM5 ATX Gaming Motherboard",
+   "category": "motherboard",
+   "priceEgp": 31888,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 33000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/rog-crosshair-x870e-hero-wifi-am5-atx-gaming-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20X870E%20HERO/rog-crosshair-x870e-hero-wifi-am5-atx-gaming-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2273",
+   "name": "ROG STRIX X870E-E GAMING WIFI — Socket AM5/X870E-E/DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 27399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 30500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/rog-strix-x870e-e-gaming-wifi-%E2%80%94-socket-am5-x870e-e-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870E-E/rog-strix-x870e-e-gaming-wifi-%E2%80%94-socket-am5-x870e-e-ddr5-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3514",
+   "name": "ASUS B850 MAX GAMING WIFI AM5 DDR5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b850-max-gaming-wifi",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/ASUS%20B850%20Max%20Gaming%20WiFi/asus-b850-max-gaming-wifi-am5-ddr5-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2996",
+   "name": "ASUS B850 MAX GAMING WIFI W Socket AM5 Motherboard - DDR5, PCIe 5.0, Wi-Fi 6E",
+   "category": "motherboard",
+   "priceEgp": 10899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b850-max-gaming-wifi-w-am5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/%20B850%20MAX%2022222222/asus-b850-max-gaming-wifi-w-socket-am5-motherboard-ddr5-pcie-5-0-wi-fi-6e-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3162",
+   "name": "ASUS B850M MAX GAMING WIFI Socket AM5 Motherboard - DDR5, PCIe 5.0, WiFi 6",
+   "category": "motherboard",
+   "priceEgp": 8499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9249,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b850m-max-gaming-wifi-am5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850M%20MAX%20WIFI/asus-b850m-max-gaming-wifi-socket-am5-motherboard-ddr5-pcie-5-0-wifi-6-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3397",
+   "name": "ASUS B860M MAX GAMING AX Intel LGA1851 Micro-ATX Motherboard – DDR5, PCIe 5.0, Wi-Fi 6, Realtek 2.5Gb LAN",
+   "category": "motherboard",
+   "priceEgp": 8499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b860m-max-gaming-ax-intel-lga1851-micro-atx-motherboard-%E2%80%93-ddr5-pcie-5-0-wi-fi-6-realtek-2-5gb-lan",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B860M%20MAX/asus-b860m-max-gaming-ax-intel-lga1851-micro-atx-motherboard-%E2%80%93-ddr5-pcie-5-0-wi-fi-6-realtek-2-5gb-lan-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3149",
+   "name": "ASUS PRIME B650M-A II-CSM Micro-ATX Motherboard – DDR5, PCIe 5.0 M.2, 2.5Gb Ethernet, DisplayPort, HDMI, VGA, Rear USB 3.2 Gen 2, Front USB 3.2 Gen 1 Type-C, BIOS FlashBack, Aura Sync",
+   "category": "gpu",
+   "priceEgp": 6499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b650m-a-ii-csm-micro-atx-motherboard-%E2%80%93-ddr5-pcie-5-0-m-2-2-5gb-ethernet-displayport-hdmi-vga-rear-usb-3-2-gen-2-front-usb-3-2-gen-1-type-c-bios-flashback-aura-sync",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B650M-A%20II-CSM/asus-prime-b650m-a-ii-csm-micro-atx-motherboard-%E2%80%93-ddr5-pcie-5-0-m-2-2-5gb-ethernet-displayport-hdmi-vga-rear-usb-3-2-gen-2-front-usb-3-2-gen-1-type-c-bios-flashback-aura-sync-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2966",
+   "name": "ASUS Prime B760-PLUS ATX Motherboard – Intel B760, LGA 1700, DDR5, PCIe 5.0, 3×M.2 PCIe 4.0, 2.5Gb LAN, USB Type-C, HDMI & DisplayPort",
+   "category": "motherboard",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760-plus-atx-motherboard-%E2%80%93-intel-b760-lga-1700-ddr5-pcie-5-0-3%C3%97m-2-pcie-4-0-2-5gb-lan-usb-type-c-hdmi-displayport",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/PRIME%20B760-PLUS/asus-prime-b760-plus-atx-motherboard-%E2%80%93-intel-b760-lga-1700-ddr5-pcie-5-0-3%C3%97m-2-pcie-4-0-2-5gb-lan-usb-type-c-hdmi-displayport-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3513",
+   "name": "ASUS PRIME B760-PLUS D4 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760-plus-d4",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760-PLUS%20D4%20/asus-prime-b760-plus-d4-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2415",
+   "name": "ASUS PRIME B760M-A D4-CSM",
+   "category": "motherboard",
+   "priceEgp": 6199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-a-d4-csm",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20B760M-A%20D4-CSM/asus-prime-b760m-a-d4-csm-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2127",
+   "name": "ASUS PRIME B760M-A WIFI D4 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-a-wifi-d4-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/b760m-a/asus-prime-b760m-a-wifi-d4-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2353",
+   "name": "ASUS Prime B760M-A WiFi Intel LGA 1700 mATX D5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-a-wifi-intel-lga-1700-matx-d5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M-A%20D5/asus-prime-b760m-a-wifi-intel-lga-1700-matx-d5-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2014",
+   "name": "ASUS PRIME B760M-K D4",
+   "category": "motherboard",
+   "priceEgp": 5100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-k-d4",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/b760%20mk%20d4/asus-prime-b760m-k-d4-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2443",
+   "name": "ASUS Prime B760M-K D5 — Intel B760 LGA 1700",
+   "category": "motherboard",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-k-d5-%E2%80%94-intel-b760-lga-1700",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M-K%20D5/asus-prime-b760m-k-d5-%E2%80%94-intel-b760-lga-1700-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2414",
+   "name": "ASUS PRIME B760M-R D4, an Intel B760 LGA 1700 micro-ATX motherboard with PCIe 4.0, two PCIe 4.0 M.2 slots, DDR4, Realtek 2.5Gb Ethernet, HDMI™, SATA 6 Gbps, front USB 5Gbps ports, Aura Sync",
+   "category": "motherboard",
+   "priceEgp": 4800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5300,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-r-d4-an-intel-b760-lga-1700-micro-atx-motherboard-with-pcie-4-0-two-pcie-4-0-m-2-slots-ddr4-realtek-2-5gb-ethernet-hdmi-sata-6-gbps-front-usb-5gbps-ports-aura-sync",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M-R%204/asus-prime-b760m-r-d4-an-intel-b760-lga-1700-micro-atx-motherboard-with-pcie-4-0-two-pcie-4-0-m-2-slots-ddr4-realtek-2-5gb-ethernet-hdmi-sata-6-gbps-front-usb-5gbps-ports-aura-sync-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3646",
+   "name": "Asus Prime B850M K AM5 DDR5 PCIe 5.0 Micro-ATX Motherboard (2.5G LAN)",
+   "category": "motherboard",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b850m-k-am5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/Prime%20B850M%20K/asus-prime-b850m-k-am5-ddr5-pcie-5-0-micro-atx-motherboard-2-5g-lan-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3219",
+   "name": "ASUS PRIME B850M-F WIFI AM5 Micro-ATX Motherboard – AMD B850 Chipset, DDR5 256GB Support, PCIe 5.0, Built-in Wi-Fi, HDMI, 2x M.2 Slots",
+   "category": "motherboard",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b850m-f-wifi-am5-micro-atx-motherboard-%E2%80%93-amd-b850-chipset-ddr5-256gb-support-pcie-5-0-built-in-wi-fi-hdmi-2x-m-2-slots",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B850M-F%20WIFI/asus-prime-b850m-f-wifi-am5-micro-atx-motherboard-%E2%80%93-amd-b850-chipset-ddr5-256gb-support-pcie-5-0-built-in-wi-fi-hdmi-2x-m-2-slots-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2463",
+   "name": "ASUS PRIME B860M-A WIFI-CSM Micro ATX LGA1851 Motherboard DDR5",
+   "category": "motherboard",
+   "priceEgp": 8499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b860m-a-wifi-csm-micro-atx-lga1851-motherboard-ddr5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B860M-A%20WIFI%20CSM/asus-prime-b860m-a-wifi-csm-micro-atx-lga1851-motherboard-ddr5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3163",
+   "name": "ASUS PRIME B860M-A-CSM Micro-ATX Motherboard – Intel LGA1700, DDR5 Support, PCIe 5.0, M.2 Slots, 2.5Gb LAN, USB 3.2 Gen 2, Business-Class Reliability",
+   "category": "motherboard",
+   "priceEgp": 7650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b860m-a-csm-micro-atx-motherboard-%E2%80%93-intel-lga1700-ddr5-support-pcie-5-0-m-2-slots-2-5gb-lan-usb-3-2-gen-2-business-class-reliability",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/PRIME%20B860M-A-CSM/asus-prime-b860m-a-csm-micro-atx-motherboard-%E2%80%93-intel-lga1700-ddr5-support-pcie-5-0-m-2-slots-2-5gb-lan-usb-3-2-gen-2-business-class-reliability-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2060",
+   "name": "Asus Prime H610M K DDR5",
+   "category": "ram",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-h610m-k-ddr5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/h610%20d5/asus-prime-h610m-k-ddr5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2862",
+   "name": "ASUS PRIME Z790-P WIFI LGA1700 ATX Motherboard – Supports Intel 14th, 13th & 12th Gen Processors, DDR5, PCIe 5.0, Wi-Fi 6, USB 3.2 Gen 2, M.2, 4x DIMM Slots, 128GB Max RAM",
+   "category": "motherboard",
+   "priceEgp": 11500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-z790-p-wifi-lga1700-atx-motherboard-%E2%80%93-supports-intel-14th-13th-12th-gen-processors-ddr5-pcie-5-0-wi-fi-6-usb-3-2-gen-2-m-2-4x-dimm-slots-128gb-max-ram",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/z790-p%20wifi/asus-prime-z790-p-wifi-lga1700-atx-motherboard-%E2%80%93-supports-intel-14th-13th-12th-gen-processors-ddr5-pcie-5-0-wi-fi-6-usb-3-2-gen-2-m-2-4x-dimm-slots-128gb-max-ram-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2382",
+   "name": "ASUS PRIME Z890-P WIFI Z890 LGA 1851 ATX motherboard, Intel Core™ Ultra Series 2 Ready, Advanced AI PC-ready, 14+1+1+2 power stage, DDR5, PCIe® 5.0, Thunderbolt™ 4 USB Type-C®, 4x M.2, Wi-Fi 7, 2.5Gb",
+   "category": "motherboard",
+   "priceEgp": 12350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-z890-p-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-14112-power-stage-ddr5-pcie-5-0-thunderbolt-4-usb-type-c-4x-m-2-wi-fi-7-2-5gb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890-P%20WIFI%20Asus%20prime/asus-prime-z890-p-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-14112-power-stage-ddr5-pcie-5-0-thunderbolt-4-usb-type-c-4x-m-2-wi-fi-7-2-5gb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3074",
+   "name": "ASUS Pro WS TRX50-SAGE WIFI Workstation Motherboard – sTR5 Socket, DDR5, PCIe 5.0, USB4, WiFi 7, ECC Memory Support",
+   "category": "motherboard",
+   "priceEgp": 52500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-pro-ws-trx50-sage-wifi-workstation-motherboard-%E2%80%93-str5-socket-ddr5-pcie-5-0-usb4-wifi-7-ecc-memory-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/motherboard/Pro%20WS%20TRX50-SAGE%20WIFI/asus-pro-ws-trx50-sage-wifi-workstation-motherboard-%E2%80%93-str5-socket-ddr5-pcie-5-0-usb4-wifi-7-ecc-memory-support-1-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3252",
+   "name": "ASUS PRO WS WRX90E-SAGE SE Workstation Motherboard – AMD sTR5 Socket, 8-Channel DDR5 ECC, 6x PCIe 5.0 x16, Intel Dual 10GbE",
+   "category": "motherboard",
+   "priceEgp": 85000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-pro-ws-wrx90e-sage-se-workstation-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Pro%20WS%20WRX90E-SAGE%20SE/asus-pro-ws-wrx90e-sage-se-workstation-motherboard-%E2%80%93-amd-str5-socket-8-channel-ddr5-ecc-6x-pcie-5-0-x16-intel-dual-10gbe-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2275",
+   "name": "ASUS ProArt X870E-CREATOR WIFI AMD AM5 ATX Motherboard – Dual USB4, Marvell 10Gb & Intel 2.5Gb LAN, Wi-Fi 7, Dual PCIe 5.0 x16",
+   "category": "motherboard",
+   "priceEgp": 28000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-proart-x870e-creator-wifi-amd-am5-atx-motherboard-%E2%80%93-dual-usb4-marvell-10gb-intel-2-5gb-lan-wi-fi-7-dual-pcie-5-0-x16",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870E-Creator%20WiFi/asus-proart-x870e-creator-wifi-amd-am5-atx-motherboard-%E2%80%93-dual-usb4-marvell-10gb-intel-2-5gb-lan-wi-fi-7-dual-pcie-5-0-x16-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2581",
+   "name": "ASUS ProArt Z890-CREATOR WIFI Z890 LGA 1851 ATX Motherboard, Intel® Core™ Ultra Processor Series 2 Ready, 16+2+1+2 stages, PCIe® 5.0, DDR5, Thunderbolt™ 5 Type-C®, 10+2.5 Gb LAN, WiFi 7, 5x M.2, AI OC",
+   "category": "cpu",
+   "priceEgp": 26499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 27500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-proart-z890-creator-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-processor-series-2-ready-16212-stages-pcie-5-0-ddr5-thunderbolt-5-type-c-102-5-gb-lan-wifi-7-5x-m-2-ai-oc",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/Z890-CREATOR%20WIFI/asus-proart-z890-creator-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-processor-series-2-ready-16212-stages-pcie-5-0-ddr5-thunderbolt-5-type-c-102-5-gb-lan-wifi-7-5x-m-2-ai-oc-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3558",
+   "name": "ASUS ROG CROSSHAIR X870E DARK HERO ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 38444,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-crosshair-x870e-dark-hero",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/CROSSHAIR%20X870E%20DARK%20HERO/asus-rog-crosshair-x870e-dark-hero-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3512",
+   "name": "ASUS ROG Crosshair X870E Glacial E-ATX Motherboard – Dual USB4, Wi-Fi 7, Dual 10Gb LAN",
+   "category": "motherboard",
+   "priceEgp": 64999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 75000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/rog-crosshair-x870e-glacial",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/ASUS%20ROG%20Crosshair%20X870E%20Glacial%20/asus-rog-crosshair-x870e-glacial-e-atx-motherboard-%E2%80%93-dual-usb4-wi-fi-7-dual-10gb-lan-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2385",
+   "name": "ASUS ROG Maximus Z890 Hero Intel® Z890 LGA 1851 ATX Motherboard, Advanced AI PC-Ready, 22+2+1+2 Stages, DDR5, WiFi 7, 3X PCIe® 5.0 M.2, Thunderbolt™ 4, USB Type-C®, AI Overclocking/Cooling/Networking",
+   "category": "motherboard",
+   "priceEgp": 29499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-maximus-z890-hero-intel-z890-lga-1851-atx-motherboard-advanced-ai-pc-ready-22212-stages-ddr5-wifi-7-3x-pcie-5-0-m-2-thunderbolt-4-usb-type-c-ai-overclocking-cooling-networking",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890%20HERO/asus-rog-maximus-z890-hero-intel-z890-lga-1851-atx-motherboard-advanced-ai-pc-ready-22212-stages-ddr5-wifi-7-3x-pcie-5-0-m-2-thunderbolt-4-usb-type-c-ai-overclocking-cooling-networking-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3420",
+   "name": "ASUS ROG STRIX B850-A GAMING WIFI7 NEO AM5 ATX Motherboard – DDR5, PCIe 5.0, Wi-Fi 7, 5Gb LAN, 4x M.2",
+   "category": "motherboard",
+   "priceEgp": 15799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b850-a-gaming-wifi7-neo-am5-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B850-A%20GAMING%20WIFI/asus-rog-strix-b850-a-gaming-wifi7-neo-am5-atx-motherboard-%E2%80%93-ddr5-pcie-5-0-wi-fi-7-5gb-lan-4x-m-2-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3648",
+   "name": "ASUS ROG Strix B850-F Gaming WiFi 7 Neo AM5 DDR5 ATX Motherboard (5G LAN)",
+   "category": "motherboard",
+   "priceEgp": 17249,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b850-f-gaming-wifi-7-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850-F%20GAMING%20WIFI7%20NEO/asus-rog-strix-b850-f-gaming-wifi-7-neo-am5-ddr5-atx-motherboard-5g-lan-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2872",
+   "name": "ASUS ROG STRIX B850-G GAMING WIFI AM5 ATX Motherboard – Ryzen 9000/8000/7000 Series Support, DDR5, PCIe 5.0, WiFi 6E, USB 3.2 Gen 2x2, 4x DIMM Slots, 192GB Max Memory, M.2 Heatsinks, Aura Sync RGB",
+   "category": "cpu",
+   "priceEgp": 12500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b850-g-gaming-wifi-am5-atx-motherboard-%E2%80%93-ryzen-9000-8000-7000-series-support-ddr5-pcie-5-0-wifi-6e-usb-3-2-gen-2x2-4x-dimm-slots-192gb-max-memory-m-2-heatsinks-aura-sync-rgb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850-G%20WIFI/asus-rog-strix-b850-g-gaming-wifi-am5-atx-motherboard-%E2%80%93-ryzen-9000-8000-7000-series-support-ddr5-pcie-5-0-wifi-6e-usb-3-2-gen-2x2-4x-dimm-slots-192gb-max-memory-m-2-heatsinks-aura-sync-rgb-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2634",
+   "name": "ASUS ROG Strix B850-I Gaming WiFi AMD AM5 B850 Mini-ITX mITX Motherboard 10+2+1 Stages, DDR5, 2.5G LAN, WiFi 7, 2X M.2, PCIe® 5.0 x16, USB 20Gbps Type-C®, AI Overclocking, AI Networking II, Aura Sync",
+   "category": "motherboard",
+   "priceEgp": 16000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b850-i-gaming-wifi-amd-am5-b850-mini-itx-mitx-motherboard-1021-stages-ddr5-2-5g-lan-wifi-7-2x-m-2-pcie-5-0-x16-usb-20gbps-type-c-ai-overclocking-ai-networking-ii-aura-sync",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850-I%20Gaming%20WiFi/asus-rog-strix-b850-i-gaming-wifi-amd-am5-b850-mini-itx-mitx-motherboard-1021-stages-ddr5-2-5g-lan-wifi-7-2x-m-2-pcie-5-0-x16-usb-20gbps-type-c-ai-overclocking-ai-networking-ii-aura-sync-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2402",
+   "name": "ASUS ROG Strix X870-A Gaming WiFi AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 20899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 22500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-x870-a-gaming-wifi-amd-am5-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870-A/asus-rog-strix-x870-a-gaming-wifi-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2433",
+   "name": "Asus ROG STRIX X870-F GAMING WIFI (Socket AM5) DDR5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 24099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-x870-f-gaming-wifi-socket-am5-ddr5-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870-F/asus-rog-strix-x870-f-gaming-wifi-socket-am5-ddr5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2672",
+   "name": "ASUS ROG STRIX X870-I GAMING WIFI AMD AM5 X870 Mini ITX motherboard 10+2+1 power stages, Dynamic OC Switcher, Core Flex, DDR5 AEMP, WiFi7, 2x M.2, PCIe®5.0, Q-Release Slim, USB4, AI OCing & Networking",
+   "category": "motherboard",
+   "priceEgp": 20999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-x870-i-gaming-wifi-amd-am5-x870-mini-itx-motherboard-1021-power-stages-dynamic-oc-switcher-core-flex-ddr5-aemp-wifi7-2x-m-2-pcie5-0-q-release-slim-usb4-ai-ocing-networking",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870-I%20/asus-rog-strix-x870-i-gaming-wifi-amd-am5-x870-mini-itx-motherboard-1021-power-stages-dynamic-oc-switcher-core-flex-ddr5-aemp-wifi7-2x-m-2-pcie5-0-q-release-slim-usb4-ai-ocing-networking-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3413",
+   "name": "ASUS ROG STRIX X870E-A GAMING WIFI7 NEO Motherboard – Socket AM5, DDR5, Dual USB4, Wi-Fi 7, 5Gb LAN, ATX White",
+   "category": "motherboard",
+   "priceEgp": 23333,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-x870e-a-gaming-wifi7-neo-motherboard-%E2%80%93-socket-am5-ddr5-dual-usb4-wi-fi-7-5gb-lan-atx-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/X870E-A/asus-rog-strix-x870e-a-gaming-wifi7-neo-motherboard-%E2%80%93-socket-am5-ddr5-dual-usb4-wi-fi-7-5gb-lan-atx-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3559",
+   "name": "ASUS ROG STRIX X870E-E GAMING WIFI7 NEO ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 29999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-x870e-e-gaming-wifi7-neo",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/ROG%20STRIX%20X870E-E%20GAMING%20WIFI7%20NEO/asus-rog-strix-x870e-e-gaming-wifi7-neo-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2989",
+   "name": "ASUS ROG STRIX X870E-H GAMING WIFI7 – ATX Motherboard, AMD Socket AM5, DDR5 8000+MT/s, PCIe 5.0, 4x M.2, Wi-Fi 7, 5Gb LAN, USB4, Aura Sync RGB",
+   "category": "motherboard",
+   "priceEgp": 22500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-x870e-h-gaming-wifi7-%E2%80%93-atx-motherboard-amd-socket-am5-ddr5-8000mt-s-pcie-5-0-4x-m-2-wi-fi-7-5gb-lan-usb4-aura-sync-rgb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/ROG%20STRIX%20X870E-H/asus-rog-strix-x870e-h-gaming-wifi7-%E2%80%93-atx-motherboard-amd-socket-am5-ddr5-8000mt-s-pcie-5-0-4x-m-2-wi-fi-7-5gb-lan-usb4-aura-sync-rgb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2514",
+   "name": "ASUS ROG STRIX Z890-A GAMING WIFI Z890 LGA 1851 ATX motherboard, Intel® Core™ Ultra Series 2 Ready, Advanced AI PC-ready, 16+2+1+2 stages, DDR5, WiFi 7, 2.5G, 5x M.2, Thunderbolt™ 4, USB Type-C, AI OC",
+   "category": "motherboard",
+   "priceEgp": 21499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-z890-a-gaming-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-16212-stages-ddr5-wifi-7-2-5g-5x-m-2-thunderbolt-4-usb-type-c-ai-oc",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/Z890-A/asus-rog-strix-z890-a-gaming-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-16212-stages-ddr5-wifi-7-2-5g-5x-m-2-thunderbolt-4-usb-type-c-ai-oc-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2383",
+   "name": "ASUS ROG Strix Z890-E Gaming WiFi Intel® Z890 LGA 1851 ATX Motherboard, Advanced AI PC-Ready, 18+2+1+2 Stages, DDR5, WiFi 7, 7X M.2, Thunderbolt™ 4, USB Type-C®, AI Overclocking, Cooling & Networking",
+   "category": "motherboard",
+   "priceEgp": 26999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 28500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-z890-e-gaming-wifi-intel-z890-lga-1851-atx-motherboard-advanced-ai-pc-ready-18212-stages-ddr5-wifi-7-7x-m-2-thunderbolt-4-usb-type-c-ai-overclocking-cooling-networking",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890-E/asus-rog-strix-z890-e-gaming-wifi-intel-z890-lga-1851-atx-motherboard-advanced-ai-pc-ready-18212-stages-ddr5-wifi-7-7x-m-2-thunderbolt-4-usb-type-c-ai-overclocking-cooling-networking-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2384",
+   "name": "ASUS ROG STRIX Z890-F GAMING WIFI DDR5 PCIe 5.0 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 23799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-z890-f-gaming-wifi-ddr5-pcie-5-0-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890-F/asus-rog-strix-z890-f-gaming-wifi-ddr5-pcie-5-0-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2988",
+   "name": "ASUS ROG STRIX Z890-H GAMING WIFI, Intel Z890 LGA1851 ATX Gaming Motherboard, Supports Intel Core Ultra Processors, DDR5 256GB, PCIe 5.0, 4x M.2, SATA, Wi-Fi 7, 5G LAN, SupremeFX Audio, Aura Sync RGB",
+   "category": "cpu",
+   "priceEgp": 19499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-z890-h-gaming-wifi-intel-z890-lga1851-atx-gaming-motherboard-supports-intel-core-ultra-processors-ddr5-256gb-pcie-5-0-4x-m-2-sata-wi-fi-7-5g-lan-supremefx-audio-aura-sync-rgb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/ROG%20STRIX%20Z890/asus-rog-strix-z890-h-gaming-wifi-intel-z890-lga1851-atx-gaming-motherboard-supports-intel-core-ultra-processors-ddr5-256gb-pcie-5-0-4x-m-2-sata-wi-fi-7-5g-lan-supremefx-audio-aura-sync-rgb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2268",
+   "name": "ASUS TUF GAMING B650M-E Wifi Socket AM5 LGA 1718 Ryzen 7000 MATX Gaming Motherboard",
+   "category": "cpu",
+   "priceEgp": 9400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 10000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b650m-e-wifi-socket-am5-lga-1718-ryzen-7000-matx-gaming-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20B650M-E%20/asus-tuf-gaming-b650m-e-wifi-socket-am5-lga-1718-ryzen-7000-matx-gaming-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2265",
+   "name": "ASUS TUF GAMING B760-PLUS WIFI 13th and 12th Gen LGA 1700 ATX motherboard with PCIe 5.0, 3xPCIe 4.0 M.2 slots,DDR5,2.5Gb LAN,USB 3.2 Gen 2x2 Type-C, front USB 3.2 Gen 2 Type-C, Thunderbolt 4, AEMP II",
+   "category": "motherboard",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 10500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b760-plus-wifi-13th-and-12th-gen-lga-1700-atx-motherboard-with-pcie-5-0-3xpcie-4-0-m-2-slots-ddr5-2-5gb-lan-usb-3-2-gen-2x2-type-c-front-usb-3-2-gen-2-type-c-thunderbolt-4-aemp-ii",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760-PLUS%20WIFI/asus-tuf-gaming-b760-plus-wifi-13th-and-12th-gen-lga-1700-atx-motherboard-with-pcie-5-0-3xpcie-4-0-m-2-slots-ddr5-2-5gb-lan-usb-3-2-gen-2x2-type-c-front-usb-3-2-gen-2-type-c-thunderbolt-4-aemp-ii-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2865",
+   "name": "ASUS TUF GAMING B850-BTF WIFI W Motherboard — AM5 Socket, DDR5, PCIe 5.0, WiFi 7, ATX, USB 4.0 Support",
+   "category": "motherboard",
+   "priceEgp": 13499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 13500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b850-btf-wifi-w-motherboard-%E2%80%94-am5-socket-ddr5-pcie-5-0-wifi-7-atx-usb-4-0-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850-BTF%20WIFI%20W/asus-tuf-gaming-b850-btf-wifi-w-motherboard-%E2%80%94-am5-socket-ddr5-pcie-5-0-wifi-7-atx-usb-4-0-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3185",
+   "name": "ASUS TUF GAMING B850-E WIFI Motherboard – AM5 Socket, DDR5 Support, PCIe 5.0, Wi-Fi 6E, Robust Power Design, Military-Grade Components & Advanced Cooling for Next-Gen AMD Ryzen CPUs",
+   "category": "cpu",
+   "priceEgp": 12599,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b850-e-wifi-motherboard-%E2%80%93-am5-socket-ddr5-support-pcie-5-0-wi-fi-6e-robust-power-design-military-grade-components-advanced-cooling-for-next-gen-amd-ryzen-cpus",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850-E%20WIFI/asus-tuf-gaming-b850-e-wifi-motherboard-%E2%80%93-am5-socket-ddr5-support-pcie-5-0-wi-fi-6e-robust-power-design-military-grade-components-advanced-cooling-for-next-gen-amd-ryzen-cpus-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2527",
+   "name": "ASUS TUF Gaming B850-PLUS WiFi AMD AM5 B850 ATX Motherboard, 14+2+1 80A Stages, AI Ready, DDR5, PCIe 5.0, 3X M.2, Wi-Fi 7, 2.5Gb LAN, DisplayPort, HDMI™, USB 10Gbps & 20Gbps Type-C®, BIOS Flashback™",
+   "category": "motherboard",
+   "priceEgp": 13999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b850-plus-wifi-amd-am5-b850-atx-motherboard-1421-80a-stages-ai-ready-ddr5-pcie-5-0-3x-m-2-wi-fi-7-2-5gb-lan-displayport-hdmi-usb-10gbps-20gbps-type-c-bios-flashback",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850-PLUS%20WIFI/asus-tuf-gaming-b850-plus-wifi-amd-am5-b850-atx-motherboard-1421-80a-stages-ai-ready-ddr5-pcie-5-0-3x-m-2-wi-fi-7-2-5gb-lan-displayport-hdmi-usb-10gbps-20gbps-type-c-bios-flashback-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2591",
+   "name": "ASUS TUF GAMING B860-PLUS WIFI – Intel LGA1851 DDR5 ATX Motherboard, 4 DIMMs (up to 8666+ MT/s OC), PCIe 5.0 & 4.0 Slots, 3× M.2, Wi‑Fi 7, 2.5GbE, Thunderbolt USB‑C, TUF Protection, Aura Sync",
+   "category": "motherboard",
+   "priceEgp": 12500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b860-plus-wifi-%E2%80%93-intel-lga1851-ddr5-atx-motherboard-4-dimms-up-to-8666-mt-s-oc-pcie-5-0-4-0-slots-3%C3%97-m-2-wi%E2%80%91fi-7-2-5gbe-thunderbolt-usb%E2%80%91c-tuf-protection-aura-sync",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B860-PLUS%20WIFI/asus-tuf-gaming-b860-plus-wifi-%E2%80%93-intel-lga1851-ddr5-atx-motherboard-4-dimms-up-to-8666-mt-s-oc-pcie-5-0-4-0-slots-3%C3%97-m-2-wi%E2%80%91fi-7-2-5gbe-thunderbolt-usb%E2%80%91c-tuf-protection-aura-sync-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3395",
+   "name": "ASUS TUF GAMING X870-PRO WIFI7 W NEO AMD AM5 ATX Motherboard – NitroPath DDR5, Dual USB4, Realtek 5Gb Lan",
+   "category": "motherboard",
+   "priceEgp": 17449,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-x870-pro-wifi7-w-neo-amd-am5-atx-motherboard-%E2%80%93-nitropath-ddr5-dual-usb4-realtek-5gb-lan",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/X870-PRO%20WIFI7%20W%20NEO/asus-tuf-gaming-x870-pro-wifi7-w-neo-amd-am5-atx-motherboard-%E2%80%93-nitropath-ddr5-dual-usb4-realtek-5gb-lan-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3073",
+   "name": "ASUS TUF GAMING X870E-PLUS WIFI 7 Motherboard – AMD AM5 Socket, Ryzen 9000/8000/7000 Support, DDR5 Memory, PCIe 5.0, USB 4.0, 2.5G LAN, WiFi 7, Aura Sync RGB",
+   "category": "cpu",
+   "priceEgp": 18399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 19500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-x870e-plus-wifi-7-motherboard-%E2%80%93-amd-am5-socket-ryzen-9000-8000-7000-support-ddr5-memory-pcie-5-0-usb-4-0-2-5g-lan-wifi-7-aura-sync-rgb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/motherboard/X870E/asus-tuf-gaming-x870e-plus-wifi-7-motherboard-%E2%80%93-amd-am5-socket-ryzen-9000-8000-7000-support-ddr5-memory-pcie-5-0-usb-4-0-2-5g-lan-wifi-7-aura-sync-rgb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1870",
+   "name": "ASUS TUF GAMING Z790-PLUS WIFI Motherboard – LGA 1700 – DDR5 – PCIe 5.0",
+   "category": "motherboard",
+   "priceEgp": 14000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-z790-plus-wifi-lga-1700",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z790-PLUS%20WIFI/asus-tuf-gaming-z790-plus-wifi-motherboard-%E2%80%93-lga-1700-%E2%80%93-ddr5-%E2%80%93-pcie-5-0-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2381",
+   "name": "ASUS TUF Gaming Z890-PLUS WiFi Z890 LGA 1851 ATX Motherboard, Intel Core Ultra Series 2 Ready, Advanced AI PC-Ready, 16+1+2+1 Stages, DDR5, PCIe 5.0, Thunderbolt 4 Type-C, 4X M.2, Wi-Fi 7, 2.5Gb",
+   "category": "cpu",
+   "priceEgp": 16000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-z890-plus-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-16121-stages-ddr5-pcie-5-0-thunderbolt-4-type-c-4x-m-2-wi-fi-7-2-5gb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/ASUS%20TUF%20Z890-PLUS%20WiFi/asus-tuf-gaming-z890-plus-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-16121-stages-ddr5-pcie-5-0-thunderbolt-4-type-c-4x-m-2-wi-fi-7-2-5gb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2513",
+   "name": "ASUS TUF Gaming Z890-PRO WiFi Z890 LGA 1851 ATX Motherboard, Intel® Core™ Ultra Series 2 Ready, Advanced AI PC-Ready, 16+1+2+1 Stages, DDR5, PCIe® 5.0, Thunderbolt 4 Type-C, 4X M.2, Wi-Fi 7, 2.5Gb",
+   "category": "motherboard",
+   "priceEgp": 16249,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-z890-pro-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-16121-stages-ddr5-pcie-5-0-thunderbolt-4-type-c-4x-m-2-wi-fi-7-2-5gb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/Z890-PRO/asus-tuf-gaming-z890-pro-wifi-z890-lga-1851-atx-motherboard-intel-core-ultra-series-2-ready-advanced-ai-pc-ready-16121-stages-ddr5-pcie-5-0-thunderbolt-4-type-c-4x-m-2-wi-fi-7-2-5gb-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2739",
+   "name": "Asus X870 MAX GAMING WIFI7 ATX AM5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 14999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 15500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-x870-max-gaming-wifi7-atx-am5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870%20MAX%20WIFI7/asus-x870-max-gaming-wifi7-atx-am5-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2503",
+   "name": "B850 GAMING WIFI6 GIGABYTE AMD MOTHERBOARD",
+   "category": "motherboard",
+   "priceEgp": 8900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/b850-gaming-wifi6-gigabyte-amd-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B850%20GAMING/b850-gaming-wifi6-gigabyte-amd-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3606",
+   "name": "GIGABYTE A520M K V2 AMD AM4 Micro ATX Motherboard (Rev. 1.0)",
+   "category": "motherboard",
+   "priceEgp": 2999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-a520m-k-v2",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/A520M%20K%20V2/gigabyte-a520m-k-v2-amd-am4-micro-atx-motherboard-rev-1-0-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2864",
+   "name": "GIGABYTE B760M DS3H DDR5 Gen5 Motherboard – LGA1700, 13th & 12th Gen Intel Support, PCIe 5.0, Dual M.2, USB 3.2 Gen2, Micro ATX",
+   "category": "motherboard",
+   "priceEgp": 6350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b760m-ds3h-ddr5-gen5-motherboard-%E2%80%93-lga1700-13th-12th-gen-intel-support-pcie-5-0-dual-m-2-usb-3-2-gen2-micro-atx",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B760M%20DS3H%20GEN5/gigabyte-b760m-ds3h-ddr5-gen5-motherboard-%E2%80%93-lga1700-13th-12th-gen-intel-support-pcie-5-0-dual-m-2-usb-3-2-gen2-micro-atx-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3528",
+   "name": "GIGABYTE B850 AORUS ELITE WIFI7 ICE AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 13999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b850-aorus-elite-wifi7-ice",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B850%20AORUS%20ELITE%20ICE/gigabyte-b850-aorus-elite-wifi7-ice-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2534",
+   "name": "GIGABYTE B850 AORUS ELITE WIFI7 Socket AM5 Motherboard - PCIe 5.0, DDR5, Wi-Fi 7",
+   "category": "motherboard",
+   "priceEgp": 13999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b850-aorus-elite-wifi7",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B850%20Aorus/gigabyte-b850-aorus-elite-wifi7-socket-am5-motherboard-pcie-5-0-ddr5-wi-fi-7-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3618",
+   "name": "Gigabyte B850 AORUS STEALTH Socket AM5 DDR5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 14399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b850-aorus-stealth",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/%20B850%20STEALTH%20/gigabyte-b850-aorus-stealth-socket-am5-ddr5-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3187",
+   "name": "GIGABYTE B850M GAMING X WIFI6E (rev. 1.0) Micro-ATX Motherboard – AM5 Socket, DDR5 Support, PCIe 5.0, Wi-Fi 6E, 2.5Gb LAN, M.2 Slots, High-Performance Power Design for Ryzen CPUs",
+   "category": "cpu",
+   "priceEgp": 9800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b850m-gaming-x-wifi6e-rev-1-0-micro-atx-motherboard-%E2%80%93-am5-socket-ddr5-support-pcie-5-0-wi-fi-6e-2-5gb-lan-m-2-slots-high-performance-power-design-for-ryzen-cpus",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B850M%20GAMING%20X%20/gigabyte-b850m-gaming-x-wifi6e-rev-1-0-micro-atx-motherboard-%E2%80%93-am5-socket-ddr5-support-pcie-5-0-wi-fi-6e-2-5gb-lan-m-2-slots-high-performance-power-design-for-ryzen-cpus-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2626",
+   "name": "GIGABYTE B860M AORUS ELITE – Intel Core Ultra (Series 2) DDR5 Micro-ATX, Digital Twin 12+1+2 VRM, AI Perfdrive, 3× M.2, PCIe 5.0, 2.5GbE LAN, USB4 Type-C, EZ-Latch, VRM Thermal Armor, HDMI, DisplayPort",
+   "category": "cpu",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b860m-aorus-elite-%E2%80%93-intel-core-ultra-series-2-ddr5-micro-atx-digital-twin-1212-vrm-ai-perfdrive-3%C3%97-m-2-pcie-5-0-2-5gbe-lan-usb4-type-c-ez-latch-vrm-thermal-armor-hdmi-displayport",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B860M%20A%20E/gigabyte-b860m-aorus-elite-%E2%80%93-intel-core-ultra-series-2-ddr5-micro-atx-digital-twin-1212-vrm-ai-perfdrive-3%C3%97-m-2-pcie-5-0-2-5gbe-lan-usb4-type-c-ez-latch-vrm-thermal-armor-hdmi-displayport-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2521",
+   "name": "GIGABYTE X870 AORUS Elite WIFI7 AMD AM5 LGA 1718 Motherboard, ATX, DDR5, 4X M.2, PCIe 5.0, USB4, WIFI7, 2.5GbE LAN, EZ-Latch",
+   "category": "motherboard",
+   "priceEgp": 15899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870-aorus-elite-wifi7-amd-am5-lga-1718-motherboard-atx-ddr5-4x-m-2-pcie-5-0-usb4-wifi7-2-5gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870%20Aorus/gigabyte-x870-aorus-elite-wifi7-amd-am5-lga-1718-motherboard-atx-ddr5-4x-m-2-pcie-5-0-usb4-wifi7-2-5gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2535",
+   "name": "GIGABYTE X870 Gaming X WIFI7 AMD AM5 LGA 1718 Motherboard, ATX, DDR5, 4X M.2, PCIe 5.0, USB4, WIFI7, 2.5GbE LAN, EZ-Latch",
+   "category": "motherboard",
+   "priceEgp": 13399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870-gaming-x-wifi7-amd-am5-lga-1718-motherboard-atx-ddr5-4x-m-2-pcie-5-0-usb4-wifi7-2-5gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870%20Gaming%20x/gigabyte-x870-gaming-x-wifi7-amd-am5-lga-1718-motherboard-atx-ddr5-4x-m-2-pcie-5-0-usb4-wifi7-2-5gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3617",
+   "name": "Gigabyte X870E AERO X3D DARK WOOD Socket AM5 DDR5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 24199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aero-x3d-dark-wood",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/%20X870E%20AERO%20X3D%20DARK%20WOOD%20/gigabyte-x870e-aero-x3d-dark-wood-socket-am5-ddr5-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3530",
+   "name": "GIGABYTE X870E AERO X3D WOOD AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 24199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aero-x3d-wood",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870E%20AERO%20X3D%20WOOD%20/gigabyte-x870e-aero-x3d-wood-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3042",
+   "name": "GIGABYTE X870E AORUS ELITE WiFi7 ICE Motherboard – AMD AM5, DDR5, PCIe 5.0, USB4, 2.5GbE LAN, White Edition",
+   "category": "motherboard",
+   "priceEgp": 17999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-elite-wifi7-ice-motherboard-%E2%80%93-amd-am5-ddr5-pcie-5-0-usb4-2-5gbe-lan-white-edition",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/x870%20E%20A%20WW/gigabyte-x870e-aorus-elite-wifi7-ice-motherboard-%E2%80%93-amd-am5-ddr5-pcie-5-0-usb4-2-5gbe-lan-white-edition-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3281",
+   "name": "GIGABYTE X870E AORUS ELITE WIFI7 Socket AM5 Motherboard - PCIe 5.0, DDR5, Wi-Fi 7",
+   "category": "motherboard",
+   "priceEgp": 17999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-elite-wifi7",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870E%20AORUS%20ELITE/gigabyte-x870e-aorus-elite-wifi7-socket-am5-motherboard-pcie-5-0-ddr5-wi-fi-7-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3532",
+   "name": "GIGABYTE X870E AORUS ELITE X3D AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 20499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-elite-x3d",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870E%20Aorus%20Elite%20X3D/gigabyte-x870e-aorus-elite-x3d-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3534",
+   "name": "GIGABYTE X870E AORUS ELITE X3D-ICE AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 20799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-elite-x3d-ice",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/%20X870E%20AORUS%20ELITE%20X3D-ICE%20/gigabyte-x870e-aorus-elite-x3d-ice-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3531",
+   "name": "GIGABYTE X870E AORUS MASTER X3D AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 29899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-master-x3d",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870E%20AORUS%20MASTER%20X3D/gigabyte-x870e-aorus-master-x3d-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3535",
+   "name": "GIGABYTE X870E AORUS MASTER X3D-ICE AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 30299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-master-x3d-ice",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870E%20AORUS%20MASTER%20X3D-ICE/gigabyte-x870e-aorus-master-x3d-ice-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3533",
+   "name": "GIGABYTE X870E AORUS PRO X3D AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 22199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-pro-x3d",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870E%20AORUS%20PRO%20X3D/gigabyte-x870e-aorus-pro-x3d-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3529",
+   "name": "GIGABYTE X870E AORUS PRO X3D-ICE AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 22999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870e-aorus-pro-x3d-ice",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870E%20AORUS%20PRO%20X3D%20ICE/gigabyte-x870e-aorus-pro-x3d-ice-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2757",
+   "name": "GIGABYTE Z790 D (Rev. 1.0) ATX Motherboard – LGA1700, DDR5, PCIe 5.0, USB 3.2, M.2 NVMe, 2.5GbE LAN, HDMI/DP – Supports Intel 14th/13th/12th Gen",
+   "category": "motherboard",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z790-d-rev-1-0-atx-motherboard-%E2%80%93-lga1700-ddr5-pcie-5-0-usb-3-2-m-2-nvme-2-5gbe-lan-hdmi-dp-%E2%80%93-supports-intel-14th-13th-12th-gen",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/Z790%20D%20/gigabyte-z790-d-rev-1-0-atx-motherboard-%E2%80%93-lga1700-ddr5-pcie-5-0-usb-3-2-m-2-nvme-2-5gbe-lan-hdmi-dp-%E2%80%93-supports-intel-14th-13th-12th-gen-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3191",
+   "name": "GIGABYTE Z790 D AX DDR5 ATX Motherboard – LGA 1700, PCIe 5.0, Wi-Fi 6E, DDR5 Memory Support, M.2 Slots, High-Performance Platform for Intel 12th/13th/14th Gen CPUs",
+   "category": "motherboard",
+   "priceEgp": 9699,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z790-d-ax-ddr5-atx-motherboard-%E2%80%93-lga-1700-pcie-5-0-wi-fi-6e-ddr5-memory-support-m-2-slots-high-performance-platform-for-intel-12th-13th-14th-gen-cpus",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/Z790%20D%20AX/gigabyte-z790-d-ax-ddr5-atx-motherboard-%E2%80%93-lga-1700-pcie-5-0-wi-fi-6e-ddr5-memory-support-m-2-slots-high-performance-platform-for-intel-12th-13th-14th-gen-cpus-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3192",
+   "name": "GIGABYTE Z790 EAGLE AX (Rev. 1.x) ATX Motherboard – Intel Z790 Chipset, LGA1700, DDR5, PCIe 5.0, Wi-Fi 6E, High-Performance Motherboard for Intel 13th/14th Gen CPUs",
+   "category": "motherboard",
+   "priceEgp": 10000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11650,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z790-eagle-ax-rev-1-x-atx-motherboard-%E2%80%93-intel-z790-chipset-lga1700-ddr5-pcie-5-0-wi-fi-6e-high-performance-motherboard-for-intel-13th-14th-gen-cpus",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/Z790%20EAGLE%20AX/gigabyte-z790-eagle-ax-rev-1-x-atx-motherboard-%E2%80%93-intel-z790-chipset-lga1700-ddr5-pcie-5-0-wi-fi-6e-high-performance-motherboard-for-intel-13th-14th-gen-cpus-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2520",
+   "name": "GIGABYTE Z890 AORUS Elite WIFI7 ICE Intel Core Ultra (Series 2) LGA 1851 Motherboard, ATX, DDR5, 3X M.2, PCIe 5.0, Thunderbolt 4, WIFI7, 2.5GbE LAN, EZ-Latch",
+   "category": "cpu",
+   "priceEgp": 15999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 17200,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890-aorus-elite-wifi7-ice-intel-core-ultra-series-2-lga-1851-motherboard-atx-ddr5-3x-m-2-pcie-5-0-thunderbolt-4-wifi7-2-5gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/Z890%20AORUS/gigabyte-z890-aorus-elite-wifi7-ice-intel-core-ultra-series-2-lga-1851-motherboard-atx-ddr5-3x-m-2-pcie-5-0-thunderbolt-4-wifi7-2-5gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2426",
+   "name": "GIGABYTE Z890 AORUS ELITE WIFI7 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 16200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890-aorus-elite-wifi7-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890%20Aorus%20Elite/gigabyte-z890-aorus-elite-wifi7-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2532",
+   "name": "GIGABYTE Z890 AORUS Master Intel Core Ultra (Series 2) LGA 1851 Motherboard, ATX, DDR5, 5X M.2, PCIe 5.0, Thunderbolt 4, WIFI7, 10GbE LAN, EZ-Latch",
+   "category": "cpu",
+   "priceEgp": 31900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890-aorus-master-intel-core-ultra-series-2-lga-1851-motherboard-atx-ddr5-5x-m-2-pcie-5-0-thunderbolt-4-wifi7-10gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/Z890%20AORUS%20M/gigabyte-z890-aorus-master-intel-core-ultra-series-2-lga-1851-motherboard-atx-ddr5-5x-m-2-pcie-5-0-thunderbolt-4-wifi7-10gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2746",
+   "name": "GIGABYTE Z890 AORUS PRO ICE – ATX Motherboard for Intel Core Ultra (Series 2), LGA 1851, DDR5, 5x M.2, PCIe 5.0, Thunderbolt 4, Wi-Fi 7, 5GbE LAN, EZ-Latch",
+   "category": "cpu",
+   "priceEgp": 21350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890-aorus-pro-ice-%E2%80%93-atx-motherboard-for-intel-core-ultra-series-2-lga-1851-ddr5-5x-m-2-pcie-5-0-thunderbolt-4-wi-fi-7-5gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20Z890%20AORUS%20PRO%20ICE%20/gigabyte-z890-aorus-pro-ice-%E2%80%93-atx-motherboard-for-intel-core-ultra-series-2-lga-1851-ddr5-5x-m-2-pcie-5-0-thunderbolt-4-wi-fi-7-5gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2437",
+   "name": "Gigabyte Z890 Eagle Wifi 7 DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 13900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890-eagle-wifi-7-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890%20EAGLE%20WIFI7/gigabyte-z890-eagle-wifi-7-ddr5-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2438",
+   "name": "GIGABYTE Z890 GAMING X WIFI7 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 14200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890-gaming-x-wifi7-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890%20GAMING%20X%20WIFI7/gigabyte-z890-gaming-x-wifi7-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2507",
+   "name": "GIGABYTE Z890 UD WIFI6E Intel Core Ultra (Series 2) LGA 1851 Motherboard, ATX, DDR5, 3X M.2, PCIe 5.0, Front USB Type-C, WIFI6E, 2.5GbE LAN, EZ-Latch",
+   "category": "cpu",
+   "priceEgp": 11000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 12500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890-ud-wifi6e-intel-core-ultra-series-2-lga-1851-motherboard-atx-ddr5-3x-m-2-pcie-5-0-front-usb-type-c-wifi6e-2-5gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/Z890%20UD/gigabyte-z890-ud-wifi6e-intel-core-ultra-series-2-lga-1851-motherboard-atx-ddr5-3x-m-2-pcie-5-0-front-usb-type-c-wifi6e-2-5gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2504",
+   "name": "GIGABYTE Z890M Gaming X Ultra Core (Series 2) LGA 1851, mATX, DDR5, 3X M.2, PCIe 5.0, Front USB Type-C, 2.5GbE LAN, EZ-Latch",
+   "category": "ram",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890m-gaming-x-ultra-core-series-2-lga-1851-matx-ddr5-3x-m-2-pcie-5-0-front-usb-type-c-2-5gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/Z890M%20Gaming%20X/gigabyte-z890m-gaming-x-ultra-core-series-2-lga-1851-matx-ddr5-3x-m-2-pcie-5-0-front-usb-type-c-2-5gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3464",
+   "name": "MSI A520M-A PRO AMD AM4 Micro-ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 3250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-a520m-a-pro-micro-atx-motherboard-amd-am4-ddr4",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/A520M-A%20PRO/msi-a520m-a-pro-amd-am4-micro-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3466",
+   "name": "MSI B550M PRO-VDH AM4 Micro-ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 5000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-b550m-pro-vdh-am4-micro-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/B550M%20PRO-VDH/msi-b550m-pro-vdh-am4-micro-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3465",
+   "name": "MSI B550M PRO-VDH WIFI AM4 Micro-ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 5899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-b550m-pro-vdh-wifi-am4-micro-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/B550M%20PRO-VDH%20WIFI/msi-b550m-pro-vdh-wifi-am4-micro-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3186",
+   "name": "MSI Gaming Plus B850M WIFI Motherboard – AMD AM5, DDR5, PCIe 5.0, Wi-Fi 7, 5G LAN, mATX",
+   "category": "motherboard",
+   "priceEgp": 9750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-gaming-plus-b850m-wifi-motherboard-%E2%80%93-amd-am5-ddr5-pcie-5-0-wi-fi-7-5g-lan-matx",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/B850M%20GAING%20PLUS%20WIFI/msi-gaming-plus-b850m-wifi-motherboard-%E2%80%93-amd-am5-ddr5-pcie-5-0-wi-fi-7-5g-lan-matx-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3546",
+   "name": "MSI MAG B850 GAMING PLUS MAX WIFI AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 11999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-mag-b850-gaming-plus-max-wifi",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/B850%20GAMING%20PLUS%20MAX%20WIFI/msi-mag-b850-gaming-plus-max-wifi-amd-am5-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3176",
+   "name": "MSI MAG B860M MORTAR WIFI Micro-ATX Motherboard – LGA1851, DDR5, PCIe 5.0 x16, 1× M.2 Gen5 + 2× Gen4, Wi-Fi 7, 5G LAN, Thunderbolt 4, High-Performance Connectivity for Next-Gen CPUs",
+   "category": "motherboard",
+   "priceEgp": 10999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-mag-b860m-mortar-wifi-micro-atx-motherboard-%E2%80%93-lga1851-ddr5-pcie-5-0-x16-1%C3%97-m-2-gen5-2%C3%97-gen4-wi-fi-7-5g-lan-thunderbolt-4-high-performance-connectivity-for-next-gen-cpus",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/MAG%20B860M%20MORTAR%20WIFI/msi-mag-b860m-mortar-wifi-micro-atx-motherboard-%E2%80%93-lga1851-ddr5-pcie-5-0-x16-1%C3%97-m-2-gen5-2%C3%97-gen4-wi-fi-7-5g-lan-thunderbolt-4-high-performance-connectivity-for-next-gen-cpus-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3540",
+   "name": "MSI MAG X870E TOMAHAWK MAX WIFI AMD AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 18799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-mag-x870e-tomahawk-max-wifi",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/MAG%20X870E%20Tomahawk%20Max%20WiFi/msi-mag-x870e-tomahawk-max-wifi-amd-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2967",
+   "name": "MSI MAG Z890 Tomahawk WiFi Gaming Motherboard – LGA 1851, DDR5, PCIe 5.0, Core Ultra Series 2 Support, M.2, SATA, 5Gbps LAN, USB-C, Wi-Fi 7, Bluetooth 5.4, Thunderbolt 4, ATX",
+   "category": "cpu",
+   "priceEgp": 17500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-mag-z890-tomahawk-wifi-gaming-motherboard-%E2%80%93-lga-1851-ddr5-pcie-5-0-core-ultra-series-2-support-m-2-sata-5gbps-lan-usb-c-wi-fi-7-bluetooth-5-4-thunderbolt-4-atx",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/MAG%20Z890%20TOMAHAWK%20WIFI/msi-mag-z890-tomahawk-wifi-gaming-motherboard-%E2%80%93-lga-1851-ddr5-pcie-5-0-core-ultra-series-2-support-m-2-sata-5gbps-lan-usb-c-wi-fi-7-bluetooth-5-4-thunderbolt-4-atx-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3537",
+   "name": "MSI MEG X870E GODLIKE AMD AM5 E-ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 56499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-meg-x870e-godlike",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/%20X870E-GODLIKE/msi-meg-x870e-godlike-amd-am5-e-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3538",
+   "name": "MSI MEG Z890 GODLIKE Intel LGA 1851 E-ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 56499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-meg-z890-godlike",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/MEG%20Z890%20GODLIKE/msi-meg-z890-godlike-intel-lga-1851-e-atx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3495",
+   "name": "MSI MPG X870E Carbon WiFi AM5 ATX Gaming Motherboard – DDR5, PCIe 5.0, Wi-Fi 7, Dual USB4",
+   "category": "motherboard",
+   "priceEgp": 26499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-mpg-x870e-carbon-wifi-am5-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/MPG%20X870E%20CARBON%20WIFI/msi-mpg-x870e-carbon-wifi-am5-atx-gaming-motherboard-%E2%80%93-ddr5-pcie-5-0-wi-fi-7-dual-usb4-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3280",
+   "name": "MSI MPG X870E EDGE TI WIFI Motherboard - Socket AM5, PCIe 5.0, DDR5, Wi-Fi 7",
+   "category": "motherboard",
+   "priceEgp": 21499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 21999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-mpg-x870e-edge-ti-wifi",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/X870%20MPG%20EDGE%20TI%20WIFI/msi-mpg-x870e-edge-ti-wifi-motherboard-socket-am5-pcie-5-0-ddr5-wi-fi-7-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3539",
+   "name": "MSI MPG Z890 CARBON WIFI Intel LGA 1851 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 26499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-mpg-z890-carbon-wifi",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/MPG%20Z890%20CARBON%20WIFI/msi-mpg-z890-carbon-wifi-intel-lga-1851-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3173",
+   "name": "MSI PRO Z790-P WIFI Motherboard – LGA1700, Intel 12th/13th/14th Gen Support, DDR5, PCIe 5.0, WiFi 6, 2.5G LAN, M.2 Gen4 Slots, ATX Form Factor",
+   "category": "motherboard",
+   "priceEgp": 10999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-pro-z790-p-wifi-motherboard-%E2%80%93-lga1700-intel-12th-13th-14th-gen-support-ddr5-pcie-5-0-wifi-6-2-5g-lan-m-2-gen4-slots-atx-form-factor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/PRO%20Z790-P%20WIFI/msi-pro-z790-p-wifi-motherboard-%E2%80%93-lga1700-intel-12th-13th-14th-gen-support-ddr5-pcie-5-0-wifi-6-2-5g-lan-m-2-gen4-slots-atx-form-factor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3282",
+   "name": "MSI PRO Z890-A WiFi Motherboard - Socket LGA 1851, PCIe 5.0, DDR5, Wi-Fi 7, Thunderbolt 4",
+   "category": "motherboard",
+   "priceEgp": 16499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-pro-z890-a-wifi-lga-1851",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/PRO%20Z890-A%20WIFI/msi-pro-z890-a-wifi-motherboard-socket-lga-1851-pcie-5-0-ddr5-wi-fi-7-thunderbolt-4-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3283",
+   "name": "MSI PRO Z890-P WiFi Motherboard - Socket LGA 1851, PCIe 5.0, DDR5, Wi-Fi 7, Thunderbolt 4",
+   "category": "motherboard",
+   "priceEgp": 15499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-pro-z890-p-wifi-lga-1851",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/PRO%20Z890-P%20WIFI/msi-pro-z890-p-wifi-motherboard-socket-lga-1851-pcie-5-0-ddr5-wi-fi-7-thunderbolt-4-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2884",
+   "name": "ROG CROSSHAIR X870E EXTREME Motherboard – AM5 Socket, Supports Ryzen 7000/8000/9000 Series, DDR5 up to 256GB, PCIe 5.0, USB4, WiFi 7, E-ATX Form Factor",
+   "category": "cpu",
+   "priceEgp": 55499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 68000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/rog-crosshair-x870e-extreme-motherboard-%E2%80%93-am5-socket-supports-ryzen-7000-8000-9000-series-ddr5-up-to-256gb-pcie-5-0-usb4-wifi-7-e-atx-form-factor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/%20X870E%20EXTREME/rog-crosshair-x870e-extreme-motherboard-%E2%80%93-am5-socket-supports-ryzen-7000-8000-9000-series-ddr5-up-to-256gb-pcie-5-0-usb4-wifi-7-e-atx-form-factor-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3177",
+   "name": "Z790 GAMING PLUS WIFI Motherboard – ATX, Intel 14th/13th Gen LGA1700 Support, DDR5, PCIe 5.0, Wi-Fi 6E, 2.5Gb LAN, USB 3.2 Gen 2x2, High-Performance Gaming & Productivity",
+   "category": "motherboard",
+   "priceEgp": 10800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/z790-gaming-plus-wifi-motherboard-%E2%80%93-atx-intel-14th-13th-gen-lga1700-support-ddr5-pcie-5-0-wi-fi-6e-2-5gb-lan-usb-3-2-gen-2x2-high-performance-gaming-productivity",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/Z790%20GAMING%20PLUS%20WIFI/z790-gaming-plus-wifi-motherboard-%E2%80%93-atx-intel-14th-13th-gen-lga1700-support-ddr5-pcie-5-0-wi-fi-6e-2-5gb-lan-usb-3-2-gen-2x2-high-performance-gaming-productivity-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2227",
+   "name": "Asus Prime B760M-A (Csm) DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 6300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b760m-a-csm-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M-A%20DDR5/asus-prime-b760m-a-csm-ddr5-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2269",
+   "name": "ASUS TUF GAMING B760M-PLUS WIFI II Intel B760 LGA 1700 MATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 8999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9300,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b760m-plus-wifi-ii-intel-b760-lga-1700-matx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M-PLUS%20WIFI%20II/asus-tuf-gaming-b760m-plus-wifi-ii-intel-b760-lga-1700-matx-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2048",
+   "name": "ASUS B650M-PLUS TUF GAMING WIFI Socket AM5",
+   "category": "motherboard",
+   "priceEgp": 11000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 13500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-b650m-plus-tuf-gaming-wifi-socket-am5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/asustuf/asus-b650m-plus-tuf-gaming-wifi-socket-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1768",
+   "name": "ASUS H610M PRIME-K D4",
+   "category": "motherboard",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-h610m-prime-k-d4",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/h610/hh610/asus-h610m-prime-k-d4-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2635",
+   "name": "ASUS PRIME B450M-A II AMD B450 AM4 micro ATX motherboard with M.2 support, HDMI/DVI-D/D-Sub, SATA 6 Gbps, 1 Gb Ethernet, USB 3.2 Gen 2 Type-A, and Aura Sync RGB",
+   "category": "motherboard",
+   "priceEgp": 3850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b450m-a-ii-amd-b450-am4-micro-atx-motherboard-with-m-2-support-hdmi-dvi-d-d-sub-sata-6-gbps-1-gb-ethernet-usb-3-2-gen-2-type-a-and-aura-sync-rgb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B450M-A%20II/asus-prime-b450m-a-ii-amd-b450-am4-micro-atx-motherboard-with-m-2-support-hdmi-dvi-d-d-sub-sata-6-gbps-1-gb-ethernet-usb-3-2-gen-2-type-a-and-aura-sync-rgb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2583",
+   "name": "ASUS PRIME B650M-A WIFI II Micro-ATX motherboard DDR5 — PCIe 4.0 M.2 support, Realtek 2.5Gb Ethernet, Wi-Fi 6, DisplayPort, VGA, HDMI, SATA 6 Gbps, USB 3.2 Gen 2 ports, front USB 3.2 Gen 1 Type-C, BIOS FlashBack, Aura Sync",
+   "category": "gpu",
+   "priceEgp": 7250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b650m-a-wifi-ii-micro-atx-motherboard-ddr5-%E2%80%94-pcie-4-0-m-2-support-realtek-2-5gb-ethernet-wi-fi-6-displayport-vga-hdmi-sata-6-gbps-usb-3-2-gen-2-ports-front-usb-3-2-gen-1-type-c-bios-flashback-aura-sync",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/asus-prime-b650m-a-wifi-ii-micro-atx-motherboard-ddr5-%E2%80%94-pcie-4-0-m-2-support-realtek-2-5gb-ethernet-wi-fi-6-displayport-vga-hdmi-sata-6-gbps-usb-3-2-gen-2-ports-front-usb-3-2-gen-1-type-c-bios-flashback-aura-sync-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2992",
+   "name": "ASUS PRIME B650M-K Micro-ATX Motherboard – AMD AM5 Socket, DDR5 Memory, PCIe 5.0 M.2, Realtek 2.5Gb Ethernet, HDMI, VGA, USB 3.2 Gen 2, Front USB Type-C, BIOS FlashBack, Aura Sync RGB, Advanced Cooling & ASUS OptiMem II",
+   "category": "gpu",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b650m-k-micro-atx-motherboard-%E2%80%93-amd-am5-socket-ddr5-memory-pcie-5-0-m-2-realtek-2-5gb-ethernet-hdmi-vga-usb-3-2-gen-2-front-usb-type-c-bios-flashback-aura-sync-rgb-advanced-cooling-asus-optimem-ii",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B650M-K/asus-prime-b650m-k-micro-atx-motherboard-%E2%80%93-amd-am5-socket-ddr5-memory-pcie-5-0-m-2-realtek-2-5gb-ethernet-hdmi-vga-usb-3-2-gen-2-front-usb-type-c-bios-flashback-aura-sync-rgb-advanced-cooling-asus-optimem-ii-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2978",
+   "name": "ASUS PRIME B650M-R Socket AM5 LGA 1718 Micro-ATX Motherboard - PCIe 4.0 Support",
+   "category": "motherboard",
+   "priceEgp": 5850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b650m-r-lga-1718-pcie-4-0",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/PRIME%20B650M-R/asus-prime-b650m-r-socket-am5-lga-1718-micro-atx-motherboard-pcie-4-0-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2474",
+   "name": "ASUS PRIME B840-PLUS WIFI AM5 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 8400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b840-plus-wifi-am5-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B840-plus%20wifi/asus-prime-b840-plus-wifi-am5-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2467",
+   "name": "ASUS PRIME B840M-A WiFi Motherboard, AM5 socket, AMD B840, Micro-ATX, DDR5",
+   "category": "motherboard",
+   "priceEgp": 7999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b840m-a-wifi-motherboard-am5-socket-amd-b840-micro-atx-ddr5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B840M-A/asus-prime-b840m-a-wifi-motherboard-am5-socket-amd-b840-micro-atx-ddr5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3182",
+   "name": "ASUS Prime B860-Plus WiFi Motherboard – LGA1851, DDR5 Support, PCIe 5.0, WiFi 7, 2.5G LAN, M.2 Slots, ATX Board for Next-Gen Intel Processors",
+   "category": "motherboard",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-b860-plus-wifi-motherboard-%E2%80%93-lga1851-ddr5-support-pcie-5-0-wifi-7-2-5g-lan-m-2-slots-atx-board-for-next-gen-intel-processors",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B860-PLUS%20WIFI%20Prime/asus-prime-b860-plus-wifi-motherboard-%E2%80%93-lga1851-ddr5-support-pcie-5-0-wifi-7-2-5g-lan-m-2-slots-atx-board-for-next-gen-intel-processors-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2441",
+   "name": "Asus Prime H610M-D D4 Mic ATX Motherboard, LGA 1700 Socket, DDR4 Support, PCIe 4.0, M.2 Slot, 1Gb Ethernet, HDMI",
+   "category": "motherboard",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4150,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-h610m-d-d4-mic-atx-motherboard-lga-1700-socket-ddr4-support-pcie-4-0-m-2-slot-1gb-ethernet-hdmi",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/H610M-D/asus-prime-h610m-d-d4-mic-atx-motherboard-lga-1700-socket-ddr4-support-pcie-4-0-m-2-slot-1gb-ethernet-hdmi-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2580",
+   "name": "ASUS Prime X870-P AMD AM5 X870 ATX DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-x870-p-amd-am5-x870-atx-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/X870-P%20/asus-prime-x870-p-amd-am5-x870-atx-ddr5-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2435",
+   "name": "ASUS Prime X870-P WiFi AMD AM5 X870 ATX DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 15500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-x870-p-wifi-amd-am5-x870-atx-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20X870-P/asus-prime-x870-p-wifi-amd-am5-x870-atx-ddr5-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2475",
+   "name": "ASUS ROG Strix B850-A Gaming WiFi AMD AM5 B850 ATX Motherboard 14+2+2 Power Stages, DDR5 AEMP, 2.5G LAN, WiFi 7 with Q-Antenna, 4X M.2, PCIe® 5.0, USB 20Gbps Type-C, AI Networking II, ASUS AI Advisor",
+   "category": "motherboard",
+   "priceEgp": 13500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 15000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b850-a-gaming-wifi-amd-am5-b850-atx-motherboard-1422-power-stages-ddr5-aemp-2-5g-lan-wifi-7-with-q-antenna-4x-m-2-pcie-5-0-usb-20gbps-type-c-ai-networking-ii-asus-ai-advisor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B850-A%20/asus-rog-strix-b850-a-gaming-wifi-amd-am5-b850-atx-motherboard-1422-power-stages-ddr5-aemp-2-5g-lan-wifi-7-with-q-antenna-4x-m-2-pcie-5-0-usb-20gbps-type-c-ai-networking-ii-asus-ai-advisor-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2476",
+   "name": "ASUS ROG Strix B850-E Gaming WiFi AMD AM5",
+   "category": "motherboard",
+   "priceEgp": 16449,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 20000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b850-e-gaming-wifi-amd-am5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B850-E/asus-rog-strix-b850-e-gaming-wifi-amd-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2477",
+   "name": "ASUS ROG STRIX B850-F GAMING WIFI",
+   "category": "motherboard",
+   "priceEgp": 15500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 17999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b850-f-gaming-wifi",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B850-F/asus-rog-strix-b850-f-gaming-wifi-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2592",
+   "name": "ASUS ROG Strix B860-A Gaming WiFi LGA 1851 ATX Motherboard, Intel B860 Chipset, 4x DIMM DDR5 Slot, Up to 256GB Max Memory, 1x PCIe 5.0 x16 SafeSlot, 4x M.2 Slots, WiFI & BT | 90MB1JI0-M0EAY0",
+   "category": "motherboard",
+   "priceEgp": 13999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 14500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b860-a-gaming-wifi-lga-1851-atx-motherboard-intel-b860-chipset-4x-dimm-ddr5-slot-up-to-256gb-max-memory-1x-pcie-5-0-x16-safeslot-4x-m-2-slots-wifi-bt-90mb1ji0-m0eay0",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/%20B860-A%20Gaming%20WiFi/asus-rog-strix-b860-a-gaming-wifi-lga-1851-atx-motherboard-intel-b860-chipset-4x-dimm-ddr5-slot-up-to-256gb-max-memory-1x-pcie-5-0-x16-safeslot-4x-m-2-slots-wifi-bt-90mb1ji0-m0eay0-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2460",
+   "name": "ASUS ROG STRIX B860-F Gaming WiFi Motherboard",
+   "category": "motherboard",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 15000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-rog-strix-b860-f-gaming-wifi-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20B860-F/asus-rog-strix-b860-f-gaming-wifi-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2982",
+   "name": "ASUS TUF GAMING A620M-PLUS Motherboard – AMD Socket AM5 (LGA 1718), Micro-ATX, Supports Ryzen 8000/7000 Series, DDR5 Memory, PCIe 4.0, M.2 NVMe, USB 3.2 Gen 2, Realtek 2.5Gb Ethernet, Aura Sync RGB",
+   "category": "cpu",
+   "priceEgp": 5400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-a620m-plus-motherboard-%E2%80%93-amd-socket-am5-lga-1718-micro-atx-supports-ryzen-8000-7000-series-ddr5-memory-pcie-4-0-m-2-nvme-usb-3-2-gen-2-realtek-2-5gb-ethernet-aura-sync-rgb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/A620M-PLUS/asus-tuf-gaming-a620m-plus-motherboard-%E2%80%93-amd-socket-am5-lga-1718-micro-atx-supports-ryzen-8000-7000-series-ddr5-memory-pcie-4-0-m-2-nvme-usb-3-2-gen-2-realtek-2-5gb-ethernet-aura-sync-rgb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2267",
+   "name": "Asus Tuf Gaming B650 E Wifi DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 10500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b650-e-wifi-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/TUF%20GAMING%20B650-E%20WIFI/asus-tuf-gaming-b650-e-wifi-ddr5-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2863",
+   "name": "ASUS TUF GAMING B650-PLUS WIFI Motherboard – AM5 Socket, Supports Ryzen 7000/8000/9000 Series, DDR5 up to 128GB, PCIe 5.0, WiFi 6, USB 3.2 Gen 2, ATX Form Factor",
+   "category": "cpu",
+   "priceEgp": 11500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b650-plus-wifi-motherboard-%E2%80%93-am5-socket-supports-ryzen-7000-8000-9000-series-ddr5-up-to-128gb-pcie-5-0-wifi-6-usb-3-2-gen-2-atx-form-factor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B650-PLUS%20WIFI/asus-tuf-gaming-b650-plus-wifi-motherboard-%E2%80%93-am5-socket-supports-ryzen-7000-8000-9000-series-ddr5-up-to-128gb-pcie-5-0-wifi-6-usb-3-2-gen-2-atx-form-factor-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2335",
+   "name": "ASUS TUF GAMING B760M-PLUS D4 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 7750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b760m-plus-d4-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M-PLUS%20D4/asus-tuf-gaming-b760m-plus-d4-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2444",
+   "name": "ASUS TUF GAMING B760M-PLUS DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 8750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b760m-plus-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M-PLUS%20D5/asus-tuf-gaming-b760m-plus-ddr5-motherboard-2-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2584",
+   "name": "ASUS TUF Gaming B760M-PLUS II Intel B760 LGA 1700 mATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 8999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9300,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b760m-plus-ii-intel-b760-lga-1700-matx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B760M-PLUS%20II/asus-tuf-gaming-b760m-plus-ii-intel-b760-lga-1700-matx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2536",
+   "name": "ASUS TUF Gaming B850M-PLUS WiFi AMD AM5 mATX Motherboard – 14+2+1 DrMOS, DDR5, PCIe 5.0, 3x M.2, Wi-Fi 6E, 2.5Gb LAN",
+   "category": "motherboard",
+   "priceEgp": 11700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 12500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-b850m-plus-wifi-amd-am5-matx-motherboard-%E2%80%93-1421-drmos-ddr5-pcie-5-0-3x-m-2-wi-fi-6e-2-5gb-lan",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B850M-PLUS%20WIFI/asus-tuf-gaming-b850m-plus-wifi-amd-am5-matx-motherboard-%E2%80%93-1421-drmos-ddr5-pcie-5-0-3x-m-2-wi-fi-6e-2-5gb-lan-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2332",
+   "name": "GIGABYTE B650 AORUS Elite AX ICE — AM5 LGA 1718 AMD B650 ATX DDR5",
+   "category": "motherboard",
+   "priceEgp": 12500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b650-aorus-elite-ax-ice-%E2%80%94-am5-lga-1718-amd-b650-atx-ddr5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B650%20AORUS%20Elite%20AX%20ICE/gigabyte-b650-aorus-elite-ax-ice-%E2%80%94-am5-lga-1718-amd-b650-atx-ddr5-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2744",
+   "name": "GIGABYTE B650 Gaming X AX V2 (rev. 1.0) AM5 LGA 1718 AMD B650 ATX DDR5, Triple M.2, PCIe 5.0, USB 3.2 Gen2x2 Type-C, AMD Wi-Fi 6E, Realtek 2.5GbE LAN",
+   "category": "motherboard",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b650-gaming-x-ax-v2-rev-1-0-am5-lga-1718-amd-b650-atx-ddr5-triple-m-2-pcie-5-0-usb-3-2-gen2x2-type-c-amd-wi-fi-6e-realtek-2-5gbe-lan",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B650%20GAMING%20X%20AX%20V2/gigabyte-b650-gaming-x-ax-v2-rev-1-0-am5-lga-1718-amd-b650-atx-ddr5-triple-m-2-pcie-5-0-usb-3-2-gen2x2-type-c-amd-wi-fi-6e-realtek-2-5gbe-lan-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2756",
+   "name": "GIGABYTE B650M D3HP AX (Rev. 1.x) – AM5 DDR5 Micro‑ATX Motherboard with Wi‑Fi 6E, PCIe 4.0, USB 3.2, 2.5GbE LAN, HDMI/DP – Supports Ryzen 7000/8000/9000",
+   "category": "cpu",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b650m-d3hp-ax-rev-1-x-%E2%80%93-am5-ddr5-micro%E2%80%91atx-motherboard-with-wi%E2%80%91fi-6e-pcie-4-0-usb-3-2-2-5gbe-lan-hdmi-dp-%E2%80%93-supports-ryzen-7000-8000-9000",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B650M%20D3HP%20AX/gigabyte-b650m-d3hp-ax-rev-1-x-%E2%80%93-am5-ddr5-micro%E2%80%91atx-motherboard-with-wi%E2%80%91fi-6e-pcie-4-0-usb-3-2-2-5gbe-lan-hdmi-dp-%E2%80%93-supports-ryzen-7000-8000-9000-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1831",
+   "name": "GIGABYTE B650M DS3H DDR5 (rev. 1.x) (ONLY BUILD)",
+   "category": "ram",
+   "priceEgp": 7900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b650m-ds3h-ddr5-rev-1-x-only-build",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/AMD/AMD%207000/gigabyte-b650m-ds3h-ddr5-rev-1-x-only-build-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2271",
+   "name": "GIGABYTE B650M H (rev. 1.0) AMD AM5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 5600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b650m-h-rev-1-0-amd-am5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B650M%20H/gigabyte-b650m-h-rev-1-0-amd-am5-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2755",
+   "name": "GIGABYTE B760 GAMING X AX Motherboard – LGA1700, DDR5, PCIe 4.0, Wi-Fi 6E, Bluetooth 5.3, 2.5GbE LAN, Triple M.2, HDMI/DP, for Intel 12th–14th Gen",
+   "category": "motherboard",
+   "priceEgp": 8500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b760-gaming-x-ax-motherboard-%E2%80%93-lga1700-ddr5-pcie-4-0-wi-fi-6e-bluetooth-5-3-2-5gbe-lan-triple-m-2-hdmi-dp-for-intel-12th%E2%80%9314th-gen",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760%20GAMING%20X%20AX/gigabyte-b760-gaming-x-ax-motherboard-%E2%80%93-lga1700-ddr5-pcie-4-0-wi-fi-6e-bluetooth-5-3-2-5gbe-lan-triple-m-2-hdmi-dp-for-intel-12th%E2%80%9314th-gen-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1940",
+   "name": "GIGABYTE B760 GAMING X DDR5 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 8300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b760-gaming-x-ddr5-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760%20Gaming%20x%20d5/gigabyte-b760-gaming-x-ddr5-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2261",
+   "name": "Gigabyte B760M Gaming X DDR4 Motherboard",
+   "category": "motherboard",
+   "priceEgp": 7199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7750,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b760m-gaming-x-ddr4-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B760M%20G-S%20D4/gigabyte-b760m-gaming-x-ddr4-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2341",
+   "name": "GIGABYTE B760M H DDR4 INTEL LGA 1700 MOTHERBOARD",
+   "category": "motherboard",
+   "priceEgp": 5100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5350,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b760m-h-ddr4-intel-lga-1700-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/%20B760M%20H/gigabyte-b760m-h-ddr4-intel-lga-1700-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2533",
+   "name": "GIGABYTE B850 Eagle WIFI6E AM5 ATX Motherboard, AMD B850 Chipset, 4x DDR5 DIMM Slots, Up to 256GB Max Memory, 1x PCIe 5.0 x16, 3x M.2 Slots, WiFi & BT Connectivity, Black | B850-EAGLE-WIFI6E",
+   "category": "motherboard",
+   "priceEgp": 9600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 10500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b850-eagle-wifi6e-am5-atx-motherboard-amd-b850-chipset-4x-ddr5-dimm-slots-up-to-256gb-max-memory-1x-pcie-5-0-x16-3x-m-2-slots-wifi-bt-connectivity-black-b850-eagle-wifi6e",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B850%20EAGLE/gigabyte-b850-eagle-wifi6e-am5-atx-motherboard-amd-b850-chipset-4x-ddr5-dimm-slots-up-to-256gb-max-memory-1x-pcie-5-0-x16-3x-m-2-slots-wifi-bt-connectivity-black-b850-eagle-wifi6e-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2624",
+   "name": "GIGABYTE B850M D3HP Motherboard - AMD Ryzen 9000 Series CPUs, 5+2+2 Phases Digital VRM, up to 8200MHz DDR5 (OC), 1xPCIe 5.0 + 1xPCIe 4.0 M.2, GbE LAN, USB 3.2 Gen 2",
+   "category": "cpu",
+   "priceEgp": 7200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b850m-d3hp-motherboard-amd-ryzen-9000-series-cpus-522-phases-digital-vrm-up-to-8200mhz-ddr5-oc-1xpcie-5-0-1xpcie-4-0-m-2-gbe-lan-usb-3-2-gen-2",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B850M%20D3HP/gigabyte-b850m-d3hp-motherboard-amd-ryzen-9000-series-cpus-522-phases-digital-vrm-up-to-8200mhz-ddr5-oc-1xpcie-5-0-1xpcie-4-0-m-2-gbe-lan-usb-3-2-gen-2-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2505",
+   "name": "GIGABYTE B860 EAGLE WIFI6E LGA1851",
+   "category": "motherboard",
+   "priceEgp": 9800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b860-eagle-wifi6e-lga1851",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B860%20EAGLE/gigabyte-b860-eagle-wifi6e-lga1851-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2625",
+   "name": "GIGABYTE B860M D3HP Motherboard - Intel Core Ultra Series CPUs, 4+1+2+1 Phases VRM, up to 9066MHz DDR5, 2xPCIe 4.0 M.2, GbE LAN, USB 3.2 Gen 1",
+   "category": "cpu",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b860m-d3hp-motherboard-intel-core-ultra-series-cpus-4121-phases-vrm-up-to-9066mhz-ddr5-2xpcie-4-0-m-2-gbe-lan-usb-3-2-gen-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B860M%20D3HP/gigabyte-b860m-d3hp-motherboard-intel-core-ultra-series-cpus-4121-phases-vrm-up-to-9066mhz-ddr5-2xpcie-4-0-m-2-gbe-lan-usb-3-2-gen-1-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2506",
+   "name": "Gigabyte B860M DS3H WIFI6E LGA 1851 Micro-ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 9000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-b860m-ds3h-wifi6e-lga-1851-micro-atx-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/B860%20DS3H/gigabyte-b860m-ds3h-wifi6e-lga-1851-micro-atx-motherboard-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2537",
+   "name": "GIGABYTE X870 EAGLE WIFI7 AM5 AMD Motherboard",
+   "category": "motherboard",
+   "priceEgp": 12500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-x870-eagle-wifi7-am5-amd-motherboard%20",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/X870%20EAGLE%20WIFI/gigabyte-x870-eagle-wifi7-am5-amd-motherboard%20-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1765",
+   "name": "MSI MOTHERBOARD INTEL PRO H610M-E DDR4",
+   "category": "motherboard",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-h610-e",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/h610/msi-motherboard-intel-pro-h610m-e-ddr4-350x350w.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3174",
+   "name": "MSI PRO B850M-P WiFi ATX Motherboard – AM5 Socket, Supports AMD Ryzen 9000 / 8000 / 7000 Series Processors, DDR5 Memory, WiFi 6E, PCIe 5.0, High-Performance Professional Platform",
+   "category": "cpu",
+   "priceEgp": 7650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/msi-pro-b850m-p-wifi-atx-motherboard-%E2%80%93-am5-socket-supports-amd-ryzen-9000-8000-7000-series-processors-ddr5-memory-wifi-6e-pcie-5-0-high-performance-professional-platform",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/MSI/PRO%20B850M-P%20WIFI/msi-pro-b850m-p-wifi-atx-motherboard-%E2%80%93-am5-socket-supports-amd-ryzen-9000-8000-7000-series-processors-ddr5-memory-wifi-6e-pcie-5-0-high-performance-professional-platform-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2464",
+   "name": "ROG STRIX B860-G GAMING WIFI | Intel Core Ultra 1851 Micro-ATX Gaming Motherboard DDR5",
+   "category": "cpu",
+   "priceEgp": 12500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 18000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/rog-strix-b860-g-gaming-wifi-intel-core-ultra-1851-micro-atx-gaming-motherboard-ddr5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/B860-G%20GAMING%20WIFI/rog-strix-b860-g-gaming-wifi-intel-core-ultra-1851-micro-atx-gaming-motherboard-ddr5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2585",
+   "name": "TUF GAMING B760M-BTF WIFI Intel B760 (LGA 1700) mATX motherboard with DDR5, PCIe 5.0, 3X PCIe 4.0 M.2 slots, 12+1 DrMOS, Wi-Fi 6, 2.5Gb LAN, DP, HDMI, USB 3.2 Gen 2x2 Type-C, Hidden Connector Design",
+   "category": "motherboard",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/tuf-gaming-b760m-btf-wifi-intel-b760-lga-1700-matx-motherboard-with-ddr5-pcie-5-0-3x-pcie-4-0-m-2-slots-121-drmos-wi-fi-6-2-5gb-lan-dp-hdmi-usb-3-2-gen-2x2-type-c-hidden-connector-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/B760M-BTF%20WIFI%20/tuf-gaming-b760m-btf-wifi-intel-b760-lga-1700-matx-motherboard-with-ddr5-pcie-5-0-3x-pcie-4-0-m-2-slots-121-drmos-wi-fi-6-2-5gb-lan-dp-hdmi-usb-3-2-gen-2x2-type-c-hidden-connector-design-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  }
+ ]
+}

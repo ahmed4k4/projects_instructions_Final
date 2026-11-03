@@ -15,14 +15,3 @@ export function localisedName(component: Localised, language: string): string {
   if (language.startsWith('ar')) return component.nameAr?.trim() || component.name;
   return component.name;
 }
-
-export function localisedDescription(component: Localised, language: string): string {
-  if (language.startsWith('ar'))
-    return component.descriptionAr?.trim() || component.description?.trim() || '';
-  return component.description?.trim() || '';
-}
-
-/** True when the row has an Arabic name (used to grey out "untranslated" notices). */
-export function hasArabicName(component: Localised): boolean {
-  return Boolean(component.nameAr?.trim());
-}

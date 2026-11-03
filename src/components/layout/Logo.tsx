@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { APP_NAME } from '@/lib/constants';
@@ -11,15 +12,21 @@ interface LogoProps {
 
 export function Logo({ compact = false, to = '/', className }: LogoProps) {
   const reduce = useReducedMotion();
+  const { t } = useTranslation();
 
   return (
     <Link
       to={to}
-      aria-label={`${APP_NAME} — home`}
-      className={cn('group flex items-center gap-2.5 outline-none', className)}
+      aria-label={t('common.logoHome', { name: APP_NAME })}
+      className={cn(
+        'group flex items-center gap-2.5 outline-none',
+        // A finger target: the mark itself is 36px, which is under the 44px rule.
+        'pointer-coarse:min-h-11',
+        className,
+      )}
     >
       <motion.span
-        className="relative grid size-9 place-items-center rounded-lg border border-primary/30 bg-surface-elevated"
+        className="relative grid size-9 place-items-center rounded-lg border border-primary/30 bg-surface-elevated pointer-coarse:size-11"
         whileHover={reduce ? undefined : { rotate: -6, scale: 1.04 }}
         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       >
@@ -46,7 +53,7 @@ export function Logo({ compact = false, to = '/', className }: LogoProps) {
         <span className="flex flex-col leading-none">
           <span className="text-sm font-semibold tracking-tight">{APP_NAME}</span>
           <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-            PC Builder
+            {t('app.subtitle')}
           </span>
         </span>
       )}

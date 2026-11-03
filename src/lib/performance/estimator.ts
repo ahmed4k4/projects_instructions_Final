@@ -30,14 +30,14 @@ import type { BenchmarkRow, FpsAiFallback, FpsEstimate, Resolution } from './typ
 import { RESOLUTIONS, TRACKED_GAMES } from './types';
 
 /** Resolution-dependent penalty when the CPU is 15+ points behind the GPU. */
-export const BOTTLENECK_PENALTY: Record<Resolution, number> = {
+const BOTTLENECK_PENALTY: Record<Resolution, number> = {
   '1080p': 0.7,
   '1440p': 0.88,
   '4k': 0.96,
 };
 
 /** A CPU must be this far behind the GPU before it counts as a bottleneck. */
-export const BOTTLENECK_THRESHOLD = 15;
+const BOTTLENECK_THRESHOLD = 15;
 
 function normaliseModel(model: string): string {
   return model

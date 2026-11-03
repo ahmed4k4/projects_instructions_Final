@@ -29,8 +29,3 @@ export function loadArabicFont(): Promise<void> {
 
   return loadPromise;
 }
-
-/** True once the Arabic face has been requested (diagnostics / tests). */
-export function isArabicFontRequested(): boolean {
-  return loadPromise !== null;
-}

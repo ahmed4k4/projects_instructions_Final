@@ -44,6 +44,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             title={option.title}
             className={cn(
               'relative rounded-md px-2 py-1 text-[11px] font-medium transition-colors',
+              // A finger needs 44px; a mouse does not. `pointer-coarse` is the
+              // capability query, so this stays a compact control on desktop.
+              'pointer-coarse:min-h-11 pointer-coarse:min-w-11 pointer-coarse:px-3',
               active ? 'text-foreground' : 'text-muted-foreground hover:text-foreground',
             )}
           >

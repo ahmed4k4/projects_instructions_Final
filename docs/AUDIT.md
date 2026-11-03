@@ -64,12 +64,12 @@ Probed live against this project's key:
 
 | Model                      | Result                                                                  |
 | -------------------------- | ----------------------------------------------------------------------- |
-| `gemini-3.5-flash-lite`    | âœ… 200 آ· ~750–900 ms آ· streams آ· tools آ· Arabic — **pinned as default** |
-| `gemini-flash-lite-latest` | âœ… 200 آ· ~890 ms — fallback                                             |
-| `gemini-3.6-flash`         | âœ… 200 آ· ~975 ms — quality tier / fallback                              |
-| `gemini-3.5-flash`         | â‌Œ 429 quota exhausted                                                  |
-| `gemini-3.8-flash`         | â‌Œ 503 high demand (never interactive) — **removed from the chain**     |
-| `gemini-1.5-flash`         | â‌Œ **404 retired** on API `v1beta`                                      |
+| `gemini-3.5-flash-lite`    | ✅ 200 · ~750–900 ms · streams · tools · Arabic — **pinned as default** |
+| `gemini-flash-lite-latest` | ✅ 200 · ~890 ms — fallback                                             |
+| `gemini-3.6-flash`         | ✅ 200 · ~975 ms — quality tier / fallback                              |
+| `gemini-3.5-flash`         | ❌ 429 quota exhausted                                                  |
+| `gemini-3.8-flash`         | ❌ 503 high demand (never interactive) — **removed from the chain**     |
+| `gemini-1.5-flash`         | ❌ **404 retired** on API `v1beta`                                      |
 
 > The brief asked to pin `gemini-1.5-flash`. It no longer exists for this API, so
 > pinning it would have broken every request. `gemini-3.5-flash-lite` is the
@@ -101,7 +101,7 @@ src/services/ai/__tests__/thoughtSignature.test.ts   4 unit tests (incl. split-s
 `scripts/audit-unused.mjs` now walks the real import graph:
 
 ```text
-Total src files: 114 آ· reachable: 113 آ· orphans: 1
+Total src files: 114 · reachable: 113 · orphans: 1
 ```
 
 The single orphan is `src/vite-env.d.ts` — an ambient types file that is never
@@ -130,7 +130,7 @@ OpenRouter, Groq, Ollama or `VITE_USE_SUPABASE_AI` remain anywhere in the repo.
 ### Supabase null-safety
 
 `supabaseClient.ts` returns `null` without credentials; every service early-returns
-(`listComponents â†’ []`, `getComponentById â†’ null`, `getCompatibilityRules â†’ []`).
+(`listComponents → []`, `getComponentById → null`, `getCompatibilityRules → []`).
 Verified in-browser: **0 failed network requests, no `sb-*` auth storage** with no
 credentials configured.
 
@@ -182,12 +182,12 @@ IBL at 0.45, and the glow comes from emissive traces.
 
 | Requirement                    | Status                                                                               |
 | ------------------------------ | ------------------------------------------------------------------------------------ |
-| `/builder` anonymous           | âœ… never gated                                                                       |
-| `/builder/ai` anonymous        | âœ… the `/auth` redirect on _save_ is gone — anonymous users get a share link instead |
-| `/ai-advisor` anonymous        | âœ…                                                                                   |
-| `#b=<payload>` sharing         | âœ… `lz-string` codec in `lib/share.ts`                                               |
-| `/dashboard` "Local Workspace" | âœ… banner + sidebar label                                                            |
-| Sign-in optional               | âœ… only cloud sync / publishing                                                      |
+| `/builder` anonymous           | ✅ never gated                                                                       |
+| `/builder/ai` anonymous        | ✅ the `/auth` redirect on _save_ is gone — anonymous users get a share link instead |
+| `/ai-advisor` anonymous        | ✅                                                                                   |
+| `#b=<payload>` sharing         | ✅ `lz-string` codec in `lib/share.ts`                                               |
+| `/dashboard` "Local Workspace" | ✅ banner + sidebar label                                                            |
+| Sign-in optional               | ✅ only cloud sync / publishing                                                      |
 
 Payload is narrow by design — `{ v, n?, i: {category: id}, q? }` — so a link cannot
 smuggle arbitrary data; recipients resolve ids against their own catalogue and
@@ -218,7 +218,7 @@ unknown parts are reported rather than silently dropped.
 | `US$1,800` inside Arabic pages                                      | `formatCurrency` was hardcoded to `en-US`; now locale-aware via `setFormatLocale` on `languageChanged`                                                                           |
 | Score ring read `100 /`                                             | numeric readout isolated with `dir="ltr"`                                                                                                                                        |
 | `$` detached from the budget value                                  | currency glyph isolated with `dir="ltr"`                                                                                                                                         |
-| Budget input clipped `$ 1,0…`                                       | field widened `4.5rem â†’ 6.5rem`                                                                                                                                                  |
+| Budget input clipped `$ 1,0…`                                       | field widened `4.5rem → 6.5rem`                                                                                                                                                  |
 | Sidebar card clipped                                                | `min-w-0` on both the flex item and its parent                                                                                                                                   |
 | Category label clipped                                              | resolved by the RTL padding fix                                                                                                                                                  |
 
@@ -250,13 +250,13 @@ Checked in a headless Chromium against the dev server:
 | Check                                                             | Result    |
 | ----------------------------------------------------------------- | --------- |
 | Landing: console errors / failed requests                         | **0 / 0** |
-| Landing: 3D canvas mounted, WebGL2 context, non-empty framebuffer | âœ…        |
-| Landing: 5 sections laid out correctly                            | âœ…        |
-| `/builder/ai` anonymous, no auth redirect                         | âœ…        |
-| `/dashboard` anonymous â†’ "Local workspace"                        | âœ…        |
-| Supabase unset â†’ no `sb-*` storage, 0 failed requests             | âœ…        |
-| RTL (AR): `dir=rtl`, `lang=ar`, `scrollWidth === clientWidth`     | âœ…        |
-| RTL: 0 clipped category labels, 0 stray `US$`, `/ 100` intact     | âœ…        |
+| Landing: 3D canvas mounted, WebGL2 context, non-empty framebuffer | ✅        |
+| Landing: 5 sections laid out correctly                            | ✅        |
+| `/builder/ai` anonymous, no auth redirect                         | ✅        |
+| `/dashboard` anonymous → "Local workspace"                        | ✅        |
+| Supabase unset → no `sb-*` storage, 0 failed requests             | ✅        |
+| RTL (AR): `dir=rtl`, `lang=ar`, `scrollWidth === clientWidth`     | ✅        |
+| RTL: 0 clipped category labels, 0 stray `US$`, `/ 100` intact     | ✅        |
 
 Bugs found **only** by looking at the render, all fixed:
 
@@ -274,17 +274,17 @@ Bugs found **only** by looking at the render, all fixed:
 
 | Criterion                                        | Result                         |
 | ------------------------------------------------ | ------------------------------ |
-| `thought_signature` gone, AI streams without 400 | âœ… 8-round tool loop, 0 errors |
-| `typecheck` / `lint` / `build`                   | âœ… all exit 0                  |
-| Landing has a working 3D scene + particles       | âœ… verified in a real browser  |
-| Dead files and unused code deleted               | âœ… 113/114 reachable           |
-| Anonymous build + AI chat, no forced login       | âœ…                             |
-| All UI strings in Arabic, RTL flawless           | âœ… no horizontal scroll        |
-| `docs/AUDIT.md` written                          | âœ… this file                   |
+| `thought_signature` gone, AI streams without 400 | ✅ 8-round tool loop, 0 errors |
+| `typecheck` / `lint` / `build`                   | ✅ all exit 0                  |
+| Landing has a working 3D scene + particles       | ✅ verified in a real browser  |
+| Dead files and unused code deleted               | ✅ 113/114 reachable           |
+| Anonymous build + AI chat, no forced login       | ✅                             |
+| All UI strings in Arabic, RTL flawless           | ✅ no horizontal scroll        |
+| `docs/AUDIT.md` written                          | ✅ this file                   |
 
-`pnpm test` â†’ **109 passing**.
+`pnpm test` → **109 passing**.
 
-`pnpm audit:all` â†’ all 8 gates green (typecheck, lint, i18n, RTL, build, secret
+`pnpm audit:all` → all 8 gates green (typecheck, lint, i18n, RTL, build, secret
 scan, dead-code audit, tests).
 
 ---
@@ -1160,7 +1160,7 @@ added in **both** languages. Two real defects fell out of doing this:
 
 - **Bare `$` in the budget field** — the wizard rendered a literal `$` while every
   other price on screen was EGP. Now `CURRENCY`, `dir="ltr"`.
-- **Mojibake in the UI** — `Reviewing…` rendered as `Reviewingâ€¦` (an em dash
+- **Mojibake in the UI** — `Reviewing…` rendered as `Reviewing…` (an em dash
   stored as UTF-8 then read as cp1252). Both locale files were verified at the
   byte level as valid Arabic UTF-8 with no replacement characters; only that one
   string was affected.
@@ -1282,7 +1282,164 @@ Screenshots: `.qa/landing-ar.png`, `.qa/search-en2.png`,
 
 ---
 
-## 41. Operator checklist (things only the owner can do)
+---
+
+# Phase 11 — Elnekhely, massive catalogue, radical cleanup
+
+**Date:** 2026-11-02
+**Scope:** the Elnekhely failure, a 3,000-listing catalogue, pagination, and the
+cleanup the brief asked for (orphans, unused exports, duplicate parser).
+
+---
+
+## 42. Module 0 — Elnekhely was never paginating badly. It was refusing us.
+
+### The measurement that changed the diagnosis
+
+The inherited explanation was "page 2+ answers 503, so ~100 products is the
+ceiling". Both halves were wrong:
+
+| Request | `NexusPCBuilderBot/1.0` | Browser UA |
+|---|---|---|
+| `/graphics-card` (page 1) | 12 cards | 12 cards |
+| `/graphics-card?page=2` | **503** | **200, 12 cards** |
+| `/graphics-card?limit=100` | — | **200, 100 cards** |
+| `/graphics-card?limit=100&page=2` | — | **200, 100 new cards** |
+
+A 503 on the *same URL* with a different User-Agent is UA filtering, not
+rate-limiting. The scraper had been told "pagination is blocked" when the truth
+was "we are refused", and it never sent a referrer either.
+
+### Fix
+
+- `headersFor()` — browser UA, `Accept`, `Accept-Language`, `Sec-Fetch-*` and a
+  same-origin `Referer` on every request (shared by the crawler, the Edge
+  Function and the tests).
+- `limit: 100` on Elnekhely targets: nine page requests became one.
+- Jittered 1.5–3 s delay instead of a fixed 2 s metronome.
+- Page budgets raised to the measured depth; the crawl still stops at the first
+  empty page.
+
+### Three further bugs found while verifying accuracy
+
+| Bug | Effect | Fix |
+|---|---|---|
+| `class="price price-normal"` not matched | every full-price card dropped | price regex accepts `price-new`/`price-normal`/block |
+| our `?limit=100` kept in product URLs | links pointed at a scrape URL | `cleanProductUrl()` strips scrape-only params |
+| raw `–` inside image filenames | image URL unloadable | `cleanImageUrl()` percent-encodes |
+
+Storage has no separate HDD listing on this store, which is why it is the
+smallest category — not a bug.
+
+---
+
+## 43. Module 1 — catalogue
+
+| | Phase 10 | Phase 11 |
+|---|---|---|
+| Listings | 1014 | **3089** |
+| Elnekhely | 103 | **750** |
+| Elbadr | 368 | **1825** |
+| Alfrensia | 243 | **221** |
+| Sigma | 300 | **293** |
+| Images | 100% | 99.94% (2 store-placeholder rows → category icon) |
+
+Every category clears the 50-product floor. Verified by
+`pnpm verify:coverage`, which now also checks price plausibility, absolute URLs,
+name hygiene and category coverage.
+
+### The `1 EGP` problem
+
+Elbadr prints **`1 EGP`** on 176 cards when the real price is withheld —
+including an RTX 5090. Sorted as numbers they beat every genuine offer, and the
+UI literally showed **"BEST PRICE EGP 1"**.
+
+- The parser flags such rows (`priceIsPlaceholder`, threshold 100 EGP).
+- Both rankers (`aggregator.byBestOffer`, `searchService.rankOffers`) sort them
+  last, and the group sort pins them to the bottom.
+- The card renders **"Price is unavailable"** instead of a number.
+- Rows are kept: the part is real, its photo and link work, it counts in its
+  category.
+
+### Card name/photo mismatch
+
+The label came from the most descriptive name and the photo from the first offer
+that had one, so a card could read "RTX 5070" over a motherboard. The photo is
+now taken from the offer the price and Buy button point at.
+
+### Pagination
+
+`/search` uses React Query's `useInfiniteQuery` over a **group-aware** cursor:
+listings are grouped first, then the groups are sliced. Slicing listings first
+would split one product across two pages and show two "best prices" for it.
+
+- 24 per page, `IntersectionObserver` with a 600 px `rootMargin`.
+- A visible **Load more** button remains for keyboards, screen readers and
+  devices without the API — automatic loading is never the only way forward.
+- Footer states "Showing 48 of 430" so progress is honest.
+
+Verified in a browser: 24 cards → 48 after scrolling, 0 console errors.
+
+---
+
+## 44. Module 2 — cleanup
+
+Two new gates, both of which FAIL the build (`audit-unused` only reported):
+
+| Gate | Result |
+|---|---|
+| `check-orphans.mjs` | 150/150 files reachable |
+| `check-unused-exports.mjs` | 0 unused value exports (79 found and resolved) |
+
+Both were written carefully because the first versions were wrong in ways that
+would have deleted live code:
+
+- the orphan walk ignored `api/` and `src/server/`, i.e. it flagged the
+  production AI handler as dead;
+- the export scan counted `export { a } from './x'` as a local declaration and
+  flagged `services/geminiService.ts`, the module every agent imports.
+
+### Consolidation
+
+- **`src/lib/retailerParsing.ts` deleted.** It was a 209-line stale copy of the
+  real 698-line parser, kept alive only by a test. Pointing the tests at the one
+  implementation immediately surfaced two live bugs the copy had hidden (Arabic
+  thousands separators broke price parsing; PSU wattage lost to a GPU word).
+- `share.ts` internals demoted to module-private; `motion.ts` presets that no
+  component used removed; `SCORE_LABELS`/`APP_TAGLINE` deleted.
+- `snapshot-retailers.mjs` replaced by the resumable `crawl-retailers.mjs`;
+  three unreferenced probe scripts removed.
+- 130 mojibake sequences repaired across `src/`, `scripts/`, `docs/` — including
+  two that were visible in the UI.
+
+### Docs
+
+`docs/ARCHITECTURE.md` now maps every directory to its responsibility and lists
+what each folder must never do.
+
+---
+
+## 45. Verification (Phase 11)
+
+| Check | Result |
+|---|---|
+| `pnpm typecheck` / `lint` / `build` | ✅ |
+| `pnpm test` | ✅ **177 passing** |
+| `pnpm audit:all` | ✅ **16 gates** |
+| `check:i18n` / `audit-i18n-strings` | ✅ 1080 × 2, 0 untranslated |
+| `check-orphans` | ✅ 150/150 |
+| `check-unused-exports` | ✅ 0 |
+| `verify-catalogue` | ✅ 3156 listings, 8 categories, all > 50 |
+| `/search` EN & AR, 1440 & 390 px | ✅ no overflow, no mojibake, no broken images |
+| Infinite scroll | ✅ 24 → 48 cards, no console errors |
+| Mobile audit | ✅ 0 sub-44px targets at every width |
+
+Screenshots: `.qa/final-search.png`, `.qa/search-pagination.png`,
+`.qa/search-fixed.png`, `.qa/gpu-cat.png`.
+
+---
+
+## 46. Operator checklist (things only the owner can do)
 
 1. **Vercel → Settings → Environment Variables**: add `GEMINI_API_KEY` (and
    optionally `GEMINI_MODEL`), then redeploy. Verify with

@@ -11,6 +11,7 @@ import { staggerItem } from '@/lib/motion';
 import { retailerImageUrl } from '@/lib/retailerImage';
 import { cn, formatCurrency } from '@/lib/utils';
 import { RETAILERS } from '@/services/retailers/types';
+import { isPlaceholderPrice } from '@/services/retailers/aggregator';
 import type { ProductGroup } from '@/services/searchService';
 
 /**
@@ -26,6 +27,8 @@ export function SearchResultCard({ group }: { group: ProductGroup }) {
   const [imageFailed, setImageFailed] = useState(false);
   const imageUrl = retailerImageUrl(group.imageUrl);
   const best = group.best;
+  // A store-side placeholder price (1 EGP) is not a price.
+  const priceIsReal = !isPlaceholderPrice(best);
   const extraRetailers = group.retailerIds.length - 1;
 
   return (
@@ -102,10 +105,19 @@ export function SearchResultCard({ group }: { group: ProductGroup }) {
             <p className="text-[10px] uppercase tracking-[0.12em] text-muted-foreground">
               {t('search.bestPrice')}
             </p>
-            {/* `auto`, not `ltr`: Intl already adds RTL marks for ج.م. */}
-            <p className="font-mono text-lg font-semibold tabular-nums text-success" dir="auto">
-              {formatCurrency(best.priceEgp)}
-            </p>
+            {/*
+             * The stores print `1 EGP` when a real price is withheld. Quoting it
+             * would advertise an RTX 5090 for one pound, so the headline becomes
+             * an explicit "price unavailable" and the name is not coloured as a
+             * good deal.
+             */}
+            {priceIsReal ? (
+              <p className="font-mono text-lg font-semibold tabular-nums text-success" dir="auto">
+                {formatCurrency(best.priceEgp)}
+              </p>
+            ) : (
+              <p className="text-sm font-medium text-muted-foreground">{t('search.priceUnavailable')}</p>
+            )}
             <p className="truncate text-[10.5px] text-muted-foreground">
               {RETAILERS[best.retailerId]?.name ?? best.retailerId}
             </p>

@@ -12,10 +12,10 @@
 const STORAGE_KEY = 'nexus:ai:grounding';
 
 /** Google's documented free daily ceiling (conservative). */
-export const GROUNDING_DAILY_LIMIT = 500;
+const GROUNDING_DAILY_LIMIT = 500;
 
 /** Warn once the remaining budget drops below this. */
-export const GROUNDING_WARN_THRESHOLD = 50;
+const GROUNDING_WARN_THRESHOLD = 50;
 
 interface GroundingUsage {
   /** Local date key, e.g. `2026-11-01`. */
@@ -73,8 +73,4 @@ export function recordGroundedSearch(): GroundingStatus {
   const usage = read();
   write({ day: today(), count: usage.count + 1 });
   return getGroundingStatus();
-}
-
-export function resetGroundingCounter(): void {
-  write({ day: today(), count: 0 });
 }

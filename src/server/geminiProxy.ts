@@ -21,7 +21,7 @@
  */
 
 /** Where the real API lives. */
-export const GEMINI_ORIGIN = 'https://generativelanguage.googleapis.com';
+const GEMINI_ORIGIN = 'https://generativelanguage.googleapis.com';
 
 /** Only real model routes are proxied — `/api/ai/config` and typos are ours. */
 const ALLOWED_PATH =

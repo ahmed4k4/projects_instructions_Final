@@ -57,6 +57,45 @@ DEFAULT_OUT = os.path.join("public", "data", "sigma_products.json")
 # ASCII only: a Windows console defaults to cp1252 and chokes on typography.
 UA = "NexusPCBuilderBot/1.0 (+https://nexus-pc-builder.example/bot)"
 
+# Products that are NOT PC components. Sigma's rail mixes accessories into the
+# hardware categories (a 149 EGP mouse appeared under "Nvidia GeForce"), and a
+# mouse in a GPU comparison is a wrong price for a GPU.
+ACCESSORY_RE = re.compile(
+    r"\b(mouse|mice|keyboard|headset|headphone|earbuds|speaker|webcam|microphone|"
+    r"gamepad|controller|chair|desk|monitor|laptop|tablet|printer|router|cable|"
+    r"adapter|hub|dock|bag|stand|tripod)\b",
+    re.I,
+)
+
+# Name-based category, used to CORRECT the rail label (Sigma's rails overlap).
+NAME_CATEGORY = (
+    ("cpu", re.compile(r"\b(cpu|processor|ryzen|core i[3579]|core ultra|threadripper|xeon)\b", re.I)),
+    ("psu", re.compile(r"\b(psu|power supply|\d{3,4}\s?w\b|80\s?plus|modular)\b", re.I)),
+    ("gpu", re.compile(r"\b(gpu|graphics card|geforce|radeon|rtx|gtx|arc a\d|vga)\b", re.I)),
+    ("motherboard", re.compile(r"\b(motherboard|mainboard|b650|x670|z790|b760|a620|chipset)\b", re.I)),
+    ("storage", re.compile(r"\b(nvme|ssd|hdd|hard drive|solid state)\b", re.I)),
+    ("ram", re.compile(r"\b(ddr[345]|dimm|memory kit)\b", re.I)),
+    ("case", re.compile(r"\b(case|chassis|tower)\b", re.I)),
+    ("cooling", re.compile(r"\b(cooler|aio|liquid cooling|heatsink|fan)\b", re.I)),
+)
+
+
+def category_of_name(name):
+    """Best-guess category from the product NAME, or None when unclear."""
+    for category, pattern in NAME_CATEGORY:
+        if pattern.search(name):
+            return category
+    return None
+
+# A printed price on a product card.
+PRICE_RE = re.compile(r"(\d[\d,]{2,})\s*(?:EGP|\.E|L\.E)", re.I)
+
+# Model identifiers, used only as a fallback id when the URL carries none.
+SKU_RE = re.compile(r"\b(?:9S7|83[A-Z]{2}\d|GV-N|RTX|RX|B\d{3}|X\d{3}|Z\d{3})[A-Z0-9-]*\b", re.I)
+
+# Image URLs that are store chrome, not product photos.
+PLACEHOLDER_IMG = re.compile(r"(placeholder|no_image|noimage|spacer|blank|logo|curv|footer)", re.I)
+
 # Catalogue category -> Sigma rail labels. Measured on the live site: these are
 # the exact leaf entries in the "Categories" filter (2026-11-02).
 RAIL_LABELS = {
@@ -122,8 +161,8 @@ def real_image(src):
     """Return an image URL a browser can actually load.
 
     Two problems, both measured:
-      آ· Next.js wraps media in `/_next/image?url=<encoded>` -> unwrap it.
-      آ· `api.sigma-computer.com` answers **403** to a hotlinked <img>; a page
+      · Next.js wraps media in `/_next/image?url=<encoded>` -> unwrap it.
+      · `api.sigma-computer.com` answers **403** to a hotlinked <img>; a page
         request (which does carry a Referer) gets 200. A browser cannot set a
         Referer on an image, so the URL is emitted through the site's own image
         proxy, which serves the media for us.
@@ -166,43 +205,70 @@ def reset_filters(page):
         pass
 
 
-def scrape_label(page, category, label, max_pages, delay):
-    """Click one rail label, then page through its grid."""
+def expand_rail(page):
+    """Open the collapsed sub-menus in the category rail.
+
+    The leaf labels shipped at `opacity-50` and a click on them does nothing
+    until their section is expanded — measured: clicking "Nvidia GeForce" left
+    the grid byte-identical, which is why every category reported 0 products.
+    """
+    for section in ("Hardware Components", "PC Components", "Components"):
+        try:
+            header = page.get_by_text(section, exact=True).first
+            if header.count() == 0:
+                continue
+            header.click(timeout=3000)
+            page.wait_for_timeout(1500)
+            return True
+        except Exception:  # noqa: BLE001 - try the next candidate
+            continue
+    return False
+
+
+def scrape_listing(page, max_pages, delay):
+    """Page through /en/search once and classify every card by its NAME.
+
+    The category rail is NOT usable: its leaf items are inert `<p>` elements —
+    clicking "Nvidia GeForce" leaves the grid byte-identical (measured). The
+    listing itself shows every product, so one pass plus `category_of_name()`
+    covers all eight categories, and accessories are dropped rather than filed
+    under whichever rail happened to be open.
+    """
     products = []
     seen = set()
 
-    clicked = False
-    for candidate in (label, label.replace("Cooling", "cooling")):
-        try:
-            page.get_by_text(candidate, exact=True).first.click(timeout=5000)
-            clicked = True
-            break
-        except Exception:  # noqa: BLE001 - label not present in this rail
-            continue
-    if not clicked:
-        return products, f"label not found: {label}"
-
-    page.wait_for_timeout(6000)
-
     for page_no in range(1, max_pages + 1):
         if page_no > 1:
-            # Pagination is an aria-labelled control (aria-label="page 2"), not a
-            # numbered button - matching on text silently re-reads page 1.
+            before = {(c.get("href") or "") for c in page.evaluate(EXTRACT_JS)}
             try:
                 page.get_by_role("button", name=f"page {page_no}", exact=True).first.click(timeout=5000)
                 page.wait_for_timeout(5000)
             except Exception:  # noqa: BLE001 - no such page = end of listing
                 break
 
-        cards = page.evaluate(EXTRACT_JS)
-        # Bail out if the grid did not actually advance (the site ignores a page
-        # click on some rails), so we never store page 1 three times.
-        if page_no > 1 and not cards:
-            break
+            # The grid APPENDS rather than replacing, so the check is "did any NEW
+            # card arrive" — comparing whole sets treated append as 'no change'
+            # and stopped the crawl at page 1.
+            after = {(c.get("href") or "") for c in page.evaluate(EXTRACT_JS)}
+            if not (after - before):
+                break
+
+        added = 0
+        for card in page.evaluate(EXTRACT_JS):
             name = (card.get("name") or "").strip()
             price = parse_price(card.get("price"))
             if len(name) < 10 or price is None:
                 continue
+
+            # Accessories are not components: never publish a mouse as a GPU.
+            if ACCESSORY_RE.search(name):
+                continue
+
+            category = category_of_name(name)
+            # No component word in the name means it is not a PC part we model.
+            if category is None:
+                continue
+
             key = (name[:70], price)
             if key in seen:
                 continue
@@ -220,20 +286,23 @@ def scrape_label(page, category, label, max_pages, delay):
                     "stockStatus": "in_stock",
                     "productUrl": href or SEARCH,
                     "imageUrl": real_image(card.get("image")),
-                    "specs": {"template": "sigma-playwright", "rail": label},
+                    "specs": {"template": "sigma-playwright"},
                 }
             )
+            added += 1
 
+        print(f"  page {page_no:2}: {added:3} components")
+        if added == 0 and page_no > 1:
+            break
         time.sleep(delay)
 
-    reset_filters(page)
-    return products, None
+    return products
 
 
 def main():
     parser = argparse.ArgumentParser(description="Scrape Sigma Computer with Playwright")
     parser.add_argument("--out", default=DEFAULT_OUT, help="output JSON path")
-    parser.add_argument("--max-pages", type=int, default=2, help="page cap per rail label")
+    parser.add_argument("--max-pages", type=int, default=40, help="page cap for /en/search")
     parser.add_argument("--delay", type=float, default=2.5, help="seconds between pages")
     parser.add_argument("--only", default=None, help="comma separated categories (gpu,cpu,...)")
     parser.add_argument("--headful", action="store_true", help="show the browser")
@@ -249,7 +318,7 @@ def main():
         )
         return 2
 
-    wanted = set(args.only.split(",")) if args.only else set(RAIL_LABELS)
+    wanted = set(args.only.split(",")) if args.only else None
     rows = []
     notes = []
 
@@ -258,30 +327,22 @@ def main():
         context = browser.new_context(user_agent=UA, locale="en-US", viewport={"width": 1440, "height": 1000})
         page = context.new_page()
 
-        for category, labels in RAIL_LABELS.items():
-            if category not in wanted:
-                continue
-
-            try:
-                open_listing(page)
-            except Exception as error:  # noqa: BLE001
-                notes.append(f"{category}: listing did not open ({type(error).__name__})")
-                continue
-
-            count = 0
-            for label in labels:
-                try:
-                    products, note = scrape_label(page, category, label, args.max_pages, args.delay)
-                except Exception as error:  # noqa: BLE001 - one label must not kill the run
-                    products, note = [], type(error).__name__
-                count += len(products)
-                rows.extend(products)
-                if note:
-                    notes.append(f"{category}/{label}: {note}")
-
-            print(f"{category:12} {count:4} products")
+        try:
+            open_listing(page)
+            rows = scrape_listing(page, args.max_pages, args.delay)
+        except Exception as error:  # noqa: BLE001
+            notes.append(f"listing did not open: {type(error).__name__}")
 
         browser.close()
+
+    if wanted:
+        rows = [row for row in rows if row["category"] in wanted]
+
+    counts = {}
+    for row in rows:
+        counts[row["category"]] = counts.get(row["category"], 0) + 1
+    for category, count in sorted(counts.items()):
+        print(f"{category:12} {count:4} products")
 
     payload = {
         "capturedAt": datetime.now(timezone.utc).isoformat(),

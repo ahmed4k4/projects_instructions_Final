@@ -1,7 +1,9 @@
 {
   "app": {
     "name": "نيكسوس",
-    "tagline": "منصّة ذكية لبناء الحاسوب"
+    "tagline": "منصّة ذكية لبناء الحاسوب",
+    "subtitle": "منشئ الحواسيب",
+    "logoHome": "{{name}} — الصفحة الرئيسية"
   },
   "nav": {
     "workspace": "مساحة العمل",
@@ -37,7 +39,8 @@
     "copy": "نسخ",
     "live": "حيّ",
     "error": "خطأ غير معروف",
-    "assistantTyping": "المساعد يكتب الآن"
+    "assistantTyping": "المساعد يكتب الآن",
+    "logoHome": "{{name}} — الصفحة الرئيسية"
   },
   "theme": {
     "dark": "داكن",
@@ -170,7 +173,18 @@
     "updatedDays_other": "قبل {{count}} يوم",
     "noImage": "لا صورة",
     "lowestPrice": "أقل سعر مسجّل",
-    "sigmaPending": "قيد الانتظار"
+    "sigmaPending": "قيد الانتظار",
+    "loadMore": "عرض نتائج أكثر",
+    "loadingMore": "جارٍ التحميل…",
+    "endOfResults_zero": "هذه كل النتائج.",
+    "endOfResults_one": "هذه كل النتائج.",
+    "endOfResults_two": "هذه كل النتائج.",
+    "endOfResults_few": "هذه كل النتائج.",
+    "endOfResults_many": "هذه كل النتائج.",
+    "endOfResults_other": "هذه كل {{count}} نتيجة.",
+    "showingOf": "يُعرض {{shown}} من {{total}}",
+    "endOfResults": "هذه كل النتائج.",
+    "priceUnavailable": "السعر غير متاح"
   },
   "compare": {
     "title": "قارن الأسعار",

@@ -1,5 +1,4 @@
-import {
-  Boxes,
+﻿import {
   LayoutDashboard,
   LayoutTemplate,
   MessageSquareCode,
@@ -31,8 +30,6 @@ export const NAV_ITEMS: NavItem[] = [
   { labelKey: 'nav.community', to: '/community', icon: Users },
   { labelKey: 'nav.dashboard', to: '/dashboard', icon: LayoutDashboard },
 ];
-
-export const SECONDARY_NAV: NavItem[] = [{ labelKey: 'nav.overview', to: '/', icon: Boxes }];
 
 /* -------------------------------------------------------------------------- */
 /*  Prebuilt catalogue metadata                                               */

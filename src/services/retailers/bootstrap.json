@@ -1,0 +1,701 @@
+{
+ "capturedAt": "2026-11-03T00:18:41.200Z",
+ "source": "bootstrap subset of retailer_snapshot.json",
+ "retailers": [
+  "alfrensia",
+  "elbadr",
+  "elnekhely"
+ ],
+ "products": [
+  {
+   "retailerId": "alfrensia",
+   "externalId": "pny-geforce-rtx-5070-ti-argb-overclocked-triple-fan-16gb-gddr7-graphics-card",
+   "name": "PNY GeForce RTX 5070 Ti ARGB Overclocked Triple Fan 16GB GDDR7 Graphics Card",
+   "category": "gpu",
+   "priceEgp": 63887,
+   "originalPriceEgp": null,
+   "stockStatus": "out_of_stock",
+   "productUrl": "https://alfrensia.com/en/product/pny-geforce-rtx-5070-ti-argb-overclocked-triple-fan-16gb-gddr7-graphics-card/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/06/PNY-GeForce-RTX-5070-Ti-ARGB-Overclocked-Triple-Fan-16GB-GDDR7-Graphics-Card-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "xigmatek-crystal-storm-arctic-v2-e-atx-420mm-gpu-360mm-radiator-mid-tower-case-with-750w-80-plus-power-supply-combo",
+   "name": "Xigmatek Crystal Storm Arctic V2 E-ATX 420mm GPU 360mm Radiator Mid Tower Case With Valkyrie 750W 80 Plus Bronze ATX 3.1 Power Supply Combo",
+   "category": "gpu",
+   "priceEgp": 5516,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/xigmatek-crystal-storm-arctic-v2-e-atx-420mm-gpu-360mm-radiator-mid-tower-case-with-750w-80-plus-power-supply-combo/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/Xigmatek-Crystal-Storm-Arctic-V2-E-ATX-420mm-GPU-360mm-Radiator-Mid-Tower-Case-With-750W-80-Plus-Power-Supply-Combo-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "amd-ryzen-7-8700g-8-core-16-thread-5-1ghz-am5-65w-tray-processor",
+   "name": "AMD Ryzen 7 8700G 8 Core 16 Thread 5.1GHz AM5 65W Tray Processor",
+   "category": "cpu",
+   "priceEgp": 13258,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/amd-ryzen-7-8700g-8-core-16-thread-5-1ghz-am5-65w-tray-processor/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/AMD-Ryzen-7-8700G-8-Core-16-Thread-5.1GHz-AM5-65W-Tray-Processor-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "intel-core-ultra-5-250k-plus-18-core-5-3ghz-lga1851-125w-tray-processor",
+   "name": "Intel Core Ultra 5 250K Plus 18 Core 5.3GHz LGA1851 125W Tray Processor",
+   "category": "cpu",
+   "priceEgp": 12483,
+   "originalPriceEgp": null,
+   "stockStatus": "out_of_stock",
+   "productUrl": "https://alfrensia.com/en/product/intel-core-ultra-5-250k-plus-18-core-5-3ghz-lga1851-125w-tray-processor/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/Intel-Core-Ultra-5-250K-Plus-18-Core-5.3GHz-LGA1851-125W-Tray-Processor-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "asus-rog-strix-b550-f-gaming-socket-am4-ddr4-atx-motherboard",
+   "name": "ASUS ROG Strix B550-F Gaming Socket AM4 DDR4 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 8799,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/asus-rog-strix-b550-f-gaming-socket-am4-ddr4-atx-motherboard/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/ASUS-ROG-Strix-B550-F-Gaming-Socket-AM4-DDR4-ATX-Motherboard-1-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "asus-prime-b550-plus-socket-am4-ddr4-atx-motherboard",
+   "name": "ASUS Prime B550-Plus Socket AM4 DDR4 ATX Motherboard",
+   "category": "motherboard",
+   "priceEgp": 5749,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/asus-prime-b550-plus-socket-am4-ddr4-atx-motherboard/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/ASUS-Prime-B550-Plus-Socket-AM4-DDR4-ATX-Motherboard-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "corsair-vengeance-rgb-32gb-2x16gb-ddr5-6400mhz-cl36-black-desktop-memory",
+   "name": "Corsair Vengeance RGB 32GB 2x16GB DDR5 6400MHz CL36 Black Desktop Memory",
+   "category": "ram",
+   "priceEgp": 29708,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/corsair-vengeance-rgb-32gb-2x16gb-ddr5-6400mhz-cl36-black-desktop-memory/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/Corsair-Vengeance-RGB-32GB-2x16GB-DDR5-6400MHz-CL36-Black-Desktop-Memory-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "g-skill-trident-z5-neo-rgb-64gb-2x32gb-ddr5-6000mhz-cl36-desktop-memory",
+   "name": "G Skill Trident Z5 Neo RGB 64GB (2x32GB) DDR5 6000MHz CL36 Desktop Memory",
+   "category": "ram",
+   "priceEgp": 44000,
+   "originalPriceEgp": null,
+   "stockStatus": "out_of_stock",
+   "productUrl": "https://alfrensia.com/en/product/g-skill-trident-z5-neo-rgb-64gb-2x32gb-ddr5-6000mhz-cl36-desktop-memory/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/07/G-Skill-Trident-Z5-Neo-RGB-64GB-2x32GB-DDR5-6000MHz-CL36-Desktop-Memory-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "sabrent-rocket-4-plus-1tb-pcie-gen-4-nvme-ssd-heatsink",
+   "name": "Sabrent Rocket 4 Plus 1TB PCIe Gen 4 NVMe SSD with Heatsink",
+   "category": "storage",
+   "priceEgp": 7080,
+   "originalPriceEgp": null,
+   "stockStatus": "out_of_stock",
+   "productUrl": "https://alfrensia.com/en/product/sabrent-rocket-4-plus-1tb-pcie-gen-4-nvme-ssd-heatsink/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/03/sabrent-Rocket-4-Plus-SB-RKTG-GHSK-1TB-Gen-4-Nvme-With-Heatsink-Internal-Solid-State-Drive-SSD-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "sabrent-rocket-4-plus-2tb-gen-4-nvme-ssd-heatsink",
+   "name": "Sabrent Rocket 4 Plus 2TB Gen 4 NVMe SSD with Heatsink",
+   "category": "storage",
+   "priceEgp": 12280,
+   "originalPriceEgp": null,
+   "stockStatus": "out_of_stock",
+   "productUrl": "https://alfrensia.com/en/product/sabrent-rocket-4-plus-2tb-gen-4-nvme-ssd-heatsink/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2025/03/sabrent-Rocket-4-Plus-SB-RKTG-GHSK-2TB-Gen-4-Nvme-With-Heatsink-Internal-Solid-State-Drive-SSD-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "nzxt-c750-gold-core-atx-3-1-750w-80-plus-gold-fully-modular-black-power-supply",
+   "name": "NZXT C750 Gold Core ATX 3.1 750W 80 Plus Gold Fully Modular Black Power Supply",
+   "category": "psu",
+   "priceEgp": 5918,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/nzxt-c750-gold-core-atx-3-1-750w-80-plus-gold-fully-modular-black-power-supply/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/NZXT-C750-Gold-Core-ATX-3.1-750W-80-Plus-Gold-Fully-Modular-Black-Power-Supply-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "nzxt-c850-gold-core-atx-3-1-850w-80-plus-gold-fully-modular-black-power-supply",
+   "name": "NZXT C850 Gold Core ATX 3.1 850W 80 Plus Gold Fully Modular Black Power Supply",
+   "category": "psu",
+   "priceEgp": 6938,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/nzxt-c850-gold-core-atx-3-1-850w-80-plus-gold-fully-modular-black-power-supply/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/NZXT-C850-Gold-Core-ATX-3.1-850W-80-Plus-Gold-Fully-Modular-Black-Power-Supply-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "xigamtek-heaven-air-arctic-8-fan-argb-pwm-e-atx-support-btf-mb-type-c-single-piece-curved-tempered-glass-white-mid-tower-case",
+   "name": "Xigmatek Heaven Air Arctic White 8-Fan ARGB Mid-Tower Case",
+   "category": "case",
+   "priceEgp": 5599,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/xigamtek-heaven-air-arctic-8-fan-argb-pwm-e-atx-support-btf-mb-type-c-single-piece-curved-tempered-glass-white-mid-tower-case/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/xigmatek-heaven-air-arctic-white-official-300x300.png",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "xigamtek-heaven-air-8-fan-argb-pwm-e-atx-support-btf-mb-type-c-single-piece-curved-tempered-glass-mid-tower-case",
+   "name": "Xigmatek Heaven Air 8-Fan ARGB Mid-Tower Case",
+   "category": "case",
+   "priceEgp": 5499,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/xigamtek-heaven-air-8-fan-argb-pwm-e-atx-support-btf-mb-type-c-single-piece-curved-tempered-glass-mid-tower-case/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/10/xigmatek-heaven-air-black-official-300x300.png",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "alfrensia",
+   "externalId": "xigmatek-aero-dgt-360-arctic-reverse-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fan-blade",
+   "name": "Xigmatek Aero DGT 360 Arctic Reverse Digital LCD 3 Fan ARGB and PWM Infinity Ring Four Side 360mm Standard Fan Blade",
+   "category": "cooling",
+   "priceEgp": 1299,
+   "originalPriceEgp": null,
+   "stockStatus": "in_stock",
+   "productUrl": "https://alfrensia.com/en/product/xigmatek-aero-dgt-360-arctic-reverse-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fan-blade/",
+   "imageUrl": "https://alfrensia.com/wp-content/uploads/2026/06/Xigmatek-Aero-DGT-360-Arctic-Digital-LCD-3-Fan-ARGB-and-PWM-Infinity-Ring-Four-Side-360mm-Standard-Fan-Blade-300x300.webp",
+   "specs": {
+    "template": "woocommerce"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5778",
+   "name": "ADATA SC750 1TB - Up to 1000 MB/s- HighSpeed USB 3.2 Gen 2 USB-C External Portable SSD Black Titanium - Work with PS5 & XBOX",
+   "category": "storage",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sc750-1000g-ccbk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/wtkUdgrBaiXY80zZujsJWLDTXgr1wLPks408qtOdlU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7832",
+   "name": "Seagate One Touch Desktop 24TB External HDD – USB-C Bus-Powered, Plug-and-Play",
+   "category": "storage",
+   "priceEgp": 54000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-one-touch-desktop-stnb24000400-24tb-external-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/HSUZY4sIJti5kk4mRrM41L75Fo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4391",
+   "name": "AMD Ryzen 3 4100 4-Core, 8-Thread Unlocked Desktop Processor with Wraith Stealth Cooler Tray",
+   "category": "cpu",
+   "priceEgp": 1850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-3-4100-4-core-8-thread-unlocked-desktop-processor-with-wraith-stealth-cooler-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/Azg30kQNtAAYfsOcKtEwTfnpd5oB-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5317",
+   "name": "AMD Ryzen 5 5600 MPK 4.4GHz 32MB Cache 6 Core AM4 7nm Processor",
+   "category": "cpu",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6900,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-5600-mpk-4.4ghz-32mb-cache-6-core-am4-7nm-processor",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/xFCDlpTFHxTMqEyMlUFunZlDfZfpdMV8XBBlEZ3D6NK1fFZ9a5XHUT0lk1ZyVGIFvcWbz7DIT7lKWMIHALEo7MFaPhrAN-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6942",
+   "name": "Palit GeForce RTX 5050 Dual 8GB GDDR6 — NVIDIA Blackwell Architecture, 2560 CUDA Cores, 20 Gbps Memory Speed, PCIe 5.0, Composite Heat Pipe Cooling, Dual Axial Fans, 2-Slot Design",
+   "category": "gpu",
+   "priceEgp": 24500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/palit-geforce-rtx-5050-dual-8gb-gddr6",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Palit/G1KcL15JD8LQmOOPaAZI7WN3CV-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7311",
+   "name": "darkFlash V22 Black Mid-Tower ATX PC Case – Magnetic Swing-Open Tempered Glass Side Door, Vertical GPU Support, 360mm Radiator, ATX/M-ATX/ITX Compatible",
+   "category": "gpu",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-v22-black-mid-tower-case-magnetic-glass-door-vertical-gpu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/iH61rpWblik8a2ABglDU1lU1WX-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5156",
+   "name": "TEAMGROUP 8GB (1X8GB) DDR4 3200MHZ —T-Force Delta RGB Series Black Gaming Desktop Memory - TF3D48G3200HC16C01",
+   "category": "ram",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/teamgroup-8gb-(1x8gb)-ddr4-3200mhz-t-force-delta-rgb-series-black-gaming-desktop-memory-tf3d48g3200hc16c01",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/ILtlpavJfD06PyWBe2uQvuC2Db-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5059",
+   "name": "MSI GT 730 4GB DDR3 PCI Express 2.0 x16",
+   "category": "ram",
+   "priceEgp": 2999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-gt-730-4gb-ddr3-pci-express-2.0-x16",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/ju2fzPJF2RwMUc1hebyfI2fN5S-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7928",
+   "name": "HYTE Y50 RGB Strawberry Milk / Soft Pink Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect",
+   "category": "case",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-strawberry-milk-soft-pink-dual-chamber-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/j2Svfy0WYoRc1Lq1yBFuAhcddw-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7927",
+   "name": "HYTE Y50 RGB Taro Milk Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect",
+   "category": "case",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-taro-milk-pastel-purple-dual-chamber-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/3mFp9wTANnYmClOlyz2oKEfVMj-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7921",
+   "name": "Xander Gaming Jupiter II White E-ATX PC Case Bundle – 6x ARGB Fans & 850W PSU",
+   "category": "psu",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-gaming-jupiter-ii-white-e-atx-pc-case-bundle-850w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/WhkdU8WxomyrzzX3ttgwUk5Jzp-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7920",
+   "name": "Xander Gaming Jupiter II Black E-ATX PC Case Bundle – 6x ARGB Fans & 850W PSU",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-gaming-jupiter-ii-black-e-atx-pc-case-bundle-850w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/gWuvlGbYsmq5jAh3akhXSauJVC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6608",
+   "name": "Lian Li O11 Dynamic Mini Black — Modular I/O (3/5/7 Slots), E-ATX Ready, up to 9-Fan Cooling, Water-Cooling Optimized",
+   "category": "cooling",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-o11-dynamic-mini-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/TZXxuGOxEx7QxxJgvjM9Y3nKvU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5880",
+   "name": "GIGABYTE C102 GLASS 2x 120mm Fans — Optimized Airflow Design, Full-Size Tempered Glass, USB 3.0 x2 on I/O panel, 360mm Liquid Cooling Compatible, Dust Filte",
+   "category": "cooling",
+   "priceEgp": 2100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-c102-glass-2x-120mm-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/tFroDWRv7YgQ0O56xcLcaunplQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6016",
+   "name": "Cooler Master MasterBox 600 White — Back-connected motherboard support, FineMesh Performance Front Panel, Optimized airflow, Removable HDD cage - MB600-WGNN-S00",
+   "category": "motherboard",
+   "priceEgp": 5350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/mb600-wgnn-s00",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/aX0QWYjFZi0SAqJIhKqDJfzRDE-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7922",
+   "name": "ASUS X870 MAX GAMING WIFI7 AM5 ATX Motherboard – Wi-Fi 7, PCIe 5.0 & USB4",
+   "category": "motherboard",
+   "priceEgp": 16000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-x870-max-gaming-wifi7-am5-atx-motherboard",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/0Yna12qHVe9Wh13MI4ZaoiqeAb-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2183",
+   "name": "Cooler Master Sneaker X Gaming Case",
+   "category": "case",
+   "priceEgp": 49999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 57000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-sneaker-x-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/Sneaker%20X%20/cooler-master-sneaker-x-gaming-case-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2146",
+   "name": "Corsair 6500D Airflow Mid Tower Case Black",
+   "category": "case",
+   "priceEgp": 13000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-6500d-airflow-mid-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/6500D/corsair-6500d-airflow-mid-tower-case-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3275",
+   "name": "AeroCool P500C Mid-Tower Gaming Case + PSU Lux Pro 750W Bronze",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/aerocool-p500c-lux-pro-750w",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/AEROCOOL%20/P500C%20750W%20WHITE/aerocool-p500c-mid-tower-gaming-case-psu-lux-pro-750w-bronze-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3276",
+   "name": "AeroCool P500C Mid-Tower Gaming Case + PSU Lux Pro 750W Bronze - Black",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/aerocool-p500c-black-750w",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/AEROCOOL%20/P500C%20750W%20BLACK/aerocool-p500c-mid-tower-gaming-case-psu-lux-pro-750w-bronze-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3216",
+   "name": "Antec C7 ARGB White Mid-Tower E-ATX PC Case – 4×120mm ARGB PWM Fans Included, Vertical GPU Cooling, USB-C 10Gbps, Seamless Tempered Glass Front & Side Panels, 360mm Radiator Support",
+   "category": "gpu",
+   "priceEgp": 6000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c7-argb-white-mid-tower-e-atx-pc-case-%E2%80%93-4%C3%97120mm-argb-pwm-fans-included-vertical-gpu-cooling-usb-c-10gbps-seamless-tempered-glass-front-side-panels-360mm-radiator-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/C7-ARGB%20Black/antec-c7-argb-white-mid-tower-e-atx-pc-case-%E2%80%93-4%C3%97120mm-argb-pwm-fans-included-vertical-gpu-cooling-usb-c-10gbps-seamless-tempered-glass-front-side-panels-360mm-radiator-support-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2295",
+   "name": "Antec C8 White Case — RTX 40 Compatible, Dual-Chamber, tooless Design, Type-C, 360mm Radiator Support, Seamless Tempered Glass Front & Side Panels, High Airflow Full-Tower E-ATX PC Case - Fans not Included",
+   "category": "gpu",
+   "priceEgp": 7200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c8-white-case-%E2%80%94-rtx-40-compatible-dual-chamber-tooless-design-type-c-360mm-radiator-support-seamless-tempered-glass-front-side-panels-high-airflow-full-tower-e-atx-pc-case-fans-not-included",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c8%20white/antec-c8-white-case-%E2%80%94-rtx-40-compatible-dual-chamber-tooless-design-type-c-360mm-radiator-support-seamless-tempered-glass-front-side-panels-high-airflow-full-tower-e-atx-pc-case-fans-not-included-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3003",
+   "name": "ASUS A31 PLUS Mid Tower PC Case with BTF motherboard support, tempered glass panels, 4 ARGB fans, 360mm radiator, 380mm GPU, 165mm CPU cooler, and USB 3.2 Gen 2x2 Type-C (WHITE)",
+   "category": "cpu",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-a31-plus-mid-tower-pc-case-with-btf-motherboard-support-tempered-glass-panels-4-argb-fans-360mm-radiator-380mm-gpu-165mm-cpu-cooler-and-usb-3-2-gen-2x2-type-c-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/A31%20PLUS%20Mid%20Tower/asus-a31-plus-mid-tower-pc-case-with-btf-motherboard-support-tempered-glass-panels-4-argb-fans-360mm-radiator-380mm-gpu-165mm-cpu-cooler-and-usb-3-2-gen-2x2-type-c-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3297",
+   "name": "Xigmatek Zoser Arctic ARGB – High-Performance E-ATX Super-Mid Tower, 4x ARGB Fans Pre-installed, 185mm CPU Clearance",
+   "category": "cpu",
+   "priceEgp": 3300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 3500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-zoser-arctic-argb-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Zoser%20Arctic/xigmatek-zoser-arctic-argb-%E2%80%93-high-performance-e-atx-super-mid-tower-4x-argb-fans-pre-installed-185mm-cpu-clearance-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3321",
+   "name": "darkflash DLV22 Black ATX Case – Vertical Motherboard Mount – Dual USB 3.0",
+   "category": "motherboard",
+   "priceEgp": 2400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dlv22-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/DLV22%20/darkflash-dlv22-black-atx-case-%E2%80%93-vertical-motherboard-mount-%E2%80%93-dual-usb-3-0-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2274",
+   "name": "ASUS TUF GAMING X870-PLUS WIFI AM5 ATX Gaming Motherboard",
+   "category": "motherboard",
+   "priceEgp": 17499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-tuf-gaming-x870-plus-wifi-am5-atx-gaming-motherboard",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboard/X870-PLUS/asus-tuf-gaming-x870-plus-wifi-am5-atx-gaming-motherboard-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2531",
+   "name": "Antec Connect C120R Reverse ARGB 3 Fan Pack Black",
+   "category": "cooling",
+   "priceEgp": 1600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-connect-c120r-reverse-argb-3-fan-pack-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/C120R/antec-connect-c120r-reverse-argb-3-fan-pack-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2530",
+   "name": "Antec Connect C120R Reverse ARGB 3 Fan Pack White",
+   "category": "cooling",
+   "priceEgp": 1600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-connect-c120r-reverse-argb-3-fan-pack-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/C120R/antec-connect-c120r-reverse-argb-3-fan-pack-white-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2060",
+   "name": "Asus Prime H610M K DDR5",
+   "category": "ram",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/asus-prime-h610m-k-ddr5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/h610%20d5/asus-prime-h610m-k-ddr5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2504",
+   "name": "GIGABYTE Z890M Gaming X Ultra Core (Series 2) LGA 1851, mATX, DDR5, 3X M.2, PCIe 5.0, Front USB Type-C, 2.5GbE LAN, EZ-Latch",
+   "category": "ram",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/motherboards/gigabyte-z890m-gaming-x-ultra-core-series-2-lga-1851-matx-ddr5-3x-m-2-pcie-5-0-front-usb-type-c-2-5gbe-lan-ez-latch",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Gigabyte/Z890M%20Gaming%20X/gigabyte-z890m-gaming-x-ultra-core-series-2-lga-1851-matx-ddr5-3x-m-2-pcie-5-0-front-usb-type-c-2-5gbe-lan-ez-latch-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2135",
+   "name": "990 PRO PCIe® 4.0 NVMe® SSD 4TB",
+   "category": "storage",
+   "priceEgp": 44999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/ssd/990-pro-pcie-4-0-nvme-ssd-4tb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ssd/990-pro-pcie-4-0-nvme-ssd-4tb-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3507",
+   "name": "Addlink S70 Lite 256GB PCIe Gen3 x4 NVMe 1.4 M.2 2280 SSD – Up to 3,000MB/s Read, 1,000MB/s Write",
+   "category": "storage",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/ssd/addlink-s70-lite-256gb-m2-pcie-gen3x4-2280-nvme",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/SSD/addlink%20/S70%20Lite%20256Gb/addlink-s70-lite-256gb-pcie-gen3-x4-nvme-1-4-m-2-2280-ssd-%E2%80%93-up-to-3-000mb-s-read-1-000mb-s-write-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  }
+ ]
+}

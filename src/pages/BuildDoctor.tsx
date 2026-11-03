@@ -141,7 +141,7 @@ export default function BuildDoctor() {
     const next = components.map((c) => (c.category === component.category ? component : c));
     setComponents(next);
     setReport(null);
-    toast.success(`Swapped in ${component.name}`, { description: 'Re-running the diagnosisâ€¦' });
+    toast.success(t('doctor.swapped', { name: component.name }), { description: t('doctor.rerunning') });
   };
 
   const openInBuilder = () => {
@@ -206,7 +206,7 @@ export default function BuildDoctor() {
                 </Badge>
                 <CompatibilityBadge
                   status={health.compatibility.errors.length ? 'error' : 'ok'}
-                  label={`${health.compatibility.errors.length} errors آ· ${health.compatibility.warnings.filter((w) => !w.ruleKey.startsWith('missing_')).length} warnings`}
+                  label={`${health.compatibility.errors.length} errors · ${health.compatibility.warnings.filter((w) => !w.ruleKey.startsWith('missing_')).length} warnings`}
                 />
                 {!report && running && (
                   <span className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
@@ -216,8 +216,7 @@ export default function BuildDoctor() {
               </div>
 
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {report?.summary ??
-                  'Running the deterministic analyser â€” the AI review follows if it is available.'}
+                {report?.summary ?? t('doctor.analysing')}
               </p>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2">

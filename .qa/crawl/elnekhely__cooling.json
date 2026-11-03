@@ -1,0 +1,1928 @@
+{
+ "retailerId": "elnekhely",
+ "category": "cooling",
+ "complete": false,
+ "lastPage": 0,
+ "products": [
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3453",
+   "name": "Aerocool Core Plus ARGB Top-Down CPU Air Cooler – 110W TDP, 83mm Low Profile",
+   "category": "cpu",
+   "priceEgp": 799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/aerocool-core-plus-argb-top-down-cpu-air-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Aerocool%20Core%20plus%20/aerocool-core-plus-argb-top-down-cpu-air-cooler-%E2%80%93-110w-tdp-83mm-low-profile-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2531",
+   "name": "Antec Connect C120R Reverse ARGB 3 Fan Pack Black",
+   "category": "cooling",
+   "priceEgp": 1600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-connect-c120r-reverse-argb-3-fan-pack-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/C120R/antec-connect-c120r-reverse-argb-3-fan-pack-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2530",
+   "name": "Antec Connect C120R Reverse ARGB 3 Fan Pack White",
+   "category": "cooling",
+   "priceEgp": 1600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-connect-c120r-reverse-argb-3-fan-pack-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/C120R/antec-connect-c120r-reverse-argb-3-fan-pack-white-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3324",
+   "name": "Antec Skeleton 360mm ARGB Liquid Cooler Skeleton Frame Pump 3x 120mm PWM Fans – BLACK Edition",
+   "category": "cooling",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-skeleton-360mm-argb-liquid-cooler-skeleton-frame-pump-3x-120mm-pwm-fans-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/Skeleton%20360%20ARGB/antec-skeleton-360mm-argb-liquid-cooler-skeleton-frame-pump-3x-120mm-pwm-fans-%E2%80%93-black-edition-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2407",
+   "name": "AORUS WATERFORCE II 360 Liquid CPU Cooler, 360mm Radiator with 3x120mm Low Noise ARGB Fans, Compatible with Intel LGA1851, LGA1700, and AMD AM5 (GP-AORUS WATERFORCE II 360)",
+   "category": "cpu",
+   "priceEgp": 6149,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/aorus-waterforce-ii-360-liquid-cpu-cooler-360mm-radiator-with-3x120mm-low-noise-argb-fans-compatible-with-intel-lga1851-lga1700-and-amd-am5-gp-aorus-waterforce-ii-360",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/aorus%20ii%20360%20black/aorus-waterforce-ii-360-liquid-cpu-cooler-360mm-radiator-with-3x120mm-low-noise-argb-fans-compatible-with-intel-lga1851-lga1700-and-amd-am5-gp-aorus-waterforce-ii-360-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2508",
+   "name": "ARCTIC Freezer 36 ARGB CPU Air Cooler Black",
+   "category": "cpu",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-freezer-36-argb-cpu-air-cooler-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/%20Freezer%2036/arctic-freezer-36-argb-cpu-air-cooler-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3429",
+   "name": "Arctic Freezer 36 ARGB White Tower Air CPU Cooler – Dual P12 PWM Fans, Intel LGA 1851/1700 & AMD AM5",
+   "category": "cpu",
+   "priceEgp": 2600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-freezer-36-argb-white-tower-air-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%2036-W/arctic-freezer-36-argb-white-tower-air-cpu-cooler-%E2%80%93-dual-p12-pwm-fans-intel-lga-1851-1700-amd-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3093",
+   "name": "ARCTIC Freezer 36 CPU Air Cooler – Dual 120mm PWM Fans, High-Performance Tower Cooler, Compatible with Intel LGA1851/LGA1700 and AMD AM5/AM4 – Black",
+   "category": "cpu",
+   "priceEgp": 2300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-freezer-36-cpu-air-cooler-%E2%80%93-dual-120mm-pwm-fans-high-performance-tower-cooler-compatible-with-intel-lga1851-lga1700-and-amd-am5-am4-%E2%80%93-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Freezer%2036%20(Black)/arctic-freezer-36-cpu-air-cooler-%E2%80%93-dual-120mm-pwm-fans-high-performance-tower-cooler-compatible-with-intel-lga1851-lga1700-and-amd-am5-am4-%E2%80%93-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2510",
+   "name": "Arctic Liquid Freezer III 360 A-RGB (Black) AIO CPU Cooler - Intel 1851/1700 & AMD AM5/AM4 Compatible - 360mm Radiator - Triple P12 PWM A-RGB Fans - Copper Cold Plate - MX-6 Pre-Applied Thermal Paste - Adjustable A-RGB Lighting",
+   "category": "cpu",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-360-a-rgb-black-aio-cpu-cooler-intel-1851-1700-amd-am5-am4-compatible-360mm-radiator-triple-p12-pwm-a-rgb-fans-copper-cold-plate-mx-6-pre-applied-thermal-paste-adjustable-a-rgb-lighting",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%20360mm%20B/arctic-liquid-freezer-iii-360-a-rgb-black-aio-cpu-cooler-intel-1851-1700-amd-am5-am4-compatible-360mm-radiator-triple-p12-pwm-a-rgb-fans-copper-cold-plate-mx-6-pre-applied-thermal-paste-adjustable-a-rgb-lighting-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2509",
+   "name": "ARCTIC Liquid Freezer III 360 A-RGB - CPU AIO Water Cooler Water Cooling PC Intel AMD Efficient PWM-Controlled Pump Fan 200 2000 RPM LGA1851 and LGA1700 Contact Frame - White",
+   "category": "cpu",
+   "priceEgp": 6650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-360-a-rgb-cpu-aio-water-cooler-water-cooling-pc-intel-amd-efficient-pwm-controlled-pump-fan-200-2000-rpm-lga1851-and-lga1700-contact-frame-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%20360mm%20W/arctic-liquid-freezer-iii-360-a-rgb-cpu-aio-water-cooler-water-cooling-pc-intel-amd-efficient-pwm-controlled-pump-fan-200-2000-rpm-lga1851-and-lga1700-contact-frame-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3091",
+   "name": "ARCTIC Liquid Freezer III 420 A-RGB CPU AIO Water Cooler – High-Performance 420mm Liquid Cooling System, PWM-Controlled Pump, 200–1900 RPM Fans, Intel LGA1851/LGA1700 & AMD AM5/AM4 Compatible – Black",
+   "category": "cpu",
+   "priceEgp": 6900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-420-a-rgb-cpu-aio-water-cooler-%E2%80%93-high-performance-420mm-liquid-cooling-system-pwm-controlled-pump-200%E2%80%931900-rpm-fans-intel-lga1851-lga1700-amd-am5-am4-compatible-%E2%80%93-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Liquid%20Freezer%20III%20420%20A-RGB/arctic-liquid-freezer-iii-420-a-rgb-cpu-aio-water-cooler-%E2%80%93-high-performance-420mm-liquid-cooling-system-pwm-controlled-pump-200%E2%80%931900-rpm-fans-intel-lga1851-lga1700-amd-am5-am4-compatible-%E2%80%93-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3126",
+   "name": "ARCTIC Liquid Freezer III 420 AIO Liquid CPU Cooler – Pro Edition, 420mm Radiator, 3x 140mm PWM Fans, High-Performance Water Cooling, Compatible with Intel LGA1851/1700 & AMD AM5/AM4 – Black",
+   "category": "cpu",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-420-aio-liquid-cpu-cooler-%E2%80%93-pro-edition-420mm-radiator-3x-140mm-pwm-fans-high-performance-water-cooling-compatible-with-intel-lga1851-1700-amd-am5-am4-%E2%80%93-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Liquid%20Freezer%20III%20Pro/arctic-liquid-freezer-iii-420-aio-liquid-cpu-cooler-%E2%80%93-pro-edition-420mm-radiator-3x-140mm-pwm-fans-high-performance-water-cooling-compatible-with-intel-lga1851-1700-amd-am5-am4-%E2%80%93-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3430",
+   "name": "ARCTIC Liquid Freezer III Pro 360 A-RGB Liquid CPU Cooler – 360mm Radiator, VRM Fan, Intel LGA 1851/1700 & AMD AM5",
+   "category": "cpu",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-pro-360-a-rgb-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%20III%20Pro%20360/arctic-liquid-freezer-iii-pro-360-a-rgb-liquid-cpu-cooler-%E2%80%93-360mm-radiator-vrm-fan-intel-lga-1851-1700-amd-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3325",
+   "name": "Arctic Liquid Freezer III Pro 360 Black AIO Liquid CPU Cooler 3x P12 Pro PWM Fans",
+   "category": "cpu",
+   "priceEgp": 6700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-pro-360-black-aio-liquid-cpu-cooler-3x-p12-pro-pwm-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Freezer%20III%20Pro/arctic-liquid-freezer-iii-pro-360-black-aio-liquid-cpu-cooler-3x-p12-pro-pwm-fans-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3428",
+   "name": "Arctic Liquid Freezer III Pro 420 ARGB Liquid CPU Cooler – 420mm Radiator, VRM Fan, Intel LGA 1851/1700 & AMD AM5",
+   "category": "cpu",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-liquid-freezer-iii-pro-420-argb-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Arctic/Freezer%20III%20Pro%20420%20A-RGB/arctic-liquid-freezer-iii-pro-420-argb-liquid-cpu-cooler-%E2%80%93-420mm-radiator-vrm-fan-intel-lga-1851-1700-amd-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2352",
+   "name": "ASUS Prime LC 360 aRGB Liquid CPU Cooler Black",
+   "category": "cpu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-prime-lc-360-argb-liquid-cpu-cooler-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Asus%20Prime%20LC%20360/asus-prime-lc-360-argb-liquid-cpu-cooler-black-2-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3340",
+   "name": "ASUS Prime LC 360 ARGB White Edition 360mm All-in-One Liquid CPU Cooler – Infinity Mirror Lens, Aura Sync",
+   "category": "cpu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-prime-lc-360-argb-white-edition-360mm-all-in-one-liquid-cpu-cooler-%E2%80%93-infinity-mirror-lens-aura-sync",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ASUS/360mm%20prime%20white/asus-prime-lc-360-argb-white-edition-360mm-all-in-one-liquid-cpu-cooler-%E2%80%93-infinity-mirror-lens-aura-sync-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2651",
+   "name": "ASUS ProArt LC 360 all-in-one CPU liquid cooler with illuminated system status meter and three matte black Alphacool Apex Stealth Metal Power fans",
+   "category": "cpu",
+   "priceEgp": 10499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-proart-lc-360-all-in-one-cpu-liquid-cooler-with-illuminated-system-status-meter-and-three-matte-black-alphacool-apex-stealth-metal-power-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ASUS/ProArt%20LC%20360%20/asus-proart-lc-360-all-in-one-cpu-liquid-cooler-with-illuminated-system-status-meter-and-three-matte-black-alphacool-apex-stealth-metal-power-fans-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2861",
+   "name": "ASUS ProArt LC 420 AIO Liquid CPU Cooler – 420mm Radiator with 3x Noctua NF-A14 iPPC-2000 PWM Fans, Illuminated System Status Meter, High-Performance Quiet Cooling for Creators",
+   "category": "cpu",
+   "priceEgp": 12000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-proart-lc-420-aio-liquid-cpu-cooler-%E2%80%93-420mm-radiator-with-3x-noctua-nf-a14-ippc-2000-pwm-fans-illuminated-system-status-meter-high-performance-quiet-cooling-for-creators",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/ProArt%20LC%20420/asus-proart-lc-420-aio-liquid-cpu-cooler-%E2%80%93-420mm-radiator-with-3x-noctua-nf-a14-ippc-2000-pwm-fans-illuminated-system-status-meter-high-performance-quiet-cooling-for-creators-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3011",
+   "name": "Asus Rog Strix LC III 360 Argb White AIO Liquid CPU Cooler 3x 120mm ARGB Fans",
+   "category": "cpu",
+   "priceEgp": 9499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-rog-strix-lc-iii-360-argb-white-aio-liquid-cpu-cooler-3x-120mm-argb-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ASUS/360%20III/ROG%20Strix%20LC%20III%20360%20WW/asus-rog-strix-lc-iii-360-argb-white-aio-liquid-cpu-cooler-3x-120mm-argb-fans-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3471",
+   "name": "ASUS ROG Strix LC IV 360 ARGB LCD Black Edition CPU Liquid Cooler",
+   "category": "cpu",
+   "priceEgp": 14499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-rog-strix-lc-iv-360-argb-lcd-black-edition-liquid-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/ROG%20Strix%20SLC%20IV%20360%20LCD%20Black/asus-rog-strix-lc-iv-360-argb-lcd-black-edition-cpu-liquid-cooler-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3470",
+   "name": "ASUS ROG Strix LC IV 360 ARGB LCD White Edition CPU Liquid Cooler",
+   "category": "cpu",
+   "priceEgp": 14999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-rog-strix-lc-iv-360-argb-lcd-white-edition-liquid-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/ROG%20Strix%20SLC%20IV%20360%20LCD%20White/asus-rog-strix-lc-iv-360-argb-lcd-white-edition-cpu-liquid-cooler-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2120",
+   "name": "Asus TUF Gaming LC II 360 ARGB Liquid CPU Cooler – 360mm Radiator, Aura Sync, Intel LGA 1700 & AMD AM5",
+   "category": "cpu",
+   "priceEgp": 5600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6600,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-tuf-gaming-lc-ii-360-argb-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/ASUS%20TUF%20Gaming%20LC%20II%20360%20/asus-tuf-gaming-lc-ii-360-argb-liquid-cpu-cooler-%E2%80%93-360mm-radiator-aura-sync-intel-lga-1700-amd-am5-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3345",
+   "name": "ASUS TUF Gaming LC III 360 ARGB All-in-One Liquid CPU Cooler – 360mm Radiator, High-Performance Fans",
+   "category": "cpu",
+   "priceEgp": 6499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-tuf-gaming-lc-iii-360-argb-all-in-one-liquid-cpu-cooler-%E2%80%93-360mm-radiator-high-performance-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ASUS/TUF%20LC%20III/asus-tuf-gaming-lc-iii-360-argb-all-in-one-liquid-cpu-cooler-%E2%80%93-360mm-radiator-high-performance-fans-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3285",
+   "name": "ASUS TUF Gaming LC III 360 ARGB White Edition AIO Liquid CPU Cooler - Triple 120mm Fans, Intel LGA 1851/1700, AMD AM5/AM4",
+   "category": "cpu",
+   "priceEgp": 6499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-tuf-gaming-lc-iii-360-argb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/TUF%20GAMING%20LC%20III/asus-tuf-gaming-lc-iii-360-argb-white-edition-aio-liquid-cpu-cooler-triple-120mm-fans-intel-lga-1851-1700-amd-am5-am4-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2023",
+   "name": "ASUS TUF Gaming TF120 ARGB Chassis Fan 3Pin Customizable LEDs Blade, Advanced Fluid Dynamic Bearing, 120mm PWM Control, Anti-Vibration Pads, Double-Layer LED Array for Computer Case & Liquid Radiator",
+   "category": "case",
+   "priceEgp": 3000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-tuf-gaming-tf120-argb-chassis-fan-3pin-customizable-leds-blade-advanced-fluid-dynamic-bearing-120mm-pwm-control-anti-vibration-pads-double-layer-led-array-for-computer-case-liquid-radiator",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/fans/asus-tuf-gaming-tf120-argb-chassis-fan-3pin-customizable-leds-blade-advanced-fluid-dynamic-bearing-120mm-pwm-control-anti-vibration-pads-double-layer-led-array-for-computer-case-liquid-radiator-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2571",
+   "name": "Cooler Master HYPER 212 SPECTRUM V3",
+   "category": "cooling",
+   "priceEgp": 1200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-hyper-212-spectrum-v3",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/HYPER%20212%20V3/cooler-master-hyper-212-spectrum-v3-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3435",
+   "name": "Cooler Master Hyper 612 APEX CPU Air Cooler – Dual Mobius 120 PWM Fans, 6 Heat Pipes, 159mm, Intel LGA 1851/1700 & AMD AM5",
+   "category": "cpu",
+   "priceEgp": 3100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-hyper-612-apex-cpu-air-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cooler%20master/Hyper%20612%20APEX/cooler-master-hyper-612-apex-cpu-air-cooler-%E2%80%93-dual-mobius-120-pwm-fans-6-heat-pipes-159mm-intel-lga-1851-1700-amd-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2197",
+   "name": "Cooler Master MasterAir MA824 Stealth Dual Tower CPU - Air Cooler",
+   "category": "cpu",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-masterair-ma824-stealth-dual-tower-cpu-air-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/MA824/cooler-master-masterair-ma824-stealth-dual-tower-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3432",
+   "name": "Cooler Master MasterLiquid 360 ION ARGB Black Liquid CPU Cooler – Mobius 120P ARGB Fans, Intel LGA 1851/1700 & AMD AM5",
+   "category": "cpu",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-masterliquid-360-ion-argb-black-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cooler%20master/MasterLiquid%20360%20Ion/cooler-master-masterliquid-360-ion-argb-black-liquid-cpu-cooler-%E2%80%93-mobius-120p-argb-fans-intel-lga-1851-1700-amd-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3431",
+   "name": "Cooler Master MASTERLIQUID ML360 SUB-ZERO Liquid CPU Cooler – Thermoelectric TEC Cooling Engine, LGA1200, 360mm Radiator",
+   "category": "cpu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-masterliquid-ml360-sub-zero-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cooler%20master/ML360%20SUB-ZERO/cooler-master-masterliquid-ml360-sub-zero-liquid-cpu-cooler-%E2%80%93-thermoelectric-tec-cooling-engine-lga1200-360mm-radiator-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3059",
+   "name": "Cooler Master MasterLiquid ML360L V2 ARGB AIO Liquid CPU Cooler – Gen 3 Dual Chamber Pump, 360mm Radiator",
+   "category": "cpu",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-ml360l-v2-argb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/%20ML360L%20Coolermaster%20V2%20/cooler-master-masterliquid-ml360l-v2-argb-aio-liquid-cpu-cooler-%E2%80%93-gen-3-dual-chamber-pump-360mm-radiator-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3509",
+   "name": "Cooler Master V4 Alpha 3DHP Black Air CPU Cooler – Dual 120mm PWM Fans, 2x 3D Vapor Chamber Heatpipes",
+   "category": "cpu",
+   "priceEgp": 1849,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-v4-alpha-3dhp-120mm-black-air-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cooler%20master/V4%20Alpha%203DHP%20Black/cooler-master-v4-alpha-3dhp-black-air-cpu-cooler-%E2%80%93-dual-120mm-pwm-fans-2x-3d-vapor-chamber-heatpipes-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2573",
+   "name": "CoolerMaster MasterLiquid 360 Core II ARGB Wihte Edition",
+   "category": "cooling",
+   "priceEgp": 4099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/coolermaster-masterliquid-360-core-ii-argb-wihte-edition",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/%20MasterLiquid%20II%20360%20/coolermaster-masterliquid-360-core-ii-argb-wihte-edition-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2201",
+   "name": "CoolerMaster MasterLiquid PL360 FLUX ARGB - Black",
+   "category": "cooling",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/coolermaster-masterliquid-pl360-flux-argb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/PL360%20FLUX/coolermaster-masterliquid-pl360-flux-argb-black-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "375",
+   "name": "Cougar Helor 360 ARGB 360mm Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 5650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cougar-helor-360-argb-360mm-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cougar/cougar-helor-360-argb-360mm-liquid-cpu-cooler-350x350w.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2644",
+   "name": "darkFlash Twister DXV2.6 360 Liquid CPU Cooler, ARGB 120mm PWM Fans with 1800 RPM Speed, ARGB M/B Sync, Infinity Mirror With 360 Degree Rotation, Support Intel / AMD, White",
+   "category": "cpu",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5200,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/darkflash-twister-dxv2-6-360-liquid-cpu-cooler-argb-120mm-pwm-fans-with-1800-rpm-speed-argb-m-b-sync-infinity-mirror-with-360-degree-rotation-support-intel-amd-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/DarkFlash/%20DXV2.6%20360%20W/darkflash-twister-dxv2-6-360-liquid-cpu-cooler-argb-120mm-pwm-fans-with-1800-rpm-speed-argb-m-b-sync-infinity-mirror-with-360-degree-rotation-support-intel-amd-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2412",
+   "name": "Gigabyte AORUS WATERFORCE II 360 ICE Liquid Cooler",
+   "category": "cooling",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/gigabyte-aorus-waterforce-ii-360-ice-liquid-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/GIGABYTE/WATERFORCE%20II%20360%20%20ICE/gigabyte-aorus-waterforce-ii-360-ice-liquid-cooler-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3603",
+   "name": "ID-COOLING AS-120 ARGB-K TRIO Durable Hydraulic Bearing 120mm PWM Fans (3-Pack Black)",
+   "category": "cooling",
+   "priceEgp": 749,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-as-120-argb-k-trio",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/AS-120-ARGB-K%20TRIO/id-cooling-as-120-argb-k-trio-durable-hydraulic-bearing-120mm-pwm-fans-3-pack-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3604",
+   "name": "ID-COOLING AS-120 ARGB-W TRIO Durable Hydraulic Bearing 120mm PWM Fans (3-Pack White)",
+   "category": "cooling",
+   "priceEgp": 749,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-as-120-argb-w-trio",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/AS-120-ARGB-W%20TRIO/id-cooling-as-120-argb-w-trio-durable-hydraulic-bearing-120mm-pwm-fans-3-pack-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3568",
+   "name": "ID-COOLING Dashflow 360 XT Pro Gen 7 Pro Pump ARGB AIO Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 4700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-dashflow-360-xt-pro",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/DASHFLOW%20360%20XT%20PRO/id-cooling-dashflow-360-xt-pro-gen-7-pro-pump-argb-aio-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3601",
+   "name": "ID-COOLING DK-03 120mm Hydraulic Bearing CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 499,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-dk-03",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/DK-03/id-cooling-dk-03-120mm-hydraulic-bearing-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3569",
+   "name": "ID-COOLING DX360 GDL Gen 7 Pro Pump ARGB AIO Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 4499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-dx360-gdl",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/DX360%20GDL/id-cooling-dx360-gdl-gen-7-pro-pump-argb-aio-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3573",
+   "name": "ID-COOLING DX360 MAX Gen 7 Pump Black AIO Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 3599,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-dx360-max-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/DX360%20MAX%20Black/id-cooling-dx360-max-gen-7-pump-black-aio-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3572",
+   "name": "ID-COOLING DX360 MAX Gen 7 Pump White Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 3700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-dx360-max-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/DX360%20MAX%20WHITE/id-cooling-dx360-max-gen-7-pump-white-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3593",
+   "name": "ID-COOLING FROZN A410 GDL 4 Heatpipe 2x120mm FDB Fan CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 1600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a410-gdl",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A410%20GDL/id-cooling-frozn-a410-gdl-4-heatpipe-2x120mm-fdb-fan-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3597",
+   "name": "ID-COOLING FROZN A410 SE ARGB 4 Heatpipe Direct Touch 120mm Hydraulic Bearing Black CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 1199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a410-se-argb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/A410%20SE%20ARGB/id-cooling-frozn-a410-se-argb-4-heatpipe-direct-touch-120mm-hydraulic-bearing-black-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3596",
+   "name": "ID-COOLING FROZN A410 SE ARGB 4 Heatpipe Direct Touch 120mm Hydraulic Bearing White CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 1250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a410-se-argb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/A410%20SE%20ARGB%20WHITE/id-cooling-frozn-a410-se-argb-4-heatpipe-direct-touch-120mm-hydraulic-bearing-white-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3595",
+   "name": "ID-COOLING FROZN A410 XE DK 4 Heatpipe Direct Touch 2x120mm Hydraulic Bearing CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 1450,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a410-xe-dk",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/A410%20XE%20DK/id-cooling-frozn-a410-xe-dk-4-heatpipe-direct-touch-2x120mm-hydraulic-bearing-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3592",
+   "name": "ID-COOLING FROZN A510 Turbo 5 Heatpipe Direct Touch 120mm Dual Ball Bearing Black CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 1900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a510-turbo",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A510%20TURBO/id-cooling-frozn-a510-turbo-5-heatpipe-direct-touch-120mm-dual-ball-bearing-black-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3581",
+   "name": "ID-COOLING FROZN A620 GDL 6 Heatpipe Dual Tower 2x120mm FDB Fan CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a620-gdl-120mm-fdb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A620%20GDL/id-cooling-frozn-a620-gdl-6-heatpipe-dual-tower-2x120mm-fdb-fan-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3591",
+   "name": "ID-COOLING FROZN A620 PRO SE ARGB 6 Heatpipe Dual Tower 2x120mm Hydraulic Bearing CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 2200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a620-pro-se-argb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A620%20PRO%20SE%20/id-cooling-frozn-a620-pro-se-argb-6-heatpipe-dual-tower-2x120mm-hydraulic-bearing-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3590",
+   "name": "ID-COOLING FROZN A620 PRO XE ARGB 6 Heatpipe Dual Tower 2x120mm Hydraulic Bearing Black CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 2050,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a620-pro-xe-argb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A620%20PRO%20XE%20BLACK/id-cooling-frozn-a620-pro-xe-argb-6-heatpipe-dual-tower-2x120mm-hydraulic-bearing-black-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3589",
+   "name": "ID-COOLING FROZN A620 PRO XE ARGB Snow 6 Heatpipe Dual Tower 2x120mm Hydraulic Bearing White CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 2350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a620-pro-xe-argb-snow",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A620%20PRO%20XE%20W/id-cooling-frozn-a620-pro-xe-argb-snow-6-heatpipe-dual-tower-2x120mm-hydraulic-bearing-white-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3580",
+   "name": "ID-COOLING FROZN A620 SLK 6 Heatpipe Dual Tower 2x120mm Hydraulic Bearing Hybrid CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 2600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a620-slk-hydraulic-bearing",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A620%20SLK/id-cooling-frozn-a620-slk-6-heatpipe-dual-tower-2x120mm-hydraulic-bearing-hybrid-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3579",
+   "name": "ID-COOLING FROZN A720 7 Heatpipe Dual Tower 140mm FDB Fan Black CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 3300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-frozn-a720-140mm-fdb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FROZN%20A720%20BLACK/id-cooling-frozn-a720-7-heatpipe-dual-tower-140mm-fdb-fan-black-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3578",
+   "name": "ID-COOLING FX240 PRO Gen 7 Pump AIO Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 2300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-fx240-pro",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FX240%20PRO/id-cooling-fx240-pro-gen-7-pump-aio-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3575",
+   "name": "ID-COOLING FX360 INF Gen 7 Pump ARGB Black AIO Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 3100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-fx360-inf-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FX360%20INF/id-cooling-fx360-inf-gen-7-pump-argb-black-aio-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3576",
+   "name": "ID-COOLING FX360 INF Gen 7 Pump ARGB White AIO Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 3200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-fx360-inf-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FX360%20INF%20white/id-cooling-fx360-inf-gen-7-pump-argb-white-aio-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3571",
+   "name": "ID-COOLING FX360 LCD Gen 7 Pro Pump ARGB Black Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 3650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-fx360-lcd-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FX360%20LCD%20Black/id-cooling-fx360-lcd-gen-7-pro-pump-argb-black-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3570",
+   "name": "ID-COOLING FX360 LCD Gen 7 Pro Pump ARGB White Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 3750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-fx360-lcd-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FX360%20LCD%20WHITE/id-cooling-fx360-lcd-gen-7-pro-pump-argb-white-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3577",
+   "name": "ID-COOLING FX360 PRO Gen 7 Pump AIO Liquid CPU Cooler",
+   "category": "cpu",
+   "priceEgp": 2650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-fx360-pro",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/FX360%20PRO/id-cooling-fx360-pro-gen-7-pump-aio-liquid-cpu-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3602",
+   "name": "ID-COOLING MF-1230 ARGB-K TRIO Dual Ball Bearing Magnetic Connection 30mm Thickened Frame PWM Fans (3-Pack Black)",
+   "category": "cooling",
+   "priceEgp": 2399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-mf-1230-argb-k-trio",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/MF-1230-ARGB-K%20TRIO/id-cooling-mf-1230-argb-k-trio-dual-ball-bearing-magnetic-connection-30mm-thickened-frame-pwm-fans-3-pack-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3599",
+   "name": "ID-COOLING SE-214-XT V2 4 Heatpipe Direct Touch 120mm Hydraulic Bearing CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 925,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-se-214-xt-v2",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/SE-214-XT%20V2/id-cooling-se-214-xt-v2-4-heatpipe-direct-touch-120mm-hydraulic-bearing-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3598",
+   "name": "ID-COOLING SE-214-XT V2 ARGB 4 Heatpipe Direct Touch 120mm Hydraulic Bearing CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-se-214-xt-v2-argb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/SE-214-XT%20V2%20ARGB/id-cooling-se-214-xt-v2-argb-4-heatpipe-direct-touch-120mm-hydraulic-bearing-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3600",
+   "name": "ID-COOLING SE-903-SD V3 3 Heatpipe Direct Touch 92mm Hydraulic Bearing Black CPU Air Cooler",
+   "category": "cpu",
+   "priceEgp": 525,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/id-cooling-se-903-sd-v3",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ID-COOLING/SE-903-SD%20V3/id-cooling-se-903-sd-v3-3-heatpipe-direct-touch-92mm-hydraulic-bearing-black-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3287",
+   "name": "Lian Li Galahad II Lite 360 RGB Black AIO Liquid CPU Cooler – 360mm Radiator, LGA 1851 & AM5",
+   "category": "cpu",
+   "priceEgp": 4599,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-lite-360-rgb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/%20Galahad%20II%20Lite/lian-li-galahad-ii-lite-360-rgb-black-aio-liquid-cpu-cooler-%E2%80%93-360mm-radiator-lga-1851-am5-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2815",
+   "name": "Lian Li Galahad II Trinity 360 Black AIO Liquid CPU Cooler – 3200 RPM Pump, 3 Interchangeable Pump Caps",
+   "category": "cpu",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7300,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-360-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/GA2T36B/lian-li-galahad-ii-trinity-360-black-aio-liquid-cpu-cooler-%E2%80%93-3200-rpm-pump-3-interchangeable-pump-caps-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2812",
+   "name": "Lian Li Galahad II Trinity Performance 360mm AIO Liquid CPU Cooler – High- Speed 4200RPM Pump Reverse Blade LCP 120mm Fans Daisy - Chainable Radiator ARGB ( White )",
+   "category": "cpu",
+   "priceEgp": 5100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-performance-360mm-aio-liquid-cpu-cooler-%E2%80%93-high-speed-4200rpm-pump-reverse-blade-lcp-120mm-fans-daisy-chainable-radiator-argb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Lian%20Li%20Galaha%20d%20II%20Trinity%20W/lian-li-galahad-ii-trinity-performance-360mm-aio-liquid-cpu-cooler-%E2%80%93-high-speed-4200rpm-pump-reverse-blade-lcp-120mm-fans-daisy-chainable-radiator-argb-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2991",
+   "name": "Lian Li Galahad II Trinity Performance 360mm Black AIO Liquid CPU Cooler – 4200RPM High-Speed Pump, Triple Swappable Caps, 3x 120mm 3000RPM LCP Fans, Strong Airflow, ARGB Lighting, Intel & AMD Socket Support",
+   "category": "cpu",
+   "priceEgp": 5099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-performance-360mm-black-aio-liquid-cpu-cooler-%E2%80%93-4200rpm-high-speed-pump-triple-swappable-caps-3x-120mm-3000rpm-lcp-fans-strong-airflow-argb-lighting-intel-amd-socket-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/GA2P36B/lian-li-galahad-ii-trinity-performance-360mm-black-aio-liquid-cpu-cooler-%E2%80%93-4200rpm-high-speed-pump-triple-swappable-caps-3x-120mm-3000rpm-lcp-fans-strong-airflow-argb-lighting-intel-amd-socket-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3288",
+   "name": "Lian Li Galahad II Trinity SL-INF 360mm Black AIO Liquid CPU Cooler – UNI FAN SL-Infinity Edition, 3 Interchangeable Pump Caps",
+   "category": "cpu",
+   "priceEgp": 8600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-sl-inf-360-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/Galahad%20II%20Trinity%20/lian-li-galahad-ii-trinity-sl-inf-360mm-black-aio-liquid-cpu-cooler-%E2%80%93-uni-fan-sl-infinity-edition-3-interchangeable-pump-caps-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3289",
+   "name": "Lian Li Galahad II Trinity SL-INF 360mm White AIO Liquid CPU Cooler – UNI FAN SL-Infinity Edition, 3200 RPM Pump",
+   "category": "cpu",
+   "priceEgp": 8599,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-sl-inf-360-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/Galahad%20II%20Trinity%20SL-INF%20w/lian-li-galahad-ii-trinity-sl-inf-360mm-white-aio-liquid-cpu-cooler-%E2%80%93-uni-fan-sl-infinity-edition-3200-rpm-pump-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3448",
+   "name": "Lian Li HydroShift II LCD-C 360CL 360mm AIO Liquid CPU Cooler with UNI FAN CL Wireless – Black / White",
+   "category": "cpu",
+   "priceEgp": 7700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-hydroshift-ii-lcd-c-360cl-360mm-aio-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/HydroShift%20II%20LCD-C%20CL/lian-li-hydroshift-ii-lcd-c-360cl-360mm-aio-liquid-cpu-cooler-with-uni-fan-cl-wireless-%E2%80%93-black-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3447",
+   "name": "Lian Li HydroShift II LCD-C 360TL 360mm AIO Liquid CPU Cooler – Black / White",
+   "category": "cpu",
+   "priceEgp": 10200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-hydroshift-ii-lcd-c-360tl-360mm-aio-liquid-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/HydroShift%20II%20LCD-C%20360TL/lian-li-hydroshift-ii-lcd-c-360tl-360mm-aio-liquid-cpu-cooler-%E2%80%93-black-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2820",
+   "name": "Lian Li HydroShift LCD 360MM (White ) AIO Cooler – High-Performance Liquid Cooling, No Fans Included",
+   "category": "cooling",
+   "priceEgp": 7400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-hydroshift-lcd-360mm-white-aio-cooler-%E2%80%93-high-performance-liquid-cooling-no-fans-included",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/Hydro%20Shift%20LCD/lian-li-hydroshift-lcd-360mm-white-aio-cooler-%E2%80%93-high-performance-liquid-cooling-no-fans-included-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3653",
+   "name": "Lian Li UNI Fan SL Wireless 120mm RGB Single Fan - Black",
+   "category": "cooling",
+   "priceEgp": 1450,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-uni-fan-sl-wireless-120mm-black-single",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/12SLIW1B/lian-li-uni-fan-sl-wireless-120mm-rgb-single-fan-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2249",
+   "name": "MSI MAG CORELIQUID M360 RGB LIQUID COOLING",
+   "category": "cooling",
+   "priceEgp": 4850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/msi-mag-coreliquid-m360-rgb-liquid-cooling",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/MSI/M360/msi-mag-coreliquid-m360-rgb-liquid-cooling-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "504",
+   "name": "ROG Strix LC III 360 ARGB All-in-one CPU Liquid Cooler Asetek Gen7 v2 Pump 360° rotatable Water Block",
+   "category": "cpu",
+   "priceEgp": 10000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9499,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/rog-strix-lc-iii-360-argb-all-in-one-cpu-liquid-cooler-asetek-gen7-v2-pump-360%C2%B0-rotatable-water-block",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ASUS/ROG%20Strix%20LC%20III%20360%20ARGB/rog-strix-lc-iii-360-argb-all-in-one-cpu-liquid-cooler-asetek-gen7-v2-pump-360%C2%B0-rotatable-water-block-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3159",
+   "name": "SilverStone Hydrogon D120 ARGB Dual-Tower CPU Cooler – HYD120-ARGB with LGA1700 & LGA1851 Support, Dual 120mm ARGB Fans, 6 Heat Pipes, High-Performance Air Cooling",
+   "category": "cpu",
+   "priceEgp": 2900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/silverstone-hydrogon-d120-argb-dual-tower-cpu-cooler-%E2%80%93-hyd120-argb-with-lga1700-lga1851-support-dual-120mm-argb-fans-6-heat-pipes-high-performance-air-cooling",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/D120%20Silverstone/silverstone-hydrogon-d120-argb-dual-tower-cpu-cooler-%E2%80%93-hyd120-argb-with-lga1700-lga1851-support-dual-120mm-argb-fans-6-heat-pipes-high-performance-air-cooling-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3115",
+   "name": "Thermalright Frozen Edge 240 White Liquid CPU Cooler – 240mm AIO Water Cooling System with Dual 120mm PWM Fans, Intel LGA1851/1700/1200/115X/2011/2066 & AMD AM4/AM5 Compatible",
+   "category": "cpu",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-frozen-edge-240-white-liquid-cpu-cooler-%E2%80%93-240mm-aio-water-cooling-system-with-dual-120mm-pwm-fans-intel-lga1851-1700-1200-115x-2011-2066-amd-am4-am5-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/Frozen%20Edge%20240%20WHITE/thermalright-frozen-edge-240-white-liquid-cpu-cooler-%E2%80%93-240mm-aio-water-cooling-system-with-dual-120mm-pwm-fans-intel-lga1851-1700-1200-115x-2011-2066-amd-am4-am5-compatible-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3111",
+   "name": "Thermalright Frozen Warframe 360 Ultra ARGB Black Liquid CPU Cooler – High-Performance 360mm AIO with 3× PWM Fans, Dynamic ARGB Lighting, Intel LGA1700 & AMD AM5 Compatible",
+   "category": "cpu",
+   "priceEgp": 9100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-frozen-warframe-360-ultra-argb-black-liquid-cpu-cooler-%E2%80%93-high-performance-360mm-aio-with-3%C3%97-pwm-fans-dynamic-argb-lighting-intel-lga1700-amd-am5-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/FW360%20Ultra%20/thermalright-frozen-warframe-360-ultra-argb-black-liquid-cpu-cooler-%E2%80%93-high-performance-360mm-aio-with-3%C3%97-pwm-fans-dynamic-argb-lighting-intel-lga1700-amd-am5-compatible-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3118",
+   "name": "Thermalright Frozen Warframe 360 Ultra ARGB White Liquid CPU Cooler – High-Performance 360mm AIO with 3× PWM Fans, Dynamic ARGB Lighting, Intel LGA1700 & AMD AM5 Compatible",
+   "category": "cpu",
+   "priceEgp": 8666,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-frozen-warframe-360-ultra-argb-white-liquid-cpu-cooler-%E2%80%93-high-performance-360mm-aio-with-3%C3%97-pwm-fans-dynamic-argb-lighting-intel-lga1700-amd-am5-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/TL-P12W-S/thermalright-frozen-warframe-360-ultra-argb-white-liquid-cpu-cooler-%E2%80%93-high-performance-360mm-aio-with-3%C3%97-pwm-fans-dynamic-argb-lighting-intel-lga1700-amd-am5-compatible-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3119",
+   "name": "Thermalright Frozen Warframe PRO 360 Black ARGB Liquid CPU Cooler – Premium 360mm AIO Water Cooling System with 3× PWM Fans, Dynamic ARGB Lighting, High-Performance Cooling for Intel LGA1700 & AMD AM5",
+   "category": "cpu",
+   "priceEgp": 6200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-frozen-warframe-pro-360-black-argb-liquid-cpu-cooler-%E2%80%93-premium-360mm-aio-water-cooling-system-with-3%C3%97-pwm-fans-dynamic-argb-lighting-high-performance-cooling-for-intel-lga1700-amd-am5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/TL-P12-S/thermalright-frozen-warframe-pro-360-black-argb-liquid-cpu-cooler-%E2%80%93-premium-360mm-aio-water-cooling-system-with-3%C3%97-pwm-fans-dynamic-argb-lighting-high-performance-cooling-for-intel-lga1700-amd-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2983",
+   "name": "TUF Gaming TR120 ARGB Chassis Fan – High Static Pressure & Airflow Performance, 120mm PWM Cooling Fan with Addressable RGB Lighting, Durable Design for Optimal PC Cooling & Customizable Illumination",
+   "category": "case",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/tuf-gaming-tr120-argb-chassis-fan-%E2%80%93-high-static-pressure-airflow-performance-120mm-pwm-cooling-fan-with-addressable-rgb-lighting-durable-design-for-optimal-pc-cooling-customizable-illumination",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/TR120%20TUF/tuf-gaming-tr120-argb-chassis-fan-%E2%80%93-high-static-pressure-airflow-performance-120mm-pwm-cooling-fan-with-addressable-rgb-lighting-durable-design-for-optimal-pc-cooling-customizable-illumination-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2984",
+   "name": "TUF Gaming TR120 ARGB White Chassis Fan – 120mm PWM High Static Pressure & Airflow Cooling Fan, Addressable RGB Lighting, Durable Design, Optimized for PC Cases, Radiators & Heatsinks",
+   "category": "case",
+   "priceEgp": 2750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/tuf-gaming-tr120-argb-white-chassis-fan-%E2%80%93-120mm-pwm-high-static-pressure-airflow-cooling-fan-addressable-rgb-lighting-durable-design-optimized-for-pc-cases-radiators-heatsinks",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/TUF%20TR120%20W/tuf-gaming-tr120-argb-white-chassis-fan-%E2%80%93-120mm-pwm-high-static-pressure-airflow-cooling-fan-addressable-rgb-lighting-durable-design-optimized-for-pc-cases-radiators-heatsinks-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1946",
+   "name": "XIGMATEK Frozr-O II Arctic 360",
+   "category": "cooling",
+   "priceEgp": 7200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/xigmatek-frozr-o-ii-arctic-360",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/xigmatek/FROZR/xigmatek-frozr-o-ii-arctic-360-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1858",
+   "name": "Antec CPU Cooler A400i RGB 4-Pin Connector PWM Silent Fan",
+   "category": "cpu",
+   "priceEgp": 1200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-cpu-cooler-a400i-rgb-4-pin-connector-pwm-silent-fan",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/A400i%20Neon/antec-cpu-cooler-a400i-rgb-4-pin-connector-pwm-silent-fan-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2489",
+   "name": "Antec STORM T3 140-3PKS 140 x 140 x 30 mm Case Fans",
+   "category": "case",
+   "priceEgp": 1799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/antec-storm-t3-140-3pks-140-x-140-x-30-mm-case-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/STORM%20T3/antec-storm-t3-140-3pks-140-x-140-x-30-mm-case-fans-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3092",
+   "name": "ARCTIC Freezer 4U-M Server CPU Cooler – Dual 120mm PWM Fans, High-Performance Air Cooling for Intel & AMD Server Processors",
+   "category": "cpu",
+   "priceEgp": 2550,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/arctic-freezer-4u-m-server-cpu-cooler-%E2%80%93-dual-120mm-pwm-fans-high-performance-air-cooling-for-intel-amd-server-processors",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Freezer%204U-M/arctic-freezer-4u-m-server-cpu-cooler-%E2%80%93-dual-120mm-pwm-fans-high-performance-air-cooling-for-intel-amd-server-processors-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2436",
+   "name": "ASUS ROG STRIX LC III 360 ARGB LCD Black Edition All-in-one CPU Liquid Cooler | 90RC00W1-M0UY0",
+   "category": "cpu",
+   "priceEgp": 11000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 12999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asus-rog-strix-lc-iii-360-argb-lcd-black-edition-all-in-one-cpu-liquid-cooler-90rc00w1-m0uy0",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/LC%20III%20360%20LCD/asus-rog-strix-lc-iii-360-argb-lcd-black-edition-all-in-one-cpu-liquid-cooler-90rc00w1-m0uy0-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2659",
+   "name": "ASUSPrime LC 360 ARGB LCD All-in-one AIO CPU Liquid Cooler AMD: AM5 & AM4 Intel: LGA 1851, 1700, 1200, 115x Specially Designed CPU Contact Area, finned Channels, Infinity Mirror, pre-Installed ARGB Fans",
+   "category": "cpu",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/asusprime-lc-360-argb-lcd-all-in-one-aio-cpu-liquid-cooler-amd-am5-am4-intel-lga-1851-1700-1200-115x-specially-designed-cpu-contact-area-finned-channels-infinity-mirror-pre-installed-argb-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/ASUS/LC%20360%20ARGB%20LCD/asusprime-lc-360-argb-lcd-all-in-one-aio-cpu-liquid-cooler-amd-am5-am4-intel-lga-1851-1700-1200-115x-specially-designed-cpu-contact-area-finned-channels-infinity-mirror-pre-installed-argb-fans-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2575",
+   "name": "Cooler Master MasterLiquid 360 Atmos ARGB Liquid Cpu Cooler",
+   "category": "cpu",
+   "priceEgp": 8700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-masterliquid-360-atmos-argb-liquid-cpu-cooler-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/MasterLiquid%20360%20Atmos/cooler-master-masterliquid-360-atmos-argb-liquid-cpu-cooler-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2485",
+   "name": "Cooler Master MasterLiquid 360 Atmos ARGB Liquid Cpu Cooler White",
+   "category": "cpu",
+   "priceEgp": 8800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-masterliquid-360-atmos-argb-liquid-cpu-cooler-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Antec/360%20Atmos/cooler-master-masterliquid-360-atmos-argb-liquid-cpu-cooler-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2653",
+   "name": "Cooler Master MasterLiquid 360 ION Black Edition 360mm liquid cooler Intel AMD compatible aluminum radiator 3x 120mm ARGB fans 2400 RPM 75.2 CFM 3000 RPM pump",
+   "category": "cooling",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-masterliquid-360-ion-black-edition-360mm-liquid-cooler-intel-amd-compatible-aluminum-radiator-3x-120mm-argb-fans-2400-rpm-75-2-cfm-3000-rpm-pump",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cooler%20master/MasterLiquid%20360%20ION/cooler-master-masterliquid-360-ion-black-edition-360mm-liquid-cooler-intel-amd-compatible-aluminum-radiator-3x-120mm-argb-fans-2400-rpm-75-2-cfm-3000-rpm-pump-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2192",
+   "name": "Cooler Master STANDARD COOLER I70C FOR LGA 1700",
+   "category": "cooling",
+   "priceEgp": 800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cooler-master-standard-cooler-i70c-for-lga-1700-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/I70C/cooler-master-standard-cooler-i70c-for-lga-1700-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2572",
+   "name": "CoolerMaster MasterLiquid 360 Core II ARGB Black",
+   "category": "cooling",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/coolermaster-masterliquid-360-core-ii-argb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/MasterLiquid%20II%20360/coolermaster-masterliquid-360-core-ii-argb-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2203",
+   "name": "CoolerMaster MasterLiquid 360L Core ARGB - White",
+   "category": "cooling",
+   "priceEgp": 4250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4600,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/coolermaster-masterliquid-360l-core-argb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/MasterLiquid%20360L/coolermaster-masterliquid-360l-core-argb-white-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2202",
+   "name": "CoolerMaster MasterLiquid PL360 FLUX ARGB - White",
+   "category": "cooling",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/coolermaster-masterliquid-pl360-flux-argb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/PL360%20FLUX%20W/coolermaster-masterliquid-pl360-flux-argb-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1846",
+   "name": "COUGAR FORZA 50 Tower Air Cooler",
+   "category": "case",
+   "priceEgp": 1500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cougar-forza-50-tower-air-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/AAAQNAP%20TS-932PX-4G%20TOWER/cougar%20air/cougar-forza-50-tower-air-cooler-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2538",
+   "name": "Cougar FORZA 135 Superior Dual Tower Air Cooler with 7 Heat Pipes paired with 2 High-performance Fans",
+   "category": "case",
+   "priceEgp": 3650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/cougar-forza-135-superior-dual-tower-air-cooler-with-7-heat-pipes-paired-with-2-high-performance-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cougar/FORZA%20135/cougar-forza-135-superior-dual-tower-air-cooler-with-7-heat-pipes-paired-with-2-high-performance-fans-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2816",
+   "name": "Lian Li GA2P36B 360MM ( White ) AIO Liquid CPU Cooler – 4200 RPM Pump, Double Wave Radiator, 3x 120MM High-Speed Fans, Fluid Dynamic Bearing, AM5 & LGA1700 Compatible",
+   "category": "cpu",
+   "priceEgp": 7300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-ga2p36b-360mm-white-aio-liquid-cpu-cooler-%E2%80%93-4200-rpm-pump-double-wave-radiator-3x-120mm-high-speed-fans-fluid-dynamic-bearing-am5-lga1700-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/GA2T36W/lian-li-ga2p36b-360mm-white-aio-liquid-cpu-cooler-%E2%80%93-4200-rpm-pump-double-wave-radiator-3x-120mm-high-speed-fans-fluid-dynamic-bearing-am5-lga1700-compatible-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3286",
+   "name": "Lian Li Galahad II Lite 360 Performance Black AIO Liquid CPU Cooler – 360mm Radiator, LGA 1851 & AM5 Support",
+   "category": "cpu",
+   "priceEgp": 4850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-lite-360-performance-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/Galahad%20II%20Lite/lian-li-galahad-ii-lite-360-performance-black-aio-liquid-cpu-cooler-%E2%80%93-360mm-radiator-lga-1851-am5-support-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2813",
+   "name": "Lian Li Galahad II Trinity 240mm ( Black) AIO Liquid CPU Cooler – 3200 RPM Pump, Single Wave Radiator, 120mm Fans, AM5 & LGA1700 Compatible",
+   "category": "cpu",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-240mm-black-aio-liquid-cpu-cooler-%E2%80%93-3200-rpm-pump-single-wave-radiator-120mm-fans-am5-lga1700-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/Galahad%20II%20Trinity%20240m/lian-li-galahad-ii-trinity-240mm-black-aio-liquid-cpu-cooler-%E2%80%93-3200-rpm-pump-single-wave-radiator-120mm-fans-am5-lga1700-compatible-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2814",
+   "name": "Lian Li Galahad II Trinity 240mm ( White ) AIO Liquid CPU Cooler – 3200 RPM Pump, Single Wave Radiator, 120mm Fans, AM5 & LGA1700 Compatible",
+   "category": "cpu",
+   "priceEgp": 5900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-240mm-white-aio-liquid-cpu-cooler-%E2%80%93-3200-rpm-pump-single-wave-radiator-120mm-fans-am5-lga1700-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/Galahad%20II%20Trinity%20240mm%20W/lian-li-galahad-ii-trinity-240mm-white-aio-liquid-cpu-cooler-%E2%80%93-3200-rpm-pump-single-wave-radiator-120mm-fans-am5-lga1700-compatible-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2817",
+   "name": "Lian Li Galahad II Trinity SL-INF 240mm AIO Liquid CPU Cooler with UNI Fan SL Infinity – Black | High Performance RGB Cooling",
+   "category": "cpu",
+   "priceEgp": 7900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-sl-inf-240mm-aio-liquid-cpu-cooler-with-uni-fan-sl-infinity-%E2%80%93-black-high-performance-rgb-cooling",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/GA2T24INB%20B/lian-li-galahad-ii-trinity-sl-inf-240mm-aio-liquid-cpu-cooler-with-uni-fan-sl-infinity-%E2%80%93-black-high-performance-rgb-cooling-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2818",
+   "name": "Lian Li Galahad II Trinity SL-INF 240mm AIO Liquid CPU Cooler with UNI Fan SL Infinity – White High Performance RGB Cooling",
+   "category": "cpu",
+   "priceEgp": 7900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-galahad-ii-trinity-sl-inf-240mm-aio-liquid-cpu-cooler-with-uni-fan-sl-infinity-%E2%80%93-white-high-performance-rgb-cooling",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/GA2T24INW/lian-li-galahad-ii-trinity-sl-inf-240mm-aio-liquid-cpu-cooler-with-uni-fan-sl-infinity-%E2%80%93-white-high-performance-rgb-cooling-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2819",
+   "name": "Lian Li HydroShift LCD 360MM (Black) AIO Cooler – High-Performance Liquid Cooling, No Fans Included",
+   "category": "cooling",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-hydroshift-lcd-360mm-black-aio-cooler-%E2%80%93-high-performance-liquid-cooling-no-fans-included",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/Hydro%20Shift%20LCD/lian-li-hydroshift-lcd-360mm-black-aio-cooler-%E2%80%93-high-performance-liquid-cooling-no-fans-included-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3024",
+   "name": "Lian Li LCD 120 SL Wireless Fans – Premium RGB Cooling with Custom LCD Screens",
+   "category": "cooling",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-lcd-120-sl-wireless-fans-%E2%80%93-premium-rgb-cooling-with-custom-lcd-screens",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/FANS/12RSLLCD1W3W/lian-li-lcd-120-sl-wireless-fans-%E2%80%93-premium-rgb-cooling-with-custom-lcd-screens-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1632",
+   "name": "Lian Li UNI FAN AL120 White Single Pack – 120mm RGB Daisy-Chain Interlocking Fan, 1900 RPM",
+   "category": "cooling",
+   "priceEgp": 1500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-uni-fan-al120-white-single-pack",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ACCESSORIES/lian%20li/lian-li-uni-fan-al120-white-single-pack-%E2%80%93-120mm-rgb-daisy-chain-interlocking-fan-1900-rpm-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2808",
+   "name": "Lian Li UNI FAN SL-INF 120mm & 140mm Reverse Blade PWM ARGB Fans — High Air Pressure, 63.6 to 71.6 CFM Airflow, Fluid Dynamic Bearing, Quiet Operation 28.6-32 dBA, Black 3 -Year Warranty",
+   "category": "cooling",
+   "priceEgp": 1500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-uni-fan-sl-inf-120mm-140mm-reverse-blade-pwm-argb-fans-%E2%80%94-high-air-pressure-63-6-to-71-6-cfm-airflow-fluid-dynamic-bearing-quiet-operation-28-6-32-dba-black-3-year-warranty-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/UF-RSLIN120-1B/2-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2809",
+   "name": "Lian Li UNI FAN SL-INF120 Reverse Blade RGB 120mm White Fan – PWM ARGB Case Fan",
+   "category": "case",
+   "priceEgp": 1300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-uni-fan-sl-inf120-reverse-blade-rgb-120mm-white-fan-%E2%80%93-pwm-argb-case-fan",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/UNI%20FAN%20W/lian-li-uni-fan-sl-inf120-reverse-blade-rgb-120mm-white-fan-%E2%80%93-pwm-argb-case-fan-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3021",
+   "name": "LIAN LI UNI FAN TL Wireless KIT White – High-Performance RGB PC Case Fans with Wireless Control & Modular Design",
+   "category": "case",
+   "priceEgp": 6000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lian-li-uni-fan-tl-wireless-kit-white-%E2%80%93-high-performance-rgb-pc-case-fans-with-wireless-control-modular-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/FANS/UNI%20FAN%20TL%20WHITE/lian-li-uni-fan-tl-wireless-kit-white-%E2%80%93-high-performance-rgb-pc-case-fans-with-wireless-control-modular-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1242",
+   "name": "LianLi Galahad 240 RGB Cpu Cooler socket 1700",
+   "category": "cpu",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lianli-galahad-240-rgb-cpu-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/lianli-galahad-240-rgb-cpu-cooler-socket-1700-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1636",
+   "name": "LianLi Galahad 240 RGB WHITE Cpu Cooler socket 1700",
+   "category": "cpu",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lianli-galahad-240-rgb-white-cpu-cooler-socket-1700",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ACCESSORIES/lian%20li/lianli-galahad-240-rgb-white-cpu-cooler-socket-1700-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1243",
+   "name": "LianLi Galahad 360 RGB Cpu Cooler socket 1700",
+   "category": "cpu",
+   "priceEgp": 5700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lianli-galahad-360-rgb-cpu-cooler-socket-1700",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/LianLi/lianli-galahad-360-rgb-cpu-cooler-socket-1700-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1635",
+   "name": "LianLi Galahad 360 RGB Cpu Cooler WHITE socket 1700",
+   "category": "cpu",
+   "priceEgp": 5700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/lianli-galahad-360-rgb-cpu-cooler-white-socket-1700",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ACCESSORIES/lian%20li/lianli-galahad-360-rgb-cpu-cooler-white-socket-1700-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3004",
+   "name": "MasterLiquid 360 ATMOS Stealth Liquid Coolers – Black, Intel & AMD Socket Compatibility 3/2 Fans, 2400 RPM 127.6 m³/h Airflow",
+   "category": "cooling",
+   "priceEgp": 6850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/masterliquid-360-atmos-stealth-liquid-coolers-%E2%80%93-black-intel-amd-socket-compatibility-3-2-fans-2400-rpm-127-6-m%C2%B3-h-airflow",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Cooler%20master/MLX-D36M%20A24PK%20R1/masterliquid-360-atmos-stealth-liquid-coolers-%E2%80%93-black-intel-amd-socket-compatibility-3-2-fans-2400-rpm-127-6-m%C2%B3-h-airflow-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2844",
+   "name": "Prime LC 360 ARGB White Edition – 360mm AIO Liquid CPU Cooler with ARGB Fans, AURA Sync, Intel & AMD Support",
+   "category": "cpu",
+   "priceEgp": 5499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/prime-lc-360-argb-white-edition-%E2%80%93-360mm-aio-liquid-cpu-cooler-with-argb-fans-aura-sync-intel-amd-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Asus%20prime%20LC%20360%20White/prime-lc-360-argb-white-edition-%E2%80%93-360mm-aio-liquid-cpu-cooler-with-argb-fans-aura-sync-intel-amd-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3088",
+   "name": "Thermalright Aqua Elite 360 Black V3 ARGB Liquid CPU Cooler – High-Performance 360mm AIO with 3× TL-C12B-S V2 PWM Fans, Intel LGA1700 / AMD AM4 & AM5 Compatible",
+   "category": "cpu",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-aqua-elite-360-black-v3-argb-liquid-cpu-cooler-%E2%80%93-high-performance-360mm-aio-with-3%C3%97-tl-c12b-s-v2-pwm-fans-intel-lga1700-amd-am4-am5-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Aqua%20Elite%20360%20V3/thermalright-aqua-elite-360-black-v3-argb-liquid-cpu-cooler-%E2%80%93-high-performance-360mm-aio-with-3%C3%97-tl-c12b-s-v2-pwm-fans-intel-lga1700-amd-am4-am5-compatible-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2612",
+   "name": "Thermalright Assassin X 120 Refined SE ARGB Black Single Tower Cpu Air Cooler",
+   "category": "cpu",
+   "priceEgp": 1400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-assassin-x-120-refined-se-argb-single-tower-cpu-air-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/%20X%20120%20B/thermalright-assassin-x-120-refined-se-argb-black-single-tower-cpu-air-cooler-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2613",
+   "name": "Thermalright Assassin X 120 Refined SE ARGB White Single Tower Cpu Air Cooler",
+   "category": "cpu",
+   "priceEgp": 1400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-assassin-x-120-refined-se-argb-white-single-tower-cpu-air-cooler",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/%20X%20120%20W/thermalright-assassin-x-120-refined-se-argb-white-single-tower-cpu-air-cooler-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3117",
+   "name": "Thermalright Frozen Edge 240 Black Liquid Cooling System – High-Performance 240mm AIO CPU Cooler with Dual 120mm PWM Fans, Compatible with Intel LGA1851/1700/1200/115X/2011/2066 & AMD AM4/AM5",
+   "category": "cpu",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-frozen-edge-240-black-liquid-cooling-system-%E2%80%93-high-performance-240mm-aio-cpu-cooler-with-dual-120mm-pwm-fans-compatible-with-intel-lga1851-1700-1200-115x-2011-2066-amd-am4-am5",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/TR-FE240-BK/thermalright-frozen-edge-240-black-liquid-cooling-system-%E2%80%93-high-performance-240mm-aio-cpu-cooler-with-dual-120mm-pwm-fans-compatible-with-intel-lga1851-1700-1200-115x-2011-2066-amd-am4-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2602",
+   "name": "Thermalright Frozen Prism360 Black ARGB CPU Liquid Cooler,Efficient PWM Controlled Pump 3300RPM,3×TL-E12 Series PWM Fan,Water Cooling Computer Parts,for AMD AM4/AM5,Intel 1150/1151/1200/1700/2011",
+   "category": "cpu",
+   "priceEgp": 5000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-frozen-prism360-black-argb-cpu-liquid-cooler-efficient-pwm-controlled-pump-3300rpm-3%C3%97tl-e12-series-pwm-fan-water-cooling-computer-parts-for-amd-am4-am5-intel-1150-1151-1200-1700-2011",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/Frozen%20Prism%20b/thermalright-frozen-prism360-black-argb-cpu-liquid-cooler-efficient-pwm-controlled-pump-3300rpm-3%C3%97tl-e12-series-pwm-fan-water-cooling-computer-parts-for-amd-am4-am5-intel-1150-1151-1200-1700-2011-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2601",
+   "name": "Thermalright Frozen Prism360 White ARGB CPU Liquid Cooler,Efficient PWM Controlled Pump 3300RPM,3×TL-E12 Series PWM Fan,Water Cooling Computer Parts,for AMD AM4/AM5,Intel 1150/1156/1200/1700/2011",
+   "category": "cpu",
+   "priceEgp": 5000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-frozen-prism360-white-argb-cpu-liquid-cooler-efficient-pwm-controlled-pump-3300rpm-3%C3%97tl-e12-series-pwm-fan-water-cooling-computer-parts-for-amd-am4-am5-intel-1150-1156-1200-1700-2011",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/Thermalright/Frozen%20Prism/thermalright-frozen-prism360-white-argb-cpu-liquid-cooler-efficient-pwm-controlled-pump-3300rpm-3%C3%97tl-e12-series-pwm-fan-water-cooling-computer-parts-for-amd-am4-am5-intel-1150-1156-1200-1700-2011-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3081",
+   "name": "Thermalright Peerless Assassin 120 SE ARGB CPU Cooler – Dual Tower Black Heatsink, 6 Heatpipes, Dual 120mm ARGB Fans, High-Performance Air Cooling, Intel & AMD Support",
+   "category": "cpu",
+   "priceEgp": 2400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-peerless-assassin-120-se-argb-cpu-cooler-%E2%80%93-dual-tower-black-heatsink-6-heatpipes-dual-120mm-argb-fans-high-performance-air-cooling-intel-amd-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/PA120-SE-ARGB/thermalright-peerless-assassin-120-se-argb-cpu-cooler-%E2%80%93-dual-tower-black-heatsink-6-heatpipes-dual-120mm-argb-fans-high-performance-air-cooling-intel-amd-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3085",
+   "name": "Thermalright Phantom Spirit 120 EVO CPU Air Cooler – Dual 120mm PWM Fans, 7×6mm Heatpipes, 2150RPM, High-Performance Cooling for AMD AM4/AM5 & Intel LGA 1700/1200/1151/1150/2011",
+   "category": "cpu",
+   "priceEgp": 3550,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-phantom-spirit-120-evo-cpu-air-cooler-%E2%80%93-dual-120mm-pwm-fans-7%C3%976mm-heatpipes-2150rpm-high-performance-cooling-for-amd-am4-am5-intel-lga-1700-1200-1151-1150-2011",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/Phantom%20Spirit%20120%20EVO/thermalright-phantom-spirit-120-evo-cpu-air-cooler-%E2%80%93-dual-120mm-pwm-fans-7%C3%976mm-heatpipes-2150rpm-high-performance-cooling-for-amd-am4-am5-intel-lga-1700-1200-1151-1150-2011-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3106",
+   "name": "Thermalright TL-C12B-S V3 120mm ARGB PWM Fan – Mirror Light Effect, Silent Cooling Fan for PC Case, CPU Air Cooler & Liquid Cooler, 4-Pin High Airflow Quiet Computer Fan",
+   "category": "cpu",
+   "priceEgp": 500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/thermalright-tl-c12b-s-v3-120mm-argb-pwm-fan-%E2%80%93-mirror-light-effect-silent-cooling-fan-for-pc-case-cpu-air-cooler-liquid-cooler-4-pin-high-airflow-quiet-computer-fan",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/cooling/TL-C12B-S%20V3/thermalright-tl-c12b-s-v3-120mm-argb-pwm-fan-%E2%80%93-mirror-light-effect-silent-cooling-fan-for-pc-case-cpu-air-cooler-liquid-cooler-4-pin-high-airflow-quiet-computer-fan-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1945",
+   "name": "XIGMATEK Frozr-O II 360",
+   "category": "cooling",
+   "priceEgp": 7100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 10500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/fans-coolers/xigmatek-frozr-o-ii-360",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Coolers/xigmatek/FROZR/xigmatek-frozr-o-ii-360-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  }
+ ]
+}

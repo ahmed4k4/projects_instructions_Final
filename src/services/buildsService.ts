@@ -2,7 +2,7 @@
  * Persistence for builds, community publishing, ratings and alerts.
  *
  * Every function is a thin, typed wrapper over Supabase with RLS doing the
- * authorisation. Mapping follows the same snake_case â†’ camelCase convention as
+ * authorisation. Mapping follows the same snake_case → camelCase convention as
  * `componentsService`.
  */
 import type { PCComponent } from '@/types/components';
@@ -37,7 +37,7 @@ export interface SavedBuildItem {
   priceAtAdd: number;
 }
 
-export function mapBuildRow(row: BuildRow): SavedBuild {
+function mapBuildRow(row: BuildRow): SavedBuild {
   return {
     id: row.id,
     userId: row.user_id,
@@ -161,23 +161,6 @@ export async function getBuildBySlug(
   return { build: mapBuildRow(build), items: mapped };
 }
 
-export async function listMyBuilds(): Promise<SavedBuild[]> {
-  if (!isSupabaseConfigured || !supabase) return [];
-  const { data, error } = await supabase.from('builds').select('*').order('updated_at', { ascending: false });
-  if (error) throw new Error(`Could not load your builds: ${error.message}`);
-  return (data ?? []).map(mapBuildRow);
-}
-
-export async function deleteBuild(id: string): Promise<void> {
-  const { error } = await requireSupabase().from('builds').delete().eq('id', id);
-  if (error) throw new Error(`Could not delete the build: ${error.message}`);
-}
-
-export async function setBuildVisibility(id: string, isPublic: boolean): Promise<void> {
-  const { error } = await requireSupabase().from('builds').update({ is_public: isPublic }).eq('id', id);
-  if (error) throw new Error(`Could not update visibility: ${error.message}`);
-}
-
 /* -------------------------------------------------------------------------- */
 /*  Community                                                                 */
 /* -------------------------------------------------------------------------- */
@@ -195,87 +178,6 @@ export interface CommunityPost {
   build?: SavedBuild;
 }
 
-/** Publish a build. The DB trigger flips `is_public` and checks ownership. */
-export async function publishBuild(buildId: string, title: string, tags: string[]): Promise<CommunityPost> {
-  const client = requireSupabase();
-  const userId = await currentUserId();
-
-  const { data, error } = await client
-    .from('community_builds')
-    .insert({ build_id: buildId, author_id: userId, title, tags })
-    .select()
-    .single();
-
-  if (error || !data) throw new Error(i18n.t('errors.publishFailed', { detail: error?.message ?? i18n.t('errors.unknown') }));
-
-  return {
-    id: data.id,
-    buildId: data.build_id,
-    authorId: data.author_id,
-    title: data.title,
-    tags: data.tags,
-    ratingAvg: Number(data.rating_avg),
-    ratingCount: data.rating_count,
-    views: data.views,
-    publishedAt: data.published_at,
-  };
-}
-
-export async function listCommunityBuilds(): Promise<CommunityPost[]> {
-  if (!isSupabaseConfigured || !supabase) return [];
-  const { data, error } = await supabase
-    .from('community_builds')
-    .select('*, builds(*)')
-    .order('published_at', { ascending: false })
-    .limit(24);
-  if (error) throw new Error(`Could not load the community feed: ${error.message}`);
-
-  return (data ?? []).map((row) => ({
-    id: row.id,
-    buildId: row.build_id,
-    authorId: row.author_id,
-    title: row.title,
-    tags: row.tags,
-    ratingAvg: Number(row.rating_avg),
-    ratingCount: row.rating_count,
-    views: row.views,
-    publishedAt: row.published_at,
-    build: row.builds ? mapBuildRow(row.builds as BuildRow) : undefined,
-  }));
-}
-
-/** Upsert a 1â€“5 star rating; the trigger refreshes the aggregate. */
-export async function rateBuild(communityBuildId: string, rating: number): Promise<void> {
-  const client = requireSupabase();
-  const userId = await currentUserId();
-  const { error } = await client
-    .from('build_ratings')
-    .upsert(
-      { community_build_id: communityBuildId, user_id: userId, rating: Math.max(1, Math.min(5, rating)) },
-      { onConflict: 'community_build_id,user_id' },
-    );
-  if (error) throw new Error(`Could not save your rating: ${error.message}`);
-}
-
-export async function getMyRating(communityBuildId: string): Promise<number | null> {
-  if (!isSupabaseConfigured || !supabase) return null;
-  const { data } = await supabase
-    .from('build_ratings')
-    .select('rating')
-    .eq('community_build_id', communityBuildId)
-    .maybeSingle();
-  return data?.rating ?? null;
-}
-
-export async function incrementViews(communityBuildId: string): Promise<void> {
-  if (!isSupabaseConfigured || !supabase) return;
-  // Fire-and-forget: a failed view count must never block the page.
-  await supabase.rpc('increment_build_view', { target_build: communityBuildId }).then(
-    () => undefined,
-    () => undefined,
-  );
-}
-
 /* -------------------------------------------------------------------------- */
 /*  Alerts                                                                    */
 /* -------------------------------------------------------------------------- */
@@ -289,59 +191,4 @@ export interface SavedAlert {
   targetPrice: number | null;
   isActive: boolean;
   createdAt: string;
-}
-
-export async function createAlert(input: {
-  componentId: string;
-  alertType: AlertType;
-  targetPrice?: number | null;
-}): Promise<SavedAlert> {
-  const userId = await currentUserId();
-  const { data, error } = await requireSupabase()
-    .from('saved_alerts')
-    .upsert(
-      {
-        user_id: userId,
-        component_id: input.componentId,
-        alert_type: input.alertType,
-        target_price: input.targetPrice ?? null,
-      },
-      { onConflict: 'user_id,component_id,alert_type' },
-    )
-    .select()
-    .single();
-
-  if (error || !data) throw new Error(i18n.t('errors.alertFailed', { detail: error?.message ?? i18n.t('errors.unknown') }));
-
-  return {
-    id: data.id,
-    componentId: data.component_id,
-    alertType: data.alert_type as AlertType,
-    targetPrice: data.target_price,
-    isActive: data.is_active,
-    createdAt: data.created_at,
-  };
-}
-
-export async function listAlerts(): Promise<SavedAlert[]> {
-  if (!isSupabaseConfigured || !supabase) return [];
-  const { data, error } = await supabase
-    .from('saved_alerts')
-    .select('*')
-    .order('created_at', { ascending: false });
-  if (error) throw new Error(`Could not load alerts: ${error.message}`);
-
-  return (data ?? []).map((row) => ({
-    id: row.id,
-    componentId: row.component_id,
-    alertType: row.alert_type as AlertType,
-    targetPrice: row.target_price,
-    isActive: row.is_active,
-    createdAt: row.created_at,
-  }));
-}
-
-export async function deleteAlert(id: string): Promise<void> {
-  const { error } = await requireSupabase().from('saved_alerts').delete().eq('id', id);
-  if (error) throw new Error(`Could not remove the alert: ${error.message}`);
 }

@@ -3,11 +3,12 @@ import type { ComponentCategory } from '@/types/components';
 /**
  * Category placeholder artwork.
  *
- * Retailer CDs are inconsistent about serving product photos: Alfrensia's listing
- * pages return a WooCommerce placeholder for most items, and some stores block
- * hotlinking. Rather than show a broken image or an empty box, every card falls
- * back to a category illustration drawn as an inline SVG — no extra request, no
- * 404, and it works at any size.
+ * Retailers are inconsistent about serving product photos: Elnekhely ships
+ * `placeholder-350x350.png` for items with no cut-out, some stores block
+ * hotlinking, and individual files disappear. The parser stores NO image for
+ * those rows — so every card must handle "no image" without a broken icon: it
+ * falls back to a category illustration drawn as an inline SVG, with no extra
+ * request, no 404, and at any size.
  *
  * Inline SVG rather than `/placeholders/gpu.png` files: eight PNGs would be eight
  * more assets to build, cache and keep in sync with the theme, and a flat colour
@@ -70,17 +71,4 @@ export function CategoryPlaceholder({ category, className, label }: PlaceholderP
   );
 }
 
-/** Fallback image path for plain `<img>` consumers (e.g. the build share card). */
-export const PLACEHOLDER_BY_CATEGORY: Record<string, string> = {
-  cpu: '/placeholders/cpu.svg',
-  gpu: '/placeholders/gpu.svg',
-  motherboard: '/placeholders/motherboard.svg',
-  ram: '/placeholders/ram.svg',
-  storage: '/placeholders/storage.svg',
-  psu: '/placeholders/psu.svg',
-  case: '/placeholders/case.svg',
-  cooling: '/placeholders/cooling.svg',
-};
 
-/** Default used when a category is unknown. */
-export const DEFAULT_PLACEHOLDER = '/placeholders/gpu.svg';

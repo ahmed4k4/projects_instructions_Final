@@ -46,6 +46,3 @@ export function absoluteUrl(path: string): string {
   const suffix = path.startsWith('/') ? path : `/${path}`;
   return `${base}${suffix}`;
 }
-
-/** True when `VITE_APP_URL` is configured (shown in diagnostics, not the UI). */
-export const hasConfiguredAppUrl = Boolean(import.meta.env.VITE_APP_URL?.trim());

@@ -1,6 +1,7 @@
 ﻿import type { ComponentCategory } from '@/types/components';
 import { supabase, isSupabaseConfigured } from '../supabaseClient';
-import snapshot from './snapshot.json';
+import snapshot from './bootstrap.json';
+import { compareOffers } from '@/lib/offerRanking';
 import { loadSigmaFeed } from './sigmaFeed';
 import { sampleComponents } from '@/lib/sampleData';
 import {
@@ -19,11 +20,14 @@ import {
  * Edge Function (migration 008 + 009) and this module only reads.
  *
  * Every function is null-safe: with Supabase unconfigured it returns empty data
- * and the UI simply shows no comparison â€” never an error, never a network call.
+ * and the UI simply shows no comparison — never an error, never a network call.
  */
 
 /** Minimum match confidence before a scraped row is trusted as a real match. */
 export const MIN_MATCH_CONFIDENCE = 0.55;
+
+// One ranking policy for the whole app — see `lib/offerRanking`.
+export { MIN_REAL_PRICE_EGP, isPlaceholderPrice } from '@/lib/offerRanking';
 
 /* -------------------------------------------------------------------------- */
 /*  Local snapshot fallback                                                   */
@@ -35,6 +39,8 @@ interface SnapshotProduct {
   name: string;
   category: string | null;
   priceEgp: number;
+  /** Store printed a placeholder price (1 EGP) — never quoted as a price. */
+  priceIsPlaceholder?: boolean;
   originalPriceEgp: number | null;
   stockStatus: RetailerOffer['stockStatus'];
   productUrl: string;
@@ -45,8 +51,8 @@ interface SnapshotProduct {
  * Why a snapshot exists.
  *
  * Live prices normally come from `retailer_products`, written nightly by the
- * `retailer-sync` Edge Function. When Supabase is unconfigured â€” a fresh clone,
- * or before the first sync has run â€” the UI would otherwise show nothing. This
+ * `retailer-sync` Edge Function. When Supabase is unconfigured — a fresh clone,
+ * or before the first sync has run — the UI would otherwise show nothing. This
  * snapshot is produced by the SAME parser (scripts/snapshot-retailers.mjs) from a
  * real scrape, so the numbers are genuine EGP prices with a visible capture date
  * rather than invented demo data.
@@ -55,14 +61,55 @@ interface SnapshotProduct {
  * that retailer cannot be scraped server-side, so its rows travel separately but
  * are merged into the same offer list before anything is grouped or ranked.
  */
-const SNAPSHOT = snapshot as unknown as {
+/**
+ * Two sources, on purpose.
+ *
+ * `bootstrap.json` is a 48-product subset compiled into the bundle: it answers on
+ * first paint, before any request resolves. The FULL catalogue (3,000+ listings,
+ * ~1.9 MB) lives in `public/data/retailer_snapshot.json` and is fetched once — as
+ * a bundled import it became a 1.5 MB JS chunk, which every visitor paid for
+ * whether or not they opened the builder.
+ */
+const BOOTSTRAP = snapshot as unknown as {
   capturedAt: string;
   retailers: string[];
   products: SnapshotProduct[];
 };
 
+interface SnapshotFeed {
+  capturedAt: string;
+  products: SnapshotProduct[];
+}
+
 let snapshotOffers: RetailerOffer[] | null = null;
 let sigmaOffers: RetailerOffer[] = [];
+let feedLoaded = false;
+
+/** Fetch the full retailer snapshot once, falling back to the bundle subset. */
+async function loadFullSnapshot(): Promise<SnapshotFeed> {
+  if (feedLoaded) return CURRENT_FEED;
+  feedLoaded = true;
+
+  try {
+    const base = import.meta.env.BASE_URL || '/';
+    const res = await fetch(`${base.endsWith('/') ? base : `${base}/`}data/retailer_snapshot.json`);
+    if (res.ok) {
+      const payload = (await res.json()) as SnapshotFeed;
+      if (Array.isArray(payload.products) && payload.products.length) {
+        CURRENT_FEED = { capturedAt: payload.capturedAt ?? BOOTSTRAP.capturedAt, products: payload.products };
+        // Rebuild the offer list from the richer feed.
+        snapshotOffers = null;
+        return CURRENT_FEED;
+      }
+    }
+  } catch {
+    // Offline / not deployed: the bundled subset is enough to keep the UI alive.
+  }
+
+  return CURRENT_FEED;
+}
+
+let CURRENT_FEED: SnapshotFeed = { capturedAt: BOOTSTRAP.capturedAt, products: BOOTSTRAP.products };
 
 /**
  * Merge the Sigma worker's feed into the snapshot offers, once.
@@ -107,7 +154,7 @@ async function loadSigmaOffers(): Promise<void> {
 /**
  * Set once the DB reports `retailer_products` does not exist (PGRST205).
  *
- * A missing table is a SETUP state â€” migration 008 has not been applied yet â€”
+ * A missing table is a SETUP state — migration 008 has not been applied yet —
  * not a runtime error. Without this flag every page issued the query again,
  * React Query retried it, and the console filled with 404s. Once flipped, the
  * app reads the snapshot directly and makes no further requests.
@@ -122,7 +169,7 @@ let tableProbe: Promise<void> | null = null;
  * Retailers are optional infrastructure: before migration 008 is applied the
  * table genuinely does not exist, and every read would otherwise issue a 404.
  * One cheap HEAD-style request, cached forever, keeps the console clean and the
- * behaviour obvious ("no DB yet â†’ snapshot").
+ * behaviour obvious ("no DB yet → snapshot").
  */
 async function ensureTableProbed(): Promise<void> {
   if (retailerTableMissing || !isSupabaseConfigured || !supabase) return;
@@ -139,6 +186,7 @@ async function ensureTableProbed(): Promise<void> {
 
 /** Snapshot rows plus whatever the Sigma worker last published. */
 async function allOffers(): Promise<RetailerOffer[]> {
+  await loadFullSnapshot();
   const base = loadSnapshotOffers();
   await loadSigmaOffers();
   return sigmaOffers.length ? [...base, ...sigmaOffers] : base;
@@ -148,7 +196,7 @@ async function allOffers(): Promise<RetailerOffer[]> {
 function loadSnapshotOffers(): RetailerOffer[] {
   if (snapshotOffers) return snapshotOffers;
 
-  snapshotOffers = SNAPSHOT.products.map((product, index) => {
+  snapshotOffers = CURRENT_FEED.products.map((product, index) => {
     const match = matchSnapshotToCatalogue(product.name, product.category);
     return {
       id: `snap-${index}`,
@@ -156,13 +204,14 @@ function loadSnapshotOffers(): RetailerOffer[] {
       name: product.name,
       category: (product.category as ComponentCategory | null) ?? null,
       priceEgp: product.priceEgp,
+      priceIsPlaceholder: product.priceIsPlaceholder,
       originalPriceEgp: product.originalPriceEgp,
       stockStatus: product.stockStatus,
       productUrl: product.productUrl,
       imageUrl: product.imageUrl,
       matchedComponentId: match?.id ?? null,
       matchConfidence: match?.confidence ?? null,
-      lastScrapedAt: SNAPSHOT.capturedAt,
+      lastScrapedAt: CURRENT_FEED.capturedAt,
     };
   });
 
@@ -173,7 +222,7 @@ function loadSnapshotOffers(): RetailerOffer[] {
  * Name matching against the local catalogue.
  *
  * Mirrors `scoreMatch` in retailer-sync/index.ts: coverage of the catalogue name
- * plus a hard model-identifier gate. Kept in sync deliberately â€” the alternative
+ * plus a hard model-identifier gate. Kept in sync deliberately — the alternative
  * (importing Deno code into the bundle) is worse than a small duplication.
  */
 const STOPWORDS = new Set([
@@ -209,8 +258,8 @@ export function scoreNameMatch(productName: string, catalogueName: string): numb
    * Model identifiers must match EXACTLY, and the product must not be a variant.
    *
    * Real data broke both looser rules:
-   *   آ· substring â†’ "7800x3d" (Ryzen) matched "7800" (Radeon)
-   *   آ· prefix    â†’ "14900kf" (no iGPU, cheaper) matched "14900k"
+   *   · substring → "7800x3d" (Ryzen) matched "7800" (Radeon)
+   *   · prefix    → "14900kf" (no iGPU, cheaper) matched "14900k"
    * A CPU/GPU SKU is an exact identifier; anything else is a different product.
    */
   const modelMatch = catalogueModels.every((m) => productModels.has(m));
@@ -267,12 +316,7 @@ function toOffer(row: RetailerRow): RetailerOffer {
   };
 }
 
-/** In-stock first, then cheapest. */
-function byBestOffer(a: RetailerOffer, b: RetailerOffer): number {
-  const aStock = a.stockStatus === 'in_stock' ? 0 : 1;
-  const bStock = b.stockStatus === 'in_stock' ? 0 : 1;
-  return aStock - bStock || a.priceEgp - b.priceEgp;
-}
+const byBestOffer = compareOffers;
 
 /**
  * Build a comparison from a set of offers for one component.
@@ -319,10 +363,10 @@ export function isRetailerTableMissing(): boolean {
  * Recognise "this table is not available" so callers degrade instead of throwing.
  *
  * Supabase answers differently depending on the path AND the key:
- *   آ· PostgREST, when a table is missing from the schema cache â†’ `PGRST205`
- *     ("Could not find the table â€¦ in the schema cache").
- *   آ· The anon key hitting a table that does not exist yet â†’ plain **401**, often
- *     with an empty body â€” there is no table to grant a policy on.
+ *   · PostgREST, when a table is missing from the schema cache → `PGRST205`
+ *     ("Could not find the table … in the schema cache").
+ *   · The anon key hitting a table that does not exist yet → plain **401**, often
+ *     with an empty body — there is no table to grant a policy on.
  * Treating only PGRST205 as "missing" left the 401 bubbling up and the whole
  * search page rendered its error state on an unmigrated project.
  */
@@ -330,7 +374,7 @@ function isMissingTable(error: { code?: string; message?: string; status?: numbe
   if (!error) return false;
   if (error.code === 'PGRST205' || error.code === '42P01') return true;
   // 42501 = insufficient_privilege. A table created without
-  // `GRANT SELECT â€¦ TO anon` is unreachable even though it exists, and PostgREST
+  // `GRANT SELECT … TO anon` is unreachable even though it exists, and PostgREST
   // rejects before RLS is evaluated. From the app's point of view that is the
   // same state as "not migrated yet": no data to read, use the snapshot.
   if (error.code === '42501') return true;
@@ -352,6 +396,7 @@ function shouldUseSnapshot(): boolean {
 
 /** Raw retailer listings, optionally filtered. */
 export async function getAggregatedProducts(filters: RetailerProductFilters = {}): Promise<RetailerOffer[]> {
+  await loadFullSnapshot();
   await ensureTableProbed();
   if (shouldUseSnapshot() || !supabase) return snapshotOnly(await allOffers(), filters);
 
@@ -373,12 +418,12 @@ export async function getAggregatedProducts(filters: RetailerProductFilters = {}
 
   const rows = ((data ?? []) as RetailerRow[]).map(toOffer);
 
-  // The DB is authoritative, but before the first sync it is empty â€” fall back
+  // The DB is authoritative, but before the first sync it is empty — fall back
   // to the snapshot so the UI is not blank on day one.
   //
   // This MUST read the snapshot directly. Calling getAggregatedProducts() again
   // recursed infinitely on an empty table: the query succeeds with zero rows, so
-  // the recursive call re-queried, returned zero again, and re-queried â€” the page
+  // the recursive call re-queried, returned zero again, and re-queried — the page
   // froze with "0 results" forever. `snapshotOnly()` makes the fallback terminal.
   if (rows.length === 0) return snapshotOnly(await allOffers(), filters);
   return rows;
@@ -405,6 +450,7 @@ function snapshotOnly(all: RetailerOffer[], filters: RetailerProductFilters): Re
 export async function getRetailerOffersForComponent(
   componentId: string,
 ): Promise<{ best: RetailerOffer | null; offers: RetailerOffer[] }> {
+  await loadFullSnapshot();
   await ensureTableProbed();
   if (shouldUseSnapshot() || !supabase) {
     const offers = (await allOffers())
@@ -435,7 +481,7 @@ export async function getRetailerOffersForComponent(
   const offers = ((data ?? []) as RetailerRow[]).map(toOffer).sort(byBestOffer);
   if (offers.length) return { best: offers[0] ?? null, offers };
 
-  // Nothing matched in the DB yet â€” use the snapshot for this component.
+  // Nothing matched in the DB yet — use the snapshot for this component.
   const fallback = (await allOffers())
     .filter((offer) => offer.matchedComponentId === componentId)
     .sort(byBestOffer);
@@ -453,6 +499,7 @@ export async function getBestPricesForComponents(
 ): Promise<Map<string, { bestPriceEgp: number; retailerId: RetailerId; url: string; count: number }>> {
   if (componentIds.length === 0) return new Map();
 
+  await loadFullSnapshot();
   await ensureTableProbed();
 
   if (shouldUseSnapshot() || !supabase) {
@@ -468,8 +515,8 @@ export async function getBestPricesForComponents(
     .select('matched_component_id, retailer_id, price_egp, product_url, stock_status, match_confidence')
     .in('matched_component_id', componentIds);
 
-  // Any error â€” including PGRST205 "table not found" before migration 008 is
-  // applied â€” degrades to the snapshot. A missing table is a setup state, not a
+  // Any error — including PGRST205 "table not found" before migration 008 is
+  // applied — degrades to the snapshot. A missing table is a setup state, not a
   // user-facing failure, so it must not surface as a console error either.
   if (error) {
     if (isMissingTable(error)) retailerTableMissing = true;
@@ -488,7 +535,7 @@ export async function getBestPricesForComponents(
   }
 
   if (grouped.size === 0) {
-    // DB reachable but not yet synced â€” snapshot keeps the UI useful.
+    // DB reachable but not yet synced — snapshot keeps the UI useful.
     return mapBestPrices(await allOffers());
   }
 
@@ -570,12 +617,13 @@ export async function getRetailerHealth(): Promise<
   // capture time so the UI can still say how fresh the prices are. Sigma comes
   // from its own worker feed, so it is added here only when it actually has rows.
   if (shouldUseSnapshot() || !supabase) {
+    await loadFullSnapshot();
     await loadSigmaOffers();
-    const fromSnapshot = [...new Set(SNAPSHOT.products.map((p) => p.retailerId))].map((retailerId) => ({
+    const fromSnapshot = [...new Set(CURRENT_FEED.products.map((p) => p.retailerId))].map((retailerId) => ({
       retailerId,
       status: 'ok',
-      productsUpserted: SNAPSHOT.products.filter((p) => p.retailerId === retailerId).length,
-      startedAt: SNAPSHOT.capturedAt,
+      productsUpserted: CURRENT_FEED.products.filter((p) => p.retailerId === retailerId).length,
+      startedAt: CURRENT_FEED.capturedAt,
     }));
 
     if (!sigmaOffers.length) return fromSnapshot;
@@ -595,7 +643,7 @@ export async function getRetailerHealth(): Promise<
 
   if (error) {
     // A missing audit table means migration 008/009 have not been applied at
-    // all â€” flip the flag so no other query probes the DB this session.
+    // all — flip the flag so no other query probes the DB this session.
     if (isMissingTable(error)) retailerTableMissing = true;
     return [];
   }

@@ -10,7 +10,7 @@
 const BASE = import.meta.env.BASE_URL || '/';
 
 /** Join a public asset path with the deploy base. */
-export function publicAsset(path: string): string {
+function publicAsset(path: string): string {
   const clean = path.replace(/^\/+/, '');
   return `${BASE.endsWith('/') ? BASE : `${BASE}/`}${clean}`;
 }

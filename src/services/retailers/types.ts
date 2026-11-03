@@ -86,6 +86,14 @@ export interface RetailerOffer {
   /** Catalogue category of the listing (null when the retailer page was ambiguous). */
   category?: ComponentCategory | null;
   priceEgp: number;
+  /**
+   * The store printed a placeholder (1 EGP) instead of a real price.
+   *
+   * Kept as a flag rather than deleted: the part is real, its photo and link
+   * work, and it belongs in its category count. It simply must never be quoted
+   * as a price or win a cheapest-offer comparison.
+   */
+  priceIsPlaceholder?: boolean;
   originalPriceEgp: number | null;
   stockStatus: RetailerStockStatus;
   productUrl: string;

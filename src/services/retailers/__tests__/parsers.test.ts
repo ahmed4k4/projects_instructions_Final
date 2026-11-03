@@ -1,7 +1,16 @@
 import { describe, expect, it } from 'vitest';
-// The shared module, not the Edge Function file: `src/` is the single copy that
-// the scraper, the snapshot builder and the aggregator all import.
-import { parseEgpPrice, classifyByName, isAllowed, scoreNameMatch } from '@/lib/retailerParsing';
+// The real parser — the same module the snapshot builder, the Edge Function and
+// `scripts/verify-*.mjs` import. Testing a second copy is how the two drift apart.
+import {
+  parseEgpPrice,
+  classifyByName,
+  isAllowed,
+  pageUrl,
+  cleanProductUrl,
+  cleanImageUrl,
+  headersFor,
+} from '../../../../supabase/functions/retailer-sync/parsers';
+import { scoreNameMatch } from '@/services/retailers/aggregator';
 
 /**
  * Retailer-parsing unit tests.
@@ -95,5 +104,71 @@ describe('robots.txt', () => {
   it('ignores rules aimed at other crawlers', () => {
     const robots = 'User-agent: BadBot\nDisallow: /\n\nUser-agent: *\nDisallow: /admin/';
     expect(isAllowed(robots, '/vga')).toBe(true);
+  });
+});
+
+/**
+ * Phase 11 — Elnekhely.
+ *
+ * The store answered 503 to our identifying UA on EVERY url (page 1 included),
+ * so the scraper recorded "pagination is blocked" when the truth was "we are
+ * refused". These pin the fetch contract and the URL hygiene that fixed it.
+ */
+describe('Elnekhely request contract', () => {
+  const target = {
+    category: 'gpu',
+    url: 'https://www.elnekhelytechnology.com/graphics-card',
+    pages: 3,
+    limit: 100,
+  };
+
+  it('sends browser-shaped headers with a same-origin referrer', () => {
+    const headers = headersFor(target.url);
+    expect(headers['User-Agent']).toMatch(/^Mozilla\/5\.0/);
+    expect(headers.Referer).toBe('https://www.elnekhelytechnology.com/');
+    expect(headers.Accept).toContain('text/html');
+  });
+
+  it('applies limit=100 to page 1 and every later page', () => {
+    expect(pageUrl(target, 1)).toBe('https://www.elnekhelytechnology.com/graphics-card?limit=100');
+    expect(pageUrl(target, 2)).toBe('https://www.elnekhelytechnology.com/graphics-card?limit=100&page=2');
+  });
+
+  it('never sends OpenCart limit= to a WooCommerce store', () => {
+    const woo = { category: 'gpu', url: 'https://alfrensia.com/product-category/graphics-card/', limit: 100 };
+    expect(pageUrl(woo, 1)).toBe('https://alfrensia.com/product-category/graphics-card/');
+    expect(pageUrl(woo, 2)).toBe('https://alfrensia.com/product-category/graphics-card/page/2/');
+  });
+
+  it('leaves an OpenCart url untouched when no limit is configured', () => {
+    const plain = { category: 'gpu', url: 'https://elbadrgroupeg.store/vga' };
+    expect(pageUrl(plain, 1)).toBe('https://elbadrgroupeg.store/vga');
+    expect(pageUrl(plain, 3)).toBe('https://elbadrgroupeg.store/vga?page=3');
+  });
+});
+
+describe('scraped URL hygiene', () => {
+  const origin = 'https://www.elnekhelytechnology.com';
+
+  it('strips our own scrape parameters from product links', () => {
+    expect(cleanProductUrl('/gigabyte-aorus-rtx-5080?limit=100', origin)).toBe(
+      'https://www.elnekhelytechnology.com/gigabyte-aorus-rtx-5080',
+    );
+  });
+
+  it('keeps meaningful product-page parameters', () => {
+    const href = 'https://shop.example/index.php?route=product/product&product_id=99';
+    expect(cleanProductUrl(href, origin)).toContain('product_id=99');
+  });
+
+  it('percent-encodes typographic characters in image paths', () => {
+    const dirty = '/image/catalog/graphics-card–vcnrtx4000ada.jpg';
+    const clean = cleanImageUrl(dirty, origin);
+    expect(clean).not.toContain('–');
+    expect(decodeURI(clean as string)).toContain('graphics-card–');
+  });
+
+  it('returns null rather than a string for a missing image', () => {
+    expect(cleanImageUrl(null, origin)).toBeNull();
   });
 });

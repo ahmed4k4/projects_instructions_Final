@@ -33,8 +33,6 @@ export interface RetailerFeed {
 }
 
 const FEED_PATH = 'data/sigma_products.json';
-/** A week-old price is still useful; a year-old one is a lie. */
-const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 
 let cached: Promise<RetailerFeed> | null = null;
 
@@ -80,11 +78,4 @@ export function loadSigmaFeed(): Promise<RetailerFeed> {
   })();
 
   return cached;
-}
-
-/** Freshness is reported, not enforced: an old capture is still real data. */
-export function isFeedStale(capturedAt: string | null): boolean {
-  if (!capturedAt) return true;
-  const time = Date.parse(capturedAt);
-  return Number.isNaN(time) || Date.now() - time > MAX_AGE_MS;
 }

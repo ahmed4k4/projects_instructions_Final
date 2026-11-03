@@ -109,7 +109,7 @@ const storageFits: CustomHandler = (storage, motherboard, _config, ctx) => {
     : { pass: false, detail: `${installed} M.2 drives but only ${slots} slot(s)` };
 };
 
-export const CUSTOM_HANDLERS: Record<string, CustomHandler> = {
+const CUSTOM_HANDLERS: Record<string, CustomHandler> = {
   psu_gpu_connectors: psuConnectors,
   motherboard_case_pcie: gpuCoversExpansion,
   storage_motherboard_interface: storageFits,

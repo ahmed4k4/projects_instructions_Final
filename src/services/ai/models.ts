@@ -24,13 +24,13 @@ import type { GeminiModelKey } from '@/types/ai';
  * `chat` is used for interactive turns; `quality` for analysis where a few
  * extra seconds are acceptable (Build Doctor).
  */
-export const MODEL_CANDIDATES: Record<GeminiModelKey, readonly string[]> = {
+const MODEL_CANDIDATES: Record<GeminiModelKey, readonly string[]> = {
   chat: ['gemini-3.5-flash-lite', 'gemini-flash-lite-latest', 'gemini-3.6-flash'],
   quality: ['gemini-3.6-flash', 'gemini-3.5-flash-lite', 'gemini-flash-lite-latest'],
 };
 
 /** The model every fresh workspace starts on. */
-export const DEFAULT_CHAT_MODEL = 'gemini-3.5-flash-lite';
+const DEFAULT_CHAT_MODEL = 'gemini-3.5-flash-lite';
 
 const CACHE_KEY = 'nexus:ai:model';
 const PROBE_TIMEOUT_MS = 20_000;
@@ -62,7 +62,7 @@ export function invalidateModel(key: GeminiModelKey): void {
   writeCache(cache);
 }
 
-export function rememberModel(key: GeminiModelKey, modelId: string): void {
+function rememberModel(key: GeminiModelKey, modelId: string): void {
   writeCache({ ...readCache(), [key]: modelId });
 }
 
@@ -109,12 +109,4 @@ async function withTimeout(promise: Promise<boolean>, ms: number): Promise<boole
     promise.catch(() => false),
     new Promise<boolean>((resolve) => setTimeout(() => resolve(false), ms)),
   ]);
-}
-
-export function peekModel(key: GeminiModelKey): string | null {
-  return readCache()[key] ?? MODEL_CANDIDATES[key][0] ?? null;
-}
-
-export function candidatesFor(key: GeminiModelKey): readonly string[] {
-  return MODEL_CANDIDATES[key];
 }

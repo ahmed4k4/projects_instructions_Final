@@ -1,0 +1,2543 @@
+{
+ "retailerId": "elbadr",
+ "category": "storage",
+ "complete": false,
+ "lastPage": 0,
+ "products": [
+  {
+   "retailerId": "elbadr",
+   "externalId": "5778",
+   "name": "ADATA SC750 1TB - Up to 1000 MB/s- HighSpeed USB 3.2 Gen 2 USB-C External Portable SSD Black Titanium - Work with PS5 & XBOX",
+   "category": "storage",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sc750-1000g-ccbk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/wtkUdgrBaiXY80zZujsJWLDTXgr1wLPks408qtOdlU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4391",
+   "name": "AMD Ryzen 3 4100 4-Core, 8-Thread Unlocked Desktop Processor with Wraith Stealth Cooler Tray",
+   "category": "cpu",
+   "priceEgp": 1850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-3-4100-4-core-8-thread-unlocked-desktop-processor-with-wraith-stealth-cooler-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/Azg30kQNtAAYfsOcKtEwTfnpd5oB-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5317",
+   "name": "AMD Ryzen 5 5600 MPK 4.4GHz 32MB Cache 6 Core AM4 7nm Processor",
+   "category": "cpu",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6900,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-5600-mpk-4.4ghz-32mb-cache-6-core-am4-7nm-processor",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/xFCDlpTFHxTMqEyMlUFunZlDfZfpdMV8XBBlEZ3D6NK1fFZ9a5XHUT0lk1ZyVGIFvcWbz7DIT7lKWMIHALEo7MFaPhrAN-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7185",
+   "name": "AMD Ryzen 5 7500X3D Desktop Processor – 6-Core/12-Thread, up to 5.0 GHz, 96MB Total Cache (64MB 3D V-Cache), AM5 Socket, Supports DDR5 & PCIe 5.0, 120W TDP",
+   "category": "cpu",
+   "priceEgp": 13750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 14200,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-7500x3d-processor-64mb-3d-v-cache",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/Zg5hNudz8lMKjj3cSlm9zCjwNGadZtNstjvzGrGepb-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6655",
+   "name": "AMD Ryzen 5 7600X MPK 6-Core 12-Thread Desktop Processor — Zen 4 (Raphael), 4.7GHz Base, Up to 5.3GHz Boost, 32MB L3 Cache, 105W TDP, AM5 Socket, PCIe 5.0, DDR5-5200 Support, Radeon Graphics, Unlocked, No Cooler, 5nm",
+   "category": "cpu",
+   "priceEgp": 8850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 10000,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-7600x-mpk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/4yXzRePQV3W9faPpqg3NnP7Exa8pQd0PprjqylA-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6563",
+   "name": "AMD Ryzen 7 7800X3D MPK — 8-Core, 16-Thread 4.2 GHz Socket AM5 120W AMD Radeon Graphics Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 16499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 18500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-7800x3d-mpk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/qn4BqoQx9nOwLWhhqM5uBmjOOY-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6942",
+   "name": "Palit GeForce RTX 5050 Dual 8GB GDDR6 — NVIDIA Blackwell Architecture, 2560 CUDA Cores, 20 Gbps Memory Speed, PCIe 5.0, Composite Heat Pipe Cooling, Dual Axial Fans, 2-Slot Design",
+   "category": "gpu",
+   "priceEgp": 24500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/palit-geforce-rtx-5050-dual-8gb-gddr6",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Palit/G1KcL15JD8LQmOOPaAZI7WN3CV-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4355",
+   "name": "AMD Ryzen 5 5500 - Ryzen 5 5000 Series 6-Core Socket AM4 65W Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 4950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-5500-ryzen-5-5000-series-6-core-socket-am4-65w-desktop-processor",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/CWy7ayJ2fmzdba7FVhL5FAGSJcebrq3FcwTdrbJ-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5156",
+   "name": "TEAMGROUP 8GB (1X8GB) DDR4 3200MHZ —T-Force Delta RGB Series Black Gaming Desktop Memory - TF3D48G3200HC16C01",
+   "category": "ram",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/teamgroup-8gb-(1x8gb)-ddr4-3200mhz-t-force-delta-rgb-series-black-gaming-desktop-memory-tf3d48g3200hc16c01",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/ILtlpavJfD06PyWBe2uQvuC2Db-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4390",
+   "name": "AMD Ryzen 3 4100 4-Core, 8-Thread Unlocked Desktop Processor with Wraith Stealth Cooler",
+   "category": "cpu",
+   "priceEgp": 2200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-3-4100-4-core-8-thread-unlocked-desktop-processor-with-wraith-stealth-cooler",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/ZnBXaW2tDy4uUTz7MURHZlJCBJBqGe4Ujl37REkSoeCW3w5B-250x250h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6656",
+   "name": "AMD Ryzen 7 5700X MPK 8-Core 16-Thread Desktop Processor — Zen 3 Architecture, 3.4GHz Base, Up to 4.6GHz Boost, 32MB L3 Cache, 65W TDP, AM4 Socket, DDR4-3200 Support, PCIe 4.0, Unlocked Multiplier",
+   "category": "cpu",
+   "priceEgp": 8799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-5700x-mpk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/3n18EJjLAL32apAGZKO8NSaBdBHycDERo4bfZQK-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7832",
+   "name": "Seagate One Touch Desktop 24TB External HDD – USB-C Bus-Powered, Plug-and-Play",
+   "category": "storage",
+   "priceEgp": 54000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-one-touch-desktop-stnb24000400-24tb-external-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/HSUZY4sIJti5kk4mRrM41L75Fo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7831",
+   "name": "Seagate One Touch Desktop 20TB External HDD – USB-C Bus-Powered, Plug-and-Play",
+   "category": "storage",
+   "priceEgp": 44500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-one-touch-desktop-stnb20000400-20tb-external-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/Xdem140Cgg5eV5Z2SF48pNS2ZN-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7830",
+   "name": "Seagate Expansion Desktop 6TB External HDD – USB 3.0, Plug-and-Play, Black",
+   "category": "storage",
+   "priceEgp": 11200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-expansion-desktop-stkp6000400-6tb-external-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/cTY4Wa2fe2Q7BrNZCnEmSVOAGU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7829",
+   "name": "Seagate IronWolf ST2000VN003 2TB NAS HDD – 7200 RPM, 256MB Cache",
+   "category": "storage",
+   "priceEgp": 11500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-ironwolf-st2000vn003-2tb-nas-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/xoMbT58xAwRUy2HRL6O2MxPTHs-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7828",
+   "name": "Seagate SkyHawk AI 32TB Internal Surveillance HDD – 7200 RPM, CMR & ImagePerfect AI",
+   "category": "storage",
+   "priceEgp": 89500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-skyhawk-ai-st32000ve000-32tb-surveillance-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/0kLQ65czNquZR6rGHd94iXOskO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7827",
+   "name": "Seagate Exos M 30TB Enterprise HDD – 7200 RPM, CMR, Mozaic 3+ & 512MB Cache",
+   "category": "storage",
+   "priceEgp": 88500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-exos-m-30tb-st30000nm004k-enterprise-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/r1IXFD8BH98QsiMcFdQqshtmPvlYItIw2Drgyqi70b-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7826",
+   "name": "Seagate Exos M 28TB Enterprise HDD – 7200 RPM, CMR, Helium-Sealed & MTC",
+   "category": "storage",
+   "priceEgp": 76500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-exos-m-st28000nm003k-28tb-enterprise-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/r2sJnleFuXMSV4xAkYMCCpOI3gIm3hopttxWJUzSfs-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7825",
+   "name": "Seagate SkyHawk AI 24TB Internal Surveillance HDD – 7200 RPM, CMR & ImagePerfect AI",
+   "category": "storage",
+   "priceEgp": 67500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-skyhawk-ai-st24000ve000-24tb-surveillance-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/VoU4zjEmnEaNIi3YW1i1YbYTZy-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7824",
+   "name": "Western Digital Ultrastar DC HC680 26TB SATA Enterprise HDD – SMR, ArmorCache & OptiNAND",
+   "category": "storage",
+   "priceEgp": 75800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-ultrastar-dc-hc680-26tb-sata-enterprise-hdd-smr-armorcache-optinand",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/TMF4g7OxR2zYG9qTAyPY6JTEw5-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7823",
+   "name": "Western Digital Ultrastar DC HC580 24TB SATA Enterprise HDD – 7200 RPM, ArmorCache & OptiNAND",
+   "category": "storage",
+   "priceEgp": 71500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-ultrastar-dc-hc580-24tb-sata-enterprise-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/9ojWwhZPV02IgnLZveOJSE6JT6-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7822",
+   "name": "Western Digital Ultrastar DC HC560 20TB SATA Enterprise HDD – 7200 RPM, OptiNAND & SED Security",
+   "category": "storage",
+   "priceEgp": 61500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-ultrastar-dc-hc560-20tb-sata-sed-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/9WFgR0fNZ7eROypJfrsl0pCuWP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7821",
+   "name": "Western Digital Ultrastar DC HA340 10TB SATA Enterprise HDD – 7200 RPM, 550TB/yr Workload & RV Sensors",
+   "category": "storage",
+   "priceEgp": 36500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/ultrastar-dc-ha340-10tb-sata-data-center-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/XYhX6hHtwqhhIRanYAzUaDH5Tl-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7820",
+   "name": "Western Digital Ultrastar DC HA340 12TB SATA Enterprise HDD – 7200 RPM, HelioSeal & 512MB Cache",
+   "category": "storage",
+   "priceEgp": 39999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/ultrastar-dc-ha340-12tb-sata-data-center-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/2GB9tXS160B6Rbeeo2Nq6239T1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7819",
+   "name": "Western Digital Ultrastar DC HC320 8TB SAS Enterprise HDD – 7200 RPM, CMR, 24/7 Data Center",
+   "category": "storage",
+   "priceEgp": 26999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/ultrastar-dc-hc320-8tb-sas-data-center-hdd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/03VAX3i8M9zk1yDS9QsCaNPbd0-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7818",
+   "name": "WD Purple Pro 24TB Internal Surveillance HDD – 7200 RPM, AllFrame AI & OptiNAND",
+   "category": "storage",
+   "priceEgp": 62500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-purple-pro-24tb-surveillance-hdd-wd241purp",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/tPPAkFGlKR7PXlgb6GgnkPBblt79bL1inr3AVvq6Qu-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7817",
+   "name": "WD My Book 24TB Desktop External HDD – USB 3.2 Gen 1, 256-bit AES Encryption",
+   "category": "storage",
+   "priceEgp": 46500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-my-book-desktop-external-hdd-24tb-black-usb-3-2",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/Mi21rwfAwqH8lC0PdQNwcPI0up-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7779",
+   "name": "WD My Passport 2TB Portable External HDD – USB 3.2 Gen 1, Hardware Encryption",
+   "category": "storage",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-my-passport-2tb-portable-external-hdd-usb-3-2-gen-1-hardware-encryption",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/lHFdtbwhkSsyi1UujdfOhEGpKO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7778",
+   "name": "SanDisk Optimus 5100 500GB NVMe SSD – PCIe Gen 4.0 x4 M.2 2280",
+   "category": "storage",
+   "priceEgp": 5099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-optimus-5100-nvme-ssd-500gb-m2-2280",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/nWSKcMTPCulfUVOXXskHcmiph1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7777",
+   "name": "SanDisk Optimus 5100 1TB NVMe SSD – PCIe Gen 4.0 x4 M.2 2280",
+   "category": "storage",
+   "priceEgp": 9399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-optimus-5100-nvme-ssd-1tb-m2-2280",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/HF7r2vb4Cse2LRwgSAFcqLnpjX-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7776",
+   "name": "WD_BLACK SN770 250GB M.2 2280 NVMe SSD – PCIe Gen4, 4000/2000 MB/s",
+   "category": "storage",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-sn770-nvme-m2-ssd-wds250g3x0e",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/rMORhajrdKXKwh8aIQtrsL3VIK-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7760",
+   "name": "Crucial E100 1TB PCIe Gen4 NVMe M.2 SSD – Up to 5,000 MB/s Read",
+   "category": "storage",
+   "priceEgp": 7199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/crucial-e100-pcie-gen4-nvme-m2-ssd-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Crucial/SYwlmC3hiJOceSkboqT8aS7uhy-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7740",
+   "name": "Lexar NS100 128GB 2.5\" SATA III Internal SSD",
+   "category": "storage",
+   "priceEgp": 1399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-ns100-128gb-2-5-sata-iii-internal-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/3D7A76b9FMiKh01s0aCO0OYBb7GDTskR9IgrIApZaT-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7717",
+   "name": "WD Blue SN5100 NVMe SSD 500GB – PCIe Gen 4.0 M.2 2280",
+   "category": "storage",
+   "priceEgp": 5199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-blue-sn5100-nvme-ssd-500gb-m2-2280",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/lDUfFL5kqqH7gbnppSFFHbkKrm-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7716",
+   "name": "WD_BLACK SN850X NVMe SSD 2TB – PCIe Gen 4.0 M.2 2280 (Without Heatsink)",
+   "category": "storage",
+   "priceEgp": 22500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-sn850x-nvme-ssd-2tb-without-heatsink",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/CkLjc2op6shj7F35O4ZmomXEVD-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7714",
+   "name": "WD_BLACK SN850P NVMe SSD for PS5 – 4TB M.2 2280 with PS5-Optimized Heatsink",
+   "category": "storage",
+   "priceEgp": 48000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-sn850p-nvme-ssd-ps5-4tb-m2-2280-heatsink",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/1RdY7bFGqactd6BGevNj3gUKQS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7713",
+   "name": "SanDisk Extreme Portable SSD for PlayStation 5 & PC – 1TB Officially Licensed",
+   "category": "storage",
+   "priceEgp": 7850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-extreme-portable-ssd-playstation-5-pc-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/RINHpTeEOh9Rp8G1BA7fXsU2lv-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7712",
+   "name": "SanDisk Creator Portable Phone SSD 1TB – MagSafe Compatible USB 3.2 Gen 2",
+   "category": "storage",
+   "priceEgp": 8799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-creator-portable-phone-ssd-1tb-magsafe",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/0oquITIjW8S0at8PAjLOoDA4rP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7700",
+   "name": "GIGABYTE AORUS Gen4 7000E SSD 1TB – M.2 2280 NVMe 1.4 PCIe 4.0",
+   "category": "storage",
+   "priceEgp": 8900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-gen4-7000e-ssd-1tb-m2-nvme-pcie4",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/g1OVtfQV9XYHDqTIlK9fO4kkSy-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7699",
+   "name": "GIGABYTE AORUS Gen4 7300 SSD 1TB – M.2 2280 NVMe 1.4 PCIe 4.0",
+   "category": "storage",
+   "priceEgp": 8900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-gen4-7300-ssd-1tb-m2-nvme-pcie4",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/lwBkhyb0XIrMRwVigqiLZGMUpI-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7697",
+   "name": "GIGABYTE AORUS Gen5 14000 SSD 1TB – M.2 2280 NVMe 2.0 PCIe 5.0",
+   "category": "storage",
+   "priceEgp": 12999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-gen5-14000-ssd-1tb-m2-nvme-pcie5",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/JJOuScbvSSAkQPsQeEPInG5Dlr-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7696",
+   "name": "GIGABYTE AORUS Gen5 14000 SSD 2TB – M.2 2280 NVMe 2.0 PCIe 5.0",
+   "category": "storage",
+   "priceEgp": 22499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-gen5-14000-ssd-2tb-m2-nvme-pcie5",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2026/XBFSgCv54SlUzkObrglL8HVVyc-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7635",
+   "name": "PNY CS1030 1TB M.2 2280 PCIe Gen3 NVMe Internal SSD",
+   "category": "storage",
+   "priceEgp": 6600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/pny-cs1030-1tb-m2-nvme-pcie-gen3-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/7p4OdWNNPCZeLS24d899shkjm7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7632",
+   "name": "PNY CS900 1TB 2.5\" SATA III SSD",
+   "category": "storage",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6300,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/pny-cs900-1tb-2-5-sata-iii-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/IRc9pWdnuu1i9FbcYRnLpIkkXQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7614",
+   "name": "Lexar NQ700 2TB M.2 2280 PCIe Gen4x4 NVMe SSD",
+   "category": "storage",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nq700-2tb-m2-nvme-pcie-gen4-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/pDi2GMrlWrcbfU03w2lNX2czSL-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7591",
+   "name": "TwinMOS Hyper SSD H2 Ultra 256GB SATA III 2.5\" Internal SSD",
+   "category": "storage",
+   "priceEgp": 2800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/twinmos-hyper-ssd-h2-ultra-256gb-sata-iii",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/TwinMos/nf4JbOJh72BtoBLKkJTJRYJdGs-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7512",
+   "name": "Crucial E100 480GB M.2 NVMe PCIe Gen4 SSD (CT480E100SSD8)",
+   "category": "storage",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/crucial-e100-480gb-m2-nvme-gen4-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Crucial/i8qJXnGdJHZ13or7IbkxdSznka-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7104",
+   "name": "WD_BLACK SN8100 2TB NVMe SSD – PCIe 5.0 x4 (Gen 5), M.2 2280, Up to 14,900 MB/s Read & 14,000 MB/s Write, No Heatsink (WDS200T1X0M-00CMT0)",
+   "category": "storage",
+   "priceEgp": 26500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-sn8100-2tb-nvme-ssd-pcie5-gen5-14900mbs",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/9aI0pq98y0LZkOWVngMa7HYwNE-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7103",
+   "name": "WD_BLACK SN8100 1TB NVMe SSD – PCIe 5.0 x4 (Gen 5), M.2 2280, Up to 14,900 MB/s Read & 11,000 MB/s Write, No Heatsink (WDS100T1X0M-00CMT0)",
+   "category": "storage",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd_black-sn8100-1tb-nvme-ssd-pcie-5.0-x4-(gen-5),-m.2-2280,-up-to-14,900-mb-s-read-11,000-mb-s-write,-no-heatsink-(wds100t1x0m-00cmt0)",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/e4ZUQWfTuNy4cIOZckDcMTDugo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7018",
+   "name": "SanDisk 1TB Portable SSD — Up to 800MB/s, USB-C, USB 3.2 Gen 2, Updated Firmware - External Solid State Drive",
+   "category": "storage",
+   "priceEgp": 6900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sdssde30-1t00-g26",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/nzP0rLnODlDE2MwqdDQKq3IEz4-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7013",
+   "name": "SanDisk 2TB Extreme PRO Portable SSD with USB4 Up to 3800 MB/s Read and 3700MB/s Write — USB-C, USB 3.2, Backwards Compatible, IP65 Water and Dust Resistance",
+   "category": "storage",
+   "priceEgp": 15500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sdssde82-2t00-g25",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/ik84MRojHojJcs5bCIEeuguFz1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6872",
+   "name": "Western Digital WD_BLACK SN850X 8TB with Heatsink NVMe PCIe 4.0 x4 M.2 2280 SSD — TLC 3D NAND, 7,200 MB/s Read, 6,600 MB/s Write, Advanced Thermal Management, DirectStorage Support, Windows 10+ & PS5 Compatible, Black",
+   "category": "storage",
+   "priceEgp": 69000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn850x-8tb-heatsink",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/DaG3dNBoUMZHzDnIFx2EaUXABW-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6871",
+   "name": "Western Digital WD_BLACK SN850X 4TB with Heatsink NVMe PCIe 4.0 x4 M.2 2280 SSD — Ultra-Fast TLC 3D NAND, 7,300 MB/s Read, 6,600 MB/s Write, Advanced Thermal Management, DirectStorage Support, Compatible with Windows 10+ & PS5, 3-Year Warranty, Black",
+   "category": "storage",
+   "priceEgp": 27999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn850x-4tb-heatsink",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/pN3ORQwca7tvZE4VzyUUHnDRXl-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6870",
+   "name": "Western Digital WD_BLACK SN850X 2TB with Heatsink NVMe PCIe 4.0 x4 M.2 2280 Internal Solid State Drive — Ultra-Fast TLC 3D NAND Flash, Built for Elite Gaming and High-Performance Workstations",
+   "category": "storage",
+   "priceEgp": 22999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn850x-2tb-heatsink",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/mHW1PxGAqGB2SDryqHOZSSfzx0-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6868",
+   "name": "Western Digital WD_BLACK SN850X 8TB Without Heatsink NVMe PCIe 4.0 x4 M.2 2280 Internal Solid State Drive — Ultra-Fast TLC 3D NAND Flash, Designed for Elite Gaming and High-Performance Workstations",
+   "category": "storage",
+   "priceEgp": 65000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn850x-8tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/N5PJu423jRrLIbzB69syoaXF6M-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6867",
+   "name": "Western Digital WD_BLACK SN850X 4TB Without Heatsink NVMe PCIe 4.0 x4 M.2 2280 Internal Solid State Drive — High-Performance TLC NAND Flash, Optimized for Gaming and High-Speed Computing",
+   "category": "storage",
+   "priceEgp": 26999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn850x-4tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/1adoWFa8THb3J01815AeajradQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6865",
+   "name": "Western Digital WD_BLACK SN7100 4TB NVMe PCIe 4.0 x4 M.2 2280 Internal Solid State Drive — High-Speed TLC 3D NAND Flash",
+   "category": "storage",
+   "priceEgp": 23900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn7100-4tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/mtJiY9VFNzr9DfD54b7IOH6NPO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6863",
+   "name": "WD_BLACK SN7100 NVMe SSD 1TB — M.2 2280, PCIe Gen4 x4 Interface, Sequential Read up to 7,300 MB/s, Sequential Write up to 6,600 MB/s, High Endurance, Advanced NAND Flash, Optimized for Gaming and Content Creation",
+   "category": "storage",
+   "priceEgp": 8800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd_black-sn7100-nvme-ssd-1tb-m.2-2280",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/n4UMLPR03j8lyzOYYjGXkFwrb3-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6862",
+   "name": "WD Blue SN5000 WDS400T4B0E 4TB NVMe SSD — M.2 2280, PCIe Gen4 x4 Interface, Sequential Read up to 5,500 MB/s, Sequential Write up to 4,880 MB/s, 690K IOPS Random Read, 900K IOPS Random Write, 1200 TBW Endurance, Western Digital 3D NAND",
+   "category": "storage",
+   "priceEgp": 29999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-blue-sn5000-wds400t4b0e-4tb-nvme-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/loQKyDDNxd8TUAjDnx35qPW7L7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6768",
+   "name": "Samsung 9100 PRO M.2 1TB PCIe 5.0 NVMe SSD — 14,700 MB/s Sequential Read, 13,300 MB/s Sequential Write, Samsung V-NAND TLC, 1GB LPDDR4X Cache, MZ-VAP1T0 Model",
+   "category": "storage",
+   "priceEgp": 14800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/samsung-9100-pro-m.2-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/ON10rvWERXDOHk5zZV5YGM45Mr-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6748",
+   "name": "TwinMOS xtreme NV1TBG42280v 1TB M.2 2280 NVMe PCIe Gen4 x4 SSD — Up to 7500MB/s Read & 6800MB/s Write, 3D NAND, Single-Sided, High-Performance Storage for Laptops & Desktops",
+   "category": "storage",
+   "priceEgp": 7999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/twinmos-xtreme-nv1tbg42280v-1tb-m.2-2280",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/TwinMos/XVbvMt7mvApl1I59oMdfQJsxXLjKl7sN5m9eYxSogQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6662",
+   "name": "Western Digital Blue SA510 1TB SATA SSD — 2.5 Inch 7mm, SATA III 6Gb/s, 560MB/s Sequential Read, 520MB/s Sequential Write, 90K IOPS Random Read, 82K IOPS Random Write, 3D NAND TLC, 400 TBW Endurance",
+   "category": "storage",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-blue-sa510-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/8ElBo2567jCcGXT12LelXqr8T9s2mHeyDFrsIu614t-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6485",
+   "name": "MSI SPATIUM M570 PRO FROZR PCIe 5.0 NVMe M.2 2TB SSD – 12,400MB/s Read, 11,800MB/s Write, 3000 TBW, NVMe 2.0",
+   "category": "storage",
+   "priceEgp": 27500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m570-pro-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/R65Bnbj0r58IQ41Es8HdmdIkGG-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6483",
+   "name": "MSI SPATIUM M480 PRO 4TB PCIe 4.0 NVMe M.2 – NVMe 1.4, PCIe Gen4x4, Up to 7400MB/s Read, 6000MB/s Write, 3000 TBW",
+   "category": "storage",
+   "priceEgp": 30000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m480-pro-4tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/ecy670k5AT3Zam5TsEbOs9tkHU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6420",
+   "name": "Redragon Dragon Knight RM112 128GB SATA III SSD – Up to 500MB/s Read, 400MB/s Write, 2.5\" Form Factor for Reliable and Fast Storage Performance",
+   "category": "storage",
+   "priceEgp": 1199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2150,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/redragon-dragon-knight-rm112-128gb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2025/QiHG1vTrSstEU3ZoRHvhoxHZQ5-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6419",
+   "name": "MSI SPATIUM M580 2TB PCIe 5.0 NVMe M.2 FROZR – Gen5x4 Interface, Up to 14,600MB/s Read/Write, Enthusiast Passive Thermal Design, 3000 TBW for Ultimate Performance",
+   "category": "storage",
+   "priceEgp": 29500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m580-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/YpVcJ2wB7ngZctkiQxm3eQhqMY-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5616",
+   "name": "Lexar NM620 M.2 2280 PCIe Gen3 x 4 NVMe SSD Internal Solid State Drive 512GB (3500MB/s Read / 2400MB/s Write)",
+   "category": "storage",
+   "priceEgp": 4699,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm620-m.2-2280-pcie-gen3-x-4-nvme-ssd-internal-solid-state-drive-512gb-(3500mb-s-read-2400mb-s-write)",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/5DTJtPcYgsfTuelTXt6ykM70oaIpp7Yr0xuZetS8d-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5489",
+   "name": "WD BLACK 1TB SN850P NVMe M.2 SSD — Officially Licensed Storage Expansion for PS5 Consoles, up to 7,300MB/s, with heatsink - WDBBYV0010BNC-WRSN",
+   "category": "storage",
+   "priceEgp": 9900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-1tb-sn850p-nvme-m.2-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/nTAK7FDVvfgao5sNbeKHwl4ojj-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5488",
+   "name": "Western Digital WD_BLACK SN850X 1TB with Heatsink NVMe PCIe 4.0 x4 M.2 2280 SSD — TLC 3D NAND, 7,300 MB/s Read, 6,300 MB/s Write, Advanced Thermal Management, DirectStorage Support, Compatible with Windows 10+ & PS5, Black",
+   "category": "storage",
+   "priceEgp": 11500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-sn850x-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/rhCa1pSNtmfvvnNcbcebmzaPlT-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5324",
+   "name": "Samsung SSD 990 Pro 2TB NVMe M.2 Pcle 4.0, Internal SSD — Read Speed ​​up to 7450MB/s, Intelligent Heat Management with Nickel Coating, MZ-V9P2T0BW",
+   "category": "storage",
+   "priceEgp": 23500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/samsung-ssd-990-pro-2tb-nvme-m.2-pcle-4.0-mz-v9p2t0bw",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/p5bscD8oaKrPeUKJVURYCnpfzO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7837",
+   "name": "Lexar NQ780 2TB M.2 2280 NVMe SSD – PCIe Gen 4x4, 7000/5000 MB/s",
+   "category": "storage",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nq780-2tb-m2-2280-pcie-gen4-nvme-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/ZHamEmHfwnX8Iz4JwNUVTQYoMo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7761",
+   "name": "Lexar NQ780 1TB M.2 2280 PCIe Gen4 NVMe SSD – Single-Sided Design",
+   "category": "storage",
+   "priceEgp": 7999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nq780-m2-2280-pcie-gen4-nvme-ssd-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/IR0Rfkgajr1nHXtrf6DawSyk39-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7741",
+   "name": "Kingston XS2000 Portable SSD 4TB – USB 3.2 Gen 2x2 Up to 2,000 MB/s",
+   "category": "storage",
+   "priceEgp": 23500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/kingston-xs2000-portable-ssd-4tb-usb-3-2-gen-2x2",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Kingston/ZxHZ2E6ohAq9x9KTzOvmkfwoaP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7715",
+   "name": "WD_BLACK SN850X NVMe SSD 1TB – PCIe Gen 4.0 M.2 2280 (Without Heatsink)",
+   "category": "storage",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-sn850x-nvme-ssd-1tb-without-heatsink",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/QxMLyofuCY7tj29AgD3YbQufJ7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7711",
+   "name": "SanDisk Extreme Portable SSD USB 3.2 – 4TB Rugged External SSD",
+   "category": "storage",
+   "priceEgp": 21099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 23999,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-extreme-portable-ssd-usb-3-2-4tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/A9uacpQgHduEpq1exWlPvZ31HT-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7698",
+   "name": "GIGABYTE AORUS Gen4 7300 SSD 2TB – M.2 2280 NVMe 1.4 PCIe 4.0",
+   "category": "storage",
+   "priceEgp": 13500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-gen4-7300-ssd-2tb-m2-nvme-pcie4",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/dRR7ptMOdqkAomtn1i5e5OxcKP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7695",
+   "name": "GIGABYTE Gen4 4000E SSD 1TB – M.2 2280 NVMe PCIe 4.0",
+   "category": "storage",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-gen4-4000e-ssd-1tb-m2-nvme-pcie4",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/oVGUi8Nu3TY3MdAPbTyzGW0XdI-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7694",
+   "name": "GIGABYTE Gen4 4000E SSD 500GB – M.2 2280 NVMe PCIe 4.0",
+   "category": "storage",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-gen4-4000e-ssd-500gb-m2-nvme-pcie4",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/2JsEMMneqVDbnYljpb6TIoaimj-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7615",
+   "name": "Lexar NQ790 2TB M.2 2280 PCIe Gen4x4 NVMe SSD",
+   "category": "storage",
+   "priceEgp": 11800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nq790-2tb-m2-nvme-pcie-gen4-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/IO3LcjPUkFPbp00huk7c8vK7GQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7463",
+   "name": "Crucial P3 Plus 1TB PCIe 4.0 NVMe M.2 SSD - Gen4, Up to 5000MB/s, 3D NAND",
+   "category": "storage",
+   "priceEgp": 7300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/crucial-p3-plus-1tb-pcie-4-0-nvme-m-2-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Crucial/bWHPD8usxFZZ7e6AR2eqyM2SY6D8YWa06pYmtnBS93-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7366",
+   "name": "Samsung 9100 PRO SSD 2TB – PCIe 5.0 NVMe M.2 2280, Up to 14,700 MB/s, 2GB LPDDR4X Cache (MZ-VAP2T0BW)",
+   "category": "storage",
+   "priceEgp": 19999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/samsung-9100-pro-2tb-pcie-5-nvme-ssd-mz-vap2t0bw",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/JhFltoflfY9Qdq3FOYhEubAbH7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7214",
+   "name": "SanDisk Extreme PRO Portable SSD 1TB – USB-C 3.2 Gen 2×2, 2000MB/s NVMe Performance, Rugged IP65, USB-C External Storage",
+   "category": "storage",
+   "priceEgp": 9499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-extreme-pro-portable-ssd-1tb-usb-c-2000mbs",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/FMWd90gGYMhJVsD4V5vR9VVOFw-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7180",
+   "name": "SanDisk 2TB USB 3.2 Gen 2 Portable SSD – Up to 800MB/s Read Speed, Rugged Drop Protection (2m), USB-C & USB-A Compatible",
+   "category": "storage",
+   "priceEgp": 11000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-2tb-usb-3-2-portable-ssd-800mbps",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/aGowodfwgt9NOh6cPqPoOumwm4-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7105",
+   "name": "WD_BLACK SN8100 4TB NVMe SSD – PCIe 5.0 x4/Gen5, M.2 2280, Up to 14,900 MB/s Read & 14,000 MB/s Write, No Heatsink (WDS400T1X0M-00CMT0)",
+   "category": "storage",
+   "priceEgp": 1,
+   "priceIsPlaceholder": true,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-sn8100-4tb-nvme-ssd-pcie5-gen5-14900mbs",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/LhUxqFaC1xOQ44yvrrHplmgG6A-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7102",
+   "name": "SanDisk Extreme Portable SSD 2TB for PlayStation 5 & PC – USB-C (USB 3.2 Gen 2), Up to 1000 MB/s Read Speed, IP65 Rugged Design, Model SDSSDE62P-2T00-G25",
+   "category": "storage",
+   "priceEgp": 12999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 14100,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-extreme-portable-ssd-2tb-usb-c-1000mbs-ps5-pc",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/Ts5gM6VIriMX9diMPRsaQ9OunS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7037",
+   "name": "Kingston XS2000 Portable SSD 2TB — USB 3.2 Gen 2x2, up to 2000MB/s read/write, USB‑C, includes rubber sleeve",
+   "category": "storage",
+   "priceEgp": 1,
+   "priceIsPlaceholder": true,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sxs2000-2000g",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/P2IAoAAFJf86Pv7OdySpuLqJc7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7019",
+   "name": "SanDisk 1TB Extreme Portable SSD — Up to 1050MB/s, USB-C, USB 3.2 Gen 2, IP65 Water and Dust Resistance, Updated Firmware - External Solid State Drive",
+   "category": "storage",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sdssde61-1t00-g25",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/NGvgNbZXHv33Q8XzxIgZ0FJFjr-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7014",
+   "name": "SanDisk 4TB Extreme PRO Portable SSD with USB4 Up to 3800 MB/s Read and 3700MB/s Write — USB-C, USB 3.2, Backwards Compatible, IP65 Water and Dust Resistance",
+   "category": "storage",
+   "priceEgp": 30000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sdssde82-4t00-g25",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/kVIJU9yI30qNpJoSEWwucP90Wo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7012",
+   "name": "SanDisk Extreme PRO Portable SSD 4TB — USB 3.2 Gen 2x2, up to 2000 MB/s read/write, USB‑C, IP65 water/dust resistance, 256‑bit AES encryption, forged aluminum heatsink chassis",
+   "category": "storage",
+   "priceEgp": 24000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sdssde81-4t00-g25",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/jnWOXIKNj4iN7Lry9bpsx6COYm-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6961",
+   "name": "Samsung 990 PRO with Heatsink NVMe M.2 SSD 2TB – PCIe Gen 4.0 x4, Sequential Read up to 7,450 MB/s, Sequential Write up to 6,900 MB/s, Samsung V-NAND TLC, 2GB LPDDR4 Cache, AES 256-bit Encryption, Integrated Heatsink, M.2 2280 Form Factor",
+   "category": "storage",
+   "priceEgp": 19500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/samsung-990-pro-with-heatsink-nvme-m.2-ssd-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/aNp5ClCZjfvFtxiDeZ1ncnlacn-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6869",
+   "name": "Western Digital WD_BLACK SN850X 1TB Without Heatsink NVMe PCIe 4.0 x4 M.2 2280 Internal Solid State Drive — Ultra-Fast TLC 3D NAND Flash, Built for Elite Gaming and High-Performance PCs",
+   "category": "storage",
+   "priceEgp": 9100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn850x-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/TeHtLUEOP5tF4EBH6XX6hJRieH-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6866",
+   "name": "Western Digital WD_BLACK SN850X 2TB Without Heatsink NVMe PCIe 4.0 x4 M.2 2280 Internal Solid State Drive — High-Performance TLC NAND Flash, Optimized for Gaming and High-Speed Computing",
+   "category": "storage",
+   "priceEgp": 21499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn850x-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/A8CYCKGa1hvdUqXlNZAa6D5VhI-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6864",
+   "name": "Western Digital WD_BLACK SN7100 2TB NVMe PCIe 4.0 x4 M.2 2280 Internal Solid State Drive — High-Speed TLC 3D NAND Flash",
+   "category": "storage",
+   "priceEgp": 13500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-wd_black-sn7100-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/i9Gd453ch1m3MVL7bAHnZ2nPWh-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6861",
+   "name": "WD Blue SN5000 WDS200T4B0E 2TB NVMe SSD, M.2 2280 — PCIe Gen4 x4 Interface, Sequential Read up to 5,150 MB/s, Sequential Write up to 4,850 MB/s, 650K IOPS Random Read, 900 TBW Endurance, Western Digital 3D NAND",
+   "category": "storage",
+   "priceEgp": 12500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-blue-sn5000-wds200t4b0e-2tb-nvme-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/bhP4WZmjtpaK2YB8QMVh25iMno-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6749",
+   "name": "TwinMOS AlphaPro 1TB NVMe M.2 2280 PCIe Gen3 x4 SSD — Up to 3500MB/s Read & 3080MB/s Write, 3D TLC NAND, Low Power, High Endurance, 1500G Shock Resistance, MTBF 1.5 Million Hours",
+   "category": "storage",
+   "priceEgp": 6000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/twinmos-alphapro-1tb-nvme-m.2",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/TwinMos/9y4PKghVGqZixDJw711LW6otGE-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6649",
+   "name": "WD Blue SN5000 NVMe SSD 500GB — M.2 2280, PCIe Gen4 x4, Up to 5000MB/s Read, 4000MB/s Write, 460K Random Read IOPS, 770K Random Write IOPS, 300 TBW Endurance, Western Digital nCache 4.0",
+   "category": "storage",
+   "priceEgp": 4749,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-blue-sn5000-nvme-ssd-500gb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/ySzvERJCmClRVEMQJuWGqgCEQa-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6570",
+   "name": "TwinMOS AlphaPro 512GB PCIe Gen3 NVMe M.2 2280 SSD – TLC 3D NAND, 1000TBW Endurance, 5-Year Local Warranty",
+   "category": "storage",
+   "priceEgp": 1650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/twinmos-alphapro-512gb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/TwinMos/TfZNufyUff21s6JkafkidU8jqa-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6554",
+   "name": "Acer RE100 1TB SATA III SSD – 3D NAND, 2.5 Form Factor",
+   "category": "storage",
+   "priceEgp": 2700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/acer-re100-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Acer/7aBqqgWphMz7RnrXG1rhiIF6kw-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6484",
+   "name": "MSI SPATIUM M560 PCIe 5.0 NVMe M.2 1TB SSD – 10,300MB/s Read, 8,700MB/s Write, 1200 TBW, NVMe 2.0",
+   "category": "storage",
+   "priceEgp": 5750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m560-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/Fc0F3f3yeSaeFCAdKvEhbsRKmO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6477",
+   "name": "MSI SPATIUM M480 PRO 2TB PCIe 4.0 NVMe M.2 – NVMe 1.4, PCIe Gen4x4, Up to 7400MB/s Read, 6000MB/s Write, 3000 TBW",
+   "category": "storage",
+   "priceEgp": 7800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m480-pro-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/WO6DC80iu26m46ula2MWT6jhUO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6476",
+   "name": "MSI SPATIUM M470 PCIe 4.0 NVMe M.2 2TB SSD – PCIe Gen4x4, 5000MB/s Read, 4400MB/s Write, 3300TBW, Data Security",
+   "category": "storage",
+   "priceEgp": 6600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m470-pcie-4.0-nvme-m.2-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/Ev8FtJXRtNcfF9gb7Hswhd8I78-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6475",
+   "name": "MSI SPATIUM M470 PCIe 4.0 NVMe M.2 1TB SSD – PCIe Gen4x4, 5000MB/s Read, 4400MB/s Write, 3300TBW, Data Security",
+   "category": "storage",
+   "priceEgp": 6300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m470-pcie-4.0-nvme-m.2-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/vxkusnCjbzXzuAd7nA1Qlf53Sa-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6474",
+   "name": "MSI SPATIUM M371 NVMe M.2 500GB SSD – PCIe Gen3x4, 2350MB/s Read, 1900MB/s Write, 480TBW, Data Security",
+   "category": "storage",
+   "priceEgp": 1950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m371-nvme-m.2-500gb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/fmSNzmy4IW1T8YeXjxiP8XCit90nkeMdAVwU2jlCV7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6421",
+   "name": "Redragon Dragon Knight RM113 256GB SATA III SSD – Up to 500MB/s Read, 400MB/s Write, 2.5\" Form Factor for Reliable and Fast Storage Performance",
+   "category": "storage",
+   "priceEgp": 900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/redragon-dragon-knight-rm113-256gb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Redragon/AEH8QggDL5K5k9EGkxHr4WaloI-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6406",
+   "name": "MSI SPATIUM S270 960GB SATA 2.5 Inch SSD – SATA III, Up to 500MB/s Read/Write, 500TBW, Data Security for Desktop & Notebook",
+   "category": "storage",
+   "priceEgp": 3000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-s270-960gb-sata-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/0ywuKiVTzh0CdNP7t04aclenYnTFEMgKvoRmRZglI1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6405",
+   "name": "MSI SPATIUM S270 480GB SATA 2.5 Inch SSD – SATA III, Up to 500MB/s Read/Write, 500TBW, Data Security for Desktop & Notebook",
+   "category": "storage",
+   "priceEgp": 1800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-s270-480gb-sata-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/tQMkgtVrPxiduDvKSo1fXeY39nbtozWAslNJl9xOKl-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6404",
+   "name": "MSI SPATIUM S270 240GB SATA 2.5 Inch SSD – SATA III, Up to 500MB/s Read/Write, 500TBW, Data Security for Desktop & Notebook",
+   "category": "storage",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-s270-240gb-sata",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/bGmy5pqUsQjJuMNeEJPune1SZR-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6204",
+   "name": "MSI SPATIUM M480 PRO 1TB PCIe 4.0 NVMe M.2 – NVMe 1.4, PCIe Gen4x4, Up to 7400MB/s Read, 6000MB/s Write, 3000 TBW, 1TB–4TB, M.2 2280 – Ideal for Desktop & Notebook",
+   "category": "storage",
+   "priceEgp": 6200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m480-pro-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/srO7jphlyuN8OXTklIVG8vrrGq-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6203",
+   "name": "MSI SPATIUM M461 2TB PCIe 4.0 NVMe M.2 – NVMe 1.4, PCIe Gen4x4, Up to 5000MB/s Read, 4200MB/s Write, 900 TBW, Ideal for Desktop & Notebook",
+   "category": "storage",
+   "priceEgp": 6600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m461-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/nbIA5KXQhe4QwoNL75rNmDJIPT-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6202",
+   "name": "MSI SPATIUM M460 1TB PCIe 4.0 NVMe M.2 – High-Performance SSD with PCIe Gen4x4, NVMe 1.4, Up to 5000MB/s Read, 4500MB/s Write, 1200 TBW, M.2 2280",
+   "category": "storage",
+   "priceEgp": 4100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m460-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/NwxDr5TXlKbYB6CNi6jfVhJEI3-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6201",
+   "name": "MSI SPATIUM M450 PCIe 4.0 NVMe M.2 1TB– High-Performance M.2 SSD, NVMe 1.4, PCIe Gen4x4, 3600MB/s Read, 3000MB/s Write, 1200 TBW, M.2 2280",
+   "category": "storage",
+   "priceEgp": 3200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m450-pcie-4.0-nvme-m.2-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/JNXsVqvHlZFSm927U53iZyhUoY-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6200",
+   "name": "MSI SPATIUM M450 PCIe 4.0 NVMe M.2 500G – High-Performance M.2 SSD, NVMe 1.4, PCIe Gen4x4, 3600MB/s Read, 2300MB/s Write, 1200 TBW, M.2 2280",
+   "category": "storage",
+   "priceEgp": 1999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-spatium-m450-pcie-4.0-nvme-m.2-500g",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/hxZfh3lShy96NACD6xWVseMoSW-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5921",
+   "name": "Patriot P220 512GB Internal SSD - SATA 3 2.5 Inch - Solid State Drive - P220S512G25",
+   "category": "storage",
+   "priceEgp": 1650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p220-512gb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/ug2na80pgY8GXmXsizgCzznMpb-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5875",
+   "name": "GIGABYTE Gen4 4000E SSD 250GB - G440E250G",
+   "category": "storage",
+   "priceEgp": 1450,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-gen4-4000e-ssd-250gb-g440e250g",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/MlNxcgGBrlFAiUqQo1i9jsAa44p88z8MvhOIKfW43j-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5858",
+   "name": "990 EVO PCIe 4.0 NVMe M.2 SSD 1TB — Up to 5,000/4,200 MB/s read/write speeds, Enhanced power efficiency - MZ-V9E1T0BW",
+   "category": "storage",
+   "priceEgp": 10000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/990-evo-pcie-4.0-nvme-m.2-ssd-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/12fSytjYebVyFHha09CxLifAAU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5857",
+   "name": "SAMSUNG SSD 990 PRO with Heatsink 1TB — PCIe 4.0, Sew. Read Speeds Up-to 7,450MB/s, Compatible with PlayStation 5 - MZ-V9P1T0CW",
+   "category": "storage",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/samsung-ssd-990-pro",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/bVBYdQ5BF5RmBwBszR6y0k9864-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5781",
+   "name": "SAMSUNG 990 PRO SSD 4TB PCIe 4.0 M.2 2280 Internal SSD — Seq. Read Speeds Up to 7,450 MB/s for High End Computing, Gaming, and Heavy Duty Workstations",
+   "category": "storage",
+   "priceEgp": 16500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/mz-v9p4t0b-am",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/osVgjU0vxn8a7mmiOakx6G9vfD-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5777",
+   "name": "ADATA SC750 500GB - Up to 1000 MB/s- HighSpeed USB 3.2 Gen 2 USB-C External Portable SSD Black Titanium - Work with PS5 & XBOX",
+   "category": "storage",
+   "priceEgp": 2750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sc750-500g-ccbk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/ZiLel6VGWL4N5IqQrCcLRsv3iw-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5776",
+   "name": "ADATA 2TB SSD Legend 800, NVMe PCIe Gen4 x 4 M.2 2280 Internal Solid State Drive, Speed up to 3,500MB/s, Storage for PC and Laptops, High Endurance with 3D NAND",
+   "category": "storage",
+   "priceEgp": 1,
+   "priceIsPlaceholder": true,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/aleg-800-2000gcs",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/oCmI8lZw42hu4dp0i1PMV13I4L2zVOHka7ThxhJERD-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5775",
+   "name": "ADATA 1TB SSD Legend 800, NVMe PCIe Gen4 x 4 M.2 2280 Internal Solid State Drive, Speed up to 3,500MB/s, Storage for PC and Laptops, High Endurance with 3D NAND",
+   "category": "storage",
+   "priceEgp": 1,
+   "priceIsPlaceholder": true,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/aleg-800-1000gcs",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/uPzoKngnhdSBlzed2TP2s4aHY9-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5615",
+   "name": "Lexar NM620 M.2 2280 PCIe Gen3 x 4 NVMe SSD Internal Solid State Drive 256GB (3500MB/s Read / 1300MB/s Write)",
+   "category": "storage",
+   "priceEgp": 1,
+   "priceIsPlaceholder": true,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm620-m.2-2280-pcie-gen3-x-4-nvme-ssd-internal-solid-state-drive-256gb-(3500mb-s-read-1300mb-s-write)",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/ikxUy4Bs3AMaBzqcMyeMqF4x11BymspvA86ozrda4-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5614",
+   "name": "Lexar NM790 M.2 2280 PCIe Gen 4×4 NVMe SSD Internal Solid State Drive 1TB (7400MB/s Read/6500MB/s Write)",
+   "category": "storage",
+   "priceEgp": 7899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm790-m.2-2280-pcie-gen-4-4-nvme-ssd-internal-solid-state-drive-1tb-(7400mb-s-read-6500mb-s-write)",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2024/rSkw9CW9LvQ7Z3PwzWhHiO5B7YJ9IWI6unwRZeAti-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5613",
+   "name": "Lexar NM790 M.2 2280 PCIe Gen 4×4 NVMe SSD Internal Solid State Drive 2TB (7400MB/s Read/6500MB/s Write)",
+   "category": "storage",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm790-m.2-2280-pcie-gen-4-4-nvme-ssd-internal-solid-state-drive-2tb-(7400mb-s-read-6500mb-s-write)",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/KYhkZg8AYK01hygZRr1qUYhMiIc4CP2N8j1JVMsts-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5612",
+   "name": "Lexar NM790 M.2 2280 PCIe Gen 4×4 NVMe SSD Internal Solid State Drive 4TB (7400MB/s Read/6500MB/s Write)",
+   "category": "storage",
+   "priceEgp": 14900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm790-m.2-2280-pcie-gen-4-4-nvme-ssd-internal-solid-state-drive-4tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2024/SMz4l7HLwksDxfXZnMufvKrJfJHuV4qRzqI9Z6kfC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5611",
+   "name": "Lexar NM790 512GB M.2 2280 PCIe Gen 4×4 NVMe SSD Internal Solid State Drive (Read 7200MB/s / Write 4400MB/s)",
+   "category": "storage",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lnm790x512g-rnnng",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2024/ilgPCvEqiLhvTotL3FZG549HTdWY2QhlnIuV3Bufe-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5490",
+   "name": "SanDisk 1TB Extreme Portable SSD - Up to 1050MB/s, USB-C, USB 3.2 Gen 2, IP65 Water and Dust Resistance, Updated Firmware - External Solid State Drive - SDSSDE61-1T00-G25",
+   "category": "storage",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sandisk-1tb-extreme-portable-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/SanDisk/wvqKZVswGsGpBuxdxo5urdwUQC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5486",
+   "name": "TEAMGROUP MP33 256GB SLC Cache 3D NAND TLC NVMe 1.3 PCIe Gen3x4 M.2 2280 Internal SSD Read/Write Speed up to 1800/1500 MB/s Compatible with Laptop & PC Desktop",
+   "category": "storage",
+   "priceEgp": 1200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/teamgroup-mp33-256gb-slc-cache",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/r8xquvn193WPaef36MWnVeyuXQsTDCP6O4zG2GvYyHS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5484",
+   "name": "TEAMGROUP T-Force CARDEA Zero Z44L 500GB — Support SLC Cache - PCIe Gen4x4 M.2 2280 - Read/Write 3,300/2,700 MB/s - TM8FPL500G0C127",
+   "category": "storage",
+   "priceEgp": 2250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/teamgroup-t-force-cardea-zero-z44l-500gb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/Ycnu819DDVMYw2doCsANKxDXwpDrSbTuMVsjqlAG1qZ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5416",
+   "name": "TEAMGROUP MP33 1TB SLC Cache 3D NAND TLC NVMe 1.3 PCIe Gen3x4 M.2 2280 Internal SSD Read/Write Speed up to 1800/1500 MB/s Compatible with Laptop & PC Desktop",
+   "category": "storage",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4300,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/teamgroup-mp33-1tb-slc",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/poyuWMgySyhue30X6bOuOU9lrR-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5394",
+   "name": "Seagate 8TB BarraCuda Internal Hard Drive SATA 6Gb/s 256MB Cache 3.5-Inch — ST8000DM004",
+   "category": "storage",
+   "priceEgp": 9000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-8tb-st8000dm004",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Seagate/wff5NaqOL1GgUwoe3JM0TTOKUt-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5307",
+   "name": "Western Digital 2TB WD Blue SN570 NVMe Internal Solid State Drive SSD - Gen3 x4 PCIe 8Gb/s, M.2 2280, Up to 3,500 MB/s - WDS200T3B0C",
+   "category": "storage",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/western-digital-2tb-wd-blue",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/BhlGUGKWsyUVctKZdIKjcilaJl-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5281",
+   "name": "Lexar NM790 SSD 2TB PCIe Gen4 NVMe M.2 2280 Internal Solid State Drive, Up to 7400MB/s, Compatible with PS5, for Gamers and Creators",
+   "category": "storage",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 10500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm790-ssd-2tb-pcie-gen4-nvme-m.2-2280-internal-solid-state-drive,-up-to-7400mb-s,-compatible-with-ps5,-for-gamers-and-creators",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/PF9KlcM3hOKrq4Br4qoGM7EGTU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5280",
+   "name": "Lexar NM790 SSD 1TB PCIe Gen4 NVMe M.2 2280 Internal Solid State Drive, Up to 7400MB/s, Compatible with PS5, for Gamers and Creators",
+   "category": "storage",
+   "priceEgp": 4900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7900,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm790-ssd-1tb-pcie-gen4-nvme-m.2-2280-internal-solid-state-drive,-up-to-7400mb-s,-compatible-with-ps5,-for-gamers-and-creators",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/PF9KlcM3hOKrq4Br4qoGM7EGTU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5279",
+   "name": "Lexar Professional NM800 PRO SSD 2TB PCIe Gen4 NVMe M.2 2280 Internal Solid State Drive, Up to 7500MB/s Read, for PS5, Gamers and Creators",
+   "category": "storage",
+   "priceEgp": 10750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-professional-nm800-pro-ssd-2tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/LGnaSTjX94dDry6yvJYH2uL9BS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5278",
+   "name": "Lexar Professional NM800 PRO SSD 1TB PCIe Gen4 NVMe M.2 2280 Internal Solid State Drive, Up to 7500MB/s Read, for PS5, Gamers and Creators",
+   "category": "storage",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-professional-nm800-pro-ssd-1tb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/LGnaSTjX94dDry6yvJYH2uL9BS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5074",
+   "name": "Lexar NM710 SSD 1TB PCIe Gen4 NVMe M.2 2280 Internal Solid State Drive, Up to 5000MB/s",
+   "category": "storage",
+   "priceEgp": 7300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm710-ssd-1tb-pcie-gen4",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/Sqfnbn1VdRnbIDWVNftEWAsCR4-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5015",
+   "name": "Samsung 990 PRO 1TB PCIe Gen4. X4 NVMe 2.0c - M.2 Internal SSD",
+   "category": "storage",
+   "priceEgp": 5300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/samsung-990-pro-1tb-pcie-gen4.-x4-nvme-2.0c-m.2-internal-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Samsung/UPih6yBt6YqXQrAUvMwtzz9UJs-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4762",
+   "name": "Seagate SkyHawk AI 16TB 3.5 Inch SATA 256MB 7200RPM Hard Drive",
+   "category": "storage",
+   "priceEgp": 16500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/seagate-skyhawk-ai-16tb-3-5-inch-sata-256mb-7200rpm-hard-drive",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2023/jRubkjH92qLKbKfGLafj9VzsHmITjQzULI2-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4709",
+   "name": "WD Black 6TB Performance Desktop Hard Disk Drive - 7200 RPM SATA 6Gb/s 256MB Cache 3.5 Inch",
+   "category": "storage",
+   "priceEgp": 7900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-black-6tb-performance-desktop-hard-disk-drive-7200-rpm-sata-6gb-s-256mb-cache-3-5-inch",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/WD/HpnyNkprViIcvajLh5oZP0CxShFJmoF4FOIp7MF8ndE-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4644",
+   "name": "PNY CS1030 500GB M.2 NVMe PCIe Gen3 x4 Internal SSD",
+   "category": "storage",
+   "priceEgp": 1499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/pny-cs1030-500gb-m-2-nvme-pcie-gen3-x4-internal-ssd-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/tTDkOVako8VUV0zjks7fvhbc8oCcMxwzgYXQ5K5C8P8XcqLV-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4642",
+   "name": "PNY CS1030 250GB M.2 NVMe PCIe Gen3 x4 Internal SSD",
+   "category": "storage",
+   "priceEgp": 999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/pny-cs1030-250gb-m-2-nvme-pcie-gen3-x4-internal-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/oKsu4NswP8NiVgAoTQClp5k9rPnqhtx4CLc2XVc6J5MXcUhQ-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4641",
+   "name": "PNY CS900 480GB 2.5 SATA III INTERNAL SSD - SSD7CS900-480-RB",
+   "category": "storage",
+   "priceEgp": 1150,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/pny-cs900-480gb-2-5-sata-iii-internal-ssd-ssd7cs900-480-rb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/dcifldtdrJaVExEj9leAeynuPIrQEOswVHzWVJEMoHwYwg9b-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4635",
+   "name": "Acer FA100 256GB M.2 NVMe PCIe Gen3 x 4 SSD",
+   "category": "storage",
+   "priceEgp": 999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/acer-fa100-256gb-m-2-nvme-pcie-gen3-x-4-ssd",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Acer/CWSh3WtDVm5uh65DDLreDCFhkQ6x9mSrkHyfOrITaTPYL-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4564",
+   "name": "Crucial P3 1TB PCIe 3.0 3D NAND NVMe M.2 SSD, up to 3500MB/s",
+   "category": "storage",
+   "priceEgp": 3099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/crucial-p3-1tb-pcie-3-0-3d-nand-nvme-m-2-ssd-up-to-3500mb-s",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Crucial/BndbMpTQqBlheCcHF1yHXeU72gBLHBXke14USOs-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4563",
+   "name": "Lexar NM620 M.2 2280 NVMe SSD 256GB up to 3300MB/s read, 1300MB/s write",
+   "category": "storage",
+   "priceEgp": 999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lexar-nm620-m-2-2280-nvme-ssd-256gb-up-to-3300mb-s-read-1300mb-s-write",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lexar/HnJ0mlAM3hn29gIu5pUnfMRTFFnQVUg0p4ywJ0IPQICF1NGm-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4414",
+   "name": "Dahua 500GB 2.5\" DHI SSD C800AS500G",
+   "category": "storage",
+   "priceEgp": 1499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/dahua-500gb-2-5-dhi-ssd-c800as500g",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/DAHUA/ljKzWYyZM5OnlAL0cn4GzjiK2AUI0Bl7K23OluPz-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4031",
+   "name": "Patriot P210 2.5\" 2TB SATA III Internal Solid State Drive (SSD) P210S2TB25",
+   "category": "storage",
+   "priceEgp": 2950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p210-2-5-2tb-sata-iii-internal-solid-state-drive-ssd-p210s2tb25",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/4qR5XmwxNstPQ8zztCakiZSHXJWI5lXjV3fcZHgiFO1gUIWh-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4030",
+   "name": "Patriot Viper VPN100 1TB M.2 2280 PCIe Gen3 x 4 Solid State Drive",
+   "category": "storage",
+   "priceEgp": 3250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-viper-vpn100-1tb-m-2-2280-pcie-gen3-x-4-solid-state-drive",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/EWR7tmFyxOp6pSZgDYuPYlVX4IWs1HtdqeX7BMvOei2y931r-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4029",
+   "name": "Patriot Viper VP4300 2TB M.2 2280 PCIe Gen4 x 4 Solid State Drive",
+   "category": "storage",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-viper-vp4300-2tb-m-2-2280-pcie-gen4-x-4-solid-state-drive",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/zL1j1XkJhajkkFLQkJJxu40Zy6Fvj0T9gkRKLLor80QobmxI-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3925",
+   "name": "Patriot Burst 2.5\" 120GB SATA III Internal Solid State Drive (SSD) PBU120GS25SSDR",
+   "category": "storage",
+   "priceEgp": 450,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-burst-2-5-120gb-sata-iii-internal-solid-state-drive-ssd-pbu120gs25ssdr-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/20-225-081-Z01-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3923",
+   "name": "Patriot Viper VP4300 M.2 2280 1TB PCIe Gen4 x4 NVMe 2D NAND Internal Solid State Drive (SSD)",
+   "category": "storage",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-viper-vp4300-m-2-2280-1tb-pcie-gen4-x4-nvme-2d-nand-internal-solid-state-drive-ssd-vp4300-1tbm28h",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/GeLR0YYgCJeAlZtEcDGzG7Rq5L6RGQrVT0U9nOr-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3922",
+   "name": "PATRIOT P300 M.2 2280 2TB PCIE GEN3 X4, NVME 1.3 INTERNAL SOLID STATE DRIVE (SSD)",
+   "category": "storage",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p300-m-2-2280-2tb-pcie-gen3-x4-nvme-1-3-internal-solid-state-drive-ssd-p300p2tbm28",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/FywEn6FevX0F3CW67SxZih6piIkjt1klMlsuRbxy4LgzXItV-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3921",
+   "name": "Patriot P300 M.2 2280 1TB PCIe Gen3 x4, NVMe 1.3 Internal Solid State Drive (SSD)",
+   "category": "storage",
+   "priceEgp": 3350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p300-m-2-2280-1tb-pcie-gen3-x4-nvme-1-3-internal-solid-state-drive-ssd-p300p1tbm28",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/AdBVNgBcjUn7Mz3LvgzKTQO3Xz6RK5VwrblZC5b-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3920",
+   "name": "Patriot P300 M.2 2280 256GB PCIe Gen3 x4, NVMe 1.3 Internal Solid State Drive (SSD)",
+   "category": "storage",
+   "priceEgp": 1300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p300-m-2-2280-256gb-pcie-gen3-x4-nvme-1-3-internal-solid-state-drive-ssd-p300p256gm28",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/lMdoPCWSyamYRTZCMmVV6YunYSTusKOxM9uhTHe-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3919",
+   "name": "Patriot P300 M.2 2280 512GB PCIe Gen3 x4, NVMe 1.3 Internal Solid State Drive (SSD)",
+   "category": "storage",
+   "priceEgp": 1950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p300-m-2-2280-512gb-pcie-gen3-x4-nvme-1-3-internal-solid-state-drive-ssd-p300p512gm28",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/cMZzmeTkA2hTHVkZ4j29v9rIvPIGampEDRNcxe7-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3918",
+   "name": "Patriot P210 2.5\" 1TB SATA III Internal Solid State Drive (SSD) P210S1TB25",
+   "category": "storage",
+   "priceEgp": 1950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2150,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p210-2-5-1tb-sata-iii-internal-solid-state-drive-ssd-p210s1tb25",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/vQWYS5BXo8L2iYMtGqsy2Z70YFoVBciq94XrOc0t109s21r-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3741",
+   "name": "Patriot Viper Gaming VP4100 M.2 2280 1TB PCIe Gen4 x4, NVMe 1.3 Internal Solid State Drive (SSD) VP4100-1TBM28H",
+   "category": "storage",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-viper-gaming-vp4100-m-2-2280-1tb-pcie-gen4-x4-nvme-1-3-internal-solid-state-drive-ssd-vp4100-1tbm28h",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/kGSgsyKiVqjUC0xRiQTL4Oll0bmh2WHsUuGBCB4-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3607",
+   "name": "Corsair Force MP600 M.2 2280 500GB PCI-Express Gen 4.0 x4 NVMe 3D TLC Internal Solid State Drive",
+   "category": "storage",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-force-mp600-m-2-2280-1tb-pci-express-gen-4-0-x4-nvme-3d-tlc-internal-solid-state-drive-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/rSaIzhDy9VoNSRqupiSbnCGITN3sPqGEnK0Zmlr-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3606",
+   "name": "Corsair Force MP600 M.2 2280 1TB PCI-Express Gen 4.0 x4 NVMe 3D TLC Internal Solid State Drive",
+   "category": "storage",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-force-mp600-m-2-2280-1tb-pci-express-gen-4-0-x4-nvme-3d-tlc-internal-solid-state-drive",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/caWxofj5UY2YSQr18aKcfD60XqFrvBdxDdjEqlM-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3438",
+   "name": "PNY CS900 120GB 2.5\" SATA III INTERNAL Solid State Drive (SSD) - SSD7CS900-120-RB",
+   "category": "storage",
+   "priceEgp": 750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/pny-cs900-120gb-2-5-sata-iii-internal-solid-state-drive-ssd-ssd7cs900-120-rb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/PNY/j8VKApRhw2tJS46xaCsFbQb1T29JheMSyMuCQTLLcXMwIINq2-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3437",
+   "name": "Patriot P210 2.5\" 256GB SATA III Internal Solid State Drive (SSD) P210S256G25",
+   "category": "storage",
+   "priceEgp": 700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-p210-2-5-256gb-sata-iii-internal-solid-state-drive-ssd-p210s256g25",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Patriot/rXByohH6gwEB8qtaJ6Zdu4bUTaLIstFH211uGHB-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2889",
+   "name": "CORSAIR FORCE Series MP510 480GB NVMe PCIe Gen3 x4 M.2 SSD Solid State Storage, Up to 3,480MB/s",
+   "category": "storage",
+   "priceEgp": 2250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-force-series-mp510-480gb-nvme-pcie-gen3-x4-m-2-ssd-solid-state-storage-up-to-3-480mb-s",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/20-236-477-V04-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2888",
+   "name": "CORSAIR FORCE Series MP510 960GB NVMe PCIe Gen3 x4 M.2 SSD Solid State Storage, Up to 3,480MB/s",
+   "category": "storage",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-force-series-mp510-960gb-nvme-pcie-gen3-x4-m-2-ssd-solid-state-storage-up-to-3-480mb-s",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/20-236-477-V04-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2595",
+   "name": "Patriot Burst 2.5\" 240GB SATA III Internal Solid State Drive (SSD) PBU240GS25SSDR",
+   "category": "storage",
+   "priceEgp": 550,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/patriot-burst-2-5-240gb-sata-iii-internal-solid-state-drive-ssd-pbu240gs25ssdr",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/61irxwd06WL._AC_SL1200_-250x250h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2425",
+   "name": "PNY CS1311 240GB 2.5\" SATA III Internal Solid State Drive (SSD) SSD7CS1311-240-RB",
+   "category": "storage",
+   "priceEgp": 800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/pny-cs1311-240gb-2-5-sata-iii-internal-solid-state-drive-ssd-ssd7cs1311-240-rb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/51gvc83auzL-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2367",
+   "name": "CORSAIR FORCE Series MP510 240GB NVMe PCIe Gen3 x4 M.2 SSD Solid State Storage, Up to 3,480MB/s",
+   "category": "storage",
+   "priceEgp": 2000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-force-series-mp510-240gb-nvme-pcie-gen3-x4-m-2-ssd-solid-state-storage-up-to-3-480mb-s",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/71ymSBi0wlL._SL1500_-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2024",
+   "name": "WD Blue M.2 500GB Internal SSD Solid State Drive - SATA 6Gb/s",
+   "category": "storage",
+   "priceEgp": 1999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/wd-blue-m-2-500gb-internal-ssd-solid-state-drive-sata-6gb-s",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/20-250-082-04-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2002",
+   "name": "XPG GAMMIX S11 240GB 3D NAND NVMe Gen3x4 M.2 2280 Solid State Drive",
+   "category": "storage",
+   "priceEgp": 1199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-gammix-s11-240gb-3d-nand-nvme-gen3x4-m-2-2280-solid-state-drive",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/600-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2001",
+   "name": "XPG GAMMIX S11 480GB 3D NAND NVMe Gen3x4 M.2 2280 Solid State Drive",
+   "category": "storage",
+   "priceEgp": 1499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-gammix-s11-480gb-3d-nand-nvme-gen3x4-m-2-2280-solid-state-drive",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/71PIWB+-PKL._SL1500_-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  }
+ ]
+}

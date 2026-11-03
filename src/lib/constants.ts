@@ -143,7 +143,7 @@ export const CURRENCY = 'EGP';
  * demo data with no live feed, and the alternative (an FX API call on every page
  * load) costs more than it is worth. Update it when the pound moves materially.
  */
-export const USD_TO_EGP = 50;
+const USD_TO_EGP = 50;
 
 /** Budget presets, in EGP (approx. $1k / $1.5k / $2k / $3k / $4.5k at 50). */
 export const BUDGET_PRESETS = [50_000, 75_000, 100_000, 150_000, 225_000] as const;
@@ -153,13 +153,4 @@ export const toEgp = (usdPrice: number): number => Math.round(usdPrice * USD_TO_
 
 export const RESOLUTIONS = ['1080p', '1440p', '4K'] as const;
 
-export const SCORE_LABELS: Record<string, string> = {
-  compatibility: 'Compatibility',
-  performance: 'Performance',
-  value: 'Value',
-  efficiency: 'Efficiency',
-  upgradability: 'Upgradability',
-};
-
 export const APP_NAME = 'Nexus';
-export const APP_TAGLINE = 'AI-Powered PC Builder';

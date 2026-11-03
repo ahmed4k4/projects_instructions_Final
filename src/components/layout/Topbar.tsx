@@ -77,7 +77,10 @@ export function Topbar() {
             type="button"
             onClick={() => setCommandOpen(true)}
             className={cn(
-              'group ms-auto flex h-11 min-h-11 min-w-0 flex-1 max-w-md items-center gap-2.5 rounded-lg border border-border-strong sm:h-9 sm:min-h-9',
+              'group ms-auto flex h-11 min-h-11 min-w-0 flex-1 max-w-md items-center gap-2.5 rounded-lg border border-border-strong sm:h-9',
+              // After `sm:h-9`, so a coarse pointer keeps the 44px height on a
+              // tablet that also matches the `sm` breakpoint.
+              'pointer-coarse:min-h-11',
               'bg-surface/60 px-3 text-start text-sm text-muted-foreground transition-colors duration-200',
               'hover:border-primary/30 hover:bg-surface lg:ms-0',
             )}
@@ -143,7 +146,7 @@ export function Topbar() {
                   <button
                     type="button"
                     aria-label={t('account.signedIn')}
-                    className="ms-1 grid size-9 place-items-center rounded-full border border-border-strong bg-gradient-to-br from-primary/30 to-accent/20 text-xs font-semibold text-foreground transition hover:border-primary/40"
+                    className="ms-1 grid size-9 place-items-center rounded-full border border-border-strong bg-gradient-to-br from-primary/30 to-accent/20 text-xs font-semibold text-foreground transition hover:border-primary/40 pointer-coarse:size-11"
                   >
                     {(user.email ?? 'U').slice(0, 2).toUpperCase()}
                   </button>

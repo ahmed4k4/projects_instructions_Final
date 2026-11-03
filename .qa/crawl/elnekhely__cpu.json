@@ -1,0 +1,1043 @@
+{
+ "retailerId": "elnekhely",
+ "category": "cpu",
+ "complete": true,
+ "lastPage": 0,
+ "products": [
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2418",
+   "name": "AMD Ryzen 7 9800X3D 8 Cores- 16 Threads AM5 Processor",
+   "category": "cpu",
+   "priceEgp": 23999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-9800x3d-8-cores-16-threads-am5-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9800X%203D/amd-ryzen-7-9800x3d-8-cores-16-threads-am5-processor-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1742",
+   "name": "AMD RYZEN 5 5500 ZEN3 4.2GHz",
+   "category": "cpu",
+   "priceEgp": 4499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-5500-4-2ghz",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/amd-ryzen-5-5600-6-core-12-thread-max-boost-4-4-ghz-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3136",
+   "name": "AMD Ryzen 5 5600 MPK Processor – 6 Cores, 12 Threads, 4.4GHz Boost, 32MB Cache, 7nm Architecture, AM4 CPU for Gaming & Productivity",
+   "category": "cpu",
+   "priceEgp": 6199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-5600-mpk-processor-%E2%80%93-6-cores-12-threads-4-4ghz-boost-32mb-cache-7nm-architecture-am4-cpu-for-gaming-productivity",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5600%20TRAY/amd-ryzen-5-5600-mpk-processor-%E2%80%93-6-cores-12-threads-4-4ghz-boost-32mb-cache-7nm-architecture-am4-cpu-for-gaming-productivity-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3468",
+   "name": "AMD Ryzen 5 5600X Tray Desktop Processor (6 Cores, 12 Threads, Up to 4.6 GHz, Socket AM4)",
+   "category": "cpu",
+   "priceEgp": 7399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-5600x-tray-6-core-12-thread-am4-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5600X%20/amd-ryzen-5-5600x-tray-desktop-processor-6-cores-12-threads-up-to-4-6-ghz-socket-am4-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3411",
+   "name": "AMD Ryzen 5 7400 Desktop Processor – 6 Cores, 12 Threads, Up to 4.3 GHz, Socket AM5, Zen 4 Architecture, Tray",
+   "category": "cpu",
+   "priceEgp": 6400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7400-desktop-processor-%E2%80%93-6-cores-12-threads-up-to-4-3-ghz-socket-am5-zen-4-architecture-tray",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7400%20TRAY/amd-ryzen-5-7400-desktop-processor-%E2%80%93-6-cores-12-threads-up-to-4-3-ghz-socket-am5-zen-4-architecture-tray-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2296",
+   "name": "AMD Ryzen 5 7500F - 6 Core, 3.7GHz 32MB Cache - Socket AM5 Tray",
+   "category": "cpu",
+   "priceEgp": 7499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7500f-6-core-3-7ghz-32mb-cache-socket-am5-tray",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/amd-ryzen-5-7500f-6-core-3-7ghz-32mb-cache-socket-am5-tray-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3527",
+   "name": "AMD Ryzen 5 7500X3D 6 Cores 12 Threads Up to 4.5GHz 102MB Cache AM5 MPK Processor",
+   "category": "cpu",
+   "priceEgp": 12499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7500x3d",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7500X3D/amd-ryzen-5-7500x3d-6-cores-12-threads-up-to-4-5ghz-102mb-cache-am5-mpk-processor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2272",
+   "name": "AMD Ryzen 5 7600 Processor — AM5, Zen 4, 6 Core, 12 Thread, 3.8GHz, 5.1GHz Turbo, 32MB Cache, PCIe 5.0, 65W, CPU",
+   "category": "cpu",
+   "priceEgp": 8799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7600-processor-%E2%80%94-am5-zen-4-6-core-12-thread-3-8ghz-5-1ghz-turbo-32mb-cache-pcie-5-0-65w-cpu",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7600/amd-ryzen-5-7600-processor-%E2%80%94-am5-zen-4-6-core-12-thread-3-8ghz-5-1ghz-turbo-32mb-cache-pcie-5-0-65w-cpu-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2465",
+   "name": "AMD Ryzen 5 8400F MPK Desktop Processor with AMD Fan (6 Cores, 12 Threads, Up to 4.7 GHz, Socket AM5)",
+   "category": "cpu",
+   "priceEgp": 5399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-8400f-mpk-6-core-12-thread-am5-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/8400F/amd-ryzen-5-8400f-mpk-desktop-processor-with-amd-fan-6-cores-12-threads-up-to-4-7-ghz-socket-am5-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3170",
+   "name": "AMD Ryzen 5 8500G BOX Processor – 6 Cores, 12 Threads, Integrated Radeon Graphics, High-Performance AM5 APU for Gaming & Productivity",
+   "category": "cpu",
+   "priceEgp": 8500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-8500g-box-processor-%E2%80%93-6-cores-12-threads-integrated-radeon-graphics-high-performance-am5-apu-for-gaming-productivity",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Motherboards/Asus/8500g/amd-ryzen-5-8500g-box-processor-%E2%80%93-6-cores-12-threads-integrated-radeon-graphics-high-performance-am5-apu-for-gaming-productivity-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3344",
+   "name": "AMD Ryzen 5 8600G 6-Core, 12-Thread Desktop Processor with AMD Ryzen AI & Radeon 760M Graphics",
+   "category": "cpu",
+   "priceEgp": 9000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-8600g-6-core-12-thread-desktop-processor-with-amd-ryzen-ai-radeon-760m-graphics",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/8600g/amd-ryzen-5-8600g-6-core-12-thread-desktop-processor-with-amd-ryzen-ai-radeon-760m-graphics-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3171",
+   "name": "AMD Ryzen 5 9500F TRAY Processor – 6 Cores 12 Threads, Zen 4 Architecture, Up to 4.8GHz Boost, AM5 Socket, 65W TDP, DDR5 & PCIe 5.0 Support (No Integrated Graphics)",
+   "category": "cpu",
+   "priceEgp": 10399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-9500f-tray-processor-%E2%80%93-6-cores-12-threads-zen-4-architecture-up-to-4-8ghz-boost-am5-socket-65w-tdp-ddr5-pcie-5-0-support-no-integrated-graphics",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9500F/amd-ryzen-5-9500f-tray-processor-%E2%80%93-6-cores-12-threads-zen-4-architecture-up-to-4-8ghz-boost-am5-socket-65w-tdp-ddr5-pcie-5-0-support-no-integrated-graphics-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3526",
+   "name": "AMD Ryzen 5 9600X 6 Cores 12 Threads Up to 5.4GHz 38MB Cache AM5 MPK Processor",
+   "category": "cpu",
+   "priceEgp": 10999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-9600x",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5%209600X/amd-ryzen-5-9600x-6-cores-12-threads-up-to-5-4ghz-38mb-cache-am5-mpk-processor-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3467",
+   "name": "AMD Ryzen 7 5700 Tray Desktop Processor (8 Cores, 16 Threads, Up to 4.6 GHz, Socket AM4)",
+   "category": "cpu",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-5700-tray-8-core-16-thread-am4-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5700/amd-ryzen-7-5700-tray-desktop-processor-8-cores-16-threads-up-to-4-6-ghz-socket-am4-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3588",
+   "name": "AMD Ryzen 7 5700X 8 Cores 16 Threads Up to 4.60 GHz 32MB AM4 Desktop Processor TRAY",
+   "category": "cpu",
+   "priceEgp": 8799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-5700x-tray",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5700X%20Tray/amd-ryzen-7-5700x-8-cores-16-threads-up-to-4-60-ghz-32mb-am4-desktop-processor-tray-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3341",
+   "name": "AMD Ryzen 7 7700X Processor 8 Cores 16 Threads Up to 5.4GHz Boost 32MB L3 Cache DDR5 Support PCIe 5.0",
+   "category": "cpu",
+   "priceEgp": 12999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 13299,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-7700x-processor-8-cores-16-threads-up-to-5-4ghz-boost-32mb-l3-cache-ddr5-support-pcie-5-0",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7700x/amd-ryzen-7-7700x-processor-8-cores-16-threads-up-to-5-4ghz-boost-32mb-l3-cache-ddr5-support-pcie-5-0-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2032",
+   "name": "AMD Ryzen 7 7800X3D MPK Desktop Processor (8 Cores, 16 Threads, Up to 5.0 GHz, Socket AM5)",
+   "category": "cpu",
+   "priceEgp": 16999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 18999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-7800x3d-tray-8-core-16-thread-am5-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/AMD/7800x3d/amd-ryzen-7-7800x3d-mpk-desktop-processor-8-cores-16-threads-up-to-5-0-ghz-socket-am5-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2741",
+   "name": "AMD Ryzen 7 8700F MPK Desktop Processor (8 Cores, 16 Threads, Up to 5.0 GHz, Socket AM5)",
+   "category": "cpu",
+   "priceEgp": 8950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-8700f-mpk-8-core-16-thread-am5-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/8700F/amd-ryzen-7-8700f-mpk-desktop-processor-8-cores-16-threads-up-to-5-0-ghz-socket-am5-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2277",
+   "name": "AMD Ryzen 7 9700X - Granite Ridge (Zen 5) 8-Core 16 Therads 3.8 GHz - Socket AM5 65W",
+   "category": "cpu",
+   "priceEgp": 15499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 16800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-9700x-granite-ridge-zen-5-8-core-16-therads-3-8-ghz-socket-am5-65w",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9700X/amd-ryzen-7-9700x-granite-ridge-zen-5-8-core-16-therads-3-8-ghz-socket-am5-65w-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3524",
+   "name": "AMD Ryzen 7 9700X 8 Cores 16 Threads Up to 5.5GHz 40MB Cache AM5 MPK Processor",
+   "category": "cpu",
+   "priceEgp": 14199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-9700x",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9700X%20TRAY/amd-ryzen-7-9700x-8-cores-16-threads-up-to-5-5ghz-40mb-cache-am5-mpk-processor-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3521",
+   "name": "AMD Ryzen 7 9800X3D 8 Cores 16 Threads Up to 5.2GHz 104MB Cache AM5 Tray Processor",
+   "category": "cpu",
+   "priceEgp": 23499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-9800x3d",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9800X3D/amd-ryzen-7-9800x3d-8-cores-16-threads-up-to-5-2ghz-104mb-cache-am5-tray-processor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3268",
+   "name": "AMD Ryzen 7 9850X3D Desktop Processor BOX – 96MB 3D V-Cache & 5.6GHz Boost",
+   "category": "cpu",
+   "priceEgp": 26999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 27500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-9850x3d-box-desktop-processor-%E2%80%93-96mb-3d-v-cache-5-6ghz-boost",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9850X3D/amd-ryzen-7-9850x3d-desktop-processor-box-%E2%80%93-96mb-3d-v-cache-5-6ghz-boost-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3541",
+   "name": "AMD Ryzen 7 9850X3D MPK Processor (8-Core 16-Thread 5.6GHz 96MB Cache AM5)",
+   "category": "cpu",
+   "priceEgp": 26249,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-9850x3d-mpk",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9850X3D%20MPK/amd-ryzen-7-9850x3d-mpk-processor-8-core-16-thread-5-6ghz-96mb-cache-am5-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3522",
+   "name": "AMD Ryzen 9 9900X 12 Cores 24 Threads Up to 5.6GHz 76MB Cache AM5 MPK Processor",
+   "category": "cpu",
+   "priceEgp": 19900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9900x",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9900X%20TRAY/amd-ryzen-9-9900x-12-cores-24-threads-up-to-5-6ghz-76mb-cache-am5-mpk-processor-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2347",
+   "name": "AMD Ryzen 9 9900X 4.4 GHz 12-Core AM5 Processor",
+   "category": "cpu",
+   "priceEgp": 20899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9900x-4-4-ghz-12-core-am5-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd-ryzen-9-9900x-4-4-ghz-12-core-am5-processor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3523",
+   "name": "AMD Ryzen 9 9900X3D 12 Cores 24 Threads Up to 5.5GHz 140MB Cache AM5 MPK Processor",
+   "category": "cpu",
+   "priceEgp": 27499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 28000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9900x3d",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9900x3d/amd-ryzen-9-9900x3d-12-cores-24-threads-up-to-5-5ghz-140mb-cache-am5-mpk-processor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2348",
+   "name": "AMD Ryzen 9 9950X 16 Cores 32 Threads 5.7GHz AM5 Box Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 28499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 29000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9950x-box",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9950X/amd-ryzen-9-9950x-16-cores-32-threads-5-7ghz-am5-box-desktop-processor-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3605",
+   "name": "AMD Ryzen 9 9950X 16 Cores 32 Threads 5.7GHz AM5 MPK Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 26999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 29500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9950x-mpk",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9950X/amd-ryzen-9-9950x-16-cores-32-threads-5-7ghz-am5-mpk-desktop-processor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3525",
+   "name": "AMD Ryzen 9 9950X3D 16 Cores 32 Threads Up to 5.7GHz 144MB Cache AM5 MPK Processor",
+   "category": "cpu",
+   "priceEgp": 33999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9950x3d",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9950X3D/amd-ryzen-9-9950x3d-16-cores-32-threads-up-to-5-7ghz-144mb-cache-am5-mpk-processor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2631",
+   "name": "AMD Ryzen 9 9950X3D Desktop Processor – 16 Cores, 32 Threads, 144MB Total Cache, 5.7GHz Boost",
+   "category": "cpu",
+   "priceEgp": 36999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9950x3d-desktop-processor-%E2%80%93-16-cores-32-threads-144mb-total-cache-5-7ghz-boost",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/Ryzen%209%20/amd-ryzen-9-9950x3d-desktop-processor-%E2%80%93-16-cores-32-threads-144mb-total-cache-5-7ghz-boost-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3396",
+   "name": "AMD Ryzen 9 9950X3D2 Dual Edition Desktop Processor – Zen 5, 16 Cores 32 Threads, 192MB Cache",
+   "category": "cpu",
+   "priceEgp": 54949,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9950x3d2-dual-edition-desktop-processor-%E2%80%93-zen-5-16-cores-32-threads-192mb-cache",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9950X3D2/amd-ryzen-9-9950x3d2-dual-edition-desktop-processor-%E2%80%93-zen-5-16-cores-32-threads-192mb-cache-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3172",
+   "name": "AMD Ryzen Threadripper PRO 9955WX Processor – 64-Core, 128-Thread sTR5 Workstation CPU, 4.5GHz Base / 5.4GHz Boost, Retail Version for Extreme Professional Workloads",
+   "category": "cpu",
+   "priceEgp": 99999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-threadripper-pro-9955wx-processor-%E2%80%93-64-core-128-thread-str5-workstation-cpu-4-5ghz-base-5-4ghz-boost-retail-version-for-extreme-professional-workloads",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Threadripper/9995WX/amd-ryzen-threadripper-pro-9955wx-processor-%E2%80%93-64-core-128-thread-str5-workstation-cpu-4-5ghz-base-5-4ghz-boost-retail-version-for-extreme-professional-workloads-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3650",
+   "name": "AMD Ryzen Threadripper PRO 9965WX Processor (24 Cores / 48 Threads / 5.4GHz) - sTR5",
+   "category": "cpu",
+   "priceEgp": 210000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-threadripper-pro-9965wx-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Threadripper/9965WX%20/amd-ryzen-threadripper-pro-9965wx-processor-24-cores-48-threads-5-4ghz-str5-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3649",
+   "name": "AMD Ryzen Threadripper PRO 9975WX Processor (32 Cores / 64 Threads / 5.4GHz) - sTR5",
+   "category": "cpu",
+   "priceEgp": 259999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-threadripper-pro-9975wx-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Threadripper/9975WX%20/amd-ryzen-threadripper-pro-9975wx-processor-32-cores-64-threads-5-4ghz-str5-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3156",
+   "name": "AMD Ryzen Threadripper PRO 9985WX – 64-Core, 128-Thread sTR5 Workstation CPU with 5.4GHz Boost & 256MB Cache for Extreme Professional Performance",
+   "category": "cpu",
+   "priceEgp": 399499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-threadripper-pro-9985wx-%E2%80%93-64-core-128-thread-str5-workstation-cpu-with-5-4ghz-boost-256mb-cache-for-extreme-professional-performance",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/9985WX%20/amd-ryzen-threadripper-pro-9985wx-%E2%80%93-64-core-128-thread-str5-workstation-cpu-with-5-4ghz-boost-256mb-cache-for-extreme-professional-performance-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3169",
+   "name": "AMD Ryzen Threadripper PRO 9995WX – 96-Core, 192-Thread sTR5 Workstation Processor, Up to 5.4GHz Boost, Retail Version for Extreme Professional Workloads",
+   "category": "cpu",
+   "priceEgp": 674999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-threadripper-pro-9995wx-%E2%80%93-96-core-192-thread-str5-workstation-processor-up-to-5-4ghz-boost-retail-version-for-extreme-professional-workloads",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Threadripper/9995WX/amd-ryzen-threadripper-pro-9955wx-processor-%E2%80%93-64-core-128-thread-str5-workstation-cpu-4-5ghz-base-5-4ghz-boost-retail-version-for-extreme-professional-workloads-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1830",
+   "name": "AMD RYZEN5 7600X 6-Core 12-Thread (Max Boost 5.3 GHz)",
+   "category": "cpu",
+   "priceEgp": 9799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen5-7600x-6-core-12-thread-max-boost-5-3-ghz",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7000/amd-ryzen5-7600x-6-core-12-thread-max-boost-5-3-ghz-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2632",
+   "name": "AMD Ryzen™ 9 9900X3D (up to 5.5Ghz 12-cores 24-threads) 128M Cache",
+   "category": "cpu",
+   "priceEgp": 30499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 31500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-9-9900x3d-up-to-5-5ghz-12-cores-24-threads-128m-cache",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/Ryzen%209%20/amd-ryzen-9-9950x3d-desktop-processor-%E2%80%93-16-cores-32-threads-144mb-total-cache-5-7ghz-boost-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1772",
+   "name": "Intel Core i5 12400F Alder Lake 6 Core 12 Thread Up To 4.4GHz LGA1700",
+   "category": "cpu",
+   "priceEgp": 8000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-12400f-alder-lake-6-core-12-thread-up-to-4-4ghz-lga1700",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/12400F/intel-core-i5-12400f-alder-lake-6-core-12-thread-up-to-4-4ghz-lga1700-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3562",
+   "name": "Intel Core i5-12400F Processor – 6 Cores, 18M Cache & Up to 4.40 GHz (MPK)",
+   "category": "cpu",
+   "priceEgp": 6750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-12400f",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/12400F/intel-core-i5-12400f-processor-%E2%80%93-6-cores-18m-cache-up-to-4-40-ghz-mpk-1-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2039",
+   "name": "Intel Core i5-14400F Processor - 10 Cores, 16 Threads, up to 4.7 GHz, LGA 1700",
+   "category": "cpu",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-14400f",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/intel/intel-core-i5-14400f-processor-10-cores-16-threads-up-to-4-7-ghz-lga-1700-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3563",
+   "name": "Intel Core i5-14400F Processor – 10 Cores, 20M Cache & Up to 4.70 GHz (MPK)",
+   "category": "cpu",
+   "priceEgp": 7850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-14400f-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14400F/intel-core-i5-14400f-processor-%E2%80%93-10-cores-20m-cache-up-to-4-70-ghz-mpk-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1991",
+   "name": "Intel Core i7 processor 14700K",
+   "category": "cpu",
+   "priceEgp": 20500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i7-processor-14700k",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14th/intel-core-i7-processor-14700k-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3584",
+   "name": "INTEL Core i7-14700K 20 Cores Up to 5.60 GHz 33MB LGA1700 Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 19500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i7-14700k",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14700k/intel-core-i7-14700k-20-cores-up-to-5-60-ghz-33mb-lga1700-desktop-processor-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3585",
+   "name": "INTEL Core i7-14700KF 20 Cores Up to 5.60 GHz 33MB LGA1700 Desktop Processor MPK",
+   "category": "cpu",
+   "priceEgp": 19399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i7-14700kf-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14700KF/intel-core-i7-14700kf-20-cores-up-to-5-60-ghz-33mb-lga1700-desktop-processor-mpk-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1994",
+   "name": "Intel Core i7-14700KF Processor - 20 Cores, 28 Threads, up to 5.6 GHz, LGA 1700",
+   "category": "cpu",
+   "priceEgp": 19999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i7-14700kf",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14700KF/intel-core-i7-14700kf-processor-20-cores-28-threads-up-to-5-6-ghz-lga-1700-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1986",
+   "name": "Intel Core i9 processor 14900K 36M Cache, up to 6.00 GHz",
+   "category": "cpu",
+   "priceEgp": 28499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i9-processor-14900k-36m-cache-up-to-6-00-ghz",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14th/intel-core-i9-processor-14900k-36m-cache-up-to-6-00-ghz-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3565",
+   "name": "Intel Core i9-14900K Processor – 24 Cores, 36M Cache & Up to 6.00 GHz (MPK)",
+   "category": "cpu",
+   "priceEgp": 26699,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i9-14900k",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14900k%20mpk/intel-core-i9-14900k-processor-%E2%80%93-24-cores-36m-cache-up-to-6-00-ghz-mpk-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3583",
+   "name": "INTEL Core i9-14900KF 24 Cores Up to 6.00 GHz 36MB LGA1700 Desktop Processor TRAY",
+   "category": "cpu",
+   "priceEgp": 25499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i9-14900kf-tray",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14900KF%20MPK/intel-core-i9-14900kf-24-cores-up-to-6-00-ghz-36mb-lga1700-desktop-processor-tray-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3188",
+   "name": "Intel Core Ultra 5 225F Desktop Processor – Core Ultra Series 2, 10 Cores / 10 Threads, Up to 4.9GHz Turbo, 20MB Cache, 65W TDP, High-Efficiency CPU for Modern PCs",
+   "category": "cpu",
+   "priceEgp": 7999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-5-225f-desktop-processor-%E2%80%93-core-ultra-series-2-10-cores-10-threads-up-to-4-9ghz-turbo-20mb-cache-65w-tdp-high-efficiency-cpu-for-modern-pcs",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/Ultra%205%20225F%20/intel-core-ultra-5-225f-desktop-processor-%E2%80%93-core-ultra-series-2-10-cores-10-threads-up-to-4-9ghz-turbo-20mb-cache-65w-tdp-high-efficiency-cpu-for-modern-pcs-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2399",
+   "name": "Intel Core Ultra 5 245KF - 14 cores (6P + 8E) 14-Threads up to 5.2 GHz LGA 1851",
+   "category": "cpu",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-5-245kf-14-cores-6p-8e-14-threads-up-to-5-2-ghz-lga-1851",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/ULTRA/intel-core-ultra-5-245kf-14-cores-6p-8e-14-threads-up-to-5-2-ghz-lga-1851-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3557",
+   "name": "Intel Core Ultra 5 250K Plus Processor – 18 Cores, 30M Cache & 5.30 GHz",
+   "category": "cpu",
+   "priceEgp": 14199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-5-250k-plus",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/5%20250K%20Plus/intel-core-ultra-5-250k-plus-processor-%E2%80%93-18-cores-30m-cache-5-30-ghz-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2392",
+   "name": "Intel Core Ultra 7 265K Processor - 20 Cores (8P+12E), Arrow Lake, LGA 1851, 125W, BX80768265K",
+   "category": "cpu",
+   "priceEgp": 17000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-7-265k-processor-20-cores-8p12e-arrow-lake-lga-1851-125w-bx80768265k",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/ULTRA/intel-core-ultra-7-265k-processor-20-cores-8p12e-arrow-lake-lga-1851-125w-bx80768265k-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2396",
+   "name": "Intel Core Ultra 7 265KF - 20 cores (8P + 12E) 20-Threads up to 5.5 GHz LGA 1851",
+   "category": "cpu",
+   "priceEgp": 16500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-7-265kf-20-cores-8p-12e-20-threads-up-to-5-5-ghz-lga-1851",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/ULTRA/intel-core-ultra-7-265kf-20-cores-8p-12e-20-threads-up-to-5-5-ghz-lga-1851-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3586",
+   "name": "INTEL Core Ultra 7 270K Plus 24 Cores Up to 5.50 GHz 36MB FCLGA1851 Desktop Processor MPK",
+   "category": "cpu",
+   "priceEgp": 19249,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-7-270k-plus-mpk",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/270K%20Plus/intel-core-ultra-7-270k-plus-24-cores-up-to-5-50-ghz-36mb-fclga1851-desktop-processor-mpk-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3560",
+   "name": "Intel Core Ultra 7 270K Plus Processor – 24 Cores, 36M Cache & 5.50 GHz BOX",
+   "category": "cpu",
+   "priceEgp": 19749,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-7-270k-plus-box",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/270K%20Plus/intel-core-ultra-7-270k-plus-processor-%E2%80%93-24-cores-36m-cache-5-50-ghz-box-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2393",
+   "name": "Intel Ultra 9 285K Core Processor 36M Cache, up to 5.70 GHz",
+   "category": "cpu",
+   "priceEgp": 35999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-ultra-9-285k-core-processor-36m-cache-up-to-5-70-ghz",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/ULTRA/intel-ultra-9-285k-core-processor-36m-cache-up-to-5-70-ghz-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2077",
+   "name": "Intel® Core™ i9 processor 14900KF 36M Cache, up to 6.00 GHz",
+   "category": "cpu",
+   "priceEgp": 25999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i9-processor-14900kf-36m-cache-up-to-6-00-ghz",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/intel-core-i9-processor-14900kf-36m-cache-up-to-6-00-ghz-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2015",
+   "name": "Intel® Core™ i5 processor 14600KF",
+   "category": "cpu",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-processor-14600kf-only-build",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14th/intel-core-i5-processor-14600kf-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1785",
+   "name": "AMD RYZEN 5 5600 6-Core 12-Thread (Max Boost 4.4 GHz)",
+   "category": "cpu",
+   "priceEgp": 7000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-5600-6-core-12-thread-max-boost-4-4-ghz-only-build",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/amd-ryzen-5-5600-6-core-12-thread-max-boost-4-4-ghz-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3167",
+   "name": "AMD Ryzen 5 7500X3D Desktop Processor – 6 Cores, 12 Threads, High-Performance AM5 CPU for Gaming and Productivity",
+   "category": "cpu",
+   "priceEgp": 12999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-7500x3d-desktop-processor-%E2%80%93-6-cores-12-threads-high-performance-am5-cpu-for-gaming-and-productivity",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/7500X3D/amd-ryzen-5-7500x3d-desktop-processor-%E2%80%93-6-cores-12-threads-high-performance-am5-cpu-for-gaming-and-productivity-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2278",
+   "name": "AMD Ryzen 5 9600X - Granite Ridge (Zen 5) 6-Core 12 Therads 3.9 GHz - Socket AM5 65W",
+   "category": "cpu",
+   "priceEgp": 11500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-5-9600x-granite-ridge-zen-5-6-core-12-therads-3-9-ghz-socket-am5-65w",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/amd/5%209600X/amd-ryzen-5-9600x-granite-ridge-zen-5-6-core-12-therads-3-9-ghz-socket-am5-65w-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1440",
+   "name": "AMD Ryzen™ 7 8700G Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 13650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/amd-ryzen-7-8700g-desktop-processor",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/AMD/8700g/amd-ryzen-7-8700g-desktop-processor-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1578",
+   "name": "Intel Core i5-12600K Alder Lake 10-Cores 16-Threads ( 4.9 GHz Turbo)",
+   "category": "cpu",
+   "priceEgp": 11200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-12600k-alder-lake-10-cores-16-threads-4-9-ghz-turbo",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/intel/intel-core-i5-12600k-alder-lake-10-cores-16-threads-4-9-ghz-turbo-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1579",
+   "name": "Intel Core i5-12600Kf Alder Lake 10-Cores 16-Threads ( 4.9 GHz Turbo)",
+   "category": "cpu",
+   "priceEgp": 9850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-12600kf-alder-lake-10-cores-16-threads-4-9-ghz-turbo",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/intel/intel-core-i5-12600kf-alder-lake-10-cores-16-threads-4-9-ghz-turbo-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2398",
+   "name": "Intel Core Ultra 5 245K - 14 cores (6P + 8E) 14-Threads up to 5.2 GHz LGA 1851",
+   "category": "cpu",
+   "priceEgp": 10999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 12450,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-ultra-5-245k-14-cores-6p-8e-14-threads-up-to-5-2-ghz-lga-1851",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/ULTRA/intel-core-ultra-5-245kf-14-cores-6p-8e-14-threads-up-to-5-2-ghz-lga-1851-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2604",
+   "name": "Thermalright AM5 CPU Contact Frame for Secure Frame Kit Anti-Bending Buckle Black",
+   "category": "cpu",
+   "priceEgp": 500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/thermalright-am5-cpu-contact-frame-for-secure-frame-kit-anti-bending-buckle-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ACCESSORIES/Jonsbo/contact%20frame%20am5/thermalright-am5-cpu-contact-frame-for-secure-frame-kit-anti-bending-buckle-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2603",
+   "name": "Thermalright CPU Contact Frame for LGA 1700 Bracket Intel 12th/13th/14th",
+   "category": "cpu",
+   "priceEgp": 500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/thermalright-cpu-contact-frame-for-lga-1700-bracket-intel-12th-13th-14th",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/ACCESSORIES/Jonsbo/contact%20frame%20intel/thermalright-cpu-contact-frame-for-lga-1700-bracket-intel-12th-13th-14th-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1992",
+   "name": "Intel Core i5 processor 14600K",
+   "category": "cpu",
+   "priceEgp": 11500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/processors/intel-core-i5-processor-14600k",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/CPU/Intel/14th/intel-core-i5-processor-14600k-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  }
+ ]
+}

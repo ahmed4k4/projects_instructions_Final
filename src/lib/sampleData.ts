@@ -714,7 +714,7 @@ export const sampleBuilds: SampleBuild[] = [
   },
 ];
 
-export function getSampleComponent(id: string): PCComponent | undefined {
+function getSampleComponent(id: string): PCComponent | undefined {
   return sampleComponents.find((c) => c.id === id);
 }
 

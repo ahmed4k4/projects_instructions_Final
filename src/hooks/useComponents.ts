@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { useQuery, type UseQueryResult } from '@tanstack/react-query';
 import type { ComponentCategory, PCComponent } from '@/types/components';
 import type { ComponentCategoryDb } from '@/types/database';
@@ -6,7 +5,7 @@ import { getCompatibilityRules, listComponents } from '@/services/componentsServ
 import { isSupabaseConfigured } from '@/services/supabaseClient';
 import { sampleComponents } from '@/lib/sampleData';
 
-export const componentKeys = {
+const componentKeys = {
   all: ['components'] as const,
   byCategory: (category?: ComponentCategory) => ['components', category ?? 'all'] as const,
   rules: ['compatibility-rules'] as const,
@@ -36,20 +35,4 @@ export function useCompatibilityRules() {
     staleTime: 30 * 60 * 1000,
     enabled: isSupabaseConfigured,
   });
-}
-
-/** Components grouped by category — used by the builder grid. */
-export function useComponentsByCategory() {
-  const { data = [], ...rest } = useComponents();
-  const grouped = useMemo(() => {
-    const map = new Map<ComponentCategory, PCComponent[]>();
-    for (const component of data) {
-      const bucket = map.get(component.category) ?? [];
-      bucket.push(component);
-      map.set(component.category, bucket);
-    }
-    return map;
-  }, [data]);
-
-  return { ...rest, data, grouped };
 }

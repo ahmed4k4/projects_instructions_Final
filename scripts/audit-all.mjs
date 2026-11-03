@@ -34,6 +34,9 @@ const steps = [
   ['ai route', 'node', ['scripts/verify-ai-function.mjs']],
   ['retailer coverage', 'node', ['scripts/verify-listing-coverage.mjs']],
   ['unused files', 'node', ['scripts/audit-unused.mjs']],
+  // Phase 11: both FAIL the build (unlike audit-unused, which only reports).
+  ['orphans', 'node', ['scripts/check-orphans.mjs']],
+  ['unused exports', 'node', ['scripts/check-unused-exports.mjs']],
   ['tests', 'pnpm', ['test']],
 ];
 

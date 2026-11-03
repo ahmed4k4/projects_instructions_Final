@@ -1,0 +1,2588 @@
+{
+ "retailerId": "elnekhely",
+ "category": "case",
+ "complete": false,
+ "lastPage": 0,
+ "products": [
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2183",
+   "name": "Cooler Master Sneaker X Gaming Case",
+   "category": "case",
+   "priceEgp": 49999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 57000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-sneaker-x-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/Sneaker%20X%20/cooler-master-sneaker-x-gaming-case-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2146",
+   "name": "Corsair 6500D Airflow Mid Tower Case Black",
+   "category": "case",
+   "priceEgp": 13000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-6500d-airflow-mid-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/6500D/corsair-6500d-airflow-mid-tower-case-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1990",
+   "name": "Asus ROG Hyperion GR701 EATX White Full Tower Case",
+   "category": "case",
+   "priceEgp": 22500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 22700,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-hyperion-gr701-eatx-white-full-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/ROG%20Hyperion/asus-rog-hyperion-gr701-eatx-white-full-tower-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3275",
+   "name": "AeroCool P500C Mid-Tower Gaming Case + PSU Lux Pro 750W Bronze",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/aerocool-p500c-lux-pro-750w",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/AEROCOOL%20/P500C%20750W%20WHITE/aerocool-p500c-mid-tower-gaming-case-psu-lux-pro-750w-bronze-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3276",
+   "name": "AeroCool P500C Mid-Tower Gaming Case + PSU Lux Pro 750W Bronze - Black",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/aerocool-p500c-black-750w",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/AEROCOOL%20/P500C%20750W%20BLACK/aerocool-p500c-mid-tower-gaming-case-psu-lux-pro-750w-bronze-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3410",
+   "name": "Antec AX1000 Lite Mid Tower Case with 4 ARGB Fans & Antec Atom B750 80+ Bronze PSU Bundle – Black",
+   "category": "psu",
+   "priceEgp": 4850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax1000-lite-mid-tower-case-with-4-argb-fans-antec-atom-b750-80-bronze-psu-bundle-%E2%80%93-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX1000+750w/antec-ax1000-lite-mid-tower-case-with-4-argb-fans-antec-atom-b750-80-bronze-psu-bundle-%E2%80%93-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3343",
+   "name": "Antec AX1000 Lite Mid-Tower Gaming Case with 4x ARGB PWM Fans & Antec Atom G750 750W 80+ Gold Semi-Modular PSU",
+   "category": "psu",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax1000-lite-mid-tower-gaming-case-with-4x-argb-pwm-fans-antec-atom-g750-750w-80-gold-semi-modular-psu",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX1000+750w/antec-ax1000-lite-mid-tower-gaming-case-with-4x-argb-pwm-fans-antec-atom-g750-750w-80-gold-semi-modular-psu-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3642",
+   "name": "Antec AX65 ARGB Mid Tower Case + Antec Atom B750 PSU - Black",
+   "category": "psu",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax65-case-atom-b750-psu",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX65+B750/antec-ax65-argb-mid-tower-case-antec-atom-b750-psu-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3543",
+   "name": "Antec AX65 ARGB Mid Tower Case with Atom V450 450W PSU",
+   "category": "psu",
+   "priceEgp": 2550,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax65-argb-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/AX65-V450/antec-ax65-argb-mid-tower-case-with-atom-v450-450w-psu-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3542",
+   "name": "Antec AX65 ARGB Mid Tower Case with Atom V650 650W PSU",
+   "category": "psu",
+   "priceEgp": 3150,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-ax65-argb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/%20AX65-V650/antec-ax65-argb-mid-tower-case-with-atom-v650-650w-psu-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2301",
+   "name": "Antec C3 ARGB Black Mid-Tower Case",
+   "category": "case",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c3-argb-black-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c3%20black/antec-c3-argb-black-mid-tower-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2302",
+   "name": "Antec C3 ARGB White Mid-Tower Case",
+   "category": "case",
+   "priceEgp": 4200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c3-argb-white-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c3%20white/antec-c3-argb-white-mid-tower-case-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2299",
+   "name": "Antec C5 ARGB Black Mid Tower Case",
+   "category": "case",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c5-argb-black-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c5%20black/antec-c5-argb-black-mid-tower-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2484",
+   "name": "ANTEC C7 ARGB Mid Tower Case White",
+   "category": "case",
+   "priceEgp": 6200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c7-argb-mid-tower-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/C7%20W/antec-c7-argb-mid-tower-case-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3216",
+   "name": "Antec C7 ARGB White Mid-Tower E-ATX PC Case – 4×120mm ARGB PWM Fans Included, Vertical GPU Cooling, USB-C 10Gbps, Seamless Tempered Glass Front & Side Panels, 360mm Radiator Support",
+   "category": "gpu",
+   "priceEgp": 6000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c7-argb-white-mid-tower-e-atx-pc-case-%E2%80%93-4%C3%97120mm-argb-pwm-fans-included-vertical-gpu-cooling-usb-c-10gbps-seamless-tempered-glass-front-side-panels-360mm-radiator-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/C7-ARGB%20Black/antec-c7-argb-white-mid-tower-e-atx-pc-case-%E2%80%93-4%C3%97120mm-argb-pwm-fans-included-vertical-gpu-cooling-usb-c-10gbps-seamless-tempered-glass-front-side-panels-360mm-radiator-support-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2461",
+   "name": "Antec C8 Curve Wood, Fans not Included, Wooden Front Panel, Super Wide Angle Single Curved Glass",
+   "category": "case",
+   "priceEgp": 7999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c8-curve-wood-fans-not-included-wooden-front-panel-super-wide-angle-single-curved-glass",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/C8%20Curve%20Wood/antec-c8-curve-wood-fans-not-included-wooden-front-panel-super-wide-angle-single-curved-glass-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2295",
+   "name": "Antec C8 White Case — RTX 40 Compatible, Dual-Chamber, tooless Design, Type-C, 360mm Radiator Support, Seamless Tempered Glass Front & Side Panels, High Airflow Full-Tower E-ATX PC Case - Fans not Included",
+   "category": "gpu",
+   "priceEgp": 7200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c8-white-case-%E2%80%94-rtx-40-compatible-dual-chamber-tooless-design-type-c-360mm-radiator-support-seamless-tempered-glass-front-side-panels-high-airflow-full-tower-e-atx-pc-case-fans-not-included",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c8%20white/antec-c8-white-case-%E2%80%94-rtx-40-compatible-dual-chamber-tooless-design-type-c-360mm-radiator-support-seamless-tempered-glass-front-side-panels-high-airflow-full-tower-e-atx-pc-case-fans-not-included-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2668",
+   "name": "ANTEC CX300 AB75 4FAN ARGB +ATOM B750 BRONZE",
+   "category": "case",
+   "priceEgp": 4850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-cx300-ab75-4fan-argb-atom-b750-bronze",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/ANTEC%20CX300%20750w%20b/antec-cx300-ab75-4fan-argb-atom-b750-bronze-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2405",
+   "name": "Antec CX300 ARGB Black with Panoramic 270 Degree View Vertical Cooling 4X 120mm Pre Installed RGB Fans 420mm GPU Support Atx Mid Tower Gaming and Antec Atom V650 650 Watts Non-Modular Gaming Power Supply",
+   "category": "psu",
+   "priceEgp": 3850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-cx300-argb-black-with-panoramic-270-degree-view-vertical-cooling-4x-120mm-pre-installed-rgb-fans-420mm-gpu-support-atx-mid-tower-gaming-and-antec-atom-v650-650-watts-non-modular-gaming-power-supply",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/CX300%20650W/antec-cx300-argb-black-with-panoramic-270-degree-view-vertical-cooling-4x-120mm-pre-installed-rgb-fans-420mm-gpu-support-atx-mid-tower-gaming-and-antec-atom-v650-650-watts-non-modular-gaming-power-supply-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2670",
+   "name": "Antec CX700 RGB Mid-Tower Gaming Case + Antec CSK Pro 850W 850+ Bronze ATX 3.1 White",
+   "category": "psu",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-cx700-rgb-mid-tower-gaming-case-antec-csk-pro-850w-850-bronze-atx-3-1-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cx700%20850w%20W/antec-cx700-rgb-mid-tower-gaming-case-antec-csk-pro-850w-850-bronze-atx-3-1-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2669",
+   "name": "Antec CX700 RGB Mid-Tower Gaming Case + Antec CSK Pro 850W 850+ Bronze ATX 3.1-Black",
+   "category": "psu",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-cx700-rgb-mid-tower-gaming-case-antec-csk-pro-850w-850-bronze-atx-3-1-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cx700%20850w%20b/antec-cx700-rgb-mid-tower-gaming-case-antec-csk-pro-850w-850-bronze-atx-3-1-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3544",
+   "name": "Antec CX705 ARGB Mid Tower Gaming Case with Atom G750 750W 80 Plus Gold PSU",
+   "category": "psu",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-cx705-argb-750w",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/CX705-G750/antec-cx705-argb-mid-tower-gaming-case-with-atom-g750-750w-80-plus-gold-psu-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2303",
+   "name": "Antec P20C Black Mid-Tower E-ATX Gaming Case",
+   "category": "case",
+   "priceEgp": 4299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4400,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-p20c-black-mid-tower-e-atx-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/p20C/antec-p20c-black-mid-tower-e-atx-gaming-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3394",
+   "name": "Antec P30 ARGB Mid Tower Case – Premium Wood Accents, 5 PWM Fans Included, Type-C 3.2, Tempered Glass",
+   "category": "case",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-p30-argb-mid-tower-case-%E2%80%93-premium-wood-accents-5-pwm-fans-included-type-c-3-2-tempered-glass",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/p30/antec-p30-argb-mid-tower-case-%E2%80%93-premium-wood-accents-5-pwm-fans-included-type-c-3-2-tempered-glass-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2298",
+   "name": "ANTEC Performance 1 FT Full-Tower Case Black",
+   "category": "case",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-performance-1-ft-full-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Performance%201%20FT%20Black/antec-performance-1-ft-full-tower-case-black-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2297",
+   "name": "Antec Performance 1 FT WHITE Full-Tower Case",
+   "category": "case",
+   "priceEgp": 7600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-performance-1-ft-white-full-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Performance%201%20FT%20WHITE/antec-performance-1-ft-white-full-tower-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3196",
+   "name": "ANTEC VX310 Mid Tower Case – 4×120mm ARGB Fans + Antec Atom V650W Power Supply, High-Airflow Design, Tempered Glass Side Panel, Reliable ATX PC Case & PSU Combo",
+   "category": "psu",
+   "priceEgp": 2900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-vx310-mid-tower-case-%E2%80%93-4%C3%97120mm-argb-fans-antec-atom-v650w-power-supply-high-airflow-design-tempered-glass-side-panel-reliable-atx-pc-case-psu-combo",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/antec%20vx310%20650w/antec-vx310-mid-tower-case-%E2%80%93-4%C3%97120mm-argb-fans-antec-atom-v650w-power-supply-high-airflow-design-tempered-glass-side-panel-reliable-atx-pc-case-psu-combo-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2843",
+   "name": "ASUS A31 PLUS ATX Mid Tower Case – Tempered Glass Front & Side, 4x ARGB Fans, USB 3.2 Gen2x2 Type-C, Supports 360mm Radiator",
+   "category": "case",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-a31-plus-atx-mid-tower-case-%E2%80%93-tempered-glass-front-side-4x-argb-fans-usb-3-2-gen2x2-type-c-supports-360mm-radiator",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/A31%20PLUS%20Asus/asus-a31-plus-atx-mid-tower-case-%E2%80%93-tempered-glass-front-side-4x-argb-fans-usb-3-2-gen2x2-type-c-supports-360mm-radiator-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3003",
+   "name": "ASUS A31 PLUS Mid Tower PC Case with BTF motherboard support, tempered glass panels, 4 ARGB fans, 360mm radiator, 380mm GPU, 165mm CPU cooler, and USB 3.2 Gen 2x2 Type-C (WHITE)",
+   "category": "cpu",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-a31-plus-mid-tower-pc-case-with-btf-motherboard-support-tempered-glass-panels-4-argb-fans-360mm-radiator-380mm-gpu-165mm-cpu-cooler-and-usb-3-2-gen-2x2-type-c-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/A31%20PLUS%20Mid%20Tower/asus-a31-plus-mid-tower-pc-case-with-btf-motherboard-support-tempered-glass-panels-4-argb-fans-360mm-radiator-380mm-gpu-165mm-cpu-cooler-and-usb-3-2-gen-2x2-type-c-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3610",
+   "name": "ASUS A32 Plus ARGB Dual-Chamber Gaming Case (White Edition)",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-a32-plus-argb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/A32%20PLUS%20Case/asus-a32-plus-argb-dual-chamber-gaming-case-white-edition-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3137",
+   "name": "ASUS A32 PLUS Mid Tower ATX Case – Black, Dual-Chamber Design, Panoramic Tempered Glass, 4× Pre-Installed ARGB Fans, Supports 360mm Radiators & 420mm GPUs, USB Type-C Front I/O",
+   "category": "case",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-a32-plus-mid-tower-atx-case-%E2%80%93-black-dual-chamber-design-panoramic-tempered-glass-4%C3%97-pre-installed-argb-fans-supports-360mm-radiators-420mm-gpus-usb-type-c-front-i-o",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/A32%20PLUS/asus-a32-plus-mid-tower-atx-case-%E2%80%93-black-dual-chamber-design-panoramic-tempered-glass-4%C3%97-pre-installed-argb-fans-supports-360mm-radiators-420mm-gpus-usb-type-c-front-i-o-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2018",
+   "name": "ASUS ProArt PA602 E-ATX Workstation Chassis with 420mm Radiator Support",
+   "category": "case",
+   "priceEgp": 12250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-proart-pa602",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/ProArt%20PA602/asus-proart-pa602-e-atx-workstation-chassis-with-420mm-radiator-support-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3677",
+   "name": "ASUS ProArt PA602 Wood Edition Tempered Glass E-ATX Mid Tower Case - Black",
+   "category": "case",
+   "priceEgp": 13699,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-proart-pa602-wood-edition",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/ProArt%20PA602%20Wood%20Edition/asus-proart-pa602-wood-edition-tempered-glass-e-atx-mid-tower-case-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2883",
+   "name": "ASUS ROG Hyperion GR701 BTF Edition Full-Tower Gaming Case – Tool-Free Design, Panoramic Side Panel, High Airflow, E-ATX Support, BTF Compatibility, Aura Sync RGB",
+   "category": "case",
+   "priceEgp": 22500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-hyperion-gr701-btf-edition-full-tower-gaming-case-%E2%80%93-tool-free-design-panoramic-side-panel-high-airflow-e-atx-support-btf-compatibility-aura-sync-rgb",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/GR701%20BTF%20/asus-rog-hyperion-gr701-btf-edition-full-tower-gaming-case-%E2%80%93-tool-free-design-panoramic-side-panel-high-airflow-e-atx-support-btf-compatibility-aura-sync-rgb-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2058",
+   "name": "ASUS ROG Hyperion GR701 Full-Tower Case",
+   "category": "case",
+   "priceEgp": 22500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-hyperion-gr701-full-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/ROG%20Hyperion/asus-rog-hyperion-gr701-full-tower-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "946",
+   "name": "ASUS ROG Strix Helios GX601 Black Edition RGB Mid-tower Gaming Case",
+   "category": "case",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-strix-helios-gx601-black-edition-rgb-mid-tower-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/asus-rog-strix-helios-gx601-black-edition-rgb-mid-tower-gaming-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "945",
+   "name": "ASUS ROG Strix Helios GX601 White Edition RGB Mid-tower Gaming Case",
+   "category": "case",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-strix-helios-gx601-white-edition-rgb-mid-tower-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/asus-rog-strix-helios-gx601-white-edition-rgb-mid-tower-gaming-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3097",
+   "name": "ASUS ROG Strix Helios II White Edition Mid Tower Gaming Case – EATX Support, Tempered Glass, 4 Pre-Installed Fans, ARGB Lighting",
+   "category": "case",
+   "priceEgp": 16500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-strix-helios-ii-white-edition-mid-tower-gaming-case-%E2%80%93-eatx-support-tempered-glass-4-pre-installed-fans-argb-lighting",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/ROG%20Strix%20Helios%20II%20White%20Edition/asus-rog-strix-helios-ii-white-edition-mid-tower-gaming-case-%E2%80%93-eatx-support-tempered-glass-4-pre-installed-fans-argb-lighting-1-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1061",
+   "name": "ASUS ROG Z11 Mini-ITX/DTX Mid-Tower",
+   "category": "case",
+   "priceEgp": 2999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-rog-z11-mini-itx-dtx-mid-tower",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/asus-rog-z11-mini-itx-dtx-mid-tower-350x350h.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2109",
+   "name": "Asus TUF Gaming GT302 ARGB ATX Mid-Tower Case, Black",
+   "category": "case",
+   "priceEgp": 8500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-tuf-gaming-gt302-argb-atx-mid-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/g302bb/asus-tuf-gaming-gt302-argb-atx-mid-tower-case-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2110",
+   "name": "Asus TUF Gaming GT302 ARGB ATX Mid-Tower Case,white",
+   "category": "case",
+   "priceEgp": 7499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-tuf-gaming-gt302-argb-atx-mid-tower-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/gt302/asus-tuf-gaming-gt302-argb-atx-mid-tower-case-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3502",
+   "name": "ASUS TUF Gaming GT502 Horizon ARGB Mid Tower PC Case – Dual Chamber, Tempered Glass, 4x ARGB Fans (Black)",
+   "category": "case",
+   "priceEgp": 9500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-tuf-gaming-gt502-horizon-argb-mid-tower-pc-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/GT502%20Horizon%20B/asus-tuf-gaming-gt502-horizon-argb-mid-tower-pc-case-%E2%80%93-dual-chamber-tempered-glass-4x-argb-fans-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3503",
+   "name": "ASUS TUF Gaming GT502 Horizon ARGB Mid Tower PC Case – Dual Chamber, Tempered Glass, 4x ARGB Fans (White)",
+   "category": "case",
+   "priceEgp": 9800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-tuf-gaming-gt502-horizon-argb-mid-tower-pc-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/GT502%20Horizon%20W/asus-tuf-gaming-gt502-horizon-argb-mid-tower-pc-case-%E2%80%93-dual-chamber-tempered-glass-4x-argb-fans-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3310",
+   "name": "Asus TUF Gaming GT502 White Mid Tower Case – Dual-Chamber – Panoramic Glass Showcase",
+   "category": "case",
+   "priceEgp": 8500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-tuf-gaming-gt502-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/ASUS/GT502%20White%20/asus-tuf-gaming-gt502-white-mid-tower-case-%E2%80%93-dual-chamber-%E2%80%93-panoramic-glass-showcase-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2138",
+   "name": "Be Quiet DARK BASE PRO 901 Black",
+   "category": "case",
+   "priceEgp": 16500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/be-quiet-dark-base-pro-901-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Be%20Quiet/DARK%20BASE%20PRO%20901%20Black/be-quiet-dark-base-pro-901-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2487",
+   "name": "Case Antec Flux Mesh 5 Fan 3*120M Mid Tower",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/case-antec-flux-mesh-5-fan-3*120m-mid-tower",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Antec%20Flux%20Mesh/case-antec-flux-mesh-5-fan-3*120m-mid-tower-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2488",
+   "name": "Case Antec Flux Mesh 5 Fan 3*120M Mid Tower White",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/case-antec-flux-mesh-5-fan-3*120m-mid-tower-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/%20Flux%20Mesh%20W/case-antec-flux-mesh-5-fan-3*120m-mid-tower-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "298",
+   "name": "Cooler Master COSMOS C700M Full Tower Case - Black",
+   "category": "case",
+   "priceEgp": 25000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 28500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-cosmos-c700m-full-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/%20C700M/cooler-master-cosmos-c700m-full-tower-case-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2457",
+   "name": "Cooler Master COSMOS C700M | ATX Tempered Glass Case (White)",
+   "category": "case",
+   "priceEgp": 26000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-cosmos-c700m-atx-tempered-glass-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Cooler%20Master/C700M/cooler-master-cosmos-c700m-atx-tempered-glass-case-white-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2181",
+   "name": "COOLER MASTER HAF 500 Mid Tower Case - White",
+   "category": "case",
+   "priceEgp": 5149,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6350,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-haf-500-mid-tower-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/HAF%20500W/cooler-master-haf-500-mid-tower-case-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2180",
+   "name": "Cooler Master HAF 500 Mid-Tower Case - Black",
+   "category": "case",
+   "priceEgp": 5149,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-haf-500-mid-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/HAF%20500B/cooler-master-haf-500-mid-tower-case-black-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2182",
+   "name": "Cooler Master HAF 700 EVO ARGB Full-Tower Case - White",
+   "category": "case",
+   "priceEgp": 23500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 25000,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-haf-700-evo-argb-full-tower-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/HAF%20700%20EVO%20W/cooler-master-haf-700-evo-argb-full-tower-case-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1908",
+   "name": "Cooler Master HAF 700 EVO FULL - TOWER Case - Black",
+   "category": "case",
+   "priceEgp": 24000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-haf-700-evo-full-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/HAF%20700%20EVO/cooler-master-haf-700-evo-full-tower-case-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1909",
+   "name": "Cooler Master HAF 700 FULL TOWER Case - Black",
+   "category": "case",
+   "priceEgp": 13300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-haf-700-full-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/HAF%20700/cooler-master-haf-700-full-tower-case-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2176",
+   "name": "Cooler Master QUBE 500 Flatpack Mid-Tower Black",
+   "category": "case",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-qube-500-flatpack-mid-tower-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/QUBE%20500B/cooler-master-qube-500-flatpack-mid-tower-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2177",
+   "name": "Cooler Master QUBE 500 Flatpack Mid-Tower White",
+   "category": "case",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-qube-500-flatpack-mid-tower-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/QUBE%20500W/cooler-master-qube-500-flatpack-mid-tower-white-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "317",
+   "name": "Corsair Crystal 460X RGB Mid Tower Case",
+   "category": "case",
+   "priceEgp": 3700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-crystal-460x-rgb-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/corsair-crystal-460x-rgb-mid-tower-case-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "316",
+   "name": "Corsair Crystal 460X White RGB Mid Tower Case",
+   "category": "case",
+   "priceEgp": 3600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-crystal-460x-white-rgb-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/corsair-crystal-460x-white-rgb-mid-tower-case-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "920",
+   "name": "Corsair iCUE 220T Airflow RGB White Smart Mid-Tower Case",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-icue-220t-airflow-rgb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/corsair-icue-220t-airflow-rgb-white-smart-mid-tower-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2646",
+   "name": "Darkflash A290 ATX Gaming Case White",
+   "category": "case",
+   "priceEgp": 1999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-a290-atx-gaming-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/A290%20w/darkflash-a290-atx-gaming-case-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3254",
+   "name": "DarkFlash D275M M-ATX Case 325mm GPU Support, 240mm AIO & Tempered Glass",
+   "category": "gpu",
+   "priceEgp": 1999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-d275m-m-atx-case-325mm-gpu-support-240mm-aio-tempered-glass",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/D275M%20M-ATX%20-%20BLACK/darkflash-d275m-m-atx-case-325mm-gpu-support-240mm-aio-tempered-glass-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3267",
+   "name": "DarkFlash D275M White ARGB Gaming Case – Mid Tower with 3 ARGB Fans",
+   "category": "case",
+   "priceEgp": 2100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-d275m-white-argb-gaming-case-%E2%80%93-mid-tower-with-3-argb-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/D275M-w/darkflash-d275m-white-argb-gaming-case-%E2%80%93-mid-tower-with-3-argb-fans-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3312",
+   "name": "darkflash DK100 Black ATX Case – Tempered Glass Side Panel – USB 3.0",
+   "category": "case",
+   "priceEgp": 2000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dk100-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/DK100%20/darkflash-dk100-black-atx-case-%E2%80%93-tempered-glass-side-panel-%E2%80%93-usb-3-0-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3314",
+   "name": "darkflash DK260 Air White ATX Case – 4x Pre-installed ARGB Fans – 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 2750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dk260-air-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/DK260%20Air/darkflash-dk260-air-white-atx-case-%E2%80%93-4x-pre-installed-argb-fans-%E2%80%93-360mm-radiator-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3315",
+   "name": "darkflash DK351 White ATX Case – Dragon Scale Design – 4x Pre-installed ARGB Fans",
+   "category": "case",
+   "priceEgp": 2650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dk351-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/%20DK351%20White/darkflash-dk351-white-atx-case-%E2%80%93-dragon-scale-design-%E2%80%93-4x-pre-installed-argb-fans-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3313",
+   "name": "darkflash DK352 Plus White ATX Case – 4x Pre-installed PWM Fans – 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 3000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dk352-plus-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/DK352%20Plus%20White/darkflash-dk352-plus-white-atx-case-%E2%80%93-4x-pre-installed-pwm-fans-%E2%80%93-360mm-radiator-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3217",
+   "name": "DarkFlash DK361 Computer Case (White) – 4 Pre-Installed Fans, High Airflow Design, Tempered Glass Side Panel, Optimized Cooling Support",
+   "category": "case",
+   "priceEgp": 3000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dk361-computer-case-white-%E2%80%93-4-pre-installed-fans-high-airflow-design-tempered-glass-side-panel-optimized-cooling-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/DK361%20/darkflash-dk361-computer-case-white-%E2%80%93-4-pre-installed-fans-high-airflow-design-tempered-glass-side-panel-optimized-cooling-support-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3215",
+   "name": "DarkFlash DLM21 Mesh Black mATX PC Case – High Airflow Mesh Front Panel, Tempered Glass Side, Support for 240mm Radiator, Multiple Fan Support, Compact Micro-ATX Design",
+   "category": "case",
+   "priceEgp": 3400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dlm21-mesh-black-matx-pc-case-%E2%80%93-high-airflow-mesh-front-panel-tempered-glass-side-support-for-240mm-radiator-multiple-fan-support-compact-micro-atx-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/DLM21%20B/darkflash-dlm21-mesh-black-matx-pc-case-%E2%80%93-high-airflow-mesh-front-panel-tempered-glass-side-support-for-240mm-radiator-multiple-fan-support-compact-micro-atx-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3214",
+   "name": "DarkFlash DLM21 Mesh mATX PC Case – High Airflow Mesh Front Panel, Tempered Glass Side, Support for 240mm Radiator, Multiple Fan Support, Compact Micro-ATX Design",
+   "category": "case",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dlm21-mesh-matx-pc-case-%E2%80%93-high-airflow-mesh-front-panel-tempered-glass-side-support-for-240mm-radiator-multiple-fan-support-compact-micro-atx-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/DLM21%20W/darkflash-dlm21-mesh-matx-pc-case-%E2%80%93-high-airflow-mesh-front-panel-tempered-glass-side-support-for-240mm-radiator-multiple-fan-support-compact-micro-atx-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3321",
+   "name": "darkflash DLV22 Black ATX Case – Vertical Motherboard Mount – Dual USB 3.0",
+   "category": "motherboard",
+   "priceEgp": 2400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dlv22-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/DLV22%20/darkflash-dlv22-black-atx-case-%E2%80%93-vertical-motherboard-mount-%E2%80%93-dual-usb-3-0-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3290",
+   "name": "Endorphin Air V2 Mid-Tower Gaming Case – E-ATX Support, 420mm GPU Clearance, Type-C Port",
+   "category": "gpu",
+   "priceEgp": 3100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/endorphin-air-v2-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Endorphin%20Ultra/endorphin-air-v2-mid-tower-gaming-case-%E2%80%93-e-atx-support-420mm-gpu-clearance-type-c-port-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3536",
+   "name": "GIGABYTE AORUS C601 GLASS Mid-Tower Gaming Case",
+   "category": "case",
+   "priceEgp": 12500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/gigabyte-aorus-c601-glass",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Gigabyte%20/AORUS%20C601/gigabyte-aorus-c601-glass-mid-tower-gaming-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2529",
+   "name": "HYTE Y70 Touch Infinite Dual Chamber ATX Mid Tower Modern Aesthetic Case with Integrated 2.5K LCD Touchscreen - Black",
+   "category": "case",
+   "priceEgp": 21000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/hyte-y70-touch-infinite-dual-chamber-atx-mid-tower-modern-aesthetic-case-with-integrated-2-5k-lcd-touchscreen-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/HYTE/Y70%20Touch%20B/hyte-y70-touch-infinite-dual-chamber-atx-mid-tower-modern-aesthetic-case-with-integrated-2-5k-lcd-touchscreen-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2528",
+   "name": "HYTE Y70 Touch Infinite Dual Chamber ATX Mid Tower Modern Aesthetic Case with Integrated 2.5K LCD Touchscreen - Snow White",
+   "category": "case",
+   "priceEgp": 22500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/hyte-y70-touch-infinite-dual-chamber-atx-mid-tower-modern-aesthetic-case-with-integrated-2-5k-lcd-touchscreen-snow-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/HYTE/Y70%20Touch%20W/hyte-y70-touch-infinite-dual-chamber-atx-mid-tower-modern-aesthetic-case-with-integrated-2-5k-lcd-touchscreen-snow-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1627",
+   "name": "ian Li PC-O11 Dynamic White Mid Tower Case – Dual Chamber – Tempered Glass Showcase",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-pc-o11-dynamic-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Lian%20Li/011%20Dynamic/ian-li-pc-o11-dynamic-white-mid-tower-case-%E2%80%93-dual-chamber-%E2%80%93-tempered-glass-showcase-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2764",
+   "name": "Lian Li A3-mATX White Wood Edition – Micro Tower Case, 26.3L, Steel Mesh, M-ATX/ITX, 415mm GPU, 360mm Radiator, ATX/SFX PSU Support, DAN Cases Design",
+   "category": "psu",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-a3-matx-white-wood-edition-%E2%80%93-micro-tower-case-26-3l-steel-mesh-m-atx-itx-415mm-gpu-360mm-radiator-atx-sfx-psu-support-dan-cases-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/A3-WD-W/lian-li-a3-matx-white-wood-edition-%E2%80%93-micro-tower-case-26-3l-steel-mesh-m-atx-itx-415mm-gpu-360mm-radiator-atx-sfx-psu-support-dan-cases-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2773",
+   "name": "Lian Li LANCOOL 207 Black ATX/Micro-ATX Case – Compact 45.5L Mid-Tower, Front PSU, 360mm Radiator Support, 4 Pre-Installed High-Performance Fans, Tempered Glass, USB-C",
+   "category": "psu",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-lancool-207-black-atx-micro-atx-case-%E2%80%93-compact-45-5l-mid-tower-front-psu-360mm-radiator-support-4-pre-installed-high-performance-fans-tempered-glass-usb-c",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/207%20B/lian-li-lancool-207-black-atx-micro-atx-case-%E2%80%93-compact-45-5l-mid-tower-front-psu-360mm-radiator-support-4-pre-installed-high-performance-fans-tempered-glass-usb-c-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2780",
+   "name": "Lian Li LANCOOL 207 Mid Tower Case – White, 2x 140mm & 2x 120mm Pre-Installed Fans, Supports 360mm Radiator, 8 Fan Slots, Steel Frame & 4mm Tempered Glass",
+   "category": "case",
+   "priceEgp": 4199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-lancool-207-mid-tower-case-%E2%80%93-white-2x-140mm-2x-120mm-pre-installed-fans-supports-360mm-radiator-8-fan-slots-steel-frame-4mm-tempered-glass",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Lian%20Li%20Lancool%20207/lian-li-lancool-207-mid-tower-case-%E2%80%93-white-2x-140mm-2x-120mm-pre-installed-fans-supports-360mm-radiator-8-fan-slots-steel-frame-4mm-tempered-glass-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2781",
+   "name": "Lian Li LANCOOL 216 Mid Tower Case – 2x 160mm Fans, ARGB/RGB Options, E-ATX Support, 360mm Radiator, Steel & Tempered Glass Design (White)",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4999,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-lancool-216-mid-tower-case-%E2%80%93-2x-160mm-fans-argb-rgb-options-e-atx-support-360mm-radiator-steel-tempered-glass-design-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Lian%20Li%20LANCOOL%20216%20%20W/lian-li-lancool-216-mid-tower-case-%E2%80%93-2x-160mm-fans-argb-rgb-options-e-atx-support-360mm-radiator-steel-tempered-glass-design-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3307",
+   "name": "Lian Li LANCOOL 217 White Mid-Tower Case – Back-Connect MB Support – 5x High-Performance Fans",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-lancool-217-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Lian%20Li/%20LANCOOL%20217%20w/lian-li-lancool-217-white-mid-tower-case-%E2%80%93-back-connect-mb-support-%E2%80%93-5x-high-performance-fans-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2792",
+   "name": "Lian Li LANCOOL III Black Mid Tower Gaming Case – Tempered Glass, ARGB Fans, E-ATX Support, USB Type-C, High AirfloW",
+   "category": "case",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-lancool-iii-black-mid-tower-gaming-case-%E2%80%93-tempered-glass-argb-fans-e-atx-support-usb-type-c-high-airflow",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/LANCOOL%20III%20Black/lian-li-lancool-iii-black-mid-tower-gaming-case-%E2%80%93-tempered-glass-argb-fans-e-atx-support-usb-type-c-high-airflow-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2793",
+   "name": "Lian Li LANCOOL III White Mid Tower Gaming Case – Tempered Glass, ARGB Fans, E-ATX Support, USB Type-C, High AirfloW",
+   "category": "case",
+   "priceEgp": 7250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-lancool-iii-white-mid-tower-gaming-case-%E2%80%93-tempered-glass-argb-fans-e-atx-support-usb-type-c-high-airflow",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/LANCOOL%20III%20White%20/lian-li-lancool-iii-white-mid-tower-gaming-case-%E2%80%93-tempered-glass-argb-fans-e-atx-support-usb-type-c-high-airflow-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2766",
+   "name": "Lian Li O11 Air Mini Black Mini ITX Tower Gaming Case",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-air-mini-black-mini-itx-tower-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11%20AIR%20MINI/lian-li-o11-air-mini-black-mini-itx-tower-gaming-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2798",
+   "name": "Lian Li O11 Dynamic EVO Black RGB Mid Tower Case – O11DERGBX – ATX, Tempered Glass, Black",
+   "category": "case",
+   "priceEgp": 7600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8300,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-dynamic-evo-black-rgb-mid-tower-case-%E2%80%93-o11dergbx-%E2%80%93-atx-tempered-glass-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11%20Dynamic%20B/lian-li-o11-dynamic-evo-black-rgb-mid-tower-case-%E2%80%93-o11dergbx-%E2%80%93-atx-tempered-glass-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2799",
+   "name": "Lian Li O11 Dynamic EVO RGB Mid Tower Case – O11DERGBW– ATX, Tempered Glass, White",
+   "category": "case",
+   "priceEgp": 7900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8600,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-dynamic-evo-rgb-mid-tower-case-%E2%80%93-o11dergbw%E2%80%93-atx-tempered-glass-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11%20Dynamic%20EVO%20XL%20W/lian-li-o11-dynamic-evo-rgb-mid-tower-case-%E2%80%93-o11dergbw%E2%80%93-atx-tempered-glass-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2800",
+   "name": "Lian Li O11 Dynamic EVO XL – Full Tower Case with E-ATX Support, Tempered Glass, and High Airflow Design (BLACK)",
+   "category": "case",
+   "priceEgp": 10900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11700,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-dynamic-evo-xl-%E2%80%93-full-tower-case-with-e-atx-support-tempered-glass-and-high-airflow-design-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11%20Dynamic%20EVO%20XL%20B/lian-li-o11-dynamic-evo-xl-%E2%80%93-full-tower-case-with-e-atx-support-tempered-glass-and-high-airflow-design-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2801",
+   "name": "Lian Li O11 Dynamic EVO XL – Full Tower Case with E-ATX Support, Tempered Glass, and High Airflow Design (White)",
+   "category": "case",
+   "priceEgp": 11200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-dynamic-evo-xl-%E2%80%93-full-tower-case-with-e-atx-support-tempered-glass-and-high-airflow-design-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11%20Dynamic%20EVO%20XL%20W/lian-li-o11-dynamic-evo-xl-%E2%80%93-full-tower-case-with-e-atx-support-tempered-glass-and-high-airflow-design-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3306",
+   "name": "Lian Li O11 Vision Chrome Dual-Chamber Mid-Tower E-ATX Gaming Case (O11VC)",
+   "category": "case",
+   "priceEgp": 7200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-vision-chrome-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Lian%20Li/O11%20Vision%20Chrome%20/lian-li-o11-vision-chrome-dual-chamber-mid-tower-e-atx-gaming-case-o11vc-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2795",
+   "name": "Lian Li O11 VISION COMPACT Mid Tower PC Case – Tempered Glass, ATX/E-ATX Support, USB 3.1 Type-C Multiple Radiator & Fan Support",
+   "category": "case",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6250,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-vision-compact-mid-tower-pc-case-%E2%80%93-tempered-glass-atx-e-atx-support-usb-3-1-type-c-multiple-radiator-fan-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11VPX/lian-li-o11-vision-compact-mid-tower-pc-case-%E2%80%93-tempered-glass-atx-e-atx-support-usb-3-1-type-c-multiple-radiator-fan-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2797",
+   "name": "Lian Li O11 VISION COMPACT Mid Tower PC Case – Tempered Glass, ATX/E-ATX Support, USB 3.1 Type-C Multiple Radiator & Fan Support (White)",
+   "category": "case",
+   "priceEgp": 6700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-vision-compact-mid-tower-pc-case-%E2%80%93-tempered-glass-atx-e-atx-support-usb-3-1-type-c-multiple-radiator-fan-support-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11VPW/lian-li-o11-vision-compact-mid-tower-pc-case-%E2%80%93-tempered-glass-atx-e-atx-support-usb-3-1-type-c-multiple-radiator-fan-support-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3616",
+   "name": "Lian Li O11 VISION Tower Chassis (O11VPW White Edition)",
+   "category": "case",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-vision-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11VPW/lian-li-o11-vision-tower-chassis-o11vpw-white-edition-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1237",
+   "name": "Lian Li PC-O11 Dynamic Black Mid Tower Case – Dual Chamber – Tempered Glass Showcase",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-pc-o11-dynamic-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Lian%20Li/O11%20DYNAMIC/lian-li-pc-o11-dynamic-black-mid-tower-case-%E2%80%93-dual-chamber-%E2%80%93-tempered-glass-showcase-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2790",
+   "name": "Lian Li SUP01 Black Mid-Tower Gaming Case – Tempered Glass, ATX/PCIe 4.0, USB-C, High-Airflow",
+   "category": "case",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-sup01-black-mid-tower-gaming-case-%E2%80%93-tempered-glass-atx-pcie-4-0-usb-c-high-airflow",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/SUP01/lian-li-sup01-black-mid-tower-gaming-case-%E2%80%93-tempered-glass-atx-pcie-4-0-usb-c-high-airflow-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2791",
+   "name": "Lian Li SUP01 White Mid-Tower Gaming Case – Tempered Glass, ATX/PCIe 4.0, USB-C, High-Airflow",
+   "category": "case",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-sup01-white-mid-tower-gaming-case-%E2%80%93-tempered-glass-atx-pcie-4-0-usb-c-high-airflow",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/SUP01%20W/lian-li-sup01-white-mid-tower-gaming-case-%E2%80%93-tempered-glass-atx-pcie-4-0-usb-c-high-airflow-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2802",
+   "name": "Lian Li V3000 PLUS Full Tower PC Case – Dual System Support, Rotated Layout, EEB/E-ATX Compatible, High Airflow, Tempered Glass Panels – White GGF Edition",
+   "category": "case",
+   "priceEgp": 25000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-v3000-plus-full-tower-pc-case-%E2%80%93-dual-system-support-rotated-layout-eeb-e-atx-compatible-high-airflow-tempered-glass-panels-%E2%80%93-white-ggf-edition",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/V3000%20/lian-li-v3000-plus-full-tower-pc-case-%E2%80%93-dual-system-support-rotated-layout-eeb-e-atx-compatible-high-airflow-tempered-glass-panels-%E2%80%93-white-ggf-edition-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3308",
+   "name": "Lian Li Vector V100 White Mid-Tower Case – Back-Connect MB Support – 270° Panoramic Glass",
+   "category": "case",
+   "priceEgp": 3600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-vector-v100-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Lian%20Li/V100R%20W/lian-li-vector-v100-white-mid-tower-case-%E2%80%93-back-connect-mb-support-%E2%80%93-270%C2%B0-panoramic-glass-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3238",
+   "name": "Lian Li Vector V100R Black Mid-Tower Gaming Case – ATX / E-ATX / Micro-ATX Support, Tempered Glass Side Panel, High Airflow Design, Advanced Cooling Support",
+   "category": "case",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-vector-v100r-black-mid-tower-gaming-case-%E2%80%93-atx-e-atx-micro-atx-support-tempered-glass-side-panel-high-airflow-design-advanced-cooling-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Lian%20Li/Vector%20V100%20B/lian-li-vector-v100r-black-mid-tower-gaming-case-%E2%80%93-atx-e-atx-micro-atx-support-tempered-glass-side-panel-high-airflow-design-advanced-cooling-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3265",
+   "name": "NZXT H210 Mini-ITX Gaming Case with Tempered Glass – Matte Black/Red",
+   "category": "case",
+   "priceEgp": 1499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2700,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/nzxt-h210-mini-itx-gaming-case-with-tempered-glass-%E2%80%93-matte-black-red",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/NZXT%20H210/nzxt-h210-mini-itx-gaming-case-with-tempered-glass-%E2%80%93-matte-black-red-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3407",
+   "name": "SilverStone Lucid 05 Panoramic ATX Case + Triton 850Rx 80+ Gold PSU Bundle – 270° View, 11 Fan Mounts, 410mm GPU Limit, Black",
+   "category": "psu",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/silverstone-lucid-05-panoramic-atx-case-triton-850rx-80-gold-psu-bundle-%E2%80%93-270%C2%B0-view-11-fan-mounts-410mm-gpu-limit-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/SST-LD05-B-ARGB/silverstone-lucid-05-panoramic-atx-case-triton-850rx-80-gold-psu-bundle-%E2%80%93-270%C2%B0-view-11-fan-mounts-410mm-gpu-limit-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "343",
+   "name": "Thermaltake View 32 Tempered Glass RGB Edition Mid Tower Case",
+   "category": "case",
+   "priceEgp": 3400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/thermaltake-view-32-tempered-glass-rgb-edition-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Thermaltake/thermaltake-view-32-tempered-glass-rgb-edition-mid-tower-case-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3263",
+   "name": "Xander Crystal 7 ARGB Mid Tower Gaming Case with 850W 80 Plus Bronze PSU – High Airflow & RGB Design",
+   "category": "psu",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-crystal-7-argb-mid-tower-gaming-case-with-850w-80-plus-bronze-psu-%E2%80%93-high-airflow-rgb-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Xander%20Crystal%20%20850W%20/xander-crystal-7-argb-mid-tower-gaming-case-with-850w-80-plus-bronze-psu-%E2%80%93-high-airflow-rgb-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3302",
+   "name": "Xander Crystal Arctic – Panoramic E-ATX Showcase, 7x ARGB Fans, 850W 80 Plus Bronze PSU, 1.2mm SPCC",
+   "category": "psu",
+   "priceEgp": 7600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-crystal-arctic",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/Xander%20Crystal%20850w%20white/xander-crystal-arctic-%E2%80%93-panoramic-e-atx-showcase-7x-argb-fans-850w-80-plus-bronze-psu-1-2mm-spcc-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2929",
+   "name": "Xander Hulk Mesh Mid Tower Gaming Case – 4x ARGB Fans, Tempered Glass, 700W 80+ PSU Included, ATX Support, High Airflow, Black",
+   "category": "psu",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-hulk-mesh-mid-tower-gaming-case-%E2%80%93-4x-argb-fans-tempered-glass-700w-80-psu-included-atx-support-high-airflow-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Xander%20Hulk%20700W%20/xander-hulk-mesh-mid-tower-gaming-case-%E2%80%93-4x-argb-fans-tempered-glass-700w-80-psu-included-atx-support-high-airflow-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3303",
+   "name": "Xander Jupiter ARGB Black – Dual-Chamber Mid-Tower Showcase, 750W PSU Included, Dual Tempered Glass",
+   "category": "psu",
+   "priceEgp": 4750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-jupiter-argb-black-1",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/Jupiter%20850w%20black/xander-jupiter-argb-black%E2%80%93-panoramic-showcase-mid-tower-850w-80-plus-bronze-psu-included-triple-tempered-glass-1-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3301",
+   "name": "Xander Jupiter ARGB Black– Panoramic Showcase Mid-Tower, 850W 80 Plus Bronze PSU Included, Triple Tempered Glass",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-jupiter-argb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/Jupiter%20850w%20black/xander-jupiter-argb-black%E2%80%93-panoramic-showcase-mid-tower-850w-80-plus-bronze-psu-included-triple-tempered-glass-1-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3300",
+   "name": "Xander Jupiter ARGB White – Panoramic Showcase Mid-Tower, 750W PSU Included, Triple Tempered Glass",
+   "category": "psu",
+   "priceEgp": 4750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-jupiter-argb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/Jupiter%20850w%20White/xander-jupiter-argb-white-%E2%80%93-panoramic-showcase-mid-tower-750w-psu-included-triple-tempered-glass-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3305",
+   "name": "Xander Neptune Black High-Airflow ATX Case + PSU 850W + 7 ARGB Fans",
+   "category": "psu",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-neptune-black-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/Neptune%20Black%20850w/xander-neptune-black-high-airflow-atx-case-psu-850w-7-argb-fans-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2515",
+   "name": "XANDER VELOX ARGB + 600W ARGB 80 PLUS WHITE",
+   "category": "psu",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-velox-argb-600w-argb-80-plus-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/VELOX%20600w/xander-velox-argb-600w-argb-80-plus-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3304",
+   "name": "Xander Velox Flow Black – E-ATX Gaming Chassis, 4x ARGB Fans & Control PCB, 750W PSU, PCIE 5.0 Support",
+   "category": "psu",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-velox-flow-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/%20Velox%20Flow%20750w/xander-velox-flow-black-%E2%80%93-e-atx-gaming-chassis-4x-argb-fans-control-pcb-750w-psu-pcie-5-0-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3342",
+   "name": "Xander Velox Max Black E-ATX Gaming Case with 850W 80+ Bronze PSU",
+   "category": "psu",
+   "priceEgp": 5100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-velox-max-black-e-atx-gaming-case-with-850w-80-bronze-psu",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/Velox%20Max%20750w/xander-velox-max-black-e-atx-gaming-case-with-850w-80-bronze-psu-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3299",
+   "name": "Xander Velox Max Black – E-ATX Gaming Chassis, 750W 80 Plus Bronze PSU Included, 4x ARGB Fans, 360mm Radiator Support",
+   "category": "psu",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-velox-max-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/Velox%20Max%20750w/xander-velox-max-black-e-atx-gaming-case-with-850w-80-bronze-psu-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2519",
+   "name": "Xander Velox Mid Tower Case + 700W 80+ White",
+   "category": "psu",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xander-velox-mid-tower-case-700w-80-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Xander/VELOX%20600w/xander-velox-argb-600w-argb-80-plus-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3405",
+   "name": "XIGMATEK Amun Micro Tower Case with 3 ARGB PWM Fans & X-Power 650W 80 Plus PSU – EN90427, Black",
+   "category": "psu",
+   "priceEgp": 2550,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-amun-micro-tower-case-with-3-argb-pwm-fans-x-power-650w-80-plus-psu-%E2%80%93-en90427-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Amun%20650w/xigmatek-amun-micro-tower-case-with-3-argb-pwm-fans-x-power-650w-80-plus-psu-%E2%80%93-en90427-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3293",
+   "name": "Xigmatek AQUA Ultra Arctic – Panoramic Super Tower, Dual-Chamber E-ATX Showcase, Triple 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-ultra-arctic-super-tower",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Aqua%20Ultra%20Arctic/xigmatek-aqua-ultra-arctic-%E2%80%93-panoramic-super-tower-dual-chamber-e-atx-showcase-triple-360mm-radiator-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3292",
+   "name": "Xigmatek AQUA Ultra ARGB Super Tower Gaming Case – Dual Chamber, E-ATX Support",
+   "category": "case",
+   "priceEgp": 5000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5800,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-ultra-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Aqua%20Ultra%20black/xigmatek-aqua-ultra-argb-super-tower-gaming-case-%E2%80%93-dual-chamber-e-atx-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3644",
+   "name": "Xigmatek Crystal Storm Arctic V2 E-ATX Case + Valkyrie 750W 80+ Bronze PSU - White",
+   "category": "psu",
+   "priceEgp": 5699,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-crystal-storm-arctic-v2-case-750w-psu",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/%20Crystal%20Storm%20Arctic%20V2%20750W/xigmatek-crystal-storm-arctic-v2-e-atx-case-valkyrie-750w-80-bronze-psu-white-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3146",
+   "name": "Xigmatek Crystal Storm Mid Tower Case – Curved Tempered Glass, 4× PWM ARGB Fans, High-Airflow Design, ATX Support, Premium Gaming Chassis",
+   "category": "case",
+   "priceEgp": 3250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-crystal-storm-mid-tower-case-%E2%80%93-curved-tempered-glass-4%C3%97-pwm-argb-fans-high-airflow-design-atx-support-premium-gaming-chassis",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Xigmatek%20Crystal%20Storm/xigmatek-crystal-storm-mid-tower-case-%E2%80%93-curved-tempered-glass-4%C3%97-pwm-argb-fans-high-airflow-design-atx-support-premium-gaming-chassis-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3643",
+   "name": "Xigmatek Crystal Storm V2 E-ATX Case + Valkyrie 750W 80+ Bronze PSU - Black",
+   "category": "psu",
+   "priceEgp": 5299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-crystal-storm-v2-case-750w-psu",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/CRYSTAL%20STORM%20V2%20750w-B/xigmatek-crystal-storm-v2-e-atx-case-valkyrie-750w-80-bronze-psu-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3645",
+   "name": "Xigmatek Crystal Storm V2 E-ATX Case + Valkyrie 850W 80+ Bronze PSU - Black",
+   "category": "psu",
+   "priceEgp": 5899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-crystal-storm-v2-case-850w-psu",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/CRYSTAL%20STORM%20V2-850W/xigmatek-crystal-storm-v2-e-atx-case-valkyrie-850w-80-bronze-psu-black-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2126",
+   "name": "Xigmatek Elysium II Full Tower Case",
+   "category": "case",
+   "priceEgp": 13999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 14500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-elysium-ii-full-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/ELYSIUM%20II/xigmatek-elysium-ii-full-tower-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2052",
+   "name": "Xigmatek Endorphin WD Arctic White E-ATX Case – 270° Panoramic View – USB-C",
+   "category": "case",
+   "priceEgp": 4350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5250,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-endorphin-wd-arctic",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/WD%20WHITE/xigmatek-endorphin-wd-arctic-white-e-atx-case-%E2%80%93-270%C2%B0-panoramic-view-%E2%80%93-usb-c-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3406",
+   "name": "XIGMATEK Osiris Super Tower Case BTF Back Plug Support & Asgard 750W 80+ Bronze Full-Modular PSU Bundle – Black",
+   "category": "psu",
+   "priceEgp": 4299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-osiris-super-tower-case-btf-back-plug-support-asgard-750w-80-bronze-full-modular-psu-bundle-%E2%80%93-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Xigmatek%20Osiris%20AR850/xigmatek-osiris-super-tower-case-btf-back-plug-support-asgard-750w-80-bronze-full-modular-psu-bundle-%E2%80%93-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3297",
+   "name": "Xigmatek Zoser Arctic ARGB – High-Performance E-ATX Super-Mid Tower, 4x ARGB Fans Pre-installed, 185mm CPU Clearance",
+   "category": "cpu",
+   "priceEgp": 3300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 3500,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-zoser-arctic-argb-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Zoser%20Arctic/xigmatek-zoser-arctic-argb-%E2%80%93-high-performance-e-atx-super-mid-tower-4x-argb-fans-pre-installed-185mm-cpu-clearance-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2021",
+   "name": "ASUS A21 PLUS Case White (ONLY BUILD)",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-a21-plus-case-white-only-build",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/CASE/a21/asus-a21-plus-case-white-only-build-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2300",
+   "name": "Antec C5 ARGB White Mid Tower Case",
+   "category": "case",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c5-argb-white-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/c5%20white/antec-c5-argb-white-mid-tower-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2294",
+   "name": "Antec C8 Black Case, Fans not Included, RTX 40 Compatible, Dual-Chamber, tooless Design, Type-C, 360mm Radiator Support, Seamless Tempered Glass Front & Side Panels, High Airflow Full-Tower E-ATX PC Case",
+   "category": "gpu",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-c8-black-case-fans-not-included-rtx-40-compatible-dual-chamber-tooless-design-type-c-360mm-radiator-support-seamless-tempered-glass-front-side-panels-high-airflow-full-tower-e-atx-pc-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Antec%20C8%20Black/antec-c8-black-case-fans-not-included-rtx-40-compatible-dual-chamber-tooless-design-type-c-360mm-radiator-support-seamless-tempered-glass-front-side-panels-high-airflow-full-tower-e-atx-pc-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2304",
+   "name": "Antec P20C White Mesh 3Fan 3*120M Gaming Case",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-p20c-white-mesh-3fan-3*120m-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/%20P20C%20White/antec-p20c-white-mesh-3fan-3*120m-gaming-case-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3264",
+   "name": "Antec VCX300 Mid Tower Gaming Case with 5 ARGB Fans + Antec Atom V650 Power Supply",
+   "category": "psu",
+   "priceEgp": 3300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/antec-vcx300-mid-tower-gaming-case-with-5-argb-fans-antec-atom-v650-power-supply",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/VCX300/antec-vcx300-mid-tower-gaming-case-with-5-argb-fans-antec-atom-v650-power-supply-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2020",
+   "name": "ASUS A21 PLUS Case",
+   "category": "case",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/asus-a21-plus-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Asus/CASE/a21/asus-a21-plus-case-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "1534",
+   "name": "Cooler Master Case H500 ARGB Mid Tower Case",
+   "category": "case",
+   "priceEgp": 5250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-case-h500-argb-mid-tower-case-only-build",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Cooler%20Master/H500/cooler-master-case-h500-argb-mid-tower-case-only-build-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2551",
+   "name": "Cooler Master MASTERBOX 600 ARGB Mid-Tower White",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-masterbox-600-argb-mid-tower-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/MASTERBOX%20600/cooler-master-masterbox-600-argb-mid-tower-white-1-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2552",
+   "name": "Cooler Master MASTERBOX 600 ARGB Mid-Tower-Black",
+   "category": "case",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-masterbox-600-argb-mid-tower-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/MASTERBOX%20600%20B/cooler-master-masterbox-600-argb-mid-tower-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2178",
+   "name": "Cooler Master MasterBox TD500 Mesh V2 ARGB Mid-Tower Black",
+   "category": "case",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-masterbox-td500-mesh-v2-argb-mid-tower-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/TD500%20Mesh%20V2%20B/cooler-master-masterbox-td500-mesh-v2-argb-mid-tower-black-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2179",
+   "name": "Cooler Master MasterBox TD500 Mesh V2 ARGB Mid-Tower White",
+   "category": "case",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-masterbox-td500-mesh-v2-argb-mid-tower-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/cooler%20master/TD500%20Mesh%20V2W/cooler-master-masterbox-td500-mesh-v2-argb-mid-tower-white-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2554",
+   "name": "Cooler Master NCORE 100 MAX Bronze ITX SFF Tower Case, Custom 120mm AIO, 850W SFX Gold ATX3.0 PSU, 4 Slot GPU, Vertical Mount GPU, PCIe 4.0 Riser, Anodized Aluminum, USB Type C (NR100-ZNNN85-SL0)",
+   "category": "psu",
+   "priceEgp": 19000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/cooler-master-ncore-100-max-bronze-itx-sff-tower-case-custom-120mm-aio-850w-sfx-gold-atx3-0-psu-4-slot-gpu-vertical-mount-gpu-pcie-4-0-riser-anodized-aluminum-usb-type-c-nr100-znnn85-sl0",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/NCORE%20100/cooler-master-ncore-100-max-bronze-itx-sff-tower-case-custom-120mm-aio-850w-sfx-gold-atx3-0-psu-4-slot-gpu-vertical-mount-gpu-pcie-4-0-riser-anodized-aluminum-usb-type-c-nr100-znnn85-sl0-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "919",
+   "name": "Corsair iCUE 220T Airflow RGB Black Smart Mid-Tower Case",
+   "category": "case",
+   "priceEgp": 4250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-icue-220t-airflow-rgb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/corsair-icue-220t-airflow-rgb-black-smart-mid-tower-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "918",
+   "name": "Corsair iCUE 465X RGB Black Mid-Tower Smart Case",
+   "category": "case",
+   "priceEgp": 2700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-icue-465x-rgb-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/corsair-icue-465x-rgb-black-mid-tower-smart-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "917",
+   "name": "Corsair iCUE 465X RGB White Mid-Tower Smart Case",
+   "category": "case",
+   "priceEgp": 2700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/corsair-icue-465x-rgb-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Corsair/corsair-icue-465x-rgb-white-mid-tower-smart-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2647",
+   "name": "Darkflash A290 ATX Gaming Case Black",
+   "category": "case",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-a290-atx-gaming-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/a290%20b/darkflash-a290-atx-gaming-case-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3316",
+   "name": "darkflash DF5000 Black ATX Case – High-End Airflow – 360mm Radiator & USB-C Support",
+   "category": "case",
+   "priceEgp": 4100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-df5000-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/df5000%20black/darkflash-df5000-black-atx-case-%E2%80%93-high-end-airflow-%E2%80%93-360mm-radiator-usb-c-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3255",
+   "name": "DarkFlash DLX4000 Glass Black E-ATX Case | 9 ARGB Fans Included",
+   "category": "case",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dlx4000-glass-white-e-atx-case-9-argb-fans-included",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/%20DLX4000/darkflash-dlx4000-glass-black-e-atx-case-9-argb-fans-included-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2648",
+   "name": "darkFlash DS900 ATX Mid-Tower PC Case White",
+   "category": "case",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-ds900-atx-mid-tower-pc-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/DS900/darkflash-ds900-atx-mid-tower-pc-case-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3317",
+   "name": "darkflash DY470 White ATX Case – 270° Panoramic View – Dual 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/darkflash-dy470-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/dy470%20w/darkflash-dy470-white-atx-case-%E2%80%93-270%C2%B0-panoramic-view-%E2%80%93-dual-360mm-radiator-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3256",
+   "name": "DY470 ATX PC Case – Mid Tower Gaming Chassis, High Airflow Design, Tempered Glass Side Panel, Multi-Fan & Liquid Cooling Support",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/dy470-atx-pc-case-%E2%80%93-mid-tower-gaming-chassis-high-airflow-design-tempered-glass-side-panel-multi-fan-liquid-cooling-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/darkflash/dy470/dy470-atx-pc-case-%E2%80%93-mid-tower-gaming-chassis-high-airflow-design-tempered-glass-side-panel-multi-fan-liquid-cooling-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2458",
+   "name": "GIGABYTE AORUS C500 Glass – Black Mid Tower PC Gaming Case, Tempered Glass, USB Type-C, 4X ARBG Fans Included",
+   "category": "case",
+   "priceEgp": 9750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/gigabyte-aorus-c500-glass-%E2%80%93-black-mid-tower-pc-gaming-case-tempered-glass-usb-type-c-4x-arbg-fans-included",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/AORUS%20C500/gigabyte-aorus-c500-glass-%E2%80%93-black-mid-tower-pc-gaming-case-tempered-glass-usb-type-c-4x-arbg-fans-included-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2727",
+   "name": "Lian Li A3-mATX Micro Tower Case – 26.3L Compact Steel Mesh, 415mm GPU, 360mm Radiator Support, 10x120mm Fans, ATX/SFX PSU, DAN Cases Collaboration",
+   "category": "psu",
+   "priceEgp": 3800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-a3-matx-micro-tower-case-%E2%80%93-26-3l-compact-steel-mesh-415mm-gpu-360mm-radiator-support-10x120mm-fans-atx-sfx-psu-dan-cases-collaboration",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/A3-Lian%20L/lian-li-a3-matx-micro-tower-case-%E2%80%93-26-3l-compact-steel-mesh-415mm-gpu-360mm-radiator-support-10x120mm-fans-atx-sfx-psu-dan-cases-collaboration-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2762",
+   "name": "Lian Li A3-MATX White Case – 26.3L Compact Steel Chassis | M-ATX/ITX Support | 415mm GPU | ATX/SFX PSU | 360mm Radiator | Up to 10 Fans",
+   "category": "psu",
+   "priceEgp": 3800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-a3-matx-white-case-%E2%80%93-26-3l-compact-steel-chassis-m-atx-itx-support-415mm-gpu-atx-sfx-psu-360mm-radiator-up-to-10-fans",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/A3-mATX%20W/lian-li-a3-matx-white-case-%E2%80%93-26-3l-compact-steel-chassis-m-atx-itx-support-415mm-gpu-atx-sfx-psu-360mm-radiator-up-to-10-fans-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2771",
+   "name": "Lian Li A4-H2O Black 11L Mini-ITX Small Form Factor Case – Aluminum Chassis, Triple-Slot GPU Support, 240mm AIO, PCIe 4.0 Riser, SFX/SFX-L PSU Compatible",
+   "category": "psu",
+   "priceEgp": 7900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-a4-h2o-black-11l-mini-itx-small-form-factor-case-%E2%80%93-aluminum-chassis-triple-slot-gpu-support-240mm-aio-pcie-4-0-riser-sfx-sfx-l-psu-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/H2O%20Black/lian-li-a4-h2o-black-11l-mini-itx-small-form-factor-case-%E2%80%93-aluminum-chassis-triple-slot-gpu-support-240mm-aio-pcie-4-0-riser-sfx-sfx-l-psu-compatible-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2772",
+   "name": "Lian Li A4-H2O Slver 11L Mini-ITX Small Form Factor Case – Aluminum Chassis, Triple-Slot GPU Support, 240mm AIO, PCIe 4.0 Riser, SFX/SFX-L PSU Compatible",
+   "category": "psu",
+   "priceEgp": 7900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-a4-h2o-slver-11l-mini-itx-small-form-factor-case-%E2%80%93-aluminum-chassis-triple-slot-gpu-support-240mm-aio-pcie-4-0-riser-sfx-sfx-l-psu-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/H2O%20Slver/lian-li-a4-h2o-slver-11l-mini-itx-small-form-factor-case-%E2%80%93-aluminum-chassis-triple-slot-gpu-support-240mm-aio-pcie-4-0-riser-sfx-sfx-l-psu-compatible-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2763",
+   "name": "Lian Li DAN A3-MATX Wooden Black – Compact Micro Tower Gaming Case | M-ATX/ITX Support | 415mm GPU | 360mm Radiator | ATX/SFX PSU Compatible",
+   "category": "psu",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-dan-a3-matx-wooden-black-%E2%80%93-compact-micro-tower-gaming-case-m-atx-itx-support-415mm-gpu-360mm-radiator-atx-sfx-psu-compatible",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/A3-WD-B/lian-li-dan-a3-matx-wooden-black-%E2%80%93-compact-micro-tower-gaming-case-m-atx-itx-support-415mm-gpu-360mm-radiator-atx-sfx-psu-compatible-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3236",
+   "name": "Lian Li Lancool 217 Black Mid-Tower Gaming Case – High Airflow Mesh Design, Tempered Glass Side Panel, Advanced Cooling Support",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-lancool-217-black-mid-tower-gaming-case-%E2%80%93-high-airflow-mesh-design-tempered-glass-side-panel-advanced-cooling-support",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Antec/LANCOOL%20217/lian-li-lancool-217-black-mid-tower-gaming-case-%E2%80%93-high-airflow-mesh-design-tempered-glass-side-panel-advanced-cooling-support-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2769",
+   "name": "Lian Li O11 Air Mini (White) – Compact Mini ITX/ATX Tower Gaming Case with High Airflow and Tempered",
+   "category": "case",
+   "priceEgp": 6000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11-air-mini-white-%E2%80%93-compact-mini-itx-atx-tower-gaming-case-with-high-airflow-and-tempered",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/011AMW/lian-li-o11-air-mini-white-%E2%80%93-compact-mini-itx-atx-tower-gaming-case-with-high-airflow-and-tempered-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2765",
+   "name": "Lian Li O11D MINI‑X – Compact ATX/M‑ATX/Mini‑ITX Tower, Dual‑Chamber, SPCC/Aluminum/Tempered Glass, Up to 9 Fans & Triple 360 mm Radiators",
+   "category": "case",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-o11d-mini%E2%80%91x-%E2%80%93-compact-atx-m%E2%80%91atx-mini%E2%80%91itx-tower-dual%E2%80%91chamber-spcc-aluminum-tempered-glass-up-to-9-fans-triple-360%20mm-radiators",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/O11D%20MINI/lian-li-o11d-mini%E2%80%91x-%E2%80%93-compact-atx-m%E2%80%91atx-mini%E2%80%91itx-tower-dual%E2%80%91chamber-spcc-aluminum-tempered-glass-up-to-9-fans-triple-360%20mm-radiators-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3222",
+   "name": "Lian Li Vector V100R BTF Mid-Tower Gaming Case – Black, 4×ARGB Fans, Type-C, Compatible with RB750 750W 80 Plus Bronze ATX 3.1 Modular PSU, High Airflow, Tempered Glass Side Panel",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/lian-li-vector-v100r-btf-mid-tower-gaming-case-%E2%80%93-black-4%C3%97argb-fans-type-c-compatible-with-rb750-750w-80-plus-bronze-atx-3-1-modular-psu-high-airflow-tempered-glass-side-panel",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/v100r/lian-li-vector-v100r-btf-mid-tower-gaming-case-%E2%80%93-black-4%C3%97argb-fans-type-c-compatible-with-rb750-750w-80-plus-bronze-atx-3-1-modular-psu-high-airflow-tempered-glass-side-panel-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "337",
+   "name": "Thermaltake View 28 RGB Mid Tower Case",
+   "category": "case",
+   "priceEgp": 1500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/thermaltake-view-28-rgb-mid-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Thermaltake/thermaltake-view-28-rgb-mid-tower-case-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "338",
+   "name": "Thermaltake Commander C35 TG ARGB Edition Mid Tower Case(only build)",
+   "category": "case",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/thermaltake-commander-c35-tg-argb-edition-mid-tower-case-only-build",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/Thermaltake/thermaltake-commander-c35-tg-argb-edition-mid-tower-case-only-build-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2910",
+   "name": "Xigmatek Aqua Arctic Type-C ARGB Mid Tower Case – White Edition, Tempered Glass Side Panel, USB-C Front I/O, 4 ARGB Fans, ATX Support, High Airflow Design",
+   "category": "case",
+   "priceEgp": 4300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-arctic-type-c-argb-mid-tower-case-%E2%80%93-white-edition-tempered-glass-side-panel-usb-c-front-i-o-4-argb-fans-atx-support-high-airflow-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Aqua%20V%20Arctic/xigmatek-aqua-arctic-type-c-argb-mid-tower-case-%E2%80%93-white-edition-tempered-glass-side-panel-usb-c-front-i-o-4-argb-fans-atx-support-high-airflow-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2289",
+   "name": "XIGMATEK AQUA III ARGB Mid Tower Case Black",
+   "category": "case",
+   "priceEgp": 3399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-iii-argb-mid-tower-case-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/AQUA%20III%20Black/xigmatek-aqua-iii-argb-mid-tower-case-black-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2290",
+   "name": "XIGMATEK AQUA III ARGB Mid Tower Case White",
+   "category": "case",
+   "priceEgp": 3700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-iii-argb-mid-tower-case-white",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/AQUA%20III%20White/xigmatek-aqua-iii-argb-mid-tower-case-white-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2915",
+   "name": "Xigmatek Aqua M Nano II Micro-ATX Case – Supports 155mm CPU Coolers, 290mm GPUs, 240mm Radiator, 7 Fans, ATX PSU, Dual Tempered Glass, USB 3.0",
+   "category": "cpu",
+   "priceEgp": 1500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-m-nano-ii-micro-atx-case-%E2%80%93-supports-155mm-cpu-coolers-290mm-gpus-240mm-radiator-7-fans-atx-psu-dual-tempered-glass-usb-3-0",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Aqua%20M%20Nano%20II/xigmatek-aqua-m-nano-ii-micro-atx-case-%E2%80%93-supports-155mm-cpu-coolers-290mm-gpus-240mm-radiator-7-fans-atx-psu-dual-tempered-glass-usb-3-0-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2008",
+   "name": "Xigmatek AQUA Ultra Air Arctic – Ultimate High-Airflow E-ATX Chassis, Full Mesh Front Panel, Triple 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-ultra-air-arctic",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/AQUA%20AIR/xigmatek-aqua-ultra-air-arctic-%E2%80%93-ultimate-high-airflow-e-atx-chassis-full-mesh-front-panel-triple-360mm-radiator-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3291",
+   "name": "Xigmatek Aqua Ultra Air Black Super-Tower Gaming Case – E-ATX Support, Vertical GPU Ready, Triple 360mm Radiator Support",
+   "category": "gpu",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5100,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/aqua-ultra-air-black-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Aqua%20Ultra%20Air%20Black/xigmatek-aqua-ultra-air-black-super-tower-gaming-case-%E2%80%93-e-atx-support-vertical-gpu-ready-triple-360mm-radiator-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2909",
+   "name": "Xigmatek Aqua V Type-C ARGB Black Mid Tower Case – Tempered Glass, Front USB-C, 4 Pre-Installed ARGB Fans, ATX Support, High Airflow Gaming Case",
+   "category": "case",
+   "priceEgp": 4200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-aqua-v-type-c-argb-black-mid-tower-case-%E2%80%93-tempered-glass-front-usb-c-4-pre-installed-argb-fans-atx-support-high-airflow-gaming-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Aqua%20V/xigmatek-aqua-v-type-c-argb-black-mid-tower-case-%E2%80%93-tempered-glass-front-usb-c-4-pre-installed-argb-fans-atx-support-high-airflow-gaming-case-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3147",
+   "name": "Xigmatek Crystal Storm Mid Tower Case – Curved Tempered Glass, 4× PWM ARGB Fans + Xigmatek Asgard 750W 80 Plus Bronze Power Supply – High-Performance PC Case & PSU Combo",
+   "category": "psu",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5250,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-crystal-storm-mid-tower-case-%E2%80%93-curved-tempered-glass-4%C3%97-pwm-argb-fans-xigmatek-asgard-750w-80-plus-bronze-power-supply-%E2%80%93-high-performance-pc-case-psu-combo",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Storm%20750w/xigmatek-crystal-storm-mid-tower-case-%E2%80%93-curved-tempered-glass-4%C3%97-pwm-argb-fans-xigmatek-asgard-750w-80-plus-bronze-power-supply-%E2%80%93-high-performance-pc-case-psu-combo-350x350w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2053",
+   "name": "XIGMATEK Cubi ARGB Super Tower Case",
+   "category": "case",
+   "priceEgp": 5100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-cubi-argb-super-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/cubii/xigmatek-cubi-argb-super-tower-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2912",
+   "name": "Xigmatek Cubi M Micro Tower Case – Compact mATX Chassis, Tempered Glass Side Panel, Front Mesh for Optimal Airflow, Pre-Installed 120mm Fan, Sleek Minimalist Design",
+   "category": "case",
+   "priceEgp": 1800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-cubi-m-micro-tower-case-%E2%80%93-compact-matx-chassis-tempered-glass-side-panel-front-mesh-for-optimal-airflow-pre-installed-120mm-fan-sleek-minimalist-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Cubi%20M/xigmatek-cubi-m-micro-tower-case-%E2%80%93-compact-matx-chassis-tempered-glass-side-panel-front-mesh-for-optimal-airflow-pre-installed-120mm-fan-sleek-minimalist-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2007",
+   "name": "Xigmatek Endorphin WD (Black)",
+   "category": "case",
+   "priceEgp": 4800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-endorphin-wd-black",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/END%20WD/xigmatek-endorphin-wd-black-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3052",
+   "name": "Xigmatek Osiris 140mm ARGB BTF + Prime 1000W 80+ Gold Atx 3.1 Pcie 5.1 Super Tower Case",
+   "category": "psu",
+   "priceEgp": 6700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-osiris-140mm-argb-btf-prime-1000w-80-gold-atx-3-1-pcie-5-1-super-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Xigmatek%20/xigmatek-osiris-140mm-argb-btf-prime-1000w-80-gold-atx-3-1-pcie-5-1-super-tower-case-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3061",
+   "name": "Xigmatek Osiris ARGB Super Tower Case with 4x140mm Fans & Asgard 850W 80+ Bronze PSU – BTF Design",
+   "category": "psu",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-osiris-argb-super-tower-case-with-4x140mm-fans-asgard-850w-80-bronze-psu-%E2%80%93-btf-design",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Xigmatek%20Osiris%20AR850/xigmatek-osiris-argb-super-tower-case-with-4x140mm-fans-asgard-850w-80-bronze-psu-%E2%80%93-btf-design-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2897",
+   "name": "Xigmatek Osiris BTF Super Tower Case + PRIME 750W 80+ Gold PSU – 140mm ARGB Fan, Back-to-Front Design, High-Airflow, Full Modular Power Supply",
+   "category": "psu",
+   "priceEgp": 6000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-osiris-btf-super-tower-case-prime-750w-80-gold-psu-%E2%80%93-140mm-argb-fan-back-to-front-design-high-airflow-full-modular-power-supply",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/case/Osiris%20xigmatek/xigmatek-osiris-btf-super-tower-case-prime-750w-80-gold-psu-%E2%80%93-140mm-argb-fan-back-to-front-design-high-airflow-full-modular-power-supply-350x350h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "3309",
+   "name": "Xigmatek Vision Pro E-ATX Case – Back-Plug MB Support – 480mm Radiator Support",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-vision-pro-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/Vision%20Pro/xigmatek-vision-pro-e-atx-case-%E2%80%93-back-plug-mb-support-%E2%80%93-480mm-radiator-support-350x350.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elnekhely",
+   "externalId": "2009",
+   "name": "XIGMATEK CUBI Arctic ARGB Super Tower Case",
+   "category": "case",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://www.elnekhelytechnology.com/cases/xigmatek-cubi-arctic-argb-super-tower-case",
+   "imageUrl": "https://www.elnekhelytechnology.com/image/cache/catalog/Case/xigmatek/cubi/xigmatek-cubi-arctic-argb-super-tower-case-350x350.png",
+   "specs": {
+    "template": "opencart"
+   }
+  }
+ ]
+}

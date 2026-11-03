@@ -1,4 +1,4 @@
-# Retailer Strategy
+﻿# Retailer Strategy
 
 **Phase 10 — how Egyptian retailer data is collected, matched and refreshed.**
 
@@ -6,18 +6,39 @@
 
 ## 1. What is integrated
 
-| Retailer                 | Platform                 | Status     | Categories | Products | Images |
-| ------------------------ | ------------------------ | ---------- | ---------- | -------- | ------ |
-| **Elbadr Group**         | OpenCart                 | ✅ live    | 8          | 368      | 100%   |
-| **Elnekhely Technology** | OpenCart (same theme)    | ⚠️ partial | 8          | 103      | 100%   |
-| **Alfrensia**            | WooCommerce / Flatsome   | ✅ live    | 8          | 243      | 100%   |
-| **Sigma Computer**       | Next.js (browser worker) | ✅ live    | 8          | 300      | 100%   |
-| **Total**                |                          |            |            | **1014** | **100%** |
+| Retailer                 | Platform                 | Status  | Categories | Products | Images |
+| ------------------------ | ------------------------ | ------- | ---------- | -------- | ------ |
+| **Elbadr Group**         | OpenCart                 | ✅ live | 8          | 1825     | 100%   |
+| **Elnekhely Technology** | OpenCart (same theme)    | ✅ live | 8          | 750      | 99.7%  |
+| **Alfrensia**            | WooCommerce / Flatsome   | ✅ live | 8          | 221      | 100%   |
+| **Sigma Computer**       | Next.js (browser worker) | ✅ live | 8          | 293      | 100%   |
+| **Total**                |                          |         |            | **3089** | 99.94% |
 
-Elbadr / Elnekhely live in the serverless snapshot (714 listings, verified by
-`pnpm verify:coverage`); Sigma lives in the worker feed. The app merges both, so
-the search page sees **1014 listings across four retailers**, every one of them
-with a real photo.
+Per category:
+
+| Category    | Elbadr | Elnekhely | Alfrensia | Sigma | Total |
+| ----------- | -----: | --------: | --------: | ----: | ----: |
+| CPU         |    304 |       189 |        75 |    85 |   653 |
+| GPU         |    433 |       118 |         4 |    43 |   598 |
+| Motherboard |    270 |       123 |        47 |    23 |   463 |
+| RAM         |    205 |        50 |        24 |    17 |   296 |
+| Storage     |    159 |        22 |        39 |    25 |   245 |
+| PSU         |    274 |        99 |        10 |    35 |   418 |
+| Case        |    130 |       126 |        30 |    40 |   326 |
+| Cooling     |     85 |        26 |        14 |    25 |   150 |
+
+> **Phase 11 corrected Elnekhely.** The inherited "503 on page 2" was User-Agent
+> filtering, not pagination: the same URL answers 200 to a browser UA. With
+> `limit=100` and a same-origin referrer its catalogue went from **103 to 753**
+> products. See `docs/AUDIT.md` §42.
+
+Two Elnekhely rows and no others store no image: their only photo is the store's
+own `placeholder-350x350.png`, so the card draws a category icon. A wrong photo
+would be worse than none.
+
+Alfrensia's GPU figure is small on purpose — its graphics-card listing carries
+only four products with a real (non-AJAX) price. It makes up the difference in
+CPU and motherboard.
 
 ### Elnekhely's ceiling
 
@@ -43,7 +64,7 @@ share went from **19 % to 100 %**. Two category slugs were also 404s (`case`,
 
 ```
 pg_cron (daily 01:00 UTC)
-   └─► Edge Function `retailer-sync`
+   └─â–؛ Edge Function `retailer-sync`
           ├─ robots.txt check per host
           ├─ sequential fetch, 2 s gap per retailer
           ├─ parsers.ts      → ScrapedProduct[]
@@ -199,11 +220,11 @@ instead builds a **canonical identity**:
 
 ```
 ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB  → geforce|5070|ti|16
-PNY GeForce RTX 5070 Ti ARGB 16GB            → geforce|5070|ti|16   ✓ merge
+PNY GeForce RTX 5070 Ti ARGB 16GB            → geforce|5070|ti|16   âœ“ merge
 GIGABYTE GeForce RTX 5060 Ti 8GB             → geforce|5060|ti|8
-GIGABYTE GeForce RTX 5060 Ti 16GB            → geforce|5060|ti|16   ✗ distinct
+GIGABYTE GeForce RTX 5060 Ti 16GB            → geforce|5060|ti|16   âœ— distinct
 AMD Ryzen 7 7800X3D                          → ryzen|7800x3d
-Intel Core i9-14900KF                        → core|14900kf         ✗ ≠ 14900k
+Intel Core i9-14900KF                        → core|14900kf         âœ— â‰  14900k
 ```
 
 Rules learned from live data, each one a bug that shipped first:
@@ -211,7 +232,7 @@ Rules learned from live data, each one a bug that shipped first:
 1. **The first number in a CPU name is the series, not the model.**
    "Ryzen 5 5600X" → `5` collapsed eight processors into one group.
 2. **Memory size is identity.** A 5060 Ti 8GB is not a 16GB.
-3. **Variant suffixes are different SKUs.** 4070 ≠ 4070 SUPER ≠ 4070 Ti.
+3. **Variant suffixes are different SKUs.** 4070 â‰  4070 SUPER â‰  4070 Ti.
 4. **Board partners are the same product** — that is the point of comparison.
 5. **A chipset is not a model.** Keying motherboards on `X870E` merged a Gigabyte
    Aero, an ASUS Strix-E and a Crosshair HERO.
@@ -252,7 +273,7 @@ an explicit badge.
 | ----------------- | ------------------------------------------------------------------------- |
 | Schedule          | daily, 01:00 UTC (03:00–04:00 Cairo) via `pg_cron`                        |
 | Manual            | `POST /functions/v1/retailer-sync {"mode":"all"}`, or `{"mode":"elbadr"}` |
-| Snapshot fallback | `pnpm snapshot:retailers` → `src/services/retailers/snapshot.json`        |
+| Snapshot fallback | `pnpm crawl` → `src/services/retailers/snapshot.json`        |
 | UI                | "Prices updated N min ago" in the search header                           |
 
 The UI **caches search results for 5 minutes** (React Query). Prices change
@@ -283,7 +304,7 @@ anon`. The app treats that as "not migrated", falls back to the snapshot and
    ```
    (It is already in `008_retailer_products.sql` for a fresh `db push`.)
 4. **Sigma's feed is a capture, not a live feed.** It carries `capturedAt` and is
-   refreshed by the worker on a schedule (§3). The UI never presents a price as
+   refreshed by the worker on a schedule (آ§3). The UI never presents a price as
    live when it may be hours old.
 5. **Sigma is not in the nightly serverless sync** by design — that is what the
    worker exists for. Pointing the cron job at `scripts/sigma_worker.py` is the

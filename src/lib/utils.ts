@@ -63,12 +63,6 @@ export function formatWatts(watts: number): string {
   return `${Math.round(watts).toLocaleString('en-US')} W`;
 }
 
-/** Score as a zero-padded integer, e.g. 87 */
-export function formatScore(score: number | null | undefined): string {
-  if (score === null || score === undefined) return '—';
-  return Math.round(score).toString();
-}
-
 /**
  * Relative "prices updated …" caption: "just now", "5 min ago", "3 h ago".
  *
@@ -142,8 +136,4 @@ export function scoreTone(score: number): 'success' | 'warning' | 'danger' | 'pr
   if (score >= 60) return 'warning';
   if (score >= 40) return 'primary';
   return 'danger';
-}
-
-export function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }

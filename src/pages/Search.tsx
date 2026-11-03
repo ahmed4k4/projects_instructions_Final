@@ -1,8 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+﻿import { useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
-import { AlertCircle, ChevronDown, PackageSearch, SlidersHorizontal } from 'lucide-react';
+import { AlertCircle, ChevronDown, Loader2, PackageSearch, SlidersHorizontal } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -45,9 +45,13 @@ export default function Search() {
   // Data-driven: Sigma's rows come from its Playwright feed, so its availability
   // is a runtime fact rather than a constant in the registry.
   const retailers = useLiveRetailers();
-  const sigmaLive = retailers.find((r) => r.id === 'sigma')?.live ?? false;
+  
+  // `null` while the availability query is in flight, so the "pending" notice
+  // cannot flash for a retailer that is in fact live.
+  const sigmaMeta = retailers.find((r) => r.id === 'sigma');
+  const sigmaLive: boolean | null = sigmaMeta ? sigmaMeta.live : null;
 
-  /* ── URL-backed state ────────────────────────────────────────────────── */
+  /* ── URL-backed state ───────────────────────────────────────── */
   const query = params.get('q') ?? '';
   const category = (params.get('cat') as ComponentCategory | null) ?? null;
   const sortParam = (params.get('sort') as SortKey | null) ?? 'price-asc';
@@ -101,8 +105,21 @@ export default function Search() {
     });
   };
 
-  const { data, isLoading, isFetching, isError, refetch } = useSearch(filters, sort);
+  const {
+    data: pages,
+    isLoading,
+    isFetching,
+    isFetchingNextPage,
+    hasNextPage,
+    fetchNextPage,
+    isError,
+    refetch,
+  } = useSearch(filters, sort);
   const { data: categories = [] } = useSearchCategories();
+
+  // One flat list for the grid; totals come from the first page's whole-match
+  // figures so "N results" never changes as more pages load.
+  const data = pages?.pages[0];
 
   // Scroll back to the top of the results when the query changes — otherwise a
   // new search can land the user halfway down a long grid.
@@ -117,7 +134,33 @@ export default function Search() {
     (minParam ? 1 : 0) +
     (maxParam ? 1 : 0);
 
-  const groups = data?.groups ?? [];
+  const groups = pages?.pages.flatMap((page) => page.groups) ?? [];
+
+  /**
+   * Infinite scroll.
+   *
+   * An IntersectionObserver on a sentinel below the grid, with `rootMargin`
+   * pre-loading the next page before the user reaches the bottom. A "Load more"
+   * button stays visible for keyboards, screen readers and browsers without the
+   * API — automatic loading must never be the ONLY way forward.
+   */
+  const sentinelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const node = sentinelRef.current;
+    if (!node || !hasNextPage || isFetchingNextPage) return;
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) void fetchNextPage();
+      },
+      { rootMargin: '600px 0px' },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [hasNextPage, isFetchingNextPage, fetchNextPage, groups.length]);
 
   return (
     <div className="relative">
@@ -159,8 +202,8 @@ export default function Search() {
           </div>
         </div>
 
-        {/* Sigma notice -------------------------------------------------- */}
-        {sigmaLive ? null : (
+        {/* Sigma notice — only when the feed genuinely has no rows. -------------------------------------------------- */}
+        {sigmaLive !== false ? null : (
           <p className="mx-auto mt-3 flex max-w-2xl items-start gap-2 rounded-lg border border-warning/25 bg-warning/5 px-3 py-2 text-[11px] leading-relaxed text-warning">
             <AlertCircle className="mt-0.5 size-3.5 shrink-0" />
             <span>
@@ -252,17 +295,51 @@ export default function Search() {
                 onReset={() => setParams(new URLSearchParams(query ? { q: query } : {}), { replace: true })}
               />
             ) : (
-              <motion.div
-                key={`${query}-${category}-${sort}`}
-                variants={stagger}
-                initial="hidden"
-                animate="visible"
-                className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
-              >
-                {groups.map((group) => (
-                  <SearchResultCard key={group.id} group={group} />
-                ))}
-              </motion.div>
+              <>
+                <motion.div
+                  key={`${query}-${category}-${sort}`}
+                  variants={stagger}
+                  initial="hidden"
+                  animate="visible"
+                  className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
+                >
+                  {groups.map((group) => (
+                    <SearchResultCard key={group.id} group={group} />
+                  ))}
+                </motion.div>
+
+                {/* Paging footer ------------------------------------------------ */}
+                <div ref={sentinelRef} className="mt-8 flex flex-col items-center gap-3">
+                  {hasNextPage ? (
+                    <Button
+                      variant="outline"
+                      onClick={() => void fetchNextPage()}
+                      disabled={isFetchingNextPage}
+                      className="min-w-48"
+                    >
+                      {isFetchingNextPage ? (
+                        <>
+                          <Loader2 className="animate-spin" /> {t('search.loadingMore')}
+                        </>
+                      ) : (
+                        <>
+                          {t('search.loadMore')}
+                          <ChevronDown />
+                        </>
+                      )}
+                    </Button>
+                  ) : (
+                    <p className="text-[11px] text-muted-foreground">
+                      {t('search.endOfResults', { count: groups.length })}
+                    </p>
+                  )}
+
+                  {/* Progress stays honest about what is rendered vs. matched. */}
+                  <p className="font-mono text-[10.5px] text-muted-foreground/70" aria-live="polite">
+                    {t('search.showingOf', { shown: groups.length, total: data?.total ?? 0 })}
+                  </p>
+                </div>
+              </>
             )}
           </section>
         </div>

@@ -39,11 +39,6 @@ export function markSceneContextLost(): void {
   contextLostForSession = true;
 }
 
-/** True when `detect()` should refuse the 3D variant after a context loss. */
-export function isSceneBlacklisted(): boolean {
-  return contextLostForSession;
-}
-
 function detect(): SceneCapability {
   if (typeof window === 'undefined') return { use3d: false, pending: true, reason: 'no-webgl' };
 

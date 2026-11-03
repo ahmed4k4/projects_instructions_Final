@@ -85,16 +85,3 @@ export async function discoverGeminiConfig(force = false): Promise<AIProviderCon
 
   return inFlight;
 }
-
-export function peekGeminiConfig(): AIProviderConfig {
-  return readCache() ?? EMPTY;
-}
-
-export function clearGeminiConfigCache(): void {
-  try {
-    localStorage.removeItem(CACHE_KEY);
-  } catch {
-    // ignore
-  }
-  inFlight = null;
-}

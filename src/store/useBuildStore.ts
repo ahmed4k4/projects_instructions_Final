@@ -112,17 +112,7 @@ export const useBuildStore = create<BuildState>()(
 /*  Selectors — derived values (kept pure so they work with useMemo too)       */
 /* -------------------------------------------------------------------------- */
 
-type TotalsTuple = [totalPrice: number, totalWatts: number, itemCount: number, filledCategories: number];
 
-export function selectTotals(state: BuildState): TotalsTuple {
-  const components = Object.values(state.items).filter((c): c is PCComponent => Boolean(c));
-  const totalPrice = components.reduce((sum, c) => sum + c.price * (state.quantities[c.category] ?? 1), 0);
-  const totalWatts = components.reduce((sum, c) => sum + (c.powerDrawWatts ?? 0), 0);
-  return [totalPrice, totalWatts, components.length, components.length];
-}
-
-export const selectComponents = (state: BuildState): PCComponent[] =>
-  Object.values(state.items).filter((c): c is PCComponent => Boolean(c));
 
 /**
  * Derived build totals.

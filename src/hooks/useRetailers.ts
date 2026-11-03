@@ -1,6 +1,5 @@
-import { useQuery } from '@tanstack/react-query';
+﻿import { useQuery } from '@tanstack/react-query';
 import {
-  comparePrices,
   getBestPricesForComponents,
   getRetailerHealth,
   getRetailerOffersForComponent,
@@ -42,18 +41,8 @@ export function useRetailerOffers(componentId: string | null) {
   });
 }
 
-/** Name-based comparison fallback (used when only a display name is known). */
-export function usePriceComparison(componentName: string | null, componentId?: string) {
-  return useQuery({
-    queryKey: ['retailer-compare', componentName, componentId] as const,
-    queryFn: () => comparePrices(componentName as string, componentId),
-    staleTime: PRICE_STALE_MS,
-    enabled: isSupabaseConfigured && Boolean(componentName),
-  });
-}
-
 /** Last sync outcome per retailer, so the UI can be honest about stale feeds. */
-export function useRetailerHealth() {
+function useRetailerHealth() {
   return useQuery({
     queryKey: ['retailer-health'] as const,
     queryFn: getRetailerHealth,

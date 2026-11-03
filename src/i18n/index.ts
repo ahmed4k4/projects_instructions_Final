@@ -31,11 +31,11 @@ import arBuilder from './locales/ar/builder.json';
 import arAi from './locales/ar/ai.json';
 import arPages from './locales/ar/pages.json';
 
-export const SUPPORTED_LANGUAGES = ['en', 'ar'] as const;
+const SUPPORTED_LANGUAGES = ['en', 'ar'] as const;
 export type AppLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
 /** Files on disk — re-exported so scripts can validate them individually. */
-export const LOCALE_FILES = ['common', 'builder', 'ai', 'pages'] as const;
+const LOCALE_FILES = ['common', 'builder', 'ai', 'pages'] as const;
 export type LocaleFile = (typeof LOCALE_FILES)[number];
 
 export type Direction = 'ltr' | 'rtl';
@@ -87,7 +87,7 @@ function mergeNamespace(
   }, {});
 }
 
-export const RESOURCES = {
+const RESOURCES = {
   en: {
     translation: mergeNamespace([
       { file: 'common', data: enCommon },

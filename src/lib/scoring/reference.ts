@@ -27,12 +27,6 @@ export const SCORE_WEIGHTS = {
 } as const;
 
 /**
- * Penalty applied per issue by the compatibility sub-score.
- * An error is a build that will not POST; a warning is a compromise.
- */
-export const COMPATIBILITY_PENALTY = { error: 25, warning: 8 } as const;
-
-/**
  * Reference points, derived from the seeded catalogue so the value and
  * efficiency curves land in a useful range for $800–$4,000 builds.
  *

@@ -1,4 +1,5 @@
-import { getAggregatedProducts } from './retailers/aggregator';
+import { getAggregatedProducts, isPlaceholderPrice } from './retailers/aggregator';
+import { rankOffers } from '@/lib/offerRanking';
 import type { RetailerId, RetailerOffer } from './retailers/types';
 import type { ComponentCategory } from '@/types/components';
 import { groupLabel, normaliseQuery, partnerKey, skuKey } from '@/lib/skuGrouping';
@@ -39,6 +40,14 @@ export interface ProductGroup {
   offers: RetailerOffer[];
   /** Cheapest in-stock offer, falling back to cheapest overall. */
   best: RetailerOffer;
+  /**
+   * The offer the displayed name and photo came from.
+   *
+   * Equal to `best` except when a group spans several listings: then the photo
+   * belongs to ONE of them, and pairing a price with a different product's photo
+   * is how a card ends up mislabelled.
+   */
+  pricedOffer: RetailerOffer;
   /** Distinct retailers carrying this product. */
   retailerIds: RetailerId[];
   /** Spread between the cheapest and dearest in-stock offer, in EGP. */
@@ -57,22 +66,15 @@ export interface SearchResult {
   lastUpdated: string | null;
 }
 
-const STOCK_RANK = (offer: RetailerOffer) => (offer.stockStatus === 'out_of_stock' ? 1 : 0);
-
 /**
  * Rank offers so the first one is the one a user can actually buy.
  *
- * Only OUT_OF_STOCK is disqualifying. `unknown` means the retailer simply did
- * not print a stock line (Elbadr never does), which is the normal state for most
- * of the feed — treating it as "possibly unavailable" let a known out-of-stock
- * offer win on price and the page advertised a price nobody could pay.
+ * The policy lives in `lib/offerRanking` and is shared with the builder's price
+ * map: two independent rankers is how `1 EGP` survived here after being fixed
+ * there. Only OUT_OF_STOCK is disqualifying — `unknown` means the retailer
+ * simply did not print a stock line (Elbadr never does).
  */
-export function rankOffers(offers: RetailerOffer[]): RetailerOffer[] {
-  return [...offers].sort(
-    (a, b) =>
-      STOCK_RANK(a) - STOCK_RANK(b) || a.priceEgp - b.priceEgp || a.retailerId.localeCompare(b.retailerId),
-  );
-}
+export { rankOffers };
 
 /**
  * Group raw listings into comparable products.
@@ -151,13 +153,28 @@ export function groupListings(listings: RetailerOffer[]): ProductGroup[] {
       ranked[0]?.lastScrapedAt ?? '',
     );
 
+    /**
+     * Name and photo must describe the SAME product.
+     *
+     * They were chosen independently — the label from the most descriptive name,
+     * the photo from the first offer that had one — so a card could read "RTX
+     * 5070" and show a motherboard. The label's own offer is the anchor now, and
+     * its photo is preferred; another offer's photo is used only when the anchor
+     * has none.
+     */
+    const label = groupLabel(ranked.map((o) => o.name));
+    const labelOffer = ranked.find((o) => o.name === label) ?? best;
+    // The best offer's own photo wins: it is the offer the price and the Buy
+    // button point at, so the picture must be of THAT product.
+    const imageUrl = best.imageUrl ?? labelOffer.imageUrl ?? ranked.find((o) => o.imageUrl)?.imageUrl ?? null;
+
     groups.push({
       id,
-      // Prefer a name from the cheapest in-stock offer: it is the one the user
-      // will actually click through to.
-      name: groupLabel(ranked.map((o) => o.name)),
+      name: label,
       category: (best.category as ComponentCategory | null) ?? null,
-      imageUrl: ranked.find((o) => o.imageUrl)?.imageUrl ?? null,
+      imageUrl,
+      // The offer the price and Buy button point at — what the card describes.
+      pricedOffer: best,
       offers: ranked,
       best,
       retailerIds: [...new Set(ranked.map((o) => o.retailerId))],
@@ -205,26 +222,32 @@ function matchesQuery(listing: RetailerOffer, terms: string[]): boolean {
   });
 }
 
-export function sortGroups(groups: ProductGroup[], sort: SortKey): ProductGroup[] {
+function sortGroups(groups: ProductGroup[], sort: SortKey): ProductGroup[] {
+  /** Groups whose best offer is a store placeholder sink to the bottom. */
+  const pinned = (group: ProductGroup) => (isPlaceholderPrice(group.best) ? 1 : 0);
+
   const copy = [...groups];
   switch (sort) {
     case 'price-desc':
-      return copy.sort((a, b) => b.best.priceEgp - a.best.priceEgp);
+      return copy.sort((a, b) => pinned(a) - pinned(b) || b.best.priceEgp - a.best.priceEgp);
     case 'retailers':
       // Most widely stocked first — the best signal of "this is the safe choice".
       return copy.sort(
-        (a, b) => b.retailerIds.length - a.retailerIds.length || a.best.priceEgp - b.best.priceEgp,
+        (a, b) =>
+          pinned(a) - pinned(b) ||
+          b.retailerIds.length - a.retailerIds.length ||
+          a.best.priceEgp - b.best.priceEgp,
       );
     case 'newest':
-      return copy.sort((a, b) => b.newestScrapedAt.localeCompare(a.newestScrapedAt));
+      return copy.sort((a, b) => pinned(a) - pinned(b) || b.newestScrapedAt.localeCompare(a.newestScrapedAt));
     case 'price-asc':
     default:
-      return copy.sort((a, b) => a.best.priceEgp - b.best.priceEgp);
+      return copy.sort((a, b) => pinned(a) - pinned(b) || a.best.priceEgp - b.best.priceEgp);
   }
 }
 
 /** Apply filters to already-grouped products. */
-export function filterGroups(groups: ProductGroup[], filters: SearchFilters): ProductGroup[] {
+function filterGroups(groups: ProductGroup[], filters: SearchFilters): ProductGroup[] {
   return groups.filter((group) => {
     if (filters.category && group.category !== filters.category) return false;
     if (filters.inStockOnly && !group.inStock) return false;
@@ -240,8 +263,28 @@ export function filterGroups(groups: ProductGroup[], filters: SearchFilters): Pr
   });
 }
 
+/**
+ * A page of results plus whatever the UI needs to ask for the next one.
+ *
+ * Paging happens AFTER grouping on purpose. A product sold by three retailers
+ * arrives as three listings that must land in the same group; slicing the raw
+ * listings first would split one product across two pages and show two different
+ * "best prices" for it. Grouping the whole match set (a few thousand items, all
+ * already in memory) and slicing the groups is both correct and cheap.
+ */
+export interface SearchPage extends SearchResult {
+  groups: ProductGroup[];
+  /** Offset to request next; `null` when the last page has been returned. */
+  nextOffset: number | null;
+  /** Groups matched in total, before this page's slice. */
+  totalGroups: number;
+}
+
+/** Results per page: enough to fill a desktop grid twice over. */
+export const SEARCH_PAGE_SIZE = 24;
+
 /** Full search: fetch → filter listings → group → filter groups → sort. */
-export async function searchProducts(
+async function searchProducts(
   filters: SearchFilters = {},
   sort: SortKey = 'price-asc',
 ): Promise<SearchResult> {
@@ -276,6 +319,32 @@ export async function searchProducts(
   };
 }
 
+/**
+ * One page of search results.
+ *
+ * `offset` is a plain group index: the ordering is deterministic for a given
+ * (filters, sort), so the same offset always returns the same groups — no cursor
+ * token to keep in sync, and a deep link (`?q=…`) can restore a position.
+ */
+export async function searchProductsPage(
+  filters: SearchFilters = {},
+  sort: SortKey = 'price-asc',
+  offset = 0,
+  limit = SEARCH_PAGE_SIZE,
+): Promise<SearchPage> {
+  const result = await searchProducts(filters, sort);
+  const start = Math.max(0, offset);
+  const groups = result.groups.slice(start, start + limit);
+  const end = start + groups.length;
+
+  return {
+    ...result,
+    groups,
+    totalGroups: result.groups.length,
+    nextOffset: end < result.groups.length ? end : null,
+  };
+}
+
 /** Autocomplete: distinct product names matching a prefix, cheapest first. */
 export async function suggestProducts(query: string, limit = 6): Promise<ProductGroup[]> {
   const terms = normaliseQuery(query).split(' ').filter(Boolean);
@@ -296,17 +365,27 @@ export async function getGroupById(groupId: string): Promise<ProductGroup | null
 }
 
 /** Distinct categories present in the catalogue, for the filter rail. */
+/**
+ * Categories present in the catalogue, with the number of PRODUCTS in each.
+ *
+ * The count is grouped, not raw: the rail sits beside "19 results", and showing
+ * "411" next to it (411 listings → 19 products) made the grid look broken. The
+ * two numbers describe the same thing now.
+ */
 export async function getAvailableCategories(): Promise<
   Array<{ category: ComponentCategory; count: number }>
 > {
   const listings = await getAggregatedProducts();
-  const counts = new Map<ComponentCategory, number>();
-  for (const listing of listings) {
-    if (!listing.category) continue;
-    const category = listing.category as ComponentCategory;
-    counts.set(category, (counts.get(category) ?? 0) + 1);
+
+  const grouped = new Map<ComponentCategory, Set<string>>();
+  for (const group of groupListings(listings)) {
+    if (!group.category) continue;
+    const bucket = grouped.get(group.category) ?? new Set<string>();
+    bucket.add(group.id);
+    grouped.set(group.category, bucket);
   }
-  return [...counts.entries()]
-    .map(([category, count]) => ({ category, count }))
+
+  return [...grouped.entries()]
+    .map(([category, ids]) => ({ category, count: ids.size }))
     .sort((a, b) => b.count - a.count);
 }

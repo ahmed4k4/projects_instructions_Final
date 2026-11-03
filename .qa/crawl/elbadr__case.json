@@ -1,0 +1,3233 @@
+{
+ "retailerId": "elbadr",
+ "category": "case",
+ "complete": false,
+ "lastPage": 0,
+ "products": [
+  {
+   "retailerId": "elbadr",
+   "externalId": "5778",
+   "name": "ADATA SC750 1TB - Up to 1000 MB/s- HighSpeed USB 3.2 Gen 2 USB-C External Portable SSD Black Titanium - Work with PS5 & XBOX",
+   "category": "storage",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/sc750-1000g-ccbk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/ADATA/wtkUdgrBaiXY80zZujsJWLDTXgr1wLPks408qtOdlU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4391",
+   "name": "AMD Ryzen 3 4100 4-Core, 8-Thread Unlocked Desktop Processor with Wraith Stealth Cooler Tray",
+   "category": "cpu",
+   "priceEgp": 1850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-3-4100-4-core-8-thread-unlocked-desktop-processor-with-wraith-stealth-cooler-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/Azg30kQNtAAYfsOcKtEwTfnpd5oB-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5317",
+   "name": "AMD Ryzen 5 5600 MPK 4.4GHz 32MB Cache 6 Core AM4 7nm Processor",
+   "category": "cpu",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6900,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-5600-mpk-4.4ghz-32mb-cache-6-core-am4-7nm-processor",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/xFCDlpTFHxTMqEyMlUFunZlDfZfpdMV8XBBlEZ3D6NK1fFZ9a5XHUT0lk1ZyVGIFvcWbz7DIT7lKWMIHALEo7MFaPhrAN-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7185",
+   "name": "AMD Ryzen 5 7500X3D Desktop Processor – 6-Core/12-Thread, up to 5.0 GHz, 96MB Total Cache (64MB 3D V-Cache), AM5 Socket, Supports DDR5 & PCIe 5.0, 120W TDP",
+   "category": "cpu",
+   "priceEgp": 13750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 14200,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-7500x3d-processor-64mb-3d-v-cache",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/Zg5hNudz8lMKjj3cSlm9zCjwNGadZtNstjvzGrGepb-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6655",
+   "name": "AMD Ryzen 5 7600X MPK 6-Core 12-Thread Desktop Processor — Zen 4 (Raphael), 4.7GHz Base, Up to 5.3GHz Boost, 32MB L3 Cache, 105W TDP, AM5 Socket, PCIe 5.0, DDR5-5200 Support, Radeon Graphics, Unlocked, No Cooler, 5nm",
+   "category": "cpu",
+   "priceEgp": 8850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 10000,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-7600x-mpk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/4yXzRePQV3W9faPpqg3NnP7Exa8pQd0PprjqylA-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6563",
+   "name": "AMD Ryzen 7 7800X3D MPK — 8-Core, 16-Thread 4.2 GHz Socket AM5 120W AMD Radeon Graphics Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 16499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 18500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-7800x3d-mpk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/qn4BqoQx9nOwLWhhqM5uBmjOOY-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6942",
+   "name": "Palit GeForce RTX 5050 Dual 8GB GDDR6 — NVIDIA Blackwell Architecture, 2560 CUDA Cores, 20 Gbps Memory Speed, PCIe 5.0, Composite Heat Pipe Cooling, Dual Axial Fans, 2-Slot Design",
+   "category": "gpu",
+   "priceEgp": 24500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/palit-geforce-rtx-5050-dual-8gb-gddr6",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Palit/G1KcL15JD8LQmOOPaAZI7WN3CV-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4355",
+   "name": "AMD Ryzen 5 5500 - Ryzen 5 5000 Series 6-Core Socket AM4 65W Desktop Processor",
+   "category": "cpu",
+   "priceEgp": 4950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-5-5500-ryzen-5-5000-series-6-core-socket-am4-65w-desktop-processor",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/CWy7ayJ2fmzdba7FVhL5FAGSJcebrq3FcwTdrbJ-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5156",
+   "name": "TEAMGROUP 8GB (1X8GB) DDR4 3200MHZ —T-Force Delta RGB Series Black Gaming Desktop Memory - TF3D48G3200HC16C01",
+   "category": "ram",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/teamgroup-8gb-(1x8gb)-ddr4-3200mhz-t-force-delta-rgb-series-black-gaming-desktop-memory-tf3d48g3200hc16c01",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Team-Group/ILtlpavJfD06PyWBe2uQvuC2Db-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4390",
+   "name": "AMD Ryzen 3 4100 4-Core, 8-Thread Unlocked Desktop Processor with Wraith Stealth Cooler",
+   "category": "cpu",
+   "priceEgp": 2200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-3-4100-4-core-8-thread-unlocked-desktop-processor-with-wraith-stealth-cooler",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/ZnBXaW2tDy4uUTz7MURHZlJCBJBqGe4Ujl37REkSoeCW3w5B-250x250h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6656",
+   "name": "AMD Ryzen 7 5700X MPK 8-Core 16-Thread Desktop Processor — Zen 3 Architecture, 3.4GHz Base, Up to 4.6GHz Boost, 32MB L3 Cache, 65W TDP, AM4 Socket, DDR4-3200 Support, PCIe 4.0, Unlocked Multiplier",
+   "category": "cpu",
+   "priceEgp": 8799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/amd-ryzen-7-5700x-mpk",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/amd/3n18EJjLAL32apAGZKO8NSaBdBHycDERo4bfZQK-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7928",
+   "name": "HYTE Y50 RGB Strawberry Milk / Soft Pink Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect",
+   "category": "case",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-strawberry-milk-soft-pink-dual-chamber-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/j2Svfy0WYoRc1Lq1yBFuAhcddw-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7927",
+   "name": "HYTE Y50 RGB Taro Milk Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect",
+   "category": "case",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-taro-milk-pastel-purple-dual-chamber-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/3mFp9wTANnYmClOlyz2oKEfVMj-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7926",
+   "name": "HYTE Y50 RGB Black Cherry Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect Support",
+   "category": "case",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-black-cherry-dual-chamber-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/mivKjCdGCigzlEm61h8iTCcC1L-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7925",
+   "name": "HYTE Y50 RGB Pitch Black Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect Support",
+   "category": "case",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-pitch-black-dual-chamber-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/0tubXGFNr6dpX1VpWJl8pCk4VD-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7923",
+   "name": "HYTE Y50 RGB Snow White Dual Chamber ATX PC Case – Panoramic Glass & Rear-Connect Support",
+   "category": "case",
+   "priceEgp": 6299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y50-rgb-snow-white-dual-chamber-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/TJHl1xhYrmRhP0HfY4SCTqozxR-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7921",
+   "name": "Xander Gaming Jupiter II White E-ATX PC Case Bundle – 6x ARGB Fans & 850W PSU",
+   "category": "psu",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-gaming-jupiter-ii-white-e-atx-pc-case-bundle-850w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/WhkdU8WxomyrzzX3ttgwUk5Jzp-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7920",
+   "name": "Xander Gaming Jupiter II Black E-ATX PC Case Bundle – 6x ARGB Fans & 850W PSU",
+   "category": "psu",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-gaming-jupiter-ii-black-e-atx-pc-case-bundle-850w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/gWuvlGbYsmq5jAh3akhXSauJVC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7903",
+   "name": "NZXT H9 Flow RGB White Large Dual-Chamber Mid-Tower PC Case – Tempered Glass & 420mm Rad Support",
+   "category": "case",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11550,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h9-flow-rgb-white-large-dual-chamber-mid-tower-pc-case-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/2nnq2hPCPcZhtV7QEiXI7qJDA5-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7902",
+   "name": "NZXT H9 Flow RGB Black Large Dual-Chamber Mid-Tower PC Case – Tempered Glass & 420mm Rad Support",
+   "category": "case",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 11550,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h9-flow-rgb-black-large-dual-chamber-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/azNGmGYQiU3xkb1EJE4jWFTgcb-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7901",
+   "name": "NZXT H6 Flow RGB Black Compact Dual-Chamber Mid-Tower PC Case – Tempered Glass & 3x F120 RGB Fans",
+   "category": "case",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7425,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h6-flow-rgb-black-dual-chamber-mid-tower-pc-case-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/vxLFwMk5A6yFOKGPlmxAlYz91U-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7900",
+   "name": "NZXT H6 Flow RGB White Compact Dual-Chamber Mid-Tower PC Case – Tempered Glass & 3x F120 RGB Fans",
+   "category": "case",
+   "priceEgp": 5999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7425,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h6-flow-rgb-white-dual-chamber-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/lYXYx68LdQ2i5f7PiTRXublqOd-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7899",
+   "name": "NZXT H5 Flow RGB Black Compact Mid-Tower PC Case – Tempered Glass & Included RGB Fans",
+   "category": "case",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6600,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h5-flow-rgb-blackl-compact-mid-tower-pc-case-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/5Qn99mAOy2UkATX7qruWHfhSdz-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7898",
+   "name": "NZXT H5 Flow RGB White Compact Mid-Tower PC Case – Tempered Glass & Included RGB Fans",
+   "category": "case",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6600,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h5-flow-rgb-white-compact-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/v9sj4iRc4AQTOKREdEq4uZphH1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7812",
+   "name": "Xander Velox II TG/Mesh Mid Tower PC Case – Mesh Front, 4× ARGB Fans, 700W PSU",
+   "category": "psu",
+   "priceEgp": 2950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-velox-ii-tg-mesh-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/LKbQDkf08Oj2dACtRje3nsjiF7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7811",
+   "name": "Xander Velox Flow WCE0917 Mid Tower PC Case – Mesh Front, 4× ARGB Fans, 750W PSU",
+   "category": "psu",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-velox-flow-wce0917-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/bhxNZ6n77LetYX9p4p4cJy6MhZ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7810",
+   "name": "Xander Velox Plus WCE0504 Mid Tower PC Case – Mesh Front, 4× ARGB Fans, 600W PSU",
+   "category": "psu",
+   "priceEgp": 2750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-velox-plus-wce0504-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/z2EiBMsXdR82z4ZvILkwwW6pbU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7707",
+   "name": "Cooler Master MasterFrame 360 Panorama Mid-Tower PC Case – 360° Tempered Glass",
+   "category": "case",
+   "priceEgp": 11499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 12000,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-360-panorama-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/OEcIlk02hSYBcNWtnvtvUGkNag-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7706",
+   "name": "Cooler Master MasterFrame 600 Mesh Mid-Tower PC Case Silver – FreeForm 2.0 Exo-Structure",
+   "category": "case",
+   "priceEgp": 8900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-600-mesh-mid-tower-pc-case-silver",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/NTfzowZi4UFtAQgZUdaau1MgUa-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7705",
+   "name": "Cooler Master MasterFrame 600 Mesh Mid-Tower PC Case Black – FreeForm 2.0 Exo-Structure",
+   "category": "case",
+   "priceEgp": 8900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-600-mesh-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/d6G5PVEdadYbdwjezBIQfHIjBI-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7704",
+   "name": "Cooler Master MasterFrame 600 ATX Mid-Tower PC Case – Premium Aluminum Modular",
+   "category": "case",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-600-atx-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/YFmRxVLuecasCSN3T9B1dXYYZp-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7703",
+   "name": "Cooler Master MasterFrame 500 Mesh Mid-Tower PC Case – Black",
+   "category": "case",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-500-mesh-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/RJGnE4DiJzQekvWb4WK7ai7inG-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7702",
+   "name": "Cooler Master MasterFrame 500 Mesh Mid-Tower PC Case – Silver",
+   "category": "case",
+   "priceEgp": 7099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-500-mesh-mid-tower-pc-case-silver",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/PROlooV1YPxzO2fuLYFnTIMaRvXwsEsxw5CVILhaWw-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7693",
+   "name": "Cooler Master ELITE 502 White Mid-Tower PC Case – Tempered Glass & ARGB",
+   "category": "case",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-502-mid-tower-pc-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/fo0vK5BQ9J7IiazbTu9naMBYc7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7692",
+   "name": "Cooler Master ELITE 502 Black Mid-Tower PC Case – Tempered Glass & ARGB",
+   "category": "case",
+   "priceEgp": 3200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-502-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/DFoKA1RHAN26nUjURUAD6vxn11-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7682",
+   "name": "GIGABYTE C201 PANORAMIC Mid-Tower PC Case – Panoramic Tempered Glass & ARGB",
+   "category": "case",
+   "priceEgp": 2499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 3000,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-c201-panoramic-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/1P2tGAYaHQ4BMhqzNdVMR1EHbk-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7681",
+   "name": "GIGABYTE AORUS C601 GLASS Mid-Tower PC Case – Tempered Glass & ARGB",
+   "category": "case",
+   "priceEgp": 12499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-c601-glass-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/6rONg8dI2HAvbm4wvsxkLnGux2-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7643",
+   "name": "Cooler Master COSMOS ALPHA Gold Limited Edition Full-Tower PC Case",
+   "category": "case",
+   "priceEgp": 38499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 49000,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-cosmos-alpha-gold-limited-edition-full-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/q0WkIhryjqXDwpPrKvWz6mKnGl-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7515",
+   "name": "Antec AX1000 Lite PC Case – Includes 4x 120mm ARGB Fans & Atom B750 Bronze PSU",
+   "category": "psu",
+   "priceEgp": 4750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax1000-lite-case-4x-120mm-argb-fans-atom-b750-bronze-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/a9FTm28AmCk7xkPPssQJqYAMWB-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7514",
+   "name": "Antec AX65 PC Case – Includes 4x 120mm ARGB Fans & Atom B750 Bronze PSU",
+   "category": "psu",
+   "priceEgp": 4200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax65-case-4x-120mm-argb-fans-atom-b750-bronze-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/NPYcxXv8lRxgoDJWYtFPdNC9yVtl6Hsz9GjDAsqFQtFMt3atNFqbQ-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7513",
+   "name": "Antec AX65 PC Case – Includes 4x 120mm ARGB Fans & Atom V650 PSU",
+   "category": "psu",
+   "priceEgp": 3099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax65-case-4x-120mm-argb-fans-atom-v650-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/NPYcxXv8lRxgoDJWYtFPdNC9yVtl6Hsz9GjDAsqFQtFMt3atNFqbQ-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7511",
+   "name": "TECHNOZONE C700 PC Case (Includes 650W +80 White PSU & 7x RGB Fans)",
+   "category": "psu",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/technozone-c700-pc-case-650w-psu-7x-rgb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/TechnoZone/lxot5kytqttu65miDJOfitBvMS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7479",
+   "name": "DarkFlash C365 E-ATX PC Case (Black) – Includes 3x CL70 ARGB Fans & 650W PSU",
+   "category": "psu",
+   "priceEgp": 3300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-c365-e-atx-pc-case-3x-cl70-fans-650w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/KKTyhmHv8nWfLjBKsGGONvwFAu-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7477",
+   "name": "DarkFlash DS900 Mesh ATX PC Case (Black) – Includes 4x DM20 ARGB Fans & GP750 750W PSU",
+   "category": "psu",
+   "priceEgp": 4300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-ds900-mesh-atx-pc-case-4x-dm20-gp750-bundle",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/ZkXeLnDKcXROrr3am6y960lSDV-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7476",
+   "name": "DarkFlash DS900 ATX PC Case (Black) – Includes 4x DM20 ARGB Fans & GP750 750W PSU",
+   "category": "psu",
+   "priceEgp": 4750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-ds900-atx-pc-case-4x-dm20-gp750-bundle",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/B1ItElBEZfrckv9R1ZPXUM33F3-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7475",
+   "name": "DarkFlash L285 ATX PC Case (Black) – Includes 7x DM20 ARGB Fans",
+   "category": "case",
+   "priceEgp": 5499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-l285-atx-pc-case-black-7x-dm20-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/U1QP28UDv30E0bH9FXczURj6RC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7474",
+   "name": "DarkFlash Floatron F1 M-ATX PC Case (Includes 3x DM20 ARGB Fans)",
+   "category": "case",
+   "priceEgp": 6000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-floatron-f1-m-atx-pc-case-3x-dm20-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/vjrFqWfDgcJhZ8UYx8DA5mm9fS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7473",
+   "name": "DarkFlash C280 E-ATX PC Case (Includes 850W PSU + 4x DM20 ARGB Fans)",
+   "category": "psu",
+   "priceEgp": 5399,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-c280-e-atx-pc-case-850w-psu-bundle",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/iYxI4wcC7aLRZD5Ym2lWCn1UO7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7468",
+   "name": "DarkFlash B275 M-ATX PC Case (Includes 3x L17 Fans)",
+   "category": "case",
+   "priceEgp": 1800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-b275-m-atx-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/QtlGVUJuM3zXfsXdtKRuYv5seK-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7382",
+   "name": "Cooler Master Elite 690 Wood ARGB ATX Mid-Tower Case – White, 3x ARGB Fans Inc. - Natural Wood Front Panel, 270° Panoramic Tempered Glass, USB-C 20Gbps",
+   "category": "case",
+   "priceEgp": 4300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-690-wood-argb-atx-white-mid-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/iolZUhAeIxW3v99O1nhTV1S9VT-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7381",
+   "name": "Cooler Master Elite 690 Wood ARGB ATX Mid-Tower Case – Black, 3x ARGB Fans Inc. - Natural Wood Front Panel, 270° Panoramic Tempered Glass, USB-C 20Gbps",
+   "category": "case",
+   "priceEgp": 4200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-690-wood-argb-atx-black-mid-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/sJLzKXaAaKY7d6Db6c1GHZtk0z-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7311",
+   "name": "darkFlash V22 Black Mid-Tower ATX PC Case – Magnetic Swing-Open Tempered Glass Side Door, Vertical GPU Support, 360mm Radiator, ATX/M-ATX/ITX Compatible",
+   "category": "gpu",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-v22-black-mid-tower-case-magnetic-glass-door-vertical-gpu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/iH61rpWblik8a2ABglDU1lU1WX-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7305",
+   "name": "DarkFlash DK352 Plus White ATX Mid-Tower PC Case – 4x Pre-installed PWM Fans, 4mm Tempered Glass, 0.5mm SPCC Steel, 360mm Radiator Support, Dual USB 3.0",
+   "category": "case",
+   "priceEgp": 2650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dk352-plus-white-atx-mid-tower-pc-case-4x-pre-installed-pwm-fans,-4mm-tempered-glass,-0.5mm-spcc-steel,-360mm-radiator-support,-dual-usb-3.0",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/sjGlVlgJu9pCDO4fjPI9Ow4GqM-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7304",
+   "name": "DarkFlash DK260 White Mid-Tower ATX PC Case – Air Mesh Front, 4x Pre-installed aRGB Fans, Built-in GPU Support, Tempered Glass, 360mm Radiator Support",
+   "category": "gpu",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dk260-w-white-mid-tower-case-air-mesh-argb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/z8qM1qLWn9QFpMgEEligepyXHS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7303",
+   "name": "DarkFlash DK351 Black ATX Mid-Tower PC Case – Dragon Scale Esports Front Panel, 4x Pre-installed RGB Fans, Tempered Glass, 360mm Radiator Support, USB 3.0",
+   "category": "case",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dk351-black-atx-case-dragon-scale-rgb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/hPiwKHLFSYXo3LUQemKk2fmDia-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7302",
+   "name": "DarkFlash DK361 White ATX Mid-Tower PC Case – Hexagon Mesh Front, 4x Pre-installed RGB Fans, Tempered Glass, 360mm Radiator Support, USB 3.0",
+   "category": "case",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dk361-w-white-atx-case-hexagon-mesh-rgb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/MnAcrz7QXbVBnGdazhAu0pgVVF-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7301",
+   "name": "DarkFlash DF5000 White Mid-Tower ATX PC Case – Mesh Front, Tempered Glass, VGA Card Holder, 360mm Radiator Support, Up to 13x 120mm Fan Mounts, USB 3.0 & Type-C",
+   "category": "gpu",
+   "priceEgp": 4950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-df5000-white-atx-mid-tower-case-360mm-radiator",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/NsTWBP3LUHlpAbMXccZfbJ6IvF-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7300",
+   "name": "DarkFlash DF5000 Black Mid-Tower ATX PC Case – Mesh Front, Tempered Glass, VGA Card Holder, 360mm Radiator Support, Up to 13x 120mm Fan Mounts, USB 3.0 & Type-C",
+   "category": "gpu",
+   "priceEgp": 4950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-df5000-black-atx-mid-tower-case-360mm-radiator",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/puLMc29ta4XoLFMndGTDAaFyXU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7297",
+   "name": "DarkFlash DRX90 Glass White ATX Mid-Tower PC Case + 4 ARGB Fans – Magnetic Interchangeable Front Panel (Glass/Mesh), 7 PCIe Slots, USB Type-C, 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 3499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-drx90-glass-white-atx-case-magnetic-front-panel-w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/FN5AHm1c4jzXBi71YJLeqSAVMz-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7296",
+   "name": "DarkFlash DRX90 Glass Black ATX Mid-Tower PC Case + 4 ARGB Fans – Magnetic Interchangeable Front Panel (Glass/Mesh), 7 PCIe Slots, USB Type-C, 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 3499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-drx90-glass-black-atx-case-magnetic-front-panel",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/4CzHtjHDt7Ubyjjh620fdYHGdo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7294",
+   "name": "Tortox Zion ATX/M-ATX/ITX Gaming PC Case – Includes 350W Power Supply, 1x 120mm Fan, Metal Chassis, 7 Expansion Slots, HDD & SSD Support",
+   "category": "psu",
+   "priceEgp": 1500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/tortox-zion-atx-case-with-350w-psu-1-fan",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Tortox/CkntEK127TiWYJDB3m5oOYkrpo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7293",
+   "name": "Tortox Vidrio Mid-Tower ATX Gaming Case White – Curved Tempered Glass, 6x Pre-installed ARGB PWM Fans, USB Type-C, 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/tortox-vidrio-curved-tempered-glass-atx-gaming-case-w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Tortox/sNkkEMrAsL6kMXATEdv6Z4YPXD-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7195",
+   "name": "Antec C5 Curve ARGB Mid-Tower ATX Gaming Case – Curved Tempered Glass Side Panel, 4 Pre-installed ARGB Fans, Solid Front Panel, USB 3.0, Supports ATX/Micro-ATX/Mini-ITX",
+   "category": "case",
+   "priceEgp": 4999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-c5-curve-argb-gaming-case-4-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/teROGoE0n60WEJ0g10wo4fjK8xL-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7175",
+   "name": "ASUS ROG Strix Helios II White E-ATX Mid-Tower Gaming Case – Dual Tempered Glass Side Panels, Aluminum Frame & Front, GPU Support up to 450mm, 420mm Radiator",
+   "category": "gpu",
+   "priceEgp": 16500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-rog-strix-helios-ii-eatx-mid-tower-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/rROQnY3efVsebN4hF7v8Im5g5vA-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7173",
+   "name": "ASUS Prime AP202 ARGB mATX Case Black – Curved Glass Panel, Supports up to 420 mm GPU, Patented Slot Vent Airflow",
+   "category": "gpu",
+   "priceEgp": 4900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-prime-ap202-argb-matx-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/Jxdq8LnupgRc1YCfbgwKenZxE6-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7172",
+   "name": "ASUS ROG Strix Helios II Black E-ATX Mid-Tower Gaming Case – Dual Tempered Glass Side Panels, Aluminum Frame & Front, GPU Support up to 450mm, 420mm Radiator",
+   "category": "gpu",
+   "priceEgp": 16500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-rog-strix-helios-ii-eatx-mid-tower-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/t1LxbR4fZ0G7HMqB6A6qLTm89oE-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7160",
+   "name": "HYTE X50G Matcha Milk ATX Mid-Tower Case – 63 L, Laminated Acoustic Glass, GPU Support Up to 430 mm",
+   "category": "gpu",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7700,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50g-matcha-milk-atx-mid-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/t8zUxjzWRaiTY0cK7ADYIDNKHY-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7159",
+   "name": "HYTE X50G Strawberry Milk ATX Mid-Tower Case – 63 L, Laminated Acoustic Glass, GPU Support Up to 430 mm",
+   "category": "gpu",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7700,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50g-strawberry-milk-atx-mid-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/SdMQjS97EmV9Cek8TwvgORTzsa-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7158",
+   "name": "HYTE X50G Taro Milk ATX Mid-Tower Case – 63 L, Laminated Acoustic Glass, Supports GPU up to 430 mm",
+   "category": "gpu",
+   "priceEgp": 7700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50g-taro-milk-atx-mid-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/otg1LfpZzNyrhW5hBmIF1sg9Me-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7157",
+   "name": "HYTE X50G Wild Cherry ATX Mid-Tower Case – 63 L Volume, Laminated Acoustic Glass, GPU Support Up to 430 mm, Wild Cherry Finish",
+   "category": "gpu",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7700,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50g-wild-cherry-atx-mid-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/h7bwMHcLxqxMd5mqD5q7prngKi-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7156",
+   "name": "HYTE X50G Snow White ATX Mid-Tower Case – 63L Volume, Laminated Acoustic Glass, Supports GPUs up to 430 mm",
+   "category": "case",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7700,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50g-snow-white-atx-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/ZTElzg1o8fHOIu7R7jZ8mUUc1U-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7155",
+   "name": "HYTE X50 Air Snow White ATX Mid-Tower Case – 63 L, Full-Coverage Micro-Mesh, Supports GPU up to 430 mm, Three-Chamber Layout",
+   "category": "gpu",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7700,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50a-snow-white-atx-mid-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/GH6K0B8w1FMAZlUjtX5RDqn934-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7154",
+   "name": "HYTE X50G Pitch Black ATX Mid-Tower Case – 63 L Volume, Laminated Acoustic Glass Side Panel, Supports GPUs up to 430 mm",
+   "category": "case",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7700,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50g-pitch-black-atx-mid-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/EFs7tmIfm2RUfCE6E71MOE3bqn-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7153",
+   "name": "HYTE X50A Pitch Black ATX Mid-Tower Case – 63 L Volume, Laminated Acoustic Glass, Up to 430mm GPU Support",
+   "category": "gpu",
+   "priceEgp": 5799,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7700,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-x50a-pitch-black-atx-mid-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/eXwTx42pN5Fs2J6yoJ2ne6GH2k-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7131",
+   "name": "Antec AX65 ARGB Mid-Tower Case (4×120mm ARGB Fans) + Atom V450 450W Non-Modular Power Supply",
+   "category": "psu",
+   "priceEgp": 2499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax65-argb-4fan-mid-tower-case-atom-v450-450w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/NPYcxXv8lRxgoDJWYtFPdNC9yVtl6Hsz9GjDAsqFQtFMt3atNFqbQ-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7043",
+   "name": "DarkFlash DK431 E-ATX PC Case - Tempered Glass Side Panel, High Airflow Design, Front Mesh Panel, Multiple Cooling Fan Support, ATX / Micro-ATX / ITX Compatible, Sleek Gaming Tower Chassis",
+   "category": "case",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dk431-e-atx-pc-case-tempered-glass-high-airflow-gaming-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/9UZHQNNEHIMh6dGMEcs8MX5x7b-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6860",
+   "name": "Xander Hulk 4 ARGB Fans Mesh Mid Tower Gaming Case With 700W 80+ PSU Black — Supports E-ATX/ATX/Micro-ATX/Mini-ITX Motherboards, Tempered Glass Side Panel",
+   "category": "psu",
+   "priceEgp": 3299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-hulk-4-argb-fans-700w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/9ByOO7dlhbQlazgLxi0dcEz0yC3kV1j1NZtmNsjTzQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6859",
+   "name": "Xander Hulk 4 ARGB Fans Mesh Mid Tower Gaming Case With 600W 80+ PSU Black — Supports E-ATX/ATX/Micro-ATX/Mini-ITX Motherboards, Tempered Glass Side Panel",
+   "category": "psu",
+   "priceEgp": 2899,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-hulk-4-argb-fans-600w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/w8Kbk2k7uY5xR2qRdIAaQiyc9z-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6758",
+   "name": "ASUS A31 PLUS Mid Tower ATX Case White — Tempered Glass Front & Side Panels, 4x 120mm ARGB Fans Pre-installed, Support for Hidden-Connector Motherboards, Up to 360mm Radiator & 380mm GPU, USB 3.2 Gen2x2 Type-C",
+   "category": "gpu",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-a31-plus-mid-tower-atx-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/6fDuUcmXzYKzfNJvG809F3bgv6-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6757",
+   "name": "ASUS A31 PLUS Mid Tower ATX Case Black — Tempered Glass Front & Side Panels, 4x 120mm ARGB Fans Pre-installed, Support for Hidden-Connector Motherboards, Up to 360mm Radiator & 380mm GPU, USB 3.2 Gen2x2 Type-C",
+   "category": "gpu",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-a31-plus-mid-tower-atx-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2025/kRtULXYoZbUSUCpg2avGA4Mpj6-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6719",
+   "name": "Cougar Archon 2 Mesh RGB Mid Tower Case White — Tempered Glass Side Panel, Supports Mini ITX/Micro ATX/ATX, Includes 3x 120mm ARGB Fans Pre-installed, USB 3.0 x 2 + USB 2.0 x 1, 7 Expansion Slots",
+   "category": "case",
+   "priceEgp": 2450,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cougar-archon-2-mesh-rgb-mid-tower-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Cougar/ddpiwrQqPVod63LuSLrI8S2Rbf-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6618",
+   "name": "Lian Li Lancool III RGB E-ATX Mid Tower Modular Chassis White — 8 Expansion Slots, Tempered Glass Panel, Up To 360mm Fan Support, Equipped With 4x 140 PWM Fans, USB Type C",
+   "category": "case",
+   "priceEgp": 7250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-lancool-iii-rgb-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/0Evyf44EOZ5JqaRZk0RJ9ge31B-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6616",
+   "name": "Lian-Li SUP01 Small Tower ATX Case Black — Stand Up Platform Design, Front GPU Mount, Pre Installed 3 X 120mm PWM & PCIe 4.0 Riser Cables, 3 Side Mesh Panels, Dual ARGB Strip Lights",
+   "category": "gpu",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-sup01-small-tower-atx-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/0xJ0N3sLnAyn0I6yNjfHZgTltU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6608",
+   "name": "Lian Li O11 Dynamic Mini Black — Modular I/O (3/5/7 Slots), E-ATX Ready, up to 9-Fan Cooling, Water-Cooling Optimized",
+   "category": "cooling",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-o11-dynamic-mini-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/TZXxuGOxEx7QxxJgvjM9Y3nKvU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6440",
+   "name": "Cooler Master HAF 700 EVO White Full Tower Case – The Ultimate HAF Legacy with Edge-Lit Intake Blades, Dual 200mm SickleFlo Fans, Mammoth Radiator, IRIS LCD Assistant, USB 3.2 Gen 2 Type-C, and Real-Time Stats Monitoring",
+   "category": "case",
+   "priceEgp": 24499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-haf-700-evo-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/BrEz2navhIzIIH8QhMHyls9GN1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6438",
+   "name": "COOLER MASTER Elite 301 White – Mid-Tower Case with 3x 120mm ARGB Fans, Large Intake Grill, PSU Cover, and Sleek Black Coating for Cost-Effective, High-Performance Builds",
+   "category": "psu",
+   "priceEgp": 2650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-301-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/iPKQF7tCkYwqNdxhAIY5NFFPr1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6430",
+   "name": "Antec CX700 RGB Mid-Tower Gaming Case White + Antec CSK Pro 850W 850+ Bronze ATX 3.1",
+   "category": "psu",
+   "priceEgp": 6700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-cx700-rgb-w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/SxAS0D91CnSxQTFmomPkbRfR4r-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6429",
+   "name": "Antec CX700 RGB Mid-Tower Gaming Case + Antec CSK Pro 850W 850+ Bronze ATX 3.1",
+   "category": "psu",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-cx700-rgb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/WCESh6UmQBIzB8lAKDcdkXtKKo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6261",
+   "name": "XIGMATEK Meta – BK EATX Case, U3x2 & Type-C, Front & Left TG, 3x G20A Arctic Reverse + 1x G20A, ARGB Remote Control Box",
+   "category": "case",
+   "priceEgp": 4100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4600,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-meta",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/eNsosg4bm0oWCp9r9AnEOLgEXNxWFPch117-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6256",
+   "name": "XIGMATEK Elysium II Super EATX Chassis – Triple TG, 16x 140mm Square Ring ARGB Fans, 2x Galaxy II Fan Control & Remote Kits",
+   "category": "case",
+   "priceEgp": 17000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-elysium-ii",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/u2WrrqMdCZRyhDZdH08jKfcoJ9-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6211",
+   "name": "PROART PA602 WOOD TG PWM BLACK – Mid Tower Case for EATX/ATX/Micro-ATX/Mini-ITX/DTX/Mini-DTX, 4x 2.5-inch & 4x Combo Bays, 10 Expansion Slots, Advanced Front I/O",
+   "category": "case",
+   "priceEgp": 12250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-proart-pa602-wood-tg-pwm-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/OA9J6Cnsaxl2WyZN75JHHKvHKO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6188",
+   "name": "XIGMATEK Master X II Pro + 700W PSU – Steel Mid Tower Gaming Case, Supports E‑ATX/ATX/M‑ATX/Mini‑ITX, 7 Expansion Slots, 360mm Radiator Support, 220mm PSU Clearance, USB 3.0/2.0 I/O",
+   "category": "psu",
+   "priceEgp": 3950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-master-x-ii-pro",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/c2RMF4YiG2RJnOPK4MJTVEY4Cu-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6101",
+   "name": "XPG INVADER X Mid-Tower PC Chassis - Tempered Glass Side Panel - 5 x ARGB Fans - Vertical GPU Mounting with PCIe 4.0 Riser - Liquid Cooling Support (360mm Radiator) - ATX/Micro-ATX/Mini-ITX - White",
+   "category": "gpu",
+   "priceEgp": 7250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/invader-x-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XPG/3VwA6CQmQS12x6hJKtqYDWUS7eVv45lONSa0G77vCjvosN-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6064",
+   "name": "Antec C7 ARGB WHITE , RTX 40 GPU Support, 4 x 120mm ARGB PWM Fans Included, Vertical GPU Cooling, Type-C 10Gbps, Seamless Tempered Glass Front & Side Panels, 360mm Radiator Support, Mid-Tower E-ATX PC Case",
+   "category": "gpu",
+   "priceEgp": 6100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-c7-argb-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/XXFfj6vksQJAbXt2MWo0OzIi4z-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6017",
+   "name": "COOLER MASTER TD500 MAX — With Pre-installed (Radiator: ML360 Atmos MAX, Power Supply: GX II Gold 850W ATX3.0 MAX) + 3 x 120mm (AIO Mobius120P ARGB fan) + 1 x CF120 ARGB fan",
+   "category": "psu",
+   "priceEgp": 13999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 24500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-td500-max",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/qdYeMTknKrMRa5SGADVp0gSQMo-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6016",
+   "name": "Cooler Master MasterBox 600 White — Back-connected motherboard support, FineMesh Performance Front Panel, Optimized airflow, Removable HDD cage - MB600-WGNN-S00",
+   "category": "motherboard",
+   "priceEgp": 5350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/mb600-wgnn-s00",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/aX0QWYjFZi0SAqJIhKqDJfzRDE-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6013",
+   "name": "COOLER MASTER ELITE 301 + NEX PN600 600W GAMING CASE - E301-KGNN-S00",
+   "category": "psu",
+   "priceEgp": 3400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-301-600w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/NkZa6cIRdVHJ8osDDdXNkW9ZpI-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5880",
+   "name": "GIGABYTE C102 GLASS 2x 120mm Fans — Optimized Airflow Design, Full-Size Tempered Glass, USB 3.0 x2 on I/O panel, 360mm Liquid Cooling Compatible, Dust Filte",
+   "category": "cooling",
+   "priceEgp": 2100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-c102-glass-2x-120mm-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/tFroDWRv7YgQ0O56xcLcaunplQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5879",
+   "name": "GIGABYTE C102 GLASS ICE 2x 120mm Fans — Optimized Airflow Design, Full-Size Tempered Glass, USB 3.0 x2 on I/O panel, 360mm Liquid Cooling Compatible, Dust Filte",
+   "category": "cooling",
+   "priceEgp": 2250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-c102-glass-ice-2x-120mm",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/5W8p8IN5IeF6BG4gRl3wqyffD6-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5822",
+   "name": "Antec C3 ARGB Black, 3 x 120mm & 1 x 120mm ARGB PWM Fans Included, Up to 8 Fans Simultaneously, Type-C，Seamless Tempered Glass Front & Side Panels, 360mm Radiator Support, Mid-Tower ATX PC Case",
+   "category": "case",
+   "priceEgp": 4499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-c3-argb-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/salKIsjTwmjEIxTTLgONSMCmTxERbDN51bX65IwOzL-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5821",
+   "name": "Antec C5 ARGB Black, 7 x 120mm ARGB PWM Fans Included, Up to 10 Fans Simultaneously, Type-C 3.2 Gen 2 Port, Seamless Tempered Glass Front & Side Panels, 360mm Radiator Support, Mid-Tower ATX PC Case",
+   "category": "case",
+   "priceEgp": 5499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-c5-argb-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/p63oQrchcVMNdv8jUQap5JS6IRatiMQNX2OhI4hdaMq1HAl6-250x250h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5814",
+   "name": "Antec C8 White Case — RTX 40 Compatible, Dual-Chamber, tooless Design, Type-C, 360mm Radiator Support, Seamless Tempered Glass Front & Side Panels, High Airflow Full-Tower E-ATX PC Case - Fans not Included",
+   "category": "gpu",
+   "priceEgp": 7099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-c8-white-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/0PZcOYyuAvwRXL67CKpDEleL6n-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5812",
+   "name": "Antec C3 ARGB White, 3 x 120mm & 1 x 120mm ARGB PWM Fans Included, Up to 8 Fans Simultaneously, Type-C，Seamless Tempered Glass Front & Side Panels, 360mm Radiator Support, Mid-Tower ATX PC Case",
+   "category": "case",
+   "priceEgp": 4099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4599,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-c3-argb-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/yVd4QVWOuClRZgLthEgQiDsRq8dHrkhSjH9GMDU9we-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5729",
+   "name": "Cooler Master MasterBox TD500 Mesh V2 - E-ATX Mid-Tower PC Case with Tessellated Mesh, 3 x 120mm Pre-Installed ARGB Fans, Removable Top Panel, Tempered Glass Side Panel, USB Type-C 10Gbps - Black",
+   "category": "case",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterbox-td500-mesh-v2-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/TxiiatnOBVZoqcMxUNt0taYJ5Wh-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5728",
+   "name": "Cooler Master Qube 500 Flatpack - Mid-Tower ATX PC Case, Fully Modular, 1 x 120 mm Pre-installed SF Black Rear Fan, Vertical GPU Mount, Supports EATX Motherboard & Dual 280 mm Radiators - Black",
+   "category": "psu",
+   "priceEgp": 3999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-qube-500-flatpack-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/R3qfeQPz96faUBMat3y6qFhFgF-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5725",
+   "name": "Cooler Master Qube 500 Flatpack - Mid-Tower ATX PC Case, Fully Modular, 1 x 120 mm Pre-installed SF Black Rear Fan, Vertical GPU Mount, Supports EATX Motherboard & Dual 280 mm Radiators - White",
+   "category": "psu",
+   "priceEgp": 4200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-qube-500-flatpack-mid-tower-atx-pc-case,-fully-modular,-1-x-120-mm-pre-installed-sf-black-rear-fan,-vertical-gpu-mount,-supports-eatx-motherboard-dual-280-mm-radiators-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/wouuDTFT5OsqfZhSQuUB76XFPl-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5691",
+   "name": "ASUS TUF Gaming GT302 ARGB Mid Tower Computer Case — 4x Pre-Installed Fan 140mm aRGB Fans, Up to 360mm Radiator & 7x Fan Support, 1x 3.5mm, 2x USB-A, & 1x USB-C I/O - White",
+   "category": "case",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 7500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-tuf-gaming-gt302-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/cz9pI7WXIvnXoeo7x6WATnjFF7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5679",
+   "name": "XPG Valor AIR Compact Mid Tower ATX PC Case — Magnetic MESH Front Bezel with Streamline Carving Pattern Design, Removable Dust Filter, 4 x 120 mm Fans Installed - White",
+   "category": "case",
+   "priceEgp": 2750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-valor-air-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XPG/qK2AHEa4mSaOKuWtwfHMZsTb3oWYsgDarBSrE8gpXwkNT7Cr97-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5498",
+   "name": "Case Technozone C-350 5 RGB FANS + PSU 600W",
+   "category": "psu",
+   "priceEgp": 3000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4000,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/case-technozone-c-350-5-rgb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/TechnoZone/uwbQXvgz5Alv03ZScUTrJthclw-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5497",
+   "name": "TechnoZone C270 Gaming RGB Computer Case (Includes 650W PSU & 4x RGB Fans)",
+   "category": "psu",
+   "priceEgp": 3600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/technozone-c270-gaming-case-650w-psu-4x-rgb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/TechnoZone/taFQNIYOzn82SgNcKHchCTVyQehnyh3MWVxCiWDgpCn-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5495",
+   "name": "XIGMATEK Endorphin WD — Black,EATX,U3x1 & Type Cx1,Wood Frontpanel & Left TG, ,4PCS S20A&Galaxy II Box & Remote",
+   "category": "case",
+   "priceEgp": 5199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-endorphin-wd-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/3z8pOL47l5H1B8pXm8pax18NHQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5494",
+   "name": "XIGMATEK Endorphin WD Arctic — WH,EATX,U3x1 & Type Cx1,Wood Frontpanel & Left TG,4PCS S20A Arctic&Galaxy II Box & Remote",
+   "category": "case",
+   "priceEgp": 5299,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-endorphin-wd-arctic-wh",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/QJBsJNA3vYVwA2IjfY2vDXMNZC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5418",
+   "name": "GIGABYTE AORUS C500 Glass - Black Mid Tower PC Gaming Case, Tempered Glass, USB Type-C, 4X ARBG Fans Included — GB-AC500G ST",
+   "category": "case",
+   "priceEgp": 7999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 9800,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-c500",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/m7Her0SMFVfE12bfJG9M5zQWAq-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5413",
+   "name": "XANDER VELOX ARGB + 700W ARGB 80 PLUS WHITE",
+   "category": "psu",
+   "priceEgp": 3599,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-velox-argb-700w-1-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/FeRwLbDvQa0Ble0blfruGhz29H-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5411",
+   "name": "XANDER VELOX ARGB + 600W ARGB 80 PLUS WHITE",
+   "category": "psu",
+   "priceEgp": 2999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xander-velox-argb-600w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Xander/FeRwLbDvQa0Ble0blfruGhz29H-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5351",
+   "name": "NZXT H9 Elite - All White - CM-H91EW-01 - Premium Dual-Chamber - Mid-Tower - RGB Fans - Case",
+   "category": "case",
+   "priceEgp": 9999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 14500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h9-elite-all-white-cm-h91ew-01-premium-dual-chamber-mid-tower-rgb-fans-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/GZNvv8Mobu3kecW49scYKEcKMG-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5349",
+   "name": "NZXT H Series H7 Elite Edition ATX Mid Tower Chassis White color",
+   "category": "case",
+   "priceEgp": 9000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 12500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h-series-h7-elite-edition-atx-mid-tower-chassis-white-color",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/w33uTFaYU93JwSUAYhHwsitlkC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5345",
+   "name": "NZXT H5 Flow - All White CC-H51FW-01 White SGCC Steel, Tempered Glass ATX, Micro-ATX, mini-ITX Computer Cases",
+   "category": "case",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/nzxt-h5-flow-all-white-cc-h51fw-01-white-sgcc-steel,-tempered-glass-atx,-micro-atx,-mini-itx-computer-cases",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/NZXT/1mxYfF0DKzKgGhIdx5aTCyM9k4-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5340",
+   "name": "ASUS ROG Z11 Mini-ITX/DTX Mid-Tower PC Gaming Case with Patented 11° Tilt Design, Compatible with ATX Power Supply or a 3-Slot Graphics, Tempered-glass Panels, Front I/O USB 3.2 Gen 2 Type-C, Two USB 3.2 Gen 1 Type-A and ARGB Control Button",
+   "category": "psu",
+   "priceEgp": 3650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 4600,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-rog-z11-mini-itx-dtx-mid-tower-pc-gaming-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/1sndYwb20BS1kgpbNd2ntlk1Xb-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5326",
+   "name": "Cooler Master MasterFrame 700 — customizable open-air frame PC Case - convert between a showcase PC chassis or a highly flexible test bench",
+   "category": "case",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-700-mcf-mf700-kgnn-s00",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/wvCMW3eoJVY21cFWqBJx81ccXQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5299",
+   "name": "iCUE 7000X RGB Tempered Glass Full-Tower ATX PC Case — White - CC-9011227-WW",
+   "category": "case",
+   "priceEgp": 13500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/icue-7000x-rgb-tempered-glass-full-tower-atx-pc-case-white-cc-9011227-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/oT9rIztJQcteLFwXLaKQdlzaWq-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5298",
+   "name": "iCUE 5000T RGB Tempered Glass Mid-Tower ATX PC Case — White - CC-9011231-WW",
+   "category": "case",
+   "priceEgp": 12900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 15000,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/icue-5000t-rgb-tempered-glass-mid-tower-atx-pc-case-white-cc-9011231-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/qfEuvtjbfJ5VjA8T4K5sKUwMou-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5297",
+   "name": "Corsair iCUE 7000X RGB Tempered Glass Full-Tower ATX PC Case — Black - CC-9011226-WW",
+   "category": "case",
+   "priceEgp": 13500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-icue-7000x-rgb-tempered-glass-full-tower-atx-pc-case-black-cc-9011226-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/N5RIX4VyzsylVvEAFGrCRpN63fc-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5295",
+   "name": "Corsair Crystal Series 680X RGB ATX High Airflow Tempered Glass Smart Case — White - CC-9011169-WW",
+   "category": "case",
+   "priceEgp": 14900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-crystal-series-680x-rgb-atx-high-airflow-tempered-glass-smart-case-white-cc-9011169-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/3Bu4WTECW9TO1wOzFZIYaxMcDj-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5294",
+   "name": "Corsair iCUE 220T RGB Tempered Glass Mid-Tower Smart Case — White - CC-9011191-WW",
+   "category": "case",
+   "priceEgp": 3350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-icue-220t-rgb-tempered-glass-mid-tower-smart-case-white-cc-9011191-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/bNJjlLYSnv2PjfWF74J8zj6OWS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5291",
+   "name": "Corsair iCUE 465X RGB Mid-Tower ATX Smart Case — CC-9011188-WW",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-icue-465x-rgb-mid-tower-atx-smart-case-cc-9011188-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/AyaXUBYJE9eIj08QovuQ1uvfsS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5290",
+   "name": "Corsair 5000D Tempered Glass Mid-Tower ATX PC Case — Black - CC-9011208-WW",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-5000d-tempered-glass-mid-tower-atx-pc-case-black-cc-9011208-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/hr1tDLlJEdMOUgLOhXsuWdPz1b-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5289",
+   "name": "Corsair iCUE 465X RGB Mid-Tower ATX Smart Case — White - CC-9011189-WW",
+   "category": "case",
+   "priceEgp": 5600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-icue-465x-rgb-mid-tower-atx-smart-case-white-cc-9011189-ww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/QsbVs4pPztDMeZCNRZigwTAaDC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "5126",
+   "name": "XIGMATEK Endorphin Ultra Black With 5 ARGB Fans — ATX, U3x1 & Type Cx1, Front & Left Seamless TG, 5PCS M20A & Galaxy II Fan Control Kit - EN41327",
+   "category": "cooling",
+   "priceEgp": 5199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-endorphin-ultra-black-with-5-argb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/vpFhI5uE27MVr1skZRLkYGqruV-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4805",
+   "name": "Cooler Master MasterBox 520 MESH ARGB ATX Case Black",
+   "category": "case",
+   "priceEgp": 3800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterbox-520-mesh-argb-atx-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/pkH2gDJDnnkbl80KMpD5kUDzjz41IUuwk5cHQaFlx8WHBz9gymeRq27jU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4786",
+   "name": "Corsair iCUE 220T RGB Tempered Glass Mid-Tower Smart Case — Black",
+   "category": "case",
+   "priceEgp": 3250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 5500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-icue-220t-rgb-tempered-glass-mid-tower-smart-case-%E2%80%94-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/Bg5Y9j8OQojjbqzcs5PXJkG4hoKPyZ4nLn-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4784",
+   "name": "Corsair iCUE 5000X RGB QL Edition Mid-Tower ATX Case — True White",
+   "category": "case",
+   "priceEgp": 8500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 12200,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-icue-5000x-rgb-ql-edition-mid-tower-atx-case-%E2%80%94-true-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2023/oxTxAj78CE54jk6aWmDJAx1jQYg6L89mefQ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4781",
+   "name": "Corsair Crystal 680X RGB ATX High Airflow Tempered Glass Smart Case — Black",
+   "category": "case",
+   "priceEgp": 14500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-crystal-680x-rgb-atx-high-airflow-tempered-glass-smart-case-%E2%80%94-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/J8Y3cxcgSVHBbzl897mREtKWSrCzZq2q-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4520",
+   "name": "Cooler Master HAF 500 High Airflow ATX Mid-Tower with Mesh Front Panel White",
+   "category": "case",
+   "priceEgp": 5300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6300,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-haf-500-high-airflow-atx-mid-tower-with-mesh-front-panel-dual-200mm-argb-lighting-fans-rotatable-gpu-fan-usb-3-2-gen-2-type-c-and-tempered-glass-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/3u1GxVkuNlyCv3AiL14ygMUvprNh4UYled2PwRzzhllQwNvV-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4518",
+   "name": "Cooler Master HAF 500 High Airflow ATX Mid-Tower with Mesh Front Panel Black",
+   "category": "case",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 6100,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-haf-500-high-airflow-atx-mid-tower-with-mesh-front-panel-dual-200mm-argb-lighting-fans-rotatable-gpu-fan-usb-3-2-gen-2-type-c-and-tempered-glass",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/qqZhNvpPfMWHvjAVZiE0ipLyD8QFQ9I1NYuZyv2gVExsDUg-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4406",
+   "name": "Antec NX800 Mid Tower ARGB Gaming Case (PINK)",
+   "category": "case",
+   "priceEgp": 3000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-nx800-mid-tower-argb-gaming-case-pink",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/bViZBm8472DMoh6HyEb3jixB92HhxqsgTa8kCrRnzM5j8w-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "4092",
+   "name": "XPG STARKER AIR Mid-Tower Chassis with Magnetic MESH Front Panel White",
+   "category": "case",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 3950,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-starker-air-mid-tower-chassis-with-magnetic-mesh-front-panel-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XPG/4N59LIAJbAZ5x05LOGnkSitYGoGMOGbf4T9dyL8F5DAqJw5cTJoGM-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3713",
+   "name": "Gigabyte Aorus C700 Glass Full Tower Gaming Case",
+   "category": "case",
+   "priceEgp": 14499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 18900,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-aorus-c700-glass-full-tower-gaming-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/YJWEmNNvJ5l8rCxqBudORObMWt-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3615",
+   "name": "Corsair iCUE 4000X RGB Tempered Glass Mid-Tower ATX Case — Black",
+   "category": "case",
+   "priceEgp": 6900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-icue-4000x-rgb-tempered-glass-mid-tower-atx-case-%E2%80%94-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Corsair/IRNJ5ovvb4sNplxQacJaJFVrbBfZp9K-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3429",
+   "name": "XPG STARKER Compact ATX Mid-Tower Chassis (WHITE)",
+   "category": "case",
+   "priceEgp": 1999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2500,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-starker-compact-atx-mid-tower-chassis-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XPG/9EeoM2fBHCtSO1fW7UhK2zxq3SZkK5sThTMIQWgkcm5c1PKY3aE-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "3043",
+   "name": "XPG Invader Mid-Tower Brushed Aluminum PC Case Black (Invader-BKCWW)",
+   "category": "case",
+   "priceEgp": 1999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2750,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-invader-mid-tower-brushed-aluminum-pc-case-black-invader-bkcww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XPG/I3ypRzAocmYaMqQGBClQteh6CexD5KwLTDjdmYPJFvZabUXQ-250x250h.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2736",
+   "name": "XPG Invader Mid-Tower Brushed Aluminum PC Case White (Invader-WHCWW)",
+   "category": "case",
+   "priceEgp": 1999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 2750,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-invader-mid-tower-brushed-aluminum-pc-case-white-invader-whcww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/71IV-fTvyAL._SL1500_-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2734",
+   "name": "XPG Battle Cruiser Mid-Tower RGB Glass Panel PC Case Black",
+   "category": "case",
+   "priceEgp": 4100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-battle-cruiser-mid-tower-rgb-glass-panel-pc-case-black-battlecruiser-bkcww",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/61RZgqK77aL._SL1000_-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2732",
+   "name": "XPG Battle Cruiser Mid-Tower RGB Glass Panel PC Case WHITE",
+   "category": "case",
+   "priceEgp": 4200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-battlecruiser-atx-mid-tower-gaming-computer-case-w-tempered-glass-side-top-and-front-panels-tool-less-design-4x-120mm-argb-fans-w-rgb-controller-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/61HUHw3sidL._SL1000_-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "2380",
+   "name": "COOLER MASTER MasterBox MB511 RGB MCB-B511D-KGNN-RGB Black Steel / Plastic / Tempered Glass ATX Mid Tower Computer Case",
+   "category": "case",
+   "priceEgp": 3850,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterbox-mb511-rgb-mcb-b511d-kgnn-rgb-black-steel-plastic-tempered-glass-atx-mid-tower-computer-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/11-119-356-V01-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "1998",
+   "name": "Corsair Crystal Series 570X RGB CC-9011098-WW Steel / Tempered Glass ATX Mid Tower Case",
+   "category": "case",
+   "priceEgp": 5500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/corsair-crystal-series-570x-rgb-cc-9011098-ww-steel-tempered-glass-atx-mid-tower-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/11-139-087-V01-250x250w.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7674",
+   "name": "GIGABYTE C301 GLASS V2 Mid-Tower PC Case – Tempered Glass & ARGB",
+   "category": "case",
+   "priceEgp": 3499,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gigabyte-c301-glass-v2-mid-tower-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Gigabyte/UWB0AFZfQPLoOZToHStks6WcVt-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7519",
+   "name": "Antec P30 ARGB Mid-Tower PC Case (5x PWM ARGB Fans)",
+   "category": "case",
+   "priceEgp": 3750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-p30-argb-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/yGNBDuDaOeabHcEGkjxgyx6BaicIW8K4r9OwIjbGgDPI8MQNC9q-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7518",
+   "name": "Antec Flux Mesh PC Case (F-LUX Platform) – Includes 5x Fans",
+   "category": "case",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-flux-case-5x-fans-enhanced-airflow",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/Q7HBrHeeIGLfSXUq71IixYaf7o1UYCItYAQfK9BJ-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7517",
+   "name": "Antec C5 Curve ARGB PC Case (White) – Includes 4x ARGB Fans",
+   "category": "case",
+   "priceEgp": 5099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-c5-curve-argb-case-white-4x-argb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/fX5bYdDsNLujeb9ImwcopUOZEyJkEh-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7516",
+   "name": "Antec AX1000 Lite PC Case – Includes 4x 120mm ARGB Fans & Atom G750 Gold PSU",
+   "category": "psu",
+   "priceEgp": 5750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax1000-lite-case-4x-120mm-argb-fans-atom-g750-gold-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/a9FTm28AmCk7xkPPssQJqYAMWB-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7478",
+   "name": "DarkFlash C365 Mesh E-ATX PC Case (Black) – Includes 4x CL6 ARGB Fans & 650W PSU",
+   "category": "psu",
+   "priceEgp": 3250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-c365-mesh-e-atx-pc-case-4x-cl6-fans-650w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/sEXxoYRdwsHRUqnqhHbvF3wvhv-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7472",
+   "name": "DarkFlash DY460 ATX PC Case (White) - Includes 4x INF34 ARGB Fans",
+   "category": "case",
+   "priceEgp": 5300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dy460-atx-pc-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/TWTqmx5quBgLr5q1rKn33UD7Zf-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7471",
+   "name": "DarkFlash DY460 ATX PC Case (Black) - Includes 4x INF34 ARGB Fans",
+   "category": "case",
+   "priceEgp": 5000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dy460-atx-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/tOMjpy5ynuXQAyvotQaWpZ0MKs-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7470",
+   "name": "DarkFlash DY470 ATX PC Case (White)",
+   "category": "case",
+   "priceEgp": 6400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dy470-atx-pc-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/F2ScJoyyA69UUK2lzcILCquSuI-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7384",
+   "name": "Cooler Master MasterFrame 500 Mesh ARGB Case – Silver, 3x ARGB Fans Included (Dual 200mm + 120mm), E-ATX Support, USB-C 20Gbps",
+   "category": "case",
+   "priceEgp": 7400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-500-mesh-argb-eatx-silver-mid-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/8VjcVBJaxGgDGHxggwwTAxmwGO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7383",
+   "name": "Cooler Master MasterFrame 500 Mesh ARGB Case – Black, 3x ARGB Fans Included (Dual 200mm + 120mm), E-ATX Support, USB-C 20Gbps",
+   "category": "case",
+   "priceEgp": 7300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-masterframe-500-mesh-argb-eatx-black-mid-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/H7LWvfiJF4lwgMRzPb3bGVzPBm-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7380",
+   "name": "Cooler Master Elite 600 ARGB ATX Mid-Tower Case – White, Tempered Glass Side Panel, 4x Pre-installed ARGB Fan, High Airflow Design",
+   "category": "case",
+   "priceEgp": 4100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-600-argb-atx-mid-tower-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/7NafHu9uVo3yPRGpNXK7eHmvni-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7379",
+   "name": "Cooler Master Elite 600 ARGB ATX Mid-Tower Case – Black, Tempered Glass Side Panel, 4x Pre-installed ARGB Fan, High Airflow Design",
+   "category": "case",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cooler-master-elite-600-argb-atx-mid-tower-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/Aqmpe8gx5e4CHlziZ2kuTj5hu7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7344",
+   "name": "Gamdias ATHENA P3 Mid-Tower ATX Case – Preinstalled 4 x 140mm Fans - Tempered Glass Side Panel, Mesh Front, 360mm Radiator Support, USB 3.0",
+   "category": "case",
+   "priceEgp": 3750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gamdias-athena-p3-atx-case-tempered-glass",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/GAMDIAS/3ItvxiXqyqJuAt0NTJ26Ut9gXC-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7343",
+   "name": "Gamdias NESO P1 PRO WW White Mid-Tower ATX Case – Tempered Glass Side Panel, Mesh Front, 360mm Radiator Support, USB 3.0",
+   "category": "case",
+   "priceEgp": 6325,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/gamdias-neso-p1-pro-ww-white-atx-case-tempered-glass",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/GAMDIAS/LptkXv3DzGquq748COBhCxm5Hs-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7310",
+   "name": "DarkFlash DLV22 Black ATX Mid-Tower PC Case – Right-Side Open Tempered Glass Door, 3x C6MS RGB Fans, 360mm Radiator Support, Service-Friendly Design",
+   "category": "case",
+   "priceEgp": 2400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dlv22-black-atx-case-right-side-glass-door",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/vEGkQyozwo4IrqDiIdvRNEiOIh-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7309",
+   "name": "DarkFlash DS900 ATX PC Case White - Tempered Glass Side Panel, High Airflow Gaming Tower, Front Mesh Design, Multiple Cooling Fan Support, ATX / Micro-ATX / ITX Compatible, Sleek and Durable Chassis",
+   "category": "case",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-ds900-atx-pc-case-white-high-airflow-gaming-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/ILY2OoRISmc74OVNeQAhqDhQkX-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7308",
+   "name": "DarkFlash DS900 ATX PC Case Black - Tempered Glass Side Panel, High Airflow Gaming Tower, Front Mesh Design, Multiple Cooling Fan Support, ATX / Micro-ATX / ITX Compatible, Sleek and Durable Chassis",
+   "category": "case",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-ds900-atx-pc-case-black-high-airflow-gaming-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/nG777UsUwTtJAU58nr2g23wZEP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7299",
+   "name": "DarkFlash Aigo D275M White M-ATX Gaming Case – 270° Panoramic Tempered Glass, 3x Pre-installed ARGB Fans, 5 PCIe Slots, Supports 240mm Radiator, USB 3.0",
+   "category": "case",
+   "priceEgp": 1750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/dark-flash-aigo-d275m-white-matx-case-270-panoramic-glass-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/2Qh58JCBUkJEuUHWKkKoYKT2jJ-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7298",
+   "name": "DarkFlash Aigo D275M Black M-ATX Gaming Case – 270° Panoramic Tempered Glass, 3x Pre-installed ARGB Fans, 5 PCIe Slots, Supports 240mm Radiator, USB 3.0",
+   "category": "case",
+   "priceEgp": 1750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/dark-flash-aigo-d275m-black-matx-case-270-panoramic-glass",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/RFqGwAMgeqZhWWlAqYwHPxLFi7-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7295",
+   "name": "DarkFlash Aigo C218M White Mid-Tower PC Case + 650W PSU & 3x ARGB Fans – Panoramic Tempered Glass, A-Pillar Free, 5 GPU Slots, Supports 240mm CPU Cooler & 360mm Radiator",
+   "category": "cpu",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/aigo-c218m-white-pc-case-650w-psu-3x-argb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/XIKzY9jYKkNLoWgRS1CFu92epU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7292",
+   "name": "Tortox Vidrio Mid-Tower ATX Gaming Case Black – Curved Tempered Glass, 6x Pre-installed ARGB PWM Fans, USB Type-C, 360mm Radiator Support",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/tortox-vidrio-curved-tempered-glass-atx-gaming-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Tortox/81kzJboM92IGrJzctT9EnJ64bG-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7291",
+   "name": "Tortox Curvo Mid-Tower ATX Gaming Case – White, 7x Pre-installed 120mm ARGB PWM Fans, USB Type-C, 360mm Radiator Support, Tempered Glass",
+   "category": "case",
+   "priceEgp": 6200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/tortox-curvo-white-mid-tower-atx-gaming-case-7x-argb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Tortox/wjk7doLwVGF2f4S07ILIsS0Mkc-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7290",
+   "name": "Tortox Curvo V2 White Mid-Tower ATX Gaming Case – 7x Pre-installed 120mm ARGB PWM Fans, USB Type-C, 360mm Radiator Support, Tempered Glass, Remote RGB Control",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/tortox-curvo-v2-white-mid-tower-atx-gaming-case-7x-argb-fans-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Tortox/bVzehUcKREjPxYIksLYxLDE0fH-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7289",
+   "name": "Tortox Curvo V2 Black Mid-Tower ATX Gaming Case – 7x Pre-installed 120mm ARGB PWM Fans, USB Type-C, 360mm Radiator Support, Tempered Glass, Remote RGB Control",
+   "category": "case",
+   "priceEgp": 6500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/tortox-curvo-v2-black-mid-tower-atx-gaming-case-7x-argb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Tortox/c6cx4TvOWjp3ZQN9bnslUzvXTY-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7288",
+   "name": "Tortox Curvo Mid-Tower ATX Gaming Case – Matte Black, 7x Pre-installed 120mm ARGB PWM Fans, USB Type-C, 360mm Radiator Support, Tempered Glass",
+   "category": "case",
+   "priceEgp": 6200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/tortox-curvo-black-mid-tower-atx-gaming-case-7x-argb-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Tortox/7lN6vjqg58zFbu2QgN4IDHXGSO-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7253",
+   "name": "Antec AX1000 ARGB Mid-Tower Gaming Case – High-Airflow Design with 4 Pre-Installed 140mm ARGB PWM Fans (3 Front + 1 Rear), Tempered Glass Side Panel, ATX / mATX / Mini-ITX Support",
+   "category": "case",
+   "priceEgp": 3199,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax1000-argb-mid-tower-gaming-case-4x140mm-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/a9FTm28AmCk7xkPPssQJqYAMWB-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7236",
+   "name": "NCORE 100 MAX Bronze Edition Mini-ITX Case – Pre-Installed 850W 80+ Bronze PSU & 240mm AIO, Compact Vertical Design (NR100-ZNNN85-SL0)",
+   "category": "psu",
+   "priceEgp": 17500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/ncore-100-max-bronze-edition-mini-itx-case-850w-aio",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/coolermaster/ZVq4vB1ClUOTV6x6r7WCT1Yrfz-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7191",
+   "name": "Antec VX310 ARGB Mid-Tower Gaming Case with 4x120mm Pre-installed ARGB Fans + Atom V650 650W 80+ Bronze PSU – Tempered Glass Side Panel, USB 3.0, Supports ATX/Micro-ATX/Mini-ITX",
+   "category": "psu",
+   "priceEgp": 2950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-vx310-argb-gaming-case-650w-psu-4-fans",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/69JOR5J4A3cb5EZ4xq3TdjZeJn-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7183",
+   "name": "Antec VCX300 ARGB ATX Mid-Tower Gaming Case + 650W PSU – Tempered Glass Side Panel, 5 Pre-installed ARGB Fans, Solid Front Panel, USB 3.0, Supports ATX/Micro-ATX/Mini-ITX",
+   "category": "psu",
+   "priceEgp": 3300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-vcx300-argb-gaming-case-650w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/joU9cbNolP7CQJZlWDOkjpSTih-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7174",
+   "name": "ASUS Prime AP202 ARGB mATX Case White – Curved Glass Panel, Supports up to 420 mm GPU, Patented Slot Vent Airflow",
+   "category": "gpu",
+   "priceEgp": 4950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-prime-ap202-argb-matx-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/dxfp8jSMaMzO9UVsfbpSyT5ZC1-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7168",
+   "name": "ASUS A32 PLUS ATX Mid-Tower Case (White) – Dual-Chamber Design, Panoramic Tempered Glass Panels, Supports 360 mm Radiators & 420 mm GPUs",
+   "category": "case",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-a32-plus-atx-mid-tower-case-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/u0x51930dUsJoO0invWz9L7oUL-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7167",
+   "name": "ASUS A32 PLUS ATX Mid-Tower Case (Black) – Dual-Chamber Design, Panoramic Tempered Glass Panels, Supports 360 mm Radiators & 420 mm GPUs",
+   "category": "case",
+   "priceEgp": 5099,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-a32-plus-atx-mid-tower-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/QlXM5ajkOas70jbC6oPu3t7Pos-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7135",
+   "name": "HYTE Y40 Pitch Black ATX Mid-Tower Case 50L – Vertical GPU Support, PCIe 4.0 Riser Included, Up to 360mm Radiators",
+   "category": "gpu",
+   "priceEgp": 6300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/hyte-y40-pitch-black-atx-mid-tower-case-50l-vertical-gpu-pcie4-riser",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/HYTE/ce4aBeanhhF97S3UXbitWDpqwc-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7132",
+   "name": "DarkFlash DY470 ATX PC Case (Black)",
+   "category": "case",
+   "priceEgp": 6300,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/darkflash-dy470-atx-pc-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/darkFlash/dw2yfhBeNXDSzmmkrcwQ3v1uzR-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7130",
+   "name": "Antec CX300 ARGB Mid-Tower Case 4×120mm ARGB Fans + Atom B750 750W 80 PLUS Bronze Power Supply",
+   "category": "psu",
+   "priceEgp": 4900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-cx300-argb-4fan-case-atom-b750-750w-80-plus-bronze-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/KR3qZcNwaojog8nPY66u0C7hzc-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7129",
+   "name": "Antec CX300 ARGB Mid-Tower 4×120 mm Fan Gaming Case + Atom V650 650W Non-Modular Power Supply",
+   "category": "psu",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-cx300-argb-mid-tower-4x120mm-fan-gaming-case-atom-v650-650w-psu",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/KR3qZcNwaojog8nPY66u0C7hzc-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7108",
+   "name": "XPG VALOR AIR PRO Mid-Tower Chassis (Black) – ATX / E-ATX Compatible, 4 mm Tempered Glass Side Panel, Pre-Installed 4×120 mm ARGB Fans, Supports GPU Up To 400 mm & Radiators Up To 360 mm, USB-C & USB-A Front I/O",
+   "category": "gpu",
+   "priceEgp": 4750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xpg-valor-air-pro-mid-tower-chassis-black-atx-eatx-argb-usb-c",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XPG/Yj5AnDJGyiuBIpTi8Djon0i8QV-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7084",
+   "name": "XIGMATEK Blast Black E-ATX PC Case with 4 ARGB Fans + X-Power 750W 80+ White Power Supply - Front & Left Seamless Tempered Glass, 3× G20A Reverse + 1× G20A Fans, ARGB Remote Control Box, USB 3.0 x1 & USB 2.0 x2",
+   "category": "psu",
+   "priceEgp": 4400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-blast-black-e-atx-pc-case-x-power-750w-psu-4-argb-fans-tempered-glass",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/j36CFLpix9JffzxvViHEFuAyBm-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7064",
+   "name": "XIGMATEK Hero II Air ATX PC Case with 4 ARGB Fans + X-POWER 750W 80+ White Power Supply - Black, Front Mesh Grill, Tempered Glass Side Panel, 4× Z20A Fans, ARGB PCB, USB 3.0 x1 & USB 2.0 x2 Ports",
+   "category": "psu",
+   "priceEgp": 3500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-hero-ii-air-atx-pc-case-x-power-750w-psu-4-argb-fans-tempered-glass-mesh-panel",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/e5JNiRLysUKxpay7bXa5Kjw3vP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7063",
+   "name": "XIGMATEK Hero II Air ATX PC Case with 4 ARGB Fans + XIGMATEK Asgard 750W 80+ Bronze Power Supply - Black, Front Mesh Grill, Tempered Glass Side Panel, 4× Z20A Fans, ARGB PCB, USB 3.0 x1 & USB 2.0 x2 Ports",
+   "category": "psu",
+   "priceEgp": 3900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-hero-ii-air-atx-pc-case-750w-psu-4-argb-fans-tempered-glass-mesh-panel",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/e5JNiRLysUKxpay7bXa5Kjw3vP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7062",
+   "name": "ASUS A32 ATX Dual-Chamber PC Case White - Panoramic Design, Supports Up to 420mm Graphics Cards, 360mm Radiators, and CPU Air Coolers Up to 165mm, Sleek High-Performance Gaming Chassis",
+   "category": "cpu",
+   "priceEgp": 5200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-a32-atx-dual-chamber-pc-case-panoramic-design-420mm-gpu-360mm-radiator-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/Eef4gFCT8AK9UDN5jrSITOWJt6-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "7061",
+   "name": "ASUS A32 ATX Dual-Chamber PC Case - Panoramic Design, Supports Up to 420mm Graphics Cards, 360mm Radiators, and CPU Air Coolers Up to 165mm, Sleek High-Performance Gaming Chassis",
+   "category": "cpu",
+   "priceEgp": 5100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-a32-atx-dual-chamber-pc-case-panoramic-design-420mm-gpu-360mm-radiator",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/l2rlqU69jlRU5IJJxl34feaeKX-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6975",
+   "name": "Xigmatek Osiris BTF Super Tower Case + PRIME 750W 80+ Gold PSU — Full Tower (Super Tower) Steel Frame with Dual 4mm Tempered Glass Panels, Includes 4x 140mm ARGB Back-to-Front (BTF) Fans",
+   "category": "psu",
+   "priceEgp": 5650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/xigmatek-osiris-btf-prime-750w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/XIGMATEK/VFphuI0RCs77YlJwwIt2QtBPkp-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6967",
+   "name": "ANTEC AX90 ELITE ARGB GAMING CASE — PSU ATOM G750 GOLD SEMI-MODULAR",
+   "category": "psu",
+   "priceEgp": 5750,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax90-atom-g750-gold-semi-modular",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/UWEZKOmOKpqC8j40vLWokZzLvj-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6960",
+   "name": "ANTEC AX61 ELITE ARGB GAMING CASE — PSU ATOM B750 - 750W 80 PLUS BRONZE",
+   "category": "psu",
+   "priceEgp": 4100,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-ax61-elite-b750",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/WFZhYhTQTbEFKeZ0qNl8BdLBtVZYKmNN5Yow7fZv-250x250.jpg",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6803",
+   "name": "MSI MAG FORGE 120A AIRFLOW Mid-Tower PC Case — Supports ATX/Micro-ATX/Mini-ITX, Mesh Front Panel, 6 Pre-installed ARGB Fans (3 Front, 2 Top, 1 Rear), USB 3.2 Gen 1 x2, Tempered Glass Side Panel, 330mm Max GPU, 160mm CPU Cooler Height, 7 Expansion Slots",
+   "category": "cpu",
+   "priceEgp": 2700,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-mag-forge-120a-airflow",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/zNIumE4trCPmJ19PLnvnLsyA7n-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6802",
+   "name": "MSI MAG FORGE 321R AIRFLOW Mid-Tower Case — ATX/mATX/ITX Support, Tempered Glass, 4x 120mm ARGB Fans (3 Front, 1 Rear), USB-C 3.2 Gen2x2, 2x USB 3.2 Gen1, GPU 390mm, CPU Cooler 160mm, 360mm Radiator Support, 7 Expansion Slots",
+   "category": "cpu",
+   "priceEgp": 3150,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-mag-forge-321r-airflow",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2025/ety8iIrWWqcKkck9M204dew3FR-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6801",
+   "name": "MSI MAG PANO 100L PZ White Mid-Tower Case — ABS/SPCC, 270° Panoramic Glass, ATX/mATX/ITX Support (Regular & Back-Connect), GPU up to 380mm, CPU Cooler 166mm, USB 3.2 Gen2x2 Type-C, 8 Slots, 3x 120/140mm Top Fans, 2x 2.5\"/3.5\" Bays",
+   "category": "cpu",
+   "priceEgp": 4800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-mag-pano-100l-pz-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/YepJUWa7ygywPMKC8KoCScvm6s-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6800",
+   "name": "MSI MAG PANO 100L PZ Mid-Tower Case — ABS/SPCC, 270° Panoramic Glass, ATX/mATX/ITX Support (Regular & Back-Connect), GPU up to 380mm, CPU Cooler 166mm, USB 3.2 Gen2x2 Type-C, 8 Slots, 3x 120/140mm Top Fans, 2x 2.5\"/3.5\" Bays",
+   "category": "cpu",
+   "priceEgp": 4950,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-mag-pano-100l-pz",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/products_2025/4fHuhqWnpNup35Qk81JOP0364l-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6799",
+   "name": "MSI MPG VELOX 100R White Mid-Tower PC Case — Supports E-ATX/ATX/Micro-ATX/Mini-ITX Motherboards, Tempered Glass Side Panel, 4x 120mm ARGB Fans Included, Up to 380mm GPU Length, 175mm CPU Cooler Height, USB 3.2 Gen 2x2 Type-C, ARGB Lighting",
+   "category": "cpu",
+   "priceEgp": 4650,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-mpg-velox-100r-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/VrCwIN3LWhJelJjedsGd64KqeU-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6798",
+   "name": "MSI MPG VELOX 100R Mid-Tower PC Case — Supports E-ATX/ATX/Micro-ATX/Mini-ITX Motherboards, Tempered Glass Side Panel, 4x 120mm ARGB Fans Included, Up to 380mm GPU Length, 175mm CPU Cooler Height, USB 3.2 Gen 2x2 Type-C, 7 Expansion Slots, ARGB Lighting",
+   "category": "cpu",
+   "priceEgp": 4500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-mpg-velox-100r-mid-tower-pc-case-supports-e-atx-atx-micro-atx-mini-itx-motherboards,-tempered-glass-side-panel,-4x-120mm-argb-fans-included,-up-to-380mm-gpu-length,-175mm-cpu-cooler-height,-usb-3.2-gen-2x2-type-c,-7-expansion-slots,-argb-lighting",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/zF4GrvSag5bzAzYWjt4iR32CJr-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6797",
+   "name": "MSI MPG GUNGNIR 300R AIRFLOW Mid-Tower PC Case — Supports E-ATX/ATX/Micro-ATX/Mini-ITX, Up to 360mm GPU, 175mm CPU Cooler Height, 10 Fan Mounts with 4x 120mm ARGB PWM Fans Included, Dual 360mm Radiator Support, USB 3.2 Gen 2x2 Type-C, Tempered Glass",
+   "category": "cpu",
+   "priceEgp": 5800,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/msi-mpg-gungnir-300r-airflow",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/MSI/njclAnTvYvIwbN84QD8Kww2ob5-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6746",
+   "name": "Antec NX360 Elite ARGB Mid-Tower ATX Gaming Case + Antec Atom V450 450W Power Supply — Tempered Glass Side Panel, Mesh Front, 4x 120mm ARGB Fans, Radiator Support up to 360mm ,Silent 120mm Fan, Multiple Protections, Compatible with ATX, Micro-ATX, ITX",
+   "category": "psu",
+   "priceEgp": 2500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/antec-nx360-elite-argb-mid-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Antec/76ZRQffjsfCFfgy14MvKPPm9iF-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6718",
+   "name": "Cougar Archon 2 Mesh RGB Mid Tower Case Black — Tempered Glass Side Panel, Supports Mini ITX/Micro ATX/ATX, Includes 3x 120mm ARGB Fans Pre-installed, USB 3.0 x 2 + USB 2.0 x 1, 7 Expansion Slots",
+   "category": "case",
+   "priceEgp": 2350,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cougar-archon-2-mesh-rgb-mid-tower-case-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Cougar/2dxdZMQr9OBTyHaq3Z5fp79xBH-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6717",
+   "name": "Cougar Uniface Mini RGB + STC600 Mid Tower Case with 600W 80+ White PSU — Tempered Glass Side Panel, Perforated Front Panel for Superior Airflow, 3 Pre-installed ARGB Fans (2x 140mm Front, 1x 120mm Rear), Supports Mini ITX/Micro ATX",
+   "category": "psu",
+   "priceEgp": 3250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cougar-uniface-mini-rgb-stc600",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Cougar/2hZynrLnigtQ1EPbCD87BHMl8E-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6715",
+   "name": "Cougar MX410 Mid Tower Gaming Case + VTC 500 80+ BRONZE — Dual ARGB Front Strips, Acrylic Transparent Side Panel, Supports ATX/Micro ATX/Mini ITX, Up to 165mm CPU Cooler Height, 240mm Water Cooling Radiator Support",
+   "category": "cpu",
+   "priceEgp": 2900,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cougar-mx410-mid-tower-gaming-case-vtc-500-80-bronze",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Cougar/JKNdIlDfJzCeePHyibnhSM5yAP-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6714",
+   "name": "Cougar MX600 RGB Full Tower Gaming Case — Tempered Glass Side Panel, E-ATX Support, 3x 140mm ARGB Fans Pre-Installed, USB-C, Vertical GPU Mount, Black",
+   "category": "gpu",
+   "priceEgp": 5400,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/cougar-mx600-rgb-full-tower",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Cougar/kzKO661MvT9kHe5nyV5rciFapi-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6707",
+   "name": "ASUS ROG Hyperion GR701 BTF Edition E-ATX Full Tower Case — Dual Tempered Glass, 420mm Dual Radiator Support, 4x 140mm Fans, ARGB, USB 4.0 Type-C",
+   "category": "case",
+   "priceEgp": 24500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/asus-rog-hyperion-gr701-btf-edition",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Asus/i7173QNVUgefowSRGTtHOGNuAf-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6691",
+   "name": "JONSBO TK-3 White ATX Mid Tower Case, 0.7mm Steel — Curved 4mm Tempered Glass, Supports ITX/M-ATX/ATX, Dual 360mm Radiators, Up to 10x 120mm Fans, USB 3.2 Gen2 Type-C, 7 Expansion Slots, 165mm CPU Cooler, 420mm GPU",
+   "category": "cpu",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/jonsbo-tk-3-white-atx-mid-tower-pc-case-1",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/JONSBO/DPNVUhWeHXCuI4tvLQgTcHTlkK-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6690",
+   "name": "JONSBO TK-3 Black ATX Mid Tower Case, 0.7mm Steel — Curved 4mm Tempered Glass, Supports ITX/M-ATX/ATX, Dual 360mm Radiators, Up to 10x 120mm Fans, USB 3.2 Gen2 Type-C, 7 Expansion Slots, 165mm CPU Cooler, 420mm GPU",
+   "category": "cpu",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/jonsbo-tk-3-black-atx-mid-tower-pc-case",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/JONSBO/TaKkRoBuLr8cEWU6dNE8yqmg6U-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6623",
+   "name": "Lian Li O11 Dynamic EVO RGB Mid Tower Case — Dual L-Shaped ARGB Light Strips, Tempered Glass Front & Side Panels with Removable Pillar, Adjustable Motherboard I/O, Supports Up to 420mm Radiators, 140mm Fans, Vertical GPU Mounting Option",
+   "category": "gpu",
+   "priceEgp": 7599,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": 8300,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-o11-dynamic-evo-rgb",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/8DXu5Jl1bVdY8t0ya0g1rJFYtS-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6622",
+   "name": "Lian Li O11 Dynamic EVO RGB Mid Tower Case White — Dual L-Shaped ARGB Light Strips, Tempered Glass Front & Side Panels with Removable Pillar, Adjustable Motherboard I/O, Supports Up to 420mm Radiators, 140mm Fans, Vertical GPU Mounting Option",
+   "category": "gpu",
+   "priceEgp": 8600,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-o11-dynamic-evo-rgb-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/qZWnphTPT7MBvCWBj8nEwNzSwq-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6621",
+   "name": "Lian Li O11 Vision Compact Tower Computer Case Chrome — Up to 360mm Radiator & 9x 120mm Fan Support, 1x 4mm & 1x 3mm Tempered Glass Panels, Steel & Aluminum Materials",
+   "category": "case",
+   "priceEgp": 7500,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-o11-vision-compact-chrome",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/ckfJNoVoKN0VVtHMK9UzFWFzHm-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6620",
+   "name": "Lian Li O11 Vision Compact Tower Computer Case White — Up to 360mm Radiator & 9x 120mm Fan Support, 1x 4mm & 1x 3mm Tempered Glass Panels, Steel & Aluminum Materials",
+   "category": "case",
+   "priceEgp": 6250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-o11-vision-compact-white",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/Ofdjdt74jxOlb892q5dTiLFDtK-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6619",
+   "name": "Lian Li O11 Vision Compact Tower Computer Case — Up to 360mm Radiator & 9x 120mm Fan Support, 1x 4mm & 1x 3mm Tempered Glass Panels, Steel & Aluminum Materials",
+   "category": "case",
+   "priceEgp": 6250,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-o11-vision-compact",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/lKaBFBnezkWvC8S8UFdkpmBbc2-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6617",
+   "name": "Lian Li Lancool III RGB E-ATX Mid Tower Modular Chassis — 8 Expansion Slots, Tempered Glass Panel, Up To 360mm Fan Support, Equipped With 4x 140 PWM Fans, USB Type C",
+   "category": "case",
+   "priceEgp": 6999,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-lancool-iii-rgb-black",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/PxNnj04Zr2qNr8TYADwqe7tVTr-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6615",
+   "name": "Lian Li Lancool 207 Mid Tower Case White — 2x 140mm & 2x 120mm Pre-Installed Fan, Up to 360mm Radiator & 8x Fan Support, Steel & 4mm Tempered Glass Support",
+   "category": "case",
+   "priceEgp": 4200,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-lancool-207-w",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/xLWr2CjmbX3UzXbOEvrDVb3elj-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  },
+  {
+   "retailerId": "elbadr",
+   "externalId": "6614",
+   "name": "Lian Li Lancool 207 Mid Tower Case Black — 2x 140mm & 2x 120mm Pre-Installed Fan, Up to 360mm Radiator & 8x Fan Support, Steel & 4mm Tempered Glass Support",
+   "category": "case",
+   "priceEgp": 4000,
+   "priceIsPlaceholder": false,
+   "originalPriceEgp": null,
+   "stockStatus": "unknown",
+   "productUrl": "https://elbadrgroupeg.store/lian-li-lancool-207-b",
+   "imageUrl": "https://elbadrgroupeg.store/image/cache/catalog/Lian-Li/kUURLVuMRX34g3a7Uct7P8SzXY-250x250.png",
+   "specs": {
+    "template": "opencart"
+   }
+  }
+ ]
+}

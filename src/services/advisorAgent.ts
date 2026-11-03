@@ -172,16 +172,11 @@ export async function askAdvisor(options: AdvisorOptions): Promise<AdvisorAnswer
  * Pull citation markers out of the answer and keep only IDs the agent could
  * legitimately know about (returned by a tool, or part of the loaded build).
  */
-export function extractCitations(text: string, executor: ToolExecutor): string[] {
+function extractCitations(text: string, executor: ToolExecutor): string[] {
   const ids = new Set<string>();
   for (const match of text.matchAll(CITATION_PATTERN)) {
     const id = match[1];
     if (id && executor.hasSeen(id)) ids.add(id);
   }
   return Array.from(ids);
-}
-
-/** Strip markers for plain-text contexts (copy, share, tests). */
-export function stripCitationMarkers(text: string): string {
-  return text.replace(CITATION_PATTERN, (_m, _id, name: string) => name);
 }

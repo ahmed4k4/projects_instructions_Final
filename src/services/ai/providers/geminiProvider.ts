@@ -153,7 +153,7 @@ function toFunctionDeclarations(tools?: ToolDeclaration[]) {
   ];
 }
 
-export function buildRequestBody(req: ChatRequest): Record<string, unknown> {
+function buildRequestBody(req: ChatRequest): Record<string, unknown> {
   const { contents, systemInstruction } = toGeminiContents(req.messages);
 
   const body: Record<string, unknown> = {

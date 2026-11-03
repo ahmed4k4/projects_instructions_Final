@@ -31,7 +31,7 @@ export function HeroSceneStatic({ className }: { className?: string }) {
         <div
           role="img"
           aria-label={t('landing.sceneAlt')}
-          className="h-full w-full rounded-2xl border border-white/5 bg-[radial-gradient(60%_60%_at_50%_45%,rgba(79,107,255,0.22),transparent_70%)]"
+          className="h-full w-full rounded-2xl border border-white/5 bg-[radial-gradient(60%_60%_at_50%_45%,rgba(20,190,173,0.18),transparent_70%)]"
         />
       ) : (
         <picture>
@@ -46,7 +46,7 @@ export function HeroSceneStatic({ className }: { className?: string }) {
             decoding="async"
             fetchPriority="high"
             onError={() => setFailed(true)}
-            className="h-full w-full object-contain drop-shadow-[0_24px_60px_rgba(79,107,255,0.25)]"
+            className="h-full w-full object-contain drop-shadow-[0_24px_60px_rgba(20,190,173,0.22)]"
           />
         </picture>
       )}

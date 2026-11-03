@@ -137,7 +137,10 @@ async function verifyUserAndConsumeQuota(request: Request): Promise<Response | n
 async function handleRequest(request: Request): Promise<Response> {
   const url = new URL(request.url);
   const route = routeOf(request);
-  const key = (process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY ?? '').trim();
+  const primaryKey = (process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY ?? '').trim();
+  const fallbackKey = (process.env.GEMINI_API_KEY_FALLBACK ?? '').trim();
+  const key = primaryKey || fallbackKey;
+  const fallbackKeys = primaryKey && fallbackKey && primaryKey !== fallbackKey ? [fallbackKey] : [];
   const geminiConfig = readGeminiConfig(process.env as Record<string, string | undefined>);
   const supabaseReady = Boolean((process.env.SUPABASE_ANON_KEY ?? process.env.VITE_SUPABASE_ANON_KEY) && (process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL));
 
@@ -171,6 +174,7 @@ async function handleRequest(request: Request): Promise<Response> {
     return json(200, {
       ok: ready,
       gemini: ready,
+      fallbackConfigured: Boolean(fallbackKey && fallbackKey !== primaryKey),
       model: geminiConfig.model,
       ...(reason
         ? {
@@ -238,6 +242,7 @@ async function handleRequest(request: Request): Promise<Response> {
       },
       geminiConfig,
       key,
+      fallbackKeys,
     );
 
     const headers = new Headers(result.headers);

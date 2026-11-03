@@ -24,9 +24,9 @@ import { markSceneContextLost } from '@/hooks/useSceneCapability';
  *     an integrated GPU keeps the hero, it just gets a cheaper one.
  */
 
-const NEON_BLUE = '#4f6bff';
-const NEON_VIOLET = '#8b5cf6';
-const NEON_CYAN = '#22d3ee';
+const NEON_BLUE = '#14bead';
+const NEON_VIOLET = '#c2ef4b';
+const NEON_CYAN = '#40e1cd';
 
 /* -------------------------------------------------------------------------- */
 /*  Pieces                                                                    */

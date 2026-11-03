@@ -22,11 +22,14 @@ function geminiProxyPlugin(): Plugin {
     name: 'nexus-ai-proxy',
     configureServer(server) {
       const env = loadEnv(server.config.mode, process.cwd(), '');
-      const apiKey = env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY ?? process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY ?? '';
+      const primaryKey = env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY ?? process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY ?? '';
+      const fallbackKey = env.GEMINI_API_KEY_FALLBACK ?? process.env.GEMINI_API_KEY_FALLBACK ?? '';
+      const apiKey = primaryKey || fallbackKey;
+      const fallbackKeys = primaryKey && fallbackKey && primaryKey !== fallbackKey ? [fallbackKey] : [];
       const config = readGeminiConfig({ ...env, ...process.env });
 
       server.middlewares.use('/api/ai', (req: IncomingMessage, res: ServerResponse) => {
-        void forward(req, res, config, apiKey).catch((error: unknown) => {
+        void forward(req, res, config, apiKey, fallbackKeys).catch((error: unknown) => {
           console.error('[Nexus AI proxy] request failed:', error instanceof Error ? error.message : 'unknown error');
           if (res.headersSent) {
             res.destroy(error instanceof Error ? error : undefined);
@@ -47,6 +50,7 @@ async function forward(
   res: ServerResponse,
   config: ReturnType<typeof readGeminiConfig>,
   apiKey: string,
+  fallbackKeys: string[] = [],
 ): Promise<void> {
   const [rawPath = '', rawQuery = ''] = (req.url ?? '/').replace(/^\/api\/ai\/?/, '').split('?');
 
@@ -59,6 +63,7 @@ async function forward(
     },
     config,
     apiKey,
+    fallbackKeys,
   );
 
   res.statusCode = result.status;

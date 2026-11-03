@@ -164,6 +164,14 @@ export function AIStatusPanel({ className }: { className?: string }) {
                 </div>
               )}
 
+              {configured && (
+                <p className="rounded-lg border border-border bg-background/40 px-2.5 py-2 text-[10.5px] leading-relaxed text-muted-foreground">
+                  {status?.fallbackConfigured
+                    ? (t('aiStatus.fallbackReady', { defaultValue: 'A separate Google project key is configured for quota failover.' }))
+                    : (t('aiStatus.fallbackMissing', { defaultValue: 'For Google quota failover, add GEMINI_API_KEY_FALLBACK from a different Google AI Studio project.' }))}
+                </p>
+              )}
+
               {status?.error && configured && (
                 <p className="text-[10.5px] leading-relaxed text-warning">{status.error}</p>
               )}

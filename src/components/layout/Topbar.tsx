@@ -52,7 +52,7 @@ export function Topbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 min-w-0 border-b border-border bg-background/60 backdrop-blur-xl">
+      <header className="sticky top-0 z-30 min-w-0 border-b border-border bg-background/82 backdrop-blur-2xl shadow-[0_8px_30px_-28px_rgb(var(--primary)/0.8)]">
         {/*
          * `min-w-0` on the row AND on the search button is what keeps the topbar
          * inside a 375px viewport: a flex child defaults to `min-width: auto`,
@@ -81,7 +81,7 @@ export function Topbar() {
               // After `sm:h-9`, so a coarse pointer keeps the 44px height on a
               // tablet that also matches the `sm` breakpoint.
               'pointer-coarse:min-h-11',
-              'bg-surface/60 px-3 text-start text-sm text-muted-foreground transition-colors duration-200',
+              'bg-surface/75 px-3 text-start text-sm text-muted-foreground transition-colors duration-200',
               'hover:border-primary/30 hover:bg-surface lg:ms-0',
             )}
           >

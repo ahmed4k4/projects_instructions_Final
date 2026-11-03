@@ -193,7 +193,7 @@ export default function Landing() {
       {/* ------------------------------------------------------------------ */}
       {/* HERO                                                               */}
       {/* ------------------------------------------------------------------ */}
-      <section ref={heroRef} className="relative overflow-hidden px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
+      <section ref={heroRef} className="nexus-workbench relative overflow-hidden px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
         <GradientMesh />
 
         <div className="relative mx-auto max-w-6xl">
@@ -202,8 +202,12 @@ export default function Landing() {
             className="relative z-10 mx-auto max-w-5xl text-center"
           >
             <motion.div variants={heroStagger} initial="hidden" animate="visible">
+              <motion.div variants={fadeUp} className="mb-4 flex items-center justify-center gap-2">
+                <span className="technical-kicker">NEXUS / BUILD LAB</span>
+                <span className="h-px w-8 bg-primary/60" />
+              </motion.div>
               <motion.div variants={fadeUp} className="flex justify-center">
-                <Badge variant="primary" className="gap-1.5 px-3 py-1">
+                <Badge variant="primary" className="gap-1.5 border border-primary/25 bg-primary/10 px-3 py-1 text-primary-glow">
                   <Sparkles className="size-3" />
                   {t('landing.badge')}
                 </Badge>
@@ -211,7 +215,7 @@ export default function Landing() {
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+                className="mt-6 text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
               >
                 {t('landing.heroLine1')}
                 <span className="block text-gradient">{t('landing.heroLine2')}</span>
@@ -254,6 +258,7 @@ export default function Landing() {
           >
             {/* Glow sits behind the canvas, inside the same sized box. */}
             <div className="pointer-events-none absolute inset-4 -z-10 rounded-full bg-primary/20 blur-[130px]" />
+            <div className="pointer-events-none absolute inset-x-[12%] bottom-[12%] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             {scene.pending ? null : scene.use3d ? (
               <SceneErrorBoundary>
                 <Suspense fallback={<HeroSceneStatic className="h-full w-full" />}>

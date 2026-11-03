@@ -39,6 +39,7 @@ export interface AIStatus {
   model: string | null;
   latencyMs: number | null;
   configured: boolean;
+  fallbackConfigured: boolean;
   error: string | null;
   /** Server-supplied explanation when AI is unavailable (deploy or key issue). */
   diagnosis: string | null;
@@ -56,6 +57,7 @@ export async function getAIStatus(): Promise<AIStatus> {
     model: config.configured ? (lastModel ?? resolveModelSync('chat')) : null,
     latencyMs: lastLatency,
     configured: config.configured,
+    fallbackConfigured: config.fallbackConfigured,
     error: lastError,
     diagnosis: config.configured ? null : config.diagnosis,
     grounding: getGroundingStatus(),

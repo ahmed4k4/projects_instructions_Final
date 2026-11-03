@@ -28,7 +28,7 @@ import {
 } from './types';
 import { advanceModel, MODEL_CANDIDATES, resolveModelSync } from '../models';
 import { supabase } from '@/services/supabaseClient';
-import { parseGoogleApiError } from './googleError';
+import { isModelScopedQuotaFailure, parseGoogleApiError } from './googleError';
 
 const BASE = '/api/ai/v1beta';
 
@@ -326,11 +326,18 @@ async function postWithFallback(
       continue;
     }
 
-    // A Google 429 is a project/model quota response, not evidence that this
-    // model is faulty. Cycling through every model only burns more RPM and
-    // produces several identical 429s. Surface the original quota response.
+    // Model-scoped quota windows can differ between Gemini models. Rotate only
+    // when Google's QuotaFailure explicitly identifies a per-model dimension;
+    // project/day/spend 429s are returned immediately to avoid wasteful retries.
+    let modelScoped429 = false;
+    if (response.status === 429 && response.headers.get('x-ai-upstream') === 'google') {
+      const errorPayload = await response.clone().json().catch(() => null);
+      modelScoped429 = isModelScopedQuotaFailure(
+        parseGoogleApiError(errorPayload, response.headers.get('retry-after')),
+      );
+    }
     const isGoogleModelFailure = response.headers.get('x-ai-upstream') === 'google'
-      && [404, 503].includes(response.status);
+      && ([404, 503].includes(response.status) || modelScoped429);
     if (!isGoogleModelFailure || signal?.aborted) break;
 
     const next = advanceModel(tier, model);

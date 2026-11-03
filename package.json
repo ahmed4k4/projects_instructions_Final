@@ -1,7 +1,7 @@
 {
   "name": "nexus-pc-builder",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.1.0",
   "type": "module",
   "description": "AI-Powered PC Builder - design, optimize and compare custom PC builds with Google Gemini AI.",
   "scripts": {
@@ -47,7 +47,8 @@
     "verify:shortlist": "node --experimental-strip-types scripts/verify-budget-shortlist.mjs",
     "verify:smart-builder": "node --experimental-strip-types scripts/verify-build-agent-regressions.mjs && node scripts/verify-ai-performance.mjs && node scripts/verify-builder-ui.mjs && node --experimental-strip-types scripts/verify-budget-shortlist.mjs && node --experimental-strip-types scripts/verify-typescript-and-gemini-quota.mjs",
     "verify:gemini-quota": "node --experimental-strip-types scripts/verify-typescript-and-gemini-quota.mjs",
-    "verify:signup-resilience": "node scripts/verify-signup-resilience.mjs"
+    "verify:signup-resilience": "node scripts/verify-signup-resilience.mjs",
+    "verify:ai-fallback": "node scripts/verify-ai-fallback.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",

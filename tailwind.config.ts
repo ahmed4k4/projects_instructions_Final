@@ -124,9 +124,9 @@ const config: Config = {
         "2xl": "1.125rem",
       },
       boxShadow: {
-        glow: "0 0 40px -10px rgb(99 102 241 / 0.6)",
-        "glow-sm": "0 0 24px -8px rgb(99 102 241 / 0.5)",
-        "glow-accent": "0 0 40px -12px rgb(34 211 238 / 0.55)",
+        glow: "0 0 40px -10px rgb(20 190 173 / 0.55)",
+        "glow-sm": "0 0 24px -8px rgb(20 190 173 / 0.42)",
+        "glow-accent": "0 0 40px -12px rgb(194 239 75 / 0.38)",
         card: "0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 20px 40px -24px rgb(0 0 0 / 0.6)",
         "inner-line": "inset 0 1px 0 0 rgb(255 255 255 / 0.05)",
       },

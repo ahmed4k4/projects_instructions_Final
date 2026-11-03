@@ -70,7 +70,7 @@ function NavContent({ collapsed, onNavigate }: SidebarProps & { onNavigate?: () 
               <motion.span
                 aria-hidden
                 layoutId="nav-indicator"
-                className="pointer-events-none absolute inset-0 rounded-lg border border-primary/20 bg-primary/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
+                className="pointer-events-none absolute inset-0 rounded-lg border border-primary/25 bg-primary/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
                 transition={spring}
               />
             )}
@@ -142,7 +142,7 @@ export function Sidebar({ collapsed }: SidebarProps) {
         transition={reduce ? { duration: 0 } : { duration: 0.28, ease: EASE_OUT }}
         className={cn(
           'fixed inset-y-0 start-0 z-40 hidden lg:flex flex-col border-e border-border',
-          'bg-surface/60 backdrop-blur-xl',
+          'bg-surface/85 backdrop-blur-2xl shadow-[0_0_44px_-32px_rgb(var(--primary)/0.55)]',
         )}
       >
         <div className={cn('flex h-16 items-center px-4', collapsed && 'justify-center px-0')}>

@@ -65,13 +65,13 @@ export function PageHeader({
         {eyebrow && (
           <motion.p
             variants={fadeUp}
-            className="text-[11px] font-medium uppercase tracking-[0.16em] text-primary-glow"
+            className="technical-kicker"
           >
             {eyebrow}
           </motion.p>
         )}
 
-        <motion.h1 variants={fadeUp} className="text-2xl font-semibold tracking-tight sm:text-3xl">
+        <motion.h1 variants={fadeUp} className="text-2xl font-bold tracking-tight sm:text-3xl">
           {title}
         </motion.h1>
 

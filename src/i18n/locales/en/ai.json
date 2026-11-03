@@ -151,6 +151,8 @@
     "poweredBy": "Powered by {{provider}}",
     "grounding": "Search grounding",
     "groundingRemaining": "{{remaining}} of {{limit}} left today",
-    "getKey": "Get a free key"
+    "getKey": "Get a free key",
+    "fallbackReady": "A fallback key from a separate Google project is configured for quota failover.",
+    "fallbackMissing": "For quota failover, add GEMINI_API_KEY_FALLBACK from a different Google AI Studio project."
   }
 }

@@ -37,7 +37,7 @@ export interface ProxyConfig {
 export function readGeminiConfig(
   env: Record<string, string | undefined> = process.env as Record<string, string | undefined>,
 ): ProxyConfig {
-  const key = (env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY ?? '').trim();
+  const key = (env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY ?? env.GEMINI_API_KEY_FALLBACK ?? '').trim();
   return { configured: key.length > 0, model: env.GEMINI_MODEL?.trim() || 'gemini-3.5-flash-lite' };
 }
 
@@ -90,6 +90,7 @@ export async function handleAiRoute(
   req: ProxyRequest,
   config: ProxyConfig,
   apiKey: string | undefined,
+  fallbackApiKeys: string[] = [],
 ): Promise<ProxyResponse> {
   if (req.method === 'OPTIONS') {
     return { status: 204, headers: PREFLIGHT_HEADERS, body: null };
@@ -140,18 +141,29 @@ export async function handleAiRoute(
 
   const target = `${GEMINI_ORIGIN}/${req.route}${req.search ? `?${req.search}` : ''}`;
 
-  let upstream: Response;
+  const apiKeys = [apiKey, ...fallbackApiKeys]
+    .map((value) => value?.trim())
+    .filter((value): value is string => Boolean(value));
+  let upstream: Response | null = null;
   try {
-    upstream = await fetch(target, {
-      method: req.method,
-      headers: {
-        'Content-Type': 'application/json',
-        // Header form (not `?key=`) keeps the secret out of logs and referrers.
-        'x-goog-api-key': apiKey,
-      },
-      body: req.method === 'GET' || req.method === 'HEAD' ? undefined : (req.body ?? undefined),
-      signal: req.signal,
-    });
+    for (let index = 0; index < apiKeys.length; index += 1) {
+      upstream = await fetch(target, {
+        method: req.method,
+        headers: {
+          'Content-Type': 'application/json',
+          // Header form (not `?key=`) keeps the secret out of logs and referrers.
+          'x-goog-api-key': apiKeys[index],
+        },
+        body: req.method === 'GET' || req.method === 'HEAD' ? undefined : (req.body ?? undefined),
+        signal: req.signal,
+      });
+
+      // An optional fallback key must belong to another Google AI Studio
+      // project; Gemini quotas are project-scoped, not API-key-scoped.
+      if (upstream.status !== 429 || index === apiKeys.length - 1) break;
+      console.warn(`[Gemini proxy] API key slot ${index + 1} hit HTTP 429; trying configured fallback project key.`);
+      await upstream.body?.cancel().catch(() => undefined);
+    }
   } catch (error) {
     const timedOut = (error as Error)?.name === 'TimeoutError' || (error as Error)?.name === 'AbortError';
     return json(timedOut ? 504 : 502, {
@@ -161,6 +173,7 @@ export async function handleAiRoute(
       },
     });
   }
+  if (!upstream) return json(502, { error: { message: 'GEMINI_UPSTREAM_UNAVAILABLE', status: 'UNAVAILABLE' } });
 
   const contentType = upstream.headers.get('content-type') ?? 'application/json';
   const isStream = contentType.includes('text/event-stream');

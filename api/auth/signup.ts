@@ -9,11 +9,6 @@ function json(status: number, payload: unknown): Response {
   });
 }
 
-async function sha256(value: string): Promise<string> {
-  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
-  return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
-}
-
 function isDuplicate(message: string): boolean {
   return /already.*registered|already.*exists|duplicate key|user already|email_exists/i.test(message);
 }
@@ -103,34 +98,29 @@ async function handleSignup(request: Request): Promise<Response> {
   const clientIp = forwarded || request.headers.get('x-real-ip') || 'unknown-client';
   if (!checkLocalRateLimit(clientIp)) return json(429, { error: 'تم الوصول للحد المؤقت لإنشاء الحسابات. حاول مرة أخرى بعد ساعة.' });
 
-  // Best-effort distributed throttle. It is deliberately time-bounded so a slow
-  // PostgREST/RPC call cannot consume the whole Vercel function execution window.
-  const fingerprint = await sha256(`${process.env.AUTH_RATE_LIMIT_SALT || supabaseUrl}:${clientIp}`);
-  try {
-    const quota = await fetchJson(`${supabaseUrl}/rest/v1/rpc/consume_username_signup_slot`, {
-      method: 'POST',
-      headers: { apikey: serviceRoleKey, Authorization: `Bearer ${serviceRoleKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ p_fingerprint: fingerprint, p_limit: 5, p_window_seconds: 3600 }),
-    }, 900);
-    if (quota.response.ok && quota.body === false) {
-      return json(429, { error: 'تم الوصول للحد المؤقت لإنشاء الحسابات. حاول مرة أخرى بعد ساعة.' });
-    }
-    if (!quota.response.ok) console.warn('[auth signup] distributed quota unavailable; local throttle remains active:', quota.response.status);
-  } catch (error) {
-    console.warn('[auth signup] distributed quota timed out; local throttle remains active:', error instanceof Error ? error.message : 'unknown');
-  }
+  // The distributed quota RPC was removed from the critical signup path. It
+  // added a third network dependency before account creation and could consume
+  // most of Vercel's short execution window. A durable limiter belongs in an
+  // edge/WAF or a dedicated atomic database function, not in this transaction.
+  const requestId = crypto.randomUUID();
+  const startedAt = Date.now();
+  const logStage = (stage: string, details: Record<string, unknown> = {}) => {
+    console.info('[auth signup]', { requestId, stage, elapsedMs: Date.now() - startedAt, ...details });
+  };
 
   const email = `${username}@accounts.nexus.invalid`;
   const adminUrl = `${supabaseUrl}/auth/v1/admin/users`;
   let createStatus = 0;
   let createMessage = '';
+  logStage('create_user_started');
   try {
     const created = await fetchJson(adminUrl, {
       method: 'POST',
       headers: { apikey: serviceRoleKey, Authorization: `Bearer ${serviceRoleKey}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password, email_confirm: true, user_metadata: { username, login_method: 'username_password' } }),
-    }, 3_500);
+    }, 12_000);
     createStatus = created.response.status;
+    logStage('create_user_finished', { status: createStatus });
     createMessage = getUpstreamMessage(asRecord(created.body));
     if (!created.response.ok && !isDuplicate(createMessage)) {
       console.error('[auth signup] Admin REST createUser failed:', { status: createStatus, message: createMessage });
@@ -147,7 +137,8 @@ async function handleSignup(request: Request): Promise<Response> {
     }
   } catch (error) {
     console.error('[auth signup] Admin REST request timed out/failed:', error instanceof Error ? error.message : error);
-    return json(504, { error: 'تأخر رد خدمة الحسابات. لم نتمكن من تأكيد إنشاء الحساب؛ جرّب تسجيل الدخول بنفس اسم المستخدم قبل محاولة إنشاء الحساب مرة أخرى.' });
+    logStage('create_user_timeout');
+    return json(504, { requestId, stage: 'create_user', error: 'انتهت مهلة الاتصال بخدمة الحسابات. قد يكون الحساب أُنشئ بالفعل؛ جرّب تسجيل الدخول بنفس البيانات قبل إعادة المحاولة.' });
   }
 
   // Authenticate immediately and return a regular Supabase session. This also
@@ -158,21 +149,24 @@ async function handleSignup(request: Request): Promise<Response> {
       method: 'POST',
       headers: { apikey: anonKey, 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
-    }, 3_000);
+    }, 10_000);
     if (!login.response.ok) {
       const message = getUpstreamMessage(asRecord(login.body));
       console.error('[auth signup] post-create password grant failed:', { status: login.response.status, message, createStatus });
       if (isDuplicate(createMessage) && login.response.status === 400) {
         return json(409, { error: 'اسم المستخدم موجود بالفعل، لكن كلمة المرور غير صحيحة.' });
       }
-      return json(502, { error: 'تم إنشاء الحساب، لكن تعذر فتح الجلسة تلقائيًا. جرّب تسجيل الدخول بنفس اسم المستخدم وكلمة المرور.' });
+      logStage('session_rejected', { status: login.response.status, createStatus });
+      return json(login.response.status === 400 ? 409 : 502, { requestId, stage: 'create_session', error: login.response.status === 400 ? 'تم إنشاء الحساب لكن Supabase رفض بيانات الدخول. جرّب تسجيل الدخول؛ وإذا تكرر الخطأ أرسل رقم التشخيص للدعم.' : 'تم إنشاء الحساب لكن تعذر فتح جلسة الدخول. أعد المحاولة بنفس البيانات.' });
     }
     const session = asRecord(login.body);
     if (typeof session.access_token !== 'string' || typeof session.refresh_token !== 'string') {
       return json(502, { error: 'تم إنشاء الحساب، لكن Supabase لم يُرجع جلسة صالحة. جرّب تسجيل الدخول.' });
     }
+    logStage('completed', { createStatus });
     return json(201, {
       ok: true,
+      requestId,
       user: session.user ?? { username },
       session: {
         access_token: session.access_token,
@@ -181,15 +175,19 @@ async function handleSignup(request: Request): Promise<Response> {
     });
   } catch (error) {
     console.error('[auth signup] password grant timed out/failed:', error instanceof Error ? error.message : error);
-    return json(504, { error: 'تم إنشاء الحساب، لكن تأخر فتح الجلسة. جرّب تسجيل الدخول بنفس البيانات؛ لا تنشئ حسابًا جديدًا.' });
+    logStage('session_timeout', { createStatus });
+    return json(504, { requestId, stage: 'create_session', error: 'تم إنشاء الحساب، لكن انتهت مهلة فتح جلسة الدخول. لا تنشئ حسابًا جديدًا؛ جرّب تسجيل الدخول بنفس البيانات.' });
   }
 }
 
-export default async function handler(request: Request): Promise<Response> {
-  try {
-    return await handleSignup(request);
-  } catch (error) {
-    console.error('[auth signup] Unhandled signup failure:', error);
-    return json(500, { error: 'حدث خطأ غير متوقع أثناء إنشاء الحساب. راجع سجلات api/auth/signup في Vercel.' });
-  }
-}
+/** Vercel Web Standard Function entry point (same contract as api/ai/[...path].ts). */
+export default {
+  async fetch(request: Request): Promise<Response> {
+    try {
+      return await handleSignup(request);
+    } catch (error) {
+      console.error('[auth signup] Unhandled signup failure:', error);
+      return json(500, { error: 'حدث خطأ غير متوقع أثناء إنشاء الحساب. راجع سجلات api/auth/signup في Vercel.' });
+    }
+  },
+};

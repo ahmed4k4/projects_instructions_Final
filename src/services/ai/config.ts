@@ -10,6 +10,7 @@
 export interface AIProviderConfig {
   configured: boolean;
   model: string | null;
+  fallbackConfigured: boolean;
   discovered: boolean;
   checkedAt: number;
   diagnosis: string | null;
@@ -17,7 +18,7 @@ export interface AIProviderConfig {
 
 const CONFIG_TTL_MS = 5 * 60 * 1000;
 const FAILURE_TTL_MS = 20 * 1000;
-const CACHE_KEY = 'nexus:ai:gemini-config';
+const CACHE_KEY = 'nexus:ai:gemini-config:v2';
 const CONFIG_TIMEOUT_MS = 5000;
 
 let inFlight: Promise<AIProviderConfig> | null = null;
@@ -25,6 +26,7 @@ let inFlight: Promise<AIProviderConfig> | null = null;
 const EMPTY: AIProviderConfig = {
   configured: false,
   model: null,
+  fallbackConfigured: false,
   discovered: false,
   checkedAt: 0,
   diagnosis: null,
@@ -75,7 +77,7 @@ export async function discoverGeminiConfig(force = false): Promise<AIProviderCon
         signal: controller.signal,
       });
       const payload = (await res.json().catch(() => null)) as
-        | { ok?: boolean; gemini?: boolean; model?: string | null; hint?: string; reason?: string; error?: { message?: string } }
+        | { ok?: boolean; gemini?: boolean; model?: string | null; fallbackConfigured?: boolean; hint?: string; reason?: string; error?: { message?: string } }
         | null;
 
       if (res.ok && payload && (typeof payload.ok === 'boolean' || typeof payload.gemini === 'boolean')) {
@@ -83,6 +85,7 @@ export async function discoverGeminiConfig(force = false): Promise<AIProviderCon
         config = {
           configured,
           model: payload.model ?? null,
+          fallbackConfigured: Boolean(payload.fallbackConfigured),
           discovered: true,
           checkedAt: Date.now(),
           diagnosis: configured

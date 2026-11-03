@@ -74,3 +74,15 @@ export function parseGoogleApiError(
 
   return { message: message.slice(0, 700), status, retryAfterSeconds, quotaLabels: quotaLabels.slice(0, 3) };
 }
+
+/**
+ * A subset of Gemini quotas is model-scoped. In that case trying the next
+ * configured model may work; project-wide/day/spend quota failures must not
+ * trigger model rotation.
+ */
+export function isModelScopedQuotaFailure(details: GoogleApiErrorDetails): boolean {
+  return details.quotaLabels.some((label) => {
+    const normalized = label.toLowerCase().replace(/[\s_-]+/g, '');
+    return normalized.includes('permodel') || normalized.includes('model=');
+  });
+}

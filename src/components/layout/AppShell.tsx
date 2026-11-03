@@ -68,7 +68,7 @@ export function AppShell() {
   }, [pathname, setSidebarOpen]);
 
   return (
-    <div className="relative min-h-[100dvh] bg-background" dir={directionOf(language)}>
+    <div className="nexus-workbench relative min-h-[100dvh] bg-background" dir={directionOf(language)}>
       <Sidebar collapsed={sidebarCollapsed} />
 
       <div

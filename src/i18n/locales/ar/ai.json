@@ -151,6 +151,8 @@
     "poweredBy": "يعمل بواسطة {{provider}}",
     "grounding": "البحث المباشر",
     "groundingRemaining": "تبقّى {{remaining}} من {{limit}} اليوم",
-    "getKey": "احصل على مفتاح مجاني"
+    "getKey": "احصل على مفتاح مجاني",
+    "fallbackReady": "تم إعداد مفتاح احتياطي من مشروع Google منفصل لاستخدامه عند نفاد الحصة.",
+    "fallbackMissing": "للتبديل عند نفاد الحصة، أضف GEMINI_API_KEY_FALLBACK من مشروع Google AI Studio مختلف."
   }
 }

@@ -2,8 +2,6 @@ import { useCallback, useEffect, useState } from 'react';
 import type { Session, User } from '@supabase/supabase-js';
 import { isSupabaseConfigured, supabase } from '@/services/supabaseClient';
 
-const usernameEmail = (username: string) => `${username.trim().toLowerCase()}@accounts.nexus.invalid`;
-
 export interface AuthState {
   user: User | null;
   session: Session | null;
@@ -36,14 +34,29 @@ export function useAuth(): AuthState & {
 
   const signInWithPassword = useCallback(async (username: string, password: string) => {
     if (!supabase) return { error: 'Authentication is not configured.' };
-    const { error } = await supabase.auth.signInWithPassword({ email: usernameEmail(username), password });
-    if (!error) return { error: null };
-    const message = /invalid login credentials|invalid_credentials/i.test(error.message)
-      ? 'اسم المستخدم أو كلمة المرور غير صحيحة.'
-      : /email not confirmed/i.test(error.message)
-        ? 'الحساب غير مفعّل. تواصل مع مسؤول الموقع.'
-        : error.message;
-    return { error: message };
+    let response: Response;
+    try {
+      response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: username.trim().toLowerCase(), password }),
+      });
+    } catch {
+      return { error: 'تعذر الاتصال بخدمة تسجيل الدخول. حاول مرة أخرى.' };
+    }
+    const result = await response.json().catch(() => ({})) as {
+      error?: string;
+      session?: { access_token?: string; refresh_token?: string };
+    };
+    if (!response.ok) return { error: result.error ?? 'تعذر تسجيل الدخول.' };
+    if (!result.session?.access_token || !result.session.refresh_token) {
+      return { error: 'لم تُرجع خدمة الحسابات جلسة دخول صالحة.' };
+    }
+    const { error } = await supabase.auth.setSession({
+      access_token: result.session.access_token,
+      refresh_token: result.session.refresh_token,
+    });
+    return { error: error?.message ?? null };
   }, []);
 
   const signUpWithPassword = useCallback(async (username: string, password: string) => {

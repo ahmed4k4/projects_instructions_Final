@@ -25,56 +25,57 @@
 @layer base {
   :root,
   .dark {
-    --background: 8 9 12; /* #08090C deep space black */
-    --surface: 15 17 23; /* #0F1117 elevated card */
-    --surface-elevated: 22 24 34; /* #161822 hover / active card */
-    --surface-inset: 10 11 16;
-    --border: rgba(255, 255, 255, 0.06);
-    --border-strong: rgba(255, 255, 255, 0.12);
-    --foreground: 245 247 250; /* #F5F7FA */
-    --muted-foreground: 139 146 168; /* #8B92A8 */
-    --primary: 99 102 241; /* #6366F1 indigo */
-    --primary-glow: 129 140 248; /* #818CF8 */
-    --primary-foreground: 255 255 255;
-    --secondary: 139 92 246; /* #8B5CF6 violet */
-    --secondary-foreground: 255 255 255;
-    --accent: 34 211 238; /* #22D3EE cyan */
-    --accent-foreground: 8 9 12;
-    --success: 16 185 129; /* #10B981 */
-    --warning: 245 158 11; /* #F59E0B */
-    --danger: 244 63 94; /* #F43F5E */
+    /* NEXUS / BUILD LAB — graphite, precision teal and signal-lime */
+    --background: 8 14 18;
+    --surface: 14 23 28;
+    --surface-elevated: 21 34 40;
+    --surface-inset: 7 13 17;
+    --border: rgba(173, 220, 220, 0.09);
+    --border-strong: rgba(173, 220, 220, 0.17);
+    --foreground: 238 247 246;
+    --muted-foreground: 139 160 162;
+    --primary: 20 190 173;
+    --primary-glow: 64 225 205;
+    --primary-foreground: 4 22 22;
+    --secondary: 65 145 181;
+    --secondary-foreground: 245 252 255;
+    --accent: 194 239 75;
+    --accent-foreground: 22 31 13;
+    --success: 87 205 143;
+    --warning: 244 177 77;
+    --danger: 245 103 103;
 
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.06);
-    --grid-line: rgba(255, 255, 255, 0.045);
-    --selection: rgba(99, 102, 241, 0.35);
+    --glass-bg: rgba(12, 24, 28, 0.72);
+    --glass-border: rgba(173, 220, 220, 0.1);
+    --grid-line: rgba(111, 201, 191, 0.055);
+    --selection: rgba(20, 190, 173, 0.32);
     color-scheme: dark;
   }
 
   .light {
-    --background: 248 249 252; /* #F8F9FC */
+    --background: 243 247 245;
     --surface: 255 255 255;
-    --surface-elevated: 244 245 250;
-    --surface-inset: 240 241 247;
-    --border: rgba(9, 12, 22, 0.08);
-    --border-strong: rgba(9, 12, 22, 0.16);
-    --foreground: 12 14 22; /* #0C0E16 */
-    --muted-foreground: 92 99 120;
-    --primary: 79 82 221;
-    --primary-glow: 99 102 241;
+    --surface-elevated: 235 243 240;
+    --surface-inset: 229 239 235;
+    --border: rgba(19, 55, 53, 0.1);
+    --border-strong: rgba(19, 55, 53, 0.18);
+    --foreground: 16 34 35;
+    --muted-foreground: 91 116 115;
+    --primary: 0 133 121;
+    --primary-glow: 0 157 143;
     --primary-foreground: 255 255 255;
-    --secondary: 124 58 237;
+    --secondary: 35 105 139;
     --secondary-foreground: 255 255 255;
-    --accent: 8 145 178;
-    --accent-foreground: 255 255 255;
-    --success: 5 150 105;
-    --warning: 217 119 6;
-    --danger: 225 29 72;
+    --accent: 143 181 31;
+    --accent-foreground: 19 31 8;
+    --success: 24 142 92;
+    --warning: 184 115 24;
+    --danger: 202 64 64;
 
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(9, 12, 22, 0.07);
-    --grid-line: rgba(9, 12, 22, 0.05);
-    --selection: rgba(79, 82, 221, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.82);
+    --glass-border: rgba(19, 55, 53, 0.1);
+    --grid-line: rgba(0, 133, 121, 0.055);
+    --selection: rgba(0, 133, 121, 0.18);
     color-scheme: light;
   }
 
@@ -232,7 +233,10 @@
   }
 
   .text-gradient {
-    @apply bg-text-gradient bg-clip-text text-transparent;
+    background: linear-gradient(100deg, rgb(var(--primary-glow)), rgb(var(--accent)) 76%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     background-size: 160% 160%;
   }
 
@@ -246,12 +250,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(
-      140deg,
-      rgb(var(--primary) / 0.55),
-      rgb(var(--accent) / 0.25),
-      transparent 60%
-    );
+    background: linear-gradient(140deg, rgb(var(--primary) / 0.58), rgb(var(--accent) / 0.28), transparent 66%);
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
@@ -272,6 +271,32 @@
     transform: translateX(-100%);
     background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.06), transparent);
     animation: shimmer 1.8s ease-in-out infinite;
+  }
+
+  .nexus-workbench {
+    background-image:
+      radial-gradient(ellipse at 8% 0%, rgb(var(--primary) / 0.12), transparent 34rem),
+      radial-gradient(ellipse at 96% 22%, rgb(var(--accent) / 0.07), transparent 28rem),
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: auto, auto, 42px 42px, 42px 42px;
+    background-position: center top;
+  }
+
+  .hardware-panel {
+    background:
+      radial-gradient(circle at 50% 45%, rgb(var(--primary) / 0.16), transparent 46%),
+      linear-gradient(145deg, rgb(var(--surface-elevated) / 0.92), rgb(var(--surface-inset) / 0.96));
+    border: 1px solid var(--border-strong);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.045), 0 28px 80px -46px rgb(0 0 0 / 0.8);
+  }
+
+  .technical-kicker {
+    color: rgb(var(--accent));
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
   }
 
   .noise {

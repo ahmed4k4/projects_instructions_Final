@@ -255,8 +255,11 @@ whole purpose. Two cards from one store are not.
 
 ## 5. Stock status and "best price"
 
-Only `out_of_stock` is disqualifying. `unknown` means the retailer printed no
-stock line (Elbadr never does), which is the normal state for most of the feed.
+Only an explicit and fresh `in_stock` status is presented as confirmed available.
+`limited` stays distinct; `out_of_stock` is shown only when explicitly reported;
+`unknown` means the retailer gave no recognised status or the last observation is
+older than 48 hours. Elbadr often does not publish a stock line, so its status
+remains unconfirmed rather than being guessed.
 
 This matters because of a bug caught in the final review: the comparison page
 advertised **EGP 63,887** as "best price" when that offer was out of stock and

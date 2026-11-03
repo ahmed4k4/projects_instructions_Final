@@ -128,6 +128,7 @@ export interface GenerateRequestPayload {
   contents: GeminiContent[];
   systemInstruction?: string;
   tools?: ToolDeclaration[];
+  toolConfig?: ToolConfig;
   temperature?: number;
   thinkingLevel?: 'MINIMAL' | 'LOW' | 'MEDIUM' | 'HIGH';
   maxOutputTokens?: number;
@@ -135,10 +136,21 @@ export interface GenerateRequestPayload {
   responseSchema?: Record<string, unknown>;
 }
 
+export interface FunctionCallingConfig {
+  mode: 'AUTO' | 'ANY' | 'NONE' | 'VALIDATED';
+  allowedFunctionNames?: string[];
+}
+
+export interface ToolConfig {
+  functionCallingConfig: FunctionCallingConfig;
+}
+
 export interface GenerateOptions {
   model?: GeminiModelKey;
   systemInstruction?: string;
   tools?: ToolDeclaration[];
+  /** Explicit Gemini function-calling policy (used to force finalisation). */
+  toolConfig?: ToolConfig;
   /**
    * Force Google Search grounding. When omitted, the client decides from the
    * question (see services/ai/grounding.ts). Never applies alongside tools.

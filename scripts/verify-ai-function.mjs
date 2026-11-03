@@ -93,7 +93,7 @@ const call = (route, init = {}) => {
 }
 
 /* 2b — supported model routes ---------------------------------------------- */
-for (const model of ['gemini-3.5-flash-lite', 'gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-3.6-flash']) {
+for (const model of ['gemini-3.8-flash', 'gemini-3.5-flash-lite', 'gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-3.6-flash']) {
   const res = await call(`v1beta/models/${model}:generateContent`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

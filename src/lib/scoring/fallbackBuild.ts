@@ -147,10 +147,12 @@ const PLATFORM_RULES: CompatibilityRule[] = [
 /** Categories that must agree with each other to form a platform. */
 const PLATFORM_CATEGORIES: ComponentCategory[] = ['cpu', 'motherboard', 'ram', 'cooling'];
 
-const purchasable = (catalogue: PCComponent[], category: ComponentCategory): PCComponent[] =>
-  catalogue
+const purchasable = (catalogue: PCComponent[], category: ComponentCategory): PCComponent[] => {
+  const stockRank = { in_stock: 0, limited: 1, unknown: 2, out_of_stock: 3 } as const;
+  return catalogue
     .filter((c) => c.category === category && c.stockStatus !== 'out_of_stock')
-    .sort((a, b) => a.price - b.price);
+    .sort((a, b) => stockRank[a.stockStatus] - stockRank[b.stockStatus] || a.price - b.price);
+};
 
 /**
  * Does `candidate` fit the platform already in `items`?
@@ -200,8 +202,13 @@ function pickBest(
   catalogue: PCComponent[],
   cap: number,
   items: BuildItems,
+  preferences: string[] = [],
 ): PCComponent | null {
-  const options = purchasable(catalogue, category);
+  let options = purchasable(catalogue, category);
+  const wantsAMD = preferences.includes('AMD CPU');
+  const wantsIntelCore = preferences.includes('Intel CPU');
+  if (category === 'cpu' && wantsAMD) options = options.filter((c) => /amd|ryzen/i.test(`${c.brand} ${c.name}`));
+  if (category === 'cpu' && wantsIntelCore) options = options.filter((c) => /intel|core/i.test(`${c.brand} ${c.name}`) && !/pentium|celeron/i.test(c.name));
   const fitting = options.filter((c) => c.price <= cap);
 
   const byPerformance = (list: PCComponent[]) =>
@@ -253,6 +260,9 @@ export function fallbackBuild(
   degradedReason?: string,
 ): AIBuildResponse {
   const allocation = BUDGET_ALLOCATION[req.useCase] ?? BUDGET_ALLOCATION.gaming!;
+  const requestedPreferences = [...(req.preferences ?? [])];
+  if (/(?:amd|ryzen).{0,24}(?:cpu|processor)|(?:cpu|processor).{0,24}(?:amd|ryzen)/i.test(req.notes ?? '')) requestedPreferences.push('AMD CPU');
+  if (/(?:intel|core i[3579]).{0,24}(?:cpu|processor)|(?:cpu|processor).{0,24}(?:intel|core i[3579])/i.test(req.notes ?? '')) requestedPreferences.push('Intel CPU');
   const items: BuildItems = {};
 
   const spent = () => Object.values(items).reduce<number>((sum, c) => sum + (c?.price ?? 0), 0);
@@ -270,7 +280,7 @@ export function fallbackBuild(
     if (!Number.isFinite(reserve)) continue;
 
     const cap = Math.max(0, remaining - reserve);
-    const pick = pickBest(category, catalogue, cap, items);
+    const pick = pickBest(category, catalogue, cap, items, requestedPreferences);
 
     // A build without a CPU or motherboard is not a build. If the reserve
     // pushed the cap below every option, take the cheapest one that still fits
@@ -278,7 +288,13 @@ export function fallbackBuild(
     const mandatory = category === 'cpu' || category === 'motherboard';
     if (!pick || pick.price > cap) {
       if (!mandatory) continue;
-      const affordable = purchasable(catalogue, category).find(
+      const preferred = purchasable(catalogue, category).filter((option) => {
+        if (category !== 'cpu') return true;
+        if (requestedPreferences.includes('AMD CPU')) return /amd|ryzen/i.test(`${option.brand} ${option.name}`);
+        if (requestedPreferences.includes('Intel CPU')) return /intel|core/i.test(`${option.brand} ${option.name}`) && !/pentium|celeron/i.test(option.name);
+        return true;
+      });
+      const affordable = preferred.find(
         (option) => option.price <= remaining && fitsPlatform(category, option, items),
       );
       if (!affordable || affordable.price > remaining) continue;
@@ -315,7 +331,7 @@ export function fallbackBuild(
     if (!current) continue;
 
     const headroom = req.budget - spent() + current.price;
-    const better = pickBest(category, catalogue, headroom, items);
+    const better = pickBest(category, catalogue, headroom, items, requestedPreferences);
     if (!better || better.id === current.id || better.price <= current.price) continue;
     if (spent() - current.price + better.price > req.budget) continue;
 

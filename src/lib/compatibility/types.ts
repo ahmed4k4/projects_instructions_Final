@@ -34,6 +34,8 @@ export interface CompatibilityReport {
   isCompatible: boolean;
   errors: CompatibilityIssue[];
   warnings: CompatibilityIssue[];
+  /** Checks that could not be completed because required specs/rules were absent. */
+  unverified?: CompatibilityIssue[];
   checkedRules: number;
   /** Rules skipped because one of the two components was not selected. */
   skippedRules: number;

@@ -1,30 +1,31 @@
 /**
- * Model selection tuned for low-latency interactive use and resilient fallback.
- * Gemini 3.5 Flash-Lite is the primary low-latency chat model for interactive
- * use and long-context tasks; stronger Flash models are fallback-only.
- * Model availability and quotas remain project/tier dependent, so one fallback
- * is attempted automatically after 404, 429 or 503 responses.
+ * Model selection separates low-latency chat from multi-step agent work.
+ * Smart Builder uses the quality tier (Gemini 3.8 Flash) because it must plan,
+ * call tools, validate a complete build and recover from incomplete turns.
+ * Project model access and quotas remain provider-controlled. Alternatives are
+ * tried for retired/temporarily unavailable models, but not after HTTP 429 because
+ * that usually means a quota window is exhausted rather than a broken model.
  */
 import type { GeminiModelKey } from '@/types/ai';
 
 /**
- * `chat` is used for interactive turns; `quality` for analysis where a few
- * extra seconds are acceptable (Build Doctor).
+ * `chat` is used for short interactive turns; `quality` for agent workflows
+ * and analysis where deliberate reasoning is more important than first-token latency.
  */
 export const MODEL_CANDIDATES: Record<GeminiModelKey, readonly string[]> = {
   // Google currently identifies 3.5 Flash-Lite as its fastest stable,
   // low-latency high-throughput model. It also supports a 1M input context.
   chat: ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.6-flash'],
-  // Keep the same fast model as the first choice for long structured tasks;
-  // the provider raises thinking effort to LOW for these tasks.
-  quality: ['gemini-3.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.5-flash'],
+  // Gemini 3.8 Flash is Google's stable Flash model designed for agentic
+  // workflows and function calling; 3.6 Flash / 3.5 Flash-Lite are fallbacks.
+  quality: ['gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-3.5-flash-lite'],
 };
 
 /** The model every fresh workspace starts on. */
 const DEFAULT_CHAT_MODEL = 'gemini-3.5-flash-lite';
 
-// v2 deliberately invalidates cached 3.8/3.1 selections from older releases.
-const CACHE_KEY = 'nexus:ai:model:v3';
+// v5 clears stale fallback selections; 429s are no longer treated as model failures.
+const CACHE_KEY = 'nexus:ai:model:v5';
 const PROBE_TIMEOUT_MS = 8_000;
 
 interface CacheShape {
@@ -86,30 +87,34 @@ export interface ProbeAttempt {
 }
 
 /**
- * Actively probe every candidate in order. Used by "Test connection" and as the
- * recovery path after a 404 (retired model), never during normal chat.
+ * Probe candidates in order for model availability. Stop immediately on 429 so
+ * "Test connection" does not spend extra requests after quota exhaustion.
  */
 export async function probeModels(
   key: GeminiModelKey,
-  check: (model: string) => Promise<boolean>,
-): Promise<{ modelId: string | null; attempts: ProbeAttempt[] }> {
+  check: (model: string) => Promise<boolean | 'rate_limited'>,
+): Promise<{ modelId: string | null; attempts: ProbeAttempt[]; rateLimited?: boolean }> {
   const attempts: ProbeAttempt[] = [];
 
   for (const model of MODEL_CANDIDATES[key]) {
     const started = performance.now();
-    const ok = await withTimeout(check(model), PROBE_TIMEOUT_MS);
+    const result = await withTimeout(check(model), PROBE_TIMEOUT_MS);
+    const ok = result === true;
     attempts.push({ model, ok, latencyMs: Math.round(performance.now() - started) });
     if (ok) {
       rememberModel(key, model);
       return { modelId: model, attempts };
     }
+    // A quota response applies to the project/model window; probing every
+    // alternative immediately only creates more 429s and burns requests.
+    if (result === 'rate_limited') return { modelId: null, attempts, rateLimited: true };
   }
 
   invalidateModel(key);
-  return { modelId: null, attempts };
+  return { modelId: null, attempts, rateLimited: false };
 }
 
-async function withTimeout(promise: Promise<boolean>, ms: number): Promise<boolean> {
+async function withTimeout(promise: Promise<boolean | 'rate_limited'>, ms: number): Promise<boolean | 'rate_limited'> {
   return Promise.race([
     promise.catch(() => false),
     new Promise<boolean>((resolve) => setTimeout(() => resolve(false), ms)),

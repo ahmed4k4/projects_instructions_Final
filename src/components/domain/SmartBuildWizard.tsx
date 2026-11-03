@@ -61,7 +61,8 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
 
-  const [budget, setBudget] = useState(initial?.budget ?? 75_000);
+  const [budgetInput, setBudgetInput] = useState(String(initial?.budget ?? 75_000));
+  const budget = Number(budgetInput.replace(/[^0-9]/g, ''));
   const [useCase, setUseCase] = useState<UseCase>(initial?.useCase ?? 'gaming');
   const [resolution, setResolution] = useState<string>(initial?.resolution ?? '1440p');
   const [preferences, setPreferences] = useState<string[]>(initial?.preferences ?? []);
@@ -82,8 +83,9 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
   };
 
   const submit = () => {
+    if (!Number.isFinite(budget) || budget <= 0) return;
     onSubmit({
-      budget,
+      budget: Number.isFinite(budget) && budget > 0 ? budget : 10_000,
       currency: CURRENCY,
       useCase,
       resolution: isGaming ? resolution : undefined,
@@ -161,21 +163,18 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                         id="budget"
                         type="text"
                         inputMode="numeric"
-                        value={budget}
-                        onChange={(event) => {
-                          const digits = event.target.value.replace(/[^0-9]/g, '');
-                          setBudget(digits ? Math.max(20_000, Number(digits)) : 20_000);
-                        }}
+                        value={budgetInput}
+                        onChange={(event) => setBudgetInput(event.target.value.replace(/[^0-9]/g, ''))}
                         className="w-[9.5rem] ps-7 font-mono text-sm tabular-nums"
                       />
                     </div>
                     <input
                       type="range"
-                      min={20_000}
-                      max={250_000}
+                      min={10_000}
+                      max={1_000_000}
                       step={5_000}
-                      value={Math.min(250_000, Math.max(20_000, budget))}
-                      onChange={(event) => setBudget(Number(event.target.value))}
+                      value={Math.min(1_000_000, Math.max(10_000, Number.isFinite(budget) && budget > 0 ? budget : 10_000))}
+                      onChange={(event) => setBudgetInput(event.target.value)}
                       aria-label={t('smartBuilder.budgetSlider')}
                       className="h-1.5 flex-1 min-w-[140px] cursor-pointer appearance-none rounded-full bg-surface-elevated accent-primary"
                     />
@@ -185,7 +184,7 @@ export function SmartBuildWizard({ onSubmit, busy = false, initial }: SmartBuild
                       <button
                         key={preset}
                         type="button"
-                        onClick={() => setBudget(preset)}
+                        onClick={() => setBudgetInput(String(preset))}
                         className={cn(
                           'rounded-md border px-2 py-1 font-mono text-[11px] transition-colors',
                           budget === preset

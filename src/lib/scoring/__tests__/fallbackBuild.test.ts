@@ -168,6 +168,14 @@ describe('fallbackBuild', () => {
     for (const item of build.items) expect(item.reason.length).toBeGreaterThan(10);
   });
 
+  it('respects an explicit AMD CPU preference in fallback mode', () => {
+    const build = fallbackBuild({ ...request(2000, 'programming'), preferences: ['AMD CPU'] }, catalogue);
+    const cpu = build.items.find((item) => item.category === 'cpu');
+    expect(cpu).toBeDefined();
+    const selected = catalogue.find((component) => component.id === cpu?.componentId);
+    expect(`${selected?.brand} ${selected?.name}`).toMatch(/amd|ryzen/i);
+  });
+
   it('only ever references IDs that exist in the catalogue', () => {
     const ids = new Set(catalogue.map((c) => c.id));
     const build = fallbackBuild(request(1500), catalogue);

@@ -3,7 +3,7 @@ import { ArrowUpRight, Check, LineChart, Store, TriangleAlert } from 'lucide-rea
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { RetailerLogo } from './RetailerLogo';
-import { cn, formatCurrency } from '@/lib/utils';
+import { cn, formatCurrency, formatDateShort } from '@/lib/utils';
 import { RETAILERS, type RetailerOffer } from '@/services/retailers/types';
 import type { ProductGroup } from '@/services/searchService';
 
@@ -141,21 +141,21 @@ function OfferRow({
       </td>
 
       <td className="whitespace-nowrap px-3 py-3">
-        {outOfStock ? (
-          <Badge variant="danger" className="py-0 text-[10px]">
-            {t('retail.outOfStock')}
-          </Badge>
+        {offer.stockStatus === 'in_stock' ? (
+          <Badge variant="success" title={t('retail.updatedAt', { date: formatDateShort(offer.lastScrapedAt, language) })} className="py-0 text-[10px]">{t('builder.specs.inStock')}</Badge>
+        ) : offer.stockStatus === 'limited' ? (
+          <Badge variant="warning" title={t('retail.updatedAt', { date: formatDateShort(offer.lastScrapedAt, language) })} className="py-0 text-[10px]">{t('builder.specs.limited')}</Badge>
+        ) : offer.stockStatus === 'out_of_stock' ? (
+          <Badge variant="danger" title={t('retail.updatedAt', { date: formatDateShort(offer.lastScrapedAt, language) })} className="py-0 text-[10px]">{t('retail.outOfStock')}</Badge>
         ) : (
-          <Badge variant="success" className="py-0 text-[10px]">
-            {t('builder.specs.inStock')}
-          </Badge>
+          <Badge variant="outline" title={t('retail.updatedAt', { date: formatDateShort(offer.lastScrapedAt, language) })} className="py-0 text-[10px]">{t('builder.specs.stockUnknown')}</Badge>
         )}
       </td>
 
       <td className="px-3 py-3 text-end">
         <Button asChild size="sm" variant={isCheapest ? 'primary' : 'outline'}>
           <a href={offer.productUrl} target="_blank" rel="noopener noreferrer nofollow">
-            {outOfStock ? t('retail.visit') : t('retail.buy')}
+            {offer.stockStatus === 'in_stock' ? t('retail.buy') : t('retail.visit')}
             <ArrowUpRight className="size-3.5 rtl:-scale-x-100" />
           </a>
         </Button>

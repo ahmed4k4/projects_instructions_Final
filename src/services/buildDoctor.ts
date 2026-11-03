@@ -284,19 +284,12 @@ export async function suggestUpgrades(
 
 async function loadRules(): Promise<CompatibilityRule[]> {
   try {
-    const rows = await getCompatibilityRules();
-    return rows.map((r) => ({
-      ruleKey: r.rule_key,
-      categoryA: r.category_a,
-      categoryB: r.category_b,
-      ruleType: r.rule_type,
-      specPathA: r.spec_path_a,
-      specPathB: r.spec_path_b,
-      config: r.config as Record<string, unknown>,
-      message: r.message,
-      severity: r.severity,
-    }));
-  } catch {
+    // getCompatibilityRules normalises Supabase snake_case rows into the
+    // domain model already. Do not map it a second time: CompatibilityRule
+    // deliberately exposes ruleKey/categoryA/ruleType/specPathA/specPathB.
+    return await getCompatibilityRules();
+  } catch (error) {
+    console.warn('[Build Doctor] Could not load compatibility rules:', error);
     return [];
   }
 }

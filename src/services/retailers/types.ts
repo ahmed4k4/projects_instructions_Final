@@ -115,7 +115,7 @@ export interface PriceComparison {
   /** Cheapest in-stock offer; falls back to cheapest overall. */
   best: RetailerOffer | null;
   offers: RetailerOffer[];
-  /** Savings vs. the most expensive in-stock offer, in EGP. */
+  /** Savings between confirmed in-stock offers from at least two retailers, in EGP. */
   savingsEgp: number;
   lastScrapedAt: string | null;
 }

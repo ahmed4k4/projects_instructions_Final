@@ -68,6 +68,8 @@ read-only fallback.
 | `SUPABASE_URL` | **Vercel server environment** | AI auth | Supabase project URL used by the server to validate sessions |
 | `SUPABASE_ANON_KEY` | **Vercel server environment** | AI guest/account quota RPC | Public anon key used by server-side quota RPCs |
 | `AI_RATE_LIMIT_SALT` | **Vercel server environment** | Guest AI quota | Random server-only salt used to hash guest IPs |
+| `SUPABASE_SERVICE_ROLE_KEY` | **Vercel server environment only** | Username/password signup | Supabase service-role secret; never expose with a `VITE_` prefix |
+| `AUTH_RATE_LIMIT_SALT` | **Vercel server environment** | Signup abuse protection | Optional random server-only salt |
 
 **Guest access and username accounts**
 
@@ -285,7 +287,7 @@ worker is refreshed by the scheduled GitHub Actions workflow in
 ```
 retailer_products / public/data/retailer_snapshot.json
   → aggregator      category from the store's URL collection, specs inferred from the model
-  → groupListings   one entry per SKU — the cheapest in-stock offer wins
+  → groupListings   one entry per SKU — confirmed fresh in-stock offers rank first; unknown stock is never guessed
   → buildCatalogue  PCComponent + store links + relative performance tier
   → useComponents   the single catalogue reader for the whole app
 ```
@@ -527,6 +529,6 @@ image tag forgets it.
 | `/api/ai/config` → 404 | `api/` not deployed, or `/api/*` caught by the SPA rewrite | check `vercel.json` (`/((?!api/).*)`) and the build output |
 | config → `ok: false` | key missing for this environment | add it to all three environments and redeploy |
 | AI answers 401 | invalid/expired optional account token | sign out or refresh the session; guest AI remains available |
-| AI answers 503 | server variables or quota migrations are missing | set `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `AI_RATE_LIMIT_SALT`; apply migrations 013 and 014, then redeploy |
+| AI answers 503 | server variables or quota migrations are missing | set `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `AI_RATE_LIMIT_SALT`; apply migrations 013, 014 and 015, set `SUPABASE_SERVICE_ROLE_KEY` server-side, then redeploy |
 | hard refresh on `/search` → 404 | SPA rewrite missing on the host | see the host table above |
 | broken product images | Referer-blocked hotlink | `referrerPolicy="no-referrer"` (already applied) |

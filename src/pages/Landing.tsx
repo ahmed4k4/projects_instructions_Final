@@ -182,7 +182,7 @@ export default function Landing() {
       catalogue.find(
         (component) =>
           component.category === category &&
-          component.stockStatus !== 'out_of_stock' &&
+          component.stockStatus === 'in_stock' &&
           !ACCESSORY.test(component.name),
       ),
     ).filter((component): component is NonNullable<typeof component> => Boolean(component));

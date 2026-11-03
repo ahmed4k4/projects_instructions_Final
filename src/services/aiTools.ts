@@ -13,8 +13,10 @@
 import type { ComponentCategory, PCComponent } from '@/types/components';
 import type { ToolCall, ToolTraceEntry } from '@/types/ai';
 import { evaluateCompatibility } from '@/lib/compatibility/engine';
+import { ESSENTIAL_CATEGORIES } from '@/lib/compatibility/types';
 import type { BuildItems, CompatibilityRule } from '@/lib/compatibility/types';
 import { calculateBuildScore } from '@/lib/scoring/buildScore';
+import { selectBudgetBalancedCandidates } from '@/lib/scoring/candidateShortlist';
 import type { UseCase } from '@/types/build';
 import { loadCatalogueForAI } from '@/hooks/useComponents';
 import { getCompatibilityRules } from './componentsService';
@@ -40,6 +42,7 @@ export interface CompactComponent {
   perf: number | null;
   watts: number | null;
   specs: Record<string, unknown>;
+  stockStatus: PCComponent['stockStatus'];
 }
 
 function compact(c: PCComponent): CompactComponent {
@@ -52,6 +55,7 @@ function compact(c: PCComponent): CompactComponent {
     perf: c.performanceScore,
     watts: c.powerDrawWatts,
     specs: c.specs,
+    stockStatus: c.stockStatus,
   };
 }
 
@@ -60,6 +64,8 @@ export class ToolExecutor {
   private readonly seen = new Map<string, PCComponent>();
   private rulesCache: CompatibilityRule[] | null = null;
   private readonly catalogueCache = new Map<string, PCComponent[]>();
+  /** Most recent full selections explicitly checked by the deterministic engine. */
+  private readonly validatedSelections: string[][] = [];
 
   readonly trace: ToolTraceEntry[] = [];
 
@@ -82,22 +88,18 @@ export class ToolExecutor {
   private async rules(): Promise<CompatibilityRule[]> {
     if (this.rulesCache) return this.rulesCache;
     try {
-      const rows = await getCompatibilityRules();
-      this.rulesCache = rows.map((r) => ({
-        ruleKey: r.rule_key,
-        categoryA: r.category_a,
-        categoryB: r.category_b,
-        ruleType: r.rule_type,
-        specPathA: r.spec_path_a,
-        specPathB: r.spec_path_b,
-        config: r.config as Record<string, unknown>,
-        message: r.message,
-        severity: r.severity,
-      }));
+      this.rulesCache = await getCompatibilityRules();
     } catch {
       this.rulesCache = [];
     }
     return this.rulesCache;
+  }
+
+  /** Run the same deterministic compatibility rules used by the Builder. */
+  async compatibilityErrors(ids: string[]): Promise<string[]> {
+    const components = await this.resolve(ids);
+    const report = evaluateCompatibility(this.toItems(components), await this.rules());
+    return report.errors.map((error) => error.message);
   }
 
   /** Resolve IDs to components from the memoised catalogue. */
@@ -113,6 +115,62 @@ export class ToolExecutor {
     const items: BuildItems = {};
     for (const c of components) items[c.category] = c;
     return items;
+  }
+
+  /**
+   * Return latest complete, conflict-free candidate selections. These are used
+   * only as a final recovery when Gemini has selected and checked a full build
+   * but failed to issue the terminal finalize_build call.
+   */
+  getValidatedSelections(): string[][] {
+    return [...this.validatedSelections].reverse().map((ids) => [...ids]);
+  }
+
+  private rememberValidatedSelection(ids: string[], components: PCComponent[], hasErrors: boolean): void {
+    if (hasErrors || ids.length < ESSENTIAL_CATEGORIES.length || components.length !== ids.length) return;
+    if (new Set(ids).size !== ids.length) return;
+    const categories = new Set(components.map((component) => component.category));
+    if (ESSENTIAL_CATEGORIES.some((category) => !categories.has(category))) return;
+    if (components.some((component) => !this.seen.has(component.id))) return;
+    const signature = [...ids].sort().join('|');
+    if (this.validatedSelections.some((candidate) => [...candidate].sort().join('|') === signature)) return;
+    this.validatedSelections.push([...ids]);
+    if (this.validatedSelections.length > 8) this.validatedSelections.shift();
+  }
+
+  /** True after at least one real catalogue component was exposed to the model. */
+  hasSeenAnyComponents(): boolean {
+    return this.seen.size > 0;
+  }
+
+  getSeenComponentCount(): number {
+    return this.seen.size;
+  }
+
+  getSeenCategoryCounts(): Partial<Record<ComponentCategory, number>> {
+    const counts: Partial<Record<ComponentCategory, number>> = {};
+    for (const component of this.seen.values()) counts[component.category] = (counts[component.category] ?? 0) + 1;
+    return counts;
+  }
+
+  /**
+   * Load a bounded, real and budget-diverse catalogue shortlist for every
+   * category before AI selection. It includes affordable, high-performance and
+   * best-value candidates, so low-budget builds do not see only expensive parts.
+   * IDs in this snapshot are registered in `seen` and the same server-side
+   * validation still rejects invented IDs.
+   */
+  async getFinalisationSnapshot(budget: number, perCategory = 12): Promise<Record<string, CompactComponent[]>> {
+    const entries = await Promise.all(CATEGORIES.map(async (category) => {
+      const rows = selectBudgetBalancedCandidates(await this.catalogue(category), budget, perCategory).map(compact);
+      return [category, rows] as const;
+    }));
+    return Object.fromEntries(entries);
+  }
+
+  /** Resolve one ID already exposed to the agent without another catalogue read. */
+  getComponent(id: string): PCComponent | undefined {
+    return this.seen.get(id);
   }
 
   /** True when the ID was exposed to the model through a tool result. */
@@ -142,12 +200,13 @@ export class ToolExecutor {
         const max = typeof args.budgetMax === 'number' ? args.budgetMax : null;
         const minPerf = typeof args.minPerfScore === 'number' ? args.minPerfScore : null;
 
-        const rows = (await this.catalogue(category))
-          .filter((c) => (max === null ? true : c.price <= max))
-          .filter((c) => (minPerf === null ? true : (c.performanceScore ?? 0) >= minPerf))
-          .sort((a, b) => (b.performanceScore ?? 0) - (a.performanceScore ?? 0))
-          .slice(0, 12)
-          .map(compact);
+        const candidates = (await this.catalogue(category))
+          .filter((component) => (minPerf === null ? true : (component.performanceScore ?? 0) >= minPerf));
+        const rows = selectBudgetBalancedCandidates(
+          candidates,
+          max ?? Number.MAX_SAFE_INTEGER,
+          12,
+        ).map(compact);
 
         result = { category, count: rows.length, components: rows };
         summary = `Found ${rows.length} ${category.toUpperCase()} option(s)`;
@@ -168,14 +227,16 @@ export class ToolExecutor {
         const ids = Array.isArray(args.componentIds) ? args.componentIds.map(String) : [];
         const components = await this.resolve(ids);
         const report = evaluateCompatibility(this.toItems(components), await this.rules());
+        this.rememberValidatedSelection(ids, components, report.errors.length > 0);
         result = {
           isCompatible: report.isCompatible,
           errors: report.errors.map((e) => ({ rule: e.ruleKey, message: e.message })),
-          warnings: report.warnings.map((w) => ({ rule: w.ruleKey, message: w.message })),
+          warnings: [...report.warnings, ...(report.unverified ?? [])].map((w) => ({ rule: w.ruleKey, message: w.message })),
           checkedRules: report.checkedRules,
+          unverifiedRules: report.unverified?.length ?? 0,
         };
         summary = report.isCompatible
-          ? `Compatible (${report.warnings.length} warning${report.warnings.length === 1 ? '' : 's'})`
+          ? `No known conflicts (${report.warnings.length + (report.unverified?.length ?? 0)} warning/check(s) to review)`
           : `${report.errors.length} compatibility error(s)`;
         break;
       }
@@ -186,6 +247,7 @@ export class ToolExecutor {
         const components = await this.resolve(ids);
         const items = this.toItems(components);
         const report = evaluateCompatibility(items, await this.rules());
+        this.rememberValidatedSelection(ids, components, report.errors.length > 0);
         const totalPrice = components.reduce((sum, c) => sum + c.price, 0);
         const totalWatts = components.reduce((sum, c) => sum + (c.powerDrawWatts ?? 0), 0);
         const score = calculateBuildScore({ items, compatibility: report, totalPrice, totalWatts, useCase });

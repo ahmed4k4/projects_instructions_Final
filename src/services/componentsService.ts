@@ -11,16 +11,34 @@
  * `getCompatibilityRules` stays. The rule set is not part of the catalogue: it is
  * data the deterministic engine evaluates, and it lives in the same schema.
  */
-import type { Database } from '@/types/database';
+import type { CompatibilityRule } from '@/lib/compatibility/types';
+import { mergeCompatibilityRules } from '@/lib/compatibility/defaultRules';
 import { supabase } from './supabaseClient';
 
-type RuleRow = Database['public']['Tables']['compatibility_rules']['Row'];
-
 /** The rule set the compatibility engine evaluates. */
-export async function getCompatibilityRules(): Promise<RuleRow[]> {
-  if (!supabase) return [];
+export async function getCompatibilityRules(): Promise<CompatibilityRule[]> {
+  if (!supabase) return mergeCompatibilityRules([]);
 
-  const { data, error } = await supabase.from('compatibility_rules').select('*').order('rule_key');
-  if (error) throw new Error(`Failed to load compatibility rules: ${error.message}`);
-  return data ?? [];
+  try {
+    const { data, error } = await supabase.from('compatibility_rules').select('*').order('rule_key');
+    if (error) {
+      console.warn('[Compatibility] Using bundled rules because the database read failed:', error.message);
+      return mergeCompatibilityRules([]);
+    }
+    const remote: CompatibilityRule[] = (data ?? []).map((row) => ({
+      ruleKey: row.rule_key,
+      categoryA: row.category_a,
+      categoryB: row.category_b,
+      ruleType: row.rule_type,
+      specPathA: row.spec_path_a,
+      specPathB: row.spec_path_b,
+      config: (row.config ?? {}) as Record<string, unknown>,
+      message: row.message,
+      severity: row.severity,
+    }));
+    return mergeCompatibilityRules(remote);
+  } catch (error) {
+    console.warn('[Compatibility] Using bundled rules after an unexpected database error:', error);
+    return mergeCompatibilityRules([]);
+  }
 }

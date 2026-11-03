@@ -172,6 +172,7 @@ export async function handleAiRoute(
       // SSE must not be buffered or compressed away by a CDN or a proxy.
       'Cache-Control': isStream ? 'no-cache, no-transform' : NO_STORE,
       'X-AI-Upstream': 'google',
+      ...(upstream.headers.get('retry-after') ? { 'Retry-After': upstream.headers.get('retry-after')! } : {}),
       ...(isStream ? { 'X-Accel-Buffering': 'no' } : {}),
     },
     body: upstream.body,

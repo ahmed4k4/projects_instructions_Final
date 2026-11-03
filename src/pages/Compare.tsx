@@ -33,7 +33,7 @@ export default function Compare() {
 
   // `rankOffers` sorts out-of-stock last, so the first offer is unavailable only
   // when every offer is.
-  const bestAvailable = group ? group.best.stockStatus !== 'out_of_stock' : false;
+  const bestAvailable = group?.best.stockStatus === 'in_stock';
 
   if (isLoading) {
     return (
@@ -136,9 +136,11 @@ export default function Compare() {
                       {RETAILERS[group.best.retailerId]?.name ?? group.best.retailerId}
                     </span>
                     {group.best.stockStatus === 'out_of_stock' ? (
-                      <Badge variant="danger" className="py-0 text-[10px]">
-                        {t('retail.outOfStock')}
-                      </Badge>
+                      <Badge variant="danger" className="py-0 text-[10px]">{t('retail.outOfStock')}</Badge>
+                    ) : group.best.stockStatus === 'limited' ? (
+                      <Badge variant="warning" className="py-0 text-[10px]">{t('builder.specs.limited')}</Badge>
+                    ) : group.best.stockStatus === 'unknown' ? (
+                      <Badge variant="outline" className="py-0 text-[10px]">{t('builder.specs.stockUnknown')}</Badge>
                     ) : null}
                     <span className="text-[11px] text-muted-foreground">
                       · {t('search.updatedAt', { when: formatRelativeShort(group.newestScrapedAt, t) })}
@@ -179,9 +181,13 @@ export default function Compare() {
                   <li key={offer.id} className="flex items-center gap-2 text-[11.5px] text-muted-foreground">
                     <RetailerLogo retailerId={offer.retailerId} size="sm" />
                     <span className="min-w-0 flex-1 truncate">
-                      {offer.stockStatus === 'out_of_stock'
-                        ? t('retail.outOfStock')
-                        : t('builder.specs.inStock')}
+                      {offer.stockStatus === 'in_stock'
+                        ? t('builder.specs.inStock')
+                        : offer.stockStatus === 'limited'
+                          ? t('builder.specs.limited')
+                          : offer.stockStatus === 'out_of_stock'
+                            ? t('retail.outOfStock')
+                            : t('builder.specs.stockUnknown')}
                     </span>
                     <span className="shrink-0 font-mono tabular-nums" dir="auto">
                       {formatCurrency(offer.priceEgp)}

@@ -37,7 +37,13 @@ export function useAuth(): AuthState & {
   const signInWithPassword = useCallback(async (username: string, password: string) => {
     if (!supabase) return { error: 'Authentication is not configured.' };
     const { error } = await supabase.auth.signInWithPassword({ email: usernameEmail(username), password });
-    return { error: error?.message ?? null };
+    if (!error) return { error: null };
+    const message = /invalid login credentials|invalid_credentials/i.test(error.message)
+      ? 'اسم المستخدم أو كلمة المرور غير صحيحة.'
+      : /email not confirmed/i.test(error.message)
+        ? 'الحساب غير مفعّل. تواصل مع مسؤول الموقع.'
+        : error.message;
+    return { error: message };
   }, []);
 
   const signUpWithPassword = useCallback(async (username: string, password: string) => {
@@ -46,14 +52,36 @@ export function useAuth(): AuthState & {
     if (!/^[a-z0-9][a-z0-9_.-]{2,23}$/.test(normalized)) {
       return { error: 'Username must be 3–24 characters and use English letters, numbers, dot, dash or underscore.', needsConfirmation: false };
     }
-    const { data, error } = await supabase.auth.signUp({
-      email: usernameEmail(normalized),
-      password,
-      options: { data: { username: normalized, login_method: 'username_password' } },
+    // Create users through the server-only Supabase Admin API. The server marks
+    // the synthetic .invalid address as confirmed, so Auth never sends email.
+    let signupResponse: Response;
+    try {
+      signupResponse = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: normalized, password }),
+      });
+    } catch {
+      return { error: 'تعذر الاتصال بخدمة إنشاء الحسابات. حاول مرة أخرى.', needsConfirmation: false };
+    }
+    const signupResult = await signupResponse.json().catch(() => ({})) as {
+      error?: string;
+      session?: { access_token?: string; refresh_token?: string };
+    };
+    if (!signupResponse.ok) {
+      return { error: signupResult.error ?? 'تعذر إنشاء الحساب.', needsConfirmation: false };
+    }
+
+    // The server returns the session created by a password grant. Persist it
+    // through Supabase SDK so auth listeners and protected features update.
+    if (!signupResult.session?.access_token || !signupResult.session.refresh_token) {
+      return { error: 'تم إنشاء الحساب، لكن تعذر استلام جلسة الدخول. جرّب تسجيل الدخول بنفس البيانات.', needsConfirmation: false };
+    }
+    const { error: sessionError } = await supabase.auth.setSession({
+      access_token: signupResult.session.access_token,
+      refresh_token: signupResult.session.refresh_token,
     });
-    // This app uses non-deliverable .invalid aliases. Supabase email confirmation
-    // must be disabled so signup does not try to send a message to that alias.
-    return { error: error?.message ?? null, needsConfirmation: !error && !data.session };
+    return { error: sessionError?.message ?? null, needsConfirmation: false };
   }, []);
 
   const signOut = useCallback(async () => { if (supabase) await supabase.auth.signOut(); }, []);

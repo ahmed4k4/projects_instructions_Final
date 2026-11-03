@@ -8,7 +8,7 @@
  * Everything above this layer (agents, prompts, UI) speaks `AIProvider` and
  * never sees a Gemini payload.
  */
-import type { GeminiContentPart, ToolCall, ToolDeclaration } from '@/types/ai';
+import type { GeminiContentPart, GeminiModelKey, ToolCall, ToolConfig, ToolDeclaration } from '@/types/ai';
 
 export type ProviderId = 'gemini';
 
@@ -30,7 +30,10 @@ export interface ChatMessage {
 
 export interface ChatRequest {
   messages: ChatMessage[];
+  /** Explicit model tier; long agent workflows must not be downgraded by token heuristics. */
+  model?: GeminiModelKey;
   tools?: ToolDeclaration[];
+  toolConfig?: ToolConfig;
   temperature?: number;
   /** Gemini 3.x reasoning effort. MINIMAL is reserved for latency-sensitive chat. */
   thinkingLevel?: 'MINIMAL' | 'LOW' | 'MEDIUM' | 'HIGH';

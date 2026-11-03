@@ -37,6 +37,7 @@ import { inferSpecs } from '@/lib/specInference';
 import { estimatePerformanceScore } from '@/lib/performanceTier';
 import { extractBrand } from '@/lib/brand';
 import { RETAILERS, type RetailerId, type RetailerOffer } from '@/services/retailers/types';
+import { rankOffers } from '@/lib/offerRanking';
 
 /** A listing's per-retailer offers, cheapest first (see `offersFor`). */
 export interface ComponentProvenance {
@@ -81,9 +82,17 @@ const ESSENTIAL_BY_CATEGORY: Record<ComponentCategory, boolean> = {
 /** Categories in the list above, derived so the two can never disagree. */
 export const ESSENTIAL_CATEGORIES = CATEGORIES.filter((category) => ESSENTIAL_BY_CATEGORY[category]);
 
-/** A group whose best offer is out of stock everywhere. */
-function anyInStock(group: ProductGroup): boolean {
-  return group.offers.some((offer) => offer.stockStatus === 'in_stock');
+/**
+ * Preserve what retailers actually reported. `unknown` is not the same as
+ * `out_of_stock`: if no retailer published a stock state, the UI must not guess.
+ */
+function aggregateStockStatus(offers: RetailerOffer[]): PCComponent['stockStatus'] {
+  if (offers.some((offer) => offer.stockStatus === 'in_stock')) return 'in_stock';
+  if (offers.some((offer) => offer.stockStatus === 'limited')) return 'limited';
+  if (offers.length > 0 && offers.every((offer) => offer.stockStatus === 'out_of_stock')) {
+    return 'out_of_stock';
+  }
+  return 'unknown';
 }
 
 /**
@@ -96,9 +105,11 @@ export function groupToComponent(group: ProductGroup): PCComponent | null {
   const category = group.category;
   if (!category || !CATEGORIES.includes(category)) return null;
 
-  const priced = group.offers.filter((offer) => !offer.priceIsPlaceholder && offer.priceEgp > 0);
+  const priced = rankOffers(group.offers.filter((offer) => !offer.priceIsPlaceholder && offer.priceEgp > 0));
   if (priced.length === 0) return null;
 
+  // Use the same canonical retailer ranking as search and price comparison:
+  // confirmed in-stock first, then limited, unknown, and out-of-stock.
   const best = priced[0]!;
   const specs = { ...(group.best.specs ?? {}), ...inferSpecs({ name: group.name, category }) };
 
@@ -106,9 +117,11 @@ export function groupToComponent(group: ProductGroup): PCComponent | null {
     store: RETAILERS[offer.retailerId]?.name ?? offer.retailerId,
     url: offer.productUrl,
     price: offer.priceEgp,
+    stockStatus: offer.stockStatus,
+    stockUpdatedAt: offer.lastScrapedAt,
   }));
 
-  const inStock = anyInStock(group);
+  const stockStatus = aggregateStockStatus(priced);
   const brand = extractBrand(group.name) ?? group.name.split(' ')[0] ?? '';
 
   return {
@@ -121,7 +134,7 @@ export function groupToComponent(group: ProductGroup): PCComponent | null {
     specs,
     price: best.priceEgp,
     currency: 'EGP',
-    stockStatus: inStock ? 'in_stock' : 'out_of_stock',
+    stockStatus,
     storeLinks,
     performanceScore: estimatePerformanceScore(group.name, category),
     powerDrawWatts: typeof specs.tdp === 'number' ? specs.tdp : null,
@@ -149,23 +162,23 @@ export function offersFor(component: PCComponent): RetailerOffer[] {
       category: component.category,
       priceEgp: link.price,
       originalPriceEgp: null,
-      stockStatus: component.stockStatus === 'out_of_stock' ? 'out_of_stock' : 'in_stock',
+      // Never turn an unknown retailer response into a positive stock claim.
+      stockStatus: link.stockStatus ?? component.stockStatus,
       productUrl: link.url,
       imageUrl: component.imageUrl,
       matchedComponentId: component.id,
       matchConfidence: null,
-      lastScrapedAt: component.updatedAt,
+      lastScrapedAt: link.stockUpdatedAt ?? component.updatedAt,
     };
   });
-  return offers.sort((a, b) => a.priceEgp - b.priceEgp);
+  return rankOffers(offers);
 }
 
 /**
  * Build the catalogue for the Builder.
  *
- * One entry per SKU, cheapest first within a category, so the default view is
- * "what can I buy for this part, cheapest first" rather than an arbitrary page
- * of listings.
+ * One entry per SKU. Confirmed available listings rank first, followed by
+ * limited, unconfirmed and explicitly unavailable offers; price breaks ties.
  */
 export function buildCatalogue(groups: ProductGroup[]): {
   components: PCComponent[];
@@ -191,7 +204,8 @@ export function buildCatalogue(groups: ProductGroup[]): {
     const categoryOrder = CATEGORIES.indexOf(a.category) - CATEGORIES.indexOf(b.category);
     if (categoryOrder !== 0) return categoryOrder;
     // In-stock parts first: a build that cannot be bought is not a build.
-    if (a.stockStatus !== b.stockStatus) return a.stockStatus === 'in_stock' ? -1 : 1;
+    const stockRank = { in_stock: 0, limited: 1, unknown: 2, out_of_stock: 3 } as const;
+    if (a.stockStatus !== b.stockStatus) return stockRank[a.stockStatus] - stockRank[b.stockStatus];
     return a.price - b.price;
   });
 

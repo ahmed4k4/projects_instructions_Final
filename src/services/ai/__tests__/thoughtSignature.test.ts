@@ -76,6 +76,43 @@ describe('thought_signature preservation', () => {
       id: 'call_1',
     });
   });
+
+  it('preserves IDs for parallel calls that share the same function name', () => {
+    const turns = [
+      {
+        role: 'model',
+        parts: [
+          { functionCall: { name: 'list_components', args: { category: 'cpu' }, id: 'list_cpu' }, thoughtSignature: SIGNATURE },
+          { functionCall: { name: 'list_components', args: { category: 'gpu' }, id: 'list_gpu' }, thoughtSignature: SIGNATURE },
+        ],
+      },
+      {
+        role: 'user',
+        parts: [
+          { functionResponse: { name: 'list_components', response: { category: 'cpu' }, id: 'list_cpu' } },
+          { functionResponse: { name: 'list_components', response: { category: 'gpu' }, id: 'list_gpu' } },
+        ],
+      },
+    ];
+
+    const messages = toNeutralMessages(turns as never);
+    const toolMessages = messages.filter((message) => message.role === 'tool');
+    expect(toolMessages).toHaveLength(1);
+    const { contents } = toGeminiContents(messages);
+    expect(contents[1]?.role).toBe('user');
+    expect(contents[1]?.parts).toHaveLength(2);
+    expect(partAt(contents[1], 0).functionResponse?.id).toBe('list_cpu');
+    expect(partAt(contents[1], 1).functionResponse?.id).toBe('list_gpu');
+  });
+
+  it('does not manufacture an ID when Gemini omitted the original call ID', () => {
+    const messages = toNeutralMessages([
+      { role: 'user', parts: [{ functionResponse: { name: 'list_components', response: { ok: true } } }] },
+    ] as never);
+    expect(messages[0]?.toolCallId).toBeUndefined();
+    const { contents } = toGeminiContents(messages);
+    expect(partAt(contents[0], 0).functionResponse).not.toHaveProperty('id');
+  });
 });
 
 describe('streamed tool-call assembly', () => {

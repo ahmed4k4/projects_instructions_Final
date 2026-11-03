@@ -21,7 +21,7 @@ const env = Object.fromEntries(
 );
 
 const KEY = env.GEMINI_API_KEY;
-const MODEL = 'gemini-3.5-flash-lite';
+const MODEL = 'gemini-3.8-flash';
 const BASE = 'https://generativelanguage.googleapis.com/v1beta';
 
 const tools = [
@@ -99,7 +99,7 @@ async function send(contents) {
       systemInstruction: {
         parts: [{ text: 'You are a PC building assistant. Use tools. Be brief.' }],
       },
-      generationConfig: { temperature: 0.4, maxOutputTokens: 512 },
+      generationConfig: { thinkingConfig: { thinkingLevel: 'MEDIUM' }, maxOutputTokens: 2048 },
     }),
   });
   const json = await res.json();
@@ -151,6 +151,7 @@ for (let i = 0; i < 6; i += 1) {
       functionResponse: {
         name: c.functionCall.name,
         response: executeTool(c.functionCall.name, c.functionCall.args ?? {}),
+        id: c.functionCall.id,
       },
     })),
   });

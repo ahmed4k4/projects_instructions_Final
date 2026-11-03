@@ -235,6 +235,16 @@ describe('missing components', () => {
     const report = evaluateCompatibility(build({ cpu: cpuLga() }), RULES);
     expect(report.errors).toHaveLength(0);
   });
+
+  it('marks a compatibility check unverified when required technical data is missing', () => {
+    const cpu = cpuAm5();
+    cpu.specs = { ...cpu.specs, socket: undefined };
+    const report = evaluateCompatibility(build({ cpu, motherboard: mbAm5() }), RULES);
+
+    expect(report.errors).toHaveLength(0);
+    expect(report.unverified).toHaveLength(1);
+    expect(report.unverified?.[0]?.ruleKey).toBe('unverified');
+  });
 });
 
 describe('multi-error builds', () => {

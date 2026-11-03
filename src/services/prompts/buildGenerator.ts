@@ -90,7 +90,7 @@ export function buildTools(): ToolDeclaration[] {
     {
       name: 'finalize_build',
       description:
-        'Submit the finished build. Every component must have come from list_components. Include a short, specific reason for each part.',
+        'Submit the finished build. Every component must have an ID present in a list_components result or the authoritative recovery catalogue snapshot. Never invent IDs; include a short, specific reason for each part.',
       parameters: {
         type: 'OBJECT',
         properties: {
@@ -142,14 +142,14 @@ export function buildSystemInstruction(locale: PromptLocale = 'en'): string {
 ${languageInstruction(locale)}
 
 HARD RULES — never break these:
-1. You may only recommend components that you received from the list_components or get_component_details tools. NEVER invent a component, a model name or an ID.
+1. You may only recommend components received from list_components/get_component_details or the server's authoritative recovery catalogue snapshot. NEVER invent a component, model name or ID. Never select a component marked out_of_stock.
 2. Before finalising, call check_compatibility with every chosen ID. If it returns errors, replace the offending parts and re-check. Warnings are acceptable if you explain them.
 3. Call get_build_score to compare candidate builds. Aim for the highest score within budget; do not exceed the budget.
 4. Prefer current-generation parts and realistic pairings. Do not pair a flagship GPU with a budget CPU unless the user explicitly asked for it.
 5. Keep every reason specific and quantitative ("24 GB VRAM covers 4K texture packs", not "good GPU").
 6. Finish by calling finalize_build exactly once.
 
-Be efficient: batch your list_components calls, do not re-fetch the same category, and stop as soon as you have a strong build. You have at most 8 tool rounds.`;
+Be efficient: batch list_components calls for all required categories early, do not re-fetch the same category, then check compatibility and score before finalising. You have at most 8 tool rounds. A final response without a finalize_build tool call is invalid.`;
 }
 
 /** The user turn that starts the agent. */
@@ -164,7 +164,9 @@ export function buildUserInstruction(req: AIBuildRequest): string {
 
   if (req.resolution) lines.push(`Target resolution: ${req.resolution}`);
   if (req.performanceTarget) lines.push(`Performance target: ${req.performanceTarget}`);
-  if (req.preferences?.length) lines.push(`Preferences: ${req.preferences.join(', ')}`);
+  if (req.preferences?.length) lines.push(`Preferences (MUST be respected): ${req.preferences.join(', ')}`);
+  if (req.preferences?.includes('AMD CPU') || /(?:amd|ryzen).{0,24}(?:cpu|processor)|(?:cpu|processor).{0,24}(?:amd|ryzen)/i.test(req.notes ?? '')) lines.push('CPU brand constraint: choose an AMD Ryzen processor only. Do NOT choose Intel, Pentium, Celeron or any other Intel CPU.');
+  if (req.preferences?.includes('Intel CPU') || /(?:intel|core i[3579]).{0,24}(?:cpu|processor)|(?:cpu|processor).{0,24}(?:intel|core i[3579])/i.test(req.notes ?? '')) lines.push('CPU brand constraint: choose an Intel Core processor only. Do NOT choose AMD, Pentium or Celeron unless the user explicitly asks for those tiers.');
   if (req.notes?.trim()) lines.push(`Additional notes: ${req.notes.trim()}`);
 
   lines.push(

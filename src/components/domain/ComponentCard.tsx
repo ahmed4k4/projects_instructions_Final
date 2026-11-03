@@ -2,12 +2,13 @@ import { Check, Plus, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import type { PCComponent } from '@/types/components';
-import { cn, formatCurrency, formatSpecValue, formatWatts } from '@/lib/utils';
+import { cn, formatCurrency, formatDateShort, formatSpecValue, formatWatts } from '@/lib/utils';
 import { staggerItem } from '@/lib/motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ComponentName } from '@/components/shared/ComponentName';
 import { RetailerLogo } from '@/components/retail/RetailerLogo';
+import { CompatibilityBadge } from '@/components/domain/CompatibilityBadge';
 import type { RetailerId } from '@/services/retailers/types';
 import { CategoryIcon } from './CategoryIcon';
 
@@ -94,11 +95,15 @@ interface ComponentCardProps {
   /** Cheapest live Egyptian retailer offer for this part, when one exists. */
   livePrice?: { bestPriceEgp: number; retailerId: RetailerId; url: string; count: number } | null;
   onCompare?: (component: PCComponent) => void;
+  compatibilityStatus?: 'compatible' | 'incompatible' | 'unverified' | 'review';
 }
 
-export function ComponentCard({ component, selected, onSelect, onRemove, livePrice, onCompare }: ComponentCardProps) {
-  const { t } = useTranslation();
+export function ComponentCard({ component, selected, onSelect, onRemove, livePrice, onCompare, compatibilityStatus }: ComponentCardProps) {
+  const { t, i18n } = useTranslation();
   const outOfStock = component.stockStatus === 'out_of_stock';
+  const stockSnapshot = component.storeLinks.find((link) => link.stockStatus === component.stockStatus && link.stockUpdatedAt)?.stockUpdatedAt
+    ?? component.updatedAt;
+  const stockDate = stockSnapshot ? formatDateShort(stockSnapshot, i18n.language) : '';
 
   return (
     <motion.article
@@ -117,7 +122,7 @@ export function ComponentCard({ component, selected, onSelect, onRemove, livePri
 
       <header className="flex items-start justify-between gap-3">
         <CategoryIcon category={component.category} />
-        <div className="flex flex-col items-end gap-1.5">
+        <div className="flex max-w-[72%] flex-wrap items-center justify-end gap-1.5">
           {component.performanceScore !== null && (
             <span
               className="font-mono text-xs text-muted-foreground"
@@ -126,13 +131,32 @@ export function ComponentCard({ component, selected, onSelect, onRemove, livePri
               {t('builder.specs.score', { value: component.performanceScore })}
             </span>
           )}
-          {outOfStock ? (
-            <Badge variant="danger">{t('builder.specs.outOfStock')}</Badge>
+          {component.stockStatus === 'in_stock' ? (
+            <Badge variant="success" title={t('builder.specs.stockAsOf', { date: stockDate })}>
+              {t('builder.specs.inStock')}
+            </Badge>
           ) : component.stockStatus === 'limited' ? (
-            <Badge variant="warning">{t('builder.specs.limited')}</Badge>
+            <Badge variant="warning" title={t('builder.specs.stockAsOf', { date: stockDate })}>
+              {t('builder.specs.limited')}
+            </Badge>
+          ) : outOfStock ? (
+            <Badge variant="danger" title={t('builder.specs.stockAsOf', { date: stockDate })}>
+              {t('builder.specs.outOfStock')}
+            </Badge>
           ) : (
-            <Badge variant="success">{t('builder.specs.inStock')}</Badge>
+            <Badge variant="outline" title={t('builder.specs.stockUnknownAsOf', { date: stockDate || '—' })}>
+              {t('builder.specs.stockUnknown')}
+            </Badge>
           )}
+          {compatibilityStatus === 'compatible' ? (
+            <CompatibilityBadge status="ok" label={t('builder.specs.compatible')} />
+          ) : compatibilityStatus === 'incompatible' ? (
+            <CompatibilityBadge status="error" label={t('builder.specs.incompatible')} />
+          ) : compatibilityStatus === 'unverified' ? (
+            <CompatibilityBadge status="info" label={t('builder.specs.unverified')} />
+          ) : compatibilityStatus === 'review' ? (
+            <CompatibilityBadge status="warning" label={t('builder.specs.review')} />
+          ) : null}
         </div>
       </header>
 

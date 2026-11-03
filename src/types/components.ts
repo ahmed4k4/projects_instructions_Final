@@ -10,12 +10,18 @@
 export type ComponentCategory =
   'cpu' | 'gpu' | 'motherboard' | 'ram' | 'storage' | 'psu' | 'case' | 'cooling';
 
-export type StockStatus = 'in_stock' | 'out_of_stock' | 'limited';
+/** `unknown` is a first-class state: a retailer that does not publish stock
+ * must never be presented as either available or sold out. */
+export type StockStatus = 'in_stock' | 'out_of_stock' | 'limited' | 'unknown';
 
 export interface StoreLink {
   store: string;
   url: string;
   price: number;
+  /** Exact stock state reported for this retailer listing. */
+  stockStatus?: StockStatus;
+  /** Timestamp of this retailer's own stock/price snapshot. */
+  stockUpdatedAt?: string;
 }
 
 export interface CPU {

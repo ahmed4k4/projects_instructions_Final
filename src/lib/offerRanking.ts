@@ -31,7 +31,7 @@ export function isPlaceholderPrice(offer: Pick<RetailerOffer, 'priceEgp' | 'pric
  * The comparison order every consumer uses.
  *
  *   1. real prices before placeholders  (a 1 EGP 5090 must never win)
- *   2. in stock before out of stock
+ *   2. confirmed in-stock before limited, unknown, and out-of-stock
  *   3. cheapest first
  *   4. stable tiebreak on retailer, so equal prices do not jump between renders
  */
@@ -40,8 +40,14 @@ export function compareOffers(a: RetailerOffer, b: RetailerOffer): number {
   const bReal = isPlaceholderPrice(b) ? 1 : 0;
   if (aReal !== bReal) return aReal - bReal;
 
-  const aStock = a.stockStatus === 'out_of_stock' ? 1 : 0;
-  const bStock = b.stockStatus === 'out_of_stock' ? 1 : 0;
+  const stockRank: Record<RetailerOffer['stockStatus'], number> = {
+    in_stock: 0,
+    limited: 1,
+    unknown: 2,
+    out_of_stock: 3,
+  };
+  const aStock = stockRank[a.stockStatus] ?? stockRank.unknown;
+  const bStock = stockRank[b.stockStatus] ?? stockRank.unknown;
   if (aStock !== bStock) return aStock - bStock;
 
   return a.priceEgp - b.priceEgp || a.retailerId.localeCompare(b.retailerId);

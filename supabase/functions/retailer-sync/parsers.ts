@@ -623,6 +623,24 @@ function parseSigma(html: string, pageUrl: string): ScrapedProduct[] {
   return parseJsonLd(html, pageUrl, 'sigma', 'gpu');
 }
 
+
+/**
+ * Parse schema.org `availability` conservatively. Missing or unfamiliar values
+ * are UNKNOWN, never implicitly IN_STOCK; the scraper must not invent a stock
+ * claim just because a product has a price and URL.
+ */
+export function parseSchemaOrgStockStatus(value: unknown): ScrapedProduct['stockStatus'] {
+  const normalized = String(value ?? '').toLowerCase().replace(/[^a-z]/g, '');
+  if (!normalized) return 'unknown';
+  if (normalized.includes('outofstock') || normalized.includes('soldout') || normalized.includes('discontinued')) {
+    return 'out_of_stock';
+  }
+  if (normalized.includes('limitedavailability')) return 'limited';
+  if (normalized.includes('instock') || normalized.includes('onlineonly')) return 'in_stock';
+  // PreOrder and BackOrder are not a confirmed current in-stock state.
+  return 'unknown';
+}
+
 /** Generic schema.org Product fallback — works on any store with ld+json. */
 export function parseJsonLd(
   html: string,
@@ -671,7 +689,7 @@ export function parseJsonLd(
         category,
         priceEgp: price,
         originalPriceEgp: null,
-        stockStatus: /OutOfStock/i.test(String(offers?.availability ?? '')) ? 'out_of_stock' : 'in_stock',
+        stockStatus: parseSchemaOrgStockStatus(offers?.availability),
         productUrl: cleanProductUrl(url, origin),
         imageUrl: cleanImageUrl(image, origin),
         specs: { template: 'json-ld' },

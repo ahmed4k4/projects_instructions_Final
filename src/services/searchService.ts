@@ -74,8 +74,8 @@ export interface SearchResult {
  *
  * The policy lives in `lib/offerRanking` and is shared with the builder's price
  * map: two independent rankers is how `1 EGP` survived here after being fixed
- * there. Only OUT_OF_STOCK is disqualifying — `unknown` means the retailer
- * simply did not print a stock line (Elbadr never does).
+ * there. Only a fresh, explicit `in_stock` observation is a positive buyability claim.
+ * `unknown` includes missing, unfamiliar, or stale retailer stock signals.
  */
 export { rankOffers };
 
@@ -157,7 +157,8 @@ export function groupListings(listings: RetailerOffer[]): ProductGroup[] {
     if (!best) continue;
 
     const inStock = ranked.filter((o) => o.stockStatus === 'in_stock');
-    const pool = inStock.length ? inStock : ranked;
+    // Savings are only actionable when both offers are explicitly buyable.
+    const pool = inStock;
 
     /**
      * Savings are only meaningful across DIFFERENT retailers.
@@ -171,7 +172,7 @@ export function groupListings(listings: RetailerOffer[]): ProductGroup[] {
     const distinctRetailers = new Set(pool.map((o) => o.retailerId)).size;
     const cheapest = pool[0]?.priceEgp ?? best.priceEgp;
     const dearest = pool[pool.length - 1]?.priceEgp ?? best.priceEgp;
-    const spread = distinctRetailers > 1 ? dearest - cheapest : 0;
+    const spread = inStock.length > 0 && distinctRetailers > 1 ? dearest - cheapest : 0;
 
     const newestScrapedAt = ranked.reduce(
       (latest, offer) => (offer.lastScrapedAt > latest ? offer.lastScrapedAt : latest),

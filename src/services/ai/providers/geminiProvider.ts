@@ -26,8 +26,9 @@ import {
   type ProviderHealth,
   type StreamResult,
 } from './types';
-import { advanceModel, resolveModelSync } from '../models';
+import { advanceModel, MODEL_CANDIDATES, resolveModelSync } from '../models';
 import { supabase } from '@/services/supabaseClient';
+import { parseGoogleApiError } from './googleError';
 
 const BASE = '/api/ai/v1beta';
 
@@ -165,8 +166,9 @@ function buildRequestBody(req: ChatRequest, model: string): Record<string, unkno
     thinkingConfig: { thinkingLevel },
     ...(req.jsonSchema ? { responseMimeType: 'application/json', responseSchema: req.jsonSchema } : {}),
   };
-  // Sampling controls are not recommended for the Gemini 3.5 generation line.
-  if (!model.startsWith('gemini-3.5')) generationConfig.temperature = req.temperature ?? 0.6;
+  // Gemini 3 models use thinking levels for reasoning control; avoid legacy
+  // sampling controls on this generation line (notably Gemini 3.8).
+  if (!model.startsWith('gemini-3.')) generationConfig.temperature = req.temperature ?? 0.6;
 
   const body: Record<string, unknown> = { contents, generationConfig };
 
@@ -176,6 +178,7 @@ function buildRequestBody(req: ChatRequest, model: string): Record<string, unkno
   // grounding is the rarer need — so tools win when both are present.
   if (req.tools?.length) {
     body.tools = toFunctionDeclarations(req.tools);
+    if (req.toolConfig) body.toolConfig = req.toolConfig;
   } else if (req.grounded) {
     body.tools = [{ google_search: {} }];
   }
@@ -279,6 +282,8 @@ async function post(
 }
 
 const FIRST_TOKEN_TIMEOUT_MS = 8_000;
+const QUALITY_TURN_TIMEOUT_MS = 52_000;
+const QUALITY_ATTEMPT_TIMEOUT_MS = 22_000;
 
 async function postWithFallback(
   tier: 'chat' | 'quality',
@@ -287,55 +292,97 @@ async function postWithFallback(
   signal?: AbortSignal,
 ): Promise<Response> {
   let model = resolveModelSync(tier);
-  let response: Response;
-  let timedOut = false;
-  try {
-    const firstTokenDeadline = AbortSignal.timeout(FIRST_TOKEN_TIMEOUT_MS);
-    const requestSignal = signal ? AbortSignal.any([signal, firstTokenDeadline]) : firstTokenDeadline;
-    response = await post(model, req, stream, requestSignal);
-  } catch (error) {
-    if (signal?.aborted) throw error;
-    timedOut = (error as Error)?.name === 'TimeoutError' || (error as Error)?.name === 'AbortError';
-    if (!timedOut) throw error;
-    // A slow first-byte response is treated like a model outage: move to the
-    // next Flash-Lite candidate rather than leaving the user waiting 55s.
+  const visited = new Set<string>();
+  const totalBudgetMs = tier === 'quality' ? QUALITY_TURN_TIMEOUT_MS : 16_000;
+  const deadline = Date.now() + totalBudgetMs;
+  let response: Response | null = null;
+  let lastTimeout: unknown;
+
+  // Try each configured model at most once for retired models or upstream 503s.
+  // A 429 is returned immediately because model rotation cannot override a
+  // project quota and would create a burst of redundant requests.
+  while (visited.size < MODEL_CANDIDATES[tier].length && Date.now() < deadline) {
+    if (signal?.aborted) throw signal.reason ?? new DOMException('Aborted', 'AbortError');
+    visited.add(model);
+
+    const remainingMs = Math.max(1, deadline - Date.now());
+    const attemptTimeoutMs = Math.min(
+      tier === 'quality' ? QUALITY_ATTEMPT_TIMEOUT_MS : FIRST_TOKEN_TIMEOUT_MS,
+      remainingMs,
+    );
+
+    try {
+      const attemptDeadline = AbortSignal.timeout(attemptTimeoutMs);
+      const requestSignal = signal ? AbortSignal.any([signal, attemptDeadline]) : attemptDeadline;
+      response = await post(model, req, stream, requestSignal);
+    } catch (error) {
+      if (signal?.aborted) throw error;
+      const timedOut = (error as Error)?.name === 'TimeoutError' || (error as Error)?.name === 'AbortError';
+      if (!timedOut) throw error;
+      lastTimeout = error;
+      const next = advanceModel(tier, model);
+      if (visited.has(next)) break;
+      model = next;
+      continue;
+    }
+
+    // A Google 429 is a project/model quota response, not evidence that this
+    // model is faulty. Cycling through every model only burns more RPM and
+    // produces several identical 429s. Surface the original quota response.
+    const isGoogleModelFailure = response.headers.get('x-ai-upstream') === 'google'
+      && [404, 503].includes(response.status);
+    if (!isGoogleModelFailure || signal?.aborted) break;
+
     const next = advanceModel(tier, model);
-    if (next === model) throw error;
+    if (visited.has(next)) break;
+    await response.body?.cancel().catch(() => undefined);
+    response = null;
     model = next;
-    response = await post(model, req, stream, signal);
+  }
+
+  if (!response) {
+    throw new ProviderError(
+      'gemini',
+      'timeout',
+      lastTimeout instanceof Error ? lastTimeout.message : 'All configured Gemini models timed out or were unavailable.',
+      504,
+    );
   }
 
   // An expired optional account session must not block a public AI feature.
   // Retry once as guest when the 401 was generated by our quota/auth layer,
   // not by Google itself. The guest request is still protected by its IP quota.
-  if (!timedOut && response.status === 401 && !response.headers.has('x-ai-upstream') && !signal?.aborted) {
+  if (response.status === 401 && !response.headers.has('x-ai-upstream') && !signal?.aborted) {
     await response.body?.cancel().catch(() => undefined);
     response = await post(model, req, stream, signal, true);
   }
 
-  // A busy or retired model should not end the user's turn. Try one known
-  // alternative and remember it for subsequent turns. Never retry user cancel.
-  if (!timedOut && response.headers.get('x-ai-upstream') === 'google' && [404, 429, 503].includes(response.status) && !signal?.aborted) {
-    const next = advanceModel(tier, model);
-    if (next !== model) {
-      await response.body?.cancel().catch(() => undefined);
-      model = next;
-      response = await post(model, req, stream, signal);
-    }
-  }
   return response;
 }
 
 async function fail(res: Response): Promise<never> {
   const body = await res.text();
-  let message = body.slice(0, 300);
-  let serverCode = '';
+  let parsed: unknown = null;
   try {
-    const parsed = JSON.parse(body) as { error?: { message?: string; status?: string } };
-    message = parsed.error?.message ?? message;
-    serverCode = parsed.error?.status ?? '';
+    parsed = JSON.parse(body) as unknown;
   } catch {
-    /* keep raw */
+    /* keep raw response text below */
+  }
+  const details = parseGoogleApiError(parsed, res.headers.get('retry-after'));
+  let message = parsed ? details.message : body.slice(0, 700);
+  const parsedError = parsed && typeof parsed === 'object' && 'error' in parsed
+    ? (parsed as { error?: { status?: string; message?: string } }).error
+    : undefined;
+  const serverCode = parsedError?.status ?? details.status ?? '';
+
+  if (res.status === 429) {
+    const fromGoogle = res.headers.get('x-ai-upstream') === 'google';
+    const retry = details.retryAfterSeconds !== null
+      ? ` Retry after approximately ${details.retryAfterSeconds} second(s).`
+      : '';
+    const quota = details.quotaLabels.length ? ` Quota: ${details.quotaLabels.join(' | ')}.` : '';
+    const prefix = fromGoogle ? 'Google Gemini API rate limit/quota reached:' : 'Nexus AI request limit reached:';
+    throw new ProviderError('gemini', 'rate_limit', `${prefix} ${message}${retry}${quota}`.slice(0, 1_200), 429);
   }
 
   if (serverCode === 'UNAUTHENTICATED' || res.status === 401) {
@@ -388,7 +435,7 @@ export const geminiProvider: AIProvider = {
   async generate(req: ChatRequest, signal?: AbortSignal): Promise<StreamResult> {
     // Long, structured requests use the quality fallback chain;
     // the fast Flash-Lite remains first in both chains.
-    const tier = (req.maxTokens ?? 0) > 2048 ? 'quality' : 'chat';
+    const tier = req.model ?? ((req.maxTokens ?? 0) > 2048 ? 'quality' : 'chat');
     const res = await postWithFallback(tier, req, false, signal);
     if (!res.ok) await fail(res);
     return parseCandidate(await res.json());

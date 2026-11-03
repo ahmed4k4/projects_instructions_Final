@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -24,18 +24,26 @@ import { spring } from '@/lib/motion';
 import { useComponents, useCategoryCounts } from '@/hooks/useComponents';
 import { useCompatibilityRules } from '@/hooks/useCatalogue';
 import { evaluateCompatibility } from '@/lib/compatibility/engine';
+import { passesCompatibilityFilter } from '@/lib/compatibility/filter';
+import { useCompatibilityMessage } from '@/lib/i18nCompatibility';
 import { useBuildStore } from '@/store/useBuildStore';
 import { summariseOffers } from '@/services/retailers/aggregator';
 import { offersFor } from '@/lib/retailerCatalogue';
 import { RETAILERS, type PriceComparison, type RetailerId } from '@/services/retailers/types';
 import { ComparePricesModal } from '@/components/retail/ComparePricesModal';
+import { Pagination } from '@/components/retail/Pagination';
 import type { PCComponent } from '@/types/components';
+
+const COMPONENTS_PER_PAGE = 12;
 
 export default function Builder() {
   const { t } = useTranslation();
+  const localiseCompatibility = useCompatibilityMessage();
   const [category, setCategory] = useState<ComponentCategory>('cpu');
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<'price-asc' | 'price-desc' | 'score'>('score');
+  const [onlyCompatible, setOnlyCompatible] = useState(false);
+  const [page, setPage] = useState(1);
 
   const { data: components, isLoading } = useComponents(category);
   const items = useBuildStore((state) => state.items);
@@ -74,24 +82,106 @@ export default function Builder() {
    * Sorted so the default view leads with what is buyable: an out-of-stock part
    * at a great price is not a recommendation.
    */
+  const compatibilityById = useMemo(() => {
+    const statuses = new Map<string, 'compatible' | 'incompatible' | 'unverified' | 'review'>();
+    for (const component of components ?? []) {
+      // Assess a candidate as if it replaced the current part in this slot.
+      const candidateItems = { ...items, [category]: component };
+      // Only evaluate rules that compare this candidate with parts already
+      // selected in the build. Rules waiting for a missing counterpart cannot
+      // prove compatibility and must not produce a green badge.
+      const pairedRules = rules.filter((rule) => {
+        if (rule.categoryA === category) return Boolean(candidateItems[rule.categoryB]);
+        if (rule.categoryB === category) return Boolean(candidateItems[rule.categoryA]);
+        return false;
+      });
+      const report = evaluateCompatibility(candidateItems, pairedRules);
+      const cannotVerify =
+        pairedRules.length === 0 ||
+        report.checkedRules === 0 ||
+        (report.unverified?.length ?? 0) > 0;
+      const hasReviewWarning = report.warnings.some((issue) => !issue.ruleKey.startsWith('missing_'));
+      statuses.set(
+        component.id,
+        report.errors.length > 0
+          ? 'incompatible'
+          : hasReviewWarning
+            ? 'review'
+            : cannotVerify
+              ? 'unverified'
+              : 'compatible',
+      );
+    }
+    return statuses;
+  }, [components, items, category, rules]);
+
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
     const filtered = (components ?? []).filter((component) =>
       `${component.brand} ${component.name}`.toLowerCase().includes(needle),
-    );
+    ).filter((component) => {
+      // Hide only proven hard conflicts. If rules or counterpart parts are not
+      // available yet, keep the candidate visible with its neutral
+      // `unverified` badge; otherwise GPU/PSU categories with no selected peer
+      // disappear from the entire list when the toggle is enabled.
+      const status = compatibilityById.get(component.id);
+      return passesCompatibilityFilter(status, onlyCompatible);
+    });
     return [...filtered].sort((a, b) => {
-      if (a.stockStatus !== b.stockStatus) return a.stockStatus === 'out_of_stock' ? 1 : -1;
+      const stockRank = { in_stock: 0, limited: 1, unknown: 2, out_of_stock: 3 } as const;
+      if (a.stockStatus !== b.stockStatus) return stockRank[a.stockStatus] - stockRank[b.stockStatus];
       if (sort === 'price-asc') return a.price - b.price;
       if (sort === 'price-desc') return b.price - a.price;
       return (b.performanceScore ?? 0) - (a.performanceScore ?? 0);
     });
-  }, [components, query, sort]);
+  }, [components, query, sort, onlyCompatible, compatibilityById]);
+
+  const totalPages = Math.max(1, Math.ceil(visible.length / COMPONENTS_PER_PAGE));
+  const currentPage = Math.min(page, totalPages);
+  const pageItems = useMemo(
+    () => visible.slice((currentPage - 1) * COMPONENTS_PER_PAGE, currentPage * COMPONENTS_PER_PAGE),
+    [visible, currentPage],
+  );
+
+  useEffect(() => {
+    setPage(1);
+  }, [category, query, sort, onlyCompatible, items]);
 
   const handleSelect = (component: Parameters<typeof addComponent>[0]) => {
-    addComponent(component);
-    toast.success(t('builder.added', { name: component.name }), {
-      description: t('builder.addedHint', { category: t(`builder.categories.${component.category}`) }),
+    const nextItems = { ...items, [component.category]: component };
+    const pairedRules = rules.filter((rule) => {
+      if (rule.categoryA === component.category) return Boolean(nextItems[rule.categoryB]);
+      if (rule.categoryB === component.category) return Boolean(nextItems[rule.categoryA]);
+      return false;
     });
+    const report = evaluateCompatibility(nextItems, pairedRules);
+    const categoryName = t(`builder.categories.${component.category}`);
+
+    if (report.errors.length > 0) {
+      toast.error(t('builder.selection.incompatible', { name: component.name }), {
+        description: localiseCompatibility(report.errors[0]!),
+      });
+      return;
+    }
+
+    addComponent(component);
+    const unverified = report.unverified?.[0];
+    const warning = report.warnings.find((issue) => !issue.ruleKey.startsWith('missing_'));
+    if (unverified || pairedRules.length === 0 || report.checkedRules === 0) {
+      toast.warning(t('builder.selection.unverified', { name: component.name }), {
+        description: unverified
+          ? localiseCompatibility(unverified)
+          : t('builder.selection.waitingForParts'),
+      });
+    } else if (warning) {
+      toast.warning(t('builder.selection.review', { name: component.name }), {
+        description: localiseCompatibility(warning),
+      });
+    } else {
+      toast.success(t('builder.selection.compatible', { name: component.name }), {
+        description: t('builder.addedHint', { category: categoryName }),
+      });
+    }
   };
 
   return (
@@ -259,19 +349,39 @@ export default function Builder() {
             </div>
           </div>
 
+          <label className="mt-3 flex cursor-pointer items-start gap-2.5 rounded-lg border border-border bg-surface/50 px-3 py-2.5 text-xs transition-colors hover:border-primary/30">
+            <input
+              type="checkbox"
+              checked={onlyCompatible}
+              onChange={(event) => setOnlyCompatible(event.target.checked)}
+              className="mt-0.5 size-4 shrink-0 accent-primary"
+            />
+            <span className="min-w-0">
+              <span className="block font-medium text-foreground">{t('builder.onlyCompatible')}</span>
+              <span className="mt-0.5 block text-[11px] leading-relaxed text-muted-foreground">
+                {t('builder.onlyCompatibleHint')}
+              </span>
+            </span>
+          </label>
+
           <div className="mt-5">
             {isLoading ? (
               <LoadingSkeleton count={4} className="sm:grid-cols-1 xl:grid-cols-2" />
             ) : visible.length === 0 ? (
               <EmptyState
                 icon={Search}
-                title={t('builder.noMatch')}
-                description={t('builder.noMatchHint', {
-                  category: t(`builder.categories.${category}`),
-                  query,
-                })}
+                title={onlyCompatible ? t('builder.noCompatibleMatch') : t('builder.noMatch')}
+                description={onlyCompatible
+                  ? t('builder.noCompatibleMatchHint')
+                  : t('builder.noMatchHint', {
+                      category: t(`builder.categories.${category}`),
+                      query,
+                    })}
                 actionLabel={t('builder.resetFilter')}
-                onAction={() => setQuery('')}
+                onAction={() => {
+                  setQuery('');
+                  setOnlyCompatible(false);
+                }}
               />
             ) : (
               <motion.div
@@ -280,11 +390,12 @@ export default function Builder() {
                 animate="visible"
                 className="grid gap-4 sm:grid-cols-2"
               >
-                {visible.map((component) => (
+                {pageItems.map((component) => (
                   <ComponentCard
                     key={component.id}
                     component={component}
                     selected={items[category]?.id === component.id}
+                    compatibilityStatus={compatibilityById.get(component.id) ?? 'unverified'}
                     onSelect={handleSelect}
                     livePrice={
                       // The card's price and the modal's "best" are the same
@@ -313,6 +424,18 @@ export default function Builder() {
               </motion.div>
             )}
           </div>
+
+          {!isLoading && visible.length > 0 && (
+            <Pagination
+              page={currentPage}
+              totalPages={totalPages}
+              firstShown={(currentPage - 1) * COMPONENTS_PER_PAGE + 1}
+              lastShown={Math.min(currentPage * COMPONENTS_PER_PAGE, visible.length)}
+              total={visible.length}
+              onChange={setPage}
+              className="mt-7"
+            />
+          )}
 
           {items[category] && (
             <p className="mt-4 flex items-center gap-2 text-[11px] text-muted-foreground">

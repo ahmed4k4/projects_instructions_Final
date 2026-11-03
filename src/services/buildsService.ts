@@ -190,7 +190,8 @@ export async function getBuildBySlug(slug: string): Promise<{ build: SavedBuild;
           specs: (legacy.specs ?? {}) as Record<string, unknown>,
           price: Number(legacy.price),
           currency: legacy.currency,
-          stockStatus: (legacy.stock_status as PCComponent['stockStatus']) ?? 'in_stock',
+          // Legacy seed rows have no current retailer observation; never infer stock from them.
+          stockStatus: 'unknown',
           storeLinks: [],
           performanceScore: legacy.performance_score,
           powerDrawWatts: legacy.power_draw_watts,

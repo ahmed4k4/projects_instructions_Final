@@ -61,7 +61,7 @@ export default function Auth() {
             <div className="space-y-3">
               <Mail className="size-8 text-primary" />
               <h1 className="text-xl font-semibold">{ar ? 'تم إنشاء الحساب' : 'Account created'}</h1>
-              <p className="text-sm text-muted-foreground">{ar ? 'إذا ظهرت هذه الرسالة، عطّل خيار Confirm email في إعدادات Supabase Auth ثم أعد إنشاء الحساب؛ الحسابات هنا لا تستخدم بريدًا حقيقيًا.' : 'If you see this message, disable Confirm email in Supabase Auth and create the account again; these accounts do not use a real email address.'}</p>
+              <p className="text-sm text-muted-foreground">{ar ? 'لم يتم إنشاء جلسة الدخول تلقائيًا. جرّب تسجيل الدخول مرة أخرى، وإذا استمرت المشكلة راجع إعدادات Supabase.' : 'The account was created but a session was not started. Try signing in again; if the issue continues, check Supabase settings.'}</p>
               <Button variant="outline" onClick={() => { setConfirmation(false); setMode('login'); }}>{ar ? 'العودة لتسجيل الدخول' : 'Back to sign in'}</Button>
             </div>
           ) : (
@@ -72,7 +72,7 @@ export default function Auth() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="username">{ar ? 'اسم المستخدم' : 'Username'}</Label>
-                <Input id="username" type="text" autoComplete="username" minLength={3} maxLength={24} pattern="[A-Za-z0-9][A-Za-z0-9_.-]{2,23}" required value={username} onChange={(e) => setUsername(e.target.value)} placeholder="ahmed_4k4" dir="ltr" />
+                <Input id="username" type="text" autoComplete="username" minLength={3} maxLength={24} required value={username} onChange={(e) => setUsername(e.target.value)} placeholder="ahmed_4k4" dir="ltr" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">{ar ? 'كلمة المرور' : 'Password'}</Label>
@@ -85,7 +85,7 @@ export default function Auth() {
               <button type="button" className="w-full text-sm text-primary hover:underline" onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}>
                 {mode === 'login' ? (ar ? 'ليس لديك حساب؟ أنشئ حسابًا' : 'New here? Create an account') : (ar ? 'لديك حساب بالفعل؟ سجل الدخول' : 'Already have an account? Sign in')}
               </button>
-              <p className="flex items-start gap-2 text-[11px] leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-success" />{ar ? 'لا نستخدم البريد الإلكتروني أو رسائل التأكيد. اسم المستخدم وكلمة المرور فقط.' : 'No email address or confirmation emails are used. Username and password only.'}</p>
+              <p className="flex items-start gap-2 text-[11px] leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-success" />{ar ? 'يتم إنشاء الحساب مباشرة باسم المستخدم وكلمة المرور، بدون إرسال رسائل بريد إلكتروني.' : 'Your account is created directly with a username and password. No email is sent.'}</p>
             </form>
           )}
           <div className="mt-5 border-t border-border pt-4">

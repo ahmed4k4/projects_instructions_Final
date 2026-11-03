@@ -1,7 +1,7 @@
 {
   "name": "nexus-pc-builder",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "description": "AI-Powered PC Builder - design, optimize and compare custom PC builds with Google Gemini AI.",
   "scripts": {
@@ -39,7 +39,15 @@
     "db:push": "supabase db push",
     "db:reset": "supabase db reset",
     "verify:ai-speed": "node scripts/verify-ai-performance.mjs",
-    "verify:guest-auth": "node scripts/verify-guest-auth.mjs"
+    "verify:guest-auth": "node scripts/verify-guest-auth.mjs",
+    "verify:build-loop": "node --experimental-strip-types scripts/verify-build-agent-regressions.mjs",
+    "verify:builder-ui": "node scripts/verify-builder-ui.mjs",
+    "verify:retailer-stock": "node --experimental-strip-types scripts/verify-retailer-stock-parser.mjs",
+    "verify:retailer-freshness": "node --experimental-strip-types scripts/verify-retailer-stock-freshness.mjs",
+    "verify:shortlist": "node --experimental-strip-types scripts/verify-budget-shortlist.mjs",
+    "verify:smart-builder": "node --experimental-strip-types scripts/verify-build-agent-regressions.mjs && node scripts/verify-ai-performance.mjs && node scripts/verify-builder-ui.mjs && node --experimental-strip-types scripts/verify-budget-shortlist.mjs && node --experimental-strip-types scripts/verify-typescript-and-gemini-quota.mjs",
+    "verify:gemini-quota": "node --experimental-strip-types scripts/verify-typescript-and-gemini-quota.mjs",
+    "verify:signup-resilience": "node scripts/verify-signup-resilience.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",
@@ -98,6 +106,6 @@
     "vitest": "^2.1.9"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.0.0"
   }
 }

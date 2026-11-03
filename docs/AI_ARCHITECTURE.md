@@ -66,12 +66,17 @@ Both the builder and the advisor use the same shape
 ```
 user turn → Gemini → tool calls → executor (DB + engines) → functionResponse
                 ↑                                              │
-                └───────────── repeat, capped at 5 rounds for Smart Builder and 2 tool rounds for Advisor ───────────┘
+                └───────────── repeat, capped at 4 rounds for Smart Builder and 2 tool rounds for Advisor ───────────┘
 ```
 
 The **browser** owns the loop rather than the model because the tools run
-deterministic TypeScript engines that must execute client-side. The proxy is a
-stateless transport.
+deterministic TypeScript engines that must execute client-side. Parallel tool
+responses are returned as one Gemini user turn, with each original function-call
+ID preserved. Smart Builder uses non-streaming `generateContent` for tool turns
+so the complete `functionCall` parts and `thoughtSignature` are replayed. If the
+model stops with prose after catalog lookup, a constrained `ANY` call forces
+`finalize_build`; an empty initial turn can similarly force `list_components`.
+The proxy is a stateless transport.
 
 ### Why the model cannot hallucinate a component
 
@@ -108,9 +113,9 @@ Model routing is defined in `src/services/ai/models.ts`:
 | Key | Primary | Fallback chain | Use |
 | --- | --- | --- | --- |
 | `chat` | `gemini-3.5-flash-lite` | `gemini-3.1-flash-lite` → `gemini-3.6-flash` | Interactive chat and agent turns; MINIMAL thinking |
-| `quality` | `gemini-3.5-flash` | `gemini-3.5-flash-lite` → `gemini-3.6-flash` | Structured requests; LOW thinking by default |
+| `quality` | `gemini-3.8-flash` | `gemini-3.6-flash` → `gemini-3.5-flash-lite` | Smart Builder and multi-step structured requests; MEDIUM thinking |
 
-On 404, 429 or 503, the provider tries one next model and remembers the selection. Cached model IDs from older releases are invalidated by the v2 cache key. The chat tier explicitly uses MINIMAL thinking; the quality tier uses LOW thinking by default. Gemini 3.5 Flash-Lite supports up to 1,048,576 input tokens and 65,536 output tokens. Google API quotas remain controlled by the AI Studio project tier.
+On 404, 429 or 503, the provider tries one next model and remembers the selection. Cached model IDs from older releases are invalidated by the v3 cache key. The chat tier explicitly uses MINIMAL thinking; the quality tier uses LOW thinking by default. Gemini 3.5 Flash-Lite supports up to 1,048,576 input tokens and 65,536 output tokens. Google API quotas remain controlled by the AI Studio project tier.
 
 ## Cost controls
 
@@ -121,7 +126,7 @@ On 404, 429 or 503, the provider tries one next model and remembers the selectio
 | Model allow-list  | Vercel proxy accepts only the model IDs listed by the active client         |
 | Request bounds    | JSON only, 2 MiB body cap, 55 s upstream deadline                           |
 | Bounded context   | `list_components` returns ≤12 compact rows, not full specs                 |
-| Bounded rounds    | 5 tool rounds (builder), 4 (advisor)                                       |
+| Bounded rounds    | 8 tool rounds (builder), 2 (advisor); advisor allows ≤4 calls per turn      |
 | Caching           | `ai_fps_estimates` caches fallback FPS per (GPU, game, resolution, preset) |
 | Prompt discipline | System instructions cap answer length (~180 words for the advisor)         |
 | Token caps        | `maxOutputTokens` per action in the proxy                                  |
@@ -142,9 +147,10 @@ The user always gets a build. Nothing crashes.
 
 `geminiProvider.ts` opens a raw same-origin `fetch` through the Vercel proxy
 (Supabase's `functions.invoke` buffers) and parses `data: {json}\r\n\r\n`
-frames. The Gemini upstream uses CRLF, and
+frames for conversational text (Advisor). The Gemini upstream uses CRLF, and
 the parser normalises it — an early version split on `\n\n` and silently
-yielded zero chunks.
+yielded zero chunks. Smart Builder deliberately uses non-streaming requests for
+function-calling rounds to avoid partial tool-call assembly.
 
 Events: `start` → `token`* → (`tool_call`)* → `done`. `AbortController` is
 threaded from the UI through to the upstream request, so "Stop" actually stops

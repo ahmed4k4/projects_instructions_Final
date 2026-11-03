@@ -3,6 +3,7 @@ import { supabase, isSupabaseConfigured } from '../supabaseClient';
 import snapshot from './bootstrap.json';
 import { compareOffers } from '@/lib/offerRanking';
 import { resolveCategory } from '@/lib/categoryRules';
+import { getFreshStockStatus } from '@/lib/stockFreshness';
 import { loadSigmaFeed } from './sigmaFeed';
 import {
   RETAILERS,
@@ -196,12 +197,12 @@ async function loadSigmaOffers(): Promise<void> {
         category,
         priceEgp: product.priceEgp,
         originalPriceEgp: product.originalPriceEgp,
-        stockStatus: product.stockStatus,
+        stockStatus: getFreshStockStatus(product.stockStatus, feed.capturedAt),
         productUrl: product.productUrl,
         imageUrl: product.imageUrl,
         matchedComponentId: match?.id ?? null,
         matchConfidence: match?.confidence ?? null,
-        lastScrapedAt: feed.capturedAt ?? new Date().toISOString(),
+        lastScrapedAt: feed.capturedAt ?? '',
         specs: product.specs ?? undefined,
       };
     });
@@ -297,7 +298,7 @@ function mapSnapshotOffers(products: SnapshotProduct[], capturedAt: string, pref
       priceEgp: product.priceEgp,
       priceIsPlaceholder: product.priceIsPlaceholder,
       originalPriceEgp: product.originalPriceEgp,
-      stockStatus: product.stockStatus,
+      stockStatus: getFreshStockStatus(product.stockStatus, capturedAt),
       productUrl: product.productUrl,
       imageUrl: product.imageUrl,
       matchedComponentId: match?.id ?? null,
@@ -450,7 +451,7 @@ function toOffer(row: RetailerRow): RetailerOffer {
     // numeric columns arrive as strings from PostgREST.
     priceEgp: Number(row.price_egp),
     originalPriceEgp: row.original_price_egp === null ? null : Number(row.original_price_egp),
-    stockStatus: (row.stock_status as RetailerOffer['stockStatus']) ?? 'unknown',
+    stockStatus: getFreshStockStatus((row.stock_status as RetailerOffer['stockStatus']) ?? 'unknown', row.last_scraped_at),
     productUrl: row.product_url,
     imageUrl: row.image_url,
     specs: row.specs ?? undefined,
@@ -475,9 +476,9 @@ export function summariseOffers(
   const best = sorted[0] ?? null;
 
   const inStock = sorted.filter((o) => o.stockStatus === 'in_stock');
-  const pool = inStock.length ? inStock : sorted;
-  const cheapest = pool[0]?.priceEgp ?? 0;
-  const dearest = pool[pool.length - 1]?.priceEgp ?? 0;
+  const distinctBuyableRetailers = new Set(inStock.map((offer) => offer.retailerId)).size;
+  const cheapest = inStock[0]?.priceEgp ?? 0;
+  const dearest = inStock[inStock.length - 1]?.priceEgp ?? 0;
 
   const lastScrapedAt = sorted.reduce<string | null>(
     (latest, offer) => (!latest || offer.lastScrapedAt > latest ? offer.lastScrapedAt : latest),
@@ -489,7 +490,7 @@ export function summariseOffers(
     componentName,
     best,
     offers: sorted,
-    savingsEgp: Math.max(0, dearest - cheapest),
+    savingsEgp: distinctBuyableRetailers > 1 ? Math.max(0, dearest - cheapest) : 0,
     lastScrapedAt,
   };
 }

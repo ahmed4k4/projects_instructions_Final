@@ -77,7 +77,7 @@ function toAIError(error: unknown): AIError {
   if ((error as Error)?.name === 'AbortError') return new AIError('aborted', 'Cancelled.');
   if (error instanceof ProviderError) {
     if (error.kind === 'rate_limit') {
-      return new AIError('rate_limited', i18n.t('advisor.errors.quota'), error.status);
+      return new AIError('rate_limited', error.message || i18n.t('advisor.errors.quota'), error.status);
     }
     if (error.kind === 'auth') {
       if (error.status === 403) {
@@ -208,6 +208,7 @@ export async function generateStructured<T>(
       geminiProvider.generate(
         {
           messages,
+          model: options.model,
           jsonSchema: schema,
           temperature: options.temperature,
           thinkingLevel: options.thinkingLevel ?? 'LOW',
@@ -295,19 +296,30 @@ export async function testProviders(): Promise<AIStatus> {
   setGeminiConfigured(config.configured);
   if (!config.configured) return getAIStatus();
 
-  const { modelId, attempts } = await probeModels('chat', async () => {
+  let quotaMessage: string | null = null;
+  const { modelId, attempts, rateLimited } = await probeModels('chat', async () => {
     // A 1-token request is enough to prove the model answers on this key.
-    const res = await geminiProvider.generate({
-      messages: [{ role: 'user', content: 'ping' }],
-      maxTokens: 32,
-    });
-    return Boolean(res);
+    try {
+      const res = await geminiProvider.generate({
+        messages: [{ role: 'user', content: 'ping' }],
+        maxTokens: 32,
+      });
+      return Boolean(res);
+    } catch (error) {
+      if (error instanceof ProviderError && error.kind === 'rate_limit') {
+        quotaMessage = error.message;
+        return 'rate_limited';
+      }
+      return false;
+    }
   });
 
   lastModel = modelId;
   lastError = modelId
     ? null
-    : `No model answered. Tried: ${attempts.map((a) => `${a.model} (${a.ok ? 'ok' : 'fail'})`).join(', ')}`;
+    : rateLimited && quotaMessage
+      ? quotaMessage
+      : `No model answered. Tried: ${attempts.map((a) => `${a.model} (${a.ok ? 'ok' : 'fail'})`).join(', ')}`;
 
   return getAIStatus();
 }

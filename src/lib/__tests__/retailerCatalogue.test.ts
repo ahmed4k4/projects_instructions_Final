@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildCatalogue, groupToComponent } from '@/lib/retailerCatalogue';
+import { buildCatalogue, groupToComponent, offersFor } from '@/lib/retailerCatalogue';
 import type { ProductGroup } from '@/services/searchService';
 import type { RetailerOffer } from '@/services/retailers/types';
 
@@ -78,6 +78,66 @@ describe('groupToComponent', () => {
       'out_of_stock',
     );
   });
+  it('keeps unknown stock unknown instead of labelling it out of stock', () => {
+    const unknown = offer({ stockStatus: 'unknown' });
+    const component = groupToComponent(group({ offers: [unknown], best: unknown, pricedOffer: unknown }))!;
+
+    expect(component.stockStatus).toBe('unknown');
+    expect(component.storeLinks[0]?.stockStatus).toBe('unknown');
+    expect(offersFor(component)[0]?.stockStatus).toBe('unknown');
+  });
+
+  it('does not claim out of stock when one retailer has not reported stock', () => {
+    const sold = offer({ stockStatus: 'out_of_stock' });
+    const unknown = offer({ retailerId: 'alfrensia', stockStatus: 'unknown' });
+    const component = groupToComponent(group({ offers: [sold, unknown], best: sold, pricedOffer: sold }))!;
+
+    expect(component.stockStatus).toBe('unknown');
+    expect(offersFor(component).map((item) => item.stockStatus)).toEqual(['unknown', 'out_of_stock']);
+  });
+
+  it('preserves exact per-retailer status when one store confirms availability', () => {
+    const confirmed = offer({ stockStatus: 'in_stock' });
+    const unknown = offer({ retailerId: 'alfrensia', stockStatus: 'unknown' });
+    const component = groupToComponent(group({ offers: [confirmed, unknown], best: confirmed, pricedOffer: confirmed }))!;
+
+    expect(component.stockStatus).toBe('in_stock');
+    expect(offersFor(component).map((item) => item.stockStatus)).toEqual(['in_stock', 'unknown']);
+    expect(component.storeLinks[0]?.stockUpdatedAt).toBe(confirmed.lastScrapedAt);
+  });
+
+  it('keeps limited stock distinct from confirmed in-stock and out-of-stock', () => {
+    const limited = offer({ stockStatus: 'limited' });
+    const component = groupToComponent(group({ offers: [limited], best: limited, pricedOffer: limited }))!;
+    expect(component.stockStatus).toBe('limited');
+    expect(offersFor(component)[0]?.stockStatus).toBe('limited');
+  });
+
+  it('uses a confirmed in-stock retailer price before a cheaper unknown/out-of-stock offer', () => {
+    const cheaperUnknown = offer({
+      id: 'unknown-cheaper',
+      retailerId: 'alfrensia',
+      priceEgp: 34_000,
+      stockStatus: 'unknown',
+    });
+    const confirmedInStock = offer({
+      id: 'confirmed-stock',
+      retailerId: 'elbadr',
+      priceEgp: 39_000,
+      stockStatus: 'in_stock',
+    });
+    const component = groupToComponent(group({
+      offers: [cheaperUnknown, confirmedInStock],
+      best: cheaperUnknown,
+      pricedOffer: cheaperUnknown,
+    }))!;
+
+    expect(component.price).toBe(39_000);
+    expect(component.stockStatus).toBe('in_stock');
+    expect(component.storeLinks[0]?.stockStatus).toBe('in_stock');
+    expect(offersFor(component)[0]?.stockStatus).toBe('in_stock');
+  });
+
 });
 
 describe('buildCatalogue', () => {

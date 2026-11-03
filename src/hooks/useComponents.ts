@@ -118,13 +118,9 @@ export function useComponents(category?: ComponentCategory): {
 }
 
 /**
- * Number of parts per category, for the builder's sidebar badges.
- *
- * Counts EVERY listing the grid will show, including out-of-stock ones, because
- * the badge and the grid are the same claim: "Motherboard · 560 available" beside
- * a grid of 572 cards is a bug a user can see. Out-of-stock parts are still
- * listed (they are real, priced, and often the only carrier of a spec), they are
- * simply sorted last.
+ * Number of catalogue parts per category, independent of stock state.
+ * The count is not an availability claim; each card reports its own retailer
+ * stock state separately.
  */
 export function useCategoryCounts(): Partial<Record<ComponentCategory, number>> {
   const { data } = useComponents();

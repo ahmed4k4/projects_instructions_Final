@@ -18,6 +18,13 @@ export function useCompatibilityMessage(): (issue: CompatibilityIssue) => string
   const { t } = useTranslation();
 
   return (issue) => {
+    if (issue.ruleKey === 'unverified') {
+      return t('builder.compat.unverified', {
+        categoryA: t(`builder.categories.${issue.categoryA ?? ''}`),
+        categoryB: t(`builder.categories.${issue.categoryB ?? ''}`),
+      });
+    }
+
     if (issue.ruleKey.startsWith('missing_')) {
       const category = issue.ruleKey.replace('missing_', '');
       return t('builder.compat.missing', { category: t(`builder.categories.${category}`) });

@@ -3,10 +3,11 @@
  * provider/agent stack (no UI clicking), to prove the thought_signature fix
  * holds on the real code path rather than only in the probe script.
  */
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
+const envText = existsSync('.env.local') ? readFileSync('.env.local', 'utf8') : '';
 const env = Object.fromEntries(
-  readFileSync('.env.local', 'utf8')
+  envText
     .split(/\r?\n/)
     .filter((l) => l.includes('=') && !l.trim().startsWith('#'))
     .map((l) => {
@@ -15,7 +16,11 @@ const env = Object.fromEntries(
     }),
 );
 
-const KEY = env.GEMINI_API_KEY;
+const KEY = env.GEMINI_API_KEY || process.env.GEMINI_API_KEY;
+if (!KEY) {
+  console.error('Set GEMINI_API_KEY in .env.local or the process environment before running this live Google API check.');
+  process.exit(2);
+}
 const MODEL = 'gemini-3.5-flash-lite';
 const BASE = 'https://generativelanguage.googleapis.com/v1beta';
 const log = [];
@@ -133,6 +138,7 @@ for (let round = 1; round <= 8; round += 1) {
       functionResponse: {
         name: c.functionCall.name,
         response: execute(c.functionCall.name, c.functionCall.args ?? {}),
+        ...(c.functionCall.id ? { id: c.functionCall.id } : {}),
       },
     })),
   });

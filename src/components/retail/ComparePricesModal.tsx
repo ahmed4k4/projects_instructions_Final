@@ -171,15 +171,15 @@ function OfferRow({ offer, isBest, language }: { offer: RetailerOffer; isBest: b
           <span className="truncate text-xs font-medium">
             {language.startsWith('ar') ? meta.nameAr : meta.name}
           </span>
-          {isBest && !outOfStock ? (
-            <Badge variant="success" className="py-0 text-[10px]">
-              {t('retail.bestPrice')}
-            </Badge>
+          {isBest && offer.stockStatus === 'in_stock' ? (
+            <Badge variant="success" className="py-0 text-[10px]">{t('retail.bestPrice')}</Badge>
           ) : null}
-          {outOfStock ? (
-            <Badge variant="danger" className="py-0 text-[10px]">
-              {t('retail.outOfStock')}
-            </Badge>
+          {offer.stockStatus === 'out_of_stock' ? (
+            <Badge variant="danger" className="py-0 text-[10px]">{t('retail.outOfStock')}</Badge>
+          ) : offer.stockStatus === 'limited' ? (
+            <Badge variant="warning" className="py-0 text-[10px]">{t('builder.specs.limited')}</Badge>
+          ) : offer.stockStatus === 'unknown' ? (
+            <Badge variant="outline" className="py-0 text-[10px]">{t('builder.specs.stockUnknown')}</Badge>
           ) : null}
         </div>
 
@@ -201,11 +201,11 @@ function OfferRow({ offer, isBest, language }: { offer: RetailerOffer; isBest: b
         <Button
           asChild
           size="sm"
-          variant={isBest && !outOfStock ? 'primary' : 'outline'}
+          variant={isBest && offer.stockStatus === 'in_stock' ? 'primary' : 'outline'}
           className="mt-0.5 min-h-9"
         >
           <a href={offer.productUrl} target="_blank" rel="noopener noreferrer nofollow">
-            {outOfStock ? t('retail.visit') : t('retail.buy')}
+            {offer.stockStatus === 'in_stock' ? t('retail.buy') : t('retail.visit')}
             <ArrowUpRight className="rtl:-scale-x-100" />
           </a>
         </Button>

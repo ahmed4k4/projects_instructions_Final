@@ -22,7 +22,8 @@
     "case_motherboard_form": "Case does not support this board size.",
     "gpu_slot_blocked": "The GPU may block an expansion slot.",
     "m2_slots": "All M.2 slots are occupied.",
-    "missing": "{{category}} not selected yet."
+    "missing": "{{category}} not selected yet.",
+    "unverified": "Could not verify {{categoryA}} with {{categoryB}} because required specifications are missing."
   },
   "categoryDescriptions": {
     "cpu": "Headroom for gaming, compiling and AI workloads",
@@ -54,7 +55,7 @@
     "priceAsc": "Price low → high",
     "priceDesc": "Price high → low"
   },
-  "available": "{{count}} available",
+  "available": "{{count}} models",
   "notSelected": "Not selected",
   "selected": "Selected",
   "add": "Add",
@@ -90,7 +91,8 @@
     "warnings": "{{count}} warning — review before buying",
     "warnings_plural": "{{count}} warnings — review before buying",
     "errors": "{{count}} compatibility error — this build won't boot as-is",
-    "errors_plural": "{{count}} compatibility errors — this build won't boot as-is"
+    "errors_plural": "{{count}} compatibility errors — this build won't boot as-is",
+    "unverified": "{{count}} compatibility check(s) could not be verified — review the specifications"
   },
   "aiCta": {
     "title": "Let the advisor do the first pass",
@@ -100,9 +102,17 @@
   "specs": {
     "score": "score {{value}}",
     "estimatedScore": "Relative tier estimated from the model number, not a measured benchmark",
-    "inStock": "In stock",
-    "limited": "Limited",
-    "outOfStock": "Out of stock"
+    "inStock": "Reported in stock by retailer",
+    "limited": "Limited quantity reported by retailer",
+    "outOfStock": "Reported out of stock by retailer",
+    "stockUnknown": "Stock not confirmed",
+    "stockUnknownHint": "The retailer did not publish a stock state; check the product page before purchase.",
+    "stockAsOf": "Catalogue snapshot updated: {{date}}. Stock may have changed.",
+    "compatible": "Compatible with selection",
+    "incompatible": "Incompatible",
+    "unverified": "Not verified",
+    "review": "Review needed",
+    "stockUnknownAsOf": "Stock is not currently confirmed; last checked: {{date}}"
   },
   "alerts": {
     "save": "Save alert",
@@ -145,5 +155,16 @@
     "programming": "Compiles, containers, IDEs",
     "workstation": "CAD, simulation, rendering",
     "streaming": "Encode while you play"
+  },
+  "onlyCompatible": "Show components with no confirmed conflicts",
+  "onlyCompatibleHint": "Hides only parts with a confirmed conflict. Candidates that need more specifications or a related selected part remain visible with a neutral Not verified label instead of disappearing.",
+  "noCompatibleMatch": "No remaining components without a confirmed conflict",
+  "noCompatibleMatchHint": "Every current result has a confirmed conflict. Turn off the filter to inspect the reasons.",
+  "selection": {
+    "compatible": "{{name}} added — no known conflicts",
+    "incompatible": "Cannot add {{name}} — a conflict was found",
+    "unverified": "{{name}} added, but compatibility is unverified",
+    "review": "{{name}} added with a compatibility note",
+    "waitingForParts": "Compatibility cannot be confirmed until the related part is selected and enough specifications/rules are available. The part was added; checks will run again as you complete the build."
   }
 }

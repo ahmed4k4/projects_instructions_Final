@@ -60,3 +60,8 @@ pnpm build
 ```
 
 التحقق المحلي الذي تم في هذه النسخة: 16/16 فحص أداء AI، و7/7 فحوصات وضع الزائر والحساب، و19/19 فحصًا لمدخل Vercel، ونجاح فحوصات i18n وRTL والوصول إلى ملفات المصدر. لم يُشغّل Production Build أو Typecheck كامل بسبب عدم وجود `node_modules` في بيئة إعداد الحزمة؛ يجب تنفيذهما بعد `pnpm install`.
+
+
+## إصلاح إنشاء الحساب بدون Email Rate Limit
+
+إنشاء الحسابات باسم المستخدم يتم الآن عبر endpoint خادمي `/api/auth/signup` يستخدم Supabase Auth Admin REST API مع `email_confirm: true` للبريد الاصطناعي `@accounts.nexus.invalid`؛ لا يتم إرسال رسالة تأكيد. أضف `SUPABASE_SERVICE_ROLE_KEY` في Vercel كمتغير Server-only (بدون `VITE_`) وطبّق migration `015_username_signup_rate_limit.sql`. endpoint يحدد إنشاء الحسابات بخمسة حسابات لكل IP في الساعة. تسجيل الدخول العادي يظل عبر `signInWithPassword` باستخدام الاسم وكلمة المرور.

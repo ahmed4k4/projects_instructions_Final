@@ -26,8 +26,9 @@ export function CompatibilityBanner({ report, className }: CompatibilityBannerPr
   const errors = report.errors;
   const warnings = report.warnings.filter((w) => !w.ruleKey.startsWith('missing_'));
   const missing = report.warnings.filter((w) => w.ruleKey.startsWith('missing_'));
+  const unverified = report.unverified ?? [];
 
-  const state = errors.length > 0 ? 'error' : warnings.length > 0 ? 'warning' : 'ok';
+  const state = errors.length > 0 ? 'error' : warnings.length > 0 || unverified.length > 0 ? 'warning' : 'ok';
 
   const tone = {
     ok: {
@@ -41,7 +42,10 @@ export function CompatibilityBanner({ report, className }: CompatibilityBannerPr
     warning: {
       icon: AlertTriangle,
       wrap: 'border-warning/30 bg-warning/[0.07] text-warning',
-      label: t('builder.banner.warnings', { count: warnings.length }),
+      label:
+        warnings.length > 0
+          ? t('builder.banner.warnings', { count: warnings.length })
+          : t('builder.banner.unverified', { count: unverified.length }),
     },
     error: {
       icon: XCircle,
@@ -51,7 +55,7 @@ export function CompatibilityBanner({ report, className }: CompatibilityBannerPr
   }[state];
 
   const Icon = tone.icon;
-  const issues = [...errors, ...warnings];
+  const issues = [...errors, ...warnings, ...unverified];
   const expandable = issues.length > 0;
 
   return (

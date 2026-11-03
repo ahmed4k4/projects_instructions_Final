@@ -95,6 +95,7 @@ function appliesWhenMatches(a: PCComponent, b: PCComponent, config: Record<strin
 export function evaluateCompatibility(items: BuildItems, rules: CompatibilityRule[]): CompatibilityReport {
   const errors: CompatibilityIssue[] = [];
   const warnings: CompatibilityIssue[] = [];
+  const unverified: CompatibilityIssue[] = [];
   const ctx: RuleContext = { items, totalWatts: totalPowerWatts(items) };
 
   // A build cannot boot without these. Reported as warnings so the builder can
@@ -136,6 +137,15 @@ export function evaluateCompatibility(items: BuildItems, rules: CompatibilityRul
     const outcome = evaluateRule(rule, a, b, ctx);
     if (outcome === null) {
       skippedRules += 1;
+      unverified.push({
+        severity: 'warning',
+        ruleKey: 'unverified',
+        message: `Cannot verify ${rule.categoryA} × ${rule.categoryB}: required technical data is missing.`,
+        componentAId: a.id,
+        componentBId: b.id,
+        categoryA: rule.categoryA,
+        categoryB: rule.categoryB,
+      });
       continue;
     }
 
@@ -158,6 +168,7 @@ export function evaluateCompatibility(items: BuildItems, rules: CompatibilityRul
     isCompatible: errors.length === 0,
     errors,
     warnings,
+    unverified,
     checkedRules,
     skippedRules,
   };

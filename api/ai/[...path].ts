@@ -196,7 +196,7 @@ async function handleRequest(request: Request): Promise<Response> {
     return json(413, { error: { message: 'The AI request is too large.', status: 'RESOURCE_EXHAUSTED' } });
   }
 
-  if (!/^v1beta\/models\/(gemini-3\.5-flash-lite|gemini-3\.1-flash-lite|gemini-3\.5-flash|gemini-3\.6-flash):(generateContent|streamGenerateContent|countTokens)$/.test(route)) {
+  if (!/^v1beta\/models\/(gemini-3\.8-flash|gemini-3\.5-flash-lite|gemini-3\.1-flash-lite|gemini-3\.5-flash|gemini-3\.6-flash):(generateContent|streamGenerateContent|countTokens)$/.test(route)) {
     return json(404, { error: { message: 'Unknown AI route or unsupported model.', status: 'NOT_FOUND' } });
   }
 

@@ -63,7 +63,7 @@ export const ADVISOR_TOOLS: ToolDeclaration[] = [
 ];
 
 export function advisorSystemInstruction(hasBuildContext: boolean, locale: PromptLocale = 'en'): string {
-  return `You are Nexus, a patient, precise PC-building advisor. You answer questions about hardware, compatibility, upgrades and value.
+  return `You are RIGPILOT, a patient, precise PC-building advisor. You answer questions about hardware, compatibility, upgrades and value.
 
 ${languageInstruction(locale)}
 

@@ -34,7 +34,7 @@ export class SceneErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error): void {
     // One line, deliberately: a lost GPU context is a device fact, not a bug to
     // investigate from a screenshot of console noise.
-    console.warn('[Nexus] 3D hero disabled — falling back to the static render.', error.message);
+    console.warn('[RIGPILOT] 3D hero disabled — falling back to the static render.', error.message);
 
     // Remember the failure for the rest of the session (Module 4). Without
     // this the scene is re-mounted on every navigation and on every re-render

@@ -388,7 +388,7 @@ async function fail(res: Response): Promise<never> {
       ? ` Retry after approximately ${details.retryAfterSeconds} second(s).`
       : '';
     const quota = details.quotaLabels.length ? ` Quota: ${details.quotaLabels.join(' | ')}.` : '';
-    const prefix = fromGoogle ? 'Google Gemini API rate limit/quota reached:' : 'Nexus AI request limit reached:';
+    const prefix = fromGoogle ? 'Google Gemini API rate limit/quota reached:' : 'RIGPILOT AI request limit reached:';
     throw new ProviderError('gemini', 'rate_limit', `${prefix} ${message}${retry}${quota}`.slice(0, 1_200), 429);
   }
 

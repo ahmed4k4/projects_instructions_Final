@@ -1,8 +1,8 @@
 {
   "app": {
-    "name": "Nexus",
-    "tagline": "AI-Powered PC Builder",
-    "subtitle": "PC Builder",
+    "name": "RIGPILOT",
+    "tagline": "AI PC BUILDING, MADE CLEAR",
+    "subtitle": "BUILD WITH CONFIDENCE",
     "logoHome": "{{name}} — home"
   },
   "nav": {
@@ -61,13 +61,13 @@
     "localHint": "Saved in this browser"
   },
   "footer": {
-    "copyright": "© {{year}} Nexus PC Builder. Build data is illustrative.",
+    "copyright": "© {{year}} RIGPILOT. Build with confidence.",
     "engine": "Deterministic engines · Gemini agent"
   },
   "errors": {
     "boundaryTitle": "Something shorted out",
     "boundaryBody": "An unexpected error interrupted rendering. Your saved build is safe in local storage.",
-    "reload": "Reload Nexus",
+    "reload": "Reload RIGPILOT",
     "signInToSave": "Sign in to save builds.",
     "saveFailed": "Could not save the build: {{detail}}",
     "unknown": "unknown error",

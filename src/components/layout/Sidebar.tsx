@@ -93,7 +93,7 @@ function NavContent({ collapsed, onNavigate }: SidebarProps & { onNavigate?: () 
               <>
                 <span className="relative flex-1 truncate">{t(item.labelKey)}</span>
                 {item.badge && (
-                  <span className="relative rounded-full border border-accent/25 bg-accent/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-accent">
+                  <span className="relative rounded-full border border-secondary/25 bg-secondary/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-secondary">
                     {item.badge}
                   </span>
                 )}
@@ -142,7 +142,7 @@ export function Sidebar({ collapsed }: SidebarProps) {
         transition={reduce ? { duration: 0 } : { duration: 0.28, ease: EASE_OUT }}
         className={cn(
           'fixed inset-y-0 start-0 z-40 hidden lg:flex flex-col border-e border-border',
-          'bg-surface/85 backdrop-blur-2xl shadow-[0_0_44px_-32px_rgb(var(--primary)/0.55)]',
+          'rigpilot-sidebar backdrop-blur-2xl',
         )}
       >
         <div className={cn('flex h-16 items-center px-4', collapsed && 'justify-center px-0')}>

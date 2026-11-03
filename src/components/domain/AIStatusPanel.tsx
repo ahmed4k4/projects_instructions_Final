@@ -48,7 +48,7 @@ export function AIStatusPanel({ className }: { className?: string }) {
         'overflow-hidden rounded-xl border',
         tone === 'ok' && 'border-success/25 bg-success/[0.05]',
         tone === 'warning' && 'border-warning/25 bg-warning/[0.05]',
-        tone === 'idle' && 'border-border bg-surface/60',
+        tone === 'idle' && 'rigpilot-panel border-border',
         className,
       )}
     >

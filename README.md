@@ -1,4 +1,4 @@
-# Nexus — AI-Powered PC Builder
+# RIGPILOT — Build with confidence
 
 A production-grade web platform for designing, optimising and comparing custom PC
 builds, with a compatibility engine and Google Gemini advice.
@@ -376,7 +376,7 @@ docs/DATABASE.md
 | `/b/:slug` | Shareable build detail (public, RLS-friendly) |
 | `*` | Glitch 404 |
 
-## Design system — “Nexusâ€‌
+## Design system — “RIGPILOTâ€‌
 
 **Tokens** live in `src/styles/globals.css` as RGB triplets so Tailwind can
 compose alpha (`rgb(var(--primary) / 0.2)`). Dark is the default (`<html

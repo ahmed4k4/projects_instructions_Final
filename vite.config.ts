@@ -3,6 +3,88 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 import { defineConfig, loadEnv, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { handleAiRoute, readGeminiConfig, splitRoute } from './src/server/geminiProxy';
+import signupHandler from './api/auth/signup';
+import loginHandler from './api/auth/login';
+import authHealthHandler from './api/auth/health';
+
+
+
+type WebStandardHandler = { fetch(request: Request): Response | Promise<Response> };
+
+/**
+ * Local Vite equivalent of the Vercel username-auth functions.
+ *
+ * Vite serves the React application, not files under /api. Without this bridge,
+ * POST /api/auth/signup and /api/auth/login return the SPA's HTML/404 in local
+ * development even though the same files work as Vercel Functions after deploy.
+ */
+function authDevProxyPlugin(): Plugin {
+  return {
+    name: 'rigpilot-local-auth-api',
+    configureServer(server) {
+      const env = loadEnv(server.config.mode, process.cwd(), '');
+      const serverKeys = [
+        'SUPABASE_URL',
+        'SUPABASE_ANON_KEY',
+        'SUPABASE_SERVICE_ROLE_KEY',
+        'VITE_SUPABASE_URL',
+        'VITE_SUPABASE_ANON_KEY',
+        'AUTH_RATE_LIMIT_SALT',
+        'VERCEL_ENV',
+      ];
+      for (const key of serverKeys) {
+        // Shell variables take precedence over .env.local, matching Vite's
+        // normal environment precedence. These values remain server-side.
+        const value = process.env[key] || env[key];
+        if (value) process.env[key] = value;
+      }
+
+      const handlers: Record<string, WebStandardHandler> = {
+        '/api/auth/signup': signupHandler,
+        '/api/auth/login': loginHandler,
+        '/api/auth/health': authHealthHandler,
+      };
+
+      server.middlewares.use((req, res, next) => {
+        const host = req.headers.host || 'localhost:5173';
+        const requestUrl = new URL(req.url || '/', `http://${host}`);
+        const handler = handlers[requestUrl.pathname.replace(/\/$/, '')];
+        if (!handler) return next();
+
+        void (async () => {
+          const headers = new Headers();
+          for (const [name, value] of Object.entries(req.headers)) {
+            if (typeof value === 'string') headers.set(name, value);
+            else if (Array.isArray(value)) headers.set(name, value.join(', '));
+          }
+
+          const method = (req.method || 'GET').toUpperCase();
+          const body = method === 'GET' || method === 'HEAD' ? undefined : await readBody(req);
+          const request = new Request(requestUrl, {
+            method,
+            headers,
+            ...(body ? { body } : {}),
+          });
+          const response = await handler.fetch(request);
+          res.statusCode = response.status;
+          response.headers.forEach((value, name) => res.setHeader(name, value));
+          const payload = await response.arrayBuffer();
+          res.end(Buffer.from(payload));
+        })().catch((error: unknown) => {
+          console.error('[RIGPILOT local auth API] request failed:', error instanceof Error ? error.message : 'unknown error');
+          if (res.headersSent) {
+            res.destroy(error instanceof Error ? error : undefined);
+            return;
+          }
+          res.statusCode = 502;
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-store');
+          res.end(JSON.stringify({ error: 'تعذر تشغيل خدمة الحسابات محليًا. راجع إعدادات Supabase في .env.local.' }));
+        });
+      });
+    },
+  };
+}
 
 /**
  * Dev-server twin of the Vercel function in `api/ai/[...route].ts`.
@@ -19,7 +101,7 @@ import { handleAiRoute, readGeminiConfig, splitRoute } from './src/server/gemini
  */
 function geminiProxyPlugin(): Plugin {
   return {
-    name: 'nexus-ai-proxy',
+    name: 'rigpilot-ai-proxy',
     configureServer(server) {
       const env = loadEnv(server.config.mode, process.cwd(), '');
       const primaryKey = env.GEMINI_API_KEY ?? env.GOOGLE_API_KEY ?? process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY ?? '';
@@ -30,7 +112,7 @@ function geminiProxyPlugin(): Plugin {
 
       server.middlewares.use('/api/ai', (req: IncomingMessage, res: ServerResponse) => {
         void forward(req, res, config, apiKey, fallbackKeys).catch((error: unknown) => {
-          console.error('[Nexus AI proxy] request failed:', error instanceof Error ? error.message : 'unknown error');
+          console.error('[RIGPILOT AI proxy] request failed:', error instanceof Error ? error.message : 'unknown error');
           if (res.headersSent) {
             res.destroy(error instanceof Error ? error : undefined);
             return;
@@ -103,7 +185,7 @@ async function readBody(req: IncomingMessage): Promise<string | null> {
 }
 export default defineConfig(() => {
   return {
-    plugins: [react(), geminiProxyPlugin()],
+    plugins: [react(), authDevProxyPlugin(), geminiProxyPlugin()],
     // Keep the dependency pre-bundle at the project root (Vite's documented
     // Windows workaround). Inside node_modules some filesystems race on the
     // deps_temp â†’ deps rename, which surfaces as "504 Outdated Optimize Dep".

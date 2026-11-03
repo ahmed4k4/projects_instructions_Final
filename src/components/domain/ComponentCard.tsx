@@ -110,9 +110,9 @@ export function ComponentCard({ component, selected, onSelect, onRemove, livePri
       variants={staggerItem}
       layout
       className={cn(
-        'group relative flex flex-col overflow-hidden rounded-xl border bg-surface p-5 shadow-card',
+        'group relative flex flex-col overflow-hidden rounded-xl border border-border rigpilot-panel p-5',
         'transition-[border-color,box-shadow,transform] duration-300 ease-nexus',
-        'hover:-translate-y-1 hover:border-primary/30 hover:shadow-glow-sm',
+        'hover:-translate-y-1 hover:border-primary/45 hover:shadow-glow-sm',
         selected && 'border-primary/50 shadow-glow-sm',
       )}
     >

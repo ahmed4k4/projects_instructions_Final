@@ -36,7 +36,7 @@ export function AIThinkingPanel({ narration, steps, phase, error, className }: A
   return (
     <div
       className={cn(
-        'overflow-hidden rounded-xl border border-primary/20 bg-surface/70 backdrop-blur',
+        'overflow-hidden rounded-xl border border-secondary/25 bg-secondary/[0.035] backdrop-blur',
         className,
       )}
     >
@@ -44,7 +44,7 @@ export function AIThinkingPanel({ narration, steps, phase, error, className }: A
         <span
           className={cn(
             'grid size-6 place-items-center rounded-md',
-            phase === 'error' ? 'bg-danger/15 text-danger' : 'bg-primary/15 text-primary-glow',
+            phase === 'error' ? 'bg-danger/15 text-danger' : 'bg-secondary/15 text-secondary',
           )}
         >
           {phase === 'thinking' ? (

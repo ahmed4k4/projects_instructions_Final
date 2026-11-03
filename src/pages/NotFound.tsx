@@ -29,7 +29,7 @@ export default function NotFound() {
           </motion.p>
           <motion.p
             aria-hidden
-            className="pointer-events-none absolute inset-0 select-none font-mono text-[7rem] font-semibold leading-none tracking-tighter text-accent/25 sm:text-[9rem]"
+            className="pointer-events-none absolute inset-0 select-none font-mono text-[7rem] font-semibold leading-none tracking-tighter text-secondary/20 sm:text-[9rem]"
             animate={reduce ? undefined : { x: [0, 2, -2, 1, 0], y: [0, -1, 1, 0] }}
             transition={{ duration: 0.28, repeat: Infinity, repeatDelay: 3.6 }}
           >

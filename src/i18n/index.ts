@@ -111,6 +111,7 @@ void i18n
   .init({
     resources: RESOURCES,
     fallbackLng: 'en',
+    debug: false,
     supportedLngs: [...SUPPORTED_LANGUAGES],
     load: 'languageOnly',
     ns: ['translation'],

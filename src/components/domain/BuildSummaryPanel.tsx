@@ -85,7 +85,7 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
   return (
     <div
       className={cn(
-        'flex flex-col gap-4 rounded-2xl border border-border bg-surface/70 p-5 backdrop-blur-xl',
+        'rigpilot-panel flex flex-col gap-4 rounded-2xl p-5 backdrop-blur-xl',
         compact ? '' : 'lg:sticky lg:top-24',
       )}
     >
@@ -99,11 +99,15 @@ export function BuildSummaryPanel({ compact = false }: { compact?: boolean }) {
             {useCaseLabel} · {t('common.parts', { count: totals.itemCount })}
           </p>
         </div>
-        <BuildScoreRing
-          score={totals.itemCount === 0 ? null : health.score.total}
-          size={68}
-          strokeWidth={5}
-        />
+        <div className="flex shrink-0 flex-col items-center gap-1">
+          <span className="technical-kicker text-[9px]">{t('builder.buildScore.label')}</span>
+          <BuildScoreRing
+            score={totals.itemCount === 0 ? null : health.score.total}
+            size={68}
+            strokeWidth={5}
+            label={t('builder.buildScore.label')}
+          />
+        </div>
       </header>
 
       <div className="flex flex-wrap items-center gap-2">

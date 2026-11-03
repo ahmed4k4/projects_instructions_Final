@@ -52,7 +52,7 @@ export function Topbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 min-w-0 border-b border-border bg-background/82 backdrop-blur-2xl shadow-[0_8px_30px_-28px_rgb(var(--primary)/0.8)]">
+      <header className="rigpilot-topbar sticky top-0 z-30 min-w-0 border-b backdrop-blur-2xl">
         {/*
          * `min-w-0` on the row AND on the search button is what keeps the topbar
          * inside a 375px viewport: a flex child defaults to `min-width: auto`,
@@ -81,7 +81,7 @@ export function Topbar() {
               // After `sm:h-9`, so a coarse pointer keeps the 44px height on a
               // tablet that also matches the `sm` breakpoint.
               'pointer-coarse:min-h-11',
-              'bg-surface/75 px-3 text-start text-sm text-muted-foreground transition-colors duration-200',
+              'bg-surface/80 px-3 text-start text-sm text-muted-foreground transition-colors duration-200',
               'hover:border-primary/30 hover:bg-surface lg:ms-0',
             )}
           >
@@ -146,7 +146,7 @@ export function Topbar() {
                   <button
                     type="button"
                     aria-label={t('account.signedIn')}
-                    className="ms-1 grid size-9 place-items-center rounded-full border border-border-strong bg-gradient-to-br from-primary/30 to-accent/20 text-xs font-semibold text-foreground transition hover:border-primary/40 pointer-coarse:size-11"
+                    className="ms-1 grid size-9 place-items-center rounded-full border border-border-strong bg-gradient-to-br from-primary/30 to-secondary/20 text-xs font-semibold text-foreground transition hover:border-primary/40 pointer-coarse:size-11"
                   >
                     {(user.email ?? 'U').slice(0, 2).toUpperCase()}
                   </button>

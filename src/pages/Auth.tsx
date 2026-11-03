@@ -58,29 +58,29 @@ export default function Auth() {
   };
 
   return (
-    <div className="nexus-workbench relative flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden px-4 py-8 sm:px-6 lg:py-14">
+    <div className="rigpilot-workbench relative flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden px-4 py-8 sm:px-6 lg:py-14">
       <div aria-hidden className="pointer-events-none absolute -start-32 top-10 size-80 rounded-full bg-primary/10 blur-[100px]" />
-      <div aria-hidden className="pointer-events-none absolute -end-28 bottom-0 size-96 rounded-full bg-accent/10 blur-[110px]" />
+      <div aria-hidden className="pointer-events-none absolute -end-28 bottom-0 size-96 rounded-full bg-secondary/10 blur-[110px]" />
 
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: reduce ? 0 : 0.45, ease: EASE_OUT }}
-        className="relative grid w-full max-w-5xl overflow-hidden rounded-[28px] border border-border-strong bg-surface/90 shadow-[0_36px_100px_-44px_rgba(0,0,0,0.85)] backdrop-blur-2xl lg:grid-cols-[1.04fr_0.96fr]"
+        className="relative grid w-full max-w-5xl overflow-hidden rounded-2xl border border-border-strong bg-surface/90 shadow-[0_36px_100px_-44px_rgba(0,0,0,0.85)] backdrop-blur-2xl lg:grid-cols-[1.04fr_0.96fr]"
       >
         <section className="relative hidden min-h-[620px] flex-col justify-between overflow-hidden border-e border-border bg-[linear-gradient(150deg,rgb(var(--surface-elevated)),rgb(var(--surface-inset)))] p-9 lg:flex xl:p-12">
           <div aria-hidden className="absolute inset-0 opacity-70" style={{ backgroundImage: 'linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px)', backgroundSize: '32px 32px', maskImage: 'linear-gradient(to bottom, black, transparent 92%)' }} />
           <div aria-hidden className="absolute -end-20 top-28 size-80 rounded-full border border-primary/20" />
-          <div aria-hidden className="absolute -end-8 top-40 size-56 rounded-full border border-accent/20" />
+          <div aria-hidden className="absolute -end-8 top-40 size-56 rounded-full border border-secondary/20" />
           <div className="relative z-10"><Logo /></div>
 
           <div className="relative z-10">
             <div className="mb-5 flex items-center gap-2 text-primary-glow">
               <span className="h-px w-8 bg-primary" />
-              <span className="technical-kicker">NEXUS / BUILD LAB</span>
+              <span className="technical-kicker">RIGPILOT / BUILD SYSTEM</span>
             </div>
             <h2 className="max-w-md text-4xl font-bold leading-[1.16] tracking-tight xl:text-5xl">
-              {ar ? <>كل قطعة لها دور.<br /><span className="text-gradient">كل تجميعة لها هدف.</span></> : <>Every part has a purpose.<br /><span className="text-gradient">Every build has a goal.</span></>}
+              {ar ? <>كل مكوّن له دور.<br /><span className="text-gradient">كل تجميعة لها هدف.</span></> : <>Every component has a purpose.<br /><span className="text-gradient">Every build has a goal.</span></>}
             </h2>
             <p className="mt-5 max-w-md text-sm leading-7 text-muted-foreground">
               {ar ? 'مساحة واحدة لاختيار المكونات، وفحص التوافق، وموازنة الأداء والميزانية قبل ما تشتري.' : 'One workspace to select components, validate compatibility, and balance performance with budget before you buy.'}
@@ -112,7 +112,7 @@ export default function Auth() {
         </section>
 
         <section className="relative flex flex-col justify-center p-6 sm:p-9 xl:p-12">
-          <div className="mb-8 flex items-center justify-between lg:hidden"><Logo /><span className="technical-kicker">BUILD LAB</span></div>
+          <div className="mb-8 flex items-center justify-between lg:hidden"><Logo /><span className="technical-kicker">BUILD WITH CONFIDENCE</span></div>
           {!available ? (
             <div className="space-y-4">
               <div className="grid size-12 place-items-center rounded-2xl border border-warning/20 bg-warning/10 text-warning"><ShieldCheck /></div>
@@ -129,7 +129,7 @@ export default function Auth() {
           ) : (
             <>
               <div className="mb-8">
-                <p className="technical-kicker">{mode === 'login' ? 'YOUR WORKSPACE / ACCESS' : 'NEXUS ID / CREATE'}</p>
+                <p className="technical-kicker">{mode === 'login' ? 'RIGPILOT ID / ACCESS' : 'RIGPILOT ID / CREATE'}</p>
                 <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-[2.1rem]">{mode === 'login' ? (ar ? 'مرحبًا بعودتك' : 'Welcome back') : (ar ? 'ابدأ مساحة عملك' : 'Create your workspace')}</h1>
                 <p className="mt-2 text-sm leading-7 text-muted-foreground">{ar ? 'حسابك اختياري؛ تقدر تبدأ كزائر وتحتفظ بالتجميعات محليًا.' : 'An account is optional. Start as a guest and keep builds locally.'}</p>
               </div>

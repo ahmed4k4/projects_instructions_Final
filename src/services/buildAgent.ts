@@ -101,7 +101,7 @@ function parseFinalizeJson(text: string): FinalizePayload | null {
     const value = JSON.parse(cleaned.slice(first, last + 1)) as Partial<FinalizePayload>;
     if (!Array.isArray(value.items)) return null;
     return {
-      buildName: typeof value.buildName === 'string' ? value.buildName : 'Nexus AI Build',
+      buildName: typeof value.buildName === 'string' ? value.buildName : 'RIGPILOT AI Build',
       items: value.items
         .filter((item) => item && typeof item.componentId === 'string')
         .map((item) => ({
@@ -223,7 +223,7 @@ async function selectBuildFromSnapshot(
           FINALISE_BUILD_SCHEMA,
           {
             model: 'quality',
-            systemInstruction: `You are Nexus, an expert PC builder. Choose a balanced, technically compatible build only from exact IDs in the authoritative catalogue snapshot. Respect the user's workload, preferences and hard EGP budget. Never invent IDs and never select out_of_stock. Return only JSON matching the response schema. Do not provide a list of options: choose one complete build.`,
+            systemInstruction: `You are RIGPILOT, an expert PC builder. Choose a balanced, technically compatible build only from exact IDs in the authoritative catalogue snapshot. Respect the user's workload, preferences and hard EGP budget. Never invent IDs and never select out_of_stock. Return only JSON matching the response schema. Do not provide a list of options: choose one complete build.`,
             maxOutputTokens: 4096,
             thinkingLevel: 'MEDIUM',
             signal: options.signal,
@@ -325,7 +325,7 @@ ${JSON.stringify(snapshot)}`,
 
     const result = await geminiClient.generate(contents, {
       model: 'quality',
-      systemInstruction: `You are Nexus, an expert PC building assistant. The research phase has ended. The authoritative catalogue snapshot is sufficient; choose a complete balanced build within the budget. Use only exact IDs in that snapshot, avoid out_of_stock parts, and respect all preferences. Ignore any earlier instruction to keep researching. You MUST call finalize_build exactly once now and must not respond with prose.`,
+      systemInstruction: `You are RIGPILOT, an expert PC building assistant. The research phase has ended. The authoritative catalogue snapshot is sufficient; choose a complete balanced build within the budget. Use only exact IDs in that snapshot, avoid out_of_stock parts, and respect all preferences. Ignore any earlier instruction to keep researching. You MUST call finalize_build exactly once now and must not respond with prose.`,
       tools: finalTool,
       toolConfig: { functionCallingConfig: { mode: 'ANY', allowedFunctionNames: ['finalize_build'] } },
       maxOutputTokens: 4096,
@@ -557,7 +557,7 @@ ${JSON.stringify(snapshot)}`,
     for (const ids of executor.getValidatedSelections()) {
       const components = await executor.resolve(ids);
       const payload: FinalizePayload = {
-        buildName: 'Nexus AI Build',
+        buildName: 'RIGPILOT AI Build',
         items: components.map((component) => ({
           category: component.category,
           componentId: component.id,

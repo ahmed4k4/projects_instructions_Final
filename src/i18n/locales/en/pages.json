@@ -1,9 +1,9 @@
 {
   "landing": {
-    "badge": "Design system · deterministic engines · live AI",
-    "heroLine1": "Build a PC that actually",
-    "heroLine2": "makes sense.",
-    "heroBody": "Nexus checks every socket, watt and millimetre while you choose — then hands the whole build to Gemini for an honest second opinion. No guesswork, no incompatible carts.",
+    "badge": "Expert guidance · verified compatibility · clear decisions",
+    "heroLine1": "Build with confidence.",
+    "heroLine2": "Every part. Every decision.",
+    "heroBody": "RIGPILOT is your expert AI co-pilot for PC building. Choose components, validate compatibility, balance power and budget, and understand every trade-off before you buy.",
     "startBuilding": "Start building",
     "openAdvisor": "Open AI advisor",
     "trust1": "32 verified components",
@@ -15,14 +15,14 @@
     "floatPower": "Power headroom",
     "floatTotal": "Estimated total",
     "floatCompatible": "All 8 parts compatible",
-    "featuresEyebrow": "Why Nexus",
+    "featuresEyebrow": "Why RIGPILOT",
     "featuresTitle": "Everything a first-time builder wishes they had",
-    "featuresBody": "Built on the same logic that catches expensive mistakes before checkout — then explained in plain English.",
+    "featuresBody": "A calm, precise workspace that turns complex hardware specifications into clear decisions — with compatibility checks running as you build.",
     "features": {
       "compatTitle": "Compatibility engine",
       "compatBody": "Sockets, RAM types, GPU clearance, PSU headroom and cooler height are verified as you pick — no surprise reddit threads.",
       "aiTitle": "Gemini build advisor",
-      "aiBody": "Describe your budget and workload in plain language. Get a coherent parts list with the reasoning behind every pick.",
+      "aiBody": "Describe your needs and budget. RIGPILOT translates them into a balanced parts list and explains the trade-offs behind every choice.",
       "catalogTitle": "32 curated parts",
       "catalogBody": "A curated catalogue with real TDPs, lengths and chipset data — not scraped marketing copy.",
       "powerTitle": "Live power budget",
@@ -94,7 +94,7 @@
     "emptyHint": "Publish one of your builds to start the feed.",
     "rate": "Rate this build",
     "yourRating": "Your rating",
-    "demoNote": "These are example builds shipped with Nexus. Publish your own to see real submissions here.",
+    "demoNote": "These are example builds shipped with RIGPILOT. Publish your own to see real submissions here.",
     "prebuiltNote": "No community builds published yet. These are generated configurations — real parts at live Egyptian prices — not user submissions.",
     "trendingNote": "Suggested topics, not measured activity.",
     "viewBuild": "View build"
@@ -150,7 +150,7 @@
     "timeLabel": "Est. build time"
   },
   "auth": {
-    "title": "Sign in to Nexus",
+    "title": "Sign in to RIGPILOT",
     "body": "Optional. Sign in to sync builds across devices and publish to the community.",
     "email": "Email",
     "sendLink": "Email me a sign-in link",

@@ -13,7 +13,7 @@ export const isSupabaseConfigured = Boolean(url && anonKey) && !url?.includes('y
 function createSupabaseClient(): SupabaseClient<Database> | null {
   if (!isSupabaseConfigured) {
     console.warn(
-      '[Nexus] Supabase is not configured. Copy .env.example to .env.local and set ' +
+      '[RIGPILOT] Supabase is not configured. Copy .env.example to .env.local and set ' +
         'VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY. The app will run with sample data.',
     );
     return null;
@@ -26,7 +26,7 @@ function createSupabaseClient(): SupabaseClient<Database> | null {
       detectSessionInUrl: true,
     },
     global: {
-      headers: { 'x-application-name': 'nexus-pc-builder' },
+      headers: { 'x-application-name': 'rigpilot-pc-builder' },
     },
   });
 }

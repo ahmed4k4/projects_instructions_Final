@@ -145,4 +145,4 @@ export const BUDGET_PRESETS = [50_000, 75_000, 100_000, 150_000, 225_000] as con
 
 export const RESOLUTIONS = ['1080p', '1440p', '4K'] as const;
 
-export const APP_NAME = 'Nexus';
+export const APP_NAME = 'RIGPILOT';

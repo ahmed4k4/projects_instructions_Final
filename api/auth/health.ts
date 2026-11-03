@@ -9,11 +9,11 @@ export default {
     try { projectRef = new URL(supabaseUrl).hostname.split('.')[0] ?? null; } catch { /* invalid/missing URL */ }
     return Response.json({
       ok: Boolean(supabaseUrl && anonKey && serviceRoleKey),
-      release: '1.1.0',
+      release: '1.2.1',
       signupReady: Boolean(supabaseUrl && anonKey && serviceRoleKey),
       loginReady: Boolean(supabaseUrl && anonKey),
       projectRef,
-      environment: process.env.VERCEL_ENV ?? 'unknown',
+      environment: process.env.VERCEL_ENV ?? (process.env.NODE_ENV === 'development' ? 'development' : 'unknown'),
     }, { headers: { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' } });
   },
 };

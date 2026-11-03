@@ -10,6 +10,7 @@ interface LogoProps {
   className?: string;
 }
 
+/** RIGPILOT mark: a precision chip frame with a forward signal path. */
 export function Logo({ compact = false, to = '/', className }: LogoProps) {
   const reduce = useReducedMotion();
   const { t } = useTranslation();
@@ -18,31 +19,35 @@ export function Logo({ compact = false, to = '/', className }: LogoProps) {
     <Link
       to={to}
       aria-label={t('common.logoHome', { name: APP_NAME })}
-      className={cn(
-        'group flex items-center gap-2.5 outline-none',
-        // A finger target: the mark itself is 36px, which is under the 44px rule.
-        'pointer-coarse:min-h-11',
-        className,
-      )}
+      className={cn('group flex items-center gap-3 outline-none pointer-coarse:min-h-11', className)}
     >
       <motion.span
-        className="relative grid size-10 place-items-center rounded-xl border border-primary/35 bg-[linear-gradient(145deg,rgb(var(--surface-elevated)),rgb(var(--surface-inset)))] shadow-[0_8px_24px_-12px_rgb(var(--primary)/0.8)] pointer-coarse:size-11"
-        whileHover={reduce ? undefined : { rotate: -4, scale: 1.05 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+        className="relative grid size-10 shrink-0 place-items-center rounded-xl border border-primary/35 bg-[linear-gradient(145deg,rgb(var(--surface-elevated)),rgb(var(--surface-inset)))] shadow-[0_8px_28px_-13px_rgb(var(--primary)/0.72)] pointer-coarse:size-11"
+        whileHover={reduce ? undefined : { y: -1, scale: 1.035 }}
+        transition={{ type: 'spring', stiffness: 320, damping: 22 }}
       >
-        <span className="absolute inset-1 rounded-lg border border-accent/20" />
-        <svg viewBox="0 0 32 32" className="relative size-6" fill="none" aria-hidden>
-          <rect x="5" y="5" width="22" height="22" rx="5" stroke="rgb(var(--primary-glow))" strokeWidth="1.6" />
-          <rect x="10" y="10" width="12" height="12" rx="2" fill="rgb(var(--primary)/0.16)" stroke="rgb(var(--accent))" strokeWidth="1.4" />
-          <path d="M13 2v3M19 2v3M13 27v3M19 27v3M2 13h3M2 19h3M27 13h3M27 19h3" stroke="rgb(var(--primary-glow))" strokeWidth="1.6" strokeLinecap="round" />
-          <path d="M13 16h6M16 13v6" stroke="rgb(var(--accent))" strokeWidth="1.5" strokeLinecap="round" />
+        <span className="absolute inset-[5px] rounded-lg border border-secondary/25" />
+        <svg viewBox="0 0 40 40" className="relative size-[29px]" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="rigpilot-chip" x1="5" y1="5" x2="35" y2="35" gradientUnits="userSpaceOnUse">
+              <stop stopColor="rgb(66 217 245)" />
+              <stop offset="1" stopColor="rgb(154 135 255)" />
+            </linearGradient>
+          </defs>
+          <rect x="7" y="7" width="26" height="26" rx="5.5" stroke="url(#rigpilot-chip)" strokeWidth="1.8" />
+          <path d="M13 3v4M20 3v4M27 3v4M13 33v4M20 33v4M27 33v4M3 13h4M3 20h4M3 27h4M33 13h4M33 20h4M33 27h4" stroke="rgb(112 231 255)" strokeWidth="1.5" strokeLinecap="round" />
+          <rect x="13" y="13" width="14" height="14" rx="2.5" fill="rgb(66 217 245 / 0.09)" stroke="rgb(154 135 255)" strokeWidth="1.35" />
+          <path d="M15.5 20h8.1M20.5 16.6 24 20l-3.5 3.4" stroke="rgb(184 243 107)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
+        <span className="pointer-events-none absolute -inset-1 rounded-2xl border border-primary/0 transition-colors duration-300 group-hover:border-primary/20" />
       </motion.span>
 
       {!compact && (
-        <span className="flex flex-col leading-none">
-          <span className="text-sm font-bold tracking-[0.12em]">{APP_NAME}<span className="text-primary-glow">.</span></span>
-          <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+        <span className="flex min-w-0 flex-col leading-none">
+          <span className="text-sm font-extrabold tracking-[0.14em] text-foreground">
+            {APP_NAME}<span className="text-primary">.</span>
+          </span>
+          <span className="mt-1.5 text-[9px] font-semibold uppercase tracking-[0.13em] text-muted-foreground">
             {t('app.subtitle')}
           </span>
         </span>

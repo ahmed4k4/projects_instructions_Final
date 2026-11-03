@@ -137,7 +137,7 @@ export function detectLocale(text: string): PromptLocale {
 
 /** System instruction: the rules the agent must follow on every turn. */
 export function buildSystemInstruction(locale: PromptLocale = 'en'): string {
-  return `You are Nexus, an expert PC builder with 15 years of experience. You select parts that fit a budget, a workload and a set of preferences, and you explain trade-offs honestly.
+  return `You are RIGPILOT, an expert PC builder with 15 years of experience. You select parts that fit a budget, a workload and a set of preferences, and you explain trade-offs honestly.
 
 ${languageInstruction(locale)}
 

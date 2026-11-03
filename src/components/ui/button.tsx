@@ -18,8 +18,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-primary text-primary-foreground shadow-[0_0_40px_-10px_rgba(99,102,241,0.6)] ' +
-          'hover:bg-primary-glow hover:shadow-[0_0_44px_-8px_rgba(129,140,248,0.75)] ' +
+          'bg-primary text-primary-foreground shadow-[0_0_40px_-10px_rgba(66,217,245,0.24)] ' +
+          'hover:bg-primary-glow hover:shadow-[0_0_44px_-8px_rgba(66,217,245,0.36)] ' +
           'active:brightness-95',
         secondary:
           'border border-border-strong bg-surface-elevated text-foreground hover:border-primary/40 hover:bg-surface hover:shadow-glow-sm',

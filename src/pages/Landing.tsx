@@ -193,7 +193,7 @@ export default function Landing() {
       {/* ------------------------------------------------------------------ */}
       {/* HERO                                                               */}
       {/* ------------------------------------------------------------------ */}
-      <section ref={heroRef} className="nexus-workbench relative overflow-hidden px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
+      <section ref={heroRef} className="rigpilot-workbench relative overflow-hidden px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
         <GradientMesh />
 
         <div className="relative mx-auto max-w-6xl">
@@ -203,7 +203,7 @@ export default function Landing() {
           >
             <motion.div variants={heroStagger} initial="hidden" animate="visible">
               <motion.div variants={fadeUp} className="mb-4 flex items-center justify-center gap-2">
-                <span className="technical-kicker">NEXUS / BUILD LAB</span>
+                <span className="technical-kicker">RIGPILOT / BUILD SYSTEM</span>
                 <span className="h-px w-8 bg-primary/60" />
               </motion.div>
               <motion.div variants={fadeUp} className="flex justify-center">
@@ -499,11 +499,11 @@ export default function Landing() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-primary/25 bg-surface p-10 text-center shadow-[0_0_80px_-30px_rgba(99,102,241,0.55)] sm:p-16"
+          className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-primary/25 bg-surface p-10 text-center shadow-[0_0_80px_-30px_rgba(66,217,245,0.20)] sm:p-16"
         >
           <div className="absolute inset-0 grid-overlay opacity-50" />
           <div className="absolute -start-20 -top-20 size-64 rounded-full bg-primary/20 blur-3xl" />
-          <div className="absolute -bottom-24 -end-16 size-64 rounded-full bg-accent/15 blur-3xl" />
+          <div className="absolute -bottom-24 -end-16 size-64 rounded-full bg-secondary/10 blur-3xl" />
 
           <div className="relative">
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">

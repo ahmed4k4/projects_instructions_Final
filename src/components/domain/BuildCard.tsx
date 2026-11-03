@@ -47,15 +47,15 @@ export function BuildCard({ build, rating, className }: BuildCardProps) {
       <Link
         to={`/b/${build.slug}`}
         className={cn(
-          'flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface shadow-card',
+          'rigpilot-panel flex h-full flex-col overflow-hidden rounded-xl border border-border',
           'transition-[transform,border-color,box-shadow] duration-300 ease-nexus',
           'hover:-translate-y-1 hover:border-primary/30 hover:shadow-glow-sm',
         )}
       >
         {/* Visual header: gradient + component glyphs instead of stock imagery */}
-        <div className="relative h-32 overflow-hidden border-b border-border bg-gradient-to-br from-primary/15 via-surface to-accent/10">
+        <div className="relative h-32 overflow-hidden border-b border-border bg-gradient-to-br from-primary/10 via-surface to-secondary/10">
           <div className="absolute inset-0 grid-overlay opacity-70" />
-          <div className="absolute -end-6 -top-6 size-28 rounded-full bg-primary/20 blur-3xl" />
+          <div className="absolute -end-6 -top-6 size-28 rounded-full bg-secondary/10 blur-3xl" />
           <div className="absolute bottom-3 start-4 flex items-center gap-2">
             <Badge variant="primary">{useCase?.label ?? build.useCase}</Badge>
             {rating && (

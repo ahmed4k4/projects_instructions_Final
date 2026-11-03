@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 
 const tones: Record<string, string> = {
   primary: 'border-primary/25 bg-primary/10 text-primary-glow',
-  accent: 'border-accent/25 bg-accent/10 text-accent',
+  accent: 'border-secondary/25 bg-secondary/10 text-secondary',
   secondary: 'border-secondary/25 bg-secondary/10 text-secondary',
   success: 'border-success/25 bg-success/10 text-success',
   warning: 'border-warning/25 bg-warning/10 text-warning',

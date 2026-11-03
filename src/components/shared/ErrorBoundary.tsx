@@ -27,7 +27,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo): void {
-    console.error('[Nexus] Unhandled render error', error, info.componentStack);
+    console.error('[RIGPILOT] Unhandled render error', error, info.componentStack);
   }
 
   private reset = () => {

@@ -1,7 +1,7 @@
 import type { Transition, Variants } from 'framer-motion';
 
 /**
- * NEXUS motion system.
+ * RIGPILOT motion system.
  *
  * Rules of the house: 200–400ms, ease-out or spring, never bouncy, and every
  * preset must still look intentional when reduced motion collapses it to a

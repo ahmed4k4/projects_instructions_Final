@@ -24,7 +24,7 @@ const config: Record<
   },
   info: {
     icon: Info,
-    className: 'border-accent/25 bg-accent/10 text-accent',
+    className: 'border-secondary/25 bg-secondary/10 text-secondary',
     defaultLabel: 'Heads up',
   },
 };

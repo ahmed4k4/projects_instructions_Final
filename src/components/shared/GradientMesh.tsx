@@ -14,7 +14,7 @@ interface GradientMeshProps {
  */
 export function GradientMesh({ className, intensity = 'strong' }: GradientMeshProps) {
   const reduce = useReducedMotion();
-  const strength = intensity === 'strong' ? 1 : 0.55;
+  const strength = intensity === 'strong' ? 0.72 : 0.38;
 
   return (
     <div aria-hidden className={cn('pointer-events-none absolute inset-0 overflow-hidden', className)}>
@@ -23,7 +23,7 @@ export function GradientMesh({ className, intensity = 'strong' }: GradientMeshPr
       <motion.div
         className="absolute -left-[15%] -top-[25%] size-[52rem] rounded-full blur-[120px] animate-mesh-drift"
         style={{
-          background: `radial-gradient(circle at center, rgb(99 102 241 / ${0.32 * strength}), transparent 65%)`,
+          background: `radial-gradient(circle at center, rgb(var(--secondary) / ${0.22 * strength}), transparent 65%)`,
           opacity: reduce ? 0.7 : 1,
         }}
       />
@@ -31,7 +31,7 @@ export function GradientMesh({ className, intensity = 'strong' }: GradientMeshPr
         className="absolute -right-[10%] -top-[10%] size-[44rem] rounded-full blur-[130px] animate-mesh-drift"
         style={{
           animationDelay: '-7s',
-          background: `radial-gradient(circle at center, rgb(139 92 246 / ${0.24 * strength}), transparent 65%)`,
+          background: `radial-gradient(circle at center, rgb(var(--primary) / ${0.16 * strength}), transparent 65%)`,
           opacity: reduce ? 0.7 : 1,
         }}
       />
@@ -39,7 +39,7 @@ export function GradientMesh({ className, intensity = 'strong' }: GradientMeshPr
         className="absolute bottom-[-30%] left-[25%] size-[40rem] rounded-full blur-[140px] animate-mesh-drift"
         style={{
           animationDelay: '-14s',
-          background: `radial-gradient(circle at center, rgb(34 211 238 / ${0.16 * strength}), transparent 65%)`,
+          background: `radial-gradient(circle at center, rgb(var(--accent) / ${0.10 * strength}), transparent 65%)`,
           opacity: reduce ? 0.6 : 1,
         }}
       />

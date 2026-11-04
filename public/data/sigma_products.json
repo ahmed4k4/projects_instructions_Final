@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-03T05:20:49.520142+00:00",
+  "capturedAt": "2026-11-04T07:14:12.853929+00:00",
   "source": "scripts/sigma_worker.py",
   "retailer": "sigma",
   "status": "ok",
@@ -10,154 +10,98 @@
   "products": [
     {
       "retailerId": "sigma",
-      "externalId": "asus-dual-geforce-rtx-3050-oc-edition-8gb-g5hpv1vzhvpn",
-      "name": "ASUS Dual GeForce RTX 3050 OC Edition 8GB GDDR6",
-      "category": "gpu",
-      "priceEgp": 17800.0,
+      "externalId": "cpu-intel-pentium-g2020-2-core2-threads-29-ghz-socket-lga-1155-processor-cqldxqejdedr",
+      "name": "CPU-INTEL-Pentium-G2020 2 Core/2 Threads 2.9 GHz Socket LGA 1155 Processor",
+      "category": "cpu",
+      "priceEgp": 1000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-dual-geforce-rtx-3050-oc-edition-8gb-g5hpv1vzhvpn",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fdf7eb815-d91a-49da-8abb-1406a3368d1c&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=cpu-intel-pentium-g2020-2-core2-threads-29-ghz-socket-lga-1155-processor-cqldxqejdedr",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=%2Fimages%2Fproduct-placeholder.png&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "adata-legend-710-256gb-pcie-gen3-x4-m2-2280-solid-state-drive-aleg-710-256gcs-jvlraduwh3mg",
-      "name": "ADATA LEGEND 710 256GB PCIe Gen3 x4 M.2 2280 Solid State Drive ALEG-710-256GCS",
-      "category": "storage",
-      "priceEgp": 3400.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=adata-legend-710-256gb-pcie-gen3-x4-m2-2280-solid-state-drive-aleg-710-256gcs-jvlraduwh3mg",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F58256660-2243-407c-9345-1e49b29007c7&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "gigabyte-h610m-k-ddr4-motherboard-supports-intel-core-14th-gen-cpus-up-to-3200mhz-ddr4-1xpcie-30-m2-gbe-lan-usb-32-gen-1",
-      "name": "Gigabyte H610M-K DDR4 Socket LGA 1700 Motherboard",
+      "externalId": "asus-prime-a520m-k-amd-a520-ryzen-am4-micro-atx-motherboard-with-m2-support-1-gb-ethernet-hdmid-sub-sata-6-gbps-usb-32-g",
+      "name": "ASUS PRIME A520M-K – AMD A520 AM4 Micro-ATX Motherboard, M.2, HDMI, USB 3.2 Gen 1, 1Gb Ethernet",
       "category": "motherboard",
-      "priceEgp": 3675.0,
+      "priceEgp": 3200.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-h610m-k-ddr4-motherboard-supports-intel-core-14th-gen-cpus-up-to-3200mhz-ddr4-1xpcie-30-m2-gbe-lan-usb-32-gen-1-9ftbg38slmln",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F94b45d6d-a538-4df2-a379-3af3998198ac&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-a520m-k-amd-a520-ryzen-am4-micro-atx-motherboard-with-m2-support-1-gb-ethernet-hdmid-sub-sata-6-gbps-usb-32-gen-1-type-a-jnwaegh6njmo",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F03aaf344-09fd-441d-873a-86ee985478af&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "gigabyte-h610m-k-ddr4-motherboard-supports-intel-core-14th-gen-cpus-up-to-3200mhz-ddr4-1xpcie-30-m2-gbe-lan-usb-32-gen-1",
-      "name": "Gigabyte H610M-K DDR4 Socket LGA 1700 Motherboard",
+      "externalId": "fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-",
+      "name": "Fighter B65 - AMD RYZEN 7-5700 Tray - Ocypus Gamma A40 Black ARGB - MSI B550M PRO-VDH WiFi - Gigabyte RTX 5060 EAGLE OC 8G - ACER-8G-UD100 DDR4 3200MHz (2X8) -PNY CS2230 500GB - COUGAR UNIFACE MINI RGB Case + STC 600W PSU (Black)",
+      "category": "cpu",
+      "priceEgp": 54150.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-512gb-aerocool-viewport-mini-argb-and-lux-650w-80plus-bronze-psu-utjioyoljzxc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff57cc3fd-b9d2-406c-89eb-13d5fa584e39&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-",
+      "name": "Fighter B65 - AMD RYZEN 7-5700 Tray - Ocypus Gamma A40 Black ARGB - MSI B550M PRO-VDH WiFi - Gigabyte RTX 5060 EAGLE OC 8G - ACER-8G-UD100 DDR4 3200MHz (2X8) -PNY CS2230 500GB - COUGAR UNIFACE MINI RGB Case + STC 600W PSU (Black)",
+      "category": "cpu",
+      "priceEgp": 56525.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=fighter-r5-8400f-4060ti-8gb-336-msi-pro-a620m-e-amd-ryzen-5-8400f-galax-rtx-4060-ti-8gb-lexar-1x16-5600mhz-patriot-p300-512gb-aerocool-viewport-mini-argb-and-lux-650w-80plus-bronze-psu-utjioyoljzxc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff57cc3fd-b9d2-406c-89eb-13d5fa584e39&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-intel-prime-b760m-k-d4-socket-lga-1700-motherboard-osh8l5hf7hnz",
+      "name": "ASUS INTEL PRIME B760M-K D4 Socket LGA 1700 Motherboard",
       "category": "motherboard",
-      "priceEgp": 3999.0,
+      "priceEgp": 5199.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-h610m-k-ddr4-motherboard-supports-intel-core-14th-gen-cpus-up-to-3200mhz-ddr4-1xpcie-30-m2-gbe-lan-usb-32-gen-1-9ftbg38slmln",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F94b45d6d-a538-4df2-a379-3af3998198ac&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-intel-prime-b760m-k-d4-socket-lga-1700-motherboard-osh8l5hf7hnz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb338180c-4b2f-4b62-a910-8f1cb43848a6&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "asus-prime-b760m-a-csm-matx-ddr5-motherboard-with-lga1700-socket-pcie-40-dual-m2-25gb-lan-usb-type-c-hdmidp-and-aura-syn",
-      "name": "ASUS PRIME B760M-A-CSM - Intel® B760 (LGA 1700) mATX motherboard",
+      "externalId": "asus-intel-prime-b760m-k-d4-socket-lga-1700-motherboard-osh8l5hf7hnz",
+      "name": "ASUS INTEL PRIME B760M-K D4 Socket LGA 1700 Motherboard",
       "category": "motherboard",
       "priceEgp": 5999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b760m-a-csm-matx-ddr5-motherboard-with-lga1700-socket-pcie-40-dual-m2-25gb-lan-usb-type-c-hdmidp-and-aura-sync-rgb-wteahrmoajue",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3a0cdbc5-3c8e-4f3d-9590-bdcd9202c4dd&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-intel-prime-b760m-k-d4-socket-lga-1700-motherboard-osh8l5hf7hnz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb338180c-4b2f-4b62-a910-8f1cb43848a6&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "asus-prime-b760m-a-csm-matx-ddr5-motherboard-with-lga1700-socket-pcie-40-dual-m2-25gb-lan-usb-type-c-hdmidp-and-aura-syn",
-      "name": "ASUS PRIME B760M-A-CSM - Intel® B760 (LGA 1700) mATX motherboard",
-      "category": "motherboard",
-      "priceEgp": 6000.0,
+      "externalId": "cooler-master-elite-301-white-micro-atx-high-airflow-pc-case-365mm-gpu-max-280mm-aio-max-type-c-tempered-glass-triple-12",
+      "name": "Cooler Master Elite 301 White Mini Tower Case, 365mm GPU Max, 280mm AIO Max, Type C, Tempered Glass, Triple 120mm PWM Fan, Intakes Grill, Breathable PSU Shroud",
+      "category": "cooling",
+      "priceEgp": 2650.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b760m-a-csm-matx-ddr5-motherboard-with-lga1700-socket-pcie-40-dual-m2-25gb-lan-usb-type-c-hdmidp-and-aura-sync-rgb-wteahrmoajue",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3a0cdbc5-3c8e-4f3d-9590-bdcd9202c4dd&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "xfx-speedster-qick-308-amd-radeon-rx-7600-features-8gb-gddr6-2048-stream-processors-3x-displayport-21-1x-hdmi-21-up-to-2",
-      "name": "XFX SPEEDSTER QICK 308 AMD Radeon™ RX 7600 features 8GB GDDR6, 2048 stream processors, 3x DisplayPort 2.1, 1x HDMI 2.1, up to 2755 MHz boost clock, and supports AMD RDNA",
-      "category": "gpu",
-      "priceEgp": 21000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=xfx-speedster-qick-308-amd-radeon-rx-7600-features-8gb-gddr6-2048-stream-processors-3x-displayport-21-1x-hdmi-21-up-to-2755-mhz-boost-clock-and-supports-amd-rdna-dmwazeiw0oa3",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F37096800-22ad-4190-ba9e-f8bd8a5a1a66&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "samsung-990-pro-4tb-pcie-40-nvme-ssd-with-up-to-7450-mbs-read-6900-mbs-write-16m-iops-4gb-ddr4-cache-aes-256-bit-encrypt",
-      "name": "Samsung 990 PRO 4TB PCIe 4.0 NVMe SSD with up to 7,450 MB/s read, 6,900 MB/s write, 1.6M IOPS, 4GB DDR4 cache, AES 256-bit encryption, and a 3-year warranty",
-      "category": "storage",
-      "priceEgp": 44500.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=samsung-990-pro-4tb-pcie-40-nvme-ssd-with-up-to-7450-mbs-read-6900-mbs-write-16m-iops-4gb-ddr4-cache-aes-256-bit-encryption-and-a-3-year-warranty-ujza0ef0mz3z",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe07f944a-4162-40bb-9fcf-c7becc663ca0&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "msi-mag-a850gl-850w-pcie-5-atx-30-gaming-power-supply-full-modular-80-plus-gold-certified-850w-compact-size-atx-psu-i9ut",
-      "name": "MSI MAG A850GL PCIe 5 & ATX 3.0 850W Full Modular 80 Plus Gold Gaming Power Supply",
-      "category": "psu",
-      "priceEgp": 6199.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=msi-mag-a850gl-850w-pcie-5-atx-30-gaming-power-supply-full-modular-80-plus-gold-certified-850w-compact-size-atx-psu-i9utvxrfwvkx",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F0a067598-1777-40cd-b874-4857b045f165&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "antec-c8-argb-white-2x-tqr-160mm-1x-tq-140mm-argb-pwm-fans-includeddual-chamber-layout-type-c-360mm-radiator-support-sea",
-      "name": "Antec C8 ARGB White, 2x TQR 160mm & 1x TQ 140mm ARGB PWM Fans Included,dual-chamber layout, Type-C, 360mm Radiator Support, Seamless TG Front & Side Panels, RTX 40 compatible, Full-Tower E-ATX PC Case",
-      "category": "gpu",
-      "priceEgp": 7000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=antec-c8-argb-white-2x-tqr-160mm-1x-tq-140mm-argb-pwm-fans-includeddual-chamber-layout-type-c-360mm-radiator-support-seamless-tg-front-side-panels-rtx-40-compatible-full-tower-e-atx-pc-case-bgxdolwseoim",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffb89f7ae-c177-4224-821f-03d1493357fb&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "antec-c8-argb-white-2x-tqr-160mm-1x-tq-140mm-argb-pwm-fans-includeddual-chamber-layout-type-c-360mm-radiator-support-sea",
-      "name": "Antec C8 ARGB White, 2x TQR 160mm & 1x TQ 140mm ARGB PWM Fans Included,dual-chamber layout, Type-C, 360mm Radiator Support, Seamless TG Front & Side Panels, RTX 40 compatible, Full-Tower E-ATX PC Case",
-      "category": "gpu",
-      "priceEgp": 8000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=antec-c8-argb-white-2x-tqr-160mm-1x-tq-140mm-argb-pwm-fans-includeddual-chamber-layout-type-c-360mm-radiator-support-seamless-tg-front-side-panels-rtx-40-compatible-full-tower-e-atx-pc-case-bgxdolwseoim",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffb89f7ae-c177-4224-821f-03d1493357fb&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-elite-301-white-micro-atx-high-airflow-pc-case-365mm-gpu-max-280mm-aio-max-type-c-tempered-glass-triple-120mm-pwm-fan-intakes-grill-breathable-psu-shroud-6qevvb8p77nn",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa7e4a7d6-8ee1-45c9-aa9c-099842f04ed5&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -178,28 +122,70 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "wd-black-sn850x-nvme-ssd-2tb-pcie-gen4-x4-7300mbs-read-6600mbs-write-m2-2280-heatsink-1200-tbw-3-year-warranty-ihjeinesy",
-      "name": "WD_BLACK SN850X NVMe SSD 2TB, PCIe Gen4 x4, 7300MB/s Read, 6600MB/s Write, M.2 2280, Heatsink, 1200 TBW, 3-Year Warranty",
+      "externalId": "asus-prime-geforce-rtx-5070-12gb-12gb-gddr7-6144-cuda-cores-2512-mhz-boost-engine-clock-hdmi-21b-displayport-21b-v44as5n",
+      "name": "ASUS Prime RTX5070 OC 12GB GDDR7 (Triple Fan)",
       "category": "cooling",
-      "priceEgp": 19500.0,
+      "priceEgp": 48500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=wd-black-sn850x-nvme-ssd-2tb-pcie-gen4-x4-7300mbs-read-6600mbs-write-m2-2280-heatsink-1200-tbw-3-year-warranty-ihjeinesy7z5",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe0d9d458-0955-48c0-8ca3-86d45d2312b6&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-geforce-rtx-5070-12gb-12gb-gddr7-6144-cuda-cores-2512-mhz-boost-engine-clock-hdmi-21b-displayport-21b-v44as5nhjdrz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F4162e47f-8da6-4d73-b01f-3f8b289a555b&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "redragon-dragon-knight-rm113-256gb-25-sata-iii-ssd-with-up-to-500mbs-read-400mbs-write-amj0jfcwxk3r",
-      "name": "Redragon Dragon Knight RM113 256GB 2.5 SATA III SSD with up to 500MB/s read, 400MB/s write",
-      "category": "storage",
-      "priceEgp": 2300.0,
+      "externalId": "asus-rog-astral-geforce-rtx-5090-32gb-gddr7-oc-edition-features-32gb-gddr7-memory-2610-mhz-engine-clock-21760-cuda-cores",
+      "name": "ASUS ROG Astral GeForce RTX 5090 32GB GDDR7 OC Edition",
+      "category": "gpu",
+      "priceEgp": 620000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=redragon-dragon-knight-rm113-256gb-25-sata-iii-ssd-with-up-to-500mbs-read-400mbs-write-amj0jfcwxk3r",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F26438b52-62a8-47bf-ac16-402ce13e5fdd&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-rog-astral-geforce-rtx-5090-32gb-gddr7-oc-edition-features-32gb-gddr7-memory-2610-mhz-engine-clock-21760-cuda-cores-pcie-50-36smcmstrnvl",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9b274142-b487-473a-83b7-2ca1b6346036&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features",
+      "name": "MSI PRO B840-P WIFI Socket AM5 LGA 1718 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 9250.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features-iog9wdn9qwwl",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F093e7d01-f07c-4533-b704-050b07b99cd1&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features",
+      "name": "MSI PRO B840-P WIFI Socket AM5 LGA 1718 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 9775.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features-iog9wdn9qwwl",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F093e7d01-f07c-4533-b704-050b07b99cd1&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-dual-geforce-rtx-5060-8gb-gddr7-3840-cuda-cores-2497mhz-boost-clock-8gb-28gbps-gddr7-pcie-50-1x-hdmi-21b-3x-dp-21b-",
+      "name": "ASUS Dual GeForce RTX 5060 8GB GDDR7, 3840 CUDA cores, 2497MHz boost clock, 8GB 28Gbps GDDR7, PCIe 5.0, 1x HDMI 2.1b, 3x DP 2.1b",
+      "category": "gpu",
+      "priceEgp": 29000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-dual-geforce-rtx-5060-8gb-gddr7-3840-cuda-cores-2497mhz-boost-clock-8gb-28gbps-gddr7-pcie-50-1x-hdmi-21b-3x-dp-21b-bkdctlobeula",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F662855cc-e383-4eaf-b391-d5e37439e3cd&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -444,70 +430,126 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "lexar-thor-ddr4-ram-32gb-kit-16gb-x-2-3200-mhz-dram-288-pin-udimm-desktop-memory-xmp-20-high-performance-computer-memory",
-      "name": "Lexar Thor DDR4 RAM 32GB Kit (16GB x 2) 3200 MHz, DRAM 288-Pin UDIMM Desktop Memory, XMP 2.0 High Performance Computer Memory, CL16-18-18-38, 1.35V (LD4BU016G-R3200GDXG)",
-      "category": "ram",
-      "priceEgp": 13300.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lexar-thor-ddr4-ram-32gb-kit-16gb-x-2-3200-mhz-dram-288-pin-udimm-desktop-memory-xmp-20-high-performance-computer-memory-cl16-18-18-38-135v-ld4bu016g-r3200gdxg-wdeszkkl3j3h",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F53840867-ef84-45a2-9c88-e2c2df24e1bf&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lian-li-o11-air-mini-compact-tower-with-high-airflow-supports-e-atxatxm-atxitx-includes-3-pwm-fans-fits-up-to-280mm-radi",
-      "name": "LIAN LI-O11 Air Mini Black Mini ITX Tower Gaming Case-O11AMX",
-      "category": "case",
-      "priceEgp": 4499.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-air-mini-compact-tower-with-high-airflow-supports-e-atxatxm-atxitx-includes-3-pwm-fans-fits-up-to-280mm-radiators-362mm-gpu-and-170mm-cpu-coolers-xwngxwvwrwig",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8abf9265-6990-4ed6-ad98-18d3dc1ac361&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lian-li-o11-air-mini-compact-tower-with-high-airflow-supports-e-atxatxm-atxitx-includes-3-pwm-fans-fits-up-to-280mm-radi",
-      "name": "LIAN LI-O11 Air Mini Black Mini ITX Tower Gaming Case-O11AMX",
-      "category": "case",
-      "priceEgp": 5400.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-air-mini-compact-tower-with-high-airflow-supports-e-atxatxm-atxitx-includes-3-pwm-fans-fits-up-to-280mm-radiators-362mm-gpu-and-170mm-cpu-coolers-xwngxwvwrwig",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8abf9265-6990-4ed6-ad98-18d3dc1ac361&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "amd-ryzen-5-8400f-trey-with-fan-wnlzj4fdarxn",
-      "name": "AMD Ryzen 5 8400F Tray Processor with Fan",
+      "externalId": "xigmatek-sky-m-ii-4-fan-frgb-x-power-600w-80-white-micro-tower-case-iafqqo5hqevv",
+      "name": "Xigmatek Sky M II 4 Fan FRGB + X-Power 600W 80+ White Micro Tower Case",
       "category": "cooling",
-      "priceEgp": 6150.0,
+      "priceEgp": 2199.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-5-8400f-trey-with-fan-wnlzj4fdarxn",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2f06e0c2-8374-4fbf-875b-28e7cd4b398c&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-sky-m-ii-4-fan-frgb-x-power-600w-80-white-micro-tower-case-iafqqo5hqevv",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb5fd8f84-d8a1-42da-85c2-38d8a30c20cb&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "antec-gsk850-atx31-850w-full-modular-psu-80-plus-gold-certified-pcie-51-suppor-black-71nwbwgy36bh",
-      "name": "ANTEC GSK850 ATX3.1, 850W Full Modular PSU, 80 Plus Gold Certified, PCIE 5.1 Suppor BLACK",
-      "category": "psu",
-      "priceEgp": 5299.0,
+      "externalId": "fighter-r5-5500-3050-415-amd-ryzen-5-5500-box-asus-motherboard-amd-prime-a520m-a-ii-asus-dual-geforce-rtx-3050-oc-8g-v2-",
+      "name": "Fighter B67 - AMD Ryzen 5 8400F Tray+Fan - ASUS AMD PRIME B840M-A-CSM - Acer UD200 DDR5 16GB 4800MHz - ASUS Dual GeForce RTX 5060 8GB GDDR7 - PNY CS2230 500GB M.2 - AEROCOOL P500C Black Case with AERO BRONE 750W PSU",
+      "category": "cooling",
+      "priceEgp": 60500.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=antec-gsk850-atx31-850w-full-modular-psu-80-plus-gold-certified-pcie-51-suppor-black-71nwbwgy36bh",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8e39961f-e98c-4d1c-9f58-6ac818764b89&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=fighter-r5-5500-3050-415-amd-ryzen-5-5500-box-asus-motherboard-amd-prime-a520m-a-ii-asus-dual-geforce-rtx-3050-oc-8g-v2-hp-v6-ddr4-16gb-3200mhz-lexar-nm620-m2-256gb-silver-stone-fara-b1-v2-sleek-argb-4-fan-psu-700w-80-plus-njaotc5jjxhm",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F069b5c94-4b87-4326-8ace-8b437b4d93fb&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "fighter-r5-5500-3050-415-amd-ryzen-5-5500-box-asus-motherboard-amd-prime-a520m-a-ii-asus-dual-geforce-rtx-3050-oc-8g-v2-",
+      "name": "Fighter B67 - AMD Ryzen 5 8400F Tray+Fan - ASUS AMD PRIME B840M-A-CSM - Acer UD200 DDR5 16GB 4800MHz - ASUS Dual GeForce RTX 5060 8GB GDDR7 - PNY CS2230 500GB M.2 - AEROCOOL P500C Black Case with AERO BRONE 750W PSU",
+      "category": "cooling",
+      "priceEgp": 62550.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=fighter-r5-5500-3050-415-amd-ryzen-5-5500-box-asus-motherboard-amd-prime-a520m-a-ii-asus-dual-geforce-rtx-3050-oc-8g-v2-hp-v6-ddr4-16gb-3200mhz-lexar-nm620-m2-256gb-silver-stone-fara-b1-v2-sleek-argb-4-fan-psu-700w-80-plus-njaotc5jjxhm",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F069b5c94-4b87-4326-8ace-8b437b4d93fb&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-intel-h610-motherboard-with-611-hybrid-phases-digital-vrm-design-pcie-40-design-gen3-x4-m2-gigabyte-intel-gbe-w",
+      "name": "GIGABYTE H610M H DDR4 Socket LGA 1700 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 4500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-intel-h610-motherboard-with-611-hybrid-phases-digital-vrm-design-pcie-40-design-gen3-x4-m2-gigabyte-intel-gbe-with-cfosspeed-anti-sulfur-resistor-smart-fan-6-7qbqdm7ovbkh",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff4414d12-d0b7-4a15-94d6-d37c41b2b9b0&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-intel-h610-motherboard-with-611-hybrid-phases-digital-vrm-design-pcie-40-design-gen3-x4-m2-gigabyte-intel-gbe-w",
+      "name": "GIGABYTE H610M H DDR4 Socket LGA 1700 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 4799.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-intel-h610-motherboard-with-611-hybrid-phases-digital-vrm-design-pcie-40-design-gen3-x4-m2-gigabyte-intel-gbe-with-cfosspeed-anti-sulfur-resistor-smart-fan-6-7qbqdm7ovbkh",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff4414d12-d0b7-4a15-94d6-d37c41b2b9b0&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xfx-speedster-qick-308-amd-radeon-rx-7600-features-8gb-gddr6-2048-stream-processors-3x-displayport-21-1x-hdmi-21-up-to-2",
+      "name": "XFX SPEEDSTER QICK 308 AMD Radeon™ RX 7600 features 8GB GDDR6, 2048 stream processors, 3x DisplayPort 2.1, 1x HDMI 2.1, up to 2755 MHz boost clock, and supports AMD RDNA",
+      "category": "gpu",
+      "priceEgp": 21000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xfx-speedster-qick-308-amd-radeon-rx-7600-features-8gb-gddr6-2048-stream-processors-3x-displayport-21-1x-hdmi-21-up-to-2755-mhz-boost-clock-and-supports-amd-rdna-dmwazeiw0oa3",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F37096800-22ad-4190-ba9e-f8bd8a5a1a66&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gamdias-aura-gc2-elite-mid-tower-case-and-aura-gp750-750w-power-supply-5ascuymy7t0g",
+      "name": "GAMDIAS AURA GC2 ELITE Mid-Tower Case (4 Built-in 120mm Fixed RGB Fans) + AURA GP750 750W Power Supply",
+      "category": "psu",
+      "priceEgp": 3299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gamdias-aura-gc2-elite-mid-tower-case-and-aura-gp750-750w-power-supply-5ascuymy7t0g",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffe6a0e56-34dd-4e8d-84d1-b8f285ff7e4a&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-9-9900x3d-gaming-and-content-creation-processor-nfyltmjzgsuc",
+      "name": "AMD Ryzen 9 9900X3D Gaming and Content Creation Processor",
+      "category": "cpu",
+      "priceEgp": 31700.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-9-9900x3d-gaming-and-content-creation-processor-nfyltmjzgsuc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F90b11f7a-07b5-4ec3-bfd0-7e8c7ed964fa&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-9-9900x3d-gaming-and-content-creation-processor-nfyltmjzgsuc",
+      "name": "AMD Ryzen 9 9900X3D Gaming and Content Creation Processor",
+      "category": "cpu",
+      "priceEgp": 32499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-9-9900x3d-gaming-and-content-creation-processor-nfyltmjzgsuc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F90b11f7a-07b5-4ec3-bfd0-7e8c7ed964fa&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -690,6 +732,20 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=antec-power-supply-neoeco-ne1300-1300w-80-gold-full-modular-atx-30-eijdowgwjybt",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3c812f27-2092-4b5e-b82e-fe6f4db8a9bb&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lexar-thor-ddr4-ram-32gb-kit-16gb-x-2-3200-mhz-dram-288-pin-udimm-desktop-memory-xmp-20-high-performance-computer-memory",
+      "name": "Lexar Thor DDR4 RAM 32GB Kit (16GB x 2) 3200 MHz, DRAM 288-Pin UDIMM Desktop Memory, XMP 2.0 High Performance Computer Memory, CL16-18-18-38, 1.35V (LD4BU016G-R3200GDXG)",
+      "category": "ram",
+      "priceEgp": 13300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lexar-thor-ddr4-ram-32gb-kit-16gb-x-2-3200-mhz-dram-288-pin-udimm-desktop-memory-xmp-20-high-performance-computer-memory-cl16-18-18-38-135v-ld4bu016g-r3200gdxg-wdeszkkl3j3h",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F53840867-ef84-45a2-9c88-e2c2df24e1bf&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -1270,20 +1326,6 @@
     },
     {
       "retailerId": "sigma",
-      "externalId": "cpu-intel-pentium-g2020-2-core2-threads-29-ghz-socket-lga-1155-processor-cqldxqejdedr",
-      "name": "CPU-INTEL-Pentium-G2020 2 Core/2 Threads 2.9 GHz Socket LGA 1155 Processor",
-      "category": "cpu",
-      "priceEgp": 1000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=cpu-intel-pentium-g2020-2-core2-threads-29-ghz-socket-lga-1155-processor-cqldxqejdedr",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=%2Fimages%2Fproduct-placeholder.png&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
       "externalId": "cpu-intel-pentium-gold-g6405-2-core4-threads-410-ghz-socket-lga-1200-processor-jgklqyvoddea",
       "name": "CPU-INTEL-Pentium-Gold-G6405 2 Core/4 Threads 4.10 GHz Socket LGA 1200 Processor",
       "category": "cpu",
@@ -1306,6 +1348,20 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=crucial-16gb-ddr5-4800mhz-udimm-v11-cl40-desktop-od9wgolxn4bj",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc649ac1d-15d7-4505-9ad0-0b3d5b751f88&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-dual-geforce-rtx-3050-oc-edition-8gb-g5hpv1vzhvpn",
+      "name": "ASUS Dual GeForce RTX 3050 OC Edition 8GB GDDR6",
+      "category": "gpu",
+      "priceEgp": 17800.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-dual-geforce-rtx-3050-oc-edition-8gb-g5hpv1vzhvpn",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fdf7eb815-d91a-49da-8abb-1406a3368d1c&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -1978,34 +2034,6 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=lian-li-a3-matx-white-compact-263l-steel-case-supporting-m-atxitx-415mm-gpu-atxsfx-psu-360mm-radiator-and-up-to-10-fans-p5jhevj154lo",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F85c69aef-bfdc-49f6-a15c-4290746453d7&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features",
-      "name": "MSI PRO B840-P WIFI Socket AM5 LGA 1718 Motherboard",
-      "category": "motherboard",
-      "priceEgp": 9250.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features-iog9wdn9qwwl",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F093e7d01-f07c-4533-b704-050b07b99cd1&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features",
-      "name": "MSI PRO B840-P WIFI Socket AM5 LGA 1718 Motherboard",
-      "category": "motherboard",
-      "priceEgp": 9775.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=msi-pro-b840-p-wifi-supports-ryzen-900080007000-cpus-ddr5-8000-mts-pcie-40-wi-fi-7-25g-lan-and-advanced-cooling-features-iog9wdn9qwwl",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F093e7d01-f07c-4533-b704-050b07b99cd1&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -3462,6 +3490,328 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-hero-ii-air-4-fan-argb-valkyrie-750w-atx31-80-bronze-mid-tower-case-klgsdmiigrwk",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F40628c90-6688-40ee-bce7-e9b35ad54ba4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "crucial-bx500-240gb-ssd-sata-6gbs-25-7mm-540mbs-read-500mbs-write-80tbw-gviyv1dg92en",
+      "name": "Crucial BX500 240GB SSD, SATA 6Gb/s, 2.5 (7mm), 540MB/s read, 500MB/s write, 80TBW",
+      "category": "storage",
+      "priceEgp": 3375.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=crucial-bx500-240gb-ssd-sata-6gbs-25-7mm-540mbs-read-500mbs-write-80tbw-gviyv1dg92en",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1266e7d9-a433-404a-ade1-92dddd9e669f&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "transcend-slim-portable-hard-drive-1tb-storejet-25m3-uslsroy0pjz0",
+      "name": "Transcend slim portable hard drive 1TB StoreJet 25M3",
+      "category": "storage",
+      "priceEgp": 4950.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=transcend-slim-portable-hard-drive-1tb-storejet-25m3-uslsroy0pjz0",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2c3b01c5-d453-4933-ab28-de46f7c39e41&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "deepcool-cf-120-3-in-1-addressable-rgb-motherboard-sync-by-5v-add-rgb-3-pin-header-amfkcmbsuira",
+      "name": "DEEPCOOL CF 120 PLUS - 3 IN 1 Addressable RGB, Motherboard SYNC by 5V ADD RGB 3-pin Header",
+      "category": "motherboard",
+      "priceEgp": 1300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=deepcool-cf-120-3-in-1-addressable-rgb-motherboard-sync-by-5v-add-rgb-3-pin-header-amfkcmbsuira",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd6754bb6-07e4-4c07-8d28-2db1ceacfd0d&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "deepcool-cf-120-3-in-1-addressable-rgb-motherboard-sync-by-5v-add-rgb-3-pin-header-amfkcmbsuira",
+      "name": "DEEPCOOL CF 120 PLUS - 3 IN 1 Addressable RGB, Motherboard SYNC by 5V ADD RGB 3-pin Header",
+      "category": "motherboard",
+      "priceEgp": 1599.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=deepcool-cf-120-3-in-1-addressable-rgb-motherboard-sync-by-5v-add-rgb-3-pin-header-amfkcmbsuira",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd6754bb6-07e4-4c07-8d28-2db1ceacfd0d&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-prime-b840m-a-wifi-amd-am5-b840-chipset-ddr5-256gb-7600mts-pcie-40-3x-m2-4x-sata-25gb-lan-wi-fi-6e-usb-c-hdmi-dp-mi",
+      "name": "ASUS PRIME B840M-A WIFI Socket AM5 LGA 1718 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 6850.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b840m-a-wifi-amd-am5-b840-chipset-ddr5-256gb-7600mts-pcie-40-3x-m2-4x-sata-25gb-lan-wi-fi-6e-usb-c-hdmi-dp-micro-atx-b23hhni3li4t",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa8100443-b9da-403e-9929-a79f499f600f&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-prime-b840m-a-wifi-amd-am5-b840-chipset-ddr5-256gb-7600mts-pcie-40-3x-m2-4x-sata-25gb-lan-wi-fi-6e-usb-c-hdmi-dp-mi",
+      "name": "ASUS PRIME B840M-A WIFI Socket AM5 LGA 1718 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 8000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b840m-a-wifi-amd-am5-b840-chipset-ddr5-256gb-7600mts-pcie-40-3x-m2-4x-sata-25gb-lan-wi-fi-6e-usb-c-hdmi-dp-micro-atx-b23hhni3li4t",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa8100443-b9da-403e-9929-a79f499f600f&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-b860m-aorus-elite-lga1851-intel-b860-ddr5-9200mts-oc-pcie-50-x16-m2-pcie-50-25gbe-lan-usb4-hdmi-21-dp-21-realte",
+      "name": "GIGABYTE B860M AORUS ELITE Socket LGA 1851 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 10200.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-b860m-aorus-elite-lga1851-intel-b860-ddr5-9200mts-oc-pcie-50-x16-m2-pcie-50-25gbe-lan-usb4-hdmi-21-dp-21-realtek-audio-micro-atx-4wdhqthl2mt1",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa67f6b40-44c2-4030-ac04-c54ea44e1481&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "patriot-psp524g560081h1-24gb-ddr5-5600mhz-udimm-cl46-11v-non-ecc-single-sided-on-die-ecc-aluminum-heatshield-r5qpk1y93ry",
+      "name": "Patriot Signature Premium DDR5 RAM 24GB (1X24GB) 5600MHz CL46 UDIMM W/HS Desktop Memory Module - PSP524G560081H1",
+      "category": "ram",
+      "priceEgp": 18900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=patriot-psp524g560081h1-24gb-ddr5-5600mhz-udimm-cl46-11v-non-ecc-single-sided-on-die-ecc-aluminum-heatshield-r5qpk1y93ry2",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd38ca1e6-3533-4d97-b846-ece6515c03bf&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-cosmos-c700m-white-edition-full-tower-case-with-e-atx-support-tempered-glass-usb-c-4x-usb-30-vertical-gpu-",
+      "name": "Cooler Master Cosmos C700M White Edition: Full tower case with E-ATX support, tempered glass, USB-C, 4x USB 3.0, vertical GPU mount with PCIe 4.0 riser, ARGB lighting, and 420mm radiator support",
+      "category": "cooling",
+      "priceEgp": 23600.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-cosmos-c700m-white-edition-full-tower-case-with-e-atx-support-tempered-glass-usb-c-4x-usb-30-vertical-gpu-mount-with-pcie-40-riser-argb-lighting-and-420mm-radiator-support-jaqlvw6kmxdy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F13fae0a1-97d3-4dac-8e94-e31edafe7953&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-o11-dynamic-evo-xl-white-full-tower-case-with-tempered-glass-supports-e-atx-motherboards-up-to-3x-420mm-radiator",
+      "name": "Lian Li O11 DYNAMIC EVO XL White Full-tower case with tempered glass, supports E-ATX motherboards, up to 3x 420mm radiators, 11 fans, 7 drives, GPU clearance 460mm, dual-chamber design, multiple I/O ports.",
+      "category": "gpu",
+      "priceEgp": 11299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-dynamic-evo-xl-white-full-tower-case-with-tempered-glass-supports-e-atx-motherboards-up-to-3x-420mm-radiators-11-fans-7-drives-gpu-clearance-460mm-dual-chamber-design-multiple-io-ports-5mm3tsbf2jbc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F684ee02c-8b45-47e0-9ae5-835c5d7ec0d4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-o11-dynamic-evo-xl-white-full-tower-case-with-tempered-glass-supports-e-atx-motherboards-up-to-3x-420mm-radiator",
+      "name": "Lian Li O11 DYNAMIC EVO XL White Full-tower case with tempered glass, supports E-ATX motherboards, up to 3x 420mm radiators, 11 fans, 7 drives, GPU clearance 460mm, dual-chamber design, multiple I/O ports.",
+      "category": "gpu",
+      "priceEgp": 12000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-dynamic-evo-xl-white-full-tower-case-with-tempered-glass-supports-e-atx-motherboards-up-to-3x-420mm-radiators-11-fans-7-drives-gpu-clearance-460mm-dual-chamber-design-multiple-io-ports-5mm3tsbf2jbc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F684ee02c-8b45-47e0-9ae5-835c5d7ec0d4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-edge-gold-750w-80-plus-gold-l-shape-design-for-dual-chamber-cases-fully-modular-braided-cables-pcie-51-ready-ger",
+      "name": "LIAN LI Edge Gold EG0750G 750W 80 Plus Gold ATX3.1 Full Modular PSU-EG0750G",
+      "category": "psu",
+      "priceEgp": 4899.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-edge-gold-750w-80-plus-gold-l-shape-design-for-dual-chamber-cases-fully-modular-braided-cables-pcie-51-ready-german-epcos-capacitors-120mm-quiet-fan-10-year-warranty-a6t2fylwnojo",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd1c77c84-a9ea-4b34-917f-56d8be7ccf49&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-edge-gold-750w-80-plus-gold-l-shape-design-for-dual-chamber-cases-fully-modular-braided-cables-pcie-51-ready-ger",
+      "name": "LIAN LI Edge Gold EG0750G 750W 80 Plus Gold ATX3.1 Full Modular PSU-EG0750G",
+      "category": "psu",
+      "priceEgp": 5300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-edge-gold-750w-80-plus-gold-l-shape-design-for-dual-chamber-cases-fully-modular-braided-cables-pcie-51-ready-german-epcos-capacitors-120mm-quiet-fan-10-year-warranty-a6t2fylwnojo",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd1c77c84-a9ea-4b34-917f-56d8be7ccf49&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "corsair-3500x-supports-atxe-atx-motherboards-425mm-gpus-360mm-radiators-reverse-connector-boards-and-features-tempered-g",
+      "name": "Corsair 3500X Mid-Tower Case",
+      "category": "case",
+      "priceEgp": 4200.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=corsair-3500x-supports-atxe-atx-motherboards-425mm-gpus-360mm-radiators-reverse-connector-boards-and-features-tempered-glass-panels-with-usb-c-front-io-mrwpno0qsvtn",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F75e383e7-1966-44a4-a8ef-e12297a128e1&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "corsair-3500x-supports-atxe-atx-motherboards-425mm-gpus-360mm-radiators-reverse-connector-boards-and-features-tempered-g",
+      "name": "Corsair 3500X Mid-Tower Case",
+      "category": "case",
+      "priceEgp": 4500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=corsair-3500x-supports-atxe-atx-motherboards-425mm-gpus-360mm-radiators-reverse-connector-boards-and-features-tempered-glass-panels-with-usb-c-front-io-mrwpno0qsvtn",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F75e383e7-1966-44a4-a8ef-e12297a128e1&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cougar-uniface-mini-rgb-and-stc-600w-compact-mini-tower-with-tempered-glass-3-argb-fans-supports-up-to-280mm-radiator-34",
+      "name": "COUGAR UNIFACE MINI RGB Case + STC 600W PSU (Black)",
+      "category": "psu",
+      "priceEgp": 3199.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cougar-uniface-mini-rgb-and-stc-600w-compact-mini-tower-with-tempered-glass-3-argb-fans-supports-up-to-280mm-radiator-340mm-gpu-600w-psu-with-86-efficiency-japanese-capacitors-and-full-protection-features-90plk2fh6cp3",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F55635170-e932-48e2-b560-644f3d23f409&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cougar-uniface-mini-rgb-and-stc-600w-compact-mini-tower-with-tempered-glass-3-argb-fans-supports-up-to-280mm-radiator-34",
+      "name": "COUGAR UNIFACE MINI RGB Case + STC 600W PSU (Black)",
+      "category": "psu",
+      "priceEgp": 3299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cougar-uniface-mini-rgb-and-stc-600w-compact-mini-tower-with-tempered-glass-3-argb-fans-supports-up-to-280mm-radiator-340mm-gpu-600w-psu-with-86-efficiency-japanese-capacitors-and-full-protection-features-90plk2fh6cp3",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F55635170-e932-48e2-b560-644f3d23f409&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-masterliquid-pl360-flux-argb-360mm-liquid-cooler-3x-120mm-argb-fans-aluminum-radiator-intel-amd-sockets-23",
+      "name": "Cooler Master MasterLiquid PL360 FLUX ARGB – 360mm liquid cooler, 3x 120mm ARGB fans, aluminum radiator, Intel & AMD sockets, 2300 RPM, low-noise pump",
+      "category": "cooling",
+      "priceEgp": 6300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-masterliquid-pl360-flux-argb-360mm-liquid-cooler-3x-120mm-argb-fans-aluminum-radiator-intel-amd-sockets-2300-rpm-low-noise-pump-dduzoqg1zsns",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa63be4e0-9772-455c-a8c9-14f3aa3a6ea2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-7-7800x3d-tray-processor-rgbvdzjdgwo9",
+      "name": "AMD Ryzen 7 7800X3D Tray Processor",
+      "category": "cpu",
+      "priceEgp": 17400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-7-7800x3d-tray-processor-rgbvdzjdgwo9",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F42457bb3-14ff-440b-bed2-6211b513cca9&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xpg-probe-bronze-power-supply-700w-80-bronze-tbiblkczgoc2",
+      "name": "XPG PROBE Power Supply 700W 80+ Bronze",
+      "category": "psu",
+      "priceEgp": 2799.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xpg-probe-bronze-power-supply-700w-80-bronze-tbiblkczgoc2",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9ff8087b-17b7-4387-b6b1-73df4a5357ff&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xpg-probe-bronze-power-supply-700w-80-bronze-tbiblkczgoc2",
+      "name": "XPG PROBE Power Supply 700W 80+ Bronze",
+      "category": "psu",
+      "priceEgp": 2800.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xpg-probe-bronze-power-supply-700w-80-bronze-tbiblkczgoc2",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9ff8087b-17b7-4387-b6b1-73df4a5357ff&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xpg-kyber-750w-80-gold-power-supply-unit-vp78bmds4hib",
+      "name": "XPG KYBER 750W 80+ Gold Power Supply Unit",
+      "category": "psu",
+      "priceEgp": 4100.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xpg-kyber-750w-80-gold-power-supply-unit-vp78bmds4hib",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa6abb186-c5f1-480c-99f3-329b1dfdd69e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xpg-kyber-750w-80-gold-power-supply-unit-vp78bmds4hib",
+      "name": "XPG KYBER 750W 80+ Gold Power Supply Unit",
+      "category": "psu",
+      "priceEgp": 4400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xpg-kyber-750w-80-gold-power-supply-unit-vp78bmds4hib",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa6abb186-c5f1-480c-99f3-329b1dfdd69e&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }

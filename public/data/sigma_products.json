@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-07T06:46:37.864426+00:00",
+  "capturedAt": "2026-11-08T06:56:36.913733+00:00",
   "source": "scripts/sigma_worker.py",
   "retailer": "sigma",
   "status": "ok",
@@ -10,6 +10,160 @@
   "products": [
     {
       "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a620-gdl-6-heatpipe-dual-tower-with-2-120mm-fdb-fan-lfxfry7vartc",
+      "name": "ID-COOLING FROZN A620 GDL 6 Heatpipe Dual Tower With 2 120mm FDB Fan",
+      "category": "cooling",
+      "priceEgp": 2499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a620-gdl-6-heatpipe-dual-tower-with-2-120mm-fdb-fan-lfxfry7vartc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F75f02b81-fde8-4511-b7bc-9ad2974503bc&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-rtx-3050-ventus-2x-xs-8g-oc-nglz0sahc3u5",
+      "name": "MSI RTX 3050 VENTUS 2X XS 8G OC",
+      "category": "gpu",
+      "priceEgp": 18500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-rtx-3050-ventus-2x-xs-8g-oc-nglz0sahc3u5",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6f0b90f2-2a8a-4750-8d38-cd8ecf0b42ea&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "transcend-esd310-512gb-external-ssd-up-to-1050mbs-2-in-1-type-c-type-a-memory-stick-silver-tgyoscdunefk",
+      "name": "TRANSCEND ESD310 512GB External SSD, Up to 1,050MB/s, Dual USB Flash Drive 2-in-1 Type C &Type A Memory Stick-Silver",
+      "category": "storage",
+      "priceEgp": 4800.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=transcend-esd310-512gb-external-ssd-up-to-1050mbs-2-in-1-type-c-type-a-memory-stick-silver-tgyoscdunefk",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1e6a8c72-2e98-45a8-87c2-0359cf52723e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-aero-dgt-360-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fan-blade-en90212-conidvpyqs",
+      "name": "XIGMATEK Aero DGT 360 Digital LCD 3 Fan ARGB and PWM Infinity Ring Four Side 360mm Standard Fan Blade-EN90212",
+      "category": "cooling",
+      "priceEgp": 1249.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-aero-dgt-360-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fan-blade-en90212-conidvpyqs7c",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9e9d72c3-e474-4646-b47d-86907ec4e80c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "aerocool-p500d-3fans-argb-black-aerocool-lux-650w-80plus-bronze-nompo9t1seds",
+      "name": "Aerocool P500D 3Fans ARGB Black + Aerocool LUX 650W – 80Plus Bronze",
+      "category": "psu",
+      "priceEgp": 3699.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=aerocool-p500d-3fans-argb-black-aerocool-lux-650w-80plus-bronze-nompo9t1seds",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff8e002b0-a255-4c07-af0d-992a95c8018c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "aerocool-p500d-3fans-argb-black-aerocool-lux-650w-80plus-bronze-nompo9t1seds",
+      "name": "Aerocool P500D 3Fans ARGB Black + Aerocool LUX 650W – 80Plus Bronze",
+      "category": "psu",
+      "priceEgp": 3750.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=aerocool-p500d-3fans-argb-black-aerocool-lux-650w-80plus-bronze-nompo9t1seds",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff8e002b0-a255-4c07-af0d-992a95c8018c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-prestige-13-ai-evo-a1mg-intel-core-ultra-7-155h-intel-arc-graphics-16gb-lpddr5-6400mhz-512gb-nvme-gen-4-133-inch-28k",
+      "name": "MSI Prestige 13 AI Evo A1MG Intel Core Ultra 7 155H - Intel Arc Graphics - 16GB LPDDR5 6400MHz - 512GB Nvme GEN 4 - 13.3-inch 2.8K-OLED-60Hz-100% DCI-P3 - Windows 11 - 9S7-13Q221-261",
+      "category": "cpu",
+      "priceEgp": 49000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-prestige-13-ai-evo-a1mg-intel-core-ultra-7-155h-intel-arc-graphics-16gb-lpddr5-6400mhz-512gb-nvme-gen-4-133-inch-28k-oled-60hz-100-dci-p3-windows-11-9s7-13q221-261-afvtygaown9r",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F56d0cb72-93d3-4549-9eb9-15300cb50729&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "sapphire-pure-radeon-rx-9070-xt-gaming-oc-16gb-gddr6-pci-express-graphics-card-qtss3lyuwlb4",
+      "name": "Sapphire Pure Radeon RX 9070 XT Gaming OC 16GB GDDR6 PCI-Express Graphics Card",
+      "category": "gpu",
+      "priceEgp": 49500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=sapphire-pure-radeon-rx-9070-xt-gaming-oc-16gb-gddr6-pci-express-graphics-card-qtss3lyuwlb4",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd05d53a8-b4b9-43c3-91b9-fbc53c5ab222&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "sandisk-external-portable-ssd-1tb-up-to-600mbs-read-sdssde10-1t00-g25-qjdqnlljdwwy",
+      "name": "SANDISK External Portable SSD 1TB- up to 600MB/s Read (SDSSDE10-1T00-G25)",
+      "category": "storage",
+      "priceEgp": 6650.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=sandisk-external-portable-ssd-1tb-up-to-600mbs-read-sdssde10-1t00-g25-qjdqnlljdwwy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F448abe10-d629-4745-9187-57fcbb790403&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "nzxt-c750-gold-core-750w-atx-31-fully-modular-black-pa-7g3bb-uk-t2gao1nq5rws",
+      "name": "NZXT C750 Gold Core 750W - 80 PLUS Gold Fully Modular ATX 3.1 PSU - 7 years warranty",
+      "category": "psu",
+      "priceEgp": 5799.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=nzxt-c750-gold-core-750w-atx-31-fully-modular-black-pa-7g3bb-uk-t2gao1nq5rws",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F25932f1d-6ccf-4a34-8a3c-45972729494b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a620-pro-xe-argb-snow-6-heatpipe-dual-tower-white-wavbiy2b5wy7",
+      "name": "ID-COOLING FROZN A620 PRO XE ARGB 6 Heatpipe Dual Tower Cpu Air Cooler",
+      "category": "cooling",
+      "priceEgp": 1999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a620-pro-xe-argb-snow-6-heatpipe-dual-tower-white-wavbiy2b5wy7",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fcc9e5ab0-daa7-45e6-a931-6e7b81dd7e98&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
       "externalId": "addlink-8g-ddr4-3200mhz-pc-cl22-aaokwwzm0c9y",
       "name": "Addlink 8G DDR4 3200MHz PC CL22",
       "category": "ram",
@@ -18,6 +172,860 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=addlink-8g-ddr4-3200mhz-pc-cl22-aaokwwzm0c9y",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3e35adaf-ab2f-468d-9dc7-7c60eb2f4fea&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
+      "name": "REDRAGON RM112 Dragon Knight 128GB 500MB/s 2.5-inch SATA SSD",
+      "category": "storage",
+      "priceEgp": 1350.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa6a18b01-e2c1-4d72-8c6b-bca06a64704e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
+      "name": "REDRAGON RM112 Dragon Knight 128GB 500MB/s 2.5-inch SATA SSD",
+      "category": "storage",
+      "priceEgp": 1365.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa6a18b01-e2c1-4d72-8c6b-bca06a64704e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-pro-b860m-e-lga1851-ddr5-matx-motherboard-rpkjhj1r8qfi",
+      "name": "MSI PRO B860M-E LGA1851 DDR5 mATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 7100.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-pro-b860m-e-lga1851-ddr5-matx-motherboard-rpkjhj1r8qfi",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F319486e8-8590-41fe-b5e5-c47319755a10&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-rtx-5070-12g-shadow-2x-oc-quibvrmxcmot",
+      "name": "MSI RTX 5070 12G SHADOW 2X OC",
+      "category": "gpu",
+      "priceEgp": 45500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-rtx-5070-12g-shadow-2x-oc-quibvrmxcmot",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F46cabd96-d726-4d12-91ac-37b631f3df7b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "antec-flux-m-fan-argb-mini-tower-ljgxgds8vlpl",
+      "name": "ANTEC FLUX M 6FAN ARGB MINI TOWER",
+      "category": "case",
+      "priceEgp": 3250.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=antec-flux-m-fan-argb-mini-tower-ljgxgds8vlpl",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3e51482c-3ac6-4a6f-afbd-e09c2ce22b0b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-7-9850x3d-tray-processor-1dx8fkyxwu1u",
+      "name": "AMD RYZEN 7-9850X3D TRAY Processor",
+      "category": "cpu",
+      "priceEgp": 26899.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-7-9850x3d-tray-processor-1dx8fkyxwu1u",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Faa8a7bf9-660f-44d2-bd61-a6c40e0ea64b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-sun-5-fan-argb-pwm-super-tower-case-en49712-mgzau2giocak",
+      "name": "XIGMATEK Sun 5 Fan Argb PWM Super Tower Case-EN49712",
+      "category": "cooling",
+      "priceEgp": 3299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-sun-5-fan-argb-pwm-super-tower-case-en49712-mgzau2giocak",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F05848fe3-bde1-4821-ae2c-f6f147bc0fd7&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-sun-arctic-5-fan-argb-pwm-white-super-tower-case-en49729-t9p0gsekbtwb",
+      "name": "XIGMATEK Sun Arctic 5 Fan Argb PWM White Super Tower Case-EN49729",
+      "category": "cooling",
+      "priceEgp": 3399.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-sun-arctic-5-fan-argb-pwm-white-super-tower-case-en49729-t9p0gsekbtwb",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffb21a9ec-d6d6-43eb-9550-cfddce04eb10&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "seasonic-core-gc-850-atx3-850w-atx-31-80-plus-gold-braidad-cables-hydro-dynamic-bearing-fan-dnitx8pnk9hv",
+      "name": "SEASONIC Core GC-850 ATX3 850W Atx 3.1 80 Plus Gold Braidad Cables Hydro Dynamic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 5099.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=seasonic-core-gc-850-atx3-850w-atx-31-80-plus-gold-braidad-cables-hydro-dynamic-bearing-fan-dnitx8pnk9hv",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb63931d5-8e6c-46fc-b779-139974b952ff&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-fx360-lcd-gen-7-pro-pump-argb-aio-liquid-pow0esdhmsgf",
+      "name": "ID-COOLING FX360 LCD Gen 7 Pro Pump ARGB Liquid CPU Cooler (AIO)",
+      "category": "cooling",
+      "priceEgp": 3599.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-fx360-lcd-gen-7-pro-pump-argb-aio-liquid-pow0esdhmsgf",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fea11592c-aa1b-4615-bdd8-80118483b55b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-fx360-lcd-gen-7-pro-pump-argb-aio-liquid-pow0esdhmsgf",
+      "name": "ID-COOLING FX360 LCD Gen 7 Pro Pump ARGB Liquid CPU Cooler (AIO)",
+      "category": "cooling",
+      "priceEgp": 3649.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-fx360-lcd-gen-7-pro-pump-argb-aio-liquid-pow0esdhmsgf",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fea11592c-aa1b-4615-bdd8-80118483b55b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-dx360-max-gen-7-pump-white-aio-liquid-cpu-wjk7r1wxxc8a",
+      "name": "ID-COOLING DX360 MAX Gen 7 Pump White Liquid CPU Cooler (AIO)",
+      "category": "cooling",
+      "priceEgp": 3699.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-dx360-max-gen-7-pump-white-aio-liquid-cpu-wjk7r1wxxc8a",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8ac7e9f8-94d9-445f-b693-88fab44088d2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a410-gdl-4-heatpipe-with-2-120mm-fdb-fan-d48tot1wbfef",
+      "name": "ID-COOLING FROZN A410 GDL 4 Heatpipe With 2 120mm FDB Fan",
+      "category": "cooling",
+      "priceEgp": 1599.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a410-gdl-4-heatpipe-with-2-120mm-fdb-fan-d48tot1wbfef",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc131b1ad-d3e0-4a7d-a7f7-a8ac8787dc44&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a410-td-argb-digital-screen-4-heatpipe-with-120mm-fdb-fan-yokch0tdiucr",
+      "name": "ID-COOLING FROZN A410 TD ARGB Digital Screen 4 Heatpipe With 120mm FDB Fan",
+      "category": "cooling",
+      "priceEgp": 1449.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a410-td-argb-digital-screen-4-heatpipe-with-120mm-fdb-fan-yokch0tdiucr",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa5226e39-bf61-426a-b05c-128c2c6e8b22&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-se-214-xt-v2-argb-4-heatpipe-direct-touch-with-120mm-hydraulic-bearing-fan-2wvc9txvzxo9",
+      "name": "ID-COOLING SE 214 XT V2 ARGB 4 Heatpipe Direct Touch With 120mm Hydraulic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-se-214-xt-v2-argb-4-heatpipe-direct-touch-with-120mm-hydraulic-bearing-fan-2wvc9txvzxo9",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F4341dbce-d158-472a-a6ce-00c855e63a45&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-rtx-5060-ti-16g-ventus-2x-oc-plus-k1katd3zfjsr",
+      "name": "MSI RTX 5060 Ti 16G VENTUS 2X OC PLUS",
+      "category": "gpu",
+      "priceEgp": 42500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-rtx-5060-ti-16g-ventus-2x-oc-plus-k1katd3zfjsr",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F80673d29-24ad-4ba9-972d-c5d90342f8d4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "seasonic-core-bc-850-atx3-850w-atx-31-80-plus-bronze-braided-cables-hydro-dynamic-bearing-fan-power-supply-yxzljcse3hm4",
+      "name": "Seasonic Core BC-850 ATX3 850W Atx 3.1 80 Plus Bronze braided cables Hydro Dynamic Bearing Fan Power Supply",
+      "category": "cooling",
+      "priceEgp": 3999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=seasonic-core-bc-850-atx3-850w-atx-31-80-plus-bronze-braided-cables-hydro-dynamic-bearing-fan-power-supply-yxzljcse3hm4",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F14c1d328-4568-4459-ac9b-0033b6222b41&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-prime-m-1000w-80-plus-gold-atx-31-full-modular-power-supply-tbl0vjdsezuh",
+      "name": "XIGMATEK Prime M 1000W 80 Plus Gold ATX 3.1 Full Modular Power Supply",
+      "category": "psu",
+      "priceEgp": 5499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-prime-m-1000w-80-plus-gold-atx-31-full-modular-power-supply-tbl0vjdsezuh",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F23411952-6fcd-46e9-bca1-cbb7d88cc699&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "hiksemi-elite-portable-ssd-1tb-read-speed-up-to-1050mbs-k8ar7tkykeqp",
+      "name": "HIKSEMI Elite Portable SSD 1TB , Read Speed Up to 1050MB/s",
+      "category": "storage",
+      "priceEgp": 6400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=hiksemi-elite-portable-ssd-1tb-read-speed-up-to-1050mbs-k8ar7tkykeqp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8a30c6b0-b75f-4fef-87e9-03c815ec6ca8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "hp-15-fd1062ne-ultra-5-155h-16c22t-intel-arc-8gb-ddr5-5600hz-512g-nvme-gen4-156-inch-fhd-60hz-dos-nz22ydby4qgu",
+      "name": "HP 15-fd1062ne ULTRA 7 155H (16C/22T) - INTEL ARC - 8GB DDR5 5600HZ - 512G NVMe Gen4 - 15.6-inch FHD 60Hz, DOS",
+      "category": "storage",
+      "priceEgp": 46999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=hp-15-fd1062ne-ultra-5-155h-16c22t-intel-arc-8gb-ddr5-5600hz-512g-nvme-gen4-156-inch-fhd-60hz-dos-nz22ydby4qgu",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F5c192dee-4a0f-4397-98be-47d86638f5f7&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-aero-dgt-120-digital-lcd-black-mwhzo6yzkamy",
+      "name": "Xigmatek Aero DGT 120 Black – 120mm ARGB PWM Digital LCD Infinity Ring Case Fan (1 Fan)",
+      "category": "cooling",
+      "priceEgp": 349.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-aero-dgt-120-digital-lcd-black-mwhzo6yzkamy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F12af4367-5925-40ed-88b0-fc8e0cf10ac7&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-aero-dgt-360-arctic-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fanblade-en90236-i8ib",
+      "name": "XIGMATEK Aero DGT 360 Arctic Digital LCD 3 Fan ARGB and PWM Infinity Ring Four Side 360mm Standard FanBlade-EN90236",
+      "category": "cooling",
+      "priceEgp": 1299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-aero-dgt-360-arctic-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fanblade-en90236-i8ibugvmygsf",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F7fe5ad4f-7501-49dc-93da-b6edcbe4f51e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-aero-dgt-240-reverse-digital-lcd-2-fan-argb-and-pwm-infinity-ring-four-side-240mm-standard-fan-blade-en90267-7o",
+      "name": "XIGMATEK Aero DGT 240 Reverse Digital LCD 2 Fan ARGB and PWM Infinity Ring Four Side 240mm Standard Fan Blade-EN90267",
+      "category": "cooling",
+      "priceEgp": 975.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-aero-dgt-240-reverse-digital-lcd-2-fan-argb-and-pwm-infinity-ring-four-side-240mm-standard-fan-blade-en90267-7o1hmtyhczig",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb81988f0-5dc6-431c-86ce-59df0f4118f8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-black-wvsi5w1ncofd",
+      "name": "APNX LC1-D 360 High-Performance LCD 360mm Liquid CPU Cooler – BLACK",
+      "category": "cooling",
+      "priceEgp": 5999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-black-wvsi5w1ncofd",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe049d187-a4b3-4002-b38e-3249ac9763b4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-black-wvsi5w1ncofd",
+      "name": "APNX LC1-D 360 High-Performance LCD 360mm Liquid CPU Cooler – BLACK",
+      "category": "cooling",
+      "priceEgp": 7999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-black-wvsi5w1ncofd",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe049d187-a4b3-4002-b38e-3249ac9763b4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "aerocool-aero-2026-750w-80bronze-non-modular-box-sl2kowkuelsp",
+      "name": "Aerocool AERO 2026 750W 80+Bronze Non Modular Box",
+      "category": "psu",
+      "priceEgp": 2499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=aerocool-aero-2026-750w-80bronze-non-modular-box-sl2kowkuelsp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F7283eb2e-5726-4384-9e00-172f663c65ae&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "aerocool-aero-2026-750w-80bronze-non-modular-box-sl2kowkuelsp",
+      "name": "Aerocool AERO 2026 750W 80+Bronze Non Modular Box",
+      "category": "psu",
+      "priceEgp": 3000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=aerocool-aero-2026-750w-80bronze-non-modular-box-sl2kowkuelsp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F7283eb2e-5726-4384-9e00-172f663c65ae&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-prime-b760m-f-intel-b760-lga-1700-micro-atx-motherboard-izmpz1jkeesb",
+      "name": "ASUS Intel PRIME B760M-F LGA 1700 micro-ATX motherboard",
+      "category": "motherboard",
+      "priceEgp": 4499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b760m-f-intel-b760-lga-1700-micro-atx-motherboard-izmpz1jkeesb",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F66250ecc-b6f9-4dd8-a8da-b97eadb7c260&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-prime-b760m-f-intel-b760-lga-1700-micro-atx-motherboard-izmpz1jkeesb",
+      "name": "ASUS Intel PRIME B760M-F LGA 1700 micro-ATX motherboard",
+      "category": "motherboard",
+      "priceEgp": 5199.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b760m-f-intel-b760-lga-1700-micro-atx-motherboard-izmpz1jkeesb",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F66250ecc-b6f9-4dd8-a8da-b97eadb7c260&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-elite-502-mid-tower-case-white-kd2zcfkurpkj",
+      "name": "COOLER MASTER Elite 502 Mid Tower case - WHITE",
+      "category": "cooling",
+      "priceEgp": 3350.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-elite-502-mid-tower-case-white-kd2zcfkurpkj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F141b2f59-8581-4930-9719-56437a782784&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-elite-502-mid-tower-case-white-kd2zcfkurpkj",
+      "name": "COOLER MASTER Elite 502 Mid Tower case - WHITE",
+      "category": "cooling",
+      "priceEgp": 3400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-elite-502-mid-tower-case-white-kd2zcfkurpkj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F141b2f59-8581-4930-9719-56437a782784&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-v4-alpha-3dhp-black-uj2zsfio0hcd",
+      "name": "COOLER MASTER V4 ALPHA 3DHP BLACK",
+      "category": "cooling",
+      "priceEgp": 1899.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-v4-alpha-3dhp-black-uj2zsfio0hcd",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F14920ed1-efa5-4dc9-94b2-7285b491d9c3&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-rog-strix-g16-g614pr-rv161w-ryzen-9-8940hx-16c32t-nvidia-geforce-rtx-5070-ti-12g-16gb-ddr5-5200hz-1tb-ssd-gen4-16-i",
+      "name": "ASUS ROG Strix G16-G614PR-RV161W - Ryzen 9 8940HX (16C/32T) - Nvidia Geforce RTX 5070 Ti 12G - 16GB DDR5 5200HZ - 1TB SSD Gen4 - 16'' IPS WUXGA 165Hz 100% sRGB - RGB Backlit - WIN11",
+      "category": "cpu",
+      "priceEgp": 129999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-rog-strix-g16-g614pr-rv161w-ryzen-9-8940hx-16c32t-nvidia-geforce-rtx-5070-ti-12g-16gb-ddr5-5200hz-1tb-ssd-gen4-16-ips-wuxga-165hz-100-srgb-rgb-backlit-win11-30zfbu00efyi",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F58fb3ed4-46e7-48d4-bea5-2e88b6c9c8b4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-radeon-rx-9060-xt-gaming-oc-ice-16gb-qthdgjqismkq",
+      "name": "Gigabyte Radeon RX 9060 XT GAMING OC ICE 16Gb",
+      "category": "gpu",
+      "priceEgp": 34000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-radeon-rx-9060-xt-gaming-oc-ice-16gb-qthdgjqismkq",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F60839c89-e7be-481b-9ef2-f8cc1b30b6b0&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-rtx-5070-ti-windforce-oc-sff-16g-smjb9dvrerwe",
+      "name": "Gigabyte RTX 5070 Ti WINDFORCE OC SFF 16G",
+      "category": "gpu",
+      "priceEgp": 71500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-rtx-5070-ti-windforce-oc-sff-16g-smjb9dvrerwe",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc46d7d59-0078-4ddb-af51-39483011b051&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-eagle-360-cpu-liquid-cooler-360mm-aluminum-radiator-3x120mm-argb-fans-3200-rpm-pump-intel-1851-amd-am5-32-uzkm8",
+      "name": "Gigabyte EAGLE 360 CPU Liquid Cooler 360mm Aluminum Radiator 3x120mm ARGB Fans 3200 RPM Pump Intel 1851 AMD AM5 3.2",
+      "category": "cooling",
+      "priceEgp": 4900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-eagle-360-cpu-liquid-cooler-360mm-aluminum-radiator-3x120mm-argb-fans-3200-rpm-pump-intel-1851-amd-am5-32-uzkm8p53qncc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe7a5b2fd-1040-4496-9671-71b879b7fcc8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "name": "ANTEC AX65 4Fan 120M ARGB WITH Antec Atom B750 PSU",
+      "category": "psu",
+      "priceEgp": 3999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F565ea256-91dd-4b41-a3d9-61c3edac11c2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "name": "ANTEC AX65 4Fan 120M ARGB WITH Antec Atom B750 PSU",
+      "category": "psu",
+      "priceEgp": 4299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F565ea256-91dd-4b41-a3d9-61c3edac11c2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-o11-dynamic-mini-v2-flow-white-mini-tower-gaming-case-jexgzjv6bkhi",
+      "name": "Lian Li O11 Dynamic Mini V2 Flow White Mini Tower Gaming Case – Non-LED / Non-RGB Fans",
+      "category": "case",
+      "priceEgp": 4799.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-dynamic-mini-v2-flow-white-mini-tower-gaming-case-jexgzjv6bkhi",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8f702953-6ec9-4262-beb9-3f3a11e4c92d&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-geforce-rtx-3050-ventus-2x-e-6g-oc-gddr6-dual-fan-ojb6qvcqtc5a",
+      "name": "MSI GeForce RTX 3050 VENTUS 2X E 6G OC GDDR6 (Dual Fan)",
+      "category": "cooling",
+      "priceEgp": 15200.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-geforce-rtx-3050-ventus-2x-e-6g-oc-gddr6-dual-fan-ojb6qvcqtc5a",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff8432480-80aa-4a57-b5df-2d1d10faf43e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-infinity-h27a-reverse-argb-pwm-with-remote-control-3-fan-en90465-cjsdxj1i7npz",
+      "name": "XIGMATEK Infinity H27A Reverse Argb Pwm With Remote Control 3 Fan - EN90465",
+      "category": "cooling",
+      "priceEgp": 925.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-infinity-h27a-reverse-argb-pwm-with-remote-control-3-fan-en90465-cjsdxj1i7npz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F36eec36c-fd53-46ee-baf5-6fa67e4d91bf&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "palit-geforce-rtx-5070-ti-gamingpro-s-16gb-gddr7-pci-express-graphics-card-daukn1wvreui",
+      "name": "Palit GeForce RTX 5070 Ti GamingPro-S 16GB GDDR7 PCI-Express Graphics Card",
+      "category": "gpu",
+      "priceEgp": 71000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=palit-geforce-rtx-5070-ti-gamingpro-s-16gb-gddr7-pci-express-graphics-card-daukn1wvreui",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F46c22faa-9b6e-4380-9a59-fb4853fecc53&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-geforce-rtx-5060-ti-8g-ventus-2x-oc-white-plus-dual-fan-nm3cubbdejk2",
+      "name": "MSI GeForce RTX 5060 Ti 8G VENTUS 2X OC WHITE PLUS (Dual Fan)",
+      "category": "cooling",
+      "priceEgp": 31000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-geforce-rtx-5060-ti-8g-ventus-2x-oc-white-plus-dual-fan-nm3cubbdejk2",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F50d5e8f3-a0e3-47c0-967f-5a802b559640&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "palit-rtx-5080-infinity-3-oc-16gb-gddr7-256bit-3-dp-hdmi-7gwkav1uiwaa",
+      "name": "PALIT RTX 5080 INFINITY 3 OC 16GB GDDR7 256bit 3-DP HDMI",
+      "category": "gpu",
+      "priceEgp": 97000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=palit-rtx-5080-infinity-3-oc-16gb-gddr7-256bit-3-dp-hdmi-7gwkav1uiwaa",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Faa9bb667-64dc-49ff-8d6c-4da87db6a957&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "klevv-32g-ddr4-3200mhz-pc-cl22-i5dvbzd7hzn6",
+      "name": "KLEVV 32G DDR4 3200MHz PC CL22",
+      "category": "ram",
+      "priceEgp": 12750.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=klevv-32g-ddr4-3200mhz-pc-cl22-i5dvbzd7hzn6",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa7622111-fd17-4faa-974d-b6fcd809fbb8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-f16-fx608jmi-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-fhd",
+      "name": "ASUS F16 FX608JMI-TU657W - Intel Core i7-14650HX - NVIDIA GeForce RTX 5060 8GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16-inch FHD IPS 144Hz - Windows 11",
+      "category": "cpu",
+      "priceEgp": 84999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-f16-fx608jmi-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-fhd-ips-144hz-windows-11-ixozxly8jber",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc895553b-1ed1-4b6f-be1a-ac2b626f7726&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-o11-vision-m-digital-white-gaming-case-oojzetnhxitd",
+      "name": "LIAN LI O11 VISION M DIGITAL WHITE GAMING CASE",
+      "category": "case",
+      "priceEgp": 6600.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-vision-m-digital-white-gaming-case-oojzetnhxitd",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F64ca19db-05d9-4a18-8567-fb4ff8c9acd6&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-o11-vision-m-digital-black-micro-tower-gaming-case-emok5qzkpqdm",
+      "name": "LIAN LI-O11 Vision M Digital Black Micro Tower Gaming Case",
+      "category": "case",
+      "priceEgp": 6400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-vision-m-digital-black-micro-tower-gaming-case-emok5qzkpqdm",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F17247d4f-ec56-4a86-b865-bf104c5339a5&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-vector-v150-inf-type-c-black-mid-tower-gaming-case-0y5c8w8doyxt",
+      "name": "Lian Li Vector V150 INF Type C Black Mid Tower Gaming Case",
+      "category": "case",
+      "priceEgp": 3900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-vector-v150-inf-type-c-black-mid-tower-gaming-case-0y5c8w8doyxt",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F535b7fd0-51c4-4615-b2f2-7fcf33dd1869&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-uni-fan-sl-inf-lcd-flex-120mm-rgb-black-fan-12slind1f1b-jdmuiceqvqmg",
+      "name": "Lian Li UNI Fan SL INF Lcd Flex 120MM RGB Black Fan-12SLIND1F1B",
+      "category": "cooling",
+      "priceEgp": 2400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-uni-fan-sl-inf-lcd-flex-120mm-rgb-black-fan-12slind1f1b-jdmuiceqvqmg",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F5d50ab48-c464-4b2d-ab6e-b7428db72992&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "nzxt-c850-gold-core-850w-platinum-atx-31-fully-modular-black-pa-8g3bb-uk-ynhm7zhj5kw6",
+      "name": "NZXT C850 Gold Core 850W - 80PLUS Gold Fully Modular ATX 3.1 PSU - 7 years warranty",
+      "category": "psu",
+      "priceEgp": 6799.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=nzxt-c850-gold-core-850w-platinum-atx-31-fully-modular-black-pa-8g3bb-uk-ynhm7zhj5kw6",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F56559cec-2d18-4a41-9813-b1f260c4e29c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "nzxt-c1000-gold-core-1000w-80plus-gold-fully-modular-atx-31-psu-ctjztzjkpxra",
+      "name": "NZXT C1000 Gold Core 1000W - 80PLUS Gold Fully Modular ATX 3.1 PSU - 7 years warranty",
+      "category": "psu",
+      "priceEgp": 8999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=nzxt-c1000-gold-core-1000w-80plus-gold-fully-modular-atx-31-psu-ctjztzjkpxra",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F500fddcc-9658-421c-981e-0e417c456263&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "nzxt-f360-rgb-core-360mm-3-fans-rgb-pwm-2400-rpm-7512-cfm-per-fan-black-rf-u36hf-b1-iorr2bejysoi",
+      "name": "NZXT F360 RGB Core-360mm - 3 Fans RGB PWM - 2400 RPM - 75.12 CFM Per Fan - BLACK - RF-U36HF-B1",
+      "category": "cooling",
+      "priceEgp": 2999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=nzxt-f360-rgb-core-360mm-3-fans-rgb-pwm-2400-rpm-7512-cfm-per-fan-black-rf-u36hf-b1-iorr2bejysoi",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F47c96ed7-c828-4abc-a969-d22d4bea0e88&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "nzxt-kraken-core-rgb-360mm-aio-liquid-cooler-black-9zvtb2towwsw",
+      "name": "NZXT Kraken Core RGB 360mm AIO Liquid Cooler - Black - 6 Years Warranty",
+      "category": "cooling",
+      "priceEgp": 6999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=nzxt-kraken-core-rgb-360mm-aio-liquid-cooler-black-9zvtb2towwsw",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F543dc3e8-6b9b-4475-b2f0-036bfd20d819&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-crystal-storm-v2-e-atx-420mm-gpu-360mm-radiator-mid-tower-case-with-valkyrie-750w-80-plus-bronze-atx-31-power-s",
+      "name": "Xigmatek Crystal Storm V2 E-ATX 420mm GPU 360mm Radiator Mid Tower Case With Valkyrie 750W 80 Plus Bronze ATX 3.1 Power Supply Combo",
+      "category": "psu",
+      "priceEgp": 5099.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-crystal-storm-v2-e-atx-420mm-gpu-360mm-radiator-mid-tower-case-with-valkyrie-750w-80-plus-bronze-atx-31-power-supply-combo-q4qsc3czw2kc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F622e63d1-ee72-4d52-bdd4-3fda3a1ca2a5&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "apnx-v2-f-white-mid-tower-4fans-fp3-140mm-argbair-up-to-183mmvga-up-to-445mm-type-c-ready-btf-support-gpu-holder-7hahbfy",
+      "name": "APNX V2-F White Mid Tower (4Fans FP3 140MM ARGB)(AIR Up To 183mm)(VGA Up To 445mm) Type-C Ready-BTF Support-GPU Holder",
+      "category": "gpu",
+      "priceEgp": 6499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=apnx-v2-f-white-mid-tower-4fans-fp3-140mm-argbair-up-to-183mmvga-up-to-445mm-type-c-ready-btf-support-gpu-holder-7hahbfyphfzb",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1af8316b-4a14-4e2e-8474-ef8f2e6a2109&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "apnx-vertical-gpu-holder-kit-3-black-gen-5-3zjglckv7c78",
+      "name": "APNX Vertical GPU Holder Kit 3 Black Gen 5",
+      "category": "gpu",
+      "priceEgp": 2999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=apnx-vertical-gpu-holder-kit-3-black-gen-5-3zjglckv7c78",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F64a741eb-7665-44af-8fad-f777b8022009&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-tuf-gaming-a16-fa608uhi-tu657w-amd-ryzen-7-260-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inc",
+      "name": "ASUS TUF Gaming A16 FA608UHI-TU657W - AMD Ryzen 7 260 - NVIDIA GeForce RTX 5050 8GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16-inch WUXGA IPS 144Hz 100% sRGB 300nits - RGB Backlit - Windows 11.",
+      "category": "cpu",
+      "priceEgp": 76999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-gaming-a16-fa608uhi-tu657w-amd-ryzen-7-260-nvidia-geforce-rtx-5050-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-wuxga-ips-144hz-100-srgb-300nits-rgb-backlit-windows-11-mtfqg5expzsj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8361a38a-f979-498a-b1f2-b99ee1b268a8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a620-slk-6-heatpipe-dual-tower-air-cpu-cooler-6ghvti2gvmw1",
+      "name": "ID-COOLING FROZN A620 SLK 6 Heatpipe Dual Tower Air Cpu Cooler",
+      "category": "cooling",
+      "priceEgp": 2599.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a620-slk-6-heatpipe-dual-tower-air-cpu-cooler-6ghvti2gvmw1",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1de58773-4d1c-4751-8b43-e79662243efa&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a510-turbo-5-heatpipe-direct-touch-air-cpu-cooler-hddbs6tb47rp",
+      "name": "ID-COOLING FROZN A510 Turbo 5 Heatpipe Direct Touch Cpu Air Cooler",
+      "category": "cooling",
+      "priceEgp": 1899.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a510-turbo-5-heatpipe-direct-touch-air-cpu-cooler-hddbs6tb47rp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F61f9f5b2-6167-41c2-8686-c8609493743c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a410-xe-dk-4-heatpipe-direct-touch-cpu-air-cooler-21x6g1lqskff",
+      "name": "ID-COOLING FROZN A410 XE DK 4 Heatpipe Direct Touch CPU AIR COOLER",
+      "category": "cooling",
+      "priceEgp": 1449.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a410-xe-dk-4-heatpipe-direct-touch-cpu-air-cooler-21x6g1lqskff",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb2200ff1-9748-4ad0-87c4-22bf6bc8127c&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
@@ -88,6 +1096,1406 @@
       "stockStatus": "in_stock",
       "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-hero-ii-air-4-fan-argb-valkyrie-750w-atx31-80-bronze-mid-tower-case-klgsdmiigrwk",
       "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F40628c90-6688-40ee-bce7-e9b35ad54ba4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lexar-nq780-512gb-m2-2280-pcie-gen-4x4-nvme-uaxg8zafe5nv",
+      "name": "Lexar NQ780 512GB M.2 2280 PCIe Gen 4x4 NVMe.",
+      "category": "storage",
+      "priceEgp": 4799.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lexar-nq780-512gb-m2-2280-pcie-gen-4x4-nvme-uaxg8zafe5nv",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9c6a544b-1f4e-4243-b7e0-cba6c5dfbc48&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-g614pr-rv132w-rog-strix-g16-amd-ryzen-9-8940hx-nvidia-geforce-rtx-5070-ti-12gb-32gb-ddr5-5200hz-2-16gb-1t-nvme-gen-",
+      "name": "ASUS G614PR-RV132W-ROG Strix G16 - AMD Ryzen 9 8940HX - NVIDIA GeForce RTX 5070 Ti 12GB - 32GB DDR5 5200Hz (2 × 16GB) - 1T Nvme GEN 4 - 16-inch WUXGA IPS 100% sRGB 165Hz - Windows 11",
+      "category": "cpu",
+      "priceEgp": 136999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-g614pr-rv132w-rog-strix-g16-amd-ryzen-9-8940hx-nvidia-geforce-rtx-5070-ti-12gb-32gb-ddr5-5200hz-2-16gb-1t-nvme-gen-4-16-inch-wuxga-ips-100-srgb-165hz-windows-11-0z9l7cx6dorj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2c2f1c3a-4582-408d-a8ad-d79d144e7d43&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-gx-ii-gold-850w-atx-30-80-gold-fully-modular-psu-pcie-50-ready-c1fwhiyma94h",
+      "name": "Cooler Master GX II Gold 850W ATX 3.0 80+ Gold Fully Modular PSU – PCIe 5.0 Ready",
+      "category": "cooling",
+      "priceEgp": 4799.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-gx-ii-gold-850w-atx-30-80-gold-fully-modular-psu-pcie-50-ready-c1fwhiyma94h",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd8d44afa-7e54-4030-8fbe-08038cc62073&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-gx-ii-gold-850w-atx-30-80-gold-fully-modular-psu-pcie-50-ready-c1fwhiyma94h",
+      "name": "Cooler Master GX II Gold 850W ATX 3.0 80+ Gold Fully Modular PSU – PCIe 5.0 Ready",
+      "category": "cooling",
+      "priceEgp": 4900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-gx-ii-gold-850w-atx-30-80-gold-fully-modular-psu-pcie-50-ready-c1fwhiyma94h",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd8d44afa-7e54-4030-8fbe-08038cc62073&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "hiksemi-wave-512gb-pcie-gen-3-nvme-m2-qgqoz4pylto7",
+      "name": "HIKSEMI WAVE 512GB PCIe Gen 3 NVMe M.2.",
+      "category": "storage",
+      "priceEgp": 3675.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=hiksemi-wave-512gb-pcie-gen-3-nvme-m2-qgqoz4pylto7",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1904a439-884f-46e1-9f53-3585312bf027&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "hiksemi-wave-512gb-pcie-gen-3-nvme-m2-qgqoz4pylto7",
+      "name": "HIKSEMI WAVE 512GB PCIe Gen 3 NVMe M.2.",
+      "category": "storage",
+      "priceEgp": 4000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=hiksemi-wave-512gb-pcie-gen-3-nvme-m2-qgqoz4pylto7",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1904a439-884f-46e1-9f53-3585312bf027&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gamdias-aura-gl240-rgb-liquid-cpu-cooler-white-iukfzcfdh7wp",
+      "name": "GAMDIAS AURA GL240 RGB Liquid CPU Cooler-WHITE",
+      "category": "cooling",
+      "priceEgp": 2725.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gamdias-aura-gl240-rgb-liquid-cpu-cooler-white-iukfzcfdh7wp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc5a34196-2a2f-4dd5-ba0f-fded0891db2d&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-masterliquid-240-atmos-argb-240mm-liquid-cooler-white-az5ajvmkhuzq",
+      "name": "Cooler Master MasterLiquid 240 Atmos ARGB 240mm Liquid Cooler – White",
+      "category": "cooling",
+      "priceEgp": 4400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-masterliquid-240-atmos-argb-240mm-liquid-cooler-white-az5ajvmkhuzq",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F42c724d6-2b8c-4f45-a51c-ed8dd0ac63f3&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-tuf-gaming-f16-fx607vu-rl167w-intel-core-7-240h-nvidia-geforce-rtx-4050-6gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-wu",
+      "name": "ASUS TUF Gaming F16 FX607VU-RL167W - Intel Core 7 240H - NVIDIA GeForce RTX 4050 6GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16\"-WUXGA-IPS-144Hz-45% NTSC-300nits - Windows 11",
+      "category": "gpu",
+      "priceEgp": 69999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-gaming-f16-fx607vu-rl167w-intel-core-7-240h-nvidia-geforce-rtx-4050-6gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-wuxga-ips-144hz-45-ntsc-300nits-windows-11-hwxpuz9hckco",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2993af07-9729-4d51-90f3-7386d0a5d947&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-tuf-gaming-f16-fx608jmr-rv057w-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-",
+      "name": "ASUS TUF Gaming F16 FX608JMR-RV057W - Intel Core i7-14650HX - NVIDIA® GeForce RTX 5060 8GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16'-WUXGA IPS 165Hz 100% sRGB 300nits - Windows 11",
+      "category": "cpu",
+      "priceEgp": 86499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-gaming-f16-fx608jmr-rv057w-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-wuxga-ips-165hz-100-srgb-300nits-windows-11-clgjqyu1iktu",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd5f7c082-f733-42b1-854a-44238622895a&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-5-5500-6-core-36-ghz-42-ghz-turbo-tray-ylfguujouhw1",
+      "name": "AMD Ryzen 5 5500 6-Core 3.6 GHz (4.2 GHz Turbo) TRAY",
+      "category": "cpu",
+      "priceEgp": 4600.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-5-5500-6-core-36-ghz-42-ghz-turbo-tray-ylfguujouhw1",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F46f0607e-1ba7-4657-9839-1e9f95bcf98e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "klevv-urbane-v-rgb-ddr5-32gb-2x16gb-6400mhz-cl32-kd5agua80-64a320m-iglgvrxytwrr",
+      "name": "KLEVV Urbane V RGB DDR5 32GB (2x16GB) 6400MHz CL32 - KD5AGUA80-64A320M",
+      "category": "ram",
+      "priceEgp": 28500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=klevv-urbane-v-rgb-ddr5-32gb-2x16gb-6400mhz-cl32-kd5agua80-64a320m-iglgvrxytwrr",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F0752ba1e-f0dc-4ab2-87c4-e0250f1ed943&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "klevv-bolt-v-64gb-2x32gb-ddr5-6400mhz-cl32-kd5bgua80-64a320i-zyprgbt7mytp",
+      "name": "KLEVV Bolt V 64GB (2x32GB) DDR5 6400MHz CL32 - KD5BGUA80-64A320I",
+      "category": "ram",
+      "priceEgp": 53500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=klevv-bolt-v-64gb-2x32gb-ddr5-6400mhz-cl32-kd5bgua80-64a320i-zyprgbt7mytp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff46e62ed-51fc-4fed-a3ab-d73e506e90d4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-amd-x870e-aorus-elite-x3d-ice-amd-am5-lga-1718-atx-motherboard-rim1zuk2oyhz",
+      "name": "GIGABYTE AORUS AMD X870E ELITE X3D ICE AMD AM5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 21250.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-amd-x870e-aorus-elite-x3d-ice-amd-am5-lga-1718-atx-motherboard-rim1zuk2oyhz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F00e8b048-01dd-4a28-92c7-51ef5fd6bd93&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-amd-x870e-aorus-elite-x3d-ice-amd-am5-lga-1718-atx-motherboard-rim1zuk2oyhz",
+      "name": "GIGABYTE AORUS AMD X870E ELITE X3D ICE AMD AM5 ATX Motherboard",
+      "category": "motherboard",
+      "priceEgp": 23000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-amd-x870e-aorus-elite-x3d-ice-amd-am5-lga-1718-atx-motherboard-rim1zuk2oyhz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F00e8b048-01dd-4a28-92c7-51ef5fd6bd93&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "antec-p30-fan-argb-azulzhkpsidp",
+      "name": "ANTEC P30 5 FAN ARGB MID TOWER",
+      "category": "cooling",
+      "priceEgp": 3749.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=antec-p30-fan-argb-azulzhkpsidp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F39978a6e-acb0-4598-84e8-f303a7e1dfd0&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gskill-96g-trident-z5-royal-rgb-ddr5-6800mhz-2x48gb-cl34-46-46-108-intel-xmp-30f5-6800j3446f48gx2-tr5s-k2wgevt3c52u",
+      "name": "G.SKILL 96G Trident Z5 Royal RGB DDR5 6800MHz (2x48GB) CL34-46-46-108, Intel XMP 3.0(F5-6800J3446F48GX2-TR5S)",
+      "category": "ram",
+      "priceEgp": 88800.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gskill-96g-trident-z5-royal-rgb-ddr5-6800mhz-2x48gb-cl34-46-46-108-intel-xmp-30f5-6800j3446f48gx2-tr5s-k2wgevt3c52u",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F36be44ca-1fa8-4585-8ada-6b590bae4dbb&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-9-9950x3d2-dual-edition-box-apihpyjlfdyy",
+      "name": "AMD RYZEN 9-9950X3D2 Dual Edition Box",
+      "category": "cpu",
+      "priceEgp": 56000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-9-9950x3d2-dual-edition-box-apihpyjlfdyy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F5d61fd55-fb58-479f-b723-68b6a88ffae9&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-9-9950x3d2-dual-edition-box-apihpyjlfdyy",
+      "name": "AMD RYZEN 9-9950X3D2 Dual Edition Box",
+      "category": "cpu",
+      "priceEgp": 57499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-9-9950x3d2-dual-edition-box-apihpyjlfdyy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F5d61fd55-fb58-479f-b723-68b6a88ffae9&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-moon-dgt-digital-lcd-4-fan-argb-pwm-curved-tempered-glass-super-tower-case-en49651-vtay0bjoxfex",
+      "name": "XIGMATEK Moon DGT Arctic Digital LCD 4 Fan Argb PWM Curved Tempered Glass White Super Tower Case-EN49668",
+      "category": "cooling",
+      "priceEgp": 3399.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-moon-dgt-digital-lcd-4-fan-argb-pwm-curved-tempered-glass-super-tower-case-en49651-vtay0bjoxfex",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb4bf5e19-13fc-4142-b6c3-347ca7a9a7f5&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-mag-pano-m100l-pz-mid-tower-case-white-7zfyznkcojo0",
+      "name": "MSI MAG PANO M100L PZ Mid-Tower Case (White)",
+      "category": "case",
+      "priceEgp": 4899.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-mag-pano-m100l-pz-mid-tower-case-white-7zfyznkcojo0",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F90e4f113-f32d-45da-95b2-f1da87147c39&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "intel-core-i7-14700-208p-12e28-15ghz54ghz-33mb65w-tdp-socket-lga-1700-trey-tbwnfhkx4q5q",
+      "name": "INTEL Core i7-14700 20(8P-12E)/28, 1.5GHz/5.4GHz 33MB,65W TDP, Socket LGA 1700 - TREY",
+      "category": "cpu",
+      "priceEgp": 21000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=intel-core-i7-14700-208p-12e28-15ghz54ghz-33mb65w-tdp-socket-lga-1700-trey-tbwnfhkx4q5q",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8f349ebd-b120-4099-bbd7-348f445f4f50&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "seasonic-focus-gx-850-atx3-850w-atx-31-80-plus-gold-fully-modular-hybrid-fan-white-9mofycactoc9",
+      "name": "SEASONIC Focus GX-850 ATX3 850W Atx 3.1 80 Plus Gold Fully Modular Hybrid Fan White",
+      "category": "cooling",
+      "priceEgp": 8499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=seasonic-focus-gx-850-atx3-850w-atx-31-80-plus-gold-fully-modular-hybrid-fan-white-9mofycactoc9",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F2849760e-ca06-4cf8-a833-9a8e0bbcb30f&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "seasonic-core-gx-850-atx3-850w-atx-31-80-plus-gold-cybenetics-platinum-fully-modular-hydro-dynamic-bearing-fan-kda0gtu9z",
+      "name": "SEASONIC Core GX-850 ATX3 850W Atx 3.1 80 Plus Gold Cybenetics Platinum Fully Modular Hydro Dynamic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 5249.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=seasonic-core-gx-850-atx3-850w-atx-31-80-plus-gold-cybenetics-platinum-fully-modular-hydro-dynamic-bearing-fan-kda0gtu9ztfe",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fbe500113-de19-4b45-9fdf-8d1c3ae45156&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "seasonic-core-gx-850-atx3-850w-atx-31-80-plus-gold-cybenetics-platinum-fully-modular-hydro-dynamic-bearing-fan-kda0gtu9z",
+      "name": "SEASONIC Core GX-850 ATX3 850W Atx 3.1 80 Plus Gold Cybenetics Platinum Fully Modular Hydro Dynamic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 5749.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=seasonic-core-gx-850-atx3-850w-atx-31-80-plus-gold-cybenetics-platinum-fully-modular-hydro-dynamic-bearing-fan-kda0gtu9ztfe",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fbe500113-de19-4b45-9fdf-8d1c3ae45156&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "seasonic-core-gc-750-atx3-750w-atx-31-80-plus-gold-braidad-cables-hydro-dynamic-bearing-fan-zifyc9wozult",
+      "name": "SEASONIC Core GC-750 ATX3 750W Atx 3.1 80 Plus Gold Braidad Cables Hydro Dynamic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 4399.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=seasonic-core-gc-750-atx3-750w-atx-31-80-plus-gold-braidad-cables-hydro-dynamic-bearing-fan-zifyc9wozult",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6b13dfbe-3653-4c80-af20-6a44393ab3e8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "seasonic-core-bc-750-atx3-750w-atx-31-80-plus-bronze-braidad-cables-hydro-dynamic-bearing-fan-ycluqo3sfnpg",
+      "name": "SEASONIC Core BC-750 ATX3 750W Atx 3.1 80 Plus Bronze Braidad Cables Hydro Dynamic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 3599.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=seasonic-core-bc-750-atx3-750w-atx-31-80-plus-bronze-braidad-cables-hydro-dynamic-bearing-fan-ycluqo3sfnpg",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6979d54b-ffd8-4fc6-8b07-affc678d49a8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-fx360-inf-gen-7-pump-argb-aio-liquid-cpu-9bzpw0adtnwp",
+      "name": "ID-COOLING FX360 INF Gen 7 Pump ARGB Liquid CPU Cooler (AIO)",
+      "category": "cooling",
+      "priceEgp": 3099.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-fx360-inf-gen-7-pump-argb-aio-liquid-cpu-9bzpw0adtnwp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fae73cb30-99fb-4af1-9703-17317aa74f7b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-fx360-inf-gen-7-pump-argb-white-aio-liquid-qtgfnsccxnd1",
+      "name": "ID-COOLING FX360 INF Gen 7 Pump ARGB White Liquid CPU Cooler (AIO)",
+      "category": "cooling",
+      "priceEgp": 3199.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-fx360-inf-gen-7-pump-argb-white-aio-liquid-qtgfnsccxnd1",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F283d8718-7839-40ec-b19b-431bdbe48a0d&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-fx360-pro-gen-7-pump-liquid-cpu-cooler-aio-ptouusnvksiy",
+      "name": "ID-COOLING FX360 PRO Gen 7 Pump Liquid Cpu Cooler (AIO)",
+      "category": "cooling",
+      "priceEgp": 2649.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-fx360-pro-gen-7-pump-liquid-cpu-cooler-aio-ptouusnvksiy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9c95ce9c-c836-45da-86c6-f8678271dd6c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a620-pro-se-argb-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-snow-ta465b67hcyj",
+      "name": "ID-COOLING FROZN A620 PRO SE ARGB 6 Heatpipe Dual Tower With 2 120mm Hydraulic Bearing Fan Snow",
+      "category": "cooling",
+      "priceEgp": 2049.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a620-pro-se-argb-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-snow-ta465b67hcyj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F18827a7e-d61c-438d-b58b-98a967c60e55&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a620-pro-se-argb-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-snow-ta465b67hcyj",
+      "name": "ID-COOLING FROZN A620 PRO SE ARGB 6 Heatpipe Dual Tower With 2 120mm Hydraulic Bearing Fan Snow",
+      "category": "cooling",
+      "priceEgp": 2149.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a620-pro-se-argb-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-snow-ta465b67hcyj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F18827a7e-d61c-438d-b58b-98a967c60e55&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a620-pro-se-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-ee7kvsa778su",
+      "name": "ID-COOLING FROZN A620 PRO SE 6 Heatpipe Dual Tower With 2 120mm Hydraulic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 1899.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a620-pro-se-6-heatpipe-dual-tower-with-2-120mm-hydraulic-bearing-fan-ee7kvsa778su",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb4120c0b-c95b-423c-b92b-817c2b9293c8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-frozn-a410-se-argb-4-heatpipe-direct-touch-with-120mm-hydraulic-bearing-fan-white-bj8rwdjsezgp",
+      "name": "ID-COOLING FROZN A410 SE ARGB 4 Heatpipe Direct Touch With 120mm Hydraulic Bearing Fan",
+      "category": "cooling",
+      "priceEgp": 1199.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-frozn-a410-se-argb-4-heatpipe-direct-touch-with-120mm-hydraulic-bearing-fan-white-bj8rwdjsezgp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F15b07714-1e66-489c-8b42-f5e38a7eb36a&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-amun-3-fan-argb-pwm-x-power-650w-80-plus-micro-tower-case-en90427-vfzcquieknct",
+      "name": "XIGMATEK Amun 3 Fan ARGB PWM + X-Power 650W 80 Plus Micro Tower Case-EN90427",
+      "category": "cooling",
+      "priceEgp": 2350.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-amun-3-fan-argb-pwm-x-power-650w-80-plus-micro-tower-case-en90427-vfzcquieknct",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa80424a1-cdf8-4dae-b3ca-2697f235b708&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-amun-3-fan-argb-pwm-x-power-650w-80-plus-micro-tower-case-en90427-vfzcquieknct",
+      "name": "XIGMATEK Amun 3 Fan ARGB PWM + X-Power 650W 80 Plus Micro Tower Case-EN90427",
+      "category": "cooling",
+      "priceEgp": 2549.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-amun-3-fan-argb-pwm-x-power-650w-80-plus-micro-tower-case-en90427-vfzcquieknct",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa80424a1-cdf8-4dae-b3ca-2697f235b708&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "sigma-vga-holder-black-blue-jpsfzy5bhwgs",
+      "name": "Sigma VGA Holder - Black & Blue",
+      "category": "gpu",
+      "priceEgp": 249.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=sigma-vga-holder-black-blue-jpsfzy5bhwgs",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe0630856-de0c-44f4-b6f4-83916eee4c59&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "sigma-vga-holder-white-and-blue-tngq7domfgoe",
+      "name": "Sigma VGA Holder - White and Blue",
+      "category": "gpu",
+      "priceEgp": 249.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=sigma-vga-holder-white-and-blue-tngq7domfgoe",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F688234a4-7069-4076-a987-c7dc51d28569&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "sigma-vga-holder-asus-rog-black-and-red-qumrpddf6imh",
+      "name": "Sigma VGA Holder ASUS ROG Black and Red",
+      "category": "gpu",
+      "priceEgp": 349.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=sigma-vga-holder-asus-rog-black-and-red-qumrpddf6imh",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F87d976db-69ef-429a-93b6-2e52e29134a1&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "corsair-vengeance-16gb-ddr5-5200mts-cl44-rkafok7pf1jn",
+      "name": "CORSAIR VENGEANCE 16GB DDR5 5200MT/s CL44.",
+      "category": "ram",
+      "priceEgp": 12800.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=corsair-vengeance-16gb-ddr5-5200mts-cl44-rkafok7pf1jn",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffa1b81b1-4848-4e9e-9ffd-a1bdcc4c5969&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "teamgrobe-elite-16g-ddr5-p5200-meosffzkqptq",
+      "name": "TEAMGROUP ELITE 16G DDR5 P5200",
+      "category": "ram",
+      "priceEgp": 13000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=teamgrobe-elite-16g-ddr5-p5200-meosffzkqptq",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F4ac191a7-d53c-44f7-8209-1ea4f759b740&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-aero-dgt-120-arctic-120mm-argb-pwm-digital-lcd-infinity-ring-case-fan-1-fan-vor9ramzecvm",
+      "name": "Xigmatek Aero DGT 120 Arctic – 120mm ARGB PWM Digital LCD Infinity Ring Case Fan (1 Fan)",
+      "category": "cooling",
+      "priceEgp": 349.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-aero-dgt-120-arctic-120mm-argb-pwm-digital-lcd-infinity-ring-case-fan-1-fan-vor9ramzecvm",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F04c99ab9-0498-4fd4-8c91-01c0750a415e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-aero-dgt-240-reverse-240mm-argb-pwm-digital-lcd-infinity-ring-case-fan-2-fans-qjl4ec06vfbc",
+      "name": "Xigmatek Aero DGT 240 Reverse Arctic – 240mm ARGB PWM Digital LCD Infinity Ring Case Fan (2 Fans)",
+      "category": "cooling",
+      "priceEgp": 999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-aero-dgt-240-reverse-240mm-argb-pwm-digital-lcd-infinity-ring-case-fan-2-fans-qjl4ec06vfbc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F76e2b478-7fe7-4dfe-988c-61b94bafa34f&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-aero-dgt-360-reverse-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fanblade-en90229-j6o",
+      "name": "XIGMATEK Aero DGT 360 Reverse Digital LCD 3 Fan ARGB and PWM Infinity Ring Four Side 360mm Standard FanBlade-EN90229",
+      "category": "cooling",
+      "priceEgp": 1249.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-aero-dgt-360-reverse-digital-lcd-3-fan-argb-and-pwm-infinity-ring-four-side-360mm-standard-fanblade-en90229-j6ouskwawbv8",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc9a5b725-b1c0-4eb1-9179-dd563884ea16&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "aerocool-b312f-flow-argb-3fan-black-lux-550w-power-supply-unit-80-plus-bronze-15nvwr8zmmor",
+      "name": "Aerocool B312F Flow ARGB 3FAN - Black + LUX 550W Power Supply Unit 80 Plus Bronze",
+      "category": "psu",
+      "priceEgp": 2749.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=aerocool-b312f-flow-argb-3fan-black-lux-550w-power-supply-unit-80-plus-bronze-15nvwr8zmmor",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa4f25c0e-3959-41a6-9c9a-0be2d7b94528&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "aerocool-b312f-flow-argb-3fan-black-lux-550w-power-supply-unit-80-plus-bronze-15nvwr8zmmor",
+      "name": "Aerocool B312F Flow ARGB 3FAN - Black + LUX 550W Power Supply Unit 80 Plus Bronze",
+      "category": "psu",
+      "priceEgp": 2999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=aerocool-b312f-flow-argb-3fan-black-lux-550w-power-supply-unit-80-plus-bronze-15nvwr8zmmor",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa4f25c0e-3959-41a6-9c9a-0be2d7b94528&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-white-oxmtr98id5bt",
+      "name": "APNX LC1-D 360 High-Performance LCD 360mm Liquid CPU Cooler – White",
+      "category": "cooling",
+      "priceEgp": 6299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-white-oxmtr98id5bt",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9e22d83f-851a-4e1a-9f85-8a30f0f72586&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-white-oxmtr98id5bt",
+      "name": "APNX LC1-D 360 High-Performance LCD 360mm Liquid CPU Cooler – White",
+      "category": "cooling",
+      "priceEgp": 7999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=apnx-lc1-d-360-high-performance-lcd-360mm-liquid-cpu-cooler-white-oxmtr98id5bt",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9e22d83f-851a-4e1a-9f85-8a30f0f72586&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-elite-gold-1000w-fm-aeu-cord-thcklr8b8pr9",
+      "name": "COOLER MASTER ELITE Gold 1000W FM A/EU cord",
+      "category": "cooling",
+      "priceEgp": 6850.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-elite-gold-1000w-fm-aeu-cord-thcklr8b8pr9",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff121415b-554b-4548-ae92-5afcee6ce762&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-hyper-212-3dhp-argb-black-y7dfkavabwuw",
+      "name": "COOLER MASTER Hyper 212 3DHP ARGB BLACK",
+      "category": "cooling",
+      "priceEgp": 1550.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-hyper-212-3dhp-argb-black-y7dfkavabwuw",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F97c62907-775c-46d1-bf0c-05bd0786fc52&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-masterliquid-core-nex-360-argb-xdhnha4isxty",
+      "name": "COOLER MASTER MasterLiquid Core Nex 360 ARGB",
+      "category": "cooling",
+      "priceEgp": 4300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-masterliquid-core-nex-360-argb-xdhnha4isxty",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fbf8cc55b-8671-45e1-bbd3-86c14cf0e6f9&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-ml-360-atmos-ii-vrm-fan-argb-tp6surwfz0wr",
+      "name": "COOLER MASTER ML 360 Atmos II VRM Fan ARGB",
+      "category": "cooling",
+      "priceEgp": 7100.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-ml-360-atmos-ii-vrm-fan-argb-tp6surwfz0wr",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F96b20b83-c148-4393-9687-87e1b910f8ed&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-masterframe-360-panorama-atx-mid-tower-pc-case-8lagsgkgkbpt",
+      "name": "COOLER MASTER MasterFrame 360 Panorama ATX Mid-Tower PC Case",
+      "category": "cooling",
+      "priceEgp": 12000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-masterframe-360-panorama-atx-mid-tower-pc-case-8lagsgkgkbpt",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8d0fb96f-525c-4212-b3ed-1d9f0b77e3cd&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-master-masterframe-360-stage-lcd-atx-mid-tower-pc-case-tnkg8szancq9",
+      "name": "COOLER MASTER Master MasterFrame 360 Stage LCD ATX Mid-Tower PC Case",
+      "category": "cooling",
+      "priceEgp": 17300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-master-masterframe-360-stage-lcd-atx-mid-tower-pc-case-tnkg8szancq9",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb2fefb7f-3ea2-48a2-a479-5e8f6bafbea1&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-master-masterframe-360-stage-lcd-atx-mid-tower-pc-case-tnkg8szancq9",
+      "name": "COOLER MASTER Master MasterFrame 360 Stage LCD ATX Mid-Tower PC Case",
+      "category": "cooling",
+      "priceEgp": 18500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-master-masterframe-360-stage-lcd-atx-mid-tower-pc-case-tnkg8szancq9",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb2fefb7f-3ea2-48a2-a479-5e8f6bafbea1&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-tuf-a16-fa608pm-rv659w-ryzen-9-8940hx-16c32t-16gb-ddr5-5600hz-512g-gen4-nvidia-geforce-rtx-5060-8gb-16-wuxga-ips-16",
+      "name": "ASUS TUF A16-FA608PM-RV659W Ryzen 9 8940HX (16C/32T) - Nvidia Geforce RTX 5060 8GB - 16GB DDR5 5600HZ - 512G SSD Gen4 - 16'' WUXGA IPS 165Hz 100% sRGB - RGB Backlit - WIN11",
+      "category": "cpu",
+      "priceEgp": 86500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-a16-fa608pm-rv659w-ryzen-9-8940hx-16c32t-16gb-ddr5-5600hz-512g-gen4-nvidia-geforce-rtx-5060-8gb-16-wuxga-ips-165hz-100-srgb-rgb-backlit-win11-iabfyjb8w2vn",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fcdb7342f-f66d-41e7-8d98-b47b945c6315&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-intel-b760-ds3h-wifi-6-ddr5-dxcbraxwp25p",
+      "name": "GIGABYTE INTEL B760 DS3H WIFI 6 DDR5",
+      "category": "motherboard",
+      "priceEgp": 7900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-intel-b760-ds3h-wifi-6-ddr5-dxcbraxwp25p",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd78f1712-d3fa-4d43-acde-ae79dd8d45ea&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-intel-b760-ds3h-wifi-6-ddr5-dxcbraxwp25p",
+      "name": "GIGABYTE INTEL B760 DS3H WIFI 6 DDR5",
+      "category": "motherboard",
+      "priceEgp": 8200.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-intel-b760-ds3h-wifi-6-ddr5-dxcbraxwp25p",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd78f1712-d3fa-4d43-acde-ae79dd8d45ea&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-amd-b550m-k-socket-am4-motherboard-feu80rmpdzeq",
+      "name": "Gigabyte AMD B550M-K DDR4 Socket AM4 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 5150.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-amd-b550m-k-socket-am4-motherboard-feu80rmpdzeq",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9aa06762-01b1-4c52-b4cc-1e6e5a31b024&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-gaming-360mm-ice-liquid-cpu-cooler-9ri4skpkdjr7",
+      "name": "Gigabyte Gaming 360mm Ice Liquid Cpu Cooler",
+      "category": "cooling",
+      "priceEgp": 5499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-gaming-360mm-ice-liquid-cpu-cooler-9ri4skpkdjr7",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1b14173d-d289-4071-86c7-017500d1251f&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-rs1000g-1000w-80-plus-gold-cybenetics-platinum-atx-31-full-modular-6nvl7yjyvwqv",
+      "name": "LIAN LI RS1000G 1000W 80 Plus Gold Cybenetics Platinum ATX 3.1 Full Modular",
+      "category": "psu",
+      "priceEgp": 7299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-rs1000g-1000w-80-plus-gold-cybenetics-platinum-atx-31-full-modular-6nvl7yjyvwqv",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F060e159b-2fc6-46ee-ad86-eb4958e142f2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-sx1200p-1200w-80-plus-platinum-atx-31-full-modular-white-power-supply-2ilds0cghlpj",
+      "name": "LIAN LI SX1200P 1200W 80 Plus Platinum ATX 3.1 Full Modular White Power Supply",
+      "category": "psu",
+      "priceEgp": 8099.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-sx1200p-1200w-80-plus-platinum-atx-31-full-modular-white-power-supply-2ilds0cghlpj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F5b0fade8-868d-4dfc-8c8d-32f44e3401d7&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "amd-ryzen-5-9600x-8core-12threads-socket-am5-lga-1718-tray-y70bzsjde6ej",
+      "name": "AMD RYZEN 5-9600X (8core / 12Threads) Socket AM5 LGA 1718 - Tray",
+      "category": "cpu",
+      "priceEgp": 11500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=amd-ryzen-5-9600x-8core-12threads-socket-am5-lga-1718-tray-y70bzsjde6ej",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fce73a503-76f2-46ef-81b6-06818dd626d7&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-infinity-j22a-argb-pwm-with-remote-control-3-fan-en49811-ese2nv0qlbnd",
+      "name": "XIGMATEK Infinity J22A Argb Pwm With Remote Control 3 Fan - EN49811",
+      "category": "cooling",
+      "priceEgp": 925.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-infinity-j22a-argb-pwm-with-remote-control-3-fan-en49811-ese2nv0qlbnd",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F67a0ffbf-b202-4fd3-ab93-1869f811d10c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-infinity-h27a-argb-pwm-with-remote-control-3-fan-en90458-d6pwumiukzbd",
+      "name": "XIGMATEK Infinity H27A Argb Pwm With Remote Control 3 Fan - EN90458",
+      "category": "cooling",
+      "priceEgp": 925.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-infinity-h27a-argb-pwm-with-remote-control-3-fan-en90458-d6pwumiukzbd",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F856d4054-9c97-439f-b1b3-5efd53d5351f&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-infinity-h27a-arctic-argb-pwm-with-remote-control-3-fan-en90472-8vx0dvyjq6ns",
+      "name": "XIGMATEK Infinity H27A Arctic Argb Pwm With Remote Control 3 Fan - EN90472",
+      "category": "cooling",
+      "priceEgp": 950.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-infinity-h27a-arctic-argb-pwm-with-remote-control-3-fan-en90472-8vx0dvyjq6ns",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F0b2f54c3-20c7-4b68-8b77-50dd07cb91de&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "kingston-fury-beast-rgb-32gb-ddr5-desktop-memory-6000-mhz-memory-speed-cl36-cas-latency-288-pin-kit-intel-xmp-30-amd-exp",
+      "name": "Kingston Fury Beast RGB 32GB DDR5 Desktop Memory, 6000 MHz Memory Speed, CL36 CAS Latency, 288-Pin Kit, Intel XMP 3.0 & AMD EXPO Ready, Black | KF560C36BBE2A-32",
+      "category": "ram",
+      "priceEgp": 28000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=kingston-fury-beast-rgb-32gb-ddr5-desktop-memory-6000-mhz-memory-speed-cl36-cas-latency-288-pin-kit-intel-xmp-30-amd-expo-ready-black-kf560c36bbe2a-32-0atgbc7jlpp8",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fdfb0943c-0316-4d22-ab1f-12435378e29e&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "klevv-ddr5-32gb-1x32gb-5600mhz-cl46-sodimm-11v-kd5agsa80-56g460a-fztzmil4sxyp",
+      "name": "KLEVV DDR5 32GB (1x32GB) 5600MHz CL46 SODIMM 1.1V (KD5AGSA80-56G460A)",
+      "category": "ram",
+      "priceEgp": 23500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=klevv-ddr5-32gb-1x32gb-5600mhz-cl46-sodimm-11v-kd5agsa80-56g460a-fztzmil4sxyp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6e16f2b6-1175-4a4b-9d13-3dcfa8b9bf9a&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "ugreen-30715-pcie-gen4-x16-to-m2-nvme-expansion-card-2t05fsiuytgk",
+      "name": "UGREEN 30715 PCIe Gen4 x16 to M.2 NVMe Expansion Card",
+      "category": "storage",
+      "priceEgp": 475.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=ugreen-30715-pcie-gen4-x16-to-m2-nvme-expansion-card-2t05fsiuytgk",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F83107b17-4e70-40f6-a4fb-61d614f76f11&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-geforce-rtx-5060-ti-8g-ventus-2x-oc-plus-dual-fan-zfheygs9xqtf",
+      "name": "MSI GeForce RTX 5060 Ti 8G VENTUS 2X OC PLUS (Dual Fan)",
+      "category": "cooling",
+      "priceEgp": 30500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-geforce-rtx-5060-ti-8g-ventus-2x-oc-plus-dual-fan-zfheygs9xqtf",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F73f2cfb8-3731-4c21-8264-6735a91786b7&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "palit-geforce-rtx-5060-ti-dual-8gb-gddr7-pci-express-graphics-card-shl9kntzuiwm",
+      "name": "Palit GeForce RTX 5060 Ti Dual 8GB GDDR7 PCI-Express Graphics Card",
+      "category": "gpu",
+      "priceEgp": 30500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=palit-geforce-rtx-5060-ti-dual-8gb-gddr7-pci-express-graphics-card-shl9kntzuiwm",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F0cb24e4d-d75b-4f70-8296-b5df6455c8d3&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-vector-v100r-mini-btf-4-fan-argb-type-c-rb750-750w-80-plus-bronze-atx-31-modular-sata-black-mid-tower-gaming-cas",
+      "name": "LIAN LI Vector V100R Mini BTF 4 Fan ARGB Type-C + RB750 750W 80 Plus Bronze ATX 3.1 modular SATA Black Mid Tower Gaming Case",
+      "category": "cooling",
+      "priceEgp": 5300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-vector-v100r-mini-btf-4-fan-argb-type-c-rb750-750w-80-plus-bronze-atx-31-modular-sata-black-mid-tower-gaming-case-mrjyziz1lj9z",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F72080ad8-6125-40e0-99b1-d5a1dfb5a409&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "palit-infinity-3-geforce-rtx-5060-ti-16gb-gddr7-dlss4-15u289j3pteo",
+      "name": "PALIT Infinity 3 GeForce RTX 5060 Ti 16GB GDDR7 DLSS4",
+      "category": "gpu",
+      "priceEgp": 42500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=palit-infinity-3-geforce-rtx-5060-ti-16gb-gddr7-dlss4-15u289j3pteo",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F75e09d38-43fe-4d26-b7db-a43920af717d&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-mwe-gold-v3-atx-31-non-modular-80-plus-gold-atx-31-power-supply-2coo3fumzlbx",
+      "name": "Cooler Master MWE 850w Gold V3 ATX 3.1 Non-Modular 80 Plus Gold ATX 3.1 Power Supply",
+      "category": "cooling",
+      "priceEgp": 5150.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-mwe-gold-v3-atx-31-non-modular-80-plus-gold-atx-31-power-supply-2coo3fumzlbx",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fbb0d84ca-f8b4-49c9-ad87-a570c80e272b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "cooler-master-mwe-gold-v3-atx-31-non-modular-80-plus-gold-atx-31-power-supply-2coo3fumzlbx",
+      "name": "Cooler Master MWE 850w Gold V3 ATX 3.1 Non-Modular 80 Plus Gold ATX 3.1 Power Supply",
+      "category": "cooling",
+      "priceEgp": 5300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=cooler-master-mwe-gold-v3-atx-31-non-modular-80-plus-gold-atx-31-power-supply-2coo3fumzlbx",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fbb0d84ca-f8b4-49c9-ad87-a570c80e272b&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "dell-vostro-3530-intel-core-i7-1355u-up-to-intel-iris-xe-graphics-dual-channel-8gb-ddr4-3200mhz-512gb-nvme-gen-4-156-inc",
+      "name": "Dell Vostro 3530 - Intel Core i7-1355U - up to Intel Iris Xe Graphics ( dual-channel ) - 8GB DDR4 3200MHz - 512GB Nvme GEN 4 - 15.6-inch FHD VA 120Hz - DOS .",
+      "category": "cpu",
+      "priceEgp": 37300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=dell-vostro-3530-intel-core-i7-1355u-up-to-intel-iris-xe-graphics-dual-channel-8gb-ddr4-3200mhz-512gb-nvme-gen-4-156-inch-fhd-va-120hz-dos-xxbbyc8whups",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff3b2ac83-00ae-419d-a863-9b68ddc677df&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "msi-intel-mag-z790-tomahawk-wifi-wvnz5iwbywq5",
+      "name": "MSI INTEL MAG Z790 TOMAHAWK WIFI",
+      "category": "motherboard",
+      "priceEgp": 17400.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-intel-mag-z790-tomahawk-wifi-wvnz5iwbywq5",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffccd2d89-7067-460b-93d5-b4dbc573ddfe&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-prime-radeon-rx-9070-xt-white-oc-edition-16gb-gddr6-gaming-graphics-card-z2tu6kjnreri",
+      "name": "ASUS Prime Radeon RX 9070 XT White OC Edition 16GB GDDR6 Gaming Graphics Card",
+      "category": "gpu",
+      "priceEgp": 50500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-radeon-rx-9070-xt-white-oc-edition-16gb-gddr6-gaming-graphics-card-z2tu6kjnreri",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa809ad86-6fd7-48d2-abf7-9e6950b206ae&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gamdias-aura-gc1-elite-white-argb-gaming-mid-tower-case-aura-gp650-80-plus-white-power-supply-650w-jsaobqb0dper",
+      "name": "Gamdias AURA GC1 ELITE WHITE ARGB Gaming Mid Tower Case + AURA GP650 80 Plus White Power Supply 650W",
+      "category": "psu",
+      "priceEgp": 3149.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gamdias-aura-gc1-elite-white-argb-gaming-mid-tower-case-aura-gp650-80-plus-white-power-supply-650w-jsaobqb0dper",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F1e8ddd06-0686-4c2d-885e-93e56cb23639&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gamdias-boreas-m1-620-dual-tower-cpu-air-cooler-with-6-copper-heat-pipes-and-2-hydraulic-bearing-fans-pzltzovyulht",
+      "name": "GAMDIAS BOREAS M1-620 Dual Tower CPU Air Cooler with 6 Copper Heat Pipes and 2 Hydraulic Bearing Fans",
+      "category": "cooling",
+      "priceEgp": 1999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gamdias-boreas-m1-620-dual-tower-cpu-air-cooler-with-6-copper-heat-pipes-and-2-hydraulic-bearing-fans-pzltzovyulht",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ffc306a11-fe4c-4225-bc97-485f6a7a5eb6&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-prime-b550m-k-micro-atx-motherboard-uqngnr0rdqcy",
+      "name": "ASUS PRIME B550M-K micro ATX motherboard",
+      "category": "motherboard",
+      "priceEgp": 4500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b550m-k-micro-atx-motherboard-uqngnr0rdqcy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fad08b482-142d-49bc-beb0-177865fba796&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-tuf-gaming-a520m-plus-ii-micro-atx-gaming-motherboard-ynk5x7ksby38",
+      "name": "ASUS TUF GAMING A520M-PLUS II micro ATX gaming motherboard",
+      "category": "motherboard",
+      "priceEgp": 3900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-tuf-gaming-a520m-plus-ii-micro-atx-gaming-motherboard-ynk5x7ksby38",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F466ef1ba-faf5-4efd-935b-19fe15b9b57c&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "hp-250-g10-intel-core-i3-1315u-intel-uhd-graphics-16gb-ddr4-3200hz-512gb-nvme-gen-4-156-inch-fhd-ips-60hz-dos-fuys816syv",
+      "name": "HP 250 G10 - Intel Core i3-1315U - Intel UHD Graphics - 16GB DDR4 3200Hz - 512GB Nvme GEN 4 - 15.6-inch FHD IPS 60Hz - DOS",
+      "category": "cpu",
+      "priceEgp": 30900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=hp-250-g10-intel-core-i3-1315u-intel-uhd-graphics-16gb-ddr4-3200hz-512gb-nvme-gen-4-156-inch-fhd-ips-60hz-dos-fuys816syvvr",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F294b66c7-0c84-46c1-992e-1744c86fb1d5&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-vector-v100r-mini-btf-black-mid-tower-gaming-case-with-4-argb-fans-sr750-750w-80-plus-gold-atx-31-psu-wqnyfga4nt",
+      "name": "Lian Li Vector V100R Mini BTF Black Mid Tower Gaming Case with 4 ARGB Fans + SR750 750W 80 Plus Gold ATX 3.1 PSU",
+      "category": "psu",
+      "priceEgp": 5700.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-vector-v100r-mini-btf-black-mid-tower-gaming-case-with-4-argb-fans-sr750-750w-80-plus-gold-atx-31-psu-wqnyfga4ntzd",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe07fae70-861c-44df-9e3a-f310507fb875&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-vector-v100r-mini-btf-black-mid-tower-gaming-case-with-4-argb-fans-sr850-850w-80-plus-gold-atx-31-psu-zza87sit8m",
+      "name": "Lian Li Vector V100R BTF Black Mid Tower Gaming Case with 4 ARGB Fans + SR850 850W 80 Plus Gold ATX 3.1 PSU",
+      "category": "psu",
+      "priceEgp": 6250.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-vector-v100r-mini-btf-black-mid-tower-gaming-case-with-4-argb-fans-sr850-850w-80-plus-gold-atx-31-psu-zza87sit8mwe",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa98eb563-6506-4a74-90a8-c1756b9f0acc&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-o11-vision-m-micro-tower-gaming-case-hda8pqq1o4ap",
+      "name": "Lian Li O11 Vision M White Micro Tower Gaming Case",
+      "category": "case",
+      "priceEgp": 3700.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-o11-vision-m-micro-tower-gaming-case-hda8pqq1o4ap",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F4c365461-7afc-427f-9e4b-dc64d6065264&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-uni-fan-sl-inf-flex-120mm-rgb-white-fan-12slin1f1w-95pmyi0v2yzp",
+      "name": "Lian Li UNI Fan SL INF Flex 120MM RGB White Fan (12SLIN1F1W)",
+      "category": "cooling",
+      "priceEgp": 1600.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-uni-fan-sl-inf-flex-120mm-rgb-white-fan-12slin1f1w-95pmyi0v2yzp",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F01f8911b-3a17-44d2-b22f-168387913060&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "lian-li-uni-fan-sl-inf-flex-120mm-rgb-black-fan-12slin1f1b-9hx3yhggrrsc",
+      "name": "Lian Li UNI Fan SL INF Flex 120MM RGB Black Fan (12SLIN1F1B)",
+      "category": "cooling",
+      "priceEgp": 1600.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-uni-fan-sl-inf-flex-120mm-rgb-black-fan-12slin1f1b-9hx3yhggrrsc",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F98ef7784-97bb-4ccc-9508-a968545c58f7&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "aerocool-d520a-black-4fans-argb-3-reversedair-up-to-180mmvga-up-to-400mm-type-c-ready-btf-support-gpu-holder-p5xjtyamfts",
+      "name": "Aerocool D520A Black (4Fans ARGB 3 reversed)(AIR Up To 180mm)(VGA Up To 400mm)-Type-C Ready-BTF Support-GPU Holder",
+      "category": "gpu",
+      "priceEgp": 3499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=aerocool-d520a-black-4fans-argb-3-reversedair-up-to-180mmvga-up-to-400mm-type-c-ready-btf-support-gpu-holder-p5xjtyamftso",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F09049534-f016-44a1-b52c-9a364d1ed51a&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "nzxt-c1200-gold-1200w-atx-31-fully-modular-black-pa-2g2bb-uk-knku9ldwksr2",
+      "name": "NZXT C1200 Gold 1200W - 80 PLUS Gold ATX 3.1 Fully Modular ATX 3.1 PSU - 10 years warrenty",
+      "category": "psu",
+      "priceEgp": 11499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=nzxt-c1200-gold-1200w-atx-31-fully-modular-black-pa-2g2bb-uk-knku9ldwksr2",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F36ff44aa-fb5d-4e14-b35b-ee0eae0c4e80&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "nzxt-f420-rgb-core-420mm-3fans-rgb-pwm-2000-rpm-9861-cfm-per-fan-black-rf-u42hf-b1-f7ed9is4bp0u",
+      "name": "NZXT F420 RGB Core 420mm - 3Fans RGB PWM - 2000 RPM - 98.61 CFM Per Fan - BLACK - RF-U42HF-B1",
+      "category": "cooling",
+      "priceEgp": 3499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=nzxt-f420-rgb-core-420mm-3fans-rgb-pwm-2000-rpm-9861-cfm-per-fan-black-rf-u42hf-b1-f7ed9is4bp0u",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F32639920-0fe0-49ab-9878-a19518ea3cc0&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-crystal-storm-arctic-v2-e-atx-420mm-gpu-360mm-radiator-mid-tower-case-with-valkyrie-750w-80-plus-bronze-atx-31-",
+      "name": "XIGMATEK Crystal Storm Arctic V2 E-ATX 420mm GPU 360mm Radiator Mid Tower Case With Valkyrie 750W 80 Plus Bronze ATX 3.1 Power Supply Combo",
+      "category": "psu",
+      "priceEgp": 5499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-crystal-storm-arctic-v2-e-atx-420mm-gpu-360mm-radiator-mid-tower-case-with-valkyrie-750w-80-plus-bronze-atx-31-power-supply-combo-pa0unsqyfxue",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa52e62ce-7569-4b0c-b251-29a5cb9a32f2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "apnx-v2-f-black-4fans-fp3-140mm-argbair-up-to-183mmvga-up-to-445mm-type-c-ready-btf-support-gpu-holder-5qxj1ma8ywvo",
+      "name": "APNX V2-F Black (4Fans FP3 140MM ARGB)(AIR Up To 183mm)(VGA Up To 445mm) Type-C Ready-BTF Support-GPU Holder.",
+      "category": "gpu",
+      "priceEgp": 6199.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=apnx-v2-f-black-4fans-fp3-140mm-argbair-up-to-183mmvga-up-to-445mm-type-c-ready-btf-support-gpu-holder-5qxj1ma8ywvo",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F65687f2e-42f3-44fa-980f-5ef3fdf10854&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "id-cooling-dx360-gdl-gen-7-pro-pump-argb-aio-liquid-cpu-cooler-gf3ghf865li0",
+      "name": "ID-COOLING DX360 GDL Gen 7 Pro Pump ARGB AIO Liquid Cpu Cooler",
+      "category": "cooling",
+      "priceEgp": 4499.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=id-cooling-dx360-gdl-gen-7-pro-pump-argb-aio-liquid-cpu-cooler-gf3ghf865li0",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff1a3dc5b-9535-4207-a7d2-0c5627ea6ea8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "hp-probook-4-g2i-dv4n3at-intel-core-ultra-5-325-intel-uhd-graphics-8gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-wuxga-ips-60",
+      "name": "HP ProBook 4 G2i DV4N3AT - Intel Core Ultra 5 325 - Intel UHD Graphics - 8GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16-inch WUXGA IPS 60Hz.",
+      "category": "cpu",
+      "priceEgp": 53500.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=hp-probook-4-g2i-dv4n3at-intel-core-ultra-5-325-intel-uhd-graphics-8gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-wuxga-ips-60hz-yotewpkb7lhu",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8be70c67-956b-4516-8d8a-324e73c76065&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "addlink-16g-ddr4-3200mhz-pc-0vbkc8tlndsy",
+      "name": "Addlink 16G DDR4 3200MHz PC",
+      "category": "ram",
+      "priceEgp": 5900.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=addlink-16g-ddr4-3200mhz-pc-0vbkc8tlndsy",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F380b98f1-88ee-462f-a088-ca052066d8bf&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-sky-m-ii-4-fan-frgb-x-power-600w-80-white-micro-tower-case-iafqqo5hqevv",
+      "name": "Xigmatek Sky M II 4 Fan FRGB + X-Power 600W 80+ White Micro Tower Case",
+      "category": "cooling",
+      "priceEgp": 2199.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-sky-m-ii-4-fan-frgb-x-power-600w-80-white-micro-tower-case-iafqqo5hqevv",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fb5fd8f84-d8a1-42da-85c2-38d8a30c20cb&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "hiksemi-wave-pro-2tb-m2-2280-pcie-30-nvme-ssd-ftnt23ug5yyk",
+      "name": "HIKSEMI WAVE Pro 2TB M.2 2280 PCIe 3.0 NVMe SSD",
+      "category": "storage",
+      "priceEgp": 11700.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=hiksemi-wave-pro-2tb-m2-2280-pcie-30-nvme-ssd-ftnt23ug5yyk",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F909f8b57-1f3c-4326-8e10-08823be2fa65&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-amd-prime-b840m-a-csm-socket-am5-lga-1718-motherboard-ekidqxchon6a",
+      "name": "ASUS AMD PRIME B840M-A-CSM Socket AM5 LGA 1718 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 6300.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-amd-prime-b840m-a-csm-socket-am5-lga-1718-motherboard-ekidqxchon6a",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc71f9a9e-c772-4a38-9b87-d9bdb53e6a85&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-amd-prime-b840m-a-csm-socket-am5-lga-1718-motherboard-ekidqxchon6a",
+      "name": "ASUS AMD PRIME B840M-A-CSM Socket AM5 LGA 1718 Motherboard",
+      "category": "motherboard",
+      "priceEgp": 7599.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-amd-prime-b840m-a-csm-socket-am5-lga-1718-motherboard-ekidqxchon6a",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc71f9a9e-c772-4a38-9b87-d9bdb53e6a85&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }

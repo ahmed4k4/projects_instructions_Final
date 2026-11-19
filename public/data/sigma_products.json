@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-13T07:32:30.239645+00:00",
+  "capturedAt": "2026-11-19T08:22:01.215378+00:00",
   "source": "scripts/sigma_worker.py",
   "retailer": "sigma",
   "status": "ok",
@@ -10,350 +10,182 @@
   "products": [
     {
       "retailerId": "sigma",
-      "externalId": "redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
-      "name": "REDRAGON RM112 Dragon Knight 128GB 500MB/s 2.5-inch SATA SSD",
-      "category": "storage",
-      "priceEgp": 1350.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa6a18b01-e2c1-4d72-8c6b-bca06a64704e&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
-      "name": "REDRAGON RM112 Dragon Knight 128GB 500MB/s 2.5-inch SATA SSD",
-      "category": "storage",
-      "priceEgp": 1365.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=redragon-rm112-dragon-knight-128gb-500mbs-25-inch-sata-ssd-iw4iyypyj4te",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa6a18b01-e2c1-4d72-8c6b-bca06a64704e&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "sandisk-optimus-5100-500gb-nvme-gen-4-orm7dkcvlixz",
-      "name": "SANDISK Optimus 5100 500GB NVME Gen 4",
-      "category": "storage",
-      "priceEgp": 5500.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=sandisk-optimus-5100-500gb-nvme-gen-4-orm7dkcvlixz",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F6ce12144-dabe-45da-bb81-d753b26e52c1&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lexar-nq780-512gb-m2-2280-pcie-gen-4x4-nvme-uaxg8zafe5nv",
-      "name": "Lexar NQ780 512GB M.2 2280 PCIe Gen 4x4 NVMe.",
-      "category": "storage",
-      "priceEgp": 4799.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lexar-nq780-512gb-m2-2280-pcie-gen-4x4-nvme-uaxg8zafe5nv",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9c6a544b-1f4e-4243-b7e0-cba6c5dfbc48&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "klevv-cras-v-rgb-32gb-2x16gb-ddr5-6000mhz-cl30-white-kd5agua80-60a300j-eliihojyvabo",
-      "name": "KLEVV CRAS V RGB 32GB (2x16GB) DDR5 6000MHz CL30 – White - KD5AGU880-60A300J",
-      "category": "ram",
-      "priceEgp": 28999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=klevv-cras-v-rgb-32gb-2x16gb-ddr5-6000mhz-cl30-white-kd5agua80-60a300j-eliihojyvabo",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F5505369a-89f2-4048-b103-cf9167612487&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "lexar-nq780-1tb-pcie-gen4-nvme-m2-2280-ssd-high-speed-internal-ssd-for-ps5-gamers-creators-wbw1o8esamal",
-      "name": "Lexar NQ780 1TB PCIe Gen4 NVMe M.2 2280 SSD – High-Speed Internal SSD for PS5, Gamers & Creators",
-      "category": "storage",
-      "priceEgp": 7650.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=lexar-nq780-1tb-pcie-gen4-nvme-m2-2280-ssd-high-speed-internal-ssd-for-ps5-gamers-creators-wbw1o8esamal",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa986e4a9-a890-48d9-a615-403635caa1ac&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "crucial-p3-2tb-pcie-m2-2280-ssd-nvme-pcie-gen-3-x4-2tb-capacity-up-to-3500-mbs-read-3000-mbs-write-440tbw-endurance-yk18",
-      "name": "Crucial P3 2TB PCIe M.2 2280 SSD – NVMe (PCIe Gen 3 x4), 2TB capacity, up to 3500 MB/s read & 3000 MB/s write, 440TBW endurance",
-      "category": "storage",
-      "priceEgp": 12300.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=crucial-p3-2tb-pcie-m2-2280-ssd-nvme-pcie-gen-3-x4-2tb-capacity-up-to-3500-mbs-read-3000-mbs-write-440tbw-endurance-yk18qafuloov",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F938e3651-f296-4cfe-8bcb-e7ebdacc90b1&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "intel-core-i5-12400f-tray-version-6c12t-25-ghz-base-44-ghz-turbo-18mb-cache-65w-lga-1700-no-cooler-ngsjfcqltdf7",
-      "name": "Intel Core i5-12400F (Tray version) | 6C/12T | 2.5 GHz (Base) / 4.4 GHz (Turbo) | 18MB Cache | 65W | LGA 1700 | No Cooler",
-      "category": "cooling",
-      "priceEgp": 7050.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=intel-core-i5-12400f-tray-version-6c12t-25-ghz-base-44-ghz-turbo-18mb-cache-65w-lga-1700-no-cooler-ngsjfcqltdf7",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F15d4bd9a-ffba-4d16-928b-91ed605d65bc&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "intel-core-i5-12400f-tray-version-6c12t-25-ghz-base-44-ghz-turbo-18mb-cache-65w-lga-1700-no-cooler-ngsjfcqltdf7",
-      "name": "Intel Core i5-12400F (Tray version) | 6C/12T | 2.5 GHz (Base) / 4.4 GHz (Turbo) | 18MB Cache | 65W | LGA 1700 | No Cooler",
-      "category": "cooling",
-      "priceEgp": 7699.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=intel-core-i5-12400f-tray-version-6c12t-25-ghz-base-44-ghz-turbo-18mb-cache-65w-lga-1700-no-cooler-ngsjfcqltdf7",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F15d4bd9a-ffba-4d16-928b-91ed605d65bc&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "pny-cs2130-2tb-m2-pcie-nvme-gen3-x4-internal-solid-state-drive-ssd-read-up-to-3500-zjtk0ljplzi2",
-      "name": "PNY CS2230 2TB M.2 NVMe Internal Solid State Drive",
-      "category": "storage",
-      "priceEgp": 11800.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=pny-cs2130-2tb-m2-pcie-nvme-gen3-x4-internal-solid-state-drive-ssd-read-up-to-3500-zjtk0ljplzi2",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F865335be-122a-41a2-975b-717f9faca6d4&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "wd-black-sn850x-nvme-ssd-2tb-pcie-gen4-x4-7300mbs-read-6600mbs-write-m2-2280-heatsink-1200-tbw-3-year-warranty-ihjeinesy",
-      "name": "WD_BLACK SN850X NVMe SSD 2TB, PCIe Gen4 x4, 7300MB/s Read, 6600MB/s Write, M.2 2280, Heatsink, 1200 TBW, 3-Year Warranty",
-      "category": "cooling",
-      "priceEgp": 19500.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=wd-black-sn850x-nvme-ssd-2tb-pcie-gen4-x4-7300mbs-read-6600mbs-write-m2-2280-heatsink-1200-tbw-3-year-warranty-ihjeinesy7z5",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fe0d9d458-0955-48c0-8ca3-86d45d2312b6&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "samsung-990-evo-plus-2tb-pcie-40-x4-50-x2-nvme-m2-2280-72506300-mbs-1000k1350k-iops-v-nand-tlc-aes-256-bit-1200-tbw-3-ye",
-      "name": "Samsung 990 EVO Plus 2TB, PCIe 4.0 x4 / 5.0 x2 NVMe, M.2 (2280), 7,250/6,300 MB/s, 1,000K/1,350K IOPS, V-NAND TLC, AES 256-bit, 1,200 TBW, 3-Year Warranty",
-      "category": "storage",
-      "priceEgp": 19999.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=samsung-990-evo-plus-2tb-pcie-40-x4-50-x2-nvme-m2-2280-72506300-mbs-1000k1350k-iops-v-nand-tlc-aes-256-bit-1200-tbw-3-year-warranty-efv6egibsq8l",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F9df7a047-5c46-414f-8766-03454a44f6bf&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "western-digital-black-sn850x-1tb-m2-nvme-ssd-pcie-gen4-x4-7300mbs-read-6300mbs-r5jdnj2bpgec",
-      "name": "Western Digital BLACK SN850X With Heatsink — 1TB M.2 NVMe SSD, PCIe Gen4 x4, Up to 7300MB/s Read, Up to 6300MB/s Write",
-      "category": "cooling",
-      "priceEgp": 11000.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=western-digital-black-sn850x-1tb-m2-nvme-ssd-pcie-gen4-x4-7300mbs-read-6300mbs-r5jdnj2bpgec",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa18c51d6-e30c-4d26-8941-57eb58ac0a06&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "wd-black-sn7100-2tb-nvme-ssd-by-western-digital-pcie-gen4-7250mbs-read-6900mbs-write-3-year-warranty-clfwtv7rjobm",
-      "name": "Western Digital_BLACK SN7100 2TB NVMe SSD by Western Digital — PCIe Gen4, 7,250MB/s read, 6,900MB/s write, 3-year warranty,",
-      "category": "storage",
-      "priceEgp": 14300.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=wd-black-sn7100-2tb-nvme-ssd-by-western-digital-pcie-gen4-7250mbs-read-6900mbs-write-3-year-warranty-clfwtv7rjobm",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F3d1660ac-fc44-49a1-960e-9b2c513a8196&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "thermal-grizzly-wireview-gpu-pro-smnhnoz3hmlx",
-      "name": "Thermal Grizzly WireView GPU Pro - TG-WV-P-HIN",
-      "category": "gpu",
-      "priceEgp": 3400.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=thermal-grizzly-wireview-gpu-pro-smnhnoz3hmlx",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F11479798-1898-472f-8044-d9c3de2e8564&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "thermal-grizzly-wireview-gpu-pro-smnhnoz3hmlx",
-      "name": "Thermal Grizzly WireView GPU Pro - TG-WV-P-HIN",
-      "category": "gpu",
-      "priceEgp": 3899.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=thermal-grizzly-wireview-gpu-pro-smnhnoz3hmlx",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F11479798-1898-472f-8044-d9c3de2e8564&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "thermal-grizzly-wireview-gpu-pro-90-oled-power-measurement-device-lxf1ahbjidgr",
-      "name": "Thermal Grizzly WireView GPU Pro 90° – OLED Power Measurement Device - TG-WV-90-P-HIN",
-      "category": "gpu",
-      "priceEgp": 3400.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=thermal-grizzly-wireview-gpu-pro-90-oled-power-measurement-device-lxf1ahbjidgr",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff9b77651-a5df-444b-b1b0-785bb842dcd3&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "thermal-grizzly-wireview-gpu-pro-90-oled-power-measurement-device-lxf1ahbjidgr",
-      "name": "Thermal Grizzly WireView GPU Pro 90° – OLED Power Measurement Device - TG-WV-90-P-HIN",
-      "category": "gpu",
-      "priceEgp": 3899.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=thermal-grizzly-wireview-gpu-pro-90-oled-power-measurement-device-lxf1ahbjidgr",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Ff9b77651-a5df-444b-b1b0-785bb842dcd3&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "thermal-grizzly-wireview-pro-90-gpu-power-meter-pj2yipvbw270",
-      "name": "Thermal Grizzly WireView Pro 90° GPU Power Meter",
-      "category": "gpu",
-      "priceEgp": 3400.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=thermal-grizzly-wireview-pro-90-gpu-power-meter-pj2yipvbw270",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F38e29cbc-9397-4d5b-b1ed-373ebf790daa&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "thermal-grizzly-wireview-pro-90-gpu-power-meter-pj2yipvbw270",
-      "name": "Thermal Grizzly WireView Pro 90° GPU Power Meter",
-      "category": "gpu",
-      "priceEgp": 3899.0,
-      "originalPriceEgp": null,
-      "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=thermal-grizzly-wireview-pro-90-gpu-power-meter-pj2yipvbw270",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F38e29cbc-9397-4d5b-b1ed-373ebf790daa&w=384&q=75",
-      "specs": {
-        "template": "sigma-playwright"
-      }
-    },
-    {
-      "retailerId": "sigma",
-      "externalId": "msi-mag-a750bn-pcie-5-750w-power-supply-80-plus-bronze-certified-non-modular-active-pfc-pcie-50-ready-hlmhljbrqakp",
-      "name": "MSI MAG A750BN PCIe 5 750W Power Supply - 80 PLUS Bronze Certified - Non-Modular - Active PFC - PCIe 5.0 Ready",
+      "externalId": "lian-li-sx1000p-1000w-80-plus-platinum-atx-31-full-modular-white-power-supply-aoq33hol46xb",
+      "name": "LIAN LI SX1000P 1000W 80 Plus Platinum ATX 3.1 Full Modular White Power Supply",
       "category": "psu",
-      "priceEgp": 4200.0,
+      "priceEgp": 7599.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=msi-mag-a750bn-pcie-5-750w-power-supply-80-plus-bronze-certified-non-modular-active-pfc-pcie-50-ready-hlmhljbrqakp",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fbd5d2e06-6582-402e-aaac-2c8682bebae5&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=lian-li-sx1000p-1000w-80-plus-platinum-atx-31-full-modular-white-power-supply-aoq33hol46xb",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F91cb4527-ee13-4868-963a-ae3c3116f5e4&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "xpg-mars-980-pro-4tb-m2-pcie-nvme-gen5-x4-almxwltbccxm",
-      "name": "XPG MARS 980 PRO 4TB M.2 PCIe NVMe Gen5 x4 with Heatsink",
+      "externalId": "asus-rog-strix-g16-g614pr-rv161w-ryzen-9-8940hx-16c32t-nvidia-geforce-rtx-5070-ti-12g-16gb-ddr5-5200hz-1tb-ssd-gen4-16-i",
+      "name": "ASUS ROG Strix G16-G614PR-RV161W - Ryzen 9 8940HX (16C/32T) - Nvidia Geforce RTX 5070 Ti 12G - 16GB DDR5 5200HZ - 1TB SSD Gen4 - 16'' IPS WUXGA 165Hz 100% sRGB - RGB Backlit - WIN11",
+      "category": "cpu",
+      "priceEgp": 125000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-rog-strix-g16-g614pr-rv161w-ryzen-9-8940hx-16c32t-nvidia-geforce-rtx-5070-ti-12g-16gb-ddr5-5200hz-1tb-ssd-gen4-16-ips-wuxga-165hz-100-srgb-rgb-backlit-win11-30zfbu00efyi",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F58fb3ed4-46e7-48d4-bea5-2e88b6c9c8b4&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "gigabyte-rtx-5070-ti-windforce-oc-sff-16g-smjb9dvrerwe",
+      "name": "Gigabyte RTX 5070 Ti WINDFORCE OC SFF 16G",
+      "category": "gpu",
+      "priceEgp": 73000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=gigabyte-rtx-5070-ti-windforce-oc-sff-16g-smjb9dvrerwe",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc46d7d59-0078-4ddb-af51-39483011b051&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "name": "ANTEC AX65 4Fan 120M ARGB WITH Antec Atom B750 PSU",
+      "category": "psu",
+      "priceEgp": 3999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F565ea256-91dd-4b41-a3d9-61c3edac11c2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "name": "ANTEC AX65 4Fan 120M ARGB WITH Antec Atom B750 PSU",
+      "category": "psu",
+      "priceEgp": 4299.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=antec-ax65-4fan-120m-argb-with-antec-atom-b750-psu-chgsfavcpltz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F565ea256-91dd-4b41-a3d9-61c3edac11c2&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "xigmatek-infinity-h27a-reverse-argb-pwm-with-remote-control-3-fan-en90465-cjsdxj1i7npz",
+      "name": "XIGMATEK Infinity H27A Reverse Argb Pwm With Remote Control 3 Fan - EN90465",
       "category": "cooling",
-      "priceEgp": 36200.0,
+      "priceEgp": 925.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=xpg-mars-980-pro-4tb-m2-pcie-nvme-gen5-x4-almxwltbccxm",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F08afb055-c06d-4552-bcff-f47a3c745d93&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=xigmatek-infinity-h27a-reverse-argb-pwm-with-remote-control-3-fan-en90465-cjsdxj1i7npz",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F36eec36c-fd53-46ee-baf5-6fa67e4d91bf&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "xpg-battlecruiser-ii-super-mid-tower-case-l5mhngvsgcis",
-      "name": "XPG Battlecruiser II Super Mid Tower Case",
-      "category": "case",
-      "priceEgp": 4999.0,
+      "externalId": "msi-prestige-13-ai-evo-a1mg-intel-core-ultra-7-155h-intel-arc-graphics-16gb-lpddr5-6400mhz-512gb-nvme-gen-4-133-inch-28k",
+      "name": "MSI Prestige 13 AI Evo A1MG Intel Core Ultra 7 155H - Intel Arc Graphics - 16GB LPDDR5 6400MHz - 512GB Nvme GEN 4 - 13.3-inch 2.8K-OLED-60Hz-100% DCI-P3 - Windows 11 - 9S7-13Q221-261",
+      "category": "cpu",
+      "priceEgp": 53999.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=xpg-battlecruiser-ii-super-mid-tower-case-l5mhngvsgcis",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8984b6e4-5d03-4d4a-b5e0-76eda7503eb5&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=msi-prestige-13-ai-evo-a1mg-intel-core-ultra-7-155h-intel-arc-graphics-16gb-lpddr5-6400mhz-512gb-nvme-gen-4-133-inch-28k-oled-60hz-100-dci-p3-windows-11-9s7-13q221-261-afvtygaown9r",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F56d0cb72-93d3-4549-9eb9-15300cb50729&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "xpg-battlecruiser-ii-super-mid-tower-case-l5mhngvsgcis",
-      "name": "XPG Battlecruiser II Super Mid Tower Case",
-      "category": "case",
-      "priceEgp": 5999.0,
+      "externalId": "palit-geforce-rtx-5070-ti-gamingpro-s-16gb-gddr7-pci-express-graphics-card-daukn1wvreui",
+      "name": "Palit GeForce RTX 5070 Ti GamingPro-S 16GB GDDR7 PCI-Express Graphics Card",
+      "category": "gpu",
+      "priceEgp": 73000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=xpg-battlecruiser-ii-super-mid-tower-case-l5mhngvsgcis",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F8984b6e4-5d03-4d4a-b5e0-76eda7503eb5&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=palit-geforce-rtx-5070-ti-gamingpro-s-16gb-gddr7-pci-express-graphics-card-daukn1wvreui",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F46c22faa-9b6e-4380-9a59-fb4853fecc53&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
     },
     {
       "retailerId": "sigma",
-      "externalId": "msi-mag-pano-m100r-pz-mid-tower-case-white-di1ifodb62op",
-      "name": "MSI MAG PANO M100R PZ Mid-Tower Case (White)",
-      "category": "case",
-      "priceEgp": 5399.0,
+      "externalId": "palit-rtx-5080-infinity-3-oc-16gb-gddr7-256bit-3-dp-hdmi-7gwkav1uiwaa",
+      "name": "PALIT RTX 5080 INFINITY 3 OC 16GB GDDR7 256bit 3-DP HDMI",
+      "category": "gpu",
+      "priceEgp": 97000.0,
       "originalPriceEgp": null,
       "stockStatus": "in_stock",
-      "productUrl": "https://sigma-computer.com/en/item?id=msi-mag-pano-m100r-pz-mid-tower-case-white-di1ifodb62op",
-      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F7b0d06c3-27cb-4689-ab28-6508140edf1b&w=384&q=75",
+      "productUrl": "https://sigma-computer.com/en/item?id=palit-rtx-5080-infinity-3-oc-16gb-gddr7-256bit-3-dp-hdmi-7gwkav1uiwaa",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Faa9bb667-64dc-49ff-8d6c-4da87db6a957&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "klevv-32g-ddr4-3200mhz-pc-cl22-i5dvbzd7hzn6",
+      "name": "KLEVV 32G DDR4 3200MHz PC CL22",
+      "category": "ram",
+      "priceEgp": 12750.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=klevv-32g-ddr4-3200mhz-pc-cl22-i5dvbzd7hzn6",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fa7622111-fd17-4faa-974d-b6fcd809fbb8&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "sapphire-pure-radeon-rx-9070-xt-gaming-oc-16gb-gddr6-pci-express-graphics-card-qtss3lyuwlb4",
+      "name": "Sapphire Pure Radeon RX 9070 XT Gaming OC 16GB GDDR6 PCI-Express Graphics Card",
+      "category": "gpu",
+      "priceEgp": 51000.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=sapphire-pure-radeon-rx-9070-xt-gaming-oc-16gb-gddr6-pci-express-graphics-card-qtss3lyuwlb4",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fd05d53a8-b4b9-43c3-91b9-fbc53c5ab222&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-f16-fx608jmi-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-fhd",
+      "name": "ASUS F16 FX608JMI-TU657W - Intel Core i7-14650HX - NVIDIA GeForce RTX 5060 8GB - 16GB DDR5 5600Hz - 512GB Nvme GEN 4 - 16-inch FHD IPS 144Hz - Windows 11",
+      "category": "cpu",
+      "priceEgp": 84999.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-f16-fx608jmi-tu657w-intel-core-i7-14650hx-nvidia-geforce-rtx-5060-8gb-16gb-ddr5-5600hz-512gb-nvme-gen-4-16-inch-fhd-ips-144hz-windows-11-ixozxly8jber",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2Fc895553b-1ed1-4b6f-be1a-ac2b626f7726&w=384&q=75",
+      "specs": {
+        "template": "sigma-playwright"
+      }
+    },
+    {
+      "retailerId": "sigma",
+      "externalId": "asus-prime-b550m-a-micro-atx-motherboard-neig7z68prkj",
+      "name": "ASUS PRIME B550M-A micro ATX motherboard",
+      "category": "motherboard",
+      "priceEgp": 5050.0,
+      "originalPriceEgp": null,
+      "stockStatus": "in_stock",
+      "productUrl": "https://sigma-computer.com/en/item?id=asus-prime-b550m-a-micro-atx-motherboard-neig7z68prkj",
+      "imageUrl": "https://sigma-computer.com/_next/image?url=https%3A%2F%2Fapi.sigma-computer.com%2Fmedia%2F07f5bbf3-df6e-4a76-b738-5b9758e247c8&w=384&q=75",
       "specs": {
         "template": "sigma-playwright"
       }
